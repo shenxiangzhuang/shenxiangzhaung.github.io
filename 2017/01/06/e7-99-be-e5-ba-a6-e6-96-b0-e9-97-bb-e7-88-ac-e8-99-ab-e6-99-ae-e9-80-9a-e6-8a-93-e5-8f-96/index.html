@@ -1,0 +1,969 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Python,爬虫," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp; 一个关于百度新闻的爬虫， 分类提取新闻文本。
+&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp; 环境：Ubuntu14.04, Pycharm, Anaconda3,
+
+&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="百度新闻爬虫——普通抓取">
+<meta property="og:url" content="http://yoursite.com/2017/01/06/e7-99-be-e5-ba-a6-e6-96-b0-e9-97-bb-e7-88-ac-e8-99-ab-e6-99-ae-e9-80-9a-e6-8a-93-e5-8f-96/index.html">
+<meta property="og:site_name" content="DATA HONOR">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp; 一个关于百度新闻的爬虫， 分类提取新闻文本。
+&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp; 环境：Ubuntu14.04, Pycharm, Anaconda3,
+
+&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;">
+<meta property="og:image" content="http://datadream.top/wp-content/uploads/2017/01/Screenshot-from-2017-01-06-015953-300x83.png">
+<meta property="og:updated_time" content="2017-02-20T12:26:42.261Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="百度新闻爬虫——普通抓取">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp; 一个关于百度新闻的爬虫， 分类提取新闻文本。
+&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp; 环境：Ubuntu14.04, Pycharm, Anaconda3,
+
+&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;">
+<meta name="twitter:image" content="http://datadream.top/wp-content/uploads/2017/01/Screenshot-from-2017-01-06-015953-300x83.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/01/06/e7-99-be-e5-ba-a6-e6-96-b0-e9-97-bb-e7-88-ac-e8-99-ab-e6-99-ae-e9-80-9a-e6-8a-93-e5-8f-96/"/>
+
+
+
+
+
+  <title> 百度新闻爬虫——普通抓取 | DATA HONOR </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cbfd16620150a28ce4061f717038b4de";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">DATA HONOR</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Data is a kind of faith</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/06/e7-99-be-e5-ba-a6-e6-96-b0-e9-97-bb-e7-88-ac-e8-99-ab-e6-99-ae-e9-80-9a-e6-8a-93-e5-8f-96/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="ShenSir">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="DATA HONOR">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                百度新闻爬虫——普通抓取
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-06T02:04:40+08:00">
+                2017-01-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MySQL/爬虫/" itemprop="url" rel="index">
+                    <span itemprop="name">爬虫</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/01/06/e7-99-be-e5-ba-a6-e6-96-b0-e9-97-bb-e7-88-ac-e8-99-ab-e6-99-ae-e9-80-9a-e6-8a-93-e5-8f-96/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/06/e7-99-be-e5-ba-a6-e6-96-b0-e9-97-bb-e7-88-ac-e8-99-ab-e6-99-ae-e9-80-9a-e6-8a-93-e5-8f-96/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&nbsp;&nbsp;&nbsp; 一个关于百度新闻的爬虫， 分类提取新闻文本。</p>
+<pre><code>&amp;nbsp;&amp;nbsp;&amp;nbsp; 环境：Ubuntu14.04, Pycharm, Anaconda3,
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; MySQL:mysql&amp;nbsp; Ver 14.14 Distrib 5.5.53, for debian-linux-gnu (x86_64) using readline 6.3
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp; 文件目录：MyTools.py 存放获取，解析并储存网页内容的工具函数
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;single_thread.py&amp;nbsp; 单线程普通抓取的实现
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;globalValue.py&amp;nbsp; 新闻条数count的跨文件传递，参考[这里](http://www.jianshu.com/p/6cee728f3490) 
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp; **MyTools.py** 
+</code></pre><pre class="prettyprint lang-py">import re
+import time
+import pymysql
+import chardet
+import requests
+from bs4 import BeautifulSoup
+
+import  globalValue
+
+from email.header import Header
+from email.mime.text import MIMEText
+from email.utils import parseaddr, formataddr
+import smtplib
+
+# headers = {'User-Agent': "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36"}
+headers = {'User-Agent': "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36"}
+
+# 打开数据库，之后在具体调用后close
+db = pymysql.connect("localhost", "root", "zhengfu5zhengfu", "USpiderData", charset='utf8')
+cursor = db.cursor()
+
+# 实现：给定新闻类别链接的列表class_urls，获取并储存数据
+# 待实现函数:get_class_data, getdata
+def get_save_data(class_urls):
+    for class_url in class_urls:
+        class_data = get_class_data(class_url)
+        getdata(class_data)
+
+# 对于每个分类提取单个新闻标题信息class_data
+def get_class_data(class_url):
+    classname = class_url.split('.')
+    class_data = requests.get(class_url, headers=headers)
+
+    char = chardet.detect(class_data.content)
+    class_data.encoding = char['encoding']
+    # 解析网页
+    class_data = class_data.text
+    soup = BeautifulSoup(class_data, 'lxml')
+    data = soup.findAll('a', {'target': '_blank'})
+    class_data = {}
+    for i in range(len(data)):
+        title = data[i].get_text()
+        href = data[i].get('href')
+        # 过滤一些干扰链接
+        if len(title) &gt; 10:
+            if not '下载' in title:
+                class_data[title] = href
+
+    classname = class_url.split('.')[0][7:]
+
+    # 这里返回classname,主要是为了入库方便
+    return [classname, class_data]
+
+# 实现：根据传入的新闻类别的信息class_data, 获取新闻文本并存入数据库
+# 待实现函数：get_news_text
+def getdata(class_data):
+    class_title = class_data[0]
+    class_data = class_data[1]
+    for news_title, news_url in dict(class_data).items():
+
+        print(news_title)
+        text = get_news_text(news_url)
+        if text is not None:
+            print("Got text data...")
+        else:
+            text = 'lost'
+        try:
+            sql = 'INSERT INTO BaiduNews(class, title, text)VALUES(%s,%s,%s)'
+            cursor.execute(sql, (class_title, news_title, text))
+            # 提交事务
+            db.commit()
+
+        except:
+            print('Save fail...')
+            pass
+
+# 获取每条新闻的具体文本内容，粗略抓取
+'''
+百度新闻的链接是跳转到各个新闻网站的，网站大部分的结构都不同，
+很难做到完全抓取到文本，所以目前只能粗略抓取。
+
+之后会进行pyquery 的 css抓取，有时间会研究下专门的文本抓取算法
+'''
+def get_news_text(href):
+    try:
+        data = requests.get(href, headers=headers)
+        # 检测编码
+        char = chardet.detect(data.content)
+        data.encoding = char['encoding']
+        # 解析网页
+        data = BeautifulSoup(data.text, 'lxml')
+        # 这里对于同一属性多个值进行匹配
+        # data = BeautifulSoup(data.text,'lxml').find("div", {'class': ['text', 'article', 'content']})
+        data = data.find("div", {'class': re.compile(r"^(text|article|content)$")})
+        text = data.get_text()
+        count = globalValue.get_value()
+        print(count)
+        count += 1
+        globalValue.set_value(count)
+
+    except:
+        text = None
+        pass
+    return text
+
+# 邮件
+def _format_addr(s):
+    name, addr = parseaddr(s)
+    return formataddr((Header(name,'utf-8').encode(), addr))
+def send_ms(T):
+    from_addr = "1021550072@qq.com"
+    # 开启QQ邮箱STMP服务的授权码
+    # 参考这里http://jingyan.baidu.com/article/4f7d5712b1ac7c1a201927da.html
+    password = 'hqbdhfnplzwabcde'
+    to_addr = '1021550072@qq.com'
+    smtp_server = 'smtp.qq.com'
+    msg = MIMEText(T, 'plain', 'utf-8')
+    msg['From'] = _format_addr('Anyone')
+    msg['To'] = _format_addr('Echo')
+    msg['Subject'] = Header('The New Report', 'utf-8').encode()
+    server = smtplib.SMTP_SSL(smtp_server, 465, timeout=10)
+    server.set_debuglevel(0)
+    server.login(from_addr,password)
+    server.sendmail(from_addr, [to_addr], msg.as_string())
+    server.quit()
+
+</pre>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; <strong>single_thread.py</strong> </p>
+<pre><code>**&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;** 
+</code></pre><pre class="prettyprint lang-py">import re
+import time
+import pymysql
+from MyTools import *
+
+import  globalValue
+
+if __name__=='__main__':
+    # 初始化count，记录抓取的新闻条数
+    count = 0
+    globalValue.set_value(count)
+
+    s = time.ctime()
+    start = time.time()
+
+    class_lists = ['http://finance.baidu.com/', 'http://internet.baidu.com/', 'http://yule.baidu.com/',
+                       'http://shipin.news.baidu.com/']
+
+    # 开始抓取
+    get_save_data(class_lists)
+    count = globalValue.get_value()
+
+    # 记得关闭数据库
+    db.close()
+
+    end = time.time()
+    e = time.ctime()
+    total_time = end - start
+    print(total_time)
+    print(count)
+    # 抓取的日志文件
+    with open("single_thread.txt", 'a') as f:
+        f.write("\nSingle-thread抓取\n本次抓取开始于%s,结束于%s,耗时%s\n共抓取新闻%s条"%(s, e, total_time, count))
+
+    # 发送邮件通知，可选
+    T = "\nSingle-thread抓取\n本次抓取开始于%s,结束于%s,耗时%s\n共抓取新闻%s条"%(s, e, total_time, count)
+
+    send_ms(T)
+    print('已成功发送邮件，请查收')</pre>
+
+<pre><code>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;**globalValue.py ** 
+</code></pre><pre class="prettyprint lang-py">def set_value(input_value):
+    global value
+    value = input_value
+
+def get_value():
+    return value</pre>
+
+<pre><code>&amp;nbsp;&amp;nbsp;&amp;nbsp; 日志文件及运行结果[同时会发送邮件到指定邮箱]：
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp; [可以看到约400多秒]
+
+![](http://datadream.top/wp-content/uploads/2017/01/Screenshot-from-2017-01-06-015927-300x34.png) 
+</code></pre><p><img src="http://datadream.top/wp-content/uploads/2017/01/Screenshot-from-2017-01-06-015953-300x83.png" alt=""></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/爬虫/" rel="tag"># 爬虫</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/05/ubuntu-e5-91-bd-e4-bb-a4-e7-a7-af-e7-b4-af/" rel="next" title="Ubuntu命令积累">
+                <i class="fa fa-chevron-left"></i> Ubuntu命令积累
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/06/e7-99-be-e5-ba-a6-e6-96-b0-e9-97-bb-e7-88-ac-e8-99-ab-e5-a4-9a-e8-bf-9b-e7-a8-8b-e6-8a-93-e5-8f-96/" rel="prev" title="百度新闻爬虫——多进程抓取">
+                百度新闻爬虫——多进程抓取 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/01/06/e7-99-be-e5-ba-a6-e6-96-b0-e9-97-bb-e7-88-ac-e8-99-ab-e6-99-ae-e9-80-9a-e6-8a-93-e5-8f-96/"
+           data-title="百度新闻爬虫——普通抓取" data-url="http://yoursite.com/2017/01/06/e7-99-be-e5-ba-a6-e6-96-b0-e9-97-bb-e7-88-ac-e8-99-ab-e6-99-ae-e9-80-9a-e6-8a-93-e5-8f-96/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
+               alt="ShenSir" />
+          <p class="site-author-name" itemprop="name">ShenSir</p>
+           
+              <p class="site-description motion-element" itemprop="description">Never say never</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ShenSir</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+  
+
+  
+    <span class="site-pv">本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"shenxiangzhuang"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
