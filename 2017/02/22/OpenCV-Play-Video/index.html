@@ -90,14 +90,14 @@
 <meta name="description" content="环境： CLion Ubuntu16.04 OPenCV3.2.0
 学习OpenCV基础时，在读取视频文件时发现一个问题。按照这样：12345678910111213141516171819202122#include &amp;lt;iostream&amp;gt;#include	&quot;opencv2/highgui/highgui.hpp&quot;#include	&quot;opencv2/imgproc/imgproc.hp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OpenCV Play Video">
+<meta property="og:title" content="OpenCV Wait!">
 <meta property="og:url" content="http://yoursite.com/2017/02/22/OpenCV-Play-Video/index.html">
 <meta property="og:site_name" content="DATA HONOR">
 <meta property="og:description" content="环境： CLion Ubuntu16.04 OPenCV3.2.0
 学习OpenCV基础时，在读取视频文件时发现一个问题。按照这样：12345678910111213141516171819202122#include &amp;lt;iostream&amp;gt;#include	&quot;opencv2/highgui/highgui.hpp&quot;#include	&quot;opencv2/imgproc/imgproc.hp">
-<meta property="og:updated_time" content="2017-02-22T15:35:07.467Z">
+<meta property="og:updated_time" content="2017-02-22T15:50:04.767Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OpenCV Play Video">
+<meta name="twitter:title" content="OpenCV Wait!">
 <meta name="twitter:description" content="环境： CLion Ubuntu16.04 OPenCV3.2.0
 学习OpenCV基础时，在读取视频文件时发现一个问题。按照这样：12345678910111213141516171819202122#include &amp;lt;iostream&amp;gt;#include	&quot;opencv2/highgui/highgui.hpp&quot;#include	&quot;opencv2/imgproc/imgproc.hp">
 
@@ -133,7 +133,7 @@
 
 
 
-  <title> OpenCV Play Video | DATA HONOR </title>
+  <title> OpenCV Wait! | DATA HONOR </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -296,7 +296,7 @@
             
             
               
-                OpenCV Play Video
+                OpenCV Wait!
               
             
           </h1>
@@ -386,7 +386,8 @@
       
         <p>环境： CLion Ubuntu16.04 OPenCV3.2.0</p>
 <p>学习OpenCV基础时，在读取视频文件时发现一个问题。<br>按照这样：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span>	<span class="meta-string">"opencv2/highgui/highgui.hpp"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span>	<span class="meta-string">"opencv2/imgproc/imgproc.hpp"</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span>	<span class="title">main</span><span class="params">(	<span class="keyword">int</span>	argc,	<span class="keyword">char</span>**	argv	)</span>	</span>&#123;</div><div class="line">    cv::namedWindow(	<span class="string">"Example3"</span>,	cv::WINDOW_AUTOSIZE	);</div><div class="line">    cv::VideoCapture	cap;</div><div class="line">    <span class="comment">//cap.open(	std::string(argv[1])	);</span></div><div class="line">    cap.open(<span class="string">"/home/shen/CLionProjects/MyCv/data/summaryVid.ogv"</span>);</div><div class="line">    cv::Mat	frame;</div><div class="line">    <span class="keyword">for</span>(;;)	&#123;</div><div class="line">        cap	&gt;&gt;	frame;</div><div class="line">        <span class="keyword">if</span>(	frame.empty() )	<span class="keyword">break</span>;					<span class="comment">//	Ran	out	of	film</span></div><div class="line">        cv::imshow(	<span class="string">"Example3"</span>,	frame	);</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(	cvWaitKey(<span class="number">33</span>) &gt;= <span class="number">0</span> )	<span class="keyword">break</span>;</div><div class="line">        <span class="comment">//if(	cv::waitKey(33) &gt;= 0 )	break;</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span>	<span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure></p>
-<p>代码最后，第一个if可以播放完整视频，而第二个却只显示一帧画面。调试发现，cvWaitKey(33)在不按键时返回的是-1， cv::waitKey(33)返回的是255<br>那么，问题来了，这两个函数不一样吗？查了查，每查到区别，请知道的大佬指点。</p>
+<p>代码最后，第一个if可以播放完整视频，而第二个却只显示一帧画面。调试发现，cvWaitKey(33)在不按键时返回的是-1， cv::waitKey(33)返回的是255<br>那么，问题来了，这两个函数不一样吗？查了查，没查到区别。。。<br>经<a href="http://www.liusong.me/" target="_blank" rel="external">废帝童鞋</a>帮助，发现是个<a href="https://github.com/opencv/opencv/pull/7866" target="_blank" rel="external">bug</a>…<br>酸爽的夜晚，继续前行…</p>
+<p>参考： <strong>Learning    OpenCV    3: Computer    Vision    in    C++    with    the    OpenCV    Library</strong> [p58]</p>
 
       
     </div>
@@ -460,7 +461,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/02/22/OpenCV-Play-Video/"
-           data-title="OpenCV Play Video" data-url="http://yoursite.com/2017/02/22/OpenCV-Play-Video/">
+           data-title="OpenCV Wait!" data-url="http://yoursite.com/2017/02/22/OpenCV-Play-Video/">
       </div>
     
   </div>
