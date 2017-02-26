@@ -193,7 +193,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">Data is a kind of faith</p>
+        <h1 class="site-subtitle" itemprop="description">Data is a kind of faith</h1>
       
   </div>
 
@@ -301,7 +301,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
             
             
               
@@ -311,7 +311,7 @@
                 </a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -393,15 +393,18 @@
       
         
           
-            <h5 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h5><p>关于Cpp知识点的结合练习。</p>
-<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>本次练习涉及的知识点</p>
-<blockquote>
-<p>vector的几种打印方式<br>将函数作为参数传入其他函数<br>精确[毫秒及微秒]时间的计量</p>
-</blockquote>
-<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/time.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 几种打印vector的方法</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">printvector1</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v)</span></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;v.size(); i++)&#123;</div><div class="line"><span class="comment">//        cout&lt;&lt; i;</span></div><div class="line">        <span class="built_in">cout</span> &lt;&lt; v[i]&lt;&lt;<span class="string">"  "</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">printvector2</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v)</span></span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = v.begin(); iter != v.end(); ++iter)</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; *iter&lt;&lt; <span class="string">" "</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">printvector3</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v)</span></span>&#123;</div><div class="line">    <span class="keyword">auto</span> itr = v.begin();</div><div class="line">    <span class="keyword">while</span>( itr != v.end())&#123;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; *(itr++) &lt;&lt;<span class="string">" "</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 将函数作为参数传入</span></div><div class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">void</span> <span class="params">(*pf)</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v)</span></span>;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 精确时间的计量</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">taketime</span><span class="params">(pf f, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v)</span></span>&#123;</div><div class="line">    <span class="keyword">struct</span> timeval start, end;</div><div class="line"></div><div class="line">    <span class="keyword">long</span> mtime, seconds, useconds;</div><div class="line"></div><div class="line">    gettimeofday(&amp;start, <span class="literal">NULL</span>);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"Elapsed time: %ld milliseconds\n"</span>, mtime);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">1000</span>; i++)</div><div class="line">        f(v);</div><div class="line">    gettimeofday(&amp;end, <span class="literal">NULL</span>);</div><div class="line"></div><div class="line">    seconds  = end.tv_sec  - start.tv_sec;</div><div class="line">    useconds = end.tv_usec - start.tv_usec;</div><div class="line"></div><div class="line">    mtime = ((seconds) * <span class="number">1000</span> + useconds/<span class="number">1000.0</span>) + <span class="number">0.5</span>;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt;<span class="built_in">endl</span>&lt;&lt; mtime;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; daysInMonth = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>&#125;;</div><div class="line">    taketime(printvector1, daysInMonth);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
-<h5 id="Refrence"><a href="#Refrence" class="headerlink" title="Refrence"></a>Refrence</h5><p><em>Data Structures and AlgorithmAnalysis in C++</em>[p84]</p>
+          Introduction关于Cpp知识点的结合练习。
+Overview本次练习涉及的知识点
 
-          
+vec
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/26/Print-time/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -460,7 +463,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
             
             
               
@@ -470,7 +473,7 @@
                 </a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -552,15 +555,17 @@
       
         
           
-            <h5 id="Theory"><a href="#Theory" class="headerlink" title="Theory"></a>Theory</h5><p>关于，冒泡排序的原理及其实现。<br>关于原理：<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-02-25%2016-53-55.png" alt=""></p>
-<blockquote>
-<p>有序序列中每一对相邻元素都是顺序的；反之，所有相邻元素均顺序的序列<br>也必然整体有序。</p>
-</blockquote>
-<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"></div><div class="line"><span class="comment">// 原理： 有序序列中每一对相邻元素都是顺序的；反之，所有相邻元素均顺序的序列</span></div><div class="line"><span class="comment">// 也必然整体有序。</span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubblesort1A</span><span class="params">( <span class="keyword">int</span> A[], <span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="keyword">bool</span> sorted = <span class="literal">false</span>;  <span class="comment">// 整体排序标志，首先假定尚未进行排序</span></div><div class="line">    <span class="keyword">while</span>(!sorted)&#123;  <span class="comment">//在尚未确认已经全局排序之前，逐趟进行扫描交换</span></div><div class="line">        sorted = <span class="literal">true</span>;  <span class="comment">// 假定已经排序</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i =<span class="number">1</span>; i &lt; n; i++ )&#123;</div><div class="line">            <span class="keyword">if</span> (A[i - <span class="number">1</span>] &gt; A[i])&#123; <span class="comment">// 一旦A[i-1]与A[i]逆序，则</span></div><div class="line">                swap( A[i<span class="number">-1</span>], A[i]); <span class="comment">// 交换之</span></div><div class="line">                sorted = <span class="literal">false</span>;<span class="comment">// 因整体排序不能保证，需要清除排序标志</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    n--;  <span class="comment">// 至此末位元素必然就位， 故可以缩短排序序列的有效长度。</span></div><div class="line">&#125;<span class="comment">// 借助布尔值标志位sorted, 可以及时提前退出，而不至于总是忙里地做n-1次扫描</span></div><div class="line"></div><div class="line"><span class="comment">// 构造打印数组的函数</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">printvector</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i &lt; n; i++)&#123;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; a[i]&lt;&lt; <span class="string">" "</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"\n"</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> n=<span class="number">10</span>;</div><div class="line">    <span class="keyword">int</span> a[n];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)</div><div class="line">        <span class="built_in">cin</span>&gt;&gt;a[i];</div><div class="line">    printvector(a, n);</div><div class="line">    bubblesort1A(a, n);</div><div class="line">    printvector(a, n);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
-<h5 id="关于时间复杂度"><a href="#关于时间复杂度" class="headerlink" title="关于时间复杂度"></a>关于时间复杂度</h5><p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-02-25%2017-27-54.png" alt=""></p>
-<p>参考：TsinghuaX: 30240184.1x Data Structures and Algorithm Design Part I 数据结构与算法设计(上) </p>
+          Theory关于，冒泡排序的原理及其实现。关于原理：
 
-          
+有序序列中每一对相邻元素都是顺序的；反之，所
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/25/Bubble-Sort/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -619,7 +624,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
             
             
               
@@ -629,7 +634,7 @@
                 </a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -711,10 +716,15 @@
       
         
           
-            <p>为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.<br>System: Ubuntu16.04 64bit<br>Editor: Haroopad</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> spawn = <span class="built_in">require</span>(<span class="string">'child_process'</span>).spawn;</div><div class="line"></div><div class="line"><span class="comment">// Hexo 3</span></div><div class="line">hexo.on(<span class="string">'new'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">  spawn(<span class="string">'haroopad'</span>, [data.path]);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-
-          
+          为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/25/About-Hexo/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -773,7 +783,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
             
             
               
@@ -783,7 +793,7 @@
                 </a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -865,25 +875,15 @@
       
         
           
-            <h5 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h5><p>这是新年定下的目标之一 —— Kaggle案例的学习<br>这里，数据即来自<a href="https://www.kaggle.com/ludobenistant/hr-analytics" target="_blank" rel="external">Human Resources Analytics</a>， 参考<a href="https://www.kaggle.com/nirajvermafcb/d/ludobenistant/hr-analytics/principal-component-analysis-explained" target="_blank" rel="external">这里</a>学习数据的分析.</p>
-<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>这个kernel里面呢，大部分还是比较常规的EDA，可视化和简单算法的应用，但是也有要学习的地方，这里在代码里面都有声明。</p>
-<blockquote>
-<p>[学习heatmap使用]<br>[学习plt.barh使用]<br>[学习如下reindex的步骤]<br>[学习iloc使用]<br>[学习使用sklearn进行标准化]<br>[掌握手动计算协方差]<br>[学习使用Numpy简单的线性代数的运算]<br>[学习使用sklearn做PCA]</p>
-</blockquote>
-<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">#!/usr/bin/env python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="string">"""</span></div><div class="line">Created on Sat Feb 25 07:48:50 2017</div><div class="line"></div><div class="line">@author: shen</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="comment"># 人力资源——离职分析</span></div><div class="line"><span class="comment"># 采用PCA</span></div><div class="line"><span class="comment"># 参考https://www.kaggle.com/nirajvermafcb/d/ludobenistant/hr-analytics/principal-component-analysis-explained</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np  <span class="comment"># linear algebra</span></div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd  <span class="comment"># data rocessing</span></div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 导入数据</span></div><div class="line"><span class="comment"># https://www.kaggle.com/nirajvermafcb/d/ludobenistant/hr-analytics/principal-component-analysis-explained</span></div><div class="line">df = pd.read_csv(<span class="string">'/home/shen/PycharmProjects/MyPython/Kaggle/human resources/data.csv'</span>)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 了解数据</span></div><div class="line"><span class="string">'''</span></div><div class="line">df.columns.tolist() fetches all the columns and </div><div class="line">then convert it into list type.This step is just </div><div class="line">to check out all the column names in our data.Columns </div><div class="line">are also called as features of our datasets.</div><div class="line">'''</div><div class="line">columns_names = df.columns.tolist()</div><div class="line"></div><div class="line">print(df.shape)</div><div class="line">print(df.head())</div><div class="line"></div><div class="line"><span class="comment"># 数值型变量的协方差矩阵</span></div><div class="line">print(df.corr())</div><div class="line"></div><div class="line"><span class="comment"># [学习heatmap使用]</span></div><div class="line"><span class="comment"># 协方差矩阵的可视化</span></div><div class="line">correlation = df.corr()</div><div class="line">plt.figure(figsize=(<span class="number">10</span>,<span class="number">10</span>))</div><div class="line">sns.heatmap(correlation, vmax=<span class="number">1</span>, square=<span class="keyword">True</span>, annot=<span class="keyword">True</span>, cmap=<span class="string">'cubehelix'</span>)</div><div class="line">plt.title(<span class="string">'Correlation between diffrent features'</span>)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 职位</span></div><div class="line">print(df[<span class="string">'sales'</span>].unique())</div><div class="line"></div><div class="line">groupby_sales = df.groupby(<span class="string">'sales'</span>).mean()</div><div class="line"></div><div class="line">IT=groupby_sales[<span class="string">'satisfaction_level'</span>].IT</div><div class="line">RandD=groupby_sales[<span class="string">'satisfaction_level'</span>].RandD</div><div class="line">accounting=groupby_sales[<span class="string">'satisfaction_level'</span>].accounting</div><div class="line">hr=groupby_sales[<span class="string">'satisfaction_level'</span>].hr</div><div class="line">management=groupby_sales[<span class="string">'satisfaction_level'</span>].management</div><div class="line">marketing=groupby_sales[<span class="string">'satisfaction_level'</span>].marketing</div><div class="line">product_mng=groupby_sales[<span class="string">'satisfaction_level'</span>].product_mng</div><div class="line">sales=groupby_sales[<span class="string">'satisfaction_level'</span>].sales</div><div class="line">support=groupby_sales[<span class="string">'satisfaction_level'</span>].support</div><div class="line">technical=groupby_sales[<span class="string">'satisfaction_level'</span>].technical</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># [学习plt.barh使用]</span></div><div class="line">department_name = df[<span class="string">'sales'</span>].unique()</div><div class="line">department=(sales, accounting, hr, technical, support, management,</div><div class="line">       IT, product_mng, marketing, RandD)</div><div class="line"></div><div class="line">y_pos = np.arange(len(department))</div><div class="line">x = np.arange(<span class="number">0</span>, <span class="number">1</span>, <span class="number">0.1</span>)</div><div class="line"></div><div class="line">plt.barh(y_pos, department, align=<span class="string">'center'</span>, alpha=<span class="number">0.8</span>)</div><div class="line">plt.yticks(y_pos, department_name)</div><div class="line">plt.xlabel(<span class="string">'Satisfaction level'</span>)</div><div class="line">plt.title(<span class="string">'Mean Satisfaction Level of each department'</span>)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># PCA</span></div><div class="line"><span class="comment"># 去除非数值型的变量(feature)</span></div><div class="line">print(df.dtypes)</div><div class="line">df_drop = df.drop(labels=[<span class="string">'sales'</span>, <span class="string">'salary'</span>], axis=<span class="number">1</span>)</div><div class="line">print(df_drop.dtypes)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># [学习如下reindex的步骤]</span></div><div class="line"><span class="string">'''</span></div><div class="line">Here we are converting columns of the dataframe to list </div><div class="line">so it would be easier for us to reshuffle the columns.</div><div class="line">We are going to use cols.insert method</div><div class="line">'''</div><div class="line">cols = df_drop.columns.tolist()</div><div class="line">cols.insert(<span class="number">0</span>, cols.pop(cols.index(<span class="string">'left'</span>)))</div><div class="line"></div><div class="line">df_drop = df_drop.reindex(columns= cols)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># [学习iloc使用]</span></div><div class="line"><span class="comment"># 索引分离数据</span></div><div class="line">X = df_drop.iloc[:, <span class="number">1</span>:<span class="number">8</span>].values</div><div class="line">y = df_drop.iloc[:, <span class="number">0</span>].values</div><div class="line"></div><div class="line">print(np.shape(X))</div><div class="line">print(np.shape(y))</div><div class="line"></div><div class="line"><span class="comment"># [学习使用sklearn进行标准化]</span></div><div class="line"><span class="comment"># 数据的标准化</span></div><div class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</div><div class="line">X_std = StandardScaler().fit_transform(X)</div><div class="line"></div><div class="line"><span class="comment"># [掌握手动计算协方差]</span></div><div class="line"><span class="comment"># 计算协方差矩阵</span></div><div class="line">mean_vec = np.mean(X_std, axis=<span class="number">0</span>)</div><div class="line">cov_mat = (X_std - mean_vec).T.dot((X_std - mean_vec)) / (X_std.shape[<span class="number">0</span>] - <span class="number">1</span>)</div><div class="line"></div><div class="line"><span class="comment"># another way --&gt; np.cov</span></div><div class="line">print(<span class="string">'NumPy covariance matrix: \n%s'</span> %np.cov(X_std.T))</div><div class="line"></div><div class="line"></div><div class="line">plt.figure(figsize=(<span class="number">8</span>,<span class="number">8</span>))</div><div class="line">sns.heatmap(cov_mat, vmax=<span class="number">1</span>, square=<span class="keyword">True</span>,annot=<span class="keyword">True</span>,cmap=<span class="string">'cubehelix'</span>)</div><div class="line"></div><div class="line">plt.title(<span class="string">'Correlation between different features'</span>)</div><div class="line"></div><div class="line"><span class="comment"># [学习使用Numpy简单的线性代数的运算]</span></div><div class="line"><span class="comment"># 计算特征值与特征向量</span></div><div class="line">eig_vals, eig_vecs = np.linalg.eig(cov_mat)</div><div class="line"></div><div class="line">print(<span class="string">'Eigenvectors \n%s'</span> %eig_vecs)</div><div class="line">print(<span class="string">'\nEigenvalues \n%s'</span> %eig_vals)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># Make a list of (eigenvalue, eigenvector) tuples</span></div><div class="line">eig_pairs = [(np.abs(eig_vals[i]), eig_vecs[:,i]) <span class="keyword">for</span> i <span class="keyword">in</span> range(len(eig_vals))]</div><div class="line"></div><div class="line"><span class="comment"># Sort the (eigenvalue, eigenvector) tuples from high to low</span></div><div class="line">eig_pairs.sort(key=<span class="keyword">lambda</span> x: x[<span class="number">0</span>], reverse=<span class="keyword">True</span>)</div><div class="line"></div><div class="line"><span class="comment"># Visually confirm that the list is correctly sorted by decreasing eigenvalues</span></div><div class="line">print(<span class="string">'Eigenvalues in descending order:'</span>)</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> eig_pairs:</div><div class="line">    print(i[<span class="number">0</span>])</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># Explained Variance</span></div><div class="line">tot = sum(eig_vals)</div><div class="line">var_exp = [(i / tot)*<span class="number">100</span> <span class="keyword">for</span> i <span class="keyword">in</span> sorted(eig_vals, reverse=<span class="keyword">True</span>)]</div><div class="line"></div><div class="line"><span class="keyword">with</span> plt.style.context(<span class="string">'ggplot'</span>):</div><div class="line">    plt.figure(figsize=(<span class="number">6</span>, <span class="number">4</span>))</div><div class="line"></div><div class="line">    plt.bar(range(<span class="number">7</span>), var_exp, alpha=<span class="number">0.5</span>, align=<span class="string">'center'</span>,</div><div class="line">            label=<span class="string">'individual explained variance'</span>)</div><div class="line">    plt.ylabel(<span class="string">'Explained variance ratio'</span>)</div><div class="line">    plt.xlabel(<span class="string">'Principal components'</span>)</div><div class="line">    plt.legend(loc=<span class="string">'best'</span>)</div><div class="line">    plt.tight_layout()</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># Projection matrix</span></div><div class="line"><span class="comment"># [假设前两个主成分占Explain Variance 的90%]选取前两个变量，构成Projection matrix</span></div><div class="line">matrix_w = np.hstack((eig_pairs[<span class="number">0</span>][<span class="number">1</span>].reshape(<span class="number">7</span>,<span class="number">1</span>), </div><div class="line">                      eig_pairs[<span class="number">1</span>][<span class="number">1</span>].reshape(<span class="number">7</span>,<span class="number">1</span>)</div><div class="line">                    ))</div><div class="line">print(<span class="string">'Matrix W:\n'</span>, matrix_w)</div><div class="line"></div><div class="line"><span class="comment"># Projection Onto the New Feature Space</span></div><div class="line">Y = X_std.dot(matrix_w)</div><div class="line"></div><div class="line"><span class="comment"># [学习使用sklearn做PCA]</span></div><div class="line"><span class="comment"># PCA in scikit-learn</span></div><div class="line"><span class="keyword">from</span> sklearn.decomposition <span class="keyword">import</span> PCA</div><div class="line">pca = PCA().fit(X_std)</div><div class="line">plt.plot(np.cumsum(pca.explained_variance_ratio_))</div><div class="line">plt.xlim(<span class="number">0</span>, <span class="number">7</span>, <span class="number">1</span>)</div><div class="line">plt.xlabel(<span class="string">'Number of components'</span>)</div><div class="line">plt.ylabel(<span class="string">'Cumulativa explained variance'</span>)</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">from</span> sklearn.decomposition <span class="keyword">import</span> PCA </div><div class="line">sklearn_pca = PCA(n_components=<span class="number">6</span>)</div><div class="line">Y_sklearn = sklearn_pca.fit_transform(X_std)</div><div class="line"></div><div class="line">print(Y_sklearn.shape)</div><div class="line"></div></pre></td></tr></table></figure>
-<h5 id="Supplement"><a href="#Supplement" class="headerlink" title="Supplement"></a>Supplement</h5><p>补充下sns.heatmap的使用</p>
-<blockquote>
-<p>heatmap(data, vmin=None, vmax=None, cmap=None, center=None, robust=False, annot=None, fmt=’.2g’, annot_kws=None, linewidths=0, linecolor=’white’, cbar=True, cbar_kws=None, cbar_ax=None, square=False, ax=None, xticklabels=True, yticklabels=True, mask=None, **kwargs)</p>
-<p>Plot rectangular data as a color-encoded matrix.</p>
-<p>This function tries to infer a good colormap to use from the data, but<br>this is not guaranteed to work, so take care to make sure the kind of<br>colormap (sequential or diverging) and its limits are appropriate.</p>
-<p>This is an Axes-level function and will draw the heatmap into the<br>currently-active Axes if none is provided to the <code>ax</code> argument.  Part of<br>this Axes space will be taken and used to plot a colormap, unless <code>cbar</code><br>is False or a separate Axes is provided to <code>cbar_ax</code>.</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line">flights = sns.load_dataset(<span class="string">"flights"</span>)</div><div class="line">flights = flights.pivot(<span class="string">"month"</span>, <span class="string">"year"</span>, <span class="string">"passengers"</span>)</div><div class="line">ax = sns.heatmap(flights, linewidth=<span class="number">.5</span>)</div><div class="line">plt.show()</div><div class="line"></div></pre></td></tr></table></figure>
-<p>输出：<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-02-25%2010-22-47.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line">flights = sns.load_dataset(<span class="string">"flights"</span>)</div><div class="line">flights = flights.pivot(<span class="string">"month"</span>, <span class="string">"year"</span>, <span class="string">"passengers"</span>)</div><div class="line">ax = sns.heatmap(flights, center=flights.loc[<span class="string">"January"</span>, <span class="number">1955</span>])</div><div class="line">plt.show()</div><div class="line"></div></pre></td></tr></table></figure>
-<p>输出：<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-02-25%2010-26-23.png" alt=""></p>
-
-          
+          Introduce这是新年定下的目标之一 —— Kaggle案例的学习这里，数据即来自Human R
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/25/Kaggle-Human-Resources-Analytics/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -942,7 +942,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
             
             
               
@@ -952,7 +952,7 @@
                 </a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -1034,11 +1034,15 @@
       
         
           
-            <p>关于<a href="http://www.opencv.org.cn/opencvdoc/2.3.2/html/doc/tutorials/imgproc/pyramids/pyramids.html" target="_blank" rel="external">图像金字塔</a>与边缘检测的结合。<br>我们知道，cv::pyrDown会损失图像的信息，其后再使用cv::pyrUP进行放大，会变得“模糊”。但是在用于边缘检测时，损失部分细节，可以获得更简洁的轮廓图。<br>测试代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span>	<span class="meta-string">&lt;opencv2/opencv.hpp&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span>	<span class="title">main</span><span class="params">(	<span class="keyword">int</span>	argc,	<span class="keyword">char</span>**	argv	)</span>	</span>&#123;</div><div class="line">    cv::Mat	img_rgb,	img_gry,	img_cny;</div><div class="line">    cv::namedWindow(	<span class="string">"Example	Gray"</span>,		cv::WINDOW_AUTOSIZE	);</div><div class="line">    cv::namedWindow(	<span class="string">"Example	Canny"</span>,	cv::WINDOW_AUTOSIZE	);</div><div class="line">    cv::namedWindow(	<span class="string">"Example	Canny  DU"</span>,	cv::WINDOW_AUTOSIZE	);</div><div class="line"></div><div class="line">    img_rgb	=	cv::imread(	argv[<span class="number">1</span>]	);				cv::cvtColor(	img_rgb,	img_gry,	cv::COLOR_BGR2GRAY);</div><div class="line">    cv::imshow(	<span class="string">"Example	Gray"</span>,	img_gry	);</div><div class="line">    cv::Canny(	img_gry,	img_cny,	<span class="number">10</span>,	<span class="number">100</span>,	<span class="number">3</span>,	<span class="literal">true</span>	);</div><div class="line">    cv::imshow(	<span class="string">"Example	Canny"</span>,	img_cny	);</div><div class="line"></div><div class="line">     (img_gry, img_gry);</div><div class="line">    cv::pyrUp(img_gry, img_gry);</div><div class="line">    cv::Canny(	img_gry,	img_cny,	<span class="number">10</span>,	<span class="number">100</span>,	<span class="number">3</span>,	<span class="literal">true</span>	);</div><div class="line">    cv::imshow(	<span class="string">"Example	Canny  DU"</span>,	img_cny	);</div><div class="line">    cv::waitKey(<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>输出图像：<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/canny.png" alt="canny"></p>
-<p>参考： <strong>Learning    OpenCV    3: Computer    Vision    in    C++    with    the    OpenCV    Library</strong> [p68]</p>
-
-          
+          关于图像金字塔与边缘检测的结合。我们知道，cv::pyrDown会损失图像的信息，其后再使用cv::
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/23/OpenCV-Pyramid-and-Canny/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1097,7 +1101,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
             
             
               
@@ -1107,7 +1111,7 @@
                 </a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -1189,12 +1193,16 @@
       
         
           
-            <p>环境： CLion Ubuntu16.04 OPenCV3.2.0</p>
-<p>学习OpenCV基础时，在读取视频文件时发现一个问题。<br>按照这样：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span>	<span class="meta-string">"opencv2/highgui/highgui.hpp"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span>	<span class="meta-string">"opencv2/imgproc/imgproc.hpp"</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span>	<span class="title">main</span><span class="params">(	<span class="keyword">int</span>	argc,	<span class="keyword">char</span>**	argv	)</span>	</span>&#123;</div><div class="line">    cv::namedWindow(	<span class="string">"Example3"</span>,	cv::WINDOW_AUTOSIZE	);</div><div class="line">    cv::VideoCapture	cap;</div><div class="line">    <span class="comment">//cap.open(	std::string(argv[1])	);</span></div><div class="line">    cap.open(<span class="string">"/home/shen/CLionProjects/MyCv/data/summaryVid.ogv"</span>);</div><div class="line">    cv::Mat	frame;</div><div class="line">    <span class="keyword">for</span>(;;)	&#123;</div><div class="line">        cap	&gt;&gt;	frame;</div><div class="line">        <span class="keyword">if</span>(	frame.empty() )	<span class="keyword">break</span>;					<span class="comment">//	Ran	out	of	film</span></div><div class="line">        cv::imshow(	<span class="string">"Example3"</span>,	frame	);</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(	cvWaitKey(<span class="number">33</span>) &gt;= <span class="number">0</span> )	<span class="keyword">break</span>;</div><div class="line">        <span class="comment">//if(	cv::waitKey(33) &gt;= 0 )	break;</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span>	<span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure></p>
-<p>代码最后，第一个if可以播放完整视频，而第二个却只显示一帧画面。调试发现，cvWaitKey(33)在不按键时返回的是-1， cv::waitKey(33)返回的是255<br>那么，问题来了，这两个函数不一样吗？查了查，没查到区别。。。<br>经<a href="http://www.liusong.me/" target="_blank" rel="external">废帝童鞋</a>帮助，发现是个<a href="https://github.com/opencv/opencv/pull/7866" target="_blank" rel="external">bug</a>…<br>酸爽的夜晚，继续前行…</p>
-<p>参考： <strong>Learning    OpenCV    3: Computer    Vision    in    C++    with    the    OpenCV    Library</strong> [p58]</p>
-
-          
+          环境： CLion Ubuntu16.04 OPenCV3.2.0
+学习OpenCV基础时，在读取视
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/22/OpenCV-Play-Video/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1253,7 +1261,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
             
             
               
@@ -1263,7 +1271,7 @@
                 </a>
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -1323,17 +1331,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Che
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/20/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1400,8 +1406,8 @@
                alt="不秩稚童" />
           <p class="site-author-name" itemprop="name">不秩稚童</p>
            
-              <p class="site-description motion-element" itemprop="description">十年饮冰，难凉热血。</p>
-          
+              <p class="site-description motion-element" itemprop="description"></p>
+           
         </div>
         <nav class="site-state motion-element">
         
