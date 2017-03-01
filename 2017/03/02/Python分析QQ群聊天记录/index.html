@@ -1,0 +1,836 @@
+<!doctype html>
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="python,正则," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Overview之前，写了这篇文章，用python提取全部群成员的发言时间，并简单做了下分析。先补充一下，针对特定单个群成员（这里以  小小白   为例）消息记录的获取。代码比较简单，主要是正则表达式的书写。（附：聊天文件记录的导出请参考上面提到的文章）
+Code这里有两个版本的，前面的比较简单，后面的一个实现了自动化提取做图。
+Version1.0123456789101112131415161">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python分析QQ群聊天记录">
+<meta property="og:url" content="http://datahonor.com/2017/03/02/Python分析QQ群聊天记录/index.html">
+<meta property="og:site_name" content="DATA HONOR">
+<meta property="og:description" content="Overview之前，写了这篇文章，用python提取全部群成员的发言时间，并简单做了下分析。先补充一下，针对特定单个群成员（这里以  小小白   为例）消息记录的获取。代码比较简单，主要是正则表达式的书写。（附：聊天文件记录的导出请参考上面提到的文章）
+Code这里有两个版本的，前面的比较简单，后面的一个实现了自动化提取做图。
+Version1.0123456789101112131415161">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/980075/201610/980075-20161018105033451-390495188.png">
+<meta property="og:updated_time" content="2017-03-01T17:31:45.514Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python分析QQ群聊天记录">
+<meta name="twitter:description" content="Overview之前，写了这篇文章，用python提取全部群成员的发言时间，并简单做了下分析。先补充一下，针对特定单个群成员（这里以  小小白   为例）消息记录的获取。代码比较简单，主要是正则表达式的书写。（附：聊天文件记录的导出请参考上面提到的文章）
+Code这里有两个版本的，前面的比较简单，后面的一个实现了自动化提取做图。
+Version1.0123456789101112131415161">
+<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/980075/201610/980075-20161018105033451-390495188.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '不秩稚童'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://datahonor.com/2017/03/02/Python分析QQ群聊天记录/"/>
+
+
+
+
+
+  <title> Python分析QQ群聊天记录 | DATA HONOR </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-92663335-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cbfd16620150a28ce4061f717038b4de";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">DATA HONOR</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Never say never.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/03/02/Python分析QQ群聊天记录/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="不秩稚童">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="DATA HONOR">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Python分析QQ群聊天记录
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-02T01:20:35+08:00">
+                2017-03-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/02/Python分析QQ群聊天记录/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/02/Python分析QQ群聊天记录/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>之前，写了<a href="http://www.cnblogs.com/buzhizhitong/p/5701299.html" target="_blank" rel="external">这篇文章</a>，用python提取全部群成员的发言时间，并简单做了下分析。先补充一下，针对特定单个群成员（这里以  小小白   为例）消息记录的获取。代码比较简单，主要是正则表达式的书写。（附：聊天文件记录的导出请参考上面提到的文章）</p>
+<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><p>这里有两个版本的，前面的比较简单，后面的一个实现了自动化提取做图。</p>
+<h6 id="Version1-0"><a href="#Version1-0" class="headerlink" title="Version1.0"></a>Version1.0</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#2016/9/14</span></div><div class="line"><span class="comment">#从QQ聊天数据导出特定人发言的日期时间和发言内容</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">import</span> xlsxwriter</div><div class="line"></div><div class="line"><span class="comment"># 小小白   这里代指你要获取数据的对象的昵称</span></div><div class="line"><span class="comment"># 方便起见，见数据导出的文件名也明明为此</span></div><div class="line">workbook = xlsxwriter.Workbook(<span class="string">'小小白.xlsx'</span>)</div><div class="line">worksheet = workbook.add_worksheet()</div><div class="line">worksheet.set_column(<span class="string">'A:A'</span>, <span class="number">5</span>)</div><div class="line">worksheet.set_column(<span class="string">'B:B'</span>, <span class="number">10</span>)</div><div class="line">worksheet.set_column(<span class="string">'C:C'</span>, <span class="number">200</span>)</div><div class="line"></div><div class="line"><span class="keyword">with</span> open(<span class="string">'高等数学.txt'</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</div><div class="line">    s = f.read()</div><div class="line">    <span class="comment"># 正则，跨行匹配</span></div><div class="line">    pa = re.compile(<span class="string">r'^(\d&#123;4&#125;-\d&#123;2&#125;-\d&#123;2&#125;) (\d&#123;2&#125;:\d&#123;2&#125;:\d&#123;2&#125;) 小小白\(小小白的QQ号\)\n(.*?)\n$'</span>,re.DOTALL+re.MULTILINE)</div><div class="line">    ma = re.findall(pa,s)</div><div class="line">    <span class="comment"># print(len(ma))</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ma)):</div><div class="line">        <span class="comment"># print(ma[i][0])</span></div><div class="line">        date = ma[i][<span class="number">0</span>]</div><div class="line">        time = ma[i][<span class="number">1</span>]</div><div class="line">        word = ma[i][<span class="number">2</span>]</div><div class="line"></div><div class="line">        worksheet.write(int(i),<span class="number">0</span>,date)</div><div class="line">        worksheet.write(int(i),<span class="number">1</span>,time)</div><div class="line">        worksheet.write(int(i),<span class="number">2</span>,word)</div><div class="line"></div><div class="line">    workbook.close()</div><div class="line">    print(<span class="string">"处理完毕，快去看看文件夹下面新建的.xlsx文件吧"</span>)</div><div class="line"></div></pre></td></tr></table></figure>
+<h6 id="Version2-0"><a href="#Version2-0" class="headerlink" title="Version2.0"></a>Version2.0</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 解决matplotlib显示中文的问题</span></div><div class="line"><span class="keyword">import</span> matplotlib <span class="keyword">as</span> mpl</div><div class="line">mpl.rcParams[<span class="string">"font.sans-serif"</span>] = [<span class="string">"Microsoft YaHei"</span>]</div><div class="line">mpl.rcParams[<span class="string">'axes.unicode_minus'</span>] = <span class="keyword">False</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 获取24个时间段-----&gt;periods</span></div><div class="line"><span class="comment"># 用于之后时间的分段</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_periods</span><span class="params">()</span>:</span></div><div class="line">    periods = []</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">24</span>):</div><div class="line">        <span class="comment"># 这里的判断用于将类似的‘8’ 转化为 ‘08’ 便于和导出数据匹配</span></div><div class="line">        <span class="keyword">if</span> i &lt; <span class="number">10</span>:</div><div class="line">            i = <span class="string">'0'</span>+str(i)</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            i = str(i)</div><div class="line">        periods.append(i)</div><div class="line">    <span class="keyword">return</span> periods</div><div class="line"></div><div class="line"><span class="string">'''</span></div><div class="line">对QQ群而言的时间提取</div><div class="line"></div><div class="line"># 获取聊天文件的“小时”数据</div><div class="line">def get_times(filename):</div><div class="line">    with open(filename, encoding='utf-8') as f:</div><div class="line">        data = f.read()</div><div class="line">        # 例如20:50:52，要匹配其中的20</div><div class="line">        pa = re.compile(r"(\d\d):\d\d:\d\d")</div><div class="line">        times = re.findall(pa, data)</div><div class="line"></div><div class="line">    return times</div><div class="line">'''</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 对每一个时间段进行计数</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">classification</span><span class="params">(times,period)</span>:</span></div><div class="line">    num = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> time <span class="keyword">in</span> times:</div><div class="line">        <span class="keyword">if</span> time == period:</div><div class="line">            num += <span class="number">1</span></div><div class="line">    period_time.append([period,num])</div><div class="line">    <span class="comment"># print(period, '---&gt;', num)</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 作图</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_time</span><span class="params">(period_time,name)</span>:</span></div><div class="line">    time = []</div><div class="line">    num  = []</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> period_time:</div><div class="line">        time.append(i[<span class="number">0</span>])</div><div class="line">        num.append(i[<span class="number">1</span>])</div><div class="line">    time = time[<span class="number">6</span>:<span class="number">24</span>]+time[<span class="number">0</span>:<span class="number">6</span>]</div><div class="line">    num = num[<span class="number">6</span>:<span class="number">24</span>]+num[<span class="number">0</span>:<span class="number">6</span>]</div><div class="line">    <span class="comment"># print(time,'\n',num)</span></div><div class="line">    labels = time</div><div class="line">    x = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">24</span>)]</div><div class="line">    plt.plot(num, <span class="string">'g'</span>)</div><div class="line">    num_max = max(num)</div><div class="line">    plt.xticks(x,labels)</div><div class="line">    plt.axis([<span class="number">00</span>, <span class="number">24</span>, <span class="number">0</span>, num_max*(<span class="number">1.2</span>)])</div><div class="line">    plt.grid(<span class="keyword">True</span>)</div><div class="line">    plt.title(name)</div><div class="line">    plt.ylabel(<span class="string">'发言量'</span>)</div><div class="line">    plt.xlabel(<span class="string">'时间'</span>)</div><div class="line">    plt.show()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_person_data</span><span class="params">(filename,name,qqnumber)</span>:</span></div><div class="line">    person_data = &#123;<span class="string">'date'</span>:[],<span class="string">'time'</span>:[],<span class="string">'word'</span>:[]&#125;</div><div class="line">    <span class="keyword">with</span> open(filename,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</div><div class="line">        s = f.read()</div><div class="line">        <span class="comment"># 正则，跨行匹配</span></div><div class="line">        pa = re.compile(<span class="string">r'^(\d&#123;4&#125;-\d&#123;2&#125;-\d&#123;2&#125;) (\d&#123;2&#125;:\d&#123;2&#125;:\d&#123;2&#125;) '</span>+name+<span class="string">r'\('</span>+qqnumber+<span class="string">'\)\n(.*?)\n$'</span>,re.DOTALL+re.MULTILINE)</div><div class="line">        ma = re.findall(pa,s)</div><div class="line">        <span class="comment"># print(len(ma))</span></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ma)):</div><div class="line">            <span class="comment"># print(ma[i][0])</span></div><div class="line">            date = ma[i][<span class="number">0</span>]</div><div class="line">            time = ma[i][<span class="number">1</span>]</div><div class="line">            word = ma[i][<span class="number">2</span>]</div><div class="line">            person_data[<span class="string">'date'</span>].append(date)</div><div class="line">            person_data[<span class="string">'time'</span>].append(time[<span class="number">0</span>:<span class="number">2</span>])</div><div class="line">            person_data[<span class="string">'word'</span>].append(word)</div><div class="line">    <span class="keyword">return</span> person_data</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</div><div class="line">    filename = input(<span class="string">'请输入聊天记录文件名：'</span>)</div><div class="line">    name = input(<span class="string">'准备提取个人信息就绪，请输入要提取人的群名片：'</span>)</div><div class="line">    qqnumber = input(<span class="string">'请输入要提取人的QQ号：'</span>)</div><div class="line">    period_time = []</div><div class="line">    person_data = get_person_data(filename,name,qqnumber)</div><div class="line">    times = person_data[<span class="string">'time'</span>]</div><div class="line"></div><div class="line">    periods = get_periods()</div><div class="line">    <span class="keyword">for</span> period <span class="keyword">in</span> periods:</div><div class="line">        classification(times,period)</div><div class="line">    plot_time(period_time,name)</div><div class="line">    <span class="comment"># print(person_data['word'])</span></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：<br><img src="http://images2015.cnblogs.com/blog/980075/201610/980075-20161018105033451-390495188.png" alt=""></p>
+<h5 id="Supplement"><a href="#Supplement" class="headerlink" title="Supplement"></a>Supplement</h5><blockquote>
+<p>关于Windows下，matplotlib中文显示的问题，参考我之前的<a href="http://www.cnblogs.com/buzhizhitong/p/5759304.html" target="_blank" rel="external">这篇文章</a>。<br>至于Ubuntu下，还未去处理，之后有时间补充。</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/正则/" rel="tag"># 正则</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/02/Python实现支持向量机-SVM/" rel="next" title="Python实现支持向量机(SVM)">
+                <i class="fa fa-chevron-left"></i> Python实现支持向量机(SVM)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/02/Python分析QQ群聊天记录/"
+           data-title="Python分析QQ群聊天记录" data-url="http://datahonor.com/2017/03/02/Python分析QQ群聊天记录/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
+               alt="不秩稚童" />
+          <p class="site-author-name" itemprop="name">不秩稚童</p>
+           
+              <p class="site-description motion-element" itemprop="description">十年饮冰，难凉热血。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/shenxiangzhuang" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/chen-xiang-zhuang" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Version1-0"><span class="nav-text">Version1.0</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Version2-0"><span class="nav-text">Version2.0</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Supplement"><span class="nav-text">Supplement</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">不秩稚童</span>
+</div>
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+  
+
+  
+    <span class="site-pv">本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"shenxiangzhuang"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+  
+
+
+</body>
+</html>
