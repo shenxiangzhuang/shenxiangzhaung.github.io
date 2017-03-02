@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Cpp,Practice," />
+  <meta name="keywords" content="Python,统计学习方法,Data Analysis,ML," />
 
 
 
@@ -89,31 +89,21 @@
 
 
 
-<meta name="description" content="Introduction关于Cpp知识点的结合练习。
-Overview本次练习涉及的知识点
-
-vector的几种打印方式将函数作为参数传入其他函数精确[毫秒及微秒]时间的计量
-
-Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758">
+<meta name="description" content="Coursera课程machine learning data analysis  week1Decision Trees
+Python代码：[最后图片部分有些许改动]12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Print time!">
-<meta property="og:url" content="http://datahonor.com/2017/02/26/Print-time/index.html">
+<meta property="og:title" content="决策树的简单实现">
+<meta property="og:url" content="http://datahonor.com/2017/03/02/决策树的简单实现/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="Introduction关于Cpp知识点的结合练习。
-Overview本次练习涉及的知识点
-
-vector的几种打印方式将函数作为参数传入其他函数精确[毫秒及微秒]时间的计量
-
-Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758">
-<meta property="og:updated_time" content="2017-02-26T02:51:48.513Z">
+<meta property="og:description" content="Coursera课程machine learning data analysis  week1Decision Trees
+Python代码：[最后图片部分有些许改动]12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/tree.png">
+<meta property="og:updated_time" content="2017-03-02T07:53:46.397Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Print time!">
-<meta name="twitter:description" content="Introduction关于Cpp知识点的结合练习。
-Overview本次练习涉及的知识点
-
-vector的几种打印方式将函数作为参数传入其他函数精确[毫秒及微秒]时间的计量
-
-Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758">
+<meta name="twitter:title" content="决策树的简单实现">
+<meta name="twitter:description" content="Coursera课程machine learning data analysis  week1Decision Trees
+Python代码：[最后图片部分有些许改动]12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626">
+<meta name="twitter:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/tree.png">
 
 
 
@@ -141,13 +131,13 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
 
 
 
-  <link rel="canonical" href="http://datahonor.com/2017/02/26/Print-time/"/>
+  <link rel="canonical" href="http://datahonor.com/2017/03/02/决策树的简单实现/"/>
 
 
 
 
 
-  <title> Print time! | DATA HONOR </title>
+  <title> 决策树的简单实现 | DATA HONOR </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -295,7 +285,7 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/02/26/Print-time/">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/03/02/决策树的简单实现/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="不秩稚童">
@@ -319,7 +309,7 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
             
             
               
-                Print time!
+                决策树的简单实现
               
             
           </h1>
@@ -334,8 +324,8 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-26T10:44:00+08:00">
-                2017-02-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-02T15:48:54+08:00">
+                2017-03-02
               </time>
             
 
@@ -357,8 +347,8 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Cpp/" itemprop="url" rel="index">
-                    <span itemprop="name">Cpp</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -375,8 +365,8 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/26/Print-time/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/26/Print-time/" itemprop="commentCount"></span>
+                <a href="/2017/03/02/决策树的简单实现/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/02/决策树的简单实现/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -407,13 +397,18 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
       
 
       
-        <h5 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h5><p>关于Cpp知识点的结合练习。</p>
-<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>本次练习涉及的知识点</p>
+        <p>Coursera课程machine learning data analysis  week1Decision Trees</p>
+<p>Python代码：[最后图片部分有些许改动]<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> train_test_split</div><div class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier <span class="keyword">import</span> sklearn.metrics</div><div class="line"></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">Data Engineering and Analysis</div><div class="line">"""</div><div class="line"><span class="comment">#Load the dataset</span></div><div class="line"></div><div class="line">AH_data = pd.read_csv(<span class="string">"tree_addhealth.csv"</span>)</div><div class="line"></div><div class="line">data_clean = AH_data.dropna()</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 一些常用的命令，整体上描述数据</span></div><div class="line">print(<span class="string">'---------desc-------------'</span>)</div><div class="line"><span class="comment"># print(data_clean.info())</span></div><div class="line"><span class="comment"># print(data_clean.dtypes)</span></div><div class="line">print(data_clean.describe())</div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">Modeling and Prediction</div><div class="line">"""</div><div class="line"><span class="comment">#Split into training and testing sets</span></div><div class="line"><span class="comment"># 除去TREG1后的24个字段</span></div><div class="line">predictors = data_clean[[<span class="string">'BIO_SEX'</span>,<span class="string">'HISPANIC'</span>,<span class="string">'WHITE'</span>,<span class="string">'BLACK'</span>,<span class="string">'NAMERICAN'</span>,<span class="string">'ASIAN'</span>,</div><div class="line"><span class="string">'age'</span>,<span class="string">'ALCEVR1'</span>,<span class="string">'ALCPROBS1'</span>,<span class="string">'marever1'</span>,<span class="string">'cocever1'</span>,<span class="string">'inhever1'</span>,<span class="string">'cigavail'</span>,<span class="string">'DEP1'</span>,</div><div class="line"><span class="string">'ESTEEM1'</span>,<span class="string">'VIOL1'</span>,<span class="string">'PASSIST'</span>,<span class="string">'DEVIANT1'</span>,<span class="string">'SCHCONN1'</span>,<span class="string">'GPA1'</span>,<span class="string">'EXPEL1'</span>,<span class="string">'FAMCONCT'</span>,<span class="string">'PARACTV'</span>,</div><div class="line"><span class="string">'PARPRES'</span>]]</div><div class="line"></div><div class="line">targets = data_clean.TREG1</div><div class="line"><span class="comment"># 拆分为测试集和训练集</span></div><div class="line">pred_train, pred_test, tar_train, tar_test  =   train_test_split(predictors, targets, test_size=<span class="number">.4</span>)  <span class="comment"># 测试集占数据集的40%</span></div><div class="line"></div><div class="line"><span class="comment"># 查看拆分结果</span></div><div class="line"></div><div class="line">print(<span class="string">'---------shapes------------'</span>)</div><div class="line">print(pred_train.shape)</div><div class="line">print(pred_test.shape)</div><div class="line">print(tar_train.shape)</div><div class="line">print(tar_test.shape)</div><div class="line"></div><div class="line"><span class="comment">#Build model on training data</span></div><div class="line">classifier=DecisionTreeClassifier()</div><div class="line">classifier=classifier.fit(pred_train,tar_train)</div><div class="line"></div><div class="line">predictions=classifier.predict(pred_test)</div><div class="line"></div><div class="line">sklearn.metrics.confusion_matrix(tar_test,predictions)</div><div class="line">sklearn.metrics.accuracy_score(tar_test, predictions)</div><div class="line"></div><div class="line"><span class="comment">#Displaying the decision tree</span></div><div class="line"><span class="keyword">import</span> pydotplus</div><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> tree</div><div class="line"><span class="keyword">from</span> io <span class="keyword">import</span> StringIO</div><div class="line"></div><div class="line">out = StringIO()</div><div class="line">tree.export_graphviz(classifier, out_file=out)</div><div class="line">graph=pydotplus.graph_from_dot_data(out.getvalue())</div><div class="line">data = graph.create_png()  <span class="comment"># 图片的二进制数据</span></div><div class="line"><span class="keyword">with</span> open(<span class="string">'tree.png'</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</div><div class="line">    f.write(data)</div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>遇到的问题：</p>
 <blockquote>
-<p>vector的几种打印方式<br>将函数作为参数传入其他函数<br>精确[毫秒及微秒]时间的计量</p>
+<p>InvocationException: GraphViz’s executables not found</p>
 </blockquote>
-<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/time.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 几种打印vector的方法</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">printvector1</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v)</span></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;v.size(); i++)&#123;</div><div class="line"><span class="comment">//        cout&lt;&lt; i;</span></div><div class="line">        <span class="built_in">cout</span> &lt;&lt; v[i]&lt;&lt;<span class="string">"  "</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">printvector2</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v)</span></span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = v.begin(); iter != v.end(); ++iter)</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; *iter&lt;&lt; <span class="string">" "</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">printvector3</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v)</span></span>&#123;</div><div class="line">    <span class="keyword">auto</span> itr = v.begin();</div><div class="line">    <span class="keyword">while</span>( itr != v.end())&#123;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; *(itr++) &lt;&lt;<span class="string">" "</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 将函数作为参数传入</span></div><div class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">void</span> <span class="params">(*pf)</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v)</span></span>;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 精确时间的计量</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">taketime</span><span class="params">(pf f, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v)</span></span>&#123;</div><div class="line">    <span class="keyword">struct</span> timeval start, end;</div><div class="line"></div><div class="line">    <span class="keyword">long</span> mtime, seconds, useconds;</div><div class="line"></div><div class="line">    gettimeofday(&amp;start, <span class="literal">NULL</span>);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"Elapsed time: %ld milliseconds\n"</span>, mtime);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">1000</span>; i++)</div><div class="line">        f(v);</div><div class="line">    gettimeofday(&amp;end, <span class="literal">NULL</span>);</div><div class="line"></div><div class="line">    seconds  = end.tv_sec  - start.tv_sec;</div><div class="line">    useconds = end.tv_usec - start.tv_usec;</div><div class="line"></div><div class="line">    mtime = ((seconds) * <span class="number">1000</span> + useconds/<span class="number">1000.0</span>) + <span class="number">0.5</span>;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt;<span class="built_in">endl</span>&lt;&lt; mtime;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; daysInMonth = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>&#125;;</div><div class="line">    taketime(printvector1, daysInMonth);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
-<h5 id="Refrence"><a href="#Refrence" class="headerlink" title="Refrence"></a>Refrence</h5><p><em>Data Structures and AlgorithmAnalysis in C++</em>[p84]</p>
+<p>解决：</p>
+<blockquote>
+<p>pip install graphviz</p>
+</blockquote>
+<p>这样虽说不报错了，但是图片还是无法显示，于是就做了变动，改为保存图片。<br>tree.png:</p>
+<p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/tree.png" alt=""></p>
 
       
     </div>
@@ -437,9 +432,13 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
       
         <div class="post-tags">
           
-            <a href="/tags/Cpp/" rel="tag"># Cpp</a>
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
-            <a href="/tags/Practice/" rel="tag"># Practice</a>
+            <a href="/tags/统计学习方法/" rel="tag"># 统计学习方法</a>
+          
+            <a href="/tags/Data-Analysis/" rel="tag"># Data Analysis</a>
+          
+            <a href="/tags/ML/" rel="tag"># ML</a>
           
         </div>
       
@@ -452,8 +451,8 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/25/Bubble-Sort/" rel="next" title="Bubble Sort">
-                <i class="fa fa-chevron-left"></i> Bubble Sort
+              <a href="/2017/03/02/Kaggle——A-Journey-through-Titanic-Python/" rel="next" title="Kaggle——A Journey through Titanic[Python]">
+                <i class="fa fa-chevron-left"></i> Kaggle——A Journey through Titanic[Python]
               </a>
             
           </div>
@@ -461,10 +460,6 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/27/K-means-clustering/" rel="prev" title="K-means clustering">
-                K-means clustering <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -490,8 +485,8 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/26/Print-time/"
-           data-title="Print time!" data-url="http://datahonor.com/2017/02/26/Print-time/">
+      <div class="ds-thread" data-thread-key="2017/03/02/决策树的简单实现/"
+           data-title="决策树的简单实现" data-url="http://datahonor.com/2017/03/02/决策树的简单实现/">
       </div>
     
   </div>
@@ -515,17 +510,8 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
@@ -603,22 +589,6 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Introduction"><span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Refrence"><span class="nav-text">Refrence</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
