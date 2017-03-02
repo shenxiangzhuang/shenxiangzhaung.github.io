@@ -129,7 +129,7 @@
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/QQ/QQ26.png">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/QQ/QQ27.png">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/QQ/QQ28.png">
-<meta property="og:updated_time" content="2017-03-02T05:21:38.879Z">
+<meta property="og:updated_time" content="2017-03-02T05:53:12.048Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QQ空间数据分析报告">
 <meta name="twitter:description" content="概览 之前呢，写了这个爬虫，从QQ邮箱导出所有QQ联系人后，在本地电脑上放养几天，经过几次refuse，还是爬完了所有的好友的说说资料。数据量约60K+， 但是NA值较多。
@@ -430,7 +430,7 @@
       
 
       
-        <h5 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h5><p> 之前呢，写了这个爬虫，从QQ邮箱导出所有QQ联系人后，在本地电脑上放养几天，经过几次refuse，还是爬完了所有的好友的说说资料。数据量约60K+， 但是NA值较多。</p>
+        <h5 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h5><p> 之前呢，写了<a href="http://datahonor.com/2017/03/02/Selenium%E7%88%AC%E5%8F%96QQ%E7%A9%BA%E9%97%B4%E8%AF%B4%E8%AF%B4%E4%BF%A1%E6%81%AF/#more">这个爬虫</a>，从QQ邮箱导出所有QQ联系人后，在本地电脑上放养几天，经过几次refuse，还是爬完了所有的好友的说说资料。数据量约60K+， 但是NA值较多。</p>
 <h5 id="数据导出"><a href="#数据导出" class="headerlink" title="数据导出"></a>数据导出</h5><p>这里呢，简单作下分析。<br>第一步就是从MySQL中把数据以csv格式导出。</p>
 <p>参考<a href="http://www.tech-recipes.com/rx/1475/save-mysql-query-results-into-a-text-or-csv-file/" target="_blank" rel="external">这里</a>。开始时，尝试：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM QQSpace</div><div class="line">INTO OUTFILE &apos;/home/shen/PycharmProjects/MyPython/MySpider/QQ/data.csv&apos;</div><div class="line">FIELDS TERMINATED BY &apos;,&apos;</div><div class="line">ENCLOSED BY &apos;&quot;&apos;</div><div class="line">LINES TERMINATED BY &apos;\n&apos;</div></pre></td></tr></table></figure>
@@ -609,7 +609,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
