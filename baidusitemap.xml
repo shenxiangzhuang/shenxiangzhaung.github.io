@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/02/27/K-means-clustering/</loc>
+    <lastmod>2017-03-02T17:39:54.329Z</lastmod>
+    <data>
+        <display>
+        <title>K-means clustering</title>
+        <pubTime>2017-02-27T14:12:47.000Z</pubTime>
+        
+        <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
+         
+        <tag>Clustering</tag>
+         
+        <tag>统计学习方法</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/03/02/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95-Gradient-Descent/</loc>
     <lastmod>2017-03-02T09:49:32.957Z</lastmod>
     <data>
@@ -35,9 +61,9 @@
         <title>统计学习方法——简单实现KNN[Python]</title>
         <pubTime>2017-03-02T07:55:59.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Clustering</tag>
          
@@ -65,9 +91,9 @@
         <title>决策树的简单实现</title>
         <pubTime>2017-03-02T07:48:54.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Clustering</tag>
          
@@ -395,9 +421,9 @@
         <title>Python实现支持向量机(SVM)</title>
         <pubTime>2017-03-01T16:10:13.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Clustering</tag>
          
@@ -429,32 +455,6 @@
            
              
               <breadCrumb title="python" url="http://datahonor.com/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/02/27/K-means-clustering/</loc>
-    <lastmod>2017-03-01T05:34:24.303Z</lastmod>
-    <data>
-        <display>
-        <title>K-means clustering</title>
-        <pubTime>2017-02-27T14:12:47.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Algorithm</tag>
-         
-        <tag>Clustering</tag>
-         
-        <tag>统计学习方法</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
           
         </display>
     </data>

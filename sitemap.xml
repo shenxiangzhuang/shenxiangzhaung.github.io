@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://datahonor.com/2017/02/27/K-means-clustering/</loc>
+    
+    <lastmod>2017-03-02T17:39:54.329Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://datahonor.com/2017/03/02/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95-Gradient-Descent/</loc>
     
     <lastmod>2017-03-02T09:49:32.957Z</lastmod>
@@ -131,13 +138,6 @@
     <loc>http://datahonor.com/2017/03/02/Python%E5%88%86%E6%9E%90QQ%E7%BE%A4%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95/</loc>
     
     <lastmod>2017-03-01T17:31:45.514Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/2017/02/27/K-means-clustering/</loc>
-    
-    <lastmod>2017-03-01T05:34:24.303Z</lastmod>
     
   </url>
   

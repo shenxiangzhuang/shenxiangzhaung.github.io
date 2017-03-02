@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python,Algorithm,Clustering,统计学习方法," />
+  <meta name="keywords" content="Algorithm,Python,Clustering,统计学习方法," />
 
 
 
@@ -101,9 +101,9 @@ Overview
 k-平均算法源于信号处理中的一种向量量化方法，现在则更多地作为一种聚类分析方法流行于数据挖掘领域。k-平均聚类的目的是：把 n {\displaystyle n} n个点（可以是样本的一次观察或一个实例）划分到k个聚类中，使得每个点都属于离他最近的均值（">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-02-27%2022-21-23.png">
 <meta property="og:image" content="http://olricxi00.bkt.clouddn.com/Screenshot%20from%202017-03-01%2012-59-38.png">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/figure_1.png">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-03-03%2001-38-15.png">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-02-27%2022-39-10.png">
-<meta property="og:updated_time" content="2017-03-01T05:34:24.303Z">
+<meta property="og:updated_time" content="2017-03-02T17:39:54.329Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="K-means clustering">
 <meta name="twitter:description" content="K-means clustering的Python实现交流群不相识的朋友突然问我怎么手写K-means…于是腾出时间简单写下。
@@ -422,7 +422,7 @@ k-平均算法源于信号处理中的一种向量量化方法，现在则更多
 <blockquote>
 <p>Random:  [array([ 85, 135]), array([ 92, 142])]<br>alculating…<br>alculating…<br>alculating…<br>alculating…<br>alculating…<br>alculating…<br>alculating…<br>alculating…<br>complete!<br>求得的最优质点为:  [array([  75.5,  125.5]), array([ 25.5,  75.5])]<br>各维度的距离为:  [ 0.  0.]<br>最终聚类结果为:  {‘1’: [array([ 51, 101]), array([ 52, 102]), array([ 53, 103]), array([ 54, 104]),array([ 55, 105]), … , array([46, 96]), array([47, 97]), array([48, 98]), array([49, 99]), array([ 50, 100])]}</p>
 </blockquote>
-<p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/figure_1.png" alt=""></p>
+<p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-03-03%2001-38-15.png" alt=""></p>
 <h5 id="Supplement"><a href="#Supplement" class="headerlink" title="Supplement"></a>Supplement</h5><p>关于上面的实现，开始时发现，每次运行作出来的图竟然不一样…调试发现时递归那里的问题。<br>就是关于return的问题，这里内部的return只是起到终止递归的作用，返回的是外面的return。抽象出来，类似下面这种<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-02-27%2022-39-10.png" alt=""></p>
 <p>后面有时间会再针对上面的问题进行改进。</p>
 <h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><a href="https://zh.wikipedia.org/wiki/K-%E5%B9%B3%E5%9D%87%E7%AE%97%E6%B3%95#.E7.AE.97.E6.B3.95.E6.8F.8F.E8.BF.B0" target="_blank" rel="external">WIKI</a><br><a href="http://stackoverflow.com/questions/3989016/how-to-find-all-positions-of-the-maximum-value-in-a-list" target="_blank" rel="external">StackOverflow</a><br><a href="http://www.cnblogs.com/leoo2sk/archive/2010/09/20/k-means.html" target="_blank" rel="external">CodingLabs</a></p>
@@ -449,9 +449,9 @@ k-平均算法源于信号处理中的一种向量量化方法，现在则更多
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
-          
             <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
             <a href="/tags/Clustering/" rel="tag"># Clustering</a>
           
