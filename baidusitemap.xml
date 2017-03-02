@@ -4,6 +4,90 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/03/02/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95-Gradient-Descent/</loc>
+    <lastmod>2017-03-02T09:49:32.957Z</lastmod>
+    <data>
+        <display>
+        <title>梯度下降法[Gradient Descent]</title>
+        <pubTime>2017-03-02T09:31:38.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>统计学习方法</tag>
+         
+        <tag>ML</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/03/02/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E2%80%94%E2%80%94%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0KNN-Python/</loc>
+    <lastmod>2017-03-02T09:33:06.731Z</lastmod>
+    <data>
+        <display>
+        <title>统计学习方法——简单实现KNN[Python]</title>
+        <pubTime>2017-03-02T07:55:59.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Algorithm</tag>
+         
+        <tag>Clustering</tag>
+         
+        <tag>统计学习方法</tag>
+         
+        <tag>Data Analysis</tag>
+         
+        <tag>ML</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/03/02/%E5%86%B3%E7%AD%96%E6%A0%91%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/</loc>
+    <lastmod>2017-03-02T09:32:48.139Z</lastmod>
+    <data>
+        <display>
+        <title>决策树的简单实现</title>
+        <pubTime>2017-03-02T07:48:54.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Algorithm</tag>
+         
+        <tag>Clustering</tag>
+         
+        <tag>统计学习方法</tag>
+         
+        <tag>Data Analysis</tag>
+         
+        <tag>ML</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/03/02/%E8%B1%86%E7%93%A3%E5%BD%B1%E8%AF%84%E7%88%AC%E5%8F%96/</loc>
     <lastmod>2017-03-02T09:27:35.729Z</lastmod>
     <data>
@@ -158,62 +242,6 @@
         <tag>Python</tag>
          
         <tag>Spider</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/03/02/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E2%80%94%E2%80%94%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0KNN-Python/</loc>
-    <lastmod>2017-03-02T08:11:37.627Z</lastmod>
-    <data>
-        <display>
-        <title>统计学习方法——简单实现KNN[Python]</title>
-        <pubTime>2017-03-02T07:55:59.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Clustering</tag>
-         
-        <tag>统计学习方法</tag>
-         
-        <tag>Data Analysis</tag>
-         
-        <tag>ML</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/03/02/%E5%86%B3%E7%AD%96%E6%A0%91%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/</loc>
-    <lastmod>2017-03-02T07:56:15.621Z</lastmod>
-    <data>
-        <display>
-        <title>决策树的简单实现</title>
-        <pubTime>2017-03-02T07:48:54.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Clustering</tag>
-         
-        <tag>统计学习方法</tag>
-         
-        <tag>Data Analysis</tag>
-         
-        <tag>ML</tag>
          
          
            
