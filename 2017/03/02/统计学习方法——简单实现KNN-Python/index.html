@@ -1,0 +1,872 @@
+<!doctype html>
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Python,Clustering,统计学习方法,Data Analysis,ML," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="李航老师《统计学习方法》第三章笔记。
+关于KNN[k-Nearest Neighbors algorithm]的基本知识和实验。
+KNN的基本知识详情参考WIKI, 这里我们暂时先研究分类方面的应用。
+
+算法的描述：
+
+(1)在K近邻法中，当训练集、距离度量[如欧式距离]、K值及分类决策规则[如多数表决]确定后，对于任一新的输入实例，它所属的类唯一地确定。
+  (2)k值的减小就意味着整体模型变得">
+<meta property="og:type" content="article">
+<meta property="og:title" content="统计学习方法——简单实现KNN[Python]">
+<meta property="og:url" content="http://datahonor.com/2017/03/02/统计学习方法——简单实现KNN-Python/index.html">
+<meta property="og:site_name" content="DATA HONOR">
+<meta property="og:description" content="李航老师《统计学习方法》第三章笔记。
+关于KNN[k-Nearest Neighbors algorithm]的基本知识和实验。
+KNN的基本知识详情参考WIKI, 这里我们暂时先研究分类方面的应用。
+
+算法的描述：
+
+(1)在K近邻法中，当训练集、距离度量[如欧式距离]、K值及分类决策规则[如多数表决]确定后，对于任一新的输入实例，它所属的类唯一地确定。
+  (2)k值的减小就意味着整体模型变得">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch3/1.png">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch3/2.png">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch3/3.png">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch3/4.png">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch3/5.png">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch3/6.png">
+<meta property="og:updated_time" content="2017-03-02T08:11:37.627Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="统计学习方法——简单实现KNN[Python]">
+<meta name="twitter:description" content="李航老师《统计学习方法》第三章笔记。
+关于KNN[k-Nearest Neighbors algorithm]的基本知识和实验。
+KNN的基本知识详情参考WIKI, 这里我们暂时先研究分类方面的应用。
+
+算法的描述：
+
+(1)在K近邻法中，当训练集、距离度量[如欧式距离]、K值及分类决策规则[如多数表决]确定后，对于任一新的输入实例，它所属的类唯一地确定。
+  (2)k值的减小就意味着整体模型变得">
+<meta name="twitter:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch3/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '不秩稚童'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://datahonor.com/2017/03/02/统计学习方法——简单实现KNN-Python/"/>
+
+
+
+
+
+  <title> 统计学习方法——简单实现KNN[Python] | DATA HONOR </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-92663335-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cbfd16620150a28ce4061f717038b4de";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">DATA HONOR</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Never say never.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/03/02/统计学习方法——简单实现KNN-Python/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="不秩稚童">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="DATA HONOR">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                统计学习方法——简单实现KNN[Python]
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-02T15:55:59+08:00">
+                2017-03-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/02/统计学习方法——简单实现KNN-Python/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/02/统计学习方法——简单实现KNN-Python/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>李航老师《统计学习方法》第三章笔记。</p>
+<p>关于KNN[k-Nearest Neighbors algorithm]的基本知识和实验。</p>
+<h5 id="KNN的基本知识"><a href="#KNN的基本知识" class="headerlink" title="KNN的基本知识"></a>KNN的基本知识</h5><p>详情参考<a href="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm" target="_blank" rel="external">WIKI</a>, 这里我们暂时先研究分类方面的应用。<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch3/1.png" alt=""></p>
+<p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch3/2.png" alt=""></p>
+<h5 id="算法的描述："><a href="#算法的描述：" class="headerlink" title="算法的描述："></a>算法的描述：</h5><p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch3/3.png" alt=""></p>
+<blockquote>
+<p>(1)在K近邻法中，当训练集、距离度量[如欧式距离]、K值及分类决策规则[如多数表决]确定后，对于任一新的输入实例，它所属的类唯一地确定。</p>
+<p>  (2)k值的减小就意味着整体模型变得复杂，容易发生过拟合。K一般取较小的值，通常采用交叉验证法来选取最优的K值。</p>
+</blockquote>
+<h5 id="Python实现"><a href="#Python实现" class="headerlink" title="Python实现"></a>Python实现</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># S1--&gt;随机生成训练集并标注</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 模拟对原始数据标注</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">sign</span><span class="params">(Px, D, classx)</span>:</span></div><div class="line">    <span class="keyword">for</span> px <span class="keyword">in</span> Px:</div><div class="line">        D[tuple(px)] = classx</div><div class="line"></div><div class="line"><span class="comment"># 湖区train_data</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_train_data</span><span class="params">()</span>:</span></div><div class="line">    <span class="comment"># D 用来储存所有的标注好的实例点</span></div><div class="line">    D = &#123;&#125;</div><div class="line">    P1 = np.random.random((<span class="number">100</span>, <span class="number">2</span>))</div><div class="line">    sign(P1, D, <span class="number">1</span>)</div><div class="line"></div><div class="line">    P2 = np.random.random((<span class="number">100</span>, <span class="number">2</span>)) - <span class="number">0.7</span></div><div class="line">    sign(P2, D, <span class="number">2</span>)</div><div class="line"></div><div class="line">    P3 = np.random.random((<span class="number">100</span>, <span class="number">2</span>)) + <span class="number">0.7</span></div><div class="line">    sign(P3, D, <span class="number">3</span>)</div><div class="line"></div><div class="line"></div><div class="line">    plt.plot(P1[:, <span class="number">0</span>], P1[:, <span class="number">1</span>], <span class="string">'ro'</span>, label=<span class="string">'class1'</span>, alpha = <span class="number">0.7</span>)</div><div class="line">    plt.plot(P2[:, <span class="number">0</span>], P2[:, <span class="number">1</span>], <span class="string">'go'</span>, label=<span class="string">'class2'</span>, alpha = <span class="number">0.7</span>)</div><div class="line">    plt.plot(P3[:, <span class="number">0</span>], P3[:, <span class="number">1</span>], <span class="string">'bo'</span>, label=<span class="string">'class3'</span>, alpha = <span class="number">0.7</span>)</div><div class="line"></div><div class="line">    <span class="keyword">return</span> D</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># S2--&gt; 算法实现</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc_dist</span><span class="params">(px, py)</span>:</span></div><div class="line">        <span class="keyword">return</span> np.linalg.norm(np.array(px)-np.array(py))</div><div class="line"></div><div class="line"><span class="comment"># 按照与待测点距离的大小排序</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_rank</span><span class="params">(D, p0)</span>:</span></div><div class="line">    plt.plot(p0[<span class="number">0</span>], p0[<span class="number">1</span>], <span class="string">'k*'</span>, markersize=<span class="number">15</span>, label=<span class="string">"Test Point"</span>)</div><div class="line">    point_dist = &#123;&#125;</div><div class="line">    <span class="keyword">for</span> px <span class="keyword">in</span> D.keys():</div><div class="line">        point_dist[px] = calc_dist(px, p0)</div><div class="line">    point_dist = pd.Series(point_dist, index=point_dist.keys())</div><div class="line">    point_dist.sort_values(inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">    <span class="keyword">return</span> point_dist</div><div class="line"></div><div class="line"><span class="comment"># 获取最近的k个数据点</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_knn</span><span class="params">(point_dist, k=<span class="number">1</span>)</span>:</span></div><div class="line">    knn = point_dist[:k].index</div><div class="line">    knn_x = [i[<span class="number">0</span>] <span class="keyword">for</span> i <span class="keyword">in</span> list(knn)]</div><div class="line">    knn_y = [i[<span class="number">1</span>] <span class="keyword">for</span> i <span class="keyword">in</span> list(knn)]</div><div class="line"></div><div class="line">    plt.plot(knn_x, knn_y, <span class="string">'yo'</span>, markersize=<span class="number">5</span>, label=<span class="string">"k nearest neighbors"</span>)</div><div class="line"></div><div class="line">    <span class="keyword">return</span> knn</div><div class="line"></div><div class="line"><span class="comment"># 找到待测点所属的类别</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_class</span><span class="params">(knn, D)</span>:</span></div><div class="line">    class_all = [D[point] <span class="keyword">for</span> point <span class="keyword">in</span> knn]</div><div class="line">    <span class="comment"># print(class_all)</span></div><div class="line">    c = Counter(class_all)</div><div class="line">    <span class="comment"># 多数表决</span></div><div class="line">    classx = c.most_common(<span class="number">1</span>)[<span class="number">0</span>][<span class="number">0</span>]</div><div class="line"></div><div class="line">    <span class="keyword">return</span> classx</div><div class="line"></div><div class="line"><span class="comment"># S3--&gt; 运行测试</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(p0 = <span class="params">(<span class="number">0</span>, <span class="number">1</span>)</span>)</span>:</span></div><div class="line">    D = get_train_data()</div><div class="line">    point_dist = get_rank(D, p0)</div><div class="line">    knn = get_knn(point_dist, <span class="number">3</span>)</div><div class="line">    get_class(knn, D)</div><div class="line">    class_x = get_class(knn, D)</div><div class="line">    print(p0, <span class="string">'所属的类别为：'</span>, class_x)</div><div class="line">    plt.legend()</div><div class="line">    plt.title(<span class="string">'raw knn'</span>)</div><div class="line">    plt.show()</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    run((<span class="number">0</span>, <span class="number">0.5</span>))</div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch3/4.png" alt=""></p>
+<p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch3/5.png" alt=""></p>
+<h5 id="进一步的应用："><a href="#进一步的应用：" class="headerlink" title="进一步的应用："></a>进一步的应用：</h5><p>注意：这里有三个版本的实现，前两个只有在计算距离上有所不同，但是很慢[第二个快些也还是要10min+], 最后一个速度很快，也就1min左右，参考这里。</p>
+<h6 id="1-代码way1–-gt-V1-0-大部分继承自上面的方法，速度极其慢"><a href="#1-代码way1–-gt-V1-0-大部分继承自上面的方法，速度极其慢" class="headerlink" title="(1)代码way1–&gt;V1.0[大部分继承自上面的方法，速度极其慢]"></a>(1)代码way1–&gt;V1.0[大部分继承自上面的方法，速度极其慢]</h6><h6 id="2-代码way2–-gt-V2-0-速度有所提升，但是依旧很慢"><a href="#2-代码way2–-gt-V2-0-速度有所提升，但是依旧很慢" class="headerlink" title="(2)代码way2–&gt;V2.0[速度有所提升，但是依旧很慢]"></a>(2)代码way2–&gt;V2.0[速度有所提升，但是依旧很慢]</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</div><div class="line"></div><div class="line"><span class="comment"># get data from file</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_data</span><span class="params">(filepath)</span>:</span></div><div class="line">    data = &#123;&#125;</div><div class="line">    files = os.listdir(os.getcwd()+filepath)</div><div class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> files:</div><div class="line">        classx = file.split(<span class="string">"_"</span>)[<span class="number">0</span>]</div><div class="line">        <span class="keyword">with</span> open(os.getcwd()+filepath+<span class="string">'/'</span>+file, <span class="string">'r'</span>) <span class="keyword">as</span> f:</div><div class="line">            key = f.read().replace(<span class="string">'\n'</span>, <span class="string">''</span>)</div><div class="line">            data[key] = classx</div><div class="line"></div><div class="line">    <span class="keyword">return</span> data</div><div class="line"></div><div class="line"><span class="comment"># get training data</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_training_data</span><span class="params">()</span>:</span></div><div class="line">    training_data = get_data(<span class="string">"/trainingDigits"</span>)</div><div class="line">    <span class="keyword">return</span> training_data</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># get test data</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_test_data</span><span class="params">()</span>:</span></div><div class="line">    test_data = get_data(<span class="string">"/testDigits"</span>)</div><div class="line">    <span class="keyword">return</span> test_data</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># S2--&gt; 算法实现</span></div><div class="line"></div><div class="line"><span class="comment"># way1 ---&gt; 速度极其慢</span></div><div class="line"><span class="string">'''</span></div><div class="line">def calc_dist(px, py):</div><div class="line">    px = np.array([float(i) for i in np.array(list(px))])</div><div class="line">    py = np.array([float(i) for i in np.array(list(py))])</div><div class="line"></div><div class="line">    return np.linalg.norm(px-py)</div><div class="line"></div><div class="line"># 按照与待测点距离的大小排序</div><div class="line">def get_rank(training_data, p0):</div><div class="line">    point_dist = &#123;&#125;</div><div class="line">    for px in training_data.keys():</div><div class="line">        point_dist[px] = calc_dist(px, p0)</div><div class="line">    point_dist = pd.Series(point_dist, index=point_dist.keys())</div><div class="line">    point_dist.sort_values(inplace=True)</div><div class="line"></div><div class="line">    return point_dist</div><div class="line">'''</div><div class="line"></div><div class="line"><span class="comment"># way2--&gt; 速度有所提高，但也是很慢</span></div><div class="line"><span class="string">'''</span></div><div class="line"></div><div class="line">def calc_dist(training_data, p0):</div><div class="line">    def str2array(p):</div><div class="line">        return np.array([float(i) for i in list(p)])</div><div class="line"></div><div class="line">    numSamples = len(training_data)</div><div class="line">    training_data_pro = [str2array(p) for p in list(training_data.keys())]</div><div class="line">    p0 = str2array(p0)</div><div class="line">    # step1:calculate Euclidean distance</div><div class="line">    # tile(A, reps):Constract an array by repeating A reps times</div><div class="line">    diff = np.matrix(np.tile(p0, (numSamples, 1))) - np.matrix(training_data_pro)</div><div class="line">    squreDiff = np.square(diff)</div><div class="line">    squreDist = np.sum(squreDiff, axis=1)  # sum if performed by row</div><div class="line">    distance = np.sqrt(squreDist)</div><div class="line"></div><div class="line">    distance = [distance[i, 0] for i in range(len(distance))]</div><div class="line">    point_dist = pd.Series(distance, index=training_data.keys())</div><div class="line">    point_dist.sort_values(inplace=True)</div><div class="line"></div><div class="line">    return point_dist</div><div class="line"></div><div class="line"># 按照与待测点距离的大小排序</div><div class="line">def get_rank(training_data, p0):</div><div class="line">    point_dist = calc_dist(training_data, p0)</div><div class="line">    return point_dist</div><div class="line">'''</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 获取最近的k个数据点</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_knn</span><span class="params">(point_dist, k=<span class="number">1</span>)</span>:</span></div><div class="line">    knn = point_dist[:k].index</div><div class="line"></div><div class="line">    <span class="keyword">return</span> knn</div><div class="line"></div><div class="line"><span class="comment"># 找到待测点所属的类别</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_class</span><span class="params">(knn, training_data)</span>:</span></div><div class="line">    class_all = [training_data[point] <span class="keyword">for</span> point <span class="keyword">in</span> knn]</div><div class="line">    <span class="comment"># print(class_all)</span></div><div class="line">    c = Counter(class_all)</div><div class="line">    <span class="comment"># 多数表决</span></div><div class="line">    classx = c.most_common(<span class="number">1</span>)[<span class="number">0</span>][<span class="number">0</span>]</div><div class="line"></div><div class="line">    <span class="keyword">return</span> classx</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># S3--&gt; 运行测试</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">classify</span><span class="params">(p0, training_data)</span>:</span></div><div class="line">    point_dist = get_rank(training_data, p0)</div><div class="line">    knn = get_knn(point_dist, <span class="number">3</span>) class_x = get_class(knn, training_data)</div><div class="line">    print(p0, <span class="string">'所属的类别为：'</span>, class_x)</div><div class="line"></div><div class="line">    <span class="keyword">return</span> class_x</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">()</span>:</span></div><div class="line">    training_data = get_training_data()</div><div class="line">    test_data = get_test_data()</div><div class="line">    right = <span class="number">0</span></div><div class="line">    all = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> point <span class="keyword">in</span> test_data.keys():</div><div class="line">        all += <span class="number">1</span></div><div class="line">        print(all)</div><div class="line">        classx = classify(point, training_data)</div><div class="line">        <span class="keyword">if</span> test_data[point] == classx:</div><div class="line">            right += <span class="number">1</span></div><div class="line">    print(<span class="string">"all--&gt;"</span>, all)</div><div class="line">    print(<span class="string">"right--&gt;"</span>, right)</div><div class="line">    print(<span class="string">'accuracy--&gt;'</span>, right/all)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</div><div class="line">    run()</div><div class="line"></div></pre></td></tr></table></figure>
+<h6 id="V3-0速度大幅提高"><a href="#V3-0速度大幅提高" class="headerlink" title="V3.0速度大幅提高"></a>V3.0速度大幅提高</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> *</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># classify using KNN</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">KNNClassify</span><span class="params">(newInput, dataSet, labels, k)</span>:</span></div><div class="line">    numSamples = dataSet.shape[<span class="number">0</span>]  <span class="comment"># row number</span></div><div class="line">    <span class="comment"># step1:calculate Euclidean distance</span></div><div class="line">    <span class="comment"># tile(A, reps):Constract an array by repeating A reps times</span></div><div class="line">    diff = tile(newInput, (numSamples, <span class="number">1</span>)) - dataSet</div><div class="line">    squreDiff = diff ** <span class="number">2</span></div><div class="line">    squreDist = sum(squreDiff, axis=<span class="number">1</span>)  <span class="comment"># sum if performed by row</span></div><div class="line">    distance = squreDist ** <span class="number">0.5</span></div><div class="line"></div><div class="line">    <span class="comment"># step2:sort the distance</span></div><div class="line">    <span class="comment"># argsort() returns the indices that would sort an array in a ascending order</span></div><div class="line">    sortedDistIndices = argsort(distance)</div><div class="line"></div><div class="line">    classCount = &#123;&#125;</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(k):</div><div class="line">        <span class="comment"># choose the min k distance</span></div><div class="line">        voteLabel = labels[sortedDistIndices[i]]</div><div class="line"></div><div class="line">        <span class="comment"># step4:count the times labels occur</span></div><div class="line">        <span class="comment"># when the key voteLabel is not in dictionary classCount,</span></div><div class="line">        <span class="comment"># get() will return 0</span></div><div class="line">        classCount[voteLabel] = classCount.get(voteLabel, <span class="number">0</span>) + <span class="number">1</span></div><div class="line">    <span class="comment"># step5:the max vote class will return</span></div><div class="line">    maxCount = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> k, v <span class="keyword">in</span> classCount.items():</div><div class="line">        <span class="keyword">if</span> v &gt; maxCount:</div><div class="line">            maxCount = v</div><div class="line">            maxIndex = k</div><div class="line"></div><div class="line">    <span class="keyword">return</span> maxIndex</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># convert image to vector</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">img2vector</span><span class="params">(filename)</span>:</span></div><div class="line">    rows = <span class="number">32</span></div><div class="line">    cols = <span class="number">32</span></div><div class="line">    imgVector = zeros((<span class="number">1</span>, rows * cols))</div><div class="line">    fileIn = open(filename)</div><div class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> range(rows):</div><div class="line">        lineStr = fileIn.readline()</div><div class="line">        <span class="keyword">for</span> col <span class="keyword">in</span> range(cols):</div><div class="line">            imgVector[<span class="number">0</span>, row * <span class="number">32</span> + col] = int(lineStr[col])</div><div class="line"></div><div class="line">    <span class="keyword">return</span> imgVector</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># load dataSet</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">loadDataSet</span><span class="params">()</span>:</span></div><div class="line">    <span class="comment">## step 1: Getting training set</span></div><div class="line">    print(<span class="string">"---Getting training set..."</span>)</div><div class="line">    dataSetDir = <span class="string">'/home/shen/PycharmProjects/MyPython/统计学习方法/KNN/digits/'</span></div><div class="line">    trainingFileList = os.listdir(dataSetDir + <span class="string">'trainingDigits'</span>)  <span class="comment"># load the training set</span></div><div class="line">    numSamples = len(trainingFileList)</div><div class="line"></div><div class="line">    train_x = zeros((numSamples, <span class="number">1024</span>))</div><div class="line">    train_y = []</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(numSamples):</div><div class="line">        filename = trainingFileList[i]</div><div class="line"></div><div class="line">        <span class="comment"># get train_x</span></div><div class="line">        train_x[i, :] = img2vector(dataSetDir + <span class="string">'trainingDigits/%s'</span> % filename)</div><div class="line"></div><div class="line">        <span class="comment"># get label from file name such as "1_18.txt"</span></div><div class="line">        label = int(filename.split(<span class="string">'_'</span>)[<span class="number">0</span>])  <span class="comment"># return 1</span></div><div class="line">        train_y.append(label)</div><div class="line"></div><div class="line">        <span class="comment">## step 2: Getting testing set</span></div><div class="line">    print(<span class="string">"---Getting testing set..."</span>)</div><div class="line">    testingFileList = os.listdir(dataSetDir + <span class="string">'testDigits'</span>)  <span class="comment"># load the testing set</span></div><div class="line">    numSamples = len(testingFileList)</div><div class="line">    test_x = zeros((numSamples, <span class="number">1024</span>))</div><div class="line">    test_y = []</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(numSamples):</div><div class="line">        filename = testingFileList[i]</div><div class="line"></div><div class="line">        <span class="comment"># get train_x</span></div><div class="line">        test_x[i, :] = img2vector(dataSetDir + <span class="string">'testDigits/%s'</span> % filename)</div><div class="line"></div><div class="line">        <span class="comment"># get label from file name such as "1_18.txt"</span></div><div class="line">        label = int(filename.split(<span class="string">'_'</span>)[<span class="number">0</span>])  <span class="comment"># return 1</span></div><div class="line">        test_y.append(label)</div><div class="line"></div><div class="line">    <span class="keyword">return</span> train_x, train_y, test_x, test_y</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># test hand writing class</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">testHandWritingClass</span><span class="params">()</span>:</span></div><div class="line">    <span class="comment">## step 1: load data</span></div><div class="line">    print(<span class="string">"step 1: load data..."</span>)</div><div class="line">    train_x, train_y, test_x, test_y = loadDataSet()</div><div class="line"></div><div class="line">    <span class="comment">## step 2: training...</span></div><div class="line">    print(<span class="string">"step 2: training..."</span>)</div><div class="line">    <span class="keyword">pass</span></div><div class="line"></div><div class="line">    <span class="comment">## step 3: testing</span></div><div class="line">    print(<span class="string">"step 3: testing..."</span>)</div><div class="line">    numTestSamples = test_x.shape[<span class="number">0</span>]</div><div class="line">    matchCount = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(numTestSamples):</div><div class="line">        predict = KNNClassify(test_x[i], train_x, train_y, <span class="number">3</span>)</div><div class="line">        <span class="keyword">if</span> predict == test_y[i]:</div><div class="line">            matchCount += <span class="number">1</span></div><div class="line">    accuracy = float(matchCount) / numTestSamples</div><div class="line"></div><div class="line">    <span class="comment">## step 4: show the result</span></div><div class="line">    print(<span class="string">"step 4: show the result..."</span>)</div><div class="line">    print(<span class="string">'The classify accuracy is: %.2f%%'</span> % (accuracy * <span class="number">100</span>))</div><div class="line"></div><div class="line"></div><div class="line">testHandWritingClass()</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch3/6.png" alt=""></p>
+<h5 id="要改进学习的地方"><a href="#要改进学习的地方" class="headerlink" title="要改进学习的地方"></a>要改进学习的地方</h5><p>最后参考别人的代码快，感觉主要问题在numpy的矩阵运算上，这个之后要深入研究下，毕竟代码运行速度是极为重要的。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/Clustering/" rel="tag"># Clustering</a>
+          
+            <a href="/tags/统计学习方法/" rel="tag"># 统计学习方法</a>
+          
+            <a href="/tags/Data-Analysis/" rel="tag"># Data Analysis</a>
+          
+            <a href="/tags/ML/" rel="tag"># ML</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/02/决策树的简单实现/" rel="next" title="决策树的简单实现">
+                <i class="fa fa-chevron-left"></i> 决策树的简单实现
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/02/统计学习方法——简单实现KNN-Python/"
+           data-title="统计学习方法——简单实现KNN[Python]" data-url="http://datahonor.com/2017/03/02/统计学习方法——简单实现KNN-Python/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
+               alt="不秩稚童" />
+          <p class="site-author-name" itemprop="name">不秩稚童</p>
+           
+              <p class="site-description motion-element" itemprop="description">十年饮冰，难凉热血。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/shenxiangzhuang" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/chen-xiang-zhuang" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#KNN的基本知识"><span class="nav-text">KNN的基本知识</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#算法的描述："><span class="nav-text">算法的描述：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Python实现"><span class="nav-text">Python实现</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#进一步的应用："><span class="nav-text">进一步的应用：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-代码way1–-gt-V1-0-大部分继承自上面的方法，速度极其慢"><span class="nav-text">(1)代码way1–>V1.0[大部分继承自上面的方法，速度极其慢]</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-代码way2–-gt-V2-0-速度有所提升，但是依旧很慢"><span class="nav-text">(2)代码way2–>V2.0[速度有所提升，但是依旧很慢]</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#V3-0速度大幅提高"><span class="nav-text">V3.0速度大幅提高</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#要改进学习的地方"><span class="nav-text">要改进学习的地方</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">不秩稚童</span>
+</div>
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+  
+
+  
+    <span class="site-pv">本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"shenxiangzhuang"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+  
+
+
+</body>
+</html>
