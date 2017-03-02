@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="OpenCV," />
 
 
 
@@ -89,16 +89,32 @@
 
 
 
-<meta name="description" content="十年饮冰，难凉热血。">
+<meta name="description" content="在之前的这篇文章，仿照教程做了一个条形码识别的程序，不过结果不太理想，就暂时放下，最近继续看OpenCV官方文档，看到了Template Matching，于是动手实验了一下，成功的解决了问题。
+环境：ubuntu14.04， OpenCV3.2.0， Clion
+data/barcode.jpg
+/data/barcode_temp.png
+Code12345678910111213141516">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OpenCV识别条形码——python实现[CPP补充]">
 <meta property="og:url" content="http://datahonor.com/2017/03/02/OpenCV识别条形码——python实现-CPP补充/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="十年饮冰，难凉热血。">
-<meta property="og:updated_time" content="2017-03-02T08:42:49.138Z">
+<meta property="og:description" content="在之前的这篇文章，仿照教程做了一个条形码识别的程序，不过结果不太理想，就暂时放下，最近继续看OpenCV官方文档，看到了Template Matching，于是动手实验了一下，成功的解决了问题。
+环境：ubuntu14.04， OpenCV3.2.0， Clion
+data/barcode.jpg
+/data/barcode_temp.png
+Code12345678910111213141516">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/CV/barcode.jpg">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/CV/barcode_temp.png">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/CV/barcode-1.jpg">
+<meta property="og:updated_time" content="2017-03-02T08:49:45.558Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OpenCV识别条形码——python实现[CPP补充]">
-<meta name="twitter:description" content="十年饮冰，难凉热血。">
+<meta name="twitter:description" content="在之前的这篇文章，仿照教程做了一个条形码识别的程序，不过结果不太理想，就暂时放下，最近继续看OpenCV官方文档，看到了Template Matching，于是动手实验了一下，成功的解决了问题。
+环境：ubuntu14.04， OpenCV3.2.0， Clion
+data/barcode.jpg
+/data/barcode_temp.png
+Code12345678910111213141516">
+<meta name="twitter:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/CV/barcode.jpg">
 
 
 
@@ -330,6 +346,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Cpp/" itemprop="url" rel="index">
+                    <span itemprop="name">Cpp</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -370,7 +408,18 @@
       
 
       
-        
+        <p>在之前的<a href="待测文件： 位于与当前cpp文件同目录的data文件夹下 
+http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0%81%E2%80%94%E2%80%94python%E5%AE%9E%E7%8E%B0/">这篇文章</a>，仿照教程做了一个条形码识别的程序，不过结果不太理想，就暂时放下，最近继续看OpenCV官方文档，看到了Template Matching，于是动手实验了一下，成功的解决了问题。</p>
+<p>环境：ubuntu14.04， OpenCV3.2.0， Clion</p>
+<h5 id="data-barcode-jpg"><a href="#data-barcode-jpg" class="headerlink" title="data/barcode.jpg"></a>data/barcode.jpg</h5><p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/CV/barcode.jpg" alt=""></p>
+<h5 id="data-barcode-temp-png"><a href="#data-barcode-temp-png" class="headerlink" title="/data/barcode_temp.png"></a>/data/barcode_temp.png</h5><p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/CV/barcode_temp.png" alt=""></p>
+<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"opencv2/highgui/highgui.hpp"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"opencv2/imgproc/imgproc.hpp"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="comment">/// Function Headers</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">MatchingMethod</span><span class="params">( <span class="keyword">int</span>, <span class="keyword">void</span>* )</span></span>;</div><div class="line"></div><div class="line"><span class="comment">/** @function main */</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">( <span class="keyword">int</span> argc, <span class="keyword">char</span>** argv )</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">/// Load image and template</span></div><div class="line">    img = imread( argv[<span class="number">1</span>], <span class="number">1</span> );</div><div class="line">    templ = imread( argv[<span class="number">2</span>], <span class="number">1</span> );</div><div class="line"></div><div class="line">    <span class="comment">/// Create windows</span></div><div class="line">    namedWindow( image_window, CV_WINDOW_AUTOSIZE );</div><div class="line">    namedWindow( result_window, CV_WINDOW_AUTOSIZE );</div><div class="line"></div><div class="line">    <span class="comment">/// Create Trackbar</span></div><div class="line">    <span class="keyword">const</span> <span class="keyword">char</span> *trackbar_label = <span class="string">"Method: \n 0: SQDIFF \n 1: SQDIFF NORMED \n 2: TM CCORR \n 3: TM CCORR NORMED \n 4: TM COEFF \n 5: TM COEFF NORMED"</span>;</div><div class="line">    createTrackbar( trackbar_label, image_window, &amp;match_method, max_Trackbar, MatchingMethod );</div><div class="line"></div><div class="line">    MatchingMethod( <span class="number">0</span>, <span class="number">0</span> );</div><div class="line"></div><div class="line">    waitKey(<span class="number">0</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * @function MatchingMethod</div><div class="line"> * @brief Trackbar callback</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">MatchingMethod</span><span class="params">( <span class="keyword">int</span>, <span class="keyword">void</span>* )</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">/// Source image to display</span></div><div class="line">    Mat img_display;</div><div class="line">    img.copyTo( img_display );</div><div class="line"></div><div class="line">    <span class="comment">/// Create the result matrix</span></div><div class="line">    <span class="keyword">int</span> result_cols =  img.cols - templ.cols + <span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> result_rows = img.rows - templ.rows + <span class="number">1</span>;</div><div class="line"></div><div class="line">    result.create( result_rows, result_cols, CV_32FC1 );</div><div class="line"></div><div class="line">    <span class="comment">/// Do the Matching and Normalize</span></div><div class="line">    matchTemplate( img, templ, result, match_method );</div><div class="line">    normalize( result, result, <span class="number">0</span>, <span class="number">1</span>, NORM_MINMAX, <span class="number">-1</span>, Mat() );</div><div class="line"></div><div class="line">    <span class="comment">/// Localizing the best match with minMaxLoc</span></div><div class="line">    <span class="keyword">double</span> minVal; <span class="keyword">double</span> maxVal; Point minLoc; Point maxLoc;</div><div class="line">    Point matchLoc;</div><div class="line"></div><div class="line">    minMaxLoc( result, &amp;minVal, &amp;maxVal, &amp;minLoc, &amp;maxLoc, Mat() );</div><div class="line"></div><div class="line">    <span class="comment">/// For SQDIFF and SQDIFF_NORMED, the best matches are lower values. For all the other methods, the higher the better</span></div><div class="line">    <span class="keyword">if</span>( match_method  == CV_TM_SQDIFF || match_method == CV_TM_SQDIFF_NORMED )</div><div class="line">    &#123; matchLoc = minLoc; &#125;</div><div class="line">    <span class="keyword">else</span></div><div class="line">    &#123; matchLoc = maxLoc; &#125;</div><div class="line"></div><div class="line">    <span class="comment">/// Show me what you got</span></div><div class="line">    rectangle( img_display, matchLoc, Point( matchLoc.x + templ.cols , matchLoc.y + templ.rows ), Scalar::all(<span class="number">0</span>), <span class="number">2</span>, <span class="number">8</span>, <span class="number">0</span> );</div><div class="line">    rectangle( result, matchLoc, Point( matchLoc.x + templ.cols , matchLoc.y + templ.rows ), Scalar::all(<span class="number">0</span>), <span class="number">2</span>, <span class="number">8</span>, <span class="number">0</span> );</div><div class="line"></div><div class="line">    imshow( image_window, img_display );</div><div class="line">    imshow( result_window, result );</div><div class="line"></div><div class="line">    <span class="keyword">return</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>之后在Clion编译运行：</p>
+<blockquote>
+<p>cmake .      // 注意空格<br>make<br>./CvTest data/barcode.jpg data/barcode_temp.png    // CvTest是我的项目名称</p>
+</blockquote>
+<p>运行结果如下： 可通过滑动trackbar选择不同的matching方式<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/CV/barcode-1.jpg" alt=""><br>最后，要注意的是，上面的barcode_temp.png是直接从barcode.jpg中截取的照片，而我们使用的又是以来与Histgram的算法，所以模板图片的大小可能会对其识别有一定的影响，具体改进等继续学习以后再回来补充了。</p>
+
       
     </div>
 
@@ -390,6 +439,12 @@
 
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/OpenCV/" rel="tag"># OpenCV</a>
+          
+        </div>
       
 
       
@@ -459,8 +514,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
@@ -538,6 +602,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#data-barcode-jpg"><span class="nav-text">data/barcode.jpg</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#data-barcode-temp-png"><span class="nav-text">/data/barcode_temp.png</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
