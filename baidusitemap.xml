@@ -4,6 +4,88 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/03/03/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/</loc>
+    <lastmod>2017-03-03T05:05:11.590Z</lastmod>
+    <data>
+        <display>
+        <title>朴素贝叶斯算法的简单实现</title>
+        <pubTime>2017-03-03T04:38:48.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Algorithm</tag>
+         
+        <tag>Clustering</tag>
+         
+        <tag>统计学习方法</tag>
+         
+        <tag>Data Analysis</tag>
+         
+        <tag>ML</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/03/02/Python%E5%88%86%E6%9E%90QQ%E7%BE%A4%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2017-03-03T04:54:35.879Z</lastmod>
+    <data>
+        <display>
+        <title>Python分析QQ群聊天记录</title>
+        <pubTime>2017-03-01T17:20:35.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>正则</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/03/02/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E2%80%94%E2%80%94%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0KNN-Python/</loc>
+    <lastmod>2017-03-03T04:39:57.549Z</lastmod>
+    <data>
+        <display>
+        <title>统计学习方法——简单实现KNN[Python]</title>
+        <pubTime>2017-03-02T07:55:59.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Algorithm</tag>
+         
+        <tag>Clustering</tag>
+         
+        <tag>统计学习方法</tag>
+         
+        <tag>Data Analysis</tag>
+         
+        <tag>ML</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/02/27/K-means-clustering/</loc>
     <lastmod>2017-03-02T17:39:54.329Z</lastmod>
     <data>
@@ -11,9 +93,9 @@
         <title>K-means clustering</title>
         <pubTime>2017-02-27T14:12:47.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Python</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
@@ -54,36 +136,6 @@
 
     
   <url>
-    <loc>http://datahonor.com/2017/03/02/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E2%80%94%E2%80%94%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0KNN-Python/</loc>
-    <lastmod>2017-03-02T09:33:06.731Z</lastmod>
-    <data>
-        <display>
-        <title>统计学习方法——简单实现KNN[Python]</title>
-        <pubTime>2017-03-02T07:55:59.000Z</pubTime>
-        
-        <tag>Algorithm</tag>
-         
-        <tag>Python</tag>
-         
-        <tag>Clustering</tag>
-         
-        <tag>统计学习方法</tag>
-         
-        <tag>Data Analysis</tag>
-         
-        <tag>ML</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://datahonor.com/2017/03/02/%E5%86%B3%E7%AD%96%E6%A0%91%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/</loc>
     <lastmod>2017-03-02T09:32:48.139Z</lastmod>
     <data>
@@ -91,9 +143,9 @@
         <title>决策树的简单实现</title>
         <pubTime>2017-03-02T07:48:54.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Python</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
@@ -421,9 +473,9 @@
         <title>Python实现支持向量机(SVM)</title>
         <pubTime>2017-03-01T16:10:13.000Z</pubTime>
         
-        <tag>Algorithm</tag>
-         
         <tag>Python</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
@@ -433,28 +485,6 @@
            
              
               <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/03/02/Python%E5%88%86%E6%9E%90QQ%E7%BE%A4%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2017-03-01T17:31:45.514Z</lastmod>
-    <data>
-        <display>
-        <title>Python分析QQ群聊天记录</title>
-        <pubTime>2017-03-01T17:20:35.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>正则</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://datahonor.com/categories/python/"/>
           
         </display>
     </data>
