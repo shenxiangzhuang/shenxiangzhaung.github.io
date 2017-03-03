@@ -9,7 +9,7 @@
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -103,7 +103,7 @@
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch2/2.png">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch2/3.png">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch2/4.png">
-<meta property="og:updated_time" content="2017-03-03T05:18:11.914Z">
+<meta property="og:updated_time" content="2017-03-03T05:25:42.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原始感知机模型">
 <meta name="twitter:description" content="李航老师《统计学习方法》第二章笔记。关于原始感知机学习算法的简单实现[ Python ]。之后有感知机的对偶形式的实现。
@@ -143,7 +143,7 @@
 
 
 
-  <title> 原始感知机模型 | DATA HONOR </title>
+  <title> 原始感知机模型 | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -153,7 +153,7 @@
 
 
 
-<script>
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -403,7 +403,7 @@
       
 
       
-        <p>李航老师《统计学习方法》第二章笔记。<br>关于原始感知机学习算法的简单实现[ Python ]。<br>之后有<a href="">感知机的对偶形式</a>的实现。</p>
+        <p>李航老师《统计学习方法》第二章笔记。<br>关于原始感知机学习算法的简单实现[ Python ]。<br>之后有<a href="http://datahonor.com/2017/03/03/%E6%84%9F%E7%9F%A5%E6%9C%BA%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E7%9A%84%E5%AF%B9%E5%81%B6%E5%BD%A2%E5%BC%8F/#more">感知机的对偶形式</a>的实现。</p>
 <h5 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h5><p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch2/1.png" alt=""></p>
 <h5 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># S1--&gt;随机生成训练集并标注</span></div><div class="line"></div><div class="line"><span class="comment"># train matrix</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_train_data</span><span class="params">()</span>:</span></div><div class="line"></div><div class="line">    M1 = np.random.random((<span class="number">100</span>, <span class="number">2</span>))</div><div class="line">    M11 = np.column_stack((M1, np.ones(<span class="number">100</span>)))</div><div class="line"></div><div class="line">    M2 = np.random.random((<span class="number">100</span>, <span class="number">2</span>)) - <span class="number">0.7</span></div><div class="line">    M22 = np.column_stack((M2, np.ones(<span class="number">100</span>) * (<span class="number">-1</span>)))</div><div class="line"></div><div class="line">    MA = np.vstack((M11, M22))</div><div class="line"></div><div class="line">    plt.plot(M1[:, <span class="number">0</span>], M1[:, <span class="number">1</span>], <span class="string">'ro'</span>)</div><div class="line">    plt.plot(M2[:, <span class="number">0</span>], M2[:, <span class="number">1</span>], <span class="string">'go'</span>)</div><div class="line">    min_x = np.min(M2)</div><div class="line">    max_x = np.max(M1)</div><div class="line">    <span class="comment"># 此处返回 x 是为了之后作图方便</span></div><div class="line">    x = np.linspace(min_x, max_x, <span class="number">100</span>)</div><div class="line"></div><div class="line">    <span class="keyword">return</span> MA, x</div><div class="line"></div><div class="line"><span class="comment"># S2--&gt;原始感知机模型的训练及做图</span></div><div class="line"></div><div class="line"><span class="comment"># 感知机模型:f(x) = sign(w*x+b)</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(w, b, xi, yi)</span>:</span></div><div class="line">    num = yi * (np.dot(w, xi) + b)</div><div class="line">    <span class="keyword">return</span> num</div><div class="line"></div><div class="line"><span class="comment"># 训练training data</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">train</span><span class="params">(MA, w, b)</span>:</span></div><div class="line">    <span class="comment"># M 存储每次处理后依旧处于误分类的原始数据</span></div><div class="line">    M = []</div><div class="line">    <span class="keyword">for</span> sample <span class="keyword">in</span> MA:</div><div class="line">        xi = sample[<span class="number">0</span>:<span class="number">2</span>]</div><div class="line">        yi = sample[<span class="number">-1</span>]</div><div class="line">        <span class="comment"># 如果为误分类，更新w, b</span></div><div class="line">        <span class="comment"># n 为学习率</span></div><div class="line">        <span class="keyword">if</span> func(w, b, xi, yi) &lt;= <span class="number">0</span>:</div><div class="line">            w += n * yi * xi</div><div class="line">            b += n * yi</div><div class="line">            M.append(sample)</div><div class="line">    <span class="keyword">if</span> len(M) &gt; <span class="number">0</span>:</div><div class="line">        train(M, w, b)</div><div class="line">    <span class="keyword">return</span> w, b</div><div class="line"></div><div class="line"><span class="comment"># 作出分类线的图</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_classify</span><span class="params">(w, b, x, rate0)</span>:</span></div><div class="line">    y = (w[<span class="number">0</span>] * x + b) / ((<span class="number">-1</span>) * w[<span class="number">1</span>])</div><div class="line">    plt.plot(x, y)</div><div class="line">    plt.title(<span class="string">'Accuracy = '</span> + str(rate0))</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># S3--&gt;随机生成测试集，并测试模型</span></div><div class="line"></div><div class="line"><span class="comment"># 随机生成testing data 并作图</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_test_data</span><span class="params">()</span>:</span></div><div class="line">    M = np.random.random((<span class="number">50</span>, <span class="number">2</span>))</div><div class="line">    plt.plot(M[:, <span class="number">0</span>], M[:, <span class="number">1</span>], <span class="string">'*y'</span>)</div><div class="line">    <span class="keyword">return</span> M</div><div class="line"></div><div class="line"><span class="comment"># 对传入的testing data 的单个样本进行分类</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">classify</span><span class="params">(w, b, test_i)</span>:</span></div><div class="line">    <span class="keyword">if</span> np.sign(np.dot(w, test_i) + b) == <span class="number">1</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span></div><div class="line"></div><div class="line"><span class="comment"># 测试数据，返回正确率</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span><span class="params">(w, b, test_data)</span>:</span></div><div class="line">    right_count = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> test_i <span class="keyword">in</span> test_data:</div><div class="line">        classx = classify(w, b, test_i)</div><div class="line">        <span class="keyword">if</span> classx == <span class="number">1</span>:</div><div class="line">            right_count += <span class="number">1</span></div><div class="line">    rate = right_count / len(test_data)</div><div class="line">    <span class="keyword">return</span> rate</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_n_rate</span><span class="params">(rate_l)</span>:</span></div><div class="line">    <span class="comment"># plot n-rate</span></div><div class="line">    n_l = sorted([float(x) <span class="keyword">for</span> x <span class="keyword">in</span> rate_l.keys()])</div><div class="line">    y = [float(rate_l[n_l[i]]) <span class="keyword">for</span> i <span class="keyword">in</span> range(len(n_l))]</div><div class="line">    print(n_l, <span class="string">'\n'</span>, y)</div><div class="line">    plt.plot(n_l, y, <span class="string">'ro-'</span>)</div><div class="line">    plt.title(<span class="string">"n-accuracy"</span>)</div><div class="line">    plt.show()</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    MA, x = get_train_data()</div><div class="line">    test_data = get_test_data()</div><div class="line">    <span class="comment"># 定义初始的w,b</span></div><div class="line">    w = [<span class="number">0</span>, <span class="number">0</span>]</div><div class="line">    b = <span class="number">0</span></div><div class="line">    <span class="comment"># 初始化最优的正确率</span></div><div class="line">    rate0 = <span class="number">0</span></div><div class="line">    <span class="comment"># rate_l 记录学习率的更新</span></div><div class="line">    rate_l = &#123;&#125;</div><div class="line"></div><div class="line">    <span class="comment"># 循环不同的学习率n,寻求最优的学习率，即最终的rate0</span></div><div class="line">    <span class="comment"># w0,b0为对应的最优参数</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> np.linspace(<span class="number">0.01</span>, <span class="number">1</span>, <span class="number">1000</span>):</div><div class="line">        n = i</div><div class="line">        w, b = train(MA, w, b)</div><div class="line">        <span class="comment"># print(w,b)</span></div><div class="line">        rate = test(w, b, test_data)</div><div class="line">        <span class="keyword">if</span> rate &gt;= rate0:</div><div class="line">            rate_l[n] = rate</div><div class="line">            rate0 = rate</div><div class="line">            w0 = w</div><div class="line">            b0 = b</div><div class="line">            print(<span class="string">'Until now, the best result of the accuracy on test data is '</span> + str(rate))</div><div class="line">            print(<span class="string">'with w='</span> + str(w0) + <span class="string">' b='</span> + str(b0))</div><div class="line">            print(<span class="string">"n="</span>, n)</div><div class="line">            print(<span class="string">'---------------------------------------------'</span>)</div><div class="line"></div><div class="line">    <span class="comment"># 在选定最优的学习率后，作图</span></div><div class="line">    plot_classify(w0, b0, x, rate0)</div><div class="line">    plt.show()</div><div class="line"></div><div class="line">    <span class="comment"># 作出学习率——准确率的图</span></div><div class="line">    plot_n_rate(rate_l)</div><div class="line"></div></pre></td></tr></table></figure>
 <p>输出：<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch2/2.png" alt=""></p>
@@ -543,7 +543,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">31</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -552,7 +552,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -845,7 +845,24 @@
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
+</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 
   
