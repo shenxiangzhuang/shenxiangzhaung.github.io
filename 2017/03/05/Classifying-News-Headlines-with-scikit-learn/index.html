@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="OpenCV," />
+  <meta name="keywords" content="Python,Kaggle,Data Analysis," />
 
 
 
@@ -89,40 +89,28 @@
 
 
 
-<meta name="description" content="今天看到这篇文章，这里保留核心识别算法，稍微进行一些改动贴在这里学习研究。
-环境：Win32, Anaconda3, Spyder, OpenCV3.1.0
-文件目录：
+<meta name="description" content="概览Kaggle案例学习，练习使用sklearn进行新闻的分类，主要使用了朴素贝叶斯进行分类。
+学习
+学习使用正则来清洗数据掌握sklearn准备训练集和测试集的方法[LabelEncoder， train_test_split等的使用]学习使用sklearn调用朴素贝叶斯算法进行分类预测
 
-待测试图片文件夹test-imgs核心预测算法实现bar_code.py图片批处理imgs_pro.py 
-
-Codebar_code.py12345678910111213141516171819202122232425262">
+代码123456789101112131415161718192021222324252627282930">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OpenCV识别条形码——python实现">
-<meta property="og:url" content="http://datahonor.com/2017/03/02/OpenCV识别条形码——python实现/index.html">
+<meta property="og:title" content="Classifying News Headlines with scikit-learn">
+<meta property="og:url" content="http://datahonor.com/2017/03/05/Classifying-News-Headlines-with-scikit-learn/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="今天看到这篇文章，这里保留核心识别算法，稍微进行一些改动贴在这里学习研究。
-环境：Win32, Anaconda3, Spyder, OpenCV3.1.0
-文件目录：
+<meta property="og:description" content="概览Kaggle案例学习，练习使用sklearn进行新闻的分类，主要使用了朴素贝叶斯进行分类。
+学习
+学习使用正则来清洗数据掌握sklearn准备训练集和测试集的方法[LabelEncoder， train_test_split等的使用]学习使用sklearn调用朴素贝叶斯算法进行分类预测
 
-待测试图片文件夹test-imgs核心预测算法实现bar_code.py图片批处理imgs_pro.py 
-
-Codebar_code.py12345678910111213141516171819202122232425262">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/CV/1.png">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/CV/3.png">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/CV/4.png">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/CV/5.png">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/CV/6.png">
-<meta property="og:updated_time" content="2017-03-02T08:51:51.251Z">
+代码123456789101112131415161718192021222324252627282930">
+<meta property="og:updated_time" content="2017-03-05T01:34:32.733Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OpenCV识别条形码——python实现">
-<meta name="twitter:description" content="今天看到这篇文章，这里保留核心识别算法，稍微进行一些改动贴在这里学习研究。
-环境：Win32, Anaconda3, Spyder, OpenCV3.1.0
-文件目录：
+<meta name="twitter:title" content="Classifying News Headlines with scikit-learn">
+<meta name="twitter:description" content="概览Kaggle案例学习，练习使用sklearn进行新闻的分类，主要使用了朴素贝叶斯进行分类。
+学习
+学习使用正则来清洗数据掌握sklearn准备训练集和测试集的方法[LabelEncoder， train_test_split等的使用]学习使用sklearn调用朴素贝叶斯算法进行分类预测
 
-待测试图片文件夹test-imgs核心预测算法实现bar_code.py图片批处理imgs_pro.py 
-
-Codebar_code.py12345678910111213141516171819202122232425262">
-<meta name="twitter:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/CV/1.png">
+代码123456789101112131415161718192021222324252627282930">
 
 
 
@@ -150,13 +138,13 @@ Codebar_code.py12345678910111213141516171819202122232425262">
 
 
 
-  <link rel="canonical" href="http://datahonor.com/2017/03/02/OpenCV识别条形码——python实现/"/>
+  <link rel="canonical" href="http://datahonor.com/2017/03/05/Classifying-News-Headlines-with-scikit-learn/"/>
 
 
 
 
 
-  <title> OpenCV识别条形码——python实现 | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> Classifying News Headlines with scikit-learn | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -304,7 +292,7 @@ Codebar_code.py12345678910111213141516171819202122232425262">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/03/02/OpenCV识别条形码——python实现/">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/03/05/Classifying-News-Headlines-with-scikit-learn/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="不秩稚童">
@@ -328,7 +316,7 @@ Codebar_code.py12345678910111213141516171819202122232425262">
             
             
               
-                OpenCV识别条形码——python实现
+                Classifying News Headlines with scikit-learn
               
             
           </h1>
@@ -343,8 +331,8 @@ Codebar_code.py12345678910111213141516171819202122232425262">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-02T16:33:55+08:00">
-                2017-03-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-05T09:14:46+08:00">
+                2017-03-05
               </time>
             
 
@@ -384,8 +372,8 @@ Codebar_code.py12345678910111213141516171819202122232425262">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/02/OpenCV识别条形码——python实现/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/02/OpenCV识别条形码——python实现/" itemprop="commentCount"></span>
+                <a href="/2017/03/05/Classifying-News-Headlines-with-scikit-learn/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/05/Classifying-News-Headlines-with-scikit-learn/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -416,17 +404,14 @@ Codebar_code.py12345678910111213141516171819202122232425262">
       
 
       
-        <p>今天看到<a href="http://python.jobbole.com/80448/" target="_blank" rel="external">这篇文章</a>，这里保留核心识别算法，稍微进行一些改动贴在这里学习研究。</p>
-<p>环境：Win32, Anaconda3, Spyder, OpenCV3.1.0</p>
-<p>文件目录：</p>
-<blockquote>
-<p>待测试图片文件夹test-imgs<br>核心预测算法实现bar_code.py<br>图片批处理imgs_pro.py </p>
+        <h5 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h5><p>Kaggle案例学习，练习使用sklearn进行新闻的分类，主要使用了朴素贝叶斯进行分类。</p>
+<h5 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h5><blockquote>
+<p>学习使用正则来清洗数据<br>掌握sklearn准备训练集和测试集的方法[LabelEncoder， train_test_split等的使用]<br>学习使用sklearn调用朴素贝叶斯算法进行分类预测</p>
 </blockquote>
-<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><h6 id="bar-code-py"><a href="#bar-code-py" class="headerlink" title="bar_code.py"></a>bar_code.py</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="string">"""</span></div><div class="line">Created on Mon Dec 26 21:46:21 2016</div><div class="line"></div><div class="line">@author: Administrator</div><div class="line">"""</div><div class="line"></div><div class="line"><span class="keyword">import</span> cv2</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"></div><div class="line"><span class="comment">#image_name = input("Enter the name of the picture:")</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">detect</span><span class="params">(image_name)</span>:</span></div><div class="line">    print(<span class="string">"正在识别"</span>+image_name+<span class="string">'...'</span>)</div><div class="line">    <span class="comment"># Load the image and convert it to grayscale</span></div><div class="line">    image = cv2.imread(image_name)</div><div class="line">    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)</div><div class="line"></div><div class="line">    <span class="comment"># compute the Scharr gradient magnitude representation of the iamges</span></div><div class="line">    <span class="comment"># in both the x and y direction</span></div><div class="line">    <span class="comment"># 原来代码下面是cv2.cv.CV_32F会报错-&gt;AttributeError: module 'cv2' has no attribute 'cv'</span></div><div class="line">    <span class="comment"># 在新版本变为cv2.CV_32F</span></div><div class="line">    gradX = cv2.Sobel(gray, ddepth = cv2.CV_32F, dx = <span class="number">1</span>, dy = <span class="number">0</span>, ksize = <span class="number">-1</span>)</div><div class="line">    gradY = cv2.Sobel(gray, ddepth = cv2.CV_32F, dx = <span class="number">0</span>, dy = <span class="number">1</span>, ksize = <span class="number">-1</span>)</div><div class="line"></div><div class="line">    <span class="comment"># substract the y-gradient from the x-gradient</span></div><div class="line">    gradient = cv2.subtract(gradX, gradY)</div><div class="line">    gradient = cv2.convertScaleAbs(gradient)</div><div class="line"></div><div class="line">    <span class="comment"># blur and threhold the image</span></div><div class="line">    <span class="comment"># 这里(13,13)是kernel matrix size，自己可以改变看看识别效果</span></div><div class="line">    blurred = cv2.blur(gradient, (<span class="number">13</span>, <span class="number">13</span>))</div><div class="line">    <span class="comment"># 这里的阀值200,255也可以根据图片自定义</span></div><div class="line">    (_, thresh) = cv2.threshold(blurred, <span class="number">200</span>, <span class="number">255</span>, cv2.THRESH_BINARY)</div><div class="line"></div><div class="line">    <span class="comment"># construct a closing kernel and apply it to the thresholded image</span></div><div class="line">    <span class="comment"># (20, 15)也是一个参数，用来获取需要的kernel</span></div><div class="line">    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (<span class="number">20</span>, <span class="number">15</span>))</div><div class="line">    closed = cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, kernel)</div><div class="line"></div><div class="line">    <span class="comment"># perform a series of erosions and dilations</span></div><div class="line">    closed = cv2.erode(closed, <span class="keyword">None</span>, iterations = <span class="number">4</span>)</div><div class="line">    closed = cv2.dilate(closed, <span class="keyword">None</span>, iterations = <span class="number">4</span>)</div><div class="line"></div><div class="line">    <span class="comment"># Find the contours in the thresholded image, then sort the contours</span></div><div class="line">    <span class="comment"># by their area, keeping only the largest one</span></div><div class="line">    <span class="comment"># ValueError: too many values to unpack (expected 2)</span></div><div class="line">    (img,cnts, _) = cv2.findContours(closed.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)</div><div class="line">    c = sorted(cnts, key = cv2.contourArea, reverse = <span class="keyword">True</span>)[<span class="number">0</span>]</div><div class="line">    <span class="comment"># compute the rotated bounding box of the largest contour</span></div><div class="line">    rect = cv2.minAreaRect(c)</div><div class="line">    <span class="comment"># 原文这里使用cv2.cv.BoxPoints，新版本已经移除，换为cv2.boxPoints</span></div><div class="line">    box = np.int0(cv2.boxPoints(rect))</div><div class="line"></div><div class="line">    <span class="comment"># draw a bounding box around the detected barcode</span></div><div class="line">    <span class="comment"># and display the image</span></div><div class="line">    cv2.drawContours(image, [box], <span class="number">-1</span>, (<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>), <span class="number">3</span>)</div><div class="line"></div><div class="line"></div><div class="line">    cv2.imshow(image_name, image)</div><div class="line">    cv2.waitKey(<span class="number">0</span>)</div><div class="line">    print(<span class="string">"Done...\n##################################"</span>)</div><div class="line"></div></pre></td></tr></table></figure>
-<h6 id="imgs-pro-py"><a href="#imgs-pro-py" class="headerlink" title="imgs_pro.py"></a>imgs_pro.py</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="string">"""</span></div><div class="line">Created on Mon Dec 26 23:22:01 2016</div><div class="line"></div><div class="line">@author: Administrator</div><div class="line">"""</div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">from</span> bar_code <span class="keyword">import</span> detect</div><div class="line"><span class="comment"># 切换到测试图片文件夹</span></div><div class="line">os.chdir(<span class="string">'test-imgs'</span>)</div><div class="line"><span class="comment"># 找到所有的测试图片文件名</span></div><div class="line">image_names = os.listdir()</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</div><div class="line">    <span class="keyword">for</span> image_name <span class="keyword">in</span> image_names:</div><div class="line">        detect(image_name)</div><div class="line"></div></pre></td></tr></table></figure>
-<h5 id="test-imgs文件夹"><a href="#test-imgs文件夹" class="headerlink" title="test-imgs文件夹"></a>test-imgs文件夹</h5><p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/CV/1.png" alt=""></p>
-<h5 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h5><p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/CV/3.png" alt=""><br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/CV/4.png" alt=""><br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/CV/5.png" alt=""><br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/CV/6.png" alt=""></p>
-<p> 开始按照原来的程序识别效果不怎么好，自己调整了几个参数，效果还可以，但是可以看到还是有的识别不出。接下来我们会用OpenCV官方给出的<a href="http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0%81%E2%80%94%E2%80%94python%E5%AE%9E%E7%8E%B0-CPP%E8%A1%A5%E5%85%85/#more">Cpp</a>的例子来纠正这个问题。</p>
+<h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># get some libraries that will be useful</span></div><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np <span class="comment"># linear algebra</span></div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd <span class="comment"># data processing, CSV file I/O (e.g. pd.read_csv)</span></div><div class="line"></div><div class="line"><span class="comment"># the Naive Bayes model</span></div><div class="line"><span class="keyword">from</span> sklearn.naive_bayes <span class="keyword">import</span> MultinomialNB</div><div class="line"><span class="comment"># function to split the data for cross-validation</span></div><div class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</div><div class="line"><span class="comment"># function for transforming documents into counts</span></div><div class="line"><span class="keyword">from</span> sklearn.feature_extraction.text <span class="keyword">import</span> CountVectorizer</div><div class="line"><span class="comment"># function for encoding categories</span></div><div class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> LabelEncoder</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># grab the data</span></div><div class="line">news = pd.read_csv(<span class="string">"uci-news-aggregator.csv"</span>)</div><div class="line"></div><div class="line"><span class="comment"># let's take a look at our data</span></div><div class="line">print(news.head())</div><div class="line"></div><div class="line"><span class="comment"># 对新闻标题的处理</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">normalize_text</span><span class="params">(s)</span>:</span></div><div class="line">    s = s.lower()</div><div class="line"></div><div class="line">    <span class="comment"># remove punctuation that is not word-internal (e.g., hyphens, apostrophes)</span></div><div class="line">    s = re.sub(<span class="string">'\s\W'</span>, <span class="string">' '</span>, s)</div><div class="line">    s = re.sub(<span class="string">'\W\s'</span>, <span class="string">' '</span>, s)</div><div class="line"></div><div class="line">    <span class="comment"># make sure we didn't introduce any double spaces</span></div><div class="line">    s = re.sub(<span class="string">'\s+'</span>, <span class="string">' '</span>, s)</div><div class="line"></div><div class="line">    <span class="keyword">return</span> s</div><div class="line"></div><div class="line"></div><div class="line">news[<span class="string">'TEXT'</span>] = [normalize_text(s) <span class="keyword">for</span> s <span class="keyword">in</span> news[<span class="string">'TITLE'</span>]]</div><div class="line">print(news[<span class="string">'TITLE'</span>].head())</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 准备训练集和测试集</span></div><div class="line"><span class="comment"># pull the data into vectors</span></div><div class="line">vectorizer = CountVectorizer()</div><div class="line">x = vectorizer.fit_transform(news[<span class="string">'TEXT'</span>])</div><div class="line"></div><div class="line">encoder = LabelEncoder()</div><div class="line">y = encoder.fit_transform(news[<span class="string">'CATEGORY'</span>])</div><div class="line"></div><div class="line"><span class="comment"># split into train and test sets</span></div><div class="line">x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=<span class="number">0.2</span>)</div><div class="line"></div><div class="line"><span class="comment"># take a look at the shape of each of these</span></div><div class="line">print(x_train.shape)</div><div class="line">print(y_train.shape)</div><div class="line">print(x_test.shape)</div><div class="line">print(y_test.shape)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 开始预测</span></div><div class="line">nb = MultinomialNB()</div><div class="line">nb.fit(x_train, y_train)</div><div class="line">print(nb.score(x_test, y_test))</div><div class="line"></div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<h5 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h5><p>关于正则：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">\s       Matches any whitespace character; equivalent to [ \t\n\r\f\v] in</div><div class="line">         bytes patterns or string patterns with the ASCII flag.</div><div class="line">         In string patterns without the ASCII flag, it will match the whole</div><div class="line">         range of Unicode whitespace characters.</div><div class="line">\S       Matches any non-whitespace character; equivalent to [^\s].</div><div class="line">\w       Matches any alphanumeric character; equivalent to [a-zA-Z0-9_]</div><div class="line">         in bytes patterns or string patterns with the ASCII flag.</div><div class="line">         In string patterns without the ASCII flag, it will match the</div><div class="line">         range of Unicode alphanumeric characters (letters plus digits</div><div class="line">         plus underscore).</div><div class="line">         With LOCALE, it will match the set [0-9_] plus characters defined</div><div class="line">         as letters for the current locale.</div><div class="line">\W       Matches the complement of \w.</div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>关于LabelEncoder:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">class LabelEncoder(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin)</div><div class="line">|  Encode labels with value between 0 and n_classes-1.</div><div class="line">|</div><div class="line">|  Read more in the :ref:`User Guide &lt;preprocessing_targets&gt;`.</div><div class="line">|</div><div class="line">|  Attributes</div><div class="line">|  ----------</div><div class="line">|  classes_ : array of shape (n_class,)</div><div class="line">|      Holds the label for each class.</div><div class="line">|</div><div class="line">|  Examples</div><div class="line">|  --------</div><div class="line">|  `LabelEncoder` can be used to normalize labels.</div><div class="line">|  &gt;&gt;&gt; from sklearn import preprocessing</div><div class="line">|  &gt;&gt;&gt; le = preprocessing.LabelEncoder()</div><div class="line">|  &gt;&gt;&gt; le.fit([1, 2, 2, 6])</div><div class="line">|  LabelEncoder()</div><div class="line">|  &gt;&gt;&gt; le.classes_</div><div class="line">|  array([1, 2, 6])</div><div class="line">|  &gt;&gt;&gt; le.transform([1, 1, 2, 6]) #doctest: +ELLIPSIS</div><div class="line">|  array([0, 0, 1, 2]...)</div><div class="line">|  &gt;&gt;&gt; le.inverse_transform([0, 0, 1, 2])</div><div class="line">|  array([1, 1, 2, 6])</div><div class="line">|</div><div class="line">|  It can also be used to transform non-numerical labels (as long as they are</div><div class="line">|  hashable and comparable) to numerical labels.</div><div class="line">|</div><div class="line">|  &gt;&gt;&gt; le = preprocessing.LabelEncoder()</div><div class="line">|  &gt;&gt;&gt; le.fit([&quot;paris&quot;, &quot;paris&quot;, &quot;tokyo&quot;, &quot;amsterdam&quot;])</div><div class="line">|  LabelEncoder()</div><div class="line">|  &gt;&gt;&gt; list(le.classes_)</div><div class="line">|  [&apos;amsterdam&apos;, &apos;paris&apos;, &apos;tokyo&apos;]</div><div class="line">|  &gt;&gt;&gt; le.transform([&quot;tokyo&quot;, &quot;tokyo&quot;, &quot;paris&quot;]) #doctest: +ELLIPSIS</div><div class="line">|  array([2, 2, 1]...)</div><div class="line">|  &gt;&gt;&gt; list(le.inverse_transform([2, 2, 1]))</div><div class="line">|  [&apos;tokyo&apos;, &apos;tokyo&apos;, &apos;paris&apos;]</div><div class="line"></div></pre></td></tr></table></figure></p>
+<h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><p><a href="https://www.kaggle.com/shenxiangzhuang/d/uciml/news-aggregator-dataset/classifying-news-headlines-with-scikit-learn/editnb" target="_blank" rel="external"><em>Classifying News Headlines with scikit-learn</em></a></p>
 
       
     </div>
@@ -450,7 +435,11 @@ Codebar_code.py12345678910111213141516171819202122232425262">
       
         <div class="post-tags">
           
-            <a href="/tags/OpenCV/" rel="tag"># OpenCV</a>
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/Kaggle/" rel="tag"># Kaggle</a>
+          
+            <a href="/tags/Data-Analysis/" rel="tag"># Data Analysis</a>
           
         </div>
       
@@ -463,8 +452,8 @@ Codebar_code.py12345678910111213141516171819202122232425262">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/02/百度新闻爬虫——多进程抓取/" rel="next" title="百度新闻爬虫——多进程抓取">
-                <i class="fa fa-chevron-left"></i> 百度新闻爬虫——多进程抓取
+              <a href="/2017/03/03/最大似然估计与经验风险最小化/" rel="next" title="最大似然估计与经验风险最小化">
+                <i class="fa fa-chevron-left"></i> 最大似然估计与经验风险最小化
               </a>
             
           </div>
@@ -472,10 +461,6 @@ Codebar_code.py12345678910111213141516171819202122232425262">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/02/OpenCV识别条形码——python实现-CPP补充/" rel="prev" title="OpenCV识别条形码——python实现[CPP补充]">
-                OpenCV识别条形码——python实现[CPP补充] <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -501,8 +486,8 @@ Codebar_code.py12345678910111213141516171819202122232425262">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/02/OpenCV识别条形码——python实现/"
-           data-title="OpenCV识别条形码——python实现" data-url="http://datahonor.com/2017/03/02/OpenCV识别条形码——python实现/">
+      <div class="ds-thread" data-thread-key="2017/03/05/Classifying-News-Headlines-with-scikit-learn/"
+           data-title="Classifying News Headlines with scikit-learn" data-url="http://datahonor.com/2017/03/05/Classifying-News-Headlines-with-scikit-learn/">
       </div>
     
   </div>
@@ -633,7 +618,7 @@ Codebar_code.py12345678910111213141516171819202122232425262">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#bar-code-py"><span class="nav-text">bar_code.py</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#imgs-pro-py"><span class="nav-text">imgs_pro.py</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#test-imgs文件夹"><span class="nav-text">test-imgs文件夹</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#运行结果"><span class="nav-text">运行结果</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#概览"><span class="nav-text">概览</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#学习"><span class="nav-text">学习</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码"><span class="nav-text">代码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#补充"><span class="nav-text">补充</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
