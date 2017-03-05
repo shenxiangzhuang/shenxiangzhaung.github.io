@@ -4,6 +4,36 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/03/03/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/</loc>
+    <lastmod>2017-03-05T00:55:52.040Z</lastmod>
+    <data>
+        <display>
+        <title>朴素贝叶斯算法的简单实现</title>
+        <pubTime>2017-03-03T04:38:48.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Algorithm</tag>
+         
+        <tag>Clustering</tag>
+         
+        <tag>统计学习方法</tag>
+         
+        <tag>Data Analysis</tag>
+         
+        <tag>ML</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/03/03/%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E7%BB%8F%E9%AA%8C%E9%A3%8E%E9%99%A9%E6%9C%80%E5%B0%8F%E5%8C%96/</loc>
     <lastmod>2017-03-03T06:00:11.740Z</lastmod>
     <data>
@@ -82,36 +112,6 @@
         <display>
         <title>感知机学习算法的对偶形式</title>
         <pubTime>2017-03-03T05:19:21.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Algorithm</tag>
-         
-        <tag>Clustering</tag>
-         
-        <tag>统计学习方法</tag>
-         
-        <tag>Data Analysis</tag>
-         
-        <tag>ML</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/03/03/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/</loc>
-    <lastmod>2017-03-03T05:05:11.590Z</lastmod>
-    <data>
-        <display>
-        <title>朴素贝叶斯算法的简单实现</title>
-        <pubTime>2017-03-03T04:38:48.000Z</pubTime>
         
         <tag>Python</tag>
          
