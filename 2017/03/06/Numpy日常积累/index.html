@@ -89,23 +89,23 @@
 
 
 
-<meta name="description" content="1.ravel and flatten
+<meta name="description" content="1. ravel and flatten
 参考这里
-The difference is that flatten always returns a copy and ravel returns a view of the original array whenever possible. This isn’t visible in the printed output, but if you mod">
+The difference is that flatten always returns a copy and ravel returns a view of the original array whenever possible. This isn’t visible in the printed output, but if you mo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Numpy日常积累">
 <meta property="og:url" content="http://datahonor.com/2017/03/06/Numpy日常积累/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="1.ravel and flatten
+<meta property="og:description" content="1. ravel and flatten
 参考这里
-The difference is that flatten always returns a copy and ravel returns a view of the original array whenever possible. This isn’t visible in the printed output, but if you mod">
+The difference is that flatten always returns a copy and ravel returns a view of the original array whenever possible. This isn’t visible in the printed output, but if you mo">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/numpy/3.png">
-<meta property="og:updated_time" content="2017-03-06T11:45:54.029Z">
+<meta property="og:updated_time" content="2017-03-06T14:01:22.417Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Numpy日常积累">
-<meta name="twitter:description" content="1.ravel and flatten
+<meta name="twitter:description" content="1. ravel and flatten
 参考这里
-The difference is that flatten always returns a copy and ravel returns a view of the original array whenever possible. This isn’t visible in the printed output, but if you mod">
+The difference is that flatten always returns a copy and ravel returns a view of the original array whenever possible. This isn’t visible in the printed output, but if you mo">
 <meta name="twitter:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/numpy/3.png">
 
 
@@ -400,11 +400,32 @@ The difference is that flatten always returns a copy and ravel returns a view of
       
 
       
-        <h5 id="1-ravel-and-flatten"><a href="#1-ravel-and-flatten" class="headerlink" title="1.ravel and flatten"></a>1.ravel and flatten</h5><blockquote>
+        <h5 id="1-ravel-and-flatten"><a href="#1-ravel-and-flatten" class="headerlink" title="1. ravel and flatten"></a>1. ravel and flatten</h5><blockquote>
 <p>参考<a href="http://stackoverflow.com/questions/28930465/what-is-the-difference-between-flatten-and-ravel-functions-in-numpy" target="_blank" rel="external">这里</a></p>
 <p>The difference is that flatten always returns a copy and ravel returns a view of the original array whenever possible. This isn’t visible in the printed output, but if you modify the array returned by ravel, it may modify the entries in the original array. If you modify the entries in an array returned from flatten this will never happen. ravel will often be faster since no memory is copied, but you have to be more careful about modifying the array it returns.</p>
 </blockquote>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/numpy/3.png" alt=""></p>
+<h5 id="2-reshape-and-resize"><a href="#2-reshape-and-resize" class="headerlink" title="2. reshape and resize"></a>2. reshape and resize</h5><blockquote>
+<p>The resize method works just like the reshape method, but modifies the<br>array it operates on</p>
+<p>即，resize改变操作的对象，而reshape不改变。</p>
+</blockquote>
+<h5 id="3-Dates"><a href="#3-Dates" class="headerlink" title="3. Dates"></a>3. Dates</h5><p>关于np.loadtxt函数导入日期的问题。</p>
+<h6 id="3-1-converters"><a href="#3-1-converters" class="headerlink" title="3.1 converters"></a>3.1 converters</h6><blockquote>
+<p>converters : dict, optional<br>A dictionary mapping column number to a function that will convert<br>that column to a float.  E.g., if column 0 is a date string:<br><code>converters = {0: datestr2num}</code>.  Converters can also be used to<br>provide a default value for missing data (but see also <code>genfromtxt</code>):<br><code>converters = {3: lambda s: float(s.strip() or 0)}</code>.  Default: None.</p>
+</blockquote>
+<h6 id="3-2-binary-to-str"><a href="#3-2-binary-to-str" class="headerlink" title="3.2 binary to str"></a>3.2 binary to str</h6><p>首先，我们运行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dates, close=np.loadtxt(<span class="string">'data.csv'</span>, delimiter=<span class="string">','</span>, usecols=(<span class="number">1</span>,<span class="number">6</span>), unpack=<span class="keyword">True</span>)</div></pre></td></tr></table></figure>
+<p>结果报错：</p>
+<blockquote>
+<p><strong>ValueError: could not convert string to float: b’28-01-2011’</strong></p>
+</blockquote>
+<p>于是我们编写指定日期格式的函数，再次导入<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">datestr2num</span><span class="params">(s)</span>:</span></div><div class="line">    <span class="keyword">return</span> datetime.strptime(s, <span class="string">"%d-%m-%Y"</span>).date().weekday()</div><div class="line">    </div><div class="line">dates, close=np.loadtxt(<span class="string">'data.csv'</span>, delimiter=<span class="string">','</span>, usecols=(<span class="number">1</span>,<span class="number">6</span>),</div><div class="line">converters=&#123;<span class="number">1</span>: datestr2num&#125;, unpack=<span class="keyword">True</span>)</div><div class="line"></div></pre></td></tr></table></figure><br>还是报错：</p>
+<blockquote>
+<p><strong>TypeError: strptime() argument 1 must be str, not bytes</strong></p>
+</blockquote>
+<p>这次是因为日期列是二进制的格式，而我们的strptime要求参数是字符型。<br>修改datestr2num函数即可。继续运行：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">datestr2num</span><span class="params">(s)</span>:</span></div><div class="line">    <span class="keyword">return</span> datetime.strptime(s.decode(<span class="string">'ascii'</span>), <span class="string">"%d-%m-%Y"</span>).date().weekday()</div><div class="line">    </div><div class="line">dates, close=np.loadtxt(<span class="string">'data.csv'</span>, delimiter=<span class="string">','</span>, usecols=(<span class="number">1</span>,<span class="number">6</span>),</div><div class="line">converters=&#123;<span class="number">1</span>: datestr2num&#125;, unpack=<span class="keyword">True</span>)</div></pre></td></tr></table></figure></p>
+<p>这次OK了!</p>
+<p>参考：<em>NumPy Beginner’s Guide [Second Edition] </em>，<a href="http://stackoverflow.com/questions/21117311/time-strptime-argument-0-must-be-str-not-bytes" target="_blank" rel="external">stackoverflow</a></p>
 
       
     </div>
@@ -609,7 +630,7 @@ The difference is that flatten always returns a copy and ravel returns a view of
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-ravel-and-flatten"><span class="nav-text">1.ravel and flatten</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-ravel-and-flatten"><span class="nav-text">1. ravel and flatten</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-reshape-and-resize"><span class="nav-text">2. reshape and resize</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-Dates"><span class="nav-text">3. Dates</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-1-converters"><span class="nav-text">3.1 converters</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-2-binary-to-str"><span class="nav-text">3.2 binary to str</span></a></li></ol></li></ol></div>
             
 
           </div>
