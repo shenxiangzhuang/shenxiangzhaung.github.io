@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python,Algorithm,Data Analysis,Clustering,统计学习方法,ML," />
+  <meta name="keywords" content="Python,Numpy," />
 
 
 
@@ -89,21 +89,22 @@
 
 
 
-<meta name="description" content="Coursera课程machine learning data analysis  week1Decision Trees
-Python代码：[最后图片部分有些许改动]12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626">
+<meta name="description" content="Overview实现算法时，越发觉得，Numpy对效率的影响特别大，所以再次学习。这里主要是进行数组运算速度的对比，对原文代码稍加改进，更直观地看到速度上的差别。
+Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="决策树的简单实现">
-<meta property="og:url" content="http://datahonor.com/2017/03/02/决策树的简单实现/index.html">
+<meta property="og:title" content="The Speed of Numpy">
+<meta property="og:url" content="http://datahonor.com/2017/03/06/The-Speed-of-Numpy/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="Coursera课程machine learning data analysis  week1Decision Trees
-Python代码：[最后图片部分有些许改动]12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/tree.png">
-<meta property="og:updated_time" content="2017-03-02T09:32:48.139Z">
+<meta property="og:description" content="Overview实现算法时，越发觉得，Numpy对效率的影响特别大，所以再次学习。这里主要是进行数组运算速度的对比，对原文代码稍加改进，更直观地看到速度上的差别。
+Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061#">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/numpy/2.png">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/numpy/1.png">
+<meta property="og:updated_time" content="2017-03-06T06:05:09.531Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="决策树的简单实现">
-<meta name="twitter:description" content="Coursera课程machine learning data analysis  week1Decision Trees
-Python代码：[最后图片部分有些许改动]12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626">
-<meta name="twitter:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/tree.png">
+<meta name="twitter:title" content="The Speed of Numpy">
+<meta name="twitter:description" content="Overview实现算法时，越发觉得，Numpy对效率的影响特别大，所以再次学习。这里主要是进行数组运算速度的对比，对原文代码稍加改进，更直观地看到速度上的差别。
+Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061#">
+<meta name="twitter:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/numpy/2.png">
 
 
 
@@ -131,13 +132,13 @@ Python代码：[最后图片部分有些许改动]123456789101112131415161718192
 
 
 
-  <link rel="canonical" href="http://datahonor.com/2017/03/02/决策树的简单实现/"/>
+  <link rel="canonical" href="http://datahonor.com/2017/03/06/The-Speed-of-Numpy/"/>
 
 
 
 
 
-  <title> 决策树的简单实现 | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> The Speed of Numpy | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -285,7 +286,7 @@ Python代码：[最后图片部分有些许改动]123456789101112131415161718192
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/03/02/决策树的简单实现/">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/03/06/The-Speed-of-Numpy/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="不秩稚童">
@@ -309,7 +310,7 @@ Python代码：[最后图片部分有些许改动]123456789101112131415161718192
             
             
               
-                决策树的简单实现
+                The Speed of Numpy
               
             
           </h1>
@@ -324,8 +325,8 @@ Python代码：[最后图片部分有些许改动]123456789101112131415161718192
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-02T15:48:54+08:00">
-                2017-03-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-06T13:49:15+08:00">
+                2017-03-06
               </time>
             
 
@@ -365,8 +366,8 @@ Python代码：[最后图片部分有些许改动]123456789101112131415161718192
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/02/决策树的简单实现/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/02/决策树的简单实现/" itemprop="commentCount"></span>
+                <a href="/2017/03/06/The-Speed-of-Numpy/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/06/The-Speed-of-Numpy/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -397,18 +398,17 @@ Python代码：[最后图片部分有些许改动]123456789101112131415161718192
       
 
       
-        <p>Coursera课程machine learning data analysis  week1Decision Trees</p>
-<p>Python代码：[最后图片部分有些许改动]<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> train_test_split</div><div class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier <span class="keyword">import</span> sklearn.metrics</div><div class="line"></div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">Data Engineering and Analysis</div><div class="line">"""</div><div class="line"><span class="comment">#Load the dataset</span></div><div class="line"></div><div class="line">AH_data = pd.read_csv(<span class="string">"tree_addhealth.csv"</span>)</div><div class="line"></div><div class="line">data_clean = AH_data.dropna()</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 一些常用的命令，整体上描述数据</span></div><div class="line">print(<span class="string">'---------desc-------------'</span>)</div><div class="line"><span class="comment"># print(data_clean.info())</span></div><div class="line"><span class="comment"># print(data_clean.dtypes)</span></div><div class="line">print(data_clean.describe())</div><div class="line"></div><div class="line"><span class="string">"""</span></div><div class="line">Modeling and Prediction</div><div class="line">"""</div><div class="line"><span class="comment">#Split into training and testing sets</span></div><div class="line"><span class="comment"># 除去TREG1后的24个字段</span></div><div class="line">predictors = data_clean[[<span class="string">'BIO_SEX'</span>,<span class="string">'HISPANIC'</span>,<span class="string">'WHITE'</span>,<span class="string">'BLACK'</span>,<span class="string">'NAMERICAN'</span>,<span class="string">'ASIAN'</span>,</div><div class="line"><span class="string">'age'</span>,<span class="string">'ALCEVR1'</span>,<span class="string">'ALCPROBS1'</span>,<span class="string">'marever1'</span>,<span class="string">'cocever1'</span>,<span class="string">'inhever1'</span>,<span class="string">'cigavail'</span>,<span class="string">'DEP1'</span>,</div><div class="line"><span class="string">'ESTEEM1'</span>,<span class="string">'VIOL1'</span>,<span class="string">'PASSIST'</span>,<span class="string">'DEVIANT1'</span>,<span class="string">'SCHCONN1'</span>,<span class="string">'GPA1'</span>,<span class="string">'EXPEL1'</span>,<span class="string">'FAMCONCT'</span>,<span class="string">'PARACTV'</span>,</div><div class="line"><span class="string">'PARPRES'</span>]]</div><div class="line"></div><div class="line">targets = data_clean.TREG1</div><div class="line"><span class="comment"># 拆分为测试集和训练集</span></div><div class="line">pred_train, pred_test, tar_train, tar_test  =   train_test_split(predictors, targets, test_size=<span class="number">.4</span>)  <span class="comment"># 测试集占数据集的40%</span></div><div class="line"></div><div class="line"><span class="comment"># 查看拆分结果</span></div><div class="line"></div><div class="line">print(<span class="string">'---------shapes------------'</span>)</div><div class="line">print(pred_train.shape)</div><div class="line">print(pred_test.shape)</div><div class="line">print(tar_train.shape)</div><div class="line">print(tar_test.shape)</div><div class="line"></div><div class="line"><span class="comment">#Build model on training data</span></div><div class="line">classifier=DecisionTreeClassifier()</div><div class="line">classifier=classifier.fit(pred_train,tar_train)</div><div class="line"></div><div class="line">predictions=classifier.predict(pred_test)</div><div class="line"></div><div class="line">sklearn.metrics.confusion_matrix(tar_test,predictions)</div><div class="line">sklearn.metrics.accuracy_score(tar_test, predictions)</div><div class="line"></div><div class="line"><span class="comment">#Displaying the decision tree</span></div><div class="line"><span class="keyword">import</span> pydotplus</div><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> tree</div><div class="line"><span class="keyword">from</span> io <span class="keyword">import</span> StringIO</div><div class="line"></div><div class="line">out = StringIO()</div><div class="line">tree.export_graphviz(classifier, out_file=out)</div><div class="line">graph=pydotplus.graph_from_dot_data(out.getvalue())</div><div class="line">data = graph.create_png()  <span class="comment"># 图片的二进制数据</span></div><div class="line"><span class="keyword">with</span> open(<span class="string">'tree.png'</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</div><div class="line">    f.write(data)</div><div class="line"></div></pre></td></tr></table></figure></p>
-<p>遇到的问题：</p>
+        <h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>实现算法时，越发觉得，Numpy对效率的影响特别大，所以再次学习。<br>这里主要是进行数组运算速度的对比，对原文代码稍加改进，更直观地看到速度上的差别。</p>
+<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">#!/usr/bin/env/python3</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">numpysum</span><span class="params">(n)</span>:</span></div><div class="line">    a = np.arange(n)**<span class="number">2</span></div><div class="line">    b = np.arange(n)**<span class="number">3</span></div><div class="line">    c  =a + b</div><div class="line">    <span class="keyword">return</span> c</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">pythonsum</span><span class="params">(n)</span>:</span></div><div class="line">    <span class="comment"># 这里由于源码为Python2的，range的用法可能有变</span></div><div class="line">    <span class="comment"># 直接运行报错TypeError: 'range' object does not support item assignment</span></div><div class="line">    <span class="comment"># 故转化为列表</span></div><div class="line">    a = list(range(n))</div><div class="line">    b = list(range(n))</div><div class="line">    c = []</div><div class="line"></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(a)):</div><div class="line">        a[i] = i ** <span class="number">2</span></div><div class="line">        b[i] = i ** <span class="number">3</span></div><div class="line">        c.append(a[i] + b[i])</div><div class="line"></div><div class="line">    <span class="keyword">return</span> c</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># prt表示是否打印结果</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">printest</span><span class="params">(func, size, prt=True)</span>:</span></div><div class="line">    start = datetime.now()</div><div class="line">    c = func(size)</div><div class="line">    delta = datetime.now() - start</div><div class="line">    <span class="keyword">if</span> prt==<span class="keyword">True</span>:</div><div class="line">        print(<span class="string">"The last 2 elements of the sum "</span>, c[<span class="number">-2</span>:])</div><div class="line">        print(<span class="string">'Elapsed time in microsecondas '</span>, delta.microseconds)</div><div class="line">    <span class="keyword">return</span> delta.microseconds</div><div class="line"></div><div class="line"><span class="comment"># 用于作n-time图</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">timeplot</span><span class="params">()</span>:</span></div><div class="line">    pts = []</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">100</span>, <span class="number">10000</span>, <span class="number">100</span>):</div><div class="line">        t_numpy = printest(numpysum, i, prt=<span class="keyword">False</span>)</div><div class="line">        t_python = printest(pythonsum, i, prt=<span class="keyword">False</span>)</div><div class="line">        pts.append([t_numpy, t_python])</div><div class="line">    plt.plot(pts)</div><div class="line">    plt.legend([<span class="string">'Numpy'</span>, <span class="string">'Python'</span>])</div><div class="line">    plt.show()</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</div><div class="line">    size = int(sys.argv[<span class="number">1</span>])</div><div class="line">    print(<span class="string">'Numpysum...'</span>)</div><div class="line">    printest(numpysum, size)</div><div class="line">    print(<span class="string">'Pythonsum...'</span>)</div><div class="line">    printest(pythonsum, size)</div><div class="line">    timeplot()</div><div class="line"></div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>运行：</p>
 <blockquote>
-<p>InvocationException: GraphViz’s executables not found</p>
+<p>python Speed.py 10000</p>
 </blockquote>
-<p>解决：</p>
-<blockquote>
-<p>pip install graphviz</p>
-</blockquote>
-<p>这样虽说不报错了，但是图片还是无法显示，于是就做了变动，改为保存图片。<br>tree.png:</p>
-<p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/tree.png" alt=""></p>
+<p>输出：<br>&gt;<br>Numpysum…<br>The last 2 elements of the sum  [999500079996 999800010000]<br>Elapsed time in microsecondas  1299<br>Pythonsum…<br>The last 2 elements of the sum  [999500079996, 999800010000]<br>Elapsed time in microsecondas  18202</p>
+<p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/numpy/2.png" alt=""></p>
+<p>可以看到，相比pure python， Numpy在大规模的运算上具有极高的效率。</p>
+<h5 id="Supplement"><a href="#Supplement" class="headerlink" title="Supplement"></a>Supplement</h5><p>关于做图的补充：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">l = [[<span class="number">1</span>,<span class="number">2</span>], [<span class="number">3</span>,<span class="number">4</span>], [<span class="number">5</span>,<span class="number">6</span>]]</div><div class="line">plt.plot(l); plt.legend([<span class="string">'a'</span>, <span class="string">'b'</span>])</div><div class="line">plt.show()</div><div class="line"></div></pre></td></tr></table></figure><br>输出：<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/numpy/1.png" alt=""></p>
+<h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><em>NumPy Beginner’s Guide [Second Edition]</em> <em>Page19</em></p>
 
       
     </div>
@@ -434,15 +434,7 @@ Python代码：[最后图片部分有些许改动]123456789101112131415161718192
           
             <a href="/tags/Python/" rel="tag"># Python</a>
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
-          
-            <a href="/tags/Data-Analysis/" rel="tag"># Data Analysis</a>
-          
-            <a href="/tags/Clustering/" rel="tag"># Clustering</a>
-          
-            <a href="/tags/统计学习方法/" rel="tag"># 统计学习方法</a>
-          
-            <a href="/tags/ML/" rel="tag"># ML</a>
+            <a href="/tags/Numpy/" rel="tag"># Numpy</a>
           
         </div>
       
@@ -455,8 +447,8 @@ Python代码：[最后图片部分有些许改动]123456789101112131415161718192
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/02/Kaggle——A-Journey-through-Titanic-Python/" rel="next" title="Kaggle——A Journey through Titanic[Python]">
-                <i class="fa fa-chevron-left"></i> Kaggle——A Journey through Titanic[Python]
+              <a href="/2017/03/06/cin-and-cin-getline/" rel="next" title="cin and cin.getline">
+                <i class="fa fa-chevron-left"></i> cin and cin.getline
               </a>
             
           </div>
@@ -464,10 +456,6 @@ Python代码：[最后图片部分有些许改动]123456789101112131415161718192
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/02/统计学习方法——简单实现KNN-Python/" rel="prev" title="统计学习方法——简单实现KNN[Python]">
-                统计学习方法——简单实现KNN[Python] <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -493,8 +481,8 @@ Python代码：[最后图片部分有些许改动]123456789101112131415161718192
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/02/决策树的简单实现/"
-           data-title="决策树的简单实现" data-url="http://datahonor.com/2017/03/02/决策树的简单实现/">
+      <div class="ds-thread" data-thread-key="2017/03/06/The-Speed-of-Numpy/"
+           data-title="The Speed of Numpy" data-url="http://datahonor.com/2017/03/06/The-Speed-of-Numpy/">
       </div>
     
   </div>
@@ -518,8 +506,17 @@ Python代码：[最后图片部分有些许改动]123456789101112131415161718192
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
@@ -606,6 +603,22 @@ Python代码：[最后图片部分有些许改动]123456789101112131415161718192
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Supplement"><span class="nav-text">Supplement</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
