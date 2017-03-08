@@ -89,23 +89,27 @@
 
 
 
-<meta name="description" content="1. ravel and flatten
+<meta name="description" content="阅读书籍 NumPy Beginner’s Guide [Second Edition]，一些关于使用Numpy的笔记。
+1. ravel and flatten
 参考这里
-The difference is that flatten always returns a copy and ravel returns a view of the original array whenever possible. This isn’t visible in the printed output, but if you mo">
+The difference is that flatten always returns a copy and ravel returns a view of the original array whenever poss">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Numpy日常积累">
 <meta property="og:url" content="http://datahonor.com/2017/03/06/Numpy日常积累/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="1. ravel and flatten
+<meta property="og:description" content="阅读书籍 NumPy Beginner’s Guide [Second Edition]，一些关于使用Numpy的笔记。
+1. ravel and flatten
 参考这里
-The difference is that flatten always returns a copy and ravel returns a view of the original array whenever possible. This isn’t visible in the printed output, but if you mo">
+The difference is that flatten always returns a copy and ravel returns a view of the original array whenever poss">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/numpy/3.png">
-<meta property="og:updated_time" content="2017-03-06T14:01:22.417Z">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/numpy/4.png">
+<meta property="og:updated_time" content="2017-03-08T13:39:35.335Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Numpy日常积累">
-<meta name="twitter:description" content="1. ravel and flatten
+<meta name="twitter:description" content="阅读书籍 NumPy Beginner’s Guide [Second Edition]，一些关于使用Numpy的笔记。
+1. ravel and flatten
 参考这里
-The difference is that flatten always returns a copy and ravel returns a view of the original array whenever possible. This isn’t visible in the printed output, but if you mo">
+The difference is that flatten always returns a copy and ravel returns a view of the original array whenever poss">
 <meta name="twitter:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/numpy/3.png">
 
 
@@ -400,7 +404,8 @@ The difference is that flatten always returns a copy and ravel returns a view of
       
 
       
-        <h5 id="1-ravel-and-flatten"><a href="#1-ravel-and-flatten" class="headerlink" title="1. ravel and flatten"></a>1. ravel and flatten</h5><blockquote>
+        <p>阅读书籍 <em>NumPy Beginner’s Guide [Second Edition]</em>，一些关于使用Numpy的笔记。</p>
+<h5 id="1-ravel-and-flatten"><a href="#1-ravel-and-flatten" class="headerlink" title="1. ravel and flatten"></a>1. ravel and flatten</h5><blockquote>
 <p>参考<a href="http://stackoverflow.com/questions/28930465/what-is-the-difference-between-flatten-and-ravel-functions-in-numpy" target="_blank" rel="external">这里</a></p>
 <p>The difference is that flatten always returns a copy and ravel returns a view of the original array whenever possible. This isn’t visible in the printed output, but if you modify the array returned by ravel, it may modify the entries in the original array. If you modify the entries in an array returned from flatten this will never happen. ravel will often be faster since no memory is copied, but you have to be more careful about modifying the array it returns.</p>
 </blockquote>
@@ -426,6 +431,8 @@ The difference is that flatten always returns a copy and ravel returns a view of
 <p>这次是因为日期列是二进制的格式，而我们的strptime要求参数是字符型。<br>修改datestr2num函数即可。继续运行：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">datestr2num</span><span class="params">(s)</span>:</span></div><div class="line">    <span class="keyword">return</span> datetime.strptime(s.decode(<span class="string">'ascii'</span>), <span class="string">"%d-%m-%Y"</span>).date().weekday()</div><div class="line">    </div><div class="line">dates, close=np.loadtxt(<span class="string">'data.csv'</span>, delimiter=<span class="string">','</span>, usecols=(<span class="number">1</span>,<span class="number">6</span>),</div><div class="line">converters=&#123;<span class="number">1</span>: datestr2num&#125;, unpack=<span class="keyword">True</span>)</div></pre></td></tr></table></figure></p>
 <p>这次OK了!</p>
 <p>参考：<em>NumPy Beginner’s Guide [Second Edition] </em>，<a href="http://stackoverflow.com/questions/21117311/time-strptime-argument-0-must-be-str-not-bytes" target="_blank" rel="external">stackoverflow</a></p>
+<h5 id="4-argmax-amp-argmin"><a href="#4-argmax-amp-argmin" class="headerlink" title="4. argmax &amp; argmin"></a>4. argmax &amp; argmin</h5><p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/numpy/4.png" alt=""></p>
+<p>也就是说，在使用argmax[argmin]时，我们一定注意数组中没有nan,否则我们将会得到错误的结果而找不出原因。</p>
 
       
     </div>
@@ -630,7 +637,7 @@ The difference is that flatten always returns a copy and ravel returns a view of
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-ravel-and-flatten"><span class="nav-text">1. ravel and flatten</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-reshape-and-resize"><span class="nav-text">2. reshape and resize</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-Dates"><span class="nav-text">3. Dates</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-1-converters"><span class="nav-text">3.1 converters</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-2-binary-to-str"><span class="nav-text">3.2 binary to str</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-ravel-and-flatten"><span class="nav-text">1. ravel and flatten</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-reshape-and-resize"><span class="nav-text">2. reshape and resize</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-Dates"><span class="nav-text">3. Dates</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#3-1-converters"><span class="nav-text">3.1 converters</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-2-binary-to-str"><span class="nav-text">3.2 binary to str</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-argmax-amp-argmin"><span class="nav-text">4. argmax & argmin</span></a></li></ol></div>
             
 
           </div>
