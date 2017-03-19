@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/03/19/Kaggle%E2%80%94%E2%80%94American-Pubs-Python/</loc>
+    <lastmod>2017-03-19T03:24:04.736Z</lastmod>
+    <data>
+        <display>
+        <title>Kaggle——American Pubs[Python] </title>
+        <pubTime>2017-03-19T03:15:45.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Kaggle</tag>
+         
+        <tag>Data Analysis</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/03/13/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8-%E7%B4%AB%E4%B9%A6-%E4%B9%A0%E9%A2%98%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2017-03-15T17:21:06.014Z</lastmod>
     <data>
@@ -188,9 +212,9 @@
         <title>朴素贝叶斯算法的简单实现</title>
         <pubTime>2017-03-03T04:38:48.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Clustering</tag>
          
@@ -260,9 +284,9 @@
         <title>原始感知机模型</title>
         <pubTime>2017-03-03T05:09:30.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Clustering</tag>
          
@@ -290,9 +314,9 @@
         <title>感知机学习算法的对偶形式</title>
         <pubTime>2017-03-03T05:19:21.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Clustering</tag>
          
@@ -342,9 +366,9 @@
         <title>统计学习方法——简单实现KNN[Python]</title>
         <pubTime>2017-03-02T07:55:59.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Clustering</tag>
          
@@ -372,9 +396,9 @@
         <title>K-means clustering</title>
         <pubTime>2017-02-27T14:12:47.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Clustering</tag>
          
@@ -422,9 +446,9 @@
         <title>决策树的简单实现</title>
         <pubTime>2017-03-02T07:48:54.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Clustering</tag>
          
@@ -730,9 +754,9 @@
         <title>Python实现支持向量机(SVM)</title>
         <pubTime>2017-03-01T16:10:13.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Clustering</tag>
          
