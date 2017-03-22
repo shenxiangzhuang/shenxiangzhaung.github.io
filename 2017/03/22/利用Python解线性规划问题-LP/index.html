@@ -94,7 +94,7 @@ Python求解(cvxopt)这里用的库是cvxopt,之前解SVM的QP问题也用过，
 这里，我们主要看下在有无等式约束两种情况下的不同,其实也没差 :-）
 无等式约束$$ minimiz">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用Python解线性规划问题(LP)">
+<meta property="og:title" content="利用Python,Lingo解线性规划问题(LP)">
 <meta property="og:url" content="http://datahonor.com/2017/03/22/利用Python解线性规划问题-LP/index.html">
 <meta property="og:site_name" content="DATA HONOR">
 <meta property="og:description" content="Overview新学期开了运筹学(OR)的课,最近学线性规划问题(LP)。老师建议说是用MATLAB 或者 LINGO，这里先用Python试下，之后用MATLAB写再补充。
@@ -102,9 +102,11 @@ Python求解(cvxopt)这里用的库是cvxopt,之前解SVM的QP问题也用过，
 这里，我们主要看下在有无等式约束两种情况下的不同,其实也没差 :-）
 无等式约束$$ minimiz">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Python/OR/LP1.png">
-<meta property="og:updated_time" content="2017-03-22T15:36:17.312Z">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Python/OR/Lp2.png">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Python/OR/LP3.png">
+<meta property="og:updated_time" content="2017-03-22T16:31:59.442Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="利用Python解线性规划问题(LP)">
+<meta name="twitter:title" content="利用Python,Lingo解线性规划问题(LP)">
 <meta name="twitter:description" content="Overview新学期开了运筹学(OR)的课,最近学线性规划问题(LP)。老师建议说是用MATLAB 或者 LINGO，这里先用Python试下，之后用MATLAB写再补充。
 Python求解(cvxopt)这里用的库是cvxopt,之前解SVM的QP问题也用过，这里求解LP问题。这是文档的介绍：
 这里，我们主要看下在有无等式约束两种情况下的不同,其实也没差 :-）
@@ -143,7 +145,7 @@ Python求解(cvxopt)这里用的库是cvxopt,之前解SVM的QP问题也用过，
 
 
 
-  <title> 利用Python解线性规划问题(LP) | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 利用Python,Lingo解线性规划问题(LP) | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -315,7 +317,7 @@ Python求解(cvxopt)这里用的库是cvxopt,之前解SVM的QP问题也用过，
             
             
               
-                利用Python解线性规划问题(LP)
+                利用Python,Lingo解线性规划问题(LP)
               
             
           </h1>
@@ -437,6 +439,10 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
 </code></pre><p> 0: -2.1667e+00 -1.1167e+01  3e+01  9e-01  1e+00  1e+00<br> 1: -1.1986e+00 -1.9278e+00  2e+00  7e-02  1e-01  1e-01<br> 2: -1.9895e+00 -2.0163e+00  6e-02  3e-03  4e-03  5e-03<br> 3: -1.9999e+00 -2.0002e+00  6e-04  3e-05  5e-05  5e-05<br> 4: -2.0000e+00 -2.0000e+00  6e-06  3e-07  5e-07  5e-07<br> 5: -2.0000e+00 -2.0000e+00  6e-08  3e-09  5e-09  5e-09<br>Optimal solution found.<br>[ 4.00e+00]<br>[ 1.00e+00]<br>[ 9.00e+00]</p>
 </blockquote>
 <p>完美运行咯，再见单纯形法，再见大M法：-）</p>
+<h5 id="Lingo求解线性规划问题"><a href="#Lingo求解线性规划问题" class="headerlink" title="Lingo求解线性规划问题"></a>Lingo求解线性规划问题</h5><p>题目还是上面的有等式约束的那道题[用lingo处理等式约束方便的多，有无等式约束几乎是一样的]</p>
+<p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">MIn=-3*x1+x2+x3;</div><div class="line"></div><div class="line">x1&gt;=0;</div><div class="line">x2&gt;=0;</div><div class="line">x3&gt;=0;</div><div class="line"></div><div class="line">x1-2*x2+x3 &lt;= 11;</div><div class="line">-4*x1+x2+2*x3&gt;=3;</div><div class="line">-2*x1+x3=1;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>输出：<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Python/OR/Lp2.png" alt=""></p>
+<p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Python/OR/LP3.png" alt=""></p>
 
       
     </div>
@@ -510,7 +516,7 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/03/22/利用Python解线性规划问题-LP/"
-           data-title="利用Python解线性规划问题(LP)" data-url="http://datahonor.com/2017/03/22/利用Python解线性规划问题-LP/">
+           data-title="利用Python,Lingo解线性规划问题(LP)" data-url="http://datahonor.com/2017/03/22/利用Python解线性规划问题-LP/">
       </div>
     
   </div>
@@ -641,7 +647,7 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Python求解-cvxopt"><span class="nav-text">Python求解(cvxopt)</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#无等式约束"><span class="nav-text">无等式约束</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#有等式约束"><span class="nav-text">有等式约束</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Python求解-cvxopt"><span class="nav-text">Python求解(cvxopt)</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#无等式约束"><span class="nav-text">无等式约束</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#有等式约束"><span class="nav-text">有等式约束</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Lingo求解线性规划问题"><span class="nav-text">Lingo求解线性规划问题</span></a></li></ol></div>
             
 
           </div>
