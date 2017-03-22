@@ -1,0 +1,891 @@
+<!doctype html>
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Python,OR," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Overview新学期开了运筹学(OR)的课,最近学线性规划问题(LP)。老师建议说是用MATLAB 或者 LINGO，这里先用Python试下，之后用MATLAB写再补充。
+Python求解(cvxopt)这里用的库是cvxopt,之前解SVM的QP问题也用过，这里求解LP问题。这是文档的介绍：
+这里，我们主要看下在有无等式约束两种情况下的不同,其实也没差 :-）
+无等式约束$$ minimiz">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用Python解线性规划问题(LP)">
+<meta property="og:url" content="http://datahonor.com/2017/03/22/利用Python解线性规划问题-LP/index.html">
+<meta property="og:site_name" content="DATA HONOR">
+<meta property="og:description" content="Overview新学期开了运筹学(OR)的课,最近学线性规划问题(LP)。老师建议说是用MATLAB 或者 LINGO，这里先用Python试下，之后用MATLAB写再补充。
+Python求解(cvxopt)这里用的库是cvxopt,之前解SVM的QP问题也用过，这里求解LP问题。这是文档的介绍：
+这里，我们主要看下在有无等式约束两种情况下的不同,其实也没差 :-）
+无等式约束$$ minimiz">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Python/OR/LP1.png">
+<meta property="og:updated_time" content="2017-03-22T15:36:17.312Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="利用Python解线性规划问题(LP)">
+<meta name="twitter:description" content="Overview新学期开了运筹学(OR)的课,最近学线性规划问题(LP)。老师建议说是用MATLAB 或者 LINGO，这里先用Python试下，之后用MATLAB写再补充。
+Python求解(cvxopt)这里用的库是cvxopt,之前解SVM的QP问题也用过，这里求解LP问题。这是文档的介绍：
+这里，我们主要看下在有无等式约束两种情况下的不同,其实也没差 :-）
+无等式约束$$ minimiz">
+<meta name="twitter:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Python/OR/LP1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '不秩稚童'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://datahonor.com/2017/03/22/利用Python解线性规划问题-LP/"/>
+
+
+
+
+
+  <title> 利用Python解线性规划问题(LP) | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-92663335-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cbfd16620150a28ce4061f717038b4de";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">DATA HONOR</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Never say never.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/03/22/利用Python解线性规划问题-LP/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="不秩稚童">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="DATA HONOR">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                利用Python解线性规划问题(LP)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T22:50:39+08:00">
+                2017-03-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/22/利用Python解线性规划问题-LP/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/22/利用Python解线性规划问题-LP/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>新学期开了运筹学(OR)的课,最近学线性规划问题(LP)。老师建议说是用MATLAB 或者 LINGO，这里先用Python试下，之后用MATLAB写再补充。</p>
+<h5 id="Python求解-cvxopt"><a href="#Python求解-cvxopt" class="headerlink" title="Python求解(cvxopt)"></a>Python求解(cvxopt)</h5><p>这里用的库是cvxopt,之前解SVM的QP问题也用过，这里求解LP问题。<br>这是文档的介绍：<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Python/OR/LP1.png" alt=""></p>
+<p>这里，我们主要看下在有无等式约束两种情况下的不同,其实也没差 :-）</p>
+<h6 id="无等式约束"><a href="#无等式约束" class="headerlink" title="无等式约束"></a>无等式约束</h6><span>$$ minimize     \quad   -4x_{1}-5x_{2}$$</span><!-- Has MathJax -->
+<span>$$subject \quad to
+\left\{\begin{matrix}
+2x_{1} &amp; +x_{2} &amp; \leq 3\\ 
+x_{1}&amp; +2x_{2} &amp; \leq 3\\
+x_{1}&amp;,x_{2}&amp;\geq 0
+\end{matrix}\right.$$</span><!-- Has MathJax -->
+<p>实现代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">from</span> cvxopt <span class="keyword">import</span> matrix, solvers</div><div class="line"></div><div class="line">c = matrix([<span class="number">-4.</span>, <span class="number">-5.</span>])</div><div class="line">G = matrix([[<span class="number">2.</span>, <span class="number">1.</span>, <span class="number">-1.</span>, <span class="number">0.</span>], [<span class="number">1.</span>, <span class="number">2.</span>, <span class="number">0.</span>, <span class="number">-1.</span>]])</div><div class="line">h = matrix([<span class="number">3.</span>, <span class="number">3.</span>, <span class="number">0.</span>, <span class="number">0.</span>])</div><div class="line">sol = solvers.lp(c, G, h)</div><div class="line">print(sol[<span class="string">'x'</span>])</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure><br>输出：</p>
+<blockquote>
+<pre><code>pcost       dcost       gap    pres   dres   k/t
+</code></pre><p> 0: -8.1000e+00 -1.8300e+01  4e+00  0e+00  8e-01  1e+00<br> 1: -8.8055e+00 -9.4357e+00  2e-01  1e-16  4e-02  3e-02<br> 2: -8.9981e+00 -9.0049e+00  2e-03  3e-16  5e-04  4e-04<br> 3: -9.0000e+00 -9.0000e+00  2e-05  1e-16  5e-06  4e-06<br> 4: -9.0000e+00 -9.0000e+00  2e-07  3e-16  5e-08  4e-08<br>Optimal solution found.<br>[ 1.00e+00]<br>[ 1.00e+00]</p>
+</blockquote>
+<p>Remark：</p>
+<blockquote>
+<p>这里记得一定要调入numpy,否则会出现如下报错<br>Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so.<br>可能是依赖的问题。</p>
+</blockquote>
+<h6 id="有等式约束"><a href="#有等式约束" class="headerlink" title="有等式约束"></a>有等式约束</h6><span>$$ minimize  \quad  z = -3x_{1}+x_{2}+x{3}$$</span><!-- Has MathJax -->
+<span>$$subject \quad to
+\left\{\begin{matrix}
+x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\ 
+-4x_{1} &amp; +x{2} &amp;  +2x{3}&amp; \geq 3\\ 
+ -2x_{1}&amp;  &amp; +x_{3} &amp; = 1\\ 
+ x_{1},&amp;x_{2},&amp;x_{3}&amp;\geq 0 
+\end{matrix}\right.$$</span><!-- Has MathJax -->
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">from</span> cvxopt <span class="keyword">import</span> matrix, solvers</div><div class="line"></div><div class="line"></div><div class="line">G = matrix([[<span class="number">1.0</span>,<span class="number">4.0</span>,<span class="number">-2.0</span>,<span class="number">-1.0</span>,<span class="number">0.0</span>,<span class="number">0.0</span>], [<span class="number">-2.0</span>,<span class="number">-1.0</span>,<span class="number">0.0</span>,<span class="number">0.0</span>,<span class="number">-1.0</span>,<span class="number">0.0</span>],[<span class="number">1.0</span>,<span class="number">-2.0</span>,<span class="number">1.0</span>,<span class="number">0.0</span>,<span class="number">0.0</span>,<span class="number">-1.0</span>]])</div><div class="line">h = matrix([<span class="number">11.0</span>,<span class="number">-3.0</span>,<span class="number">1.0</span>,<span class="number">0.0</span>,<span class="number">0.0</span>,<span class="number">0.0</span>])</div><div class="line"></div><div class="line">A = matrix([<span class="number">-2.0</span>,<span class="number">0.0</span>,<span class="number">1.0</span>])</div><div class="line">A = A.trans()  <span class="comment"># 这里不转置会报错</span></div><div class="line">b = matrix([<span class="number">1.0</span>])</div><div class="line">c = matrix([<span class="number">-3.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>])</div><div class="line"></div><div class="line">sol = solvers.lp(c,G,h,A=A,b=b)</div><div class="line">print(sol[<span class="string">'x'</span>])</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<blockquote>
+<pre><code>pcost       dcost       gap    pres   dres   k/t
+</code></pre><p> 0: -2.1667e+00 -1.1167e+01  3e+01  9e-01  1e+00  1e+00<br> 1: -1.1986e+00 -1.9278e+00  2e+00  7e-02  1e-01  1e-01<br> 2: -1.9895e+00 -2.0163e+00  6e-02  3e-03  4e-03  5e-03<br> 3: -1.9999e+00 -2.0002e+00  6e-04  3e-05  5e-05  5e-05<br> 4: -2.0000e+00 -2.0000e+00  6e-06  3e-07  5e-07  5e-07<br> 5: -2.0000e+00 -2.0000e+00  6e-08  3e-09  5e-09  5e-09<br>Optimal solution found.<br>[ 4.00e+00]<br>[ 1.00e+00]<br>[ 9.00e+00]</p>
+</blockquote>
+<p>完美运行咯，再见单纯形法，再见大M法：-）</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/OR/" rel="tag"># OR</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/19/Kaggle——American-Pubs-Python/" rel="next" title="Kaggle——American Pubs[Python] ">
+                <i class="fa fa-chevron-left"></i> Kaggle——American Pubs[Python] 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/22/利用Python解线性规划问题-LP/"
+           data-title="利用Python解线性规划问题(LP)" data-url="http://datahonor.com/2017/03/22/利用Python解线性规划问题-LP/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
+               alt="不秩稚童" />
+          <p class="site-author-name" itemprop="name">不秩稚童</p>
+           
+              <p class="site-description motion-element" itemprop="description">十年饮冰，难凉热血。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">41</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/shenxiangzhuang" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/chen-xiang-zhuang" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.cnblogs.com/buzhizhitong" target="_blank" title="博客园">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  博客园
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Python求解-cvxopt"><span class="nav-text">Python求解(cvxopt)</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#无等式约束"><span class="nav-text">无等式约束</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#有等式约束"><span class="nav-text">有等式约束</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">不秩稚童</span>
+</div>
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+  
+
+  
+    <span class="site-pv">本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"shenxiangzhuang"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+  
+
+
+  
+
+
+</body>
+</html>
