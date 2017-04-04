@@ -89,19 +89,19 @@
 
 
 
-<meta name="description" content="为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.System: Ubuntu16.04 64bitEditor: Haroopad
-123456var spawn = require(&apos;child_process&apos;).spawn;// Hexo 3hexo.on(&apos;new&apos;, function(data)&amp;#123;  spawn(&apos;haroo">
+<meta name="description" content="自动开启编辑器为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.System: Ubuntu16.04 64bitEditor: Haroopad
+123456var spawn = require(&apos;child_process&apos;).spawn;// Hexo 3hexo.on(&apos;new&apos;, function(data)&amp;#123;  spawn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="About Hexo">
 <meta property="og:url" content="http://datahonor.com/2017/02/25/About-Hexo/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.System: Ubuntu16.04 64bitEditor: Haroopad
-123456var spawn = require(&apos;child_process&apos;).spawn;// Hexo 3hexo.on(&apos;new&apos;, function(data)&amp;#123;  spawn(&apos;haroo">
-<meta property="og:updated_time" content="2017-02-25T03:37:16.407Z">
+<meta property="og:description" content="自动开启编辑器为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.System: Ubuntu16.04 64bitEditor: Haroopad
+123456var spawn = require(&apos;child_process&apos;).spawn;// Hexo 3hexo.on(&apos;new&apos;, function(data)&amp;#123;  spawn">
+<meta property="og:updated_time" content="2017-04-04T14:22:02.769Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="About Hexo">
-<meta name="twitter:description" content="为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.System: Ubuntu16.04 64bitEditor: Haroopad
-123456var spawn = require(&apos;child_process&apos;).spawn;// Hexo 3hexo.on(&apos;new&apos;, function(data)&amp;#123;  spawn(&apos;haroo">
+<meta name="twitter:description" content="自动开启编辑器为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.System: Ubuntu16.04 64bitEditor: Haroopad
+123456var spawn = require(&apos;child_process&apos;).spawn;// Hexo 3hexo.on(&apos;new&apos;, function(data)&amp;#123;  spawn">
 
 
 
@@ -395,8 +395,10 @@
       
 
       
-        <p>为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.<br>System: Ubuntu16.04 64bit<br>Editor: Haroopad</p>
+        <h6 id="自动开启编辑器"><a href="#自动开启编辑器" class="headerlink" title="自动开启编辑器"></a>自动开启编辑器</h6><p>为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.<br>System: Ubuntu16.04 64bit<br>Editor: Haroopad</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> spawn = <span class="built_in">require</span>(<span class="string">'child_process'</span>).spawn;</div><div class="line"></div><div class="line"><span class="comment">// Hexo 3</span></div><div class="line">hexo.on(<span class="string">'new'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">  spawn(<span class="string">'haroopad'</span>, [data.path]);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h6 id="迁移"><a href="#迁移" class="headerlink" title="迁移"></a>迁移</h6><p>之前的系统崩了，将完整的hexo文件备份，重装系统，将文件拷到电脑，安装nvm,配置node,记得版本不要最新的，官方推荐稳定版本即可。配置git,npm, 再hexo文件重新安装hexo，只进行一次安装命令即可[也就是不用hexo init这些初始化和配置的命令]</p>
+<h6 id="更换评论系统"><a href="#更换评论系统" class="headerlink" title="更换评论系统"></a>更换评论系统</h6><p>多说要崩，换Disqus, 但是要FQ才能加载出来，。对技术爱好者来说FQ是基本技能，所以还是选择了它。</p>
 
       
     </div>
@@ -509,8 +511,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
@@ -597,6 +608,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#自动开启编辑器"><span class="nav-text">自动开启编辑器</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#迁移"><span class="nav-text">迁移</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#更换评论系统"><span class="nav-text">更换评论系统</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

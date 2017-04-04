@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://datahonor.com/2017/02/25/About-Hexo/</loc>
+    
+    <lastmod>2017-04-04T14:22:02.769Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://datahonor.com/2017/04/04/Python%E6%8A%93%E5%8F%96%E5%BE%AE%E4%BF%A1%E6%96%87%E7%AB%A0/</loc>
     
     <lastmod>2017-04-03T17:42:02.957Z</lastmod>
@@ -292,13 +299,6 @@
     <loc>http://datahonor.com/2017/02/25/Bubble-Sort/</loc>
     
     <lastmod>2017-02-25T09:30:04.826Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/2017/02/25/About-Hexo/</loc>
-    
-    <lastmod>2017-02-25T03:37:16.407Z</lastmod>
     
   </url>
   
