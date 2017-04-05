@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Cpp," />
+  <meta name="keywords" content="Cpp,OpenCV," />
 
 
 
@@ -89,19 +89,16 @@
 
 
 
-<meta name="description" content="Overview关于cin与cin.getline在使用时要注意的地方，关键在于”newline”的处理。
-Code我们先来看一个例子1234567891011121314151617#include &amp;lt;iostream&amp;gt;    int main()&amp;#123;        using namespace std;        cout&amp;lt;&amp;lt;&quot;What year was">
+<meta name="description" content="关于遍历再学到P123时，发现书上的代码是无法运行的，先来看下它的写法：123456789101112int sz[3] = &amp;#123;4, 4, 4&amp;#125;;cv::Mat	m(3, sz, CV_32FC3);		//	A	three-dimensional	array	of	size	4-by-4-by-4cv::randu( m, -1.0f, 1.0f);			//	fill	wi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cin and cin.getline">
-<meta property="og:url" content="http://datahonor.com/2017/03/06/cin-and-cin-getline/index.html">
+<meta property="og:title" content="Learning Opencv3学习笔记">
+<meta property="og:url" content="http://datahonor.com/2017/04/06/Learning-Opencv3学习笔记/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="Overview关于cin与cin.getline在使用时要注意的地方，关键在于”newline”的处理。
-Code我们先来看一个例子1234567891011121314151617#include &amp;lt;iostream&amp;gt;    int main()&amp;#123;        using namespace std;        cout&amp;lt;&amp;lt;&quot;What year was">
-<meta property="og:updated_time" content="2017-03-06T01:30:11.686Z">
+<meta property="og:description" content="关于遍历再学到P123时，发现书上的代码是无法运行的，先来看下它的写法：123456789101112int sz[3] = &amp;#123;4, 4, 4&amp;#125;;cv::Mat	m(3, sz, CV_32FC3);		//	A	three-dimensional	array	of	size	4-by-4-by-4cv::randu( m, -1.0f, 1.0f);			//	fill	wi">
+<meta property="og:updated_time" content="2017-04-05T16:55:58.679Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cin and cin.getline">
-<meta name="twitter:description" content="Overview关于cin与cin.getline在使用时要注意的地方，关键在于”newline”的处理。
-Code我们先来看一个例子1234567891011121314151617#include &amp;lt;iostream&amp;gt;    int main()&amp;#123;        using namespace std;        cout&amp;lt;&amp;lt;&quot;What year was">
+<meta name="twitter:title" content="Learning Opencv3学习笔记">
+<meta name="twitter:description" content="关于遍历再学到P123时，发现书上的代码是无法运行的，先来看下它的写法：123456789101112int sz[3] = &amp;#123;4, 4, 4&amp;#125;;cv::Mat	m(3, sz, CV_32FC3);		//	A	three-dimensional	array	of	size	4-by-4-by-4cv::randu( m, -1.0f, 1.0f);			//	fill	wi">
 
 
 
@@ -129,13 +126,13 @@ Code我们先来看一个例子1234567891011121314151617#include &amp;lt;iostrea
 
 
 
-  <link rel="canonical" href="http://datahonor.com/2017/03/06/cin-and-cin-getline/"/>
+  <link rel="canonical" href="http://datahonor.com/2017/04/06/Learning-Opencv3学习笔记/"/>
 
 
 
 
 
-  <title> cin and cin.getline | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> Learning Opencv3学习笔记 | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -283,7 +280,7 @@ Code我们先来看一个例子1234567891011121314151617#include &amp;lt;iostrea
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/03/06/cin-and-cin-getline/">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/04/06/Learning-Opencv3学习笔记/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="不秩稚童">
@@ -307,7 +304,7 @@ Code我们先来看一个例子1234567891011121314151617#include &amp;lt;iostrea
             
             
               
-                cin and cin.getline
+                Learning Opencv3学习笔记
               
             
           </h1>
@@ -322,8 +319,8 @@ Code我们先来看一个例子1234567891011121314151617#include &amp;lt;iostrea
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-06T09:16:12+08:00">
-                2017-03-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-06T00:44:23+08:00">
+                2017-04-06
               </time>
             
 
@@ -363,8 +360,8 @@ Code我们先来看一个例子1234567891011121314151617#include &amp;lt;iostrea
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/06/cin-and-cin-getline/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/06/cin-and-cin-getline/" itemprop="commentCount"></span>
+                <a href="/2017/04/06/Learning-Opencv3学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/04/06/Learning-Opencv3学习笔记/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -395,26 +392,9 @@ Code我们先来看一个例子1234567891011121314151617#include &amp;lt;iostrea
       
 
       
-        <h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>关于cin与cin.getline在使用时要注意的地方，关键在于”newline”的处理。</p>
-<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><p>我们先来看一个例子<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"What year was your house biult?\n"</span>;</div><div class="line">        <span class="keyword">int</span> year;</div><div class="line">        <span class="built_in">cin</span>&gt;&gt;year;</div><div class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"What is its streer address?\n"</span>;</div><div class="line">        <span class="keyword">char</span> address[<span class="number">80</span>];</div><div class="line">        <span class="built_in">cin</span>.getline(address, <span class="number">80</span>);</div><div class="line">        <span class="built_in">cout</span>&lt;&lt; <span class="string">"Year built: "</span>&lt;&lt;year&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Address: "</span>&lt;&lt;address&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Done!\n"</span>;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line"></div></pre></td></tr></table></figure></p>
-<p>输出:</p>
-<blockquote>
-<p>What year was your house biult?<br>2017<br>What is its streer address?<br>Year built: 2017<br>Address:<br>Done!</p>
-</blockquote>
-<p>可以看到，还没输入地址，就打印并结束了程序。<br>原因:</p>
-<blockquote>
-<p>The problem is that when cin reads the year, it leaves the newline generated by the Enter key in the input queue. Then, cin.getline() reads the newline as an empty line and assigns a null string to the address array.</p>
-</blockquote>
-<p>解决办法：</p>
-<blockquote>
-<p>The fix is to read and discard the newline before reading the address.</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"What year was your house biult?\n"</span>;</div><div class="line">        <span class="keyword">int</span> year;</div><div class="line"></div><div class="line">        <span class="comment">// 这里使用get将作为cin结束的newline清除即可</span></div><div class="line">        <span class="comment">//(cin&gt;&gt;year).get();</span></div><div class="line">        <span class="built_in">cin</span>&gt;&gt;year;</div><div class="line">        <span class="built_in">cin</span>.get();</div><div class="line"></div><div class="line"></div><div class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"What is its streer address?\n"</span>;</div><div class="line">        <span class="keyword">char</span> address[<span class="number">80</span>];</div><div class="line">        <span class="built_in">cin</span>.getline(address, <span class="number">80</span>);</div><div class="line">        <span class="built_in">cout</span>&lt;&lt; <span class="string">"Year built: "</span>&lt;&lt;year&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Address: "</span>&lt;&lt;address&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Done!\n"</span>;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line"></div></pre></td></tr></table></figure>
-<p>输出：</p>
-<blockquote>
-<p>What year was your house biult?<br>1998<br>What is its streer address?<br>earth<br>Year built: 1998<br>Address: earth<br>Done!</p>
-</blockquote>
-<h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><em>C++ Primer Plus(5th Edition)</em>   Page147</p>
+        <h6 id="关于遍历"><a href="#关于遍历" class="headerlink" title="关于遍历"></a>关于遍历</h6><p>再学到P123时，发现书上的代码是无法运行的，先来看下它的写法：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">int</span> sz[<span class="number">3</span>] = &#123;<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>&#125;;</div><div class="line">cv::<span class="function">Mat	<span class="title">m</span><span class="params">(<span class="number">3</span>, sz, CV_32FC3)</span></span>;		<span class="comment">//	A	three-dimensional	array	of	size	4-by-4-by-4</span></div><div class="line">cv::randu( m, <span class="number">-1.0</span>f, <span class="number">1.0f</span>);			<span class="comment">//	fill	with	random	numbers	from	-1.0	to	1.0</span></div><div class="line"><span class="keyword">float</span> max = <span class="number">0.0f</span>;														<span class="comment">//	minimum	possible	value	of	L2	norm</span></div><div class="line">cv::MatConstIterator&lt;cv::Vec3f&gt; it = m.begin();</div><div class="line"><span class="keyword">while</span>( it != m.end() ) &#123;</div><div class="line">    len2 = (*it)[<span class="number">0</span>]*(*it)[<span class="number">0</span>]+(*it)[<span class="number">1</span>]*(*it)[<span class="number">1</span>]+(*it)[<span class="number">2</span>]*(*it)[<span class="number">2</span>];</div><div class="line">    <span class="keyword">if</span>( len2 &gt; max ) max = len2;</div><div class="line">    it++;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>首先，len2未声明，再者，MatConstIterator的用法可能有变化。<br>参考<a href="http://docs.opencv.org/trunk/d5/dd2/classcv_1_1NAryMatIterator.html" target="_blank" rel="external">官方文档示例代码</a>解决。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/opencv.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> sz[<span class="number">3</span>] = &#123;<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>&#125;;</div><div class="line">    cv::<span class="function">Mat	<span class="title">m</span><span class="params">(<span class="number">3</span>, sz, CV_32FC3)</span></span>;		<span class="comment">//	A	three-dimensional	array	of	size	4-by-4-by-4</span></div><div class="line">    cv::randu( m, <span class="number">-1.0</span>f, <span class="number">1.0f</span>);			<span class="comment">//	fill	with	random	numbers	from	-1.0	to	1.0</span></div><div class="line">    <span class="keyword">float</span> max = <span class="number">0.0f</span>;														<span class="comment">//	minimum	possible	value	of	L2	norm</span></div><div class="line">    cv::MatConstIterator_&lt;cv::Vec3f&gt; it = m.begin&lt;cv::Vec3f&gt;();</div><div class="line">    <span class="keyword">while</span>( it != m.end&lt;cv::Vec3f&gt;() ) &#123;</div><div class="line">        <span class="keyword">float</span> len2 = (*it)[<span class="number">0</span>]*(*it)[<span class="number">0</span>]+(*it)[<span class="number">1</span>]*(*it)[<span class="number">1</span>]+(*it)[<span class="number">2</span>]*(*it)[<span class="number">2</span>];</div><div class="line">        <span class="keyword">if</span>( len2 &gt; max ) max = len2;</div><div class="line">        it++;</div><div class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;max&lt;&lt;<span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -440,6 +420,8 @@ Code我们先来看一个例子1234567891011121314151617#include &amp;lt;iostrea
           
             <a href="/tags/Cpp/" rel="tag"># Cpp</a>
           
+            <a href="/tags/OpenCV/" rel="tag"># OpenCV</a>
+          
         </div>
       
 
@@ -451,8 +433,8 @@ Code我们先来看一个例子1234567891011121314151617#include &amp;lt;iostrea
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/05/Classifying-News-Headlines-with-scikit-learn/" rel="next" title="Classifying News Headlines with scikit-learn">
-                <i class="fa fa-chevron-left"></i> Classifying News Headlines with scikit-learn
+              <a href="/2017/04/04/Python抓取微信文章/" rel="next" title="Python抓取微信文章">
+                <i class="fa fa-chevron-left"></i> Python抓取微信文章
               </a>
             
           </div>
@@ -460,10 +442,6 @@ Code我们先来看一个例子1234567891011121314151617#include &amp;lt;iostrea
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/06/The-Speed-of-Numpy/" rel="prev" title="The Speed of Numpy">
-                The Speed of Numpy <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -632,7 +610,7 @@ Code我们先来看一个例子1234567891011121314151617#include &amp;lt;iostrea
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#关于遍历"><span class="nav-text">关于遍历</span></a></li></ol></div>
             
 
           </div>
@@ -775,9 +753,9 @@ Code我们先来看一个例子1234567891011121314151617#include &amp;lt;iostrea
 
     <script type="text/javascript">
       var disqus_shortname = 'http-datahonor-com';
-      var disqus_identifier = '2017/03/06/cin-and-cin-getline/';
+      var disqus_identifier = '2017/04/06/Learning-Opencv3学习笔记/';
 
-      var disqus_title = "cin and cin.getline";
+      var disqus_title = "Learning Opencv3学习笔记";
 
 
       function run_disqus_script(disqus_script) {
