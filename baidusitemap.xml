@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/04/09/OPenCV-%E5%9B%BE%E7%89%87%E9%A2%9C%E8%89%B2%E7%A9%BA%E9%97%B4%E7%BC%A9%E5%87%8F%E4%B8%8E%E9%81%8D%E5%8E%86/</loc>
+    <lastmod>2017-04-09T02:52:57.638Z</lastmod>
+    <data>
+        <display>
+        <title>OPenCV--图片颜色空间缩减与遍历</title>
+        <pubTime>2017-04-09T01:43:10.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OPenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/04/06/Learning-Opencv3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2017-04-05T16:55:58.679Z</lastmod>
     <data>
@@ -364,9 +386,9 @@
         <title>朴素贝叶斯算法的简单实现</title>
         <pubTime>2017-03-03T04:38:48.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Data Analysis</tag>
          
@@ -436,9 +458,9 @@
         <title>原始感知机模型</title>
         <pubTime>2017-03-03T05:09:30.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Data Analysis</tag>
          
@@ -466,9 +488,9 @@
         <title>感知机学习算法的对偶形式</title>
         <pubTime>2017-03-03T05:19:21.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Data Analysis</tag>
          
@@ -518,9 +540,9 @@
         <title>统计学习方法——简单实现KNN[Python]</title>
         <pubTime>2017-03-02T07:55:59.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Data Analysis</tag>
          
@@ -548,9 +570,9 @@
         <title>K-means clustering</title>
         <pubTime>2017-02-27T14:12:47.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Clustering</tag>
          
@@ -598,9 +620,9 @@
         <title>决策树的简单实现</title>
         <pubTime>2017-03-02T07:48:54.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Data Analysis</tag>
          
@@ -906,9 +928,9 @@
         <title>Python实现支持向量机(SVM)</title>
         <pubTime>2017-03-01T16:10:13.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Clustering</tag>
          

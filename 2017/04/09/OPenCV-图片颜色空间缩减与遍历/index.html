@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Cpp,Algorithm," />
+  <meta name="keywords" content="Cpp,OPenCV," />
 
 
 
@@ -89,19 +89,40 @@
 
 
 
-<meta name="description" content="紫书第二章习题代码及笔记。主要是想练习下c++的使用，这里纯粹作为记录，有错误欢迎指出，多加交流。
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798">
+<meta name="description" content="记录下遍历图片的以及缩减图片颜色空间的几种办法，主要是记录下关于位运算进行像素的按位操作。首先我们直观上看下图片的存储格式：
+
+[ ] 灰度图像-
+
+[ ] 彩色图像
+
+
+利用指针进行1234567891011121314151617181920212223242526272829303132333435363738394041void colorReducePtr(cv::Mat image,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="算法竞赛入门经典[紫书]习题笔记(第二章)">
-<meta property="og:url" content="http://datahonor.com/2017/03/13/算法竞赛入门经典-紫书-习题笔记/index.html">
+<meta property="og:title" content="OPenCV--图片颜色空间缩减与遍历">
+<meta property="og:url" content="http://datahonor.com/2017/04/09/OPenCV-图片颜色空间缩减与遍历/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="紫书第二章习题代码及笔记。主要是想练习下c++的使用，这里纯粹作为记录，有错误欢迎指出，多加交流。
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798">
-<meta property="og:updated_time" content="2017-03-15T17:21:06.014Z">
+<meta property="og:description" content="记录下遍历图片的以及缩减图片颜色空间的几种办法，主要是记录下关于位运算进行像素的按位操作。首先我们直观上看下图片的存储格式：
+
+[ ] 灰度图像-
+
+[ ] 彩色图像
+
+
+利用指针进行1234567891011121314151617181920212223242526272829303132333435363738394041void colorReducePtr(cv::Mat image,">
+<meta property="og:image" content="http://img.blog.csdn.net/20160425221258898?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+<meta property="og:image" content="http://img.blog.csdn.net/20160425221306945?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+<meta property="og:updated_time" content="2017-04-09T02:52:57.638Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="算法竞赛入门经典[紫书]习题笔记(第二章)">
-<meta name="twitter:description" content="紫书第二章习题代码及笔记。主要是想练习下c++的使用，这里纯粹作为记录，有错误欢迎指出，多加交流。
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798">
+<meta name="twitter:title" content="OPenCV--图片颜色空间缩减与遍历">
+<meta name="twitter:description" content="记录下遍历图片的以及缩减图片颜色空间的几种办法，主要是记录下关于位运算进行像素的按位操作。首先我们直观上看下图片的存储格式：
+
+[ ] 灰度图像-
+
+[ ] 彩色图像
+
+
+利用指针进行1234567891011121314151617181920212223242526272829303132333435363738394041void colorReducePtr(cv::Mat image,">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160425221258898?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 
 
 
@@ -129,13 +150,13 @@
 
 
 
-  <link rel="canonical" href="http://datahonor.com/2017/03/13/算法竞赛入门经典-紫书-习题笔记/"/>
+  <link rel="canonical" href="http://datahonor.com/2017/04/09/OPenCV-图片颜色空间缩减与遍历/"/>
 
 
 
 
 
-  <title> 算法竞赛入门经典[紫书]习题笔记(第二章) | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> OPenCV--图片颜色空间缩减与遍历 | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -283,7 +304,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/03/13/算法竞赛入门经典-紫书-习题笔记/">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/04/09/OPenCV-图片颜色空间缩减与遍历/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="不秩稚童">
@@ -307,7 +328,7 @@
             
             
               
-                算法竞赛入门经典[紫书]习题笔记(第二章)
+                OPenCV--图片颜色空间缩减与遍历
               
             
           </h1>
@@ -322,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-13T12:18:22+08:00">
-                2017-03-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-09T09:43:10+08:00">
+                2017-04-09
               </time>
             
 
@@ -363,8 +384,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/13/算法竞赛入门经典-紫书-习题笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/13/算法竞赛入门经典-紫书-习题笔记/" itemprop="commentCount"></span>
+                <a href="/2017/04/09/OPenCV-图片颜色空间缩减与遍历/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/04/09/OPenCV-图片颜色空间缩减与遍历/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -395,9 +416,27 @@
       
 
       
-        <p>紫书第二章习题代码及笔记。主要是想练习下c++的使用，这里纯粹作为记录，有错误欢迎指出，多加交流。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pwd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="comment">// 水仙花</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> a, b, c;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">100</span>; i&lt;=<span class="number">999</span>;i++)&#123;</div><div class="line">        a = i / <span class="number">100</span>;</div><div class="line">        b = (i % <span class="number">100</span>)/<span class="number">10</span>;</div><div class="line">        c = (i % <span class="number">100</span>)%<span class="number">10</span>;</div><div class="line">        <span class="keyword">if</span>((<span class="built_in">pow</span>(a,<span class="number">3</span>)+<span class="built_in">pow</span>(b,<span class="number">3</span>)+<span class="built_in">pow</span>(c,<span class="number">3</span>)) == i)</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, i);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 韩信点兵</span></div><div class="line"><span class="comment">/*</span></div><div class="line">int main()&#123;</div><div class="line">    int a, b, c, n=1;</div><div class="line">    while(scanf("%d %d %d", &amp;a, &amp;b, &amp;c) == 3)&#123;</div><div class="line">        int get = 0;</div><div class="line">        for(int i=10;i&lt;=100; i++ )&#123;</div><div class="line">            if((i%3==a)&amp;&amp;(i%5==b)&amp;&amp;(i%7==c))</div><div class="line">            &#123;</div><div class="line">                get = 1;</div><div class="line">                printf("Case %d: %d\n", n, i);</div><div class="line">                break;</div><div class="line">            &#125;</div><div class="line"></div><div class="line"></div><div class="line">        &#125;</div><div class="line">        if(get == 0) printf("Case %d: %s\n", n, "No answer");</div><div class="line">    n++;</div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line"></div><div class="line">*/</div><div class="line"></div><div class="line"><span class="comment">// 倒三角形</span></div><div class="line"><span class="comment">/*</span></div><div class="line">int main()&#123;</div><div class="line">    int n;</div><div class="line">    scanf("%d", &amp;n);</div><div class="line">    int a=n, b=0;  // a控制#的数量， 把控制前后空格的数量</div><div class="line">    do&#123;</div><div class="line">        for(int j=1;j&lt;=b; j++)</div><div class="line">            printf("%s", " ");</div><div class="line">        for(int i=1; i&lt;=2*a-1;i++ )</div><div class="line">        &#123;</div><div class="line">            printf("%s", "#");</div><div class="line">        &#125;</div><div class="line">        for(int j=1;j&lt;=b; j++)</div><div class="line">            printf("%s", " ");</div><div class="line"></div><div class="line">        a -= 1;</div><div class="line">        b++;</div><div class="line"></div><div class="line">        printf("\n");</div><div class="line"></div><div class="line"></div><div class="line">    &#125;while ((a&gt;=1)&amp;&amp;(a&lt;=20));</div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="comment">// 子序列的和</span></div><div class="line"><span class="comment">/*</span></div><div class="line">int main()&#123;</div><div class="line">    int n, m, num=0;</div><div class="line">    while ((scanf("%d %d", &amp;n, &amp;m) == 2)&amp;&amp;m&amp;&amp;n)&#123;</div><div class="line">        num += 1;</div><div class="line">        float r=0.0;</div><div class="line">        for(float i=n; i&lt;=m; i++)&#123;</div><div class="line">            r += 1 / (i*i);</div><div class="line">        &#125;</div><div class="line">        printf("Case %d: %.5f\n", num, r);</div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line"></div><div class="line">*/</div><div class="line"></div><div class="line"><span class="comment">// 分数化小数</span></div><div class="line"><span class="comment">// 偷懒~</span></div><div class="line"><span class="comment">/*</span></div><div class="line">int main()&#123;</div><div class="line">    int a, b ,c;</div><div class="line">    while (scanf("%d %d %d", &amp;a, &amp;b, &amp;c))&#123;</div><div class="line">        float r;</div><div class="line">        r = a/((float) b);</div><div class="line">        std::cout&lt;&lt;std::setprecision(c)&lt;&lt;std::fixed&lt;&lt;r&lt;&lt;"\n";</div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line">*/</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 排列</span></div><div class="line"><span class="comment">// 不会...</span></div><div class="line"></div><div class="line"><span class="comment">//思考题2</span></div><div class="line"><span class="comment">/*</span></div><div class="line">int main()&#123;</div><div class="line">    double i;</div><div class="line">//    freopen("output.txt", "w", stdout);</div><div class="line">    for(i=0; i != 10; i += 0.1)&#123;</div><div class="line">        printf("%.1f\n", i);</div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line">*/</div><div class="line"></div></pre></td></tr></table></figure>
-<p>最后的思考题，原因在与10.0属于float, 不等于10[int]，所以会一直输出打印的内容，但开始并未出现0.1,0.2,…等的递增的情况，debug发现没有问题，最后发现原因是输出太多内容，将上面的内容掩盖，通过写入文件后再查看，发现打印还是正常的。</p>
+        <p>记录下遍历图片的以及缩减图片颜色空间的几种办法，主要是记录下关于位运算进行像素的按位操作。<br>首先我们直观上看下图片的存储格式：</p>
+<ul>
+<li><p>[ ] 灰度图像<br>-<img src="http://img.blog.csdn.net/20160425221258898?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
+</li>
+<li><p>[ ] 彩色图像<br><img src="http://img.blog.csdn.net/20160425221306945?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
+</li>
+</ul>
+<h6 id="利用指针进行"><a href="#利用指针进行" class="headerlink" title="利用指针进行"></a>利用指针进行</h6><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">colorReducePtr</span><span class="params">(cv::Mat image, <span class="keyword">int</span> div=<span class="number">64</span>)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> nl = image.rows; <span class="comment">// number of lines</span></div><div class="line">    <span class="comment">// total number or element per ;ine</span></div><div class="line">    <span class="keyword">int</span> nc = image.cols * image.channels();</div><div class="line"></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;nl; j++)&#123;</div><div class="line">        <span class="comment">//get the address of row j</span></div><div class="line">        uchar* data = image.ptr&lt;uchar&gt;(j);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nc;i++)&#123;</div><div class="line">            <span class="comment">// process each pixel=======================</span></div><div class="line"></div><div class="line">            data[i] = data[i]/div*div + div/<span class="number">2</span>;</div><div class="line">            <span class="comment">// OR in this way</span></div><div class="line">            <span class="comment">//data[i] = (data[i]/div)*div + div/2;</span></div><div class="line"></div><div class="line">            <span class="comment">//end of pixel processing=====================</span></div><div class="line">        &#125;<span class="comment">//end of line</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 理解reduction核心算法,这里假设div为10.</span></div><div class="line"><span class="comment">// 去除‘余数’， 拉向中心</span></div><div class="line"><span class="comment">// 11  --&gt; data[i]/div*div + div/2 --&gt; 10 + 5 --&gt; 15</span></div><div class="line"><span class="comment">// 16  --&gt; data[i]/div*div + div/2 --&gt; 10 + 5 --&gt; 15</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    cv::Mat image = cv::imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/lake.png"</span>);</div><div class="line"></div><div class="line">    <span class="comment">// 使用Clone,保护原来图像不受损坏</span></div><div class="line">    cv::Mat imageClone = image.clone();</div><div class="line">    colorReducePtr(imageClone, <span class="number">64</span>);</div><div class="line">    cv::namedWindow(<span class="string">"Result"</span>);</div><div class="line">    cv::imshow(<span class="string">"Result"</span>, imageClone);</div><div class="line">    cv::waitKey(<span class="number">0</span>);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<h6 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h6><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">colorReduceBit</span><span class="params">(cv::Mat &amp;image, <span class="keyword">int</span> div=<span class="number">64</span>)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> nl = image.rows;</div><div class="line">    <span class="keyword">int</span> nc = image.cols*image.channels();</div><div class="line">    <span class="keyword">if</span>(image.isContinuous())&#123;</div><div class="line">        nc = nc*nl;</div><div class="line">        nl = <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> n = <span class="keyword">static_cast</span>&lt;<span class="keyword">int</span>&gt;(</div><div class="line">            <span class="built_in">log</span>(<span class="keyword">static_cast</span>&lt;<span class="keyword">double</span>&gt;(div))/<span class="built_in">log</span>(<span class="number">2.0</span>)+<span class="number">0.5</span>);</div><div class="line"></div><div class="line">    uchar mask = <span class="number">0xFF</span>&lt;&lt;n;</div><div class="line">    uchar div2 = div&gt;&gt;<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;nl;j++)&#123;</div><div class="line">        uchar* data = image.ptr&lt;uchar&gt;(j);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nc;i++)&#123;</div><div class="line">            *data &amp;= mask;   <span class="comment">//a &amp;= b; set a to a &amp; b</span></div><div class="line">            *data++ += div2;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    cv::Mat image = cv::imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/lake.png"</span>);</div><div class="line"></div><div class="line">    colorReduceBit(image);</div><div class="line">    cv::namedWindow(<span class="string">"Result"</span>);</div><div class="line">    cv::imshow(<span class="string">"Result"</span>, image);</div><div class="line">    cv::waitKey(<span class="number">0</span>);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>几点解释：</p>
+<blockquote>
+<p>0xFF&lt;&lt;n 是为左移运算，这里简单说就是1111 1111(0xFF的二进制表示)整体向左移动n个长度，右边空出部分用0补充。假设n=4,则结果为1111 0000</p>
+<p><em>data &amp;= mask等价于</em>data = (<em>data &amp; mask),即先进行按位和再赋值给</em>data, 例如说*data = 11001100,那么根据上面叙述，n=4时mask=1111 0000 ，那么取按位和之后得到，1100 0000</p>
+<p><em>data++ += div2;的运算等价于</em>data += div/2; data++[指针移动]，可以如下测试得到。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> a = <span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> * p = &amp;a;</div><div class="line"></div><div class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;p&lt;&lt;<span class="string">'\n'</span>;</div><div class="line">    *p++ += <span class="number">1</span>;</div><div class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;a&lt;&lt;<span class="string">'\n'</span>;</div><div class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;p;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<blockquote>
+<p>0x7ffe0d69780c<br>2<br>0x7ffe0d697810<br>可以看到，a的值恰好增加了1，且指针p的位置增加了4,即一个单位int的长度。</p>
+</blockquote>
+<h6 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h6><p><a href="http://www.lai18.com/content/10109307.html" target="_blank" rel="external">OpenCv学习笔记(六)</a><br><a href="https://en.wikipedia.org/wiki/Bitwise_operation#Bit_shifts" target="_blank" rel="external">Bitwise operation</a></p>
 
       
     </div>
@@ -423,7 +462,7 @@
           
             <a href="/tags/Cpp/" rel="tag"># Cpp</a>
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/OPenCV/" rel="tag"># OPenCV</a>
           
         </div>
       
@@ -436,8 +475,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/08/Ubuntu16-04LTS下安装Hadoop2-7-3/" rel="next" title="Ubuntu16.04LTS下安装Hadoop2.7.3">
-                <i class="fa fa-chevron-left"></i> Ubuntu16.04LTS下安装Hadoop2.7.3
+              <a href="/2017/04/06/Learning-Opencv3学习笔记/" rel="next" title="Learning Opencv3学习笔记">
+                <i class="fa fa-chevron-left"></i> Learning Opencv3学习笔记
               </a>
             
           </div>
@@ -445,10 +484,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/16/算法竞赛入门经典-紫书-习题笔记-第三章/" rel="prev" title="算法竞赛入门经典[紫书]习题笔记(第三章)">
-                算法竞赛入门经典[紫书]习题笔记(第三章) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -510,8 +545,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
@@ -598,6 +642,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#利用指针进行"><span class="nav-text">利用指针进行</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#位运算"><span class="nav-text">位运算</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -735,9 +795,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'http-datahonor-com';
-      var disqus_identifier = '2017/03/13/算法竞赛入门经典-紫书-习题笔记/';
+      var disqus_identifier = '2017/04/09/OPenCV-图片颜色空间缩减与遍历/';
 
-      var disqus_title = "算法竞赛入门经典[紫书]习题笔记(第二章)";
+      var disqus_title = "OPenCV--图片颜色空间缩减与遍历";
 
 
       function run_disqus_script(disqus_script) {
