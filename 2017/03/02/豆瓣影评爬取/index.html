@@ -273,9 +273,41 @@ Ubuntu16.04 64bitPycharmAnaconda3bs4
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -392,7 +424,7 @@ Ubuntu16.04 64bitPycharmAnaconda3bs4
 
           
             <span class="post-meta-divider">|</span>
-            <span class="page-pv">本文总阅读量
+            <span class="page-pv"><i class="fa fa-file-o"></i>本文总阅读量
             <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
             </span>
           
@@ -419,6 +451,13 @@ Ubuntu16.04 64bitPycharmAnaconda3bs4
 </blockquote>
 <h5 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h5><p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Spider/douban%20/1.png" alt=""></p>
 <h5 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">import</span> pymysql</div><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 获取一个评论列表页面的网页数据</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_data</span><span class="params">(url)</span>:</span></div><div class="line">    headers = &#123;<span class="string">'User-Agent'</span>: <span class="string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36"</span>&#125;</div><div class="line">    data = requests.get(url, headers=headers).text</div><div class="line">    <span class="keyword">return</span> data</div><div class="line"></div><div class="line"><span class="comment"># 获取页面中影评标题及链接</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse_data_bs</span><span class="params">(data)</span>:</span></div><div class="line">    title_data_d = &#123;&#125;</div><div class="line">    bsObj = BeautifulSoup(data, <span class="string">'lxml'</span>)</div><div class="line">    review_lists = bsObj.findAll(<span class="string">'div'</span>, &#123;<span class="string">'typeof'</span>:<span class="string">"v:Review"</span>&#125;)</div><div class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> review_lists:</div><div class="line">        title_data = item.find(<span class="string">'h3'</span>, &#123;<span class="string">'class'</span>:<span class="string">'title'</span>&#125;)</div><div class="line">        <span class="comment"># 这里多次使用replace可用正则表达式代替，这里省略，详情参考站内正则表达式python版的总结</span></div><div class="line">        title = title_data.get_text().replace(<span class="string">'\n'</span>, <span class="string">''</span>).replace(<span class="string">' '</span>, <span class="string">''</span>)</div><div class="line">        title_href = title_data.find(<span class="string">'a'</span>).get(<span class="string">'href'</span>)</div><div class="line">        title_data_d[title] = title_href</div><div class="line">    <span class="keyword">return</span> title_data_d</div><div class="line"></div><div class="line"><span class="comment"># 根据评论标题链接抓取评论内容</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_comment_data</span><span class="params">(comment_url)</span>:</span></div><div class="line">    comment_data = get_data(comment_url)</div><div class="line">    bsObj = BeautifulSoup(comment_data, <span class="string">'lxml'</span>)</div><div class="line">    <span class="comment"># print(bsObj)</span></div><div class="line">    <span class="comment"># author data</span></div><div class="line">    p_name = bsObj.find(<span class="string">'header'</span>, &#123;<span class="string">'class'</span>: <span class="string">'main-hd'</span>&#125;).find(<span class="string">'a'</span>).find(<span class="string">'span'</span>).get_text()</div><div class="line">    p_url = bsObj.find(<span class="string">'header'</span>, &#123;<span class="string">'class'</span>: <span class="string">'main-hd'</span>&#125;).find(<span class="string">'a'</span>).get(<span class="string">'href'</span>)</div><div class="line">    <span class="comment"># comment data</span></div><div class="line">    c_date = bsObj.find(<span class="string">'span'</span>, &#123;<span class="string">'class'</span>: <span class="string">'main-meta'</span>&#125;).get_text()</div><div class="line">    <span class="comment"># c_rank提取中发现查看源码发现与检查元素不符合</span></div><div class="line">    <span class="comment"># 有些用户未评分</span></div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        c_rank = bsObj.find(<span class="string">'span'</span>, &#123;<span class="string">'class'</span>: <span class="string">"main-title-hide"</span>&#125;).get_text()</div><div class="line">    <span class="keyword">except</span>:</div><div class="line">        c_rank = <span class="keyword">None</span></div><div class="line">    c_comment = bsObj.find(<span class="string">'div'</span>, &#123;<span class="string">'property'</span>: <span class="string">'v:description'</span>&#125;).get_text()</div><div class="line">    <span class="comment"># 有用，无用</span></div><div class="line">    useful = bsObj.find(<span class="string">'div'</span>, &#123;<span class="string">'class'</span>: <span class="string">'main-panel-useful'</span>&#125;).find_all(<span class="string">'button'</span>)</div><div class="line">    y_use = useful[<span class="number">0</span>].get_text().replace(<span class="string">'\n'</span>, <span class="string">''</span>).split(<span class="string">' '</span>)[<span class="number">5</span>]</div><div class="line">    n_use = useful[<span class="number">1</span>].get_text().replace(<span class="string">'\n'</span>, <span class="string">''</span>).split(<span class="string">' '</span>)[<span class="number">5</span>]</div><div class="line">    comment_data = [p_name, p_url, c_date, c_comment, c_rank, y_use, n_use]</div><div class="line"></div><div class="line">    <span class="keyword">return</span> comment_data</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_table</span><span class="params">()</span>:</span></div><div class="line">    db = pymysql.connect(<span class="string">"localhost"</span>, <span class="string">"root"</span>, <span class="string">"密码不给看"</span>, <span class="string">"USpiderData"</span>, charset=<span class="string">'utf8'</span>)</div><div class="line">    cursor = db.cursor()</div><div class="line">    cursor.execute(<span class="string">"DROP TABLE IF EXISTS DouBan"</span>)</div><div class="line">    <span class="comment"># p_name, p_url, c_date, c_data, c_rank, y_use, n_use</span></div><div class="line">    cursor.execute(<span class="string">"CREATE TABLE DouBan(p_name VARCHAR(20), p_url VARCHAR(100), "</span></div><div class="line">                   <span class="string">"c_date VARCHAR (20), c_comment VARCHAR (20000), c_rank VARCHAR (5), "</span></div><div class="line">                   <span class="string">"y_use VARCHAR (10), n_use VARCHAR (10));"</span>)  <span class="comment"># 创建表</span></div><div class="line">    db.commit()</div><div class="line">    db.close()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_to_mysql</span><span class="params">(cursor, db, commemt_data)</span>:</span></div><div class="line">    <span class="comment"># try:</span></div><div class="line">    sql = <span class="string">'INSERT INTO DouBan(p_name, p_url, c_date, c_comment, c_rank, y_use, n_use)VALUES(%s,%s,%s,%s,%s,%s,%s)'</span></div><div class="line">    <span class="comment"># cursor.execute(sql, (commemt_data[0], commemt_data[1], commemt_data[2], commemt_data[3], commemt_data[4], commemt_data[5], commemt_data[6]))</span></div><div class="line">    cursor.execute(sql, [commemt_data[i] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">7</span>)])</div><div class="line">    <span class="comment"># 提交事务</span></div><div class="line">    db.commit()</div><div class="line">    print(commemt_data[<span class="number">0</span>])</div><div class="line">    <span class="comment"># except:</span></div><div class="line">    <span class="comment">#     print('Save fail...')</span></div><div class="line">    <span class="comment">#     pass</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main_spider</span><span class="params">(list_url)</span>:</span></div><div class="line">    db = pymysql.connect(<span class="string">"localhost"</span>, <span class="string">"root"</span>, <span class="string">"密码不给看"</span>, <span class="string">"USpiderData"</span>, charset=<span class="string">'utf8'</span>)</div><div class="line">    cursor = db.cursor()</div><div class="line">    page_data = get_data(list_url)</div><div class="line">    <span class="comment"># https: // movie.douban.com/subject/26616436/reviews</span></div><div class="line">    titles_data = parse_data_bs(page_data)</div><div class="line">    <span class="comment"># print(titles_data)</span></div><div class="line">    <span class="keyword">for</span> comment_title, comment_url <span class="keyword">in</span> titles_data.items():</div><div class="line">        comment_data = get_comment_data(comment_url)</div><div class="line">        <span class="comment"># print(comment_data)</span></div><div class="line">        save_to_mysql(cursor, db, comment_data)</div><div class="line"></div><div class="line">    db.close()</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_all_list_urls</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">return</span> [<span class="string">'https://movie.douban.com/subject/1292052/reviews?start=%s'</span>%(v) <span class="keyword">for</span> v <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">4300</span>, <span class="number">20</span>)]</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</div><div class="line">    create_table()</div><div class="line">    list_urls = get_all_list_urls()</div><div class="line">    error_link = []</div><div class="line">    <span class="keyword">for</span> list_url <span class="keyword">in</span> list_urls:</div><div class="line">        <span class="keyword">try</span>:</div><div class="line">            main_spider(list_url)</div><div class="line">        <span class="keyword">except</span>:</div><div class="line">            error_link.append(list_url)</div><div class="line">            <span class="keyword">if</span> len(error_link) &gt; <span class="number">10</span>:</div><div class="line">                print(<span class="string">"ERROR!!!"</span>)</div><div class="line">                <span class="keyword">break</span></div><div class="line">            <span class="keyword">pass</span></div><div class="line">    print(<span class="string">'OK!'</span>)</div><div class="line"></div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
       
     </div>
 
@@ -676,11 +715,11 @@ Ubuntu16.04 64bitPycharmAnaconda3bs4
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+    <span class="site-uv"><i class="fa fa-user"></i>本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
   
 
   
-    <span class="site-pv">本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+    <span class="site-pv"><i class="fa fa-eye"></i>本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
   
   
 </div>
@@ -818,6 +857,130 @@ Ubuntu16.04 64bitPycharmAnaconda3bs4
 
   
   
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
 
   
   

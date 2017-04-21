@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="DATA HONOR">
 <meta property="og:description" content="自动开启编辑器为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.System: Ubuntu16.04 64bitEditor: Haroopad
 123456var spawn = require(&apos;child_process&apos;).spawn;// Hexo 3hexo.on(&apos;new&apos;, function(data)&amp;#123;  spawn">
-<meta property="og:updated_time" content="2017-04-04T14:22:02.769Z">
+<meta property="og:updated_time" content="2017-04-21T05:18:42.212Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="About Hexo">
 <meta name="twitter:description" content="自动开启编辑器为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.System: Ubuntu16.04 64bitEditor: Haroopad
@@ -256,9 +256,41 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -375,7 +407,7 @@
 
           
             <span class="post-meta-divider">|</span>
-            <span class="page-pv">本文总阅读量
+            <span class="page-pv"><i class="fa fa-file-o"></i>本文总阅读量
             <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
             </span>
           
@@ -399,6 +431,45 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> spawn = <span class="built_in">require</span>(<span class="string">'child_process'</span>).spawn;</div><div class="line"></div><div class="line"><span class="comment">// Hexo 3</span></div><div class="line">hexo.on(<span class="string">'new'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">  spawn(<span class="string">'haroopad'</span>, [data.path]);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <h6 id="迁移"><a href="#迁移" class="headerlink" title="迁移"></a>迁移</h6><p>之前的系统崩了，将完整的hexo文件备份，重装系统，将文件拷到电脑，安装nvm,配置node,记得版本不要最新的，官方推荐稳定版本即可。配置git,npm, 再hexo文件重新安装hexo，只进行一次安装命令即可[也就是不用hexo init这些初始化和配置的命令]</p>
 <h6 id="更换评论系统"><a href="#更换评论系统" class="headerlink" title="更换评论系统"></a>更换评论系统</h6><p>多说要崩，换Disqus, 但是要FQ才能加载出来，。对技术爱好者来说FQ是基本技能，所以还是选择了它。</p>
+<h6 id="文末增加版权信息"><a href="#文末增加版权信息" class="headerlink" title="文末增加版权信息"></a>文末增加版权信息</h6><p>参考<a href="http://www.vitah.net/posts/20f300cc/" target="_blank" rel="external">这里</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2017/02/25/About-Hexo/">About Hexo</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 不秩稚童 的个人博客">不秩稚童</a></p>
+  <p><span>发布时间:</span>2017年02月25日 - 11:02</p>
+  <p><span>最后更新:</span>2017年04月21日 - 13:04</p>
+  <p><span>原始链接:</span><a href="/2017/02/25/About-Hexo/" title="About Hexo">http://datahonor.com/2017/02/25/About-Hexo/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/02/25/About-Hexo/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+	clipboard.on('success', $(function(){
+	  $(".fa-clipboard").click(function(){
+		swal({   
+		  title: "",   
+		  text: '复制成功',   
+		  html: false,
+		  timer: 500,   
+		  showConfirmButton: false
+	    });
+	  });
+    }));  
+</script>
+
 
       
     </div>
@@ -618,7 +689,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#自动开启编辑器"><span class="nav-text">自动开启编辑器</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#迁移"><span class="nav-text">迁移</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#更换评论系统"><span class="nav-text">更换评论系统</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#自动开启编辑器"><span class="nav-text">自动开启编辑器</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#迁移"><span class="nav-text">迁移</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#更换评论系统"><span class="nav-text">更换评论系统</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#文末增加版权信息"><span class="nav-text">文末增加版权信息</span></a></li></ol></div>
             
 
           </div>
@@ -657,11 +728,11 @@
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+    <span class="site-uv"><i class="fa fa-user"></i>本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
   
 
   
-    <span class="site-pv">本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+    <span class="site-pv"><i class="fa fa-eye"></i>本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
   
   
 </div>
@@ -799,6 +870,130 @@
 
   
   
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
 
   
   

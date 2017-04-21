@@ -259,9 +259,41 @@ Income - Your Approximate Monthly Income (in Armenian Dram)Fav_Pub - Which is yo
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -378,7 +410,7 @@ Income - Your Approximate Monthly Income (in Armenian Dram)Fav_Pub - Which is yo
 
           
             <span class="post-meta-divider">|</span>
-            <span class="page-pv">本文总阅读量
+            <span class="page-pv"><i class="fa fa-file-o"></i>本文总阅读量
             <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
             </span>
           
@@ -403,6 +435,13 @@ Income - Your Approximate Monthly Income (in Armenian Dram)Fav_Pub - Which is yo
 <p>Income - Your Approximate Monthly Income (in Armenian Dram)<br>Fav_Pub - Which is your Favorite Pub?<br>WTS -Maximum willingness to spend at the pub<br>Freq - How often do you visit pubs?<br>Prim_Imp - Which feature is of primary importantance for you?<br>Sec_Imp - Which feature is of secondary importantance for you?<br>Stratum - From which regional stratum are you?<br>Lifestyle - What is your lifestyle?<br>Occasions- On which occasions do you go to pubs most of the time?</p>
 </blockquote>
 <p>源码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np <span class="comment"># linear algebra</span></div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd <span class="comment"># data processing, CSV file I/O (e.g. pd.read_csv)</span></div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</div><div class="line"></div><div class="line"><span class="comment"># machine learning</span></div><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing</div><div class="line"><span class="comment"># function to split the data for cross-validation</span></div><div class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</div><div class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</div><div class="line"><span class="keyword">from</span> sklearn.svm <span class="keyword">import</span> SVC, LinearSVC</div><div class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</div><div class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KNeighborsClassifier</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># EDA</span></div><div class="line">data = pd.read_csv(<span class="string">"/home/shen/PycharmProjects/MyPython/Kaggle/American Pubs/armenian_pubs.csv"</span> )</div><div class="line">data.head()</div><div class="line"></div><div class="line">data.info()</div><div class="line">print(<span class="string">'=============================\n'</span>, data.notnull().sum())</div><div class="line"></div><div class="line">columns = data.columns</div><div class="line"><span class="comment"># Notice that there are 'Age ', 'Gender ', 'Income ', not 'Age', 'Gender', 'Income'.</span></div><div class="line"><span class="comment"># In other words, we'd better remove the additional space.</span></div><div class="line">data.columns = [<span class="string">'Timestamp'</span>, <span class="string">'Age'</span>, <span class="string">'Gender'</span>, <span class="string">'Income'</span>, <span class="string">'Occupation'</span>, <span class="string">'Fav_Pub'</span>, <span class="string">'WTS'</span>, <span class="string">'Freq'</span>, <span class="string">'Prim_Imp'</span>, <span class="string">'Sec_Imp'</span>, <span class="string">'Stratum'</span>, <span class="string">'Lifestyle'</span>, <span class="string">'Occasions'</span>]</div><div class="line">columns = data.columns</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># Age</span></div><div class="line">sns.countplot(<span class="string">'Age'</span>,data=data)</div><div class="line"><span class="comment"># Or we can use matplotlib</span></div><div class="line"><span class="string">'''</span></div><div class="line">Agedata = data['Age']</div><div class="line">Agebins = list(range(Agedata.min(), Agedata.max()))</div><div class="line">plt.hist(Agedata, bins=Agebins)</div><div class="line">plt.title('Age')</div><div class="line">plt.show()</div><div class="line">'''</div><div class="line"></div><div class="line"><span class="comment"># Gender</span></div><div class="line">sns.countplot(<span class="string">'Gender'</span>,data=data)</div><div class="line">plt.show()</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># Income</span></div><div class="line">Incomedata = data[<span class="string">'Income'</span>]</div><div class="line">print(Incomedata.notnull().sum())</div><div class="line">print(Incomedata.describe())</div><div class="line">sns.boxplot(Incomedata)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># Notice that there are some outliers, let's remove them and plot them again for the detail</span></div><div class="line">Incomedata_cleaned = Incomedata[Incomedata &lt; <span class="number">1000000</span>]</div><div class="line">sns.boxplot(Incomedata_cleaned)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># The rest...yes, still countplot...I love it :)</span></div><div class="line">cols = [<span class="string">'Occupation'</span>, <span class="string">'Freq'</span>, <span class="string">'Prim_Imp'</span>, <span class="string">'Sec_Imp'</span>, <span class="string">'Stratum'</span>, <span class="string">'Lifestyle'</span>, <span class="string">'Occasions'</span>]</div><div class="line">fig = plt.figure(figsize=(<span class="number">12</span>,<span class="number">36</span>))</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(cols)):</div><div class="line">    fig.add_subplot(len(cols),<span class="number">1</span>, i+<span class="number">1</span>)</div><div class="line">    sns.countplot(cols[i], data=data)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># Let's try do some predict by training the data</span></div><div class="line"><span class="comment"># Try to transform str value to numeric value</span></div><div class="line"><span class="comment"># We'll use the method as fellow to do this job</span></div><div class="line">le = preprocessing.LabelEncoder()</div><div class="line">le.fit(data[<span class="string">'Occupation'</span>].unique())</div><div class="line">print(le.classes_)</div><div class="line">le.transform(data[<span class="string">'Occupation'</span>])</div><div class="line"></div><div class="line"></div><div class="line">numcols = [<span class="string">'Age'</span>, <span class="string">'Income'</span>, <span class="string">'WTS'</span>]</div><div class="line">strcols = [<span class="string">'Gender'</span>, <span class="string">'Occupation'</span>, <span class="string">'Prim_Imp'</span>, <span class="string">'Sec_Imp'</span>, <span class="string">'Stratum'</span>, <span class="string">'Lifestyle'</span>,<span class="string">'Occasions'</span>,<span class="string">'Freq'</span>]</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># numcols</span></div><div class="line"></div><div class="line"><span class="comment"># Classify the age</span></div><div class="line">Cdata = data.copy()</div><div class="line"></div><div class="line">Simplage = Cdata[<span class="string">'Age'</span>]</div><div class="line">fig.add_subplot(<span class="number">311</span>)</div><div class="line">sns.boxplot(Simplage)</div><div class="line">Simplage[Simplage &lt; <span class="number">18</span>] = <span class="number">0</span></div><div class="line">Simplage[(Simplage &gt;= <span class="number">18</span>) &amp; (Simplage &lt;<span class="number">23</span>)] = <span class="number">1</span></div><div class="line">Simplage[Simplage &gt;= <span class="number">23</span>] = <span class="number">2</span></div><div class="line">print(Simplage.head())</div><div class="line"></div><div class="line">fig = plt.figure(figsize=(<span class="number">12</span>,<span class="number">24</span>))</div><div class="line"><span class="comment"># Income</span></div><div class="line">Incomedata = Cdata[<span class="string">'Income'</span>]</div><div class="line"><span class="comment"># Many people are student with no income, so we use o to fill the missing value</span></div><div class="line">Simplincome = Incomedata.fillna(<span class="number">0.0</span>)</div><div class="line"><span class="comment">#print('==============\n', Simplincome.notnull().sum())</span></div><div class="line">print(Simplincome.describe())</div><div class="line">fig.add_subplot(<span class="number">312</span>)</div><div class="line">sns.boxplot(Simplincome)</div><div class="line">Simplincome[Simplincome &lt;= <span class="number">2000</span>] = <span class="number">0</span></div><div class="line">Simplincome[(<span class="number">2000</span> &lt; Simplincome) &amp; (Simplincome &lt;= <span class="number">4000</span>)] = <span class="number">1</span></div><div class="line">Simplincome[(<span class="number">4000</span> &lt; Simplincome) &amp; (Simplincome &lt;= <span class="number">6000</span>)] = <span class="number">2</span></div><div class="line">Simplincome[Simplincome &gt; <span class="number">8000</span>] = <span class="number">3</span></div><div class="line">print(Simplincome.head())</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># Classify the WTS</span></div><div class="line">Simplwts = Cdata[<span class="string">'WTS'</span>]</div><div class="line"><span class="comment">#print(Simplwts.notnull().sum())</span></div><div class="line"><span class="comment"># fill these missing values</span></div><div class="line">fig.add_subplot(<span class="number">313</span>)</div><div class="line">sns.boxplot(<span class="string">'WTS'</span>, data=Cdata)</div><div class="line"></div><div class="line">Simplwts = Simplwts.fillna(<span class="number">5000</span>)</div><div class="line"><span class="comment">#print(Simplwts.notnull().sum())</span></div><div class="line"><span class="comment">#print(Simplwts.describe())</span></div><div class="line"><span class="comment"># Classify</span></div><div class="line">Simplwts[Simplwts &lt;= <span class="number">2000</span>] = <span class="number">0</span></div><div class="line">Simplwts[(<span class="number">2000</span> &lt; Simplwts) &amp; (Simplwts &lt;= <span class="number">4000</span>)] = <span class="number">1</span></div><div class="line">Simplwts[(<span class="number">4000</span> &lt; Simplwts) &amp; (Simplwts &lt;= <span class="number">6000</span>)] = <span class="number">2</span></div><div class="line">Simplwts[Simplwts &gt; <span class="number">8000</span>] = <span class="number">3</span></div><div class="line"><span class="comment">#print(Simplwts.head())</span></div><div class="line"></div><div class="line">newdata = pd.concat([Simplage, Simplincome, Simplwts], axis=<span class="number">1</span>)</div><div class="line">print(newdata.head())</div><div class="line">print(newdata.notnull().sum())</div><div class="line"></div><div class="line"><span class="comment"># str cols</span></div><div class="line">print(Cdata.notnull().sum())</div><div class="line"></div><div class="line"><span class="comment"># fillna and label them</span></div><div class="line">ontodict = &#123;&#125;</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">gettrans</span><span class="params">(colname)</span>:</span></div><div class="line">    coldata = Cdata[colname]</div><div class="line">    coldata = coldata.fillna(coldata.mode()[<span class="number">0</span>])  <span class="comment"># the [0] looks like indispensable</span></div><div class="line">    le = preprocessing.LabelEncoder()</div><div class="line">    le.fit(coldata.unique())</div><div class="line">    <span class="comment">#print(colname, '--&gt;', le.classes_)</span></div><div class="line">    ontodict[colname] = le.classes_</div><div class="line">    newcoldata = le.transform(coldata)</div><div class="line">    newdata[colname] = newcoldata</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">for</span> colname <span class="keyword">in</span> strcols:</div><div class="line">    gettrans(colname)</div><div class="line"></div><div class="line">print(newdata.head())</div><div class="line">print(newdata.notnull().sum())</div><div class="line">print(ontodict)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># Let's make Freq as the value that can be predicted by other values</span></div><div class="line">x = newdata[[<span class="string">'Age'</span>, <span class="string">'Income'</span>, <span class="string">'WTS'</span>, <span class="string">'Gender'</span>, <span class="string">'Occupation'</span>, <span class="string">'Prim_Imp'</span>, <span class="string">'Sec_Imp'</span>,</div><div class="line">       <span class="string">'Stratum'</span>,<span class="string">'Lifestyle'</span>, <span class="string">'Occasions'</span>]]</div><div class="line">y = newdata[<span class="string">'Freq'</span>]</div><div class="line"></div><div class="line"><span class="comment"># split into train and test sets</span></div><div class="line">x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=<span class="number">0.2</span>)</div><div class="line"><span class="comment"># take a look at the shape of each of these</span></div><div class="line">print(x_train.shape)</div><div class="line">print(y_train.shape)</div><div class="line">print(x_test.shape)</div><div class="line">print(y_test.shape)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># predict</span></div><div class="line"></div><div class="line"><span class="comment"># Logistic Regression</span></div><div class="line">logreg = LogisticRegression()</div><div class="line">logreg.fit(x_train, y_train)</div><div class="line">Y_pred = logreg.predict(x_test)</div><div class="line">logreg.score(x_train, y_train)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># knn</span></div><div class="line">knn = KNeighborsClassifier(n_neighbors = <span class="number">3</span>)</div><div class="line">knn.fit(x_train, y_train)</div><div class="line">Y_pred = knn.predict(x_test)</div><div class="line">knn.score(x_train, y_train)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># SVM</span></div><div class="line">svc = SVC()</div><div class="line">svc.fit(x_train, y_train)</div><div class="line">Y_pred = svc.predict(x_test)</div><div class="line">svc.score(x_train, y_train)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># Random Forests</span></div><div class="line">random_forest = RandomForestClassifier(n_estimators=<span class="number">50</span>)</div><div class="line">random_forest.fit(x_train, y_train)</div><div class="line">Y_pred = random_forest.predict(x_test)</div><div class="line"></div><div class="line"></div><div class="line">random_forest.score(x_train, y_train)</div><div class="line">random_forest.score(x_test, y_test)</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
 
       
     </div>
@@ -638,11 +677,11 @@ Income - Your Approximate Monthly Income (in Armenian Dram)Fav_Pub - Which is yo
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+    <span class="site-uv"><i class="fa fa-user"></i>本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
   
 
   
-    <span class="site-pv">本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+    <span class="site-pv"><i class="fa fa-eye"></i>本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
   
   
 </div>
@@ -780,6 +819,130 @@ Income - Your Approximate Monthly Income (in Armenian Dram)Fav_Pub - Which is yo
 
   
   
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
 
   
   

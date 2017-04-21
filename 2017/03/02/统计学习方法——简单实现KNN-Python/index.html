@@ -281,9 +281,41 @@ KNN的基本知识详情参考WIKI, 这里我们暂时先研究分类方面的�
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -400,7 +432,7 @@ KNN的基本知识详情参考WIKI, 这里我们暂时先研究分类方面的�
 
           
             <span class="post-meta-divider">|</span>
-            <span class="page-pv">本文总阅读量
+            <span class="page-pv"><i class="fa fa-file-o"></i>本文总阅读量
             <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
             </span>
           
@@ -438,6 +470,13 @@ KNN的基本知识详情参考WIKI, 这里我们暂时先研究分类方面的�
 <h6 id="V3-0速度大幅提高"><a href="#V3-0速度大幅提高" class="headerlink" title="V3.0速度大幅提高"></a>V3.0速度大幅提高</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> *</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># classify using KNN</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">KNNClassify</span><span class="params">(newInput, dataSet, labels, k)</span>:</span></div><div class="line">    numSamples = dataSet.shape[<span class="number">0</span>]  <span class="comment"># row number</span></div><div class="line">    <span class="comment"># step1:calculate Euclidean distance</span></div><div class="line">    <span class="comment"># tile(A, reps):Constract an array by repeating A reps times</span></div><div class="line">    diff = tile(newInput, (numSamples, <span class="number">1</span>)) - dataSet</div><div class="line">    squreDiff = diff ** <span class="number">2</span></div><div class="line">    squreDist = sum(squreDiff, axis=<span class="number">1</span>)  <span class="comment"># sum if performed by row</span></div><div class="line">    distance = squreDist ** <span class="number">0.5</span></div><div class="line"></div><div class="line">    <span class="comment"># step2:sort the distance</span></div><div class="line">    <span class="comment"># argsort() returns the indices that would sort an array in a ascending order</span></div><div class="line">    sortedDistIndices = argsort(distance)</div><div class="line"></div><div class="line">    classCount = &#123;&#125;</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(k):</div><div class="line">        <span class="comment"># choose the min k distance</span></div><div class="line">        voteLabel = labels[sortedDistIndices[i]]</div><div class="line"></div><div class="line">        <span class="comment"># step4:count the times labels occur</span></div><div class="line">        <span class="comment"># when the key voteLabel is not in dictionary classCount,</span></div><div class="line">        <span class="comment"># get() will return 0</span></div><div class="line">        classCount[voteLabel] = classCount.get(voteLabel, <span class="number">0</span>) + <span class="number">1</span></div><div class="line">    <span class="comment"># step5:the max vote class will return</span></div><div class="line">    maxCount = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> k, v <span class="keyword">in</span> classCount.items():</div><div class="line">        <span class="keyword">if</span> v &gt; maxCount:</div><div class="line">            maxCount = v</div><div class="line">            maxIndex = k</div><div class="line"></div><div class="line">    <span class="keyword">return</span> maxIndex</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># convert image to vector</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">img2vector</span><span class="params">(filename)</span>:</span></div><div class="line">    rows = <span class="number">32</span></div><div class="line">    cols = <span class="number">32</span></div><div class="line">    imgVector = zeros((<span class="number">1</span>, rows * cols))</div><div class="line">    fileIn = open(filename)</div><div class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> range(rows):</div><div class="line">        lineStr = fileIn.readline()</div><div class="line">        <span class="keyword">for</span> col <span class="keyword">in</span> range(cols):</div><div class="line">            imgVector[<span class="number">0</span>, row * <span class="number">32</span> + col] = int(lineStr[col])</div><div class="line"></div><div class="line">    <span class="keyword">return</span> imgVector</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># load dataSet</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">loadDataSet</span><span class="params">()</span>:</span></div><div class="line">    <span class="comment">## step 1: Getting training set</span></div><div class="line">    print(<span class="string">"---Getting training set..."</span>)</div><div class="line">    dataSetDir = <span class="string">'/home/shen/PycharmProjects/MyPython/统计学习方法/KNN/digits/'</span></div><div class="line">    trainingFileList = os.listdir(dataSetDir + <span class="string">'trainingDigits'</span>)  <span class="comment"># load the training set</span></div><div class="line">    numSamples = len(trainingFileList)</div><div class="line"></div><div class="line">    train_x = zeros((numSamples, <span class="number">1024</span>))</div><div class="line">    train_y = []</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(numSamples):</div><div class="line">        filename = trainingFileList[i]</div><div class="line"></div><div class="line">        <span class="comment"># get train_x</span></div><div class="line">        train_x[i, :] = img2vector(dataSetDir + <span class="string">'trainingDigits/%s'</span> % filename)</div><div class="line"></div><div class="line">        <span class="comment"># get label from file name such as "1_18.txt"</span></div><div class="line">        label = int(filename.split(<span class="string">'_'</span>)[<span class="number">0</span>])  <span class="comment"># return 1</span></div><div class="line">        train_y.append(label)</div><div class="line"></div><div class="line">        <span class="comment">## step 2: Getting testing set</span></div><div class="line">    print(<span class="string">"---Getting testing set..."</span>)</div><div class="line">    testingFileList = os.listdir(dataSetDir + <span class="string">'testDigits'</span>)  <span class="comment"># load the testing set</span></div><div class="line">    numSamples = len(testingFileList)</div><div class="line">    test_x = zeros((numSamples, <span class="number">1024</span>))</div><div class="line">    test_y = []</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(numSamples):</div><div class="line">        filename = testingFileList[i]</div><div class="line"></div><div class="line">        <span class="comment"># get train_x</span></div><div class="line">        test_x[i, :] = img2vector(dataSetDir + <span class="string">'testDigits/%s'</span> % filename)</div><div class="line"></div><div class="line">        <span class="comment"># get label from file name such as "1_18.txt"</span></div><div class="line">        label = int(filename.split(<span class="string">'_'</span>)[<span class="number">0</span>])  <span class="comment"># return 1</span></div><div class="line">        test_y.append(label)</div><div class="line"></div><div class="line">    <span class="keyword">return</span> train_x, train_y, test_x, test_y</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># test hand writing class</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">testHandWritingClass</span><span class="params">()</span>:</span></div><div class="line">    <span class="comment">## step 1: load data</span></div><div class="line">    print(<span class="string">"step 1: load data..."</span>)</div><div class="line">    train_x, train_y, test_x, test_y = loadDataSet()</div><div class="line"></div><div class="line">    <span class="comment">## step 2: training...</span></div><div class="line">    print(<span class="string">"step 2: training..."</span>)</div><div class="line">    <span class="keyword">pass</span></div><div class="line"></div><div class="line">    <span class="comment">## step 3: testing</span></div><div class="line">    print(<span class="string">"step 3: testing..."</span>)</div><div class="line">    numTestSamples = test_x.shape[<span class="number">0</span>]</div><div class="line">    matchCount = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(numTestSamples):</div><div class="line">        predict = KNNClassify(test_x[i], train_x, train_y, <span class="number">3</span>)</div><div class="line">        <span class="keyword">if</span> predict == test_y[i]:</div><div class="line">            matchCount += <span class="number">1</span></div><div class="line">    accuracy = float(matchCount) / numTestSamples</div><div class="line"></div><div class="line">    <span class="comment">## step 4: show the result</span></div><div class="line">    print(<span class="string">"step 4: show the result..."</span>)</div><div class="line">    print(<span class="string">'The classify accuracy is: %.2f%%'</span> % (accuracy * <span class="number">100</span>))</div><div class="line"></div><div class="line"></div><div class="line">testHandWritingClass()</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
 <p>输出：<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/ch3/6.png" alt=""></p>
 <h5 id="要改进学习的地方"><a href="#要改进学习的地方" class="headerlink" title="要改进学习的地方"></a>要改进学习的地方</h5><p>最后参考别人的代码快，感觉主要问题在numpy的矩阵运算上，这个之后要深入研究下，毕竟代码运行速度是极为重要的。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
 
       
     </div>
@@ -704,11 +743,11 @@ KNN的基本知识详情参考WIKI, 这里我们暂时先研究分类方面的�
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+    <span class="site-uv"><i class="fa fa-user"></i>本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
   
 
   
-    <span class="site-pv">本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+    <span class="site-pv"><i class="fa fa-eye"></i>本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
   
   
 </div>
@@ -846,6 +885,130 @@ KNN的基本知识详情参考WIKI, 这里我们暂时先研究分类方面的�
 
   
   
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
 
   
   

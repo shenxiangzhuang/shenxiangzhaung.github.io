@@ -278,9 +278,41 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -397,7 +429,7 @@
 
           
             <span class="post-meta-divider">|</span>
-            <span class="page-pv">本文总阅读量
+            <span class="page-pv"><i class="fa fa-file-o"></i>本文总阅读量
             <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
             </span>
           
@@ -436,6 +468,13 @@
 <p>第一次补充：[尝试放大局部图像找到所谓的“之”字形失败]<br>之前未能实现wiki“之”字形震荡, 就想到可能是点过于密集导致微小的弯折被掩盖，于是进行局部放大图像的尝试。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">#!/usr/bin/env python3</span></div><div class="line"><span class="comment"># encoding: utf-8</span></div><div class="line"></div><div class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">from</span> mpl_toolkits.mplot3d <span class="keyword">import</span> Axes3D</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line"><span class="comment"># 递归实现逐次求梯度，这里为了充分迭代，修改递归次数限制</span></div><div class="line">sys.setrecursionlimit(<span class="number">2000</span>)</div><div class="line"></div><div class="line"><span class="comment"># 计算Rosenbrock函數的值</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(X, Y)</span>:</span></div><div class="line">    <span class="keyword">return</span> (<span class="number">1</span> - X) ** <span class="number">2</span> + <span class="number">100</span> * ((Y - X ** <span class="number">2</span>) ** <span class="number">2</span>)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">step_gradient</span><span class="params">(pre, learningRate=<span class="number">0.0045</span>)</span>:</span>  <span class="comment">#0.0025</span></div><div class="line">    scatter.append(pre)</div><div class="line">    x = pre[<span class="number">0</span>]</div><div class="line">    y = pre[<span class="number">1</span>]</div><div class="line">    x_gradient = <span class="number">2</span>*(x<span class="number">-1</span>)+<span class="number">400</span>*x*(x**<span class="number">2</span>-y)</div><div class="line">    y_gradient = <span class="number">200</span>*(y-x**<span class="number">2</span>)</div><div class="line">    step_x = learningRate * x_gradient</div><div class="line">    step_y = learningRate * y_gradient</div><div class="line">    steps = [step_x, step_y]</div><div class="line">    now = [pre[<span class="number">0</span>] - steps[<span class="number">0</span>], pre[<span class="number">1</span>] - steps[<span class="number">1</span>]]</div><div class="line">    <span class="comment"># 将新的点存储到scatter列表里面去</span></div><div class="line">    z = func(now[<span class="number">0</span>], now[<span class="number">1</span>])</div><div class="line">    <span class="comment"># print(z)</span></div><div class="line">    z_l.append(z)</div><div class="line">    <span class="keyword">try</span>:</div><div class="line">        step_gradient(now)</div><div class="line">    <span class="keyword">except</span>:</div><div class="line">        <span class="keyword">pass</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</div><div class="line"></div><div class="line">    fig = plt.figure(figsize=(<span class="number">16</span>, <span class="number">8</span>), dpi=<span class="number">98</span>)</div><div class="line">    p1 = plt.subplot(<span class="number">121</span>, aspect=<span class="number">1.8</span> / <span class="number">1.3</span>)</div><div class="line">    p2 = plt.subplot(<span class="number">122</span>, aspect=<span class="number">0.06</span> / <span class="number">0.001</span>)</div><div class="line"></div><div class="line">    <span class="comment"># 随机度下降起始点</span></div><div class="line">    point = (<span class="number">-0.5</span>, <span class="number">0.5</span>)</div><div class="line">    scatter = []</div><div class="line">    z_l = []</div><div class="line">    scatter.append(point)</div><div class="line">    step_gradient(point)</div><div class="line">    print(<span class="string">'Total times'</span>, len(scatter))</div><div class="line">    print(<span class="string">"Min_z--&gt;"</span>, min(z_l))</div><div class="line">    p1.plot([point[<span class="number">0</span>] <span class="keyword">for</span> point <span class="keyword">in</span> scatter], [point[<span class="number">1</span>] <span class="keyword">for</span> point <span class="keyword">in</span> scatter], <span class="string">'r'</span>)</div><div class="line"></div><div class="line">    p2.plot([point[<span class="number">0</span>] <span class="keyword">for</span> point <span class="keyword">in</span> scatter], [point[<span class="number">1</span>] <span class="keyword">for</span> point <span class="keyword">in</span> scatter], <span class="string">'r'</span>)</div><div class="line">    p2.axis([<span class="number">-0.02</span>, <span class="number">0.04</span>, <span class="number">-0.0005</span>, <span class="number">0.0005</span>])</div><div class="line"></div><div class="line">    X = np.arange(<span class="number">-0.8</span>, <span class="number">1</span>, <span class="number">0.01</span>)</div><div class="line">    Y = np.arange(<span class="number">-0.2</span>, <span class="number">1.1</span>, <span class="number">0.025</span>)</div><div class="line">    X, Y = np.meshgrid(X, Y)</div><div class="line">    Z = func(X, Y)</div><div class="line"></div><div class="line">    CS = p1.contour(X, Y, Z, <span class="number">100</span>)</div><div class="line">    manual_locations = [(i, i+<span class="number">0.02</span>) <span class="keyword">for</span> i <span class="keyword">in</span> np.linspace(<span class="number">-0.2</span>, <span class="number">0.3</span>, <span class="number">10</span>)]</div><div class="line">    manual_locations.append((<span class="number">1</span>,<span class="number">1</span>))</div><div class="line">    p1.clabel(CS, inline=<span class="number">1</span>, fontsize=<span class="number">8</span>, manual=manual_locations)</div><div class="line"></div><div class="line">    plt.show()</div><div class="line"></div></pre></td></tr></table></figure>
 <p>得到结果如下[显然实验失败了:-)]<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/ML/gradient/15.png" alt=""></p>
+
+      
+    </div>
+
+    <div>
+      
+        
 
       
     </div>
@@ -696,11 +735,11 @@
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+    <span class="site-uv"><i class="fa fa-user"></i>本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
   
 
   
-    <span class="site-pv">本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+    <span class="site-pv"><i class="fa fa-eye"></i>本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
   
   
 </div>
@@ -838,6 +877,130 @@
 
   
   
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
 
   
   
