@@ -47,27 +47,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[test]]></title>
-      <url>/2017/04/24/test/</url>
-      <content type="html"><![CDATA[<p>This is a test.</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Test </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Test </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Const in Cpp]]></title>
       <url>/2017/04/09/Const-in-Cpp/</url>
       <content type="html"><![CDATA[<p>关于const在函数声明里的应用。const放在函数前与后的区别。<br>先看下<a href="http://www.cplusplus.com/forum/general/12087/" target="_blank" rel="external">cplusplus</a>的一个问答：</p>
