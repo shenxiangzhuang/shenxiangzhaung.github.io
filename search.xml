@@ -3,6 +3,49 @@
   
     
     <entry>
+      <title><![CDATA[public, protected and private]]></title>
+      <url>/2017/04/25/public-protected-and-private/</url>
+      <content type="html"><![CDATA[<p>关于c++类变量的属性：private, protected, private</p>
+<h5 id="访问范围"><a href="#访问范围" class="headerlink" title="访问范围"></a>访问范围</h5><ul>
+<li>[ ] private</li>
+</ul>
+<blockquote>
+<p>只能由该类的函数和其友元函数访问<br>该类的对象不能访问</p>
+</blockquote>
+<ul>
+<li>[ ] proteected</li>
+</ul>
+<blockquote>
+<p>可以被，该类的函数，子类的函数， 友元函数访问<br>不能被类的对象访问</p>
+</blockquote>
+<ul>
+<li>[ ] public</li>
+</ul>
+<blockquote>
+<p>可以被该类的函数，子类的函数， 友元函数访问<br>也可以被类的对象访问</p>
+</blockquote>
+<h5 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h5><p>子类与父类的关系：</p>
+<p><img src="https://i.stack.imgur.com/W6CJ3.jpg" alt=""></p>
+<h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><p><a href="http://stackoverflow.com/questions/860339/difference-between-private-public-and-protected-inheritance" target="_blank" rel="external">stackoverflow</a></p>
+<p><a href="http://cnmtjp.blog.51cto.com/204390/36548/" target="_blank" rel="external"> C++ 类访问控制</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Cpp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Doubly Linked Lists]]></title>
       <url>/2017/04/25/Doubly-Linked-Lists/</url>
       <content type="html"><![CDATA[<h5 id="初识"><a href="#初识" class="headerlink" title="初识"></a>初识</h5><p>双向链表原理和单链表时一样的，也是由节点组成，每个节点包含要存储的数据信息和前后节点[单链表只有后面节点的信息]的位置信息，这些节点串连，形成一个链表。</p>
