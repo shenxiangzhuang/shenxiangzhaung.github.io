@@ -4,6 +4,50 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/03/02/Ubuntu%E5%91%BD%E4%BB%A4%E7%A7%AF%E7%B4%AF/</loc>
+    <lastmod>2017-04-25T06:12:01.609Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu使用</title>
+        <pubTime>2017-03-02T09:03:54.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://datahonor.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/03/02/Ubuntu%E6%90%AD%E5%BB%BASS/</loc>
+    <lastmod>2017-04-25T06:11:55.357Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu搭建SS</title>
+        <pubTime>2017-03-02T08:57:56.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://datahonor.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/04/25/Doubly-Linked-Lists/</loc>
     <lastmod>2017-04-25T06:06:15.314Z</lastmod>
     <data>
@@ -63,26 +107,6 @@
            
              
               <breadCrumb title="Hexo" url="http://datahonor.com/categories/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/03/02/Ubuntu%E5%91%BD%E4%BB%A4%E7%A7%AF%E7%B4%AF/</loc>
-    <lastmod>2017-04-22T10:26:51.349Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu使用</title>
-        <pubTime>2017-03-02T09:03:54.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="Ubuntu" url="http://datahonor.com/categories/Ubuntu/"/>
           
         </display>
     </data>
@@ -472,11 +496,11 @@
         
         <tag>Python</tag>
          
+        <tag>Algorithm</tag>
+         
         <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
-         
-        <tag>Algorithm</tag>
          
         <tag>统计学习方法</tag>
          
@@ -544,11 +568,11 @@
         
         <tag>Python</tag>
          
+        <tag>Algorithm</tag>
+         
         <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
-         
-        <tag>Algorithm</tag>
          
         <tag>统计学习方法</tag>
          
@@ -574,11 +598,11 @@
         
         <tag>Python</tag>
          
+        <tag>Algorithm</tag>
+         
         <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
-         
-        <tag>Algorithm</tag>
          
         <tag>统计学习方法</tag>
          
@@ -626,11 +650,11 @@
         
         <tag>Python</tag>
          
+        <tag>Algorithm</tag>
+         
         <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
-         
-        <tag>Algorithm</tag>
          
         <tag>统计学习方法</tag>
          
@@ -656,9 +680,9 @@
         
         <tag>Python</tag>
          
-        <tag>Clustering</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Clustering</tag>
          
         <tag>统计学习方法</tag>
          
@@ -706,11 +730,11 @@
         
         <tag>Python</tag>
          
+        <tag>Algorithm</tag>
+         
         <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
-         
-        <tag>Algorithm</tag>
          
         <tag>统计学习方法</tag>
          
@@ -720,26 +744,6 @@
            
              
               <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/03/02/Ubuntu%E6%90%AD%E5%BB%BASS/</loc>
-    <lastmod>2017-03-02T09:02:05.120Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu搭建SS</title>
-        <pubTime>2017-03-02T08:57:56.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="Ubuntu" url="http://datahonor.com/categories/Ubuntu/"/>
           
         </display>
     </data>
@@ -994,9 +998,9 @@
         
         <tag>Python</tag>
          
-        <tag>Clustering</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Clustering</tag>
          
         <tag>统计学习方法</tag>
          
