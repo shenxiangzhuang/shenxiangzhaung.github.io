@@ -1,0 +1,1067 @@
+<!doctype html>
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Cpp,DataStructure," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="初识双向链表原理和单链表时一样的，也是由节点组成，每个节点包含要存储的数据信息和前后节点[单链表只有后面节点的信息]的位置信息，这些节点串连，形成一个链表。
+实现doublyLLst.h12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Doubly Linked Lists">
+<meta property="og:url" content="http://datahonor.com/2017/04/25/Doubly-Linked-Lists/index.html">
+<meta property="og:site_name" content="DATA HONOR">
+<meta property="og:description" content="初识双向链表原理和单链表时一样的，也是由节点组成，每个节点包含要存储的数据信息和前后节点[单链表只有后面节点的信息]的位置信息，这些节点串连，形成一个链表。
+实现doublyLLst.h12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758">
+<meta property="og:updated_time" content="2017-04-25T06:06:15.314Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Doubly Linked Lists">
+<meta name="twitter:description" content="初识双向链表原理和单链表时一样的，也是由节点组成，每个节点包含要存储的数据信息和前后节点[单链表只有后面节点的信息]的位置信息，这些节点串连，形成一个链表。
+实现doublyLLst.h12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '不秩稚童'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://datahonor.com/2017/04/25/Doubly-Linked-Lists/"/>
+
+
+
+
+
+  <title> Doubly Linked Lists | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-92663335-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cbfd16620150a28ce4061f717038b4de";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">DATA HONOR</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Never say never.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/04/25/Doubly-Linked-Lists/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="不秩稚童">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="DATA HONOR">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Doubly Linked Lists
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-25T13:53:46+08:00">
+                2017-04-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Cpp/" itemprop="url" rel="index">
+                    <span itemprop="name">Cpp</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/25/Doubly-Linked-Lists/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/04/25/Doubly-Linked-Lists/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h5 id="初识"><a href="#初识" class="headerlink" title="初识"></a>初识</h5><p>双向链表原理和单链表时一样的，也是由节点组成，每个节点包含要存储的数据信息和前后节点[单链表只有后面节点的信息]的位置信息，这些节点串连，形成一个链表。</p>
+<h5 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h5><h6 id="doublyLLst-h"><a href="#doublyLLst-h" class="headerlink" title="doublyLLst.h"></a>doublyLLst.h</h6><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">// Created by shensir on 17-4-25.</span></div><div class="line"><span class="comment">//</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> CPPPROJECTS_DOUBLYLLST_H</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> CPPPROJECTS_DOUBLYLLST_H</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div><div class="line"><span class="keyword">class</span> Node&#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    T info;</div><div class="line">    Node* next, *prev;</div><div class="line"></div><div class="line">    Node()&#123;</div><div class="line">        next = prev = <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    Node(<span class="keyword">const</span> T&amp; el ,Node* n = <span class="number">0</span>, Node* p = <span class="number">0</span>)&#123;</div><div class="line">        info = el; next = n; prev = p;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div><div class="line"><span class="keyword">class</span> DoublyLinkedList&#123;</div><div class="line"></div><div class="line"><span class="keyword">protected</span>:</div><div class="line">    Node&lt;T&gt; *head, *tail;</div><div class="line"></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    DoublyLinkedList()&#123;</div><div class="line">        head = tail = <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">addToDLLTail</span><span class="params">(<span class="keyword">const</span> T&amp;)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">addToDLLHead</span><span class="params">(<span class="keyword">const</span> T&amp;)</span></span>;</div><div class="line">    <span class="function">T <span class="title">deleteFromDLLTail</span><span class="params">()</span></span>;</div><div class="line">    <span class="function">T <span class="title">deleteFromDLLHead</span><span class="params">()</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">deleteNodeFromEl</span><span class="params">(T el)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">deleteNodeFromPs</span><span class="params">(<span class="keyword">int</span> pos)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">addToDLList</span><span class="params">(<span class="keyword">const</span> T&amp; el, <span class="keyword">int</span> pos)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isInList</span><span class="params">(T el)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">printLinkedLists</span><span class="params">()</span></span>;</div><div class="line"></div><div class="line"></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div><div class="line"><span class="keyword">void</span> DoublyLinkedList&lt;T&gt;::addToDLLTail(<span class="keyword">const</span> T &amp;el ) &#123;</div><div class="line">    <span class="keyword">if</span>(tail != <span class="number">0</span>)&#123;</div><div class="line">        tail = <span class="keyword">new</span> Node&lt;T&gt;(el, <span class="number">0</span>, tail);</div><div class="line">        tail-&gt;prev-&gt;next = tail;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> head = tail = <span class="keyword">new</span> Node&lt;T&gt;(el);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div><div class="line"><span class="keyword">void</span> DoublyLinkedList&lt;T&gt;::addToDLLHead(<span class="keyword">const</span> T &amp;el ) &#123;</div><div class="line">    <span class="keyword">if</span>(head != <span class="number">0</span>)&#123;</div><div class="line">        head = <span class="keyword">new</span> Node&lt;T&gt;(el, head, <span class="number">0</span>);</div><div class="line">        head-&gt;next-&gt;prev = head;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> head = tail = <span class="keyword">new</span> Node&lt;T&gt;(el);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div><div class="line">T DoublyLinkedList&lt;T&gt;::deleteFromDLLHead() &#123;</div><div class="line">    T el = head-&gt;info;</div><div class="line">    <span class="keyword">if</span>(head == tail)&#123; <span class="comment">// if only one node in the list</span></div><div class="line">        <span class="keyword">delete</span> head;</div><div class="line">        head = tail =<span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span>&#123; <span class="comment">// if more than one node in the list</span></div><div class="line">        head = head-&gt;next;  <span class="comment">// 先将head后移</span></div><div class="line">        <span class="keyword">delete</span> head-&gt;prev;  <span class="comment">// 删除旧head</span></div><div class="line">        head-&gt;prev = <span class="number">0</span>;  <span class="comment">// 新head's prev 设置为0</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> el;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div><div class="line">T DoublyLinkedList&lt;T&gt;::deleteFromDLLTail() &#123;</div><div class="line">    T el = tail-&gt;info;</div><div class="line">    <span class="keyword">if</span>(head == tail)&#123; <span class="comment">// if only one node in the list</span></div><div class="line">        <span class="keyword">delete</span> head;</div><div class="line">        head = tail =<span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span>&#123; <span class="comment">// if more than one node in the list</span></div><div class="line">        tail = tail-&gt;prev;</div><div class="line">        <span class="keyword">delete</span> tail-&gt;next;</div><div class="line">        tail-&gt;next = <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> el;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div><div class="line"><span class="keyword">void</span> DoublyLinkedList&lt;T&gt;::deleteNodeFromEl(T el) &#123;</div><div class="line">    <span class="keyword">if</span>(head != <span class="number">0</span>)&#123;</div><div class="line">        <span class="keyword">if</span>(el == head-&gt;info &amp;&amp; head==tail)&#123;</div><div class="line">            <span class="keyword">delete</span> head;</div><div class="line">            head = tail = <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(el == head-&gt;info)&#123;</div><div class="line">            deleteFromDLLHead();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            Node&lt;T&gt;* tmp, *pred;</div><div class="line">            <span class="keyword">for</span>(pred = head, tmp = head-&gt;next; tmp!=<span class="number">0</span> &amp;&amp; !(tmp-&gt;info == el);</div><div class="line">                pred = pred-&gt;next, tmp = tmp-&gt;next);  <span class="comment">// and a non-head node is deleted</span></div><div class="line">            <span class="keyword">if</span>(tmp != <span class="number">0</span>)&#123;</div><div class="line">                pred-&gt;next =tmp-&gt;next;</div><div class="line">                tmp-&gt;next-&gt;prev = pred;</div><div class="line">                <span class="keyword">delete</span> tmp;</div><div class="line"></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div><div class="line"><span class="keyword">void</span> DoublyLinkedList&lt;T&gt;::deleteNodeFromPs(<span class="keyword">int</span> pos) &#123;</div><div class="line">    <span class="keyword">if</span>(pos == <span class="number">1</span>)</div><div class="line">        deleteFromDLLHead();</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(pos == <span class="number">-1</span>)</div><div class="line">        deleteFromDLLTail();</div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">        Node&lt;T&gt; *tmp = head-&gt;next;</div><div class="line">        Node&lt;T&gt; *pred = head;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i &lt; pos - <span class="number">2</span>;</div><div class="line">            i++, pred = pred-&gt;next, tmp = tmp-&gt;next);</div><div class="line"></div><div class="line">        pred-&gt;next = tmp-&gt;next;</div><div class="line">        <span class="keyword">if</span>(tmp-&gt;next != <span class="number">0</span>)  <span class="comment">// 如果删除的不是最后一个节点，那么要与前面的节点连接[只在双向链表有]</span></div><div class="line">            tmp-&gt;next-&gt;prev = pred;</div><div class="line"></div><div class="line">        <span class="keyword">delete</span> tmp;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div><div class="line"><span class="keyword">void</span> DoublyLinkedList&lt;T&gt;::addToDLList(<span class="keyword">const</span> T&amp;el, <span class="keyword">int</span> pos) &#123;</div><div class="line">    <span class="keyword">if</span>(pos == <span class="number">1</span>)</div><div class="line">        addToDLLHead(el);</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(pos == <span class="number">-1</span>)</div><div class="line">        addToDLLTail(el);</div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">        Node&lt;T&gt; *tmp = head-&gt;next;</div><div class="line">        Node&lt;T&gt; *pred = head;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i &lt; pos - <span class="number">2</span>;</div><div class="line">            i++, pred = pred-&gt;next, tmp = tmp-&gt;next);</div><div class="line"></div><div class="line">        Node&lt;T&gt;* psNode = <span class="keyword">new</span> Node&lt;T&gt;(el, tmp, pred);</div><div class="line">        tmp-&gt;prev = psNode;</div><div class="line">        pred-&gt;next = psNode;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div><div class="line"><span class="keyword">bool</span> DoublyLinkedList&lt;T&gt;::isInList(T el) &#123;</div><div class="line">    Node&lt;T&gt;* tmp;</div><div class="line">    <span class="keyword">for</span>(tmp=head; tmp != <span class="number">0</span> &amp;&amp; el != tmp-&gt;info; tmp = tmp-&gt;next);</div><div class="line">    <span class="keyword">return</span> tmp != <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// print the singly linked lists</span></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div><div class="line"><span class="keyword">void</span> DoublyLinkedList&lt;T&gt;::printLinkedLists()&#123;</div><div class="line">    Node&lt;T&gt;* p = head;</div><div class="line">    <span class="keyword">while</span>(p != <span class="number">0</span>)&#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, p-&gt;info);</div><div class="line">        p = p-&gt;next;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span> <span class="comment">//CPPPROJECTS_DOUBLYLLST_H</span></span></div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<h6 id="main-cpp"><a href="#main-cpp" class="headerlink" title="main.cpp"></a>main.cpp</h6><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"doublyLLst.h"</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line"></div><div class="line">    DoublyLinkedList&lt;<span class="keyword">int</span>&gt; <span class="built_in">list</span>;</div><div class="line">    <span class="built_in">list</span>.addToDLLTail(<span class="number">11</span>);</div><div class="line">    <span class="built_in">list</span>.addToDLLTail(<span class="number">12</span>);</div><div class="line">    <span class="built_in">list</span>.addToDLLTail(<span class="number">13</span>);</div><div class="line">    <span class="built_in">list</span>.addToDLLHead(<span class="number">10</span>);</div><div class="line"></div><div class="line"></div><div class="line">    <span class="built_in">list</span>.printLinkedLists();</div><div class="line"></div><div class="line">    <span class="built_in">list</span>.deleteFromDLLHead();</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"after the deleting from head...\n"</span>);</div><div class="line">    <span class="built_in">list</span>.printLinkedLists();</div><div class="line"></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"after the deleting from el:12...\n"</span>);</div><div class="line">    <span class="built_in">list</span>.deleteNodeFromEl(<span class="number">12</span>);</div><div class="line">    <span class="built_in">list</span>.printLinkedLists();</div><div class="line"></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"after the deleting from ps:2...\n"</span>);</div><div class="line">    <span class="built_in">list</span>.deleteNodeFromPs(<span class="number">2</span>);</div><div class="line">    <span class="built_in">list</span>.printLinkedLists();</div><div class="line"></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"after the adding from ps:1...\n"</span>);</div><div class="line">    <span class="built_in">list</span>.addToDLList(<span class="number">6</span>, <span class="number">1</span>);</div><div class="line">    <span class="built_in">list</span>.printLinkedLists();</div><div class="line"></div><div class="line">    <span class="keyword">bool</span> isin = <span class="built_in">list</span>.isInList(<span class="number">6</span>);</div><div class="line"></div><div class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;<span class="string">"Is 6 in list? The answer is: "</span>&lt;&lt;isin&lt;&lt;<span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出:</p>
+<blockquote>
+<p>10<br>11<br>12<br>13<br>after the deleting from head…<br>11<br>12<br>13<br>after the deleting from el:12…<br>11<br>13<br>after the deleting from ps:2…<br>11<br>after the adding from ps:1…<br>6<br>11<br>Is 6 in list? The answer is: 1</p>
+</blockquote>
+<h6 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h6><p>此处用到模板，其声明的函数一般要在当前的头文件进行定义。当然，非要分到对应的cpp文件[例如doublyLLst.cpp]也行，只不过，这时候调用这些函数的话，要在main.cpp上面添加一句<code>include &quot;doublyLLst.cpp&quot;</code>。</p>
+<h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><p><em><a href="http://stackoverflow.com/questions/13216844/undefined-reference-to-linkedlistintpush-frontint" target="_blank" rel="external">stackoverflow</a></em><br><em>Data Structures and Algorithms in C++</em></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2017/04/25/Doubly-Linked-Lists/">Doubly Linked Lists</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 不秩稚童 的个人博客">不秩稚童</a></p>
+  <p><span>发布时间:</span>2017年04月25日 - 13:04</p>
+  <p><span>最后更新:</span>2017年04月25日 - 14:04</p>
+  <p><span>原始链接:</span><a href="/2017/04/25/Doubly-Linked-Lists/" title="Doubly Linked Lists">http://datahonor.com/2017/04/25/Doubly-Linked-Lists/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/04/25/Doubly-Linked-Lists/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+	clipboard.on('success', $(function(){
+	  $(".fa-clipboard").click(function(){
+		swal({   
+		  title: "",   
+		  text: '复制成功',   
+		  html: false,
+		  timer: 500,   
+		  showConfirmButton: false
+	    });
+	  });
+    }));  
+</script>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Cpp/" rel="tag"># Cpp</a>
+          
+            <a href="/tags/DataStructure/" rel="tag"># DataStructure</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/25/Singly-Linked-Lists/" rel="next" title="Singly Linked Lists">
+                <i class="fa fa-chevron-left"></i> Singly Linked Lists
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+
+
+
+
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
+               alt="不秩稚童" />
+          <p class="site-author-name" itemprop="name">不秩稚童</p>
+           
+              <p class="site-description motion-element" itemprop="description">十年饮冰，难凉热血。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/shenxiangzhuang" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/shen-xiang-zhuang" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.cnblogs.com/buzhizhitong" target="_blank" title="博客园">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  博客园
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#初识"><span class="nav-text">初识</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#实现"><span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#doublyLLst-h"><span class="nav-text">doublyLLst.h</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#main-cpp"><span class="nav-text">main.cpp</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#注意"><span class="nav-text">注意</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">不秩稚童</span>
+</div>
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i>本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i>本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'http-datahonor-com';
+      var disqus_identifier = '2017/04/25/Doubly-Linked-Lists/';
+
+      var disqus_title = "Doubly Linked Lists";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+  
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+</body>
+</html>
