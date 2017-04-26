@@ -3,6 +3,30 @@
   
     
     <entry>
+      <title><![CDATA[Mouse trackbar]]></title>
+      <url>/2017/04/27/Mouse-trackbar/</url>
+      <content type="html"><![CDATA[<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>关于OpenCV如何捕捉鼠标动作进行图片的交互。这里回调函数可能有点不太好理解，简单讲就是说，在cv::setMouseCallback之后，在指定的窗口，鼠标动作将会被捕捉，根据捕捉到的动作，按照onMouse的定义进行操作，之后回到捕捉状态。如果没有鼠标动作，那么程序将会一直wait,等待退出。</p>
+<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">// Created by shensir on 17-4-26.</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/core.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/highgui.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"imageInfo.h"</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// Mouse trackbar</span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">onMouse</span><span class="params">(<span class="keyword">int</span> event, <span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> flags, <span class="keyword">void</span>* param)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    cv::Mat image;</div><div class="line">    image = cv::imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/mangzai.jpg"</span>, <span class="number">0</span>);</div><div class="line">    getImageInfo(image);</div><div class="line">    cv::imshow(<span class="string">"Original Image"</span>, image );</div><div class="line">    cv::setMouseCallback(<span class="string">"Original Image"</span>, onMouse,</div><div class="line">                         <span class="keyword">reinterpret_cast</span>&lt;<span class="keyword">void</span>*&gt;(&amp;image));</div><div class="line">    cvWaitKey(<span class="number">0</span>);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">onMouse</span> <span class="params">(<span class="keyword">int</span> event, <span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> flags, <span class="keyword">void</span>*param)</span></span>&#123;</div><div class="line">    cv::Mat *im = <span class="keyword">reinterpret_cast</span>&lt;cv::Mat*&gt;(param);</div><div class="line">    <span class="keyword">switch</span> (event)&#123;</div><div class="line">        <span class="keyword">case</span> cv::EVENT_LBUTTONDOWN: <span class="comment">// left mouse button down event</span></div><div class="line">            <span class="comment">// display pixel value at (x,y)</span></div><div class="line">            <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"at ("</span> &lt;&lt; x &lt;&lt; <span class="string">","</span> &lt;&lt; y &lt;&lt; <span class="string">") value is:"</span></div><div class="line">                      &lt;&lt; <span class="keyword">static_cast</span>&lt;<span class="keyword">int</span>&gt;(</div><div class="line">                              im-&gt;at&lt;uchar&gt;(cv::Point(x,y))) &lt;&lt;</div><div class="line">                      <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">        <span class="keyword">break</span>;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> Cpp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[OpenCV系列笔记一：Read, Show and Write]]></title>
       <url>/2017/04/26/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9ARead-Show-and-Write/</url>
       <content type="html"><![CDATA[<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>看了一段时间的 <em>OpenCV 3 Computer Vision Application Programming Cookbook - Third Edition</em>,受益匪浅，目前看到了第8章，打算先暂停下，总结下前面学到的内容。<br>这里，在开始的部分，我们介绍下图片文件的读写。</p>
@@ -929,9 +953,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Data Analysis </tag>
             
@@ -965,9 +989,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Data Analysis </tag>
             
@@ -1016,9 +1040,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Data Analysis </tag>
             
@@ -1378,9 +1402,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Data Analysis </tag>
             
@@ -1420,9 +1444,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Data Analysis </tag>
             
@@ -1808,9 +1832,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -1857,9 +1881,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
