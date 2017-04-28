@@ -4,12 +4,56 @@
 
     
   <url>
-    <loc>http://datahonor.com/2017/04/28/Accessing-pixel-values/</loc>
-    <lastmod>2017-04-28T00:31:33.961Z</lastmod>
+    <loc>http://datahonor.com/2017/04/28/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E4%B9%9D%EF%BC%9AComparing-colors-using-the-Strategy-design-pattern/</loc>
+    <lastmod>2017-04-28T05:30:59.105Z</lastmod>
     <data>
         <display>
-        <title>OpenCV系列笔记五：Accessing pixel values</title>
-        <pubTime>2017-04-28T00:24:51.000Z</pubTime>
+        <title>OpenCV系列笔记九：Comparing colors using the Strategy design pattern</title>
+        <pubTime>2017-04-28T05:20:46.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/04/28/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E5%85%AB%EF%BC%9ARemapping/</loc>
+    <lastmod>2017-04-28T03:43:48.480Z</lastmod>
+    <data>
+        <display>
+        <title>OpenCV系列笔记八：Remapping</title>
+        <pubTime>2017-04-28T03:29:15.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/04/28/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E4%B8%83%EF%BC%9ANeighbor-access/</loc>
+    <lastmod>2017-04-28T03:42:27.587Z</lastmod>
+    <data>
+        <display>
+        <title>OpenCV系列笔记七：Neighbor access</title>
+        <pubTime>2017-04-28T01:48:42.000Z</pubTime>
         
         <tag>Cpp</tag>
          
@@ -27,11 +71,33 @@
     
   <url>
     <loc>http://datahonor.com/2017/04/09/OPenCV-%E5%9B%BE%E7%89%87%E9%A2%9C%E8%89%B2%E7%A9%BA%E9%97%B4%E7%BC%A9%E5%87%8F%E4%B8%8E%E9%81%8D%E5%8E%86/</loc>
-    <lastmod>2017-04-28T00:23:22.994Z</lastmod>
+    <lastmod>2017-04-28T01:28:34.447Z</lastmod>
     <data>
         <display>
         <title>OpenCV系列笔记六：图片颜色空间缩减与遍历</title>
         <pubTime>2017-04-09T01:43:10.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/04/28/Accessing-pixel-values/</loc>
+    <lastmod>2017-04-28T00:31:33.961Z</lastmod>
+    <data>
+        <display>
+        <title>OpenCV系列笔记五：Accessing pixel values</title>
+        <pubTime>2017-04-28T00:24:51.000Z</pubTime>
         
         <tag>Cpp</tag>
          
