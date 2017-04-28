@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Cpp,Practice," />
+  <meta name="keywords" content="Cpp,OpenCV," />
 
 
 
@@ -89,31 +89,22 @@
 
 
 
-<meta name="description" content="Introduction关于Cpp知识点的结合练习。
-Overview本次练习涉及的知识点
-
-vector的几种打印方式将函数作为参数传入其他函数精确[毫秒及微秒]时间的计量
-
-Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758">
+<meta name="description" content="Overview图片本就是由一个一个的像素点组成，我们有时候需要对一些特殊的像素点就行操作，而操作像素点的第一个问题就是如何获取到这些像素点。OpenCV为我们提供了at方法。
+CodeMat123456789101112131415161718192021222324252627282930313233343536373839404142void salt(cv::Mat image, int">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Print time!">
-<meta property="og:url" content="http://datahonor.com/2017/02/26/Print-time/index.html">
+<meta property="og:title" content="OpenCV系列笔记五：Accessing pixel values">
+<meta property="og:url" content="http://datahonor.com/2017/04/28/Accessing-pixel-values/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="Introduction关于Cpp知识点的结合练习。
-Overview本次练习涉及的知识点
-
-vector的几种打印方式将函数作为参数传入其他函数精确[毫秒及微秒]时间的计量
-
-Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758">
-<meta property="og:updated_time" content="2017-02-26T02:51:48.513Z">
+<meta property="og:description" content="Overview图片本就是由一个一个的像素点组成，我们有时候需要对一些特殊的像素点就行操作，而操作像素点的第一个问题就是如何获取到这些像素点。OpenCV为我们提供了at方法。
+CodeMat123456789101112131415161718192021222324252627282930313233343536373839404142void salt(cv::Mat image, int">
+<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/170427/3.png">
+<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/170427/4.png">
+<meta property="og:updated_time" content="2017-04-28T00:31:33.961Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Print time!">
-<meta name="twitter:description" content="Introduction关于Cpp知识点的结合练习。
-Overview本次练习涉及的知识点
-
-vector的几种打印方式将函数作为参数传入其他函数精确[毫秒及微秒]时间的计量
-
-Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758">
+<meta name="twitter:title" content="OpenCV系列笔记五：Accessing pixel values">
+<meta name="twitter:description" content="Overview图片本就是由一个一个的像素点组成，我们有时候需要对一些特殊的像素点就行操作，而操作像素点的第一个问题就是如何获取到这些像素点。OpenCV为我们提供了at方法。
+CodeMat123456789101112131415161718192021222324252627282930313233343536373839404142void salt(cv::Mat image, int">
+<meta name="twitter:image" content="http://blog-1252464519.costj.myqcloud.com/170427/3.png">
 
 
 
@@ -141,13 +132,13 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
 
 
 
-  <link rel="canonical" href="http://datahonor.com/2017/02/26/Print-time/"/>
+  <link rel="canonical" href="http://datahonor.com/2017/04/28/Accessing-pixel-values/"/>
 
 
 
 
 
-  <title> Print time! | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> OpenCV系列笔记五：Accessing pixel values | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -327,7 +318,7 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/02/26/Print-time/">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/04/28/Accessing-pixel-values/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="不秩稚童">
@@ -351,7 +342,7 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
             
             
               
-                Print time!
+                OpenCV系列笔记五：Accessing pixel values
               
             
           </h1>
@@ -366,8 +357,8 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-26T10:44:00+08:00">
-                2017-02-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-28T08:24:51+08:00">
+                2017-04-28
               </time>
             
 
@@ -407,8 +398,8 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/26/Print-time/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/02/26/Print-time/" itemprop="commentCount"></span>
+                <a href="/2017/04/28/Accessing-pixel-values/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/04/28/Accessing-pixel-values/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -439,13 +430,13 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
       
 
       
-        <h5 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h5><p>关于Cpp知识点的结合练习。</p>
-<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>本次练习涉及的知识点</p>
-<blockquote>
-<p>vector的几种打印方式<br>将函数作为参数传入其他函数<br>精确[毫秒及微秒]时间的计量</p>
-</blockquote>
-<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/time.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 几种打印vector的方法</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">printvector1</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v)</span></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;v.size(); i++)&#123;</div><div class="line"><span class="comment">//        cout&lt;&lt; i;</span></div><div class="line">        <span class="built_in">cout</span> &lt;&lt; v[i]&lt;&lt;<span class="string">"  "</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">printvector2</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v)</span></span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator iter = v.begin(); iter != v.end(); ++iter)</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; *iter&lt;&lt; <span class="string">" "</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">printvector3</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v)</span></span>&#123;</div><div class="line">    <span class="keyword">auto</span> itr = v.begin();</div><div class="line">    <span class="keyword">while</span>( itr != v.end())&#123;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; *(itr++) &lt;&lt;<span class="string">" "</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 将函数作为参数传入</span></div><div class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">void</span> <span class="params">(*pf)</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v)</span></span>;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 精确时间的计量</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">taketime</span><span class="params">(pf f, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v)</span></span>&#123;</div><div class="line">    <span class="keyword">struct</span> timeval start, end;</div><div class="line"></div><div class="line">    <span class="keyword">long</span> mtime, seconds, useconds;</div><div class="line"></div><div class="line">    gettimeofday(&amp;start, <span class="literal">NULL</span>);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"Elapsed time: %ld milliseconds\n"</span>, mtime);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">1000</span>; i++)</div><div class="line">        f(v);</div><div class="line">    gettimeofday(&amp;end, <span class="literal">NULL</span>);</div><div class="line"></div><div class="line">    seconds  = end.tv_sec  - start.tv_sec;</div><div class="line">    useconds = end.tv_usec - start.tv_usec;</div><div class="line"></div><div class="line">    mtime = ((seconds) * <span class="number">1000</span> + useconds/<span class="number">1000.0</span>) + <span class="number">0.5</span>;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt;<span class="built_in">endl</span>&lt;&lt; mtime;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; daysInMonth = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>&#125;;</div><div class="line">    taketime(printvector1, daysInMonth);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
-<h5 id="Refrence"><a href="#Refrence" class="headerlink" title="Refrence"></a>Refrence</h5><p><em>Data Structures and AlgorithmAnalysis in C++</em>[p84]</p>
+        <h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>图片本就是由一个一个的像素点组成，我们有时候需要对一些特殊的像素点就行操作，而操作像素点的第一个问题就是如何获取到这些像素点。OpenCV为我们提供了at方法。</p>
+<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><h6 id="Mat"><a href="#Mat" class="headerlink" title="Mat"></a>Mat</h6><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">salt</span><span class="params">(cv::Mat image, <span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="comment">// C++11 random number generator</span></div><div class="line">    <span class="built_in">std</span>::default_random_engine generator;</div><div class="line">    <span class="built_in">std</span>::uniform_int_distribution&lt;<span class="keyword">int</span>&gt;</div><div class="line">            randomRow(<span class="number">0</span>, image.rows <span class="number">-1</span>);</div><div class="line">    <span class="built_in">std</span>::uniform_int_distribution&lt;<span class="keyword">int</span>&gt;</div><div class="line">            randomCol(<span class="number">0</span>, image.cols <span class="number">-1</span>);</div><div class="line"></div><div class="line">    <span class="keyword">int</span> i, j;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>; k&lt;n; k++)&#123;</div><div class="line">        <span class="comment">// random image coordinate</span></div><div class="line">        i = randomCol(generator);</div><div class="line">        j = randomRow(generator);</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(image.type() == CV_8UC1)&#123;</div><div class="line">            <span class="comment">// gray image, single-channel 8-bit image</span></div><div class="line">            image.at&lt;uchar&gt;(j,i) = <span class="number">255</span>;</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (image.type() == CV_8UC3)&#123;</div><div class="line">            <span class="comment">// color image, 3-channel image</span></div><div class="line">            image.at&lt;cv::Vec3b&gt;(j,i)[<span class="number">0</span>] = <span class="number">255</span>;</div><div class="line">            image.at&lt;cv::Vec3b&gt;(j,i)[<span class="number">1</span>] = <span class="number">255</span>;</div><div class="line">            image.at&lt;cv::Vec3b&gt;(j,i)[<span class="number">2</span>] = <span class="number">255</span>;</div><div class="line">            <span class="comment">// or in this way</span></div><div class="line">            <span class="comment">//image.at&lt;cv::Vec3b&gt;(j,i) = cv::Vec3b(255,255,255);</span></div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    cv::Mat image = cv::imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/lake.png"</span>);</div><div class="line">    salt(image, <span class="number">3000</span>);</div><div class="line"></div><div class="line">    cv::namedWindow(<span class="string">"Image"</span>);</div><div class="line">    cv::imshow(<span class="string">"Image"</span>, image);</div><div class="line">    cv::imwrite(<span class="string">"salt-lake.jpg"</span>, image);</div><div class="line">    cv::waitKey(<span class="number">0</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="http://blog-1252464519.costj.myqcloud.com/170427/3.png" alt=""></p>
+<h6 id="Mat-1"><a href="#Mat-1" class="headerlink" title="Mat_"></a>Mat_</h6><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// for color image</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">salt</span><span class="params">(cv::Mat_&lt;cv::Vec3b&gt; image, <span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="comment">// C++11 random number generator</span></div><div class="line">    <span class="built_in">std</span>::default_random_engine generator;</div><div class="line">    <span class="built_in">std</span>::uniform_int_distribution&lt;<span class="keyword">int</span>&gt;</div><div class="line">            randomRow(<span class="number">0</span>, image.rows <span class="number">-1</span>);</div><div class="line">    <span class="built_in">std</span>::uniform_int_distribution&lt;<span class="keyword">int</span>&gt;</div><div class="line">            randomCol(<span class="number">0</span>, image.cols <span class="number">-1</span>);</div><div class="line"></div><div class="line">    <span class="keyword">int</span> i, j;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>; k&lt;n; k++)&#123;</div><div class="line">        <span class="comment">// random image coordinate</span></div><div class="line">        i = randomCol(generator);</div><div class="line">        j = randomRow(generator);</div><div class="line"></div><div class="line">        <span class="comment">// color image, 3-channel image</span></div><div class="line">        image(j,i)[<span class="number">0</span>] = <span class="number">255</span>;</div><div class="line">        image(j,i)[<span class="number">1</span>] = <span class="number">255</span>;</div><div class="line">        image(j,i)[<span class="number">2</span>] = <span class="number">255</span>;</div><div class="line">        <span class="comment">// or in this way</span></div><div class="line">        <span class="comment">//image(j,i) = cv::Vec3b(255,255,255);</span></div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// overload for gray image</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">salt</span><span class="params">(cv::Mat_&lt;uchar&gt; image, <span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="comment">// C++11 random number generator</span></div><div class="line">    <span class="built_in">std</span>::default_random_engine generator;</div><div class="line">    <span class="built_in">std</span>::uniform_int_distribution&lt;<span class="keyword">int</span>&gt;</div><div class="line">            randomRow(<span class="number">0</span>, image.rows <span class="number">-1</span>);</div><div class="line">    <span class="built_in">std</span>::uniform_int_distribution&lt;<span class="keyword">int</span>&gt;</div><div class="line">            randomCol(<span class="number">0</span>, image.cols <span class="number">-1</span>);</div><div class="line"></div><div class="line">    <span class="keyword">int</span> i, j;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>; k&lt;n; k++)&#123;</div><div class="line">        <span class="comment">// random image coordinate</span></div><div class="line">        i = randomCol(generator);</div><div class="line">        j = randomRow(generator);</div><div class="line"></div><div class="line">        <span class="comment">// gray image, single-channel 8-bit image</span></div><div class="line">        image(j,i) = <span class="number">255</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="comment">// color</span></div><div class="line">    cv::Mat_&lt;cv::Vec3b&gt; image = cv::imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/lake.png"</span>);</div><div class="line">    cv::imshow(<span class="string">"Original Image"</span>, image);</div><div class="line"></div><div class="line">    salt(image, <span class="number">3000</span>);</div><div class="line">    cv::imshow(<span class="string">"Salted Image"</span>, image);</div><div class="line"></div><div class="line">    <span class="comment">// gray</span></div><div class="line">    cv::Mat_&lt;uchar&gt; gray;</div><div class="line">    cv::cvtColor(image, gray, cv::COLOR_BGR2GRAY);</div><div class="line">    cv::imshow(<span class="string">"Gray"</span>, gray);</div><div class="line"></div><div class="line">    salt(gray, <span class="number">3000</span>);</div><div class="line">    cv::imshow(<span class="string">"Salted Gray"</span>, gray);</div><div class="line"></div><div class="line">    cv::waitKey(<span class="number">0</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="http://blog-1252464519.costj.myqcloud.com/170427/4.png" alt=""></p>
 
       
     </div>
@@ -453,6 +444,37 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
     <div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2017/04/28/Accessing-pixel-values/">OpenCV系列笔记五：Accessing pixel values</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 不秩稚童 的个人博客">不秩稚童</a></p>
+  <p><span>发布时间:</span>2017年04月28日 - 08:04</p>
+  <p><span>最后更新:</span>2017年04月28日 - 08:04</p>
+  <p><span>原始链接:</span><a href="/2017/04/28/Accessing-pixel-values/" title="OpenCV系列笔记五：Accessing pixel values">http://datahonor.com/2017/04/28/Accessing-pixel-values/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/04/28/Accessing-pixel-values/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+	clipboard.on('success', $(function(){
+	  $(".fa-clipboard").click(function(){
+		swal({   
+		  title: "",   
+		  text: '复制成功',   
+		  html: false,
+		  timer: 500,   
+		  showConfirmButton: false
+	    });
+	  });
+    }));  
+</script>
+
 
       
     </div>
@@ -478,7 +500,7 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
           
             <a href="/tags/Cpp/" rel="tag"># Cpp</a>
           
-            <a href="/tags/Practice/" rel="tag"># Practice</a>
+            <a href="/tags/OpenCV/" rel="tag"># OpenCV</a>
           
         </div>
       
@@ -491,8 +513,8 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/25/Bubble-Sort/" rel="next" title="Bubble Sort">
-                <i class="fa fa-chevron-left"></i> Bubble Sort
+              <a href="/2017/04/28/OpenCV系列笔记四：ROI/" rel="next" title="OpenCV系列笔记四：ROI">
+                <i class="fa fa-chevron-left"></i> OpenCV系列笔记四：ROI
               </a>
             
           </div>
@@ -500,10 +522,6 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/27/K-means-clustering/" rel="prev" title="K-means clustering">
-                K-means clustering <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -678,7 +696,7 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Introduction"><span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Refrence"><span class="nav-text">Refrence</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Mat"><span class="nav-text">Mat</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Mat-1"><span class="nav-text">Mat_</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -816,9 +834,9 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
 
     <script type="text/javascript">
       var disqus_shortname = 'http-datahonor-com';
-      var disqus_identifier = '2017/02/26/Print-time/';
+      var disqus_identifier = '2017/04/28/Accessing-pixel-values/';
 
-      var disqus_title = "Print time!";
+      var disqus_title = "OpenCV系列笔记五：Accessing pixel values";
 
 
       function run_disqus_script(disqus_script) {
