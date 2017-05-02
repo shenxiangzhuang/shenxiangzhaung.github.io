@@ -3,6 +3,35 @@
   
     
     <entry>
+      <title><![CDATA[OpenCV系列笔记十二：Using colors for detection - skin tone detection]]></title>
+      <url>/2017/05/02/Using-colors-for-detection-skin-tone-detection/</url>
+      <content type="html"><![CDATA[<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>关于颜色空间，除了经常用的RGB和之前用于颜色比较的Lab,还有其他很多不同用途的种类。这里我们要检测皮肤，用到的颜色空间是<a href="https://zh.wikipedia.org/wiki/HSL%E5%92%8CHSV%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4" target="_blank" rel="external">HSV</a>. 原因如下：</p>
+<blockquote>
+<p>In general, to detect an object using color, you first need to collect a large database of image samples that contain the object captured from different viewing conditions. These will be used to define the parameters of your classifier. You also need to select the color representation that you will use for classification. For skin tone detection, many studies have shown that skin color from the diverse ethnical groups clusters well in the hue/saturation space. For this reason, we will simply use the hue and saturation values to identify the skin tones in the following image.</p>
+</blockquote>
+<p>显然，在下面的程序里出现的一些阀值也是来自于一些经验数据。</p>
+<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;opencv2/core.hpp&gt;</div><div class="line">#include &lt;opencv2/highgui.hpp&gt;</div><div class="line">#include &lt;opencv2/imgproc.hpp&gt;</div><div class="line">#include "imageInfo.h"</div><div class="line"></div><div class="line">void detectHScolor(const cv::Mat&amp; image,</div><div class="line">                   double minHue, double maxHue,</div><div class="line">                   double minSat, double maxSat,</div><div class="line">                   cv::Mat&amp; mask)&#123;</div><div class="line">    cv::Mat hsv;</div><div class="line">    cv::cvtColor(image, hsv, CV_BGR2HSV);</div><div class="line">    std::vector&lt;cv::Mat&gt;channels;</div><div class="line">    cv::split(hsv, channels);</div><div class="line"></div><div class="line">    // Hue masking</div><div class="line">    cv::Mat mask1;</div><div class="line">    cv::threshold(channels[0], mask1, maxHue, 255,cv::THRESH_BINARY_INV);  // 0~maxhue</div><div class="line">    cv::Mat mask2;</div><div class="line">    cv::threshold(channels[0], mask2, minHue, 255, cv::THRESH_BINARY);  // minhue~180</div><div class="line"></div><div class="line">    cv::Mat hueMask;</div><div class="line">    if(minHue&lt;maxHue)</div><div class="line">        hueMask = mask1 &amp; mask2;  // minhue~maxhue</div><div class="line">    else // if interval crossed the zero-degrees axis</div><div class="line">        hueMask = mask1 | mask2;  // 上面的注释是书上的，一时搞不懂这个else是什么意思...知道的朋友可留言告知...</div><div class="line"></div><div class="line">    // Saturation masking</div><div class="line">    // between minSat and maxSat</div><div class="line">    cv::Mat satMask;</div><div class="line">    cv::inRange(channels[1], minSat, maxSat, satMask);</div><div class="line"></div><div class="line">    // combined mask</div><div class="line">    mask = hueMask &amp; satMask;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">    cv::Mat image = cv::imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/girl.png");</div><div class="line">    cv::imshow("Original Image", image);</div><div class="line">    //detect skin tone</div><div class="line">    cv::Mat mask;</div><div class="line">    detectHScolor(image, 160,10,25,166, mask);</div><div class="line">    cv::Mat detected(image.size(),CV_8UC3,cv::Scalar(0,0,0));</div><div class="line">    image.copyTo(detected,mask);</div><div class="line"></div><div class="line">    cv::imshow("Detected", detected);</div><div class="line">    cv::waitKey(0);</div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：<br><img src="http://blog-1252464519.costj.myqcloud.com/170502/Selection_004.png" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Cpp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[OpenCV系列笔记十：Converting color reprentations]]></title>
       <url>/2017/05/02/Converting-color-reprentations/</url>
       <content type="html"><![CDATA[<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>在第九篇中，我们通过计算颜色范围来提取出ROI（上例为蓝天部分），我们是在BGR颜色空间进行的，但是在这个颜色空间并不是很好。原因是：</p>
@@ -1444,9 +1473,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
@@ -1473,9 +1502,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         

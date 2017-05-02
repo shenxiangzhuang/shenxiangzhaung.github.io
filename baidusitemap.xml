@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/05/02/Using-colors-for-detection-skin-tone-detection/</loc>
+    <lastmod>2017-05-02T04:16:17.595Z</lastmod>
+    <data>
+        <display>
+        <title>OpenCV系列笔记十二：Using colors for detection - skin tone detection</title>
+        <pubTime>2017-05-02T04:02:23.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/05/02/Segmenting-an-image-with-the-GrabCut-algorithm/</loc>
     <lastmod>2017-05-02T03:20:08.634Z</lastmod>
     <data>
@@ -295,9 +317,9 @@
         <title>Ubuntu使用</title>
         <pubTime>2017-03-02T09:03:54.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
          
          
            
@@ -317,9 +339,9 @@
         <title>Ubuntu搭建SS</title>
         <pubTime>2017-03-02T08:57:56.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
          
          
            
