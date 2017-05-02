@@ -3,6 +3,51 @@
   
     
     <entry>
+      <title><![CDATA[Segmenting an image with the GrabCut algorithm]]></title>
+      <url>/2017/05/02/Segmenting-an-image-with-the-GrabCut-algorithm/</url>
+      <content type="html"><![CDATA[<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>如上篇所述，所关注的物体有较为独特的颜色时，我们可以通过一个颜色范围过滤出想要的物体。但是有些时候所要抽取的物体并不总是有鲜明的颜色特征。这里，我们介绍另一种根据图片特征进行分类的算法，即为GrabCut.</p>
+<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><p>先看一下实现代码和效果：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;opencv2/core.hpp&gt;</div><div class="line">#include &lt;opencv2/highgui.hpp&gt;</div><div class="line">#include &lt;opencv2/imgproc.hpp&gt;</div><div class="line">#include "imageInfo.h"</div><div class="line"></div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">    cv::Mat image = cv::imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/lake.png");</div><div class="line">    cv::Rect rectangle(50,30,240,170);</div><div class="line"></div><div class="line">    // show the ractangle</div><div class="line">    cv::Mat imageclone = image.clone();</div><div class="line">    cv::rectangle(imageclone, rectangle, 255, 2);</div><div class="line">    cv::imshow("Image with Ractangle", imageclone);</div><div class="line"></div><div class="line">    cv::Mat result;</div><div class="line">    cv::Mat bgMOdel, fgModel;</div><div class="line">    cv::grabCut(image, result, rectangle, bgMOdel, fgModel, 5, cv::GC_INIT_WITH_RECT);</div><div class="line"></div><div class="line">//    打印可以看到result是由1，2，3，4组成，即为四种模式</div><div class="line">//    std::cout&lt;&lt;result&lt;&lt;std::endl;</div><div class="line">//    std::cout&lt;&lt;cv::GC_PR_FGD&lt;&lt;std::endl;</div><div class="line"></div><div class="line">    cv::compare(result, cv::GC_PR_FGD, result, cv::CMP_EQ);</div><div class="line">    cv::Mat foreground(image.size(), CV_8UC3,cv::Scalar(255,255,255));</div><div class="line">    image.copyTo(foreground, result);</div><div class="line"></div><div class="line">    cv::imshow("foreground", foreground);</div><div class="line">    cv::waitKey(0);</div><div class="line"></div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：<br><img src="http://blog-1252464519.costj.myqcloud.com/170502/Selection_002.png" alt=""></p>
+<p>简单解释下上面的程序：</p>
+<ul>
+<li><p>[ ] <strong>cv::grubCut</strong><br>先看下文档的参数解释：<br><img src="http://blog-1252464519.costj.myqcloud.com/170502/Selection_001.png" alt=""></p>
+<blockquote>
+<p>中文解释，参考<a href="http://blog.csdn.net/zouxy09/article/details/8535087" target="_blank" rel="external">这里</a><br>这个解释还是挺不错的，但是在mask和rect这里好像和文档有些出入。第一个是mask这里，即使不手工标记，也会有GCD_BGD存在，因为rect之外的部分默认被视为背景，我们上面的实验结果result也是未进行人工标注，其包含0，2，3.</p>
+</blockquote>
+</li>
+<li><p>[ ] <strong>models</strong><br>看文档强调在处理同一张图片时，不要修改两个models,即bgdModel和fgdModel.这是因为运行grubCut之后，里面保存了一些之前迭代的数据，如果得到的结果不理想，我们可以再次利用这两个models继续迭代，省去重复迭代。</p>
+<blockquote>
+<p>This explains the argument of the function where the user can specify<br>the number of iterations to be applied. The two internal models<br>maintained by the algorithm are passed as an argument of the function<br>(and returned). Therefore, it is possible to call the function with the<br>models of the last run again if one wishes to improve the segmentation<br>result by performing additional iterations.</p>
+</blockquote>
+</li>
+<li><p>[ ] <strong>cv::GC_PR_FGD and cv::GC_FGD</strong><br>在我们上面的程序，<code>cv::compare(result, cv::GC_PR_FGD, result, cv::CMP_EQ);</code>可以看出，我们提取的是，可能的前景图，并没有提取确定的前景图。我们可以将这一行代码换为<code>result = result&amp;1</code>来达到同时提取的目的。<br>因为，</p>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//! class of the pixel in GrabCut algorithm</span></div><div class="line"><span class="keyword">enum</span> GrabCutClasses &#123;</div><div class="line">    GC_BGD    = <span class="number">0</span>,  <span class="comment">//!&lt; an obvious background pixels</span></div><div class="line">    GC_FGD    = <span class="number">1</span>,  <span class="comment">//!&lt; an obvious foreground (object) pixel</span></div><div class="line">    GC_PR_BGD = <span class="number">2</span>,  <span class="comment">//!&lt; a possible background pixel</span></div><div class="line">    GC_PR_FGD = <span class="number">3</span>   <span class="comment">//!&lt; a possible foreground pixel</span></div><div class="line">&#125;;</div><div class="line"></div></pre></td></tr></table></figure>
+<blockquote>
+<p>所以，1&amp;1, 1&amp;3 均为1，0&amp;1， 2&amp;1均为0.这里因为没有事先标记GC_FGD，所以同时获取得到的结果和之前是一样的。</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> Cpp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[OpenCV系列笔记九：Comparing colors using the Strategy design pattern]]></title>
       <url>/2017/04/28/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E4%B9%9D%EF%BC%9AComparing-colors-using-the-Strategy-design-pattern/</url>
       <content type="html"><![CDATA[<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>介绍通过比较颜色来检测一片区域，并进行处理的方法，采用了Strategy design pattern.</p>
@@ -1142,9 +1187,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Data Analysis </tag>
             
@@ -1178,9 +1223,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Data Analysis </tag>
             
@@ -1229,9 +1274,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Data Analysis </tag>
             
@@ -1591,9 +1636,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Data Analysis </tag>
             
@@ -1633,9 +1678,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Data Analysis </tag>
             
@@ -2021,9 +2066,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Clustering </tag>
             
@@ -2070,9 +2115,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Clustering </tag>
             
