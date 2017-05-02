@@ -3,7 +3,45 @@
   
     
     <entry>
-      <title><![CDATA[Segmenting an image with the GrabCut algorithm]]></title>
+      <title><![CDATA[OpenCV系列笔记十：Converting color reprentations]]></title>
+      <url>/2017/05/02/Converting-color-reprentations/</url>
+      <content type="html"><![CDATA[<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>在第九篇中，我们通过计算颜色范围来提取出ROI（上例为蓝天部分），我们是在BGR颜色空间进行的，但是在这个颜色空间并不是很好。原因是：</p>
+<blockquote>
+<p>Unfortunately, computing the distance between the colors using the<br>RGB color space is not the best way to measure the similarity between<br>two given colors. Indeed, RGB is not a perceptually uniform color<br>space. This means that two colors at a given distance might look very<br>similar, while two other colors separated by the same distance might<br>look very different.</p>
+</blockquote>
+<p>所以：</p>
+<blockquote>
+<p>To solve this problem, other color representations that have the property<br>of being perceptually uniform have been introduced. In particular, the<br>CIE L<em>a</em>b* is one such color model. By converting our images to this<br>representation, the Euclidean distance between an image pixel and the<br>target color will then be a meaningful measure of the visual similarity<br>between the two colors.</p>
+</blockquote>
+<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><p>这里核心的程序就是转换到另一个颜色空间进行颜色比较和颜色范围的界定。</p>
+<p>主要改动就是process这里：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">cv::Mat ColorDetector::process(<span class="keyword">const</span> cv::Mat &amp;image)&#123;</div><div class="line">    <span class="comment">// re-allocate binary map if necessary</span></div><div class="line">    <span class="comment">// same size as input image, but 1-channel</span></div><div class="line">    result.create(image.size(), CV_8U);</div><div class="line"></div><div class="line">    <span class="comment">// Converting to Lab color space</span></div><div class="line">    cv::cvtColor(image, converted, CV_BGR2Lab);</div><div class="line"></div><div class="line">    <span class="comment">// processing</span></div><div class="line">    <span class="comment">// get the iterators</span></div><div class="line">    cv::Mat_&lt;cv::Vec3b&gt;::const_iterator it = converted.begin&lt;cv::Vec3b&gt;();</div><div class="line">    cv::Mat_&lt;cv::Vec3b&gt;::const_iterator itend = converted.end&lt;cv::Vec3b&gt;();</div><div class="line">    cv::Mat_&lt;uchar&gt;::iterator itout = result.begin&lt;uchar&gt;();</div><div class="line"></div><div class="line">    <span class="comment">// for each pixel</span></div><div class="line">    <span class="keyword">for</span>(; it!=itend;++it, ++itout)&#123;</div><div class="line">        <span class="comment">// compute distance from target color</span></div><div class="line">        <span class="keyword">if</span>(getColorDitanceToTargetColor(*it) &lt;= maxDist)&#123;</div><div class="line">            *itout = <span class="number">255</span>;</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            *itout = <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> result;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>为了方便运行，这里也贴下完整的代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/core.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/highgui.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/imgproc.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"imageInfo.h"</span></span></div><div class="line"></div><div class="line"><span class="keyword">class</span> ColorDetector&#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="comment">// minimun accptable distance</span></div><div class="line">    <span class="keyword">int</span> maxDist;</div><div class="line">    <span class="comment">// target color</span></div><div class="line">    cv::Vec3b target;</div><div class="line"></div><div class="line">    <span class="comment">// image containing resulting binary map</span></div><div class="line">    cv::Mat result, converted;</div><div class="line"></div><div class="line">    <span class="comment">// empty constructor</span></div><div class="line">    <span class="comment">// default parameter initialization here</span></div><div class="line">    ColorDetector():maxDist(<span class="number">15</span>),target(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>)&#123;&#125;;</div><div class="line"></div><div class="line">    <span class="comment">// another constructor with target and distance</span></div><div class="line">    ColorDetector(uchar blue, uchar green, uchar red, <span class="keyword">int</span> mxDist)&#123;&#125;;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">// Sets the color distance threshold</span></div><div class="line">    <span class="comment">// Threshold must be positive,</span></div><div class="line">    <span class="comment">// otherwise distance threshold is set to 0.</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setColorDistanceThreshold</span><span class="params">(<span class="keyword">int</span> distance)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(distance&lt;<span class="number">0</span>)</div><div class="line">            distance = <span class="number">0</span>;</div><div class="line">        maxDist = distance;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// Gets the color distance threshold</span></div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getColorDistanceThreshold</span><span class="params">()</span> <span class="keyword">const</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> maxDist;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">// Sets the color to be detected</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setTargetColor</span><span class="params">(uchar blue, uchar green, uchar red)</span></span>&#123;</div><div class="line">        <span class="comment">// Temporary 1-pixel image</span></div><div class="line">        cv::<span class="function">Mat <span class="title">tmp</span><span class="params">(<span class="number">1</span>,<span class="number">1</span>,CV_8UC3)</span></span>;</div><div class="line">        tmp.at&lt;cv::Vec3b&gt;(<span class="number">0</span>,<span class="number">0</span>) = cv::Vec3b(blue, green, red);</div><div class="line"></div><div class="line">        <span class="comment">// Converting the target to Lab color space</span></div><div class="line">        cv::cvtColor(tmp, tmp, CV_BGR2Lab);</div><div class="line"></div><div class="line">        target = tmp.at&lt;cv::Vec3b&gt;(<span class="number">0</span>,<span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// Sets the color to be detected</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setTargetColor</span><span class="params">(cv::Vec3b color)</span></span>&#123;</div><div class="line">        target = color;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// Gets the color to be detected</span></div><div class="line">    cv::<span class="function">Vec3b <span class="title">getTargetColor</span><span class="params">()</span> <span class="keyword">const</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> target;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    cv::<span class="function">Mat <span class="title">process</span><span class="params">(<span class="keyword">const</span> cv::Mat &amp;image)</span></span>;</div><div class="line">    cv::<span class="function">Mat <span class="title">process_bycv</span><span class="params">(<span class="keyword">const</span> cv::Mat &amp;image)</span></span>;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getColorDitanceToTargetColor</span><span class="params">(<span class="keyword">const</span> cv::Vec3b&amp; color)</span> <span class="keyword">const</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> getColorDistance(color, target);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// Compute the city-block distance between two colors</span></div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getColorDistance</span><span class="params">(<span class="keyword">const</span> cv::Vec3b&amp;color1, <span class="keyword">const</span> cv::Vec3b&amp; color2)</span> <span class="keyword">const</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">abs</span>(color1[<span class="number">0</span>]-color2[<span class="number">0</span>]+</div><div class="line">                   <span class="built_in">abs</span>(color1[<span class="number">1</span>])-color2[<span class="number">1</span>]+</div><div class="line">                   <span class="built_in">abs</span>(color1[<span class="number">2</span>]-color2[<span class="number">2</span>]));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;;</div><div class="line"></div><div class="line"></div><div class="line">cv::Mat ColorDetector::process(<span class="keyword">const</span> cv::Mat &amp;image)&#123;</div><div class="line">    <span class="comment">// re-allocate binary map if necessary</span></div><div class="line">    <span class="comment">// same size as input image, but 1-channel</span></div><div class="line">    result.create(image.size(), CV_8U);</div><div class="line"></div><div class="line">    <span class="comment">// Converting to Lab color space</span></div><div class="line">    cv::cvtColor(image, converted, CV_BGR2Lab);</div><div class="line"></div><div class="line">    <span class="comment">// processing</span></div><div class="line">    <span class="comment">// get the iterators</span></div><div class="line">    cv::Mat_&lt;cv::Vec3b&gt;::const_iterator it = converted.begin&lt;cv::Vec3b&gt;();</div><div class="line">    cv::Mat_&lt;cv::Vec3b&gt;::const_iterator itend = converted.end&lt;cv::Vec3b&gt;();</div><div class="line">    cv::Mat_&lt;uchar&gt;::iterator itout = result.begin&lt;uchar&gt;();</div><div class="line"></div><div class="line">    <span class="comment">// for each pixel</span></div><div class="line">    <span class="keyword">for</span>(; it!=itend;++it, ++itout)&#123;</div><div class="line">        <span class="comment">// compute distance from target color</span></div><div class="line">        <span class="keyword">if</span>(getColorDitanceToTargetColor(*it) &lt;= maxDist)&#123;</div><div class="line">            *itout = <span class="number">255</span>;</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            *itout = <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> result;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="comment">//1. Create image processor object</span></div><div class="line">    ColorDetector cdetect;</div><div class="line">    <span class="comment">//2. Read input image</span></div><div class="line">    cv::Mat image = cv::imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/lake.png"</span>);</div><div class="line">    <span class="keyword">if</span>(image.empty()) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">else</span> cv::imshow(<span class="string">"Original Image"</span>, image);</div><div class="line"></div><div class="line">    <span class="comment">//3. Set input parameters</span></div><div class="line">    cdetect.setTargetColor(<span class="number">230</span>, <span class="number">220</span>, <span class="number">130</span>);</div><div class="line"></div><div class="line">    <span class="comment">//4. Process the image and display the result</span></div><div class="line">    cv::Mat result = cdetect.process(image);</div><div class="line">    cv::imshow(<span class="string">"Process Result"</span>, result);</div><div class="line"></div><div class="line">    cv::Mat masked, result_inv;</div><div class="line">    cv::bitwise_not(result, result_inv);</div><div class="line"></div><div class="line">    image.copyTo(masked, result_inv);</div><div class="line">    cv::add(masked, cv::Scalar(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>), masked, result);</div><div class="line">    cv::imshow(<span class="string">"Masked"</span>, masked);</div><div class="line"></div><div class="line">    cv::waitKey(<span class="number">0</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="http://blog-1252464519.costj.myqcloud.com/170502/Selection_003.png" alt=""></p>
+<p>貌似，效果差不多…</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Cpp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[OpenCV系列笔记十一：Segmenting an image with the GrabCut algorithm]]></title>
       <url>/2017/05/02/Segmenting-an-image-with-the-GrabCut-algorithm/</url>
       <content type="html"><![CDATA[<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>如上篇所述，所关注的物体有较为独特的颜色时，我们可以通过一个颜色范围过滤出想要的物体。但是有些时候所要抽取的物体并不总是有鲜明的颜色特征。这里，我们介绍另一种根据图片特征进行分类的算法，即为GrabCut.</p>
 <h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><p>先看一下实现代码和效果：</p>
@@ -1187,9 +1225,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Data Analysis </tag>
             
@@ -1223,9 +1261,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Data Analysis </tag>
             
@@ -1274,9 +1312,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Data Analysis </tag>
             
@@ -1636,9 +1674,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Data Analysis </tag>
             
@@ -1678,9 +1716,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Data Analysis </tag>
             
@@ -2066,9 +2104,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -2115,9 +2153,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
