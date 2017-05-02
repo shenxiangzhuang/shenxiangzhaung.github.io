@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/05/02/Computing-an-image-histogram/</loc>
+    <lastmod>2017-05-02T09:33:27.008Z</lastmod>
+    <data>
+        <display>
+        <title>OpenCV系列笔记十三：Computing an image histogram</title>
+        <pubTime>2017-05-02T08:34:26.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/05/02/Using-colors-for-detection-skin-tone-detection/</loc>
     <lastmod>2017-05-02T04:16:17.595Z</lastmod>
     <data>
