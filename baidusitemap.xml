@@ -4,6 +4,50 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/05/04/Backprojecting-a-histogram-to/</loc>
+    <lastmod>2017-05-04T07:24:57.605Z</lastmod>
+    <data>
+        <display>
+        <title>OpenCV系列笔记十五：Backprojecting a histogram to detect specific image content</title>
+        <pubTime>2017-05-04T07:06:11.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/05/04/Look-up-tables/</loc>
+    <lastmod>2017-05-04T06:40:13.971Z</lastmod>
+    <data>
+        <display>
+        <title>OpenCV系列笔记十四：Look-up tables</title>
+        <pubTime>2017-05-04T06:25:07.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/05/02/Computing-an-image-histogram/</loc>
     <lastmod>2017-05-02T09:33:27.008Z</lastmod>
     <data>
@@ -778,9 +822,9 @@
         <title>朴素贝叶斯算法的简单实现</title>
         <pubTime>2017-03-03T04:38:48.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Data Analysis</tag>
          
@@ -850,9 +894,9 @@
         <title>原始感知机模型</title>
         <pubTime>2017-03-03T05:09:30.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Data Analysis</tag>
          
@@ -880,9 +924,9 @@
         <title>感知机学习算法的对偶形式</title>
         <pubTime>2017-03-03T05:19:21.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Data Analysis</tag>
          
@@ -932,9 +976,9 @@
         <title>统计学习方法——简单实现KNN[Python]</title>
         <pubTime>2017-03-02T07:55:59.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Data Analysis</tag>
          
@@ -962,9 +1006,9 @@
         <title>K-means clustering</title>
         <pubTime>2017-02-27T14:12:47.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Clustering</tag>
          
@@ -1012,9 +1056,9 @@
         <title>决策树的简单实现</title>
         <pubTime>2017-03-02T07:48:54.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Data Analysis</tag>
          
@@ -1280,9 +1324,9 @@
         <title>Python实现支持向量机(SVM)</title>
         <pubTime>2017-03-01T16:10:13.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Python</tag>
          
         <tag>Clustering</tag>
          
