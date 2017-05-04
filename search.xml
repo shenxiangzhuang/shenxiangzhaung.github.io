@@ -3,6 +3,59 @@
   
     
     <entry>
+      <title><![CDATA[OpenCV系列笔记十六：Using the mean shift algorithm to find an object]]></title>
+      <url>/2017/05/04/Using-the-mean-shift-algorithm-to-find-an-object/</url>
+      <content type="html"><![CDATA[<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>在上一篇笔记<a href="http://datahonor.com/2017/05/04/Backprojecting-a-histogram-to/">OpenCV系列笔记十五：Backprojecting a histogram to detect specific image content </a>，我们了解了histogram backprojection的原理及用法。这里，我们在backprojection的基础上介绍一种新的算法，即mean shift。他用来在给定的模糊范围，精确定位一个已知histogram[从给定的ROI得到]的物体。来看下参考书的介绍：</p>
+<blockquote>
+<p>The result of a histogram backprojection is a probability map that expresses the probability that a given piece of image content is found at a specific image location. Suppose we now know the approximate location of an object in an image; the probability map can be used to find the exact location of the object. The most probable location will be the one that maximizes this probability inside a given window. Therefore, if we start from an initial location and iteratively move around in an attempt to increase the local probability measure, it should be possible to find the exact object location. This is what is accomplished by the <strong>mean shift algorithm</strong>.</p>
+</blockquote>
+<p>在看下文档对mean shift的介绍：</p>
+<pre><code>/** @brief Finds an object on a back projection image.
+
+@param probImage Back projection of the object histogram. See calcBackProject for details.
+@param window Initial search window.
+@param criteria Stop criteria for the iterative search algorithm.
+returns
+:   Number of iterations CAMSHIFT took to converge.
+The function implements the iterative object search algorithm. It takes the input back projection of
+an object and the initial position. The mass center in window of the back projection image is
+computed and the search window center shifts to the mass center. The procedure is repeated until the
+specified number of iterations criteria.maxCount is done or until the window center shifts by less
+than criteria.epsilon. The algorithm is used inside CamShift and, unlike CamShift , the search
+window size or orientation do not change during the search. You can simply pass the output of
+calcBackProject to this function. But better results can be obtained if you pre-filter the back
+projection and remove the noise. For example, you can do this by retrieving connected components
+with findContours , throwing away contours with small area ( contourArea ), and rendering the
+remaining contours with drawContours.
+
+@note
+-   A mean-shift tracking sample can be found at opencv_source_code/samples/cpp/camshiftdemo.cpp
+ */
+CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, TermCriteria criteria );
+</code></pre><p>mean shift算法是根据已经生成的backprojection map，在给定的初始位置开始进行迭代搜索，直到前后centroid差值小于给定的阀值或者达到预先设定的最大迭代次数时停止迭代。</p>
+<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><p>[colorhistogram.h和contentfinder.h在前一篇笔记已经给出]</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"opencv2/highgui.hpp"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"opencv2/imgproc.hpp"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"colorhistogram.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"contentfinder.h"</span></span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="comment">// Read reference image</span></div><div class="line">    cv::Mat image = cv::imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/baboon01.jpg"</span>);</div><div class="line">    <span class="comment">// initial window position</span></div><div class="line">    cv::<span class="function">Rect <span class="title">rect</span><span class="params">(<span class="number">110</span>, <span class="number">45</span>, <span class="number">35</span>, <span class="number">45</span>)</span></span>;</div><div class="line">    cv::rectangle(image, rect, cv::Scalar(<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>));</div><div class="line">    <span class="comment">// Baboon's face ROI</span></div><div class="line">    cv::Mat imageROI = image(rect);</div><div class="line"></div><div class="line">    cv::namedWindow(<span class="string">"Image1"</span>);</div><div class="line">    cv::imshow(<span class="string">"Image1"</span>, image);</div><div class="line"></div><div class="line">    <span class="comment">// Get the Hue histogram of baboon's face</span></div><div class="line">    <span class="keyword">int</span> minSat = <span class="number">65</span>;</div><div class="line">    ColorHistogram hc;</div><div class="line">    cv::Mat colorhist = hc.getHueHistogram(imageROI, minSat);</div><div class="line"></div><div class="line">    ContentFinder finder;</div><div class="line">    finder.setHistogram(colorhist);</div><div class="line"></div><div class="line">    image = cv::imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/baboon02.jpg"</span>);</div><div class="line"></div><div class="line">    <span class="comment">// Convert to HSV space</span></div><div class="line">    cv::Mat hsv;</div><div class="line">    cv::cvtColor(image, hsv, CV_BGR2HSV);</div><div class="line">    <span class="comment">// Get back-projection of hue histogram</span></div><div class="line">    <span class="keyword">int</span> ch[<span class="number">1</span>] = &#123;<span class="number">0</span>&#125;;</div><div class="line">    finder.setThreshold(<span class="number">-1.0</span>f); <span class="comment">// no thresholding</span></div><div class="line">    cv::Mat result = finder.find(hsv, <span class="number">0.0f</span>, <span class="number">180.0f</span>, ch);</div><div class="line"></div><div class="line">    <span class="comment">// initial window position</span></div><div class="line">    cv::rectangle(image, rect, cv::Scalar(<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>));</div><div class="line"></div><div class="line">    cv::Rect* prect = &amp;rect;</div><div class="line">    <span class="comment">// Search object with mean shift</span></div><div class="line">    cv::<span class="function">TermCriteria <span class="title">criteria</span><span class="params">(</span></span></div><div class="line">            cv::TermCriteria::MAX_ITER | cv::TermCriteria::EPS,</div><div class="line">            <span class="number">10</span>, <span class="comment">// iterate max 10 times</span></div><div class="line">            <span class="number">1</span>); <span class="comment">// or until the change in centroid position is less than 1px</span></div><div class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;<span class="string">"meanshif= "</span>&lt;&lt;cv::meanShift(result, *prect, criteria)&lt;&lt;<span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">    cv::rectangle(image, *prect , cv::Scalar(<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>));</div><div class="line"></div><div class="line"></div><div class="line">    cv::namedWindow(<span class="string">"image 2"</span>);</div><div class="line">    cv::imshow(<span class="string">"image 2"</span>, image);</div><div class="line"></div><div class="line">    cv::waitKey(<span class="number">0</span>);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：<br><img src="http://blog-1252464519.costj.myqcloud.com/170504/Selection_050415%3A35%3A28.png" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Cpp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[OpenCV系列笔记十五：Backprojecting a histogram to detect specific image content]]></title>
       <url>/2017/05/04/Backprojecting-a-histogram-to/</url>
       <content type="html"><![CDATA[<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>之前，我们在 <a href="http://datahonor.com/2017/04/28/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E4%B9%9D%EF%BC%9AComparing-colors-using-the-Strategy-design-pattern/">OpenCV系列笔记九：Comparing colors using the Strategy design pattern</a><br>, 和<a href="http://datahonor.com/2017/05/02/Using-colors-for-detection-skin-tone-detection/">OpenCV系列笔记十二：Using colors for detection - skin tone detection</a>里面分别介绍了在不同的颜色空间下，通过计算颜色距离，来进行the detection of specific image content.这里，我们将要介绍的histogram backprojection是一种新的进行detection的方法。</p>
@@ -1355,11 +1408,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
             
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -1391,11 +1444,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
             
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -1442,11 +1495,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
             
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -1804,11 +1857,11 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
             
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -1846,11 +1899,11 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
             
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -2234,9 +2287,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -2283,9 +2336,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
