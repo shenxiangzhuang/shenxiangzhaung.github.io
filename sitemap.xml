@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://datahonor.com/2017/05/02/Computing-an-image-histogram/</loc>
+    
+    <lastmod>2017-05-05T04:46:31.306Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://datahonor.com/2017/05/04/Using-the-mean-shift-algorithm-to-find-an-object/</loc>
     
-    <lastmod>2017-05-04T08:08:27.136Z</lastmod>
+    <lastmod>2017-05-04T08:12:40.507Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>http://datahonor.com/2017/05/04/Look-up-tables/</loc>
     
     <lastmod>2017-05-04T06:40:13.971Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/2017/05/02/Computing-an-image-histogram/</loc>
-    
-    <lastmod>2017-05-02T09:33:27.008Z</lastmod>
     
   </url>
   

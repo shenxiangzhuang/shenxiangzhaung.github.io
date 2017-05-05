@@ -4,8 +4,30 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/05/02/Computing-an-image-histogram/</loc>
+    <lastmod>2017-05-05T04:46:31.306Z</lastmod>
+    <data>
+        <display>
+        <title>OpenCV系列笔记十三：Computing an image histogram</title>
+        <pubTime>2017-05-02T08:34:26.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/05/04/Using-the-mean-shift-algorithm-to-find-an-object/</loc>
-    <lastmod>2017-05-04T08:08:27.136Z</lastmod>
+    <lastmod>2017-05-04T08:12:40.507Z</lastmod>
     <data>
         <display>
         <title>OpenCV系列笔记十六：Using the mean shift algorithm to find an object</title>
@@ -54,28 +76,6 @@
         <display>
         <title>OpenCV系列笔记十四：Look-up tables</title>
         <pubTime>2017-05-04T06:25:07.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/05/02/Computing-an-image-histogram/</loc>
-    <lastmod>2017-05-02T09:33:27.008Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记十三：Computing an image histogram</title>
-        <pubTime>2017-05-02T08:34:26.000Z</pubTime>
         
         <tag>Cpp</tag>
          
@@ -846,9 +846,9 @@
         
         <tag>Python</tag>
          
-        <tag>Data Analysis</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
@@ -918,9 +918,9 @@
         
         <tag>Python</tag>
          
-        <tag>Data Analysis</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
@@ -948,9 +948,9 @@
         
         <tag>Python</tag>
          
-        <tag>Data Analysis</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
@@ -1000,9 +1000,9 @@
         
         <tag>Python</tag>
          
-        <tag>Data Analysis</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
@@ -1080,9 +1080,9 @@
         
         <tag>Python</tag>
          
-        <tag>Data Analysis</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
