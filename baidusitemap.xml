@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/05/02/Computing-an-image-histogram/</loc>
+    <lastmod>2017-05-06T16:14:23.993Z</lastmod>
+    <data>
+        <display>
+        <title>OpenCV系列笔记十三：Computing an image histogram</title>
+        <pubTime>2017-05-02T08:34:26.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/05/06/Octave-IN-Ubuntu/</loc>
     <lastmod>2017-05-06T16:08:01.042Z</lastmod>
     <data>
@@ -21,28 +43,6 @@
            
              
               <breadCrumb title="linux" url="http://datahonor.com/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/05/02/Computing-an-image-histogram/</loc>
-    <lastmod>2017-05-05T04:46:31.306Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记十三：Computing an image histogram</title>
-        <pubTime>2017-05-02T08:34:26.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
           
         </display>
     </data>
