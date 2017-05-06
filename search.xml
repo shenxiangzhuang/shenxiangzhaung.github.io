@@ -3,6 +3,95 @@
   
     
     <entry>
+      <title><![CDATA[Octave IN Ubuntu]]></title>
+      <url>/2017/05/06/Octave-IN-Ubuntu/</url>
+      <content type="html"><![CDATA[<p>关于Ubuntu16.04LTS下Octave的安装和使用。</p>
+<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><blockquote>
+<p>sudo add-apt-repository ppa:octave/stable<br>sudo apt-get update<br>sudo apt-get install octave</p>
+</blockquote>
+<p>参考<a href="https://askubuntu.com/questions/645600/how-to-install-octave-4-0-0-in-ubuntu-14-04" target="_blank" rel="external">这里</a></p>
+<p>之后运行报错：</p>
+<blockquote>
+<p>The settings file /home/user/.config/octave/qt-settings does not exist and can not be created.<br>Make sure you have read and write permissions to /home/user/.config/octave Octave GUI must be closed now.</p>
+</blockquote>
+<p>解决办法：</p>
+<blockquote>
+<p>cd .config/octave<br>sudo chown user qt-settings</p>
+</blockquote>
+<p>其中user改为自己的用户名。chown为更改拥有者的命令。</p>
+<p>参考<a href="https://unix.stackexchange.com/questions/292721/error-running-octave-in-ubuntu-16-04" target="_blank" rel="external">这里</a></p>
+<h5 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h5><h6 id="安装包"><a href="#安装包" class="headerlink" title="安装包"></a>安装包</h6><p>安装包的下载列表在<a href="https://octave.sourceforge.io/packages.php" target="_blank" rel="external">这里</a>,直接下载即可。</p>
+<p>尝试：</p>
+<blockquote>
+<p>pkg install /home/shensir/Documents/MyPrograming/octave/struct-1.0.14.tar.gz</p>
+</blockquote>
+<p>报错：</p>
+<blockquote>
+<p>pkg: please install the Debian package “liboctave-dev” to get the mkoctfile command<br>error: called from ‘<strong>gripe_missing_component</strong>‘ in file /usr/share/octave/4.0.2/m/help/<strong>gripe_missing_component</strong>.m near line 53, column 3</p>
+</blockquote>
+<p>解决报错：</p>
+<blockquote>
+<p>sudo apt-get install liboctave-dev</p>
+</blockquote>
+<p>安装成功：</p>
+<blockquote>
+<p>For information about changes from previous versions of the struct package, run ‘news struct’.</p>
+</blockquote>
+<p>查看已经安装的包：</p>
+<blockquote>
+<p>pkg list</p>
+<p>Package Name  | Version | Installation directory<br>optim  |   1.5.0 | /home/shensir/octave/optim-1.5.0<br>struct  |  1.0.14 | /home/shensir/octave/struct-1.0.14<br>symbolic  |   2.5.0 | /home/shensir/octave/symbolic-2.5.0</p>
+</blockquote>
+<p>调用安装的包：</p>
+<blockquote>
+<p>pkg load symbolic<br>sym x</p>
+</blockquote>
+<p>嗯，报错了。。。</p>
+<pre><code>Traceback (most recent call last):
+  File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;
+ImportError: No module named sympy
+OctSymPy v2.5.0: this is free software without warranty, see source.
+Initializing communication with SymPy using a popen2() pipe.
+error: Python cannot import SymPy: have you installed SymPy?
+error: called from
+    assert_have_python_and_sympy at line 37 column 5
+    python_ipc_popen2 at line 78 column 5
+    python_ipc_driver at line 58 column 13
+    python_cmd at line 164 column 9
+    sym at line 340 column 9
+</code></pre><p>貌似说python没有装sympy，检查了下，已经装了。注意到可能是Python路径设置的问题，就查了查官方给的symbolic的<a href="https://octave.sourceforge.io/symbolic/NEWS.html" target="_blank" rel="external">文档</a>.</p>
+<pre><code>* The environment variable `PYTHON` controls which Python executable is
+  used.  The command
+       `sympref python C:\bin\python`
+  has been deprecated; instead please use:
+       `setenv PYTHON C:\bin\python`
+</code></pre><p>于是[这里用的anaconda]：</p>
+<blockquote>
+<p>setenv PYTHON /home/shensir/anaconda3/bin/python</p>
+</blockquote>
+<p>搞定。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> linux </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> Octave </tag>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[OpenCV系列笔记十六：Using the mean shift algorithm to find an object]]></title>
       <url>/2017/05/04/Using-the-mean-shift-algorithm-to-find-an-object/</url>
       <content type="html"><![CDATA[<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>在上一篇笔记<a href="http://datahonor.com/2017/05/04/Backprojecting-a-histogram-to/">OpenCV系列笔记十五：Backprojecting a histogram to detect specific image content </a>，我们了解了histogram backprojection的原理及用法。这里，我们在backprojection的基础上介绍一种新的算法，即mean shift。他用来在给定的模糊范围，精确定位一个已知histogram[从给定的ROI得到]的物体。来看下参考书的介绍：</p>
@@ -1435,9 +1524,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Data Analysis </tag>
             
@@ -1471,9 +1560,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Data Analysis </tag>
             
@@ -1522,9 +1611,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Data Analysis </tag>
             
@@ -1884,9 +1973,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Data Analysis </tag>
             
@@ -1926,9 +2015,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Data Analysis </tag>
             
@@ -2314,9 +2403,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Clustering </tag>
             
@@ -2363,9 +2452,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Clustering </tag>
             
