@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Cpp,OpenCV," />
 
 
 
@@ -89,15 +89,27 @@
 
 
 
-<meta name="description" content="十年饮冰，难凉热血。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DATA HONOR">
-<meta property="og:url" content="http://datahonor.com/page/8/index.html">
+<meta name="description" content="Overview在之前，我们介绍了Intergral Image， 还有通过mean shift算法搜索物体。这里，来学习下利用Intergral Image，通过比较histogram来追踪物体。
+代码里面比较难理解的就是先将灰度图转化为多通道二进制图的部分。关于这里我也迷惑好久，再次仔细读书，其实书上已经写的比较清楚了：
+
+The cv::integral function also work">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenCV系列笔记十八：Visual tracking using histograms">
+<meta property="og:url" content="http://datahonor.com/2017/05/15/Visual-tracking-using-histograms/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="十年饮冰，难凉热血。">
+<meta property="og:description" content="Overview在之前，我们介绍了Intergral Image， 还有通过mean shift算法搜索物体。这里，来学习下利用Intergral Image，通过比较histogram来追踪物体。
+代码里面比较难理解的就是先将灰度图转化为多通道二进制图的部分。关于这里我也迷惑好久，再次仔细读书，其实书上已经写的比较清楚了：
+
+The cv::integral function also work">
+<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/170515/Selection_051501.png">
+<meta property="og:updated_time" content="2017-05-15T09:15:10.321Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DATA HONOR">
-<meta name="twitter:description" content="十年饮冰，难凉热血。">
+<meta name="twitter:title" content="OpenCV系列笔记十八：Visual tracking using histograms">
+<meta name="twitter:description" content="Overview在之前，我们介绍了Intergral Image， 还有通过mean shift算法搜索物体。这里，来学习下利用Intergral Image，通过比较histogram来追踪物体。
+代码里面比较难理解的就是先将灰度图转化为多通道二进制图的部分。关于这里我也迷惑好久，再次仔细读书，其实书上已经写的比较清楚了：
+
+The cv::integral function also work">
+<meta name="twitter:image" content="http://blog-1252464519.costj.myqcloud.com/170515/Selection_051501.png">
 
 
 
@@ -125,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://datahonor.com/page/8/"/>
+  <link rel="canonical" href="http://datahonor.com/2017/05/15/Visual-tracking-using-histograms/"/>
 
 
 
 
 
-  <title> DATA HONOR - 十年饮冰，难凉热血。 </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> OpenCV系列笔记十八：Visual tracking using histograms | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -175,9 +187,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -302,9 +312,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -313,7 +323,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/02/25/About-Hexo/">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/05/15/Visual-tracking-using-histograms/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="不秩稚童">
@@ -337,10 +347,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/02/25/About-Hexo/" itemprop="url">
-                  About Hexo
-                </a>
+                OpenCV系列笔记十八：Visual tracking using histograms
               
             
           </h1>
@@ -355,334 +362,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-25T11:30:19+08:00">
-                2017-02-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/25/About-Hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/02/25/About-Hexo/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          自动开启编辑器为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/02/25/About-Hexo/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/02/25/Kaggle-Human-Resources-Analytics/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="不秩稚童">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="DATA HONOR">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/25/Kaggle-Human-Resources-Analytics/" itemprop="url">
-                  Kaggle: Human Resources Analytics
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-25T09:57:04+08:00">
-                2017-02-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/25/Kaggle-Human-Resources-Analytics/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/02/25/Kaggle-Human-Resources-Analytics/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Introduce这是新年定下的目标之一 —— Kaggle案例的学习这里，数据即来自Human R
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/02/25/Kaggle-Human-Resources-Analytics/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/02/23/OpenCV-Pyramid-and-Canny/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="不秩稚童">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="DATA HONOR">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/23/OpenCV-Pyramid-and-Canny/" itemprop="url">
-                  OpenCV [Pyramid and Canny]
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-23T08:27:25+08:00">
-                2017-02-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-15T16:56:09+08:00">
+                2017-05-15
               </time>
             
 
@@ -722,8 +403,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/23/OpenCV-Pyramid-and-Canny/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/02/23/OpenCV-Pyramid-and-Canny/" itemprop="commentCount"></span>
+                <a href="/2017/05/15/Visual-tracking-using-histograms/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/15/Visual-tracking-using-histograms/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -733,171 +414,13 @@
           
 
           
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          关于图像金字塔与边缘检测的结合。我们知道，cv::pyrDown会损失图像的信息，其后再使用cv::
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/02/23/OpenCV-Pyramid-and-Canny/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/02/22/OpenCV-Play-Video/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="不秩稚童">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="DATA HONOR">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/22/OpenCV-Play-Video/" itemprop="url">
-                  OpenCV Wait!
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-22T20:43:53+08:00">
-                2017-02-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Cpp/" itemprop="url" rel="index">
-                    <span itemprop="name">Cpp</span>
-                  </a>
-                </span>
-
-                
-                
-              
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
             </span>
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/22/OpenCV-Play-Video/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/02/22/OpenCV-Play-Video/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
@@ -912,58 +435,125 @@
       
 
       
+        <h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>在之前，我们介绍了Intergral Image， 还有通过mean shift算法搜索物体。这里，来学习下利用Intergral Image，通过比较histogram来追踪物体。</p>
+<p>代码里面比较难理解的就是先将灰度图转化为多通道二进制图的部分。关于这里我也迷惑好久，再次仔细读书，其实书上已经写的比较清楚了：</p>
+<blockquote>
+<p>The cv::integral function also works for multichannel images. You can take advantage of this fact to compute histograms of image subregions using integral images. You simply need to convert your image into a multichannel image made of binary planes; each of these planes is associated to a bin of your histogram and shows you which pixels have a value that falls into this bin.</p>
+</blockquote>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#include &lt;cv.h&gt;</div><div class="line">#include &lt;opencv2/imgcodecs.hpp&gt;</div><div class="line">#include &lt;opencv/cv.hpp&gt;</div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include "grayhistogram.h"</div><div class="line">#include "integral.h"</div><div class="line">using namespace std;</div><div class="line"></div><div class="line"></div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    // Open image</div><div class="line">    cv::Mat image= cv::imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/bike55.bmp",0);</div><div class="line">    // define image roi</div><div class="line">    int xo=97, yo=112;</div><div class="line">    int width=25, height=30;</div><div class="line">    cv::Mat roi(image,cv::Rect(xo,yo,width,height));</div><div class="line"></div><div class="line">    // compute sum</div><div class="line">    // returns a Scalar to work with multi-channel images</div><div class="line">    cv::Scalar sum= cv::sum(roi);</div><div class="line">    std::cout &lt;&lt; sum[0] &lt;&lt; std::endl;</div><div class="line"></div><div class="line">    // compute integral image</div><div class="line">    cv::Mat integralImage;</div><div class="line">    cv::integral(image,integralImage,CV_32S);</div><div class="line">    // get sum over an area using three additions/subtractions</div><div class="line">    int sumInt= integralImage.at&lt;int&gt;(yo+height,xo+width)</div><div class="line">                -integralImage.at&lt;int&gt;(yo+height,xo)</div><div class="line">                -integralImage.at&lt;int&gt;(yo,xo+width)</div><div class="line">                +integralImage.at&lt;int&gt;(yo,xo);</div><div class="line">    std::cout &lt;&lt; sumInt &lt;&lt; std::endl;</div><div class="line"></div><div class="line">    // histogram of 16 bins</div><div class="line">    Histogram1D h;</div><div class="line">    h.setNBins(16);</div><div class="line">    // compute histogram over image roi</div><div class="line">    cv::Mat refHistogram= h.getHistogram(roi);</div><div class="line"></div><div class="line">    cv::imshow("Reference Histogram",h.getHistogramImage(roi,16));</div><div class="line"></div><div class="line">    // first create 16-plane binary image</div><div class="line">    cv::Mat planes;</div><div class="line">    convertToBinaryPlanes(image,planes,16);</div><div class="line">    // then compute integral image</div><div class="line">    IntegralImage&lt;float,16&gt; intHisto(planes);</div><div class="line"></div><div class="line"></div><div class="line">    // for testing compute a histogram of 16 bins with integral image</div><div class="line">    cv::Vec&lt;float,16&gt; histogram= intHisto(xo,yo,width,height);</div><div class="line">//    std::cout&lt;&lt;" integral image histogram "&lt;&lt; histogram &lt;&lt; std::endl;</div><div class="line"></div><div class="line">    cv::Mat im= h.getImageOfHistogram(cv::Mat(histogram),16);</div><div class="line">    cv::imshow("IM", im);</div><div class="line"></div><div class="line"></div><div class="line">    // search in second image</div><div class="line">    cv::Mat secondImage= cv::imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/bike65.bmp",0);</div><div class="line">    if (!secondImage.data)</div><div class="line">        return 0;</div><div class="line"></div><div class="line">    // first create 16-plane binary image</div><div class="line">    convertToBinaryPlanes(secondImage,planes,16);</div><div class="line"></div><div class="line">    // then compute integral image</div><div class="line">    IntegralImage&lt;float,16&gt; intHistogram(planes);</div><div class="line"></div><div class="line">    // compute histogram of 16 bins with integral image (testing)</div><div class="line">    histogram= intHistogram(135,114,width,height);</div><div class="line"></div><div class="line">    cv::Mat im2= h.getImageOfHistogram(cv::Mat(histogram),16);</div><div class="line"></div><div class="line">    std::cout &lt;&lt; "Distance= " &lt;&lt; cv::compareHist(refHistogram,histogram, cv::HISTCMP_INTERSECT) &lt;&lt; std::endl;</div><div class="line"></div><div class="line">    double maxSimilarity=0.0;</div><div class="line">    int xbest, ybest;</div><div class="line">    // loop over a horizontal strip around girl location in initial image</div><div class="line">    for (int y=110; y&lt;120; y++) &#123;</div><div class="line">        for (int x=0; x&lt;secondImage.cols-width; x++) &#123;</div><div class="line"></div><div class="line"></div><div class="line">            // compute histogram of 16 bins using integral image</div><div class="line">            histogram= intHistogram(x,y,width,height);</div><div class="line">            // compute distance with reference histogram</div><div class="line">            double distance= cv::compareHist(refHistogram,histogram, cv::HISTCMP_INTERSECT);</div><div class="line">            // find position of most similar histogram</div><div class="line">            if (distance&gt;maxSimilarity) &#123;</div><div class="line"></div><div class="line">                xbest= x;</div><div class="line">                ybest= y;</div><div class="line">                maxSimilarity= distance;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            std::cout &lt;&lt; "Distance(" &lt;&lt; x &lt;&lt; "," &lt;&lt; y &lt;&lt; ")=" &lt;&lt; distance &lt;&lt; std::endl;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    std::cout &lt;&lt; "Best solution= (" &lt;&lt; xbest &lt;&lt; "," &lt;&lt; ybest &lt;&lt; ")=" &lt;&lt; maxSimilarity &lt;&lt; std::endl;</div><div class="line"></div><div class="line">    // draw a rectangle around target object</div><div class="line">    cv::rectangle(image,cv::Rect(xo,yo,width,height),0);</div><div class="line">    cv::namedWindow("Initial Image");</div><div class="line">    cv::imshow("Initial Image",image);</div><div class="line"></div><div class="line">    cv::namedWindow("New Image");</div><div class="line">    cv::imshow("New Image",secondImage);</div><div class="line"></div><div class="line">    // draw rectangle at best location</div><div class="line">    cv::rectangle(secondImage,cv::Rect(xbest,ybest,width,height),0);</div><div class="line">    // draw rectangle around search area</div><div class="line">    cv::rectangle(secondImage,cv::Rect(0,110,secondImage.cols,height+10),255);</div><div class="line">    cv::namedWindow("Object location");</div><div class="line">    cv::imshow("Object location",secondImage);</div><div class="line"></div><div class="line">    cv::waitKey(0);</div><div class="line"></div><div class="line">    return 0;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="http://blog-1252464519.costj.myqcloud.com/170515/Selection_051501.png" alt=""></p>
+
+      
+    </div>
+
+    <div>
+      
         
-          
-          环境： CLion Ubuntu16.04 OPenCV3.2.0
-学习OpenCV基础时，在读取视
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/02/22/OpenCV-Play-Video/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2017/05/15/Visual-tracking-using-histograms/">OpenCV系列笔记十八：Visual tracking using histograms</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 不秩稚童 的个人博客">不秩稚童</a></p>
+  <p><span>发布时间:</span>2017年05月15日 - 16:05</p>
+  <p><span>最后更新:</span>2017年05月15日 - 17:05</p>
+  <p><span>原始链接:</span><a href="/2017/05/15/Visual-tracking-using-histograms/" title="OpenCV系列笔记十八：Visual tracking using histograms">http://datahonor.com/2017/05/15/Visual-tracking-using-histograms/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/05/15/Visual-tracking-using-histograms/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+	clipboard.on('success', $(function(){
+	  $(".fa-clipboard").click(function(){
+		swal({   
+		  title: "",   
+		  text: '复制成功',   
+		  html: false,
+		  timer: 500,   
+		  showConfirmButton: false
+	    });
+	  });
+    }));  
+</script>
+
+
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
-      
-    </div>
-
-    <div>
       
     </div>
 
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/Cpp/" rel="tag"># Cpp</a>
+          
+            <a href="/tags/OpenCV/" rel="tag"># OpenCV</a>
+          
+        </div>
       
 
       
+        
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/15/Adaptive-thresholding/" rel="next" title="OpenCV系列笔记十七：Adaptive thresholding">
+                <i class="fa fa-chevron-left"></i> OpenCV系列笔记十七：Adaptive thresholding
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/15/OpenCV计算结果保存-YAML/" rel="prev" title="OpenCV计算结果保存--YAML/XML">
+                OpenCV计算结果保存--YAML/XML <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span>
-  </nav>
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
 
+      
+    </div>
+  </div>
 
           
           </div>
@@ -971,6 +561,18 @@
 
 
           
+  <div class="comments" id="comments">
+
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
 
 
@@ -997,8 +599,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
@@ -1085,6 +696,23 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a></li></ol></div>
+            
+
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1198,6 +826,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
@@ -1214,9 +846,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'http-datahonor-com';
-      var disqus_identifier = 'page/8/index.html';
+      var disqus_identifier = '2017/05/15/Visual-tracking-using-histograms/';
 
-      var disqus_title = "";
+      var disqus_title = "OpenCV系列笔记十八：Visual tracking using histograms";
 
 
       function run_disqus_script(disqus_script) {
@@ -1229,6 +861,13 @@
 
       run_disqus_script('count.js');
 
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
       
 
     </script>

@@ -4,6 +4,72 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/05/15/Morphalogical-Operations/</loc>
+    <lastmod>2017-05-15T15:13:52.765Z</lastmod>
+    <data>
+        <display>
+        <title>OpenCV系列笔记十九：Morphalogical Operations</title>
+        <pubTime>2017-05-15T14:59:20.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/05/15/OpenCV%E8%AE%A1%E7%AE%97%E7%BB%93%E6%9E%9C%E4%BF%9D%E5%AD%98-YAML/</loc>
+    <lastmod>2017-05-15T14:51:42.519Z</lastmod>
+    <data>
+        <display>
+        <title>OpenCV计算结果保存--YAML/XML</title>
+        <pubTime>2017-05-15T14:42:16.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/05/15/Visual-tracking-using-histograms/</loc>
+    <lastmod>2017-05-15T09:15:10.321Z</lastmod>
+    <data>
+        <display>
+        <title>OpenCV系列笔记十八：Visual tracking using histograms</title>
+        <pubTime>2017-05-15T08:56:09.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/05/15/Adaptive-thresholding/</loc>
     <lastmod>2017-05-15T00:42:41.143Z</lastmod>
     <data>
@@ -956,9 +1022,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
@@ -1028,9 +1094,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
@@ -1058,9 +1124,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
@@ -1110,9 +1176,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
@@ -1190,9 +1256,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          

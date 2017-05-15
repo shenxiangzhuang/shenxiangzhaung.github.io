@@ -3,6 +3,129 @@
   
     
     <entry>
+      <title><![CDATA[OpenCV系列笔记十九：Morphalogical Operations]]></title>
+      <url>/2017/05/15/Morphalogical-Operations/</url>
+      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>一些图像的形态学操作，主要包括Erosion, Dilation, Closing 和 Opening.</p>
+<p>它们之间有一些巧妙的关系：</p>
+<p>Erosion and Dilation:</p>
+<blockquote>
+<p>The erosion of an image is equivalent to the complement of the<br>dilation of the complement image<br>The dilation of an image is equivalent to the complement of the<br>erosion of the complement image</p>
+</blockquote>
+<p>Closing and Opening:</p>
+<blockquote>
+<p>The opening and closing filters are simply defined in terms of the basic<br>erosion and dilation operations. Closing is defined as the erosion of the<br>dilation of an image. Opening is defined as the dilation of the erosion of<br>an image.</p>
+</blockquote>
+<p>最后注意下Idempotent：</p>
+<blockquote>
+<p>Note that applying the same opening (and similarly the closing) operator on an image several times has no effect. Indeed, as the holes have been filled by the first opening filter, an additional application of the same filter will not produce any other changes to the image. In mathematical terms, these operators are said to be idempotent.</p>
+</blockquote>
+<p>对这些概念的理解可以参考Youtube的一套视频，讲的挺好(自备梯子:-)：</p>
+<p><a href="https://www.youtube.com/watch?v=BldfktFW1bQ" target="_blank" rel="external">传送门</a></p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><h5 id="Erosion-and-Dilation"><a href="#Erosion-and-Dilation" class="headerlink" title="Erosion and Dilation"></a>Erosion and Dilation</h5><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#include &lt;cv.h&gt;</div><div class="line">#include &lt;highgui.h&gt;</div><div class="line">#include &lt;opencv2/imgcodecs.hpp&gt;</div><div class="line">#include &lt;opencv/cv.hpp&gt;</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line"></div><div class="line">    cv::Mat image = cv::imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/binary.bmp");</div><div class="line">    cv::imshow("Original image", image);</div><div class="line">    // Erode the image</div><div class="line">    // with the default 3x3 structuring element (SE)</div><div class="line">    cv::Mat eroded;  // the destination image</div><div class="line">    cv::erode(image, eroded, cv::Mat());</div><div class="line">    cv::imshow("eroded", eroded);</div><div class="line"></div><div class="line">    // Erode the image with a larger SE</div><div class="line">    // create a 7x7 mat with containing all ls</div><div class="line">    cv::Mat element(7, 7, CV_8U, cv::Scalar(1));</div><div class="line">    // erode the image with that SE</div><div class="line">    cv::erode(image, eroded, element);</div><div class="line">    cv::imshow("Eroded by 7x7 elements", eroded);</div><div class="line"></div><div class="line">    // Erode the image 3 times</div><div class="line">    cv::erode(image, eroded, cv::Mat(), cv::Point(-1,-1), 3);</div><div class="line">    cv::imshow("eroded 3 times", eroded);</div><div class="line"></div><div class="line">    // Dilate the image</div><div class="line">    cv:: Mat dilate;</div><div class="line">    cv::dilate(image, dilate, cv::Mat());</div><div class="line">    cv::imshow("dilate", dilate);</div><div class="line"></div><div class="line">    cv::waitKey();</div><div class="line">    return 0;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="http://blog-1252464519.costj.myqcloud.com/170515/Selection_051502.png" alt=""></p>
+<h5 id="Closing-and-Opening"><a href="#Closing-and-Opening" class="headerlink" title="Closing and Opening"></a>Closing and Opening</h5><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#include &lt;cv.h&gt;</div><div class="line">#include &lt;highgui.h&gt;</div><div class="line">#include &lt;opencv2/imgcodecs.hpp&gt;</div><div class="line">#include &lt;opencv/cv.hpp&gt;</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">    cv::Mat image = cv::imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/binary.bmp");</div><div class="line"></div><div class="line">    cv::imshow("Original image", image);</div><div class="line">    // Close the image</div><div class="line">    cv::Mat element5(5 ,5, CV_8U, cv::Scalar(1));</div><div class="line">    cv::Mat closed;</div><div class="line">    cv::morphologyEx(image, closed,   // input and output</div><div class="line">                     cv::MORPH_CLOSE,  // operator code</div><div class="line">                     element5);  // structuring element</div><div class="line"></div><div class="line">    cv::imshow("Cloed", closed);</div><div class="line"></div><div class="line">    // Opening the image</div><div class="line">    cv::Mat opening;</div><div class="line">    cv::morphologyEx(image, opening,   // input and output</div><div class="line">                     cv::MORPH_OPEN,  // operator code</div><div class="line">                     element5);  // structuring element</div><div class="line">    cv::imshow("opening", opening);</div><div class="line"></div><div class="line"></div><div class="line">    // opening first, then closing</div><div class="line">    cv::Mat open_closed;</div><div class="line">    cv::morphologyEx(image, open_closed, cv::MORPH_OPEN, element5);</div><div class="line">    cv::morphologyEx(open_closed, open_closed, cv::MORPH_CLOSE, element5);</div><div class="line">    cv::imshow("open_closed", open_closed);</div><div class="line"></div><div class="line">    cv::waitKey();</div><div class="line"></div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="http://blog-1252464519.costj.myqcloud.com/170515/Selection_051503.png" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Cpp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[OpenCV计算结果保存--YAML/XML]]></title>
+      <url>/2017/05/15/OpenCV%E8%AE%A1%E7%AE%97%E7%BB%93%E6%9E%9C%E4%BF%9D%E5%AD%98-YAML/</url>
+      <content type="html"><![CDATA[<p>在图像的操作与识别等过程中，我们很多时候要保存一些计算结果，方便后续的使用。OpenCV为我们提供了XML/YAML持久化层来完成这个任务。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"opencv2/highgui.hpp"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">// 写入操作</span></div><div class="line">    <span class="function">FileStorage <span class="title">fs</span><span class="params">(<span class="string">"Test.yml"</span>, FileStorage::WRITE)</span></span>;</div><div class="line">    <span class="comment">// save as int</span></div><div class="line">    <span class="keyword">int</span> fps = <span class="number">5</span>;</div><div class="line">    fs&lt;&lt;<span class="string">"fps"</span>&lt;&lt;fps;</div><div class="line"></div><div class="line">    <span class="comment">// mat</span></div><div class="line">    Mat m1 = Mat::eye(<span class="number">2</span>, <span class="number">3</span>, CV_32F);</div><div class="line">    Mat m2 = Mat::ones(<span class="number">3</span>, <span class="number">2</span>, CV_32F);</div><div class="line">    Mat result = (m1+<span class="number">1</span>).mul(m1+<span class="number">3</span>);</div><div class="line">    fs&lt;&lt;<span class="string">"Result"</span>&lt;&lt;result;</div><div class="line"></div><div class="line">    fs.release();</div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">// 读取操作</span></div><div class="line">    <span class="function">FileStorage <span class="title">fs_r</span><span class="params">(<span class="string">"Test.yml"</span>, FileStorage::READ)</span></span>;</div><div class="line"></div><div class="line">    Mat r;</div><div class="line">    fs_r[<span class="string">"Result"</span>] &gt;&gt; r;</div><div class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt; r&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">    fs_r.release();</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<blockquote>
+<p>[8, 3, 3;<br> 3, 8, 3]</p>
+</blockquote>
+<p>此时，查看Test.YML文件：</p>
+<pre><code>%YAML:1.0
+---
+fps: 5
+Result: !!opencv-matrix
+   rows: 2
+   cols: 3
+   dt: f
+   data: [ 8., 3., 3., 3., 8., 3. ]
+</code></pre><p>同样地，我们将上面文件的拓展名改为.xml，再次运行我们可以得到Test.xml文件：</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;opencv_storage&gt;
+&lt;fps&gt;5&lt;/fps&gt;
+&lt;Result type_id=&quot;opencv-matrix&quot;&gt;
+  &lt;rows&gt;2&lt;/rows&gt;
+  &lt;cols&gt;3&lt;/cols&gt;
+  &lt;dt&gt;f&lt;/dt&gt;
+  &lt;data&gt;
+    8. 3. 3. 3. 8. 3.&lt;/data&gt;&lt;/Result&gt;
+&lt;/opencv_storage&gt;
+</code></pre><p>参考：<em>OpenCV By Example</em></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Cpp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[OpenCV系列笔记十八：Visual tracking using histograms]]></title>
+      <url>/2017/05/15/Visual-tracking-using-histograms/</url>
+      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>在之前，我们介绍了Intergral Image， 还有通过mean shift算法搜索物体。这里，来学习下利用Intergral Image，通过比较histogram来追踪物体。</p>
+<p>代码里面比较难理解的就是先将灰度图转化为多通道二进制图的部分。关于这里我也迷惑好久，再次仔细读书，其实书上已经写的比较清楚了：</p>
+<blockquote>
+<p>The cv::integral function also works for multichannel images. You can take advantage of this fact to compute histograms of image subregions using integral images. You simply need to convert your image into a multichannel image made of binary planes; each of these planes is associated to a bin of your histogram and shows you which pixels have a value that falls into this bin.</p>
+</blockquote>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#include &lt;cv.h&gt;</div><div class="line">#include &lt;opencv2/imgcodecs.hpp&gt;</div><div class="line">#include &lt;opencv/cv.hpp&gt;</div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include "grayhistogram.h"</div><div class="line">#include "integral.h"</div><div class="line">using namespace std;</div><div class="line"></div><div class="line"></div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    // Open image</div><div class="line">    cv::Mat image= cv::imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/bike55.bmp",0);</div><div class="line">    // define image roi</div><div class="line">    int xo=97, yo=112;</div><div class="line">    int width=25, height=30;</div><div class="line">    cv::Mat roi(image,cv::Rect(xo,yo,width,height));</div><div class="line"></div><div class="line">    // compute sum</div><div class="line">    // returns a Scalar to work with multi-channel images</div><div class="line">    cv::Scalar sum= cv::sum(roi);</div><div class="line">    std::cout &lt;&lt; sum[0] &lt;&lt; std::endl;</div><div class="line"></div><div class="line">    // compute integral image</div><div class="line">    cv::Mat integralImage;</div><div class="line">    cv::integral(image,integralImage,CV_32S);</div><div class="line">    // get sum over an area using three additions/subtractions</div><div class="line">    int sumInt= integralImage.at&lt;int&gt;(yo+height,xo+width)</div><div class="line">                -integralImage.at&lt;int&gt;(yo+height,xo)</div><div class="line">                -integralImage.at&lt;int&gt;(yo,xo+width)</div><div class="line">                +integralImage.at&lt;int&gt;(yo,xo);</div><div class="line">    std::cout &lt;&lt; sumInt &lt;&lt; std::endl;</div><div class="line"></div><div class="line">    // histogram of 16 bins</div><div class="line">    Histogram1D h;</div><div class="line">    h.setNBins(16);</div><div class="line">    // compute histogram over image roi</div><div class="line">    cv::Mat refHistogram= h.getHistogram(roi);</div><div class="line"></div><div class="line">    cv::imshow("Reference Histogram",h.getHistogramImage(roi,16));</div><div class="line"></div><div class="line">    // first create 16-plane binary image</div><div class="line">    cv::Mat planes;</div><div class="line">    convertToBinaryPlanes(image,planes,16);</div><div class="line">    // then compute integral image</div><div class="line">    IntegralImage&lt;float,16&gt; intHisto(planes);</div><div class="line"></div><div class="line"></div><div class="line">    // for testing compute a histogram of 16 bins with integral image</div><div class="line">    cv::Vec&lt;float,16&gt; histogram= intHisto(xo,yo,width,height);</div><div class="line">//    std::cout&lt;&lt;" integral image histogram "&lt;&lt; histogram &lt;&lt; std::endl;</div><div class="line"></div><div class="line">    cv::Mat im= h.getImageOfHistogram(cv::Mat(histogram),16);</div><div class="line">    cv::imshow("IM", im);</div><div class="line"></div><div class="line"></div><div class="line">    // search in second image</div><div class="line">    cv::Mat secondImage= cv::imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/bike65.bmp",0);</div><div class="line">    if (!secondImage.data)</div><div class="line">        return 0;</div><div class="line"></div><div class="line">    // first create 16-plane binary image</div><div class="line">    convertToBinaryPlanes(secondImage,planes,16);</div><div class="line"></div><div class="line">    // then compute integral image</div><div class="line">    IntegralImage&lt;float,16&gt; intHistogram(planes);</div><div class="line"></div><div class="line">    // compute histogram of 16 bins with integral image (testing)</div><div class="line">    histogram= intHistogram(135,114,width,height);</div><div class="line"></div><div class="line">    cv::Mat im2= h.getImageOfHistogram(cv::Mat(histogram),16);</div><div class="line"></div><div class="line">    std::cout &lt;&lt; "Distance= " &lt;&lt; cv::compareHist(refHistogram,histogram, cv::HISTCMP_INTERSECT) &lt;&lt; std::endl;</div><div class="line"></div><div class="line">    double maxSimilarity=0.0;</div><div class="line">    int xbest, ybest;</div><div class="line">    // loop over a horizontal strip around girl location in initial image</div><div class="line">    for (int y=110; y&lt;120; y++) &#123;</div><div class="line">        for (int x=0; x&lt;secondImage.cols-width; x++) &#123;</div><div class="line"></div><div class="line"></div><div class="line">            // compute histogram of 16 bins using integral image</div><div class="line">            histogram= intHistogram(x,y,width,height);</div><div class="line">            // compute distance with reference histogram</div><div class="line">            double distance= cv::compareHist(refHistogram,histogram, cv::HISTCMP_INTERSECT);</div><div class="line">            // find position of most similar histogram</div><div class="line">            if (distance&gt;maxSimilarity) &#123;</div><div class="line"></div><div class="line">                xbest= x;</div><div class="line">                ybest= y;</div><div class="line">                maxSimilarity= distance;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            std::cout &lt;&lt; "Distance(" &lt;&lt; x &lt;&lt; "," &lt;&lt; y &lt;&lt; ")=" &lt;&lt; distance &lt;&lt; std::endl;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    std::cout &lt;&lt; "Best solution= (" &lt;&lt; xbest &lt;&lt; "," &lt;&lt; ybest &lt;&lt; ")=" &lt;&lt; maxSimilarity &lt;&lt; std::endl;</div><div class="line"></div><div class="line">    // draw a rectangle around target object</div><div class="line">    cv::rectangle(image,cv::Rect(xo,yo,width,height),0);</div><div class="line">    cv::namedWindow("Initial Image");</div><div class="line">    cv::imshow("Initial Image",image);</div><div class="line"></div><div class="line">    cv::namedWindow("New Image");</div><div class="line">    cv::imshow("New Image",secondImage);</div><div class="line"></div><div class="line">    // draw rectangle at best location</div><div class="line">    cv::rectangle(secondImage,cv::Rect(xbest,ybest,width,height),0);</div><div class="line">    // draw rectangle around search area</div><div class="line">    cv::rectangle(secondImage,cv::Rect(0,110,secondImage.cols,height+10),255);</div><div class="line">    cv::namedWindow("Object location");</div><div class="line">    cv::imshow("Object location",secondImage);</div><div class="line"></div><div class="line">    cv::waitKey(0);</div><div class="line"></div><div class="line">    return 0;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="http://blog-1252464519.costj.myqcloud.com/170515/Selection_051501.png" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Cpp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[OpenCV系列笔记十七：Adaptive thresholding]]></title>
       <url>/2017/05/15/Adaptive-thresholding/</url>
       <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>在介绍Adaptive thresholding之前，让我们来看看Integral Image的概念：</p>
@@ -1704,9 +1827,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -1740,9 +1863,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -1791,9 +1914,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -2153,9 +2276,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -2195,9 +2318,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
