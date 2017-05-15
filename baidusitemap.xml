@@ -4,8 +4,30 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/05/15/Adaptive-thresholding/</loc>
+    <lastmod>2017-05-15T00:42:41.143Z</lastmod>
+    <data>
+        <display>
+        <title>OpenCV系列笔记十七：Adaptive thresholding</title>
+        <pubTime>2017-05-15T00:15:28.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/05/11/Queue/</loc>
-    <lastmod>2017-05-10T16:32:41.264Z</lastmod>
+    <lastmod>2017-05-11T06:12:03.380Z</lastmod>
     <data>
         <display>
         <title>Queue</title>
@@ -934,9 +956,9 @@
         
         <tag>Python</tag>
          
-        <tag>Data Analysis</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
@@ -1006,9 +1028,9 @@
         
         <tag>Python</tag>
          
-        <tag>Data Analysis</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
@@ -1036,9 +1058,9 @@
         
         <tag>Python</tag>
          
-        <tag>Data Analysis</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
@@ -1088,9 +1110,9 @@
         
         <tag>Python</tag>
          
-        <tag>Data Analysis</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
@@ -1168,9 +1190,9 @@
         
         <tag>Python</tag>
          
-        <tag>Data Analysis</tag>
-         
         <tag>Algorithm</tag>
+         
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          

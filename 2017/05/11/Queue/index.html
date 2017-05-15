@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://datahonor.com/2017/05/11/Queue/index.html">
 <meta property="og:site_name" content="DATA HONOR">
 <meta property="og:description" content="Overview前面学习的栈是后进先出[LIFO]，与之相对的是队列的先进先出[FIFO]。这里我们通过两种方式实现Queue,分别是Array和List。在Array实现的时候要注意，实际上，整个过程都是在一维的数组上操作的，但是，为了在enqueue[插入]和dequeue[弹出]数据的时候有效地利用空间，我们将其看作一个圆环，这样，前面dequeue留下的空间，还可以共之后enqueue使用">
-<meta property="og:updated_time" content="2017-05-10T16:32:41.264Z">
+<meta property="og:updated_time" content="2017-05-11T06:12:03.380Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Queue">
 <meta name="twitter:description" content="Overview前面学习的栈是后进先出[LIFO]，与之相对的是队列的先进先出[FIFO]。这里我们通过两种方式实现Queue,分别是Array和List。在Array实现的时候要注意，实际上，整个过程都是在一维的数组上操作的，但是，为了在enqueue[插入]和dequeue[弹出]数据的时候有效地利用空间，我们将其看作一个圆环，这样，前面dequeue留下的空间，还可以共之后enqueue使用">
@@ -431,6 +431,12 @@
 <blockquote>
 <p>3 4 </p>
 </blockquote>
+<h5 id="List实现–genQueue-h"><a href="#List实现–genQueue-h" class="headerlink" title="List实现–genQueue.h"></a>List实现–genQueue.h</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">// Created by shensir on 17-5-11.</span></div><div class="line"><span class="comment">//</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> CPPPROJECTS_GENQUEUE_H</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> CPPPROJECTS_GENQUEUE_H</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;list&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div><div class="line"><span class="keyword">class</span> Queue&#123;</div><div class="line"></div><div class="line"><span class="keyword">private</span>:</div><div class="line">    <span class="built_in">list</span>&lt;T&gt;lst;</div><div class="line"></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    Queue()&#123;&#125;;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span></span>&#123;</div><div class="line">        lst.clear();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isEmpty</span><span class="params">()</span><span class="keyword">const</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> lst.empty();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function">T&amp; <span class="title">front</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> lst.front();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function">T <span class="title">dequeue</span><span class="params">()</span></span>&#123;</div><div class="line">        T el = lst.front();</div><div class="line">        lst.pop_front();</div><div class="line">        <span class="keyword">return</span> el;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">enqueue</span><span class="params">(<span class="keyword">const</span> T&amp; el)</span></span>&#123;</div><div class="line">        lst.push_back(el);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">printListQueue</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">typename</span> <span class="built_in">list</span>&lt;T&gt;::iterator i = lst.begin(); i != lst.end(); i++)&#123;</div><div class="line">            <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;*i&lt;&lt;<span class="string">" "</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span> <span class="comment">//CPPPROJECTS_GENQUEUE_H</span></span></div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<h5 id="main-cpp-1"><a href="#main-cpp-1" class="headerlink" title="main.cpp"></a>main.cpp</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"genQueue.h"</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    Queue&lt;<span class="keyword">int</span>&gt; AQ;</div><div class="line">    AQ.enqueue(<span class="number">2</span>);</div><div class="line">    AQ.enqueue(<span class="number">3</span>);</div><div class="line">    AQ.enqueue(<span class="number">4</span>);</div><div class="line"></div><div class="line">    AQ.dequeue();</div><div class="line"></div><div class="line">    AQ.printListQueue();</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<blockquote>
+<p>3 4 </p>
+</blockquote>
 
       
     </div>
@@ -448,7 +454,7 @@
   <p><span>本文标题:</span><a href="/2017/05/11/Queue/">Queue</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 不秩稚童 的个人博客">不秩稚童</a></p>
   <p><span>发布时间:</span>2017年05月11日 - 00:05</p>
-  <p><span>最后更新:</span>2017年05月11日 - 00:05</p>
+  <p><span>最后更新:</span>2017年05月11日 - 14:05</p>
   <p><span>原始链接:</span><a href="/2017/05/11/Queue/" title="Queue">http://datahonor.com/2017/05/11/Queue/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/05/11/Queue/"  aria-label="复制成功！"></i></span>
   </p>
@@ -516,6 +522,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/15/Adaptive-thresholding/" rel="prev" title="OpenCV系列笔记十七：Adaptive thresholding">
+                OpenCV系列笔记十七：Adaptive thresholding <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -608,7 +618,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-count">71</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -690,7 +700,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Array实现–genArrayQueue-h"><span class="nav-text">Array实现–genArrayQueue.h</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#main-cpp"><span class="nav-text">main.cpp</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Array实现–genArrayQueue-h"><span class="nav-text">Array实现–genArrayQueue.h</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#main-cpp"><span class="nav-text">main.cpp</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#List实现–genQueue-h"><span class="nav-text">List实现–genQueue.h</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#main-cpp-1"><span class="nav-text">main.cpp</span></a></li></ol></li></ol></div>
             
 
 
