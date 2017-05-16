@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/04/27/Mouse-trackbar/</loc>
+    <lastmod>2017-05-16T01:14:21.545Z</lastmod>
+    <data>
+        <display>
+        <title>OpenCV系列笔记二：Mouse trackbar</title>
+        <pubTime>2017-04-26T16:06:56.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/05/15/Morphalogical-Operations/</loc>
     <lastmod>2017-05-15T15:13:52.765Z</lastmod>
     <data>
@@ -472,28 +494,6 @@
         <display>
         <title>OpenCV系列笔记三：Draw on image</title>
         <pubTime>2017-04-27T15:19:52.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/04/27/Mouse-trackbar/</loc>
-    <lastmod>2017-04-27T15:20:51.305Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记二：Mouse trackbar</title>
-        <pubTime>2017-04-26T16:06:56.000Z</pubTime>
         
         <tag>Cpp</tag>
          
