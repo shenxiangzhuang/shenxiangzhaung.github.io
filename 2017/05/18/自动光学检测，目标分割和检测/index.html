@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python," />
+  <meta name="keywords" content="Cpp,OpenCV," />
 
 
 
@@ -89,32 +89,26 @@
 
 
 
-<meta name="description" content="conda search and conda install在我们用conda install 安装包时，可能会出现像下面这种找不到的情况。这样我们就按照提示操作进行搜索：这时根据自己的系统找到对应的包进行如下尝试[之所以说尝试是因为，有时候会因依赖冲突等问题安装不成功]，进行安装：
-比如我的系统是linux64, 我尝试安装这个版本的包
-之后就是确认安装了： 
-   打开ipython进行检验：">
+<meta name="description" content="Overview在复习CookBook的闲暇，看了看OpenCV By Example, 里面的示例很不错，这里做下记录。此处实现了目标的背景去除，目标的分割和检测，以工厂螺母为例。就是下面的图啦。
+
+Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Anaconda使用笔记">
-<meta property="og:url" content="http://datahonor.com/2017/03/02/Anaconda使用笔记/index.html">
+<meta property="og:title" content="自动光学检测，目标分割和检测">
+<meta property="og:url" content="http://datahonor.com/2017/05/18/自动光学检测，目标分割和检测/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="conda search and conda install在我们用conda install 安装包时，可能会出现像下面这种找不到的情况。这样我们就按照提示操作进行搜索：这时根据自己的系统找到对应的包进行如下尝试[之所以说尝试是因为，有时候会因依赖冲突等问题安装不成功]，进行安装：
-比如我的系统是linux64, 我尝试安装这个版本的包
-之后就是确认安装了： 
-   打开ipython进行检验：">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Python/Anaconda/1.png">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Python/Anaconda/2.png">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Python/Anaconda/3.png">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Python/Anaconda/4.png">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Python/Anaconda/5.png">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Python/Anaconda/6.png">
-<meta property="og:updated_time" content="2017-03-02T08:56:28.759Z">
+<meta property="og:description" content="Overview在复习CookBook的闲暇，看了看OpenCV By Example, 里面的示例很不错，这里做下记录。此处实现了目标的背景去除，目标的分割和检测，以工厂螺母为例。就是下面的图啦。
+
+Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152">
+<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/170518/light.png">
+<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/170518/test.png">
+<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/170518/Selection_051801.png">
+<meta property="og:updated_time" content="2017-05-17T17:02:55.206Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Anaconda使用笔记">
-<meta name="twitter:description" content="conda search and conda install在我们用conda install 安装包时，可能会出现像下面这种找不到的情况。这样我们就按照提示操作进行搜索：这时根据自己的系统找到对应的包进行如下尝试[之所以说尝试是因为，有时候会因依赖冲突等问题安装不成功]，进行安装：
-比如我的系统是linux64, 我尝试安装这个版本的包
-之后就是确认安装了： 
-   打开ipython进行检验：">
-<meta name="twitter:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Python/Anaconda/1.png">
+<meta name="twitter:title" content="自动光学检测，目标分割和检测">
+<meta name="twitter:description" content="Overview在复习CookBook的闲暇，看了看OpenCV By Example, 里面的示例很不错，这里做下记录。此处实现了目标的背景去除，目标的分割和检测，以工厂螺母为例。就是下面的图啦。
+
+Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152">
+<meta name="twitter:image" content="http://blog-1252464519.costj.myqcloud.com/170518/light.png">
 
 
 
@@ -142,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://datahonor.com/2017/03/02/Anaconda使用笔记/"/>
+  <link rel="canonical" href="http://datahonor.com/2017/05/18/自动光学检测，目标分割和检测/"/>
 
 
 
 
 
-  <title> Anaconda使用笔记 | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 自动光学检测，目标分割和检测 | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -328,7 +322,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/03/02/Anaconda使用笔记/">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/05/18/自动光学检测，目标分割和检测/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="不秩稚童">
@@ -352,7 +346,7 @@
             
             
               
-                Anaconda使用笔记
+                自动光学检测，目标分割和检测
               
             
           </h1>
@@ -367,8 +361,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-02T16:53:45+08:00">
-                2017-03-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-18T00:49:33+08:00">
+                2017-05-18
               </time>
             
 
@@ -390,8 +384,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/categories/Cpp/" itemprop="url" rel="index">
+                    <span itemprop="name">Cpp</span>
                   </a>
                 </span>
 
@@ -408,8 +402,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/02/Anaconda使用笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/02/Anaconda使用笔记/" itemprop="commentCount"></span>
+                <a href="/2017/05/18/自动光学检测，目标分割和检测/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/18/自动光学检测，目标分割和检测/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -440,11 +434,15 @@
       
 
       
-        <h5 id="conda-search-and-conda-install"><a href="#conda-search-and-conda-install" class="headerlink" title="conda search and conda install"></a>conda search and conda install</h5><p>在我们用conda install 安装包时，可能会出现像下面这种找不到的情况。<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Python/Anaconda/1.png" alt=""><br>这样我们就按照提示操作进行搜索：<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Python/Anaconda/2.png" alt=""><br>这时根据自己的系统找到对应的包进行如下尝试[之所以说尝试是因为，有时候会因依赖冲突等问题安装不成功]，进行安装：</p>
-<p>比如我的系统是linux64, 我尝试安装这个版本的包<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Python/Anaconda/3.png" alt=""></p>
-<p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Python/Anaconda/4.png" alt=""><br>之后就是确认安装了： </p>
-<p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Python/Anaconda/5.png" alt=""><br>   打开ipython进行检验： </p>
-<p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Python/Anaconda/6.png" alt=""><br>可以看到安装成功。</p>
+        <h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>在复习CookBook的闲暇，看了看<em>OpenCV By Example</em>, 里面的示例很不错，这里做下记录。此处实现了目标的背景去除，目标的分割和检测，以工厂螺母为例。就是下面的图啦。</p>
+<p><img src="http://blog-1252464519.costj.myqcloud.com/170518/light.png" alt=""><br><img src="http://blog-1252464519.costj.myqcloud.com/170518/test.png" alt=""></p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">//</div><div class="line">// Created by shensir on 17-5-17.</div><div class="line">//</div><div class="line"></div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include "opencv2/highgui.hpp"</div><div class="line">#include "opencv2/imgproc.hpp"</div><div class="line"></div><div class="line">using namespace std;</div><div class="line">using namespace cv;</div><div class="line"></div><div class="line">// 光纹去除</div><div class="line">Mat removeLight(Mat img, Mat pattern, int method)&#123;</div><div class="line">    Mat aux;</div><div class="line">    // 如果方法是归一化</div><div class="line">    if(method==1)&#123;</div><div class="line">        // 相除时需要将图像改为32位浮点型</div><div class="line">        Mat img32, pattern32;</div><div class="line">        img.convertTo(img32, CV_32F);</div><div class="line">        pattern.convertTo(pattern32, CV_32F);</div><div class="line">        // 图像相除模式</div><div class="line">        aux = 255*(1-(img32/pattern32));</div><div class="line">        // 换回8bit</div><div class="line">        aux.convertTo(aux, CV_8U);</div><div class="line">    &#125;</div><div class="line">    else&#123;</div><div class="line">        aux = pattern - img;</div><div class="line">    &#125;</div><div class="line">    return aux;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 估计背景图像，大尺寸核矩阵模糊</div><div class="line">Mat calculateLightPattern(Mat img)&#123;</div><div class="line">    Mat pattern;</div><div class="line">    blur(img, pattern, Size(img.cols/3, img.rows/3));</div><div class="line">    return pattern;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">// 先进行形态学操作[在背景色是核函数模糊得到的时候，很有必要]，再二值化</div><div class="line">Mat getBinary(Mat img_no_light, int method_light)&#123;</div><div class="line">    Mat img_thr;</div><div class="line">    if(method_light!=2)&#123;</div><div class="line">        threshold(img_no_light, img_thr, 30, 255, THRESH_BINARY);</div><div class="line">    &#125; else&#123;</div><div class="line">        threshold(img_no_light, img_thr, 140, 255, THRESH_BINARY_INV);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // 进行形态学操作去除边缘不规则噪点</div><div class="line">    cv::Mat closed;</div><div class="line">    cv::Mat element5(5 ,5, CV_8U, cv::Scalar(1));</div><div class="line">    cv::morphologyEx(img_thr, closed,   // input and output</div><div class="line">                     cv::MORPH_CLOSE,  // operator code</div><div class="line">                     element5);  // structuring element</div><div class="line"></div><div class="line">    // Opening</div><div class="line">    cv::Mat opening;</div><div class="line">    cv::morphologyEx(closed, opening,   // input and output</div><div class="line">                     cv::MORPH_OPEN,  // operator code</div><div class="line">                     element5);  // structuring element</div><div class="line"></div><div class="line"></div><div class="line">    imshow("img_thr_closed-opening", opening);</div><div class="line"></div><div class="line">    return opening;</div><div class="line">&#125;</div><div class="line"></div><div class="line">static Scalar randomColor( RNG&amp; rng )</div><div class="line">&#123;</div><div class="line">    int icolor = (unsigned) rng;</div><div class="line">    return Scalar( icolor&amp;255, (icolor&gt;&gt;8)&amp;255, (icolor&gt;&gt;16)&amp;255 );</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 连通区域算法</div><div class="line">void ConnectedComponents(Mat img)&#123;</div><div class="line">    // 使用连通区域分离符合要求部分图像Mat标签</div><div class="line">    Mat labels;</div><div class="line">    int num_objects = connectedComponents(img, labels);</div><div class="line">    // 检查检测到的目标数目</div><div class="line">    if(num_objects&lt;2)&#123;</div><div class="line">        cout&lt;&lt;"No objects detected"&lt;&lt;endl;</div><div class="line">        return;</div><div class="line">    &#125; else&#123;</div><div class="line">        cout&lt;&lt;"Number of objects detected: "&lt;&lt; num_objects-1&lt;&lt;endl;</div><div class="line">    &#125;</div><div class="line">    // 创建彩色目标的输出图像</div><div class="line">    Mat output=Mat::zeros(img.rows, img.cols, CV_8UC3);</div><div class="line">    RNG rng(0xFFFFFFFF);</div><div class="line">    for(int i=1; i&lt;num_objects; i++)&#123;</div><div class="line">        Mat mask = labels==i;</div><div class="line">        output.setTo(randomColor(rng), mask);</div><div class="line">    &#125;</div><div class="line">    imshow("Result", output);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">// 连通区域算法</div><div class="line">void ConnectedComponentsStats(Mat img)&#123;</div><div class="line">    // 连通区域统计信息</div><div class="line">    Mat labels, stats, centroids;</div><div class="line">    int num_objects = connectedComponentsWithStats(img, labels, stats, centroids);</div><div class="line"></div><div class="line">    // 检测物体数目判别</div><div class="line">    if(num_objects&lt;2)&#123;</div><div class="line">        cout&lt;&lt;"No objects detedcted"&lt;&lt;endl;</div><div class="line">        return;</div><div class="line">    &#125; else&#123;</div><div class="line">        cout&lt;&lt;"Number of objects detected: "&lt;&lt;num_objects-1&lt;&lt;endl;</div><div class="line">    &#125;</div><div class="line">    // 创建彩色对象的输出图像并显示区域</div><div class="line">    Mat output = Mat::zeros(img.rows, img.cols, CV_8UC3);</div><div class="line">    RNG rng(0xFFFFFFFF);</div><div class="line"></div><div class="line">    for(int i=1; i&lt;num_objects; i++)&#123;</div><div class="line">        cout&lt;&lt;"Object "&lt;&lt;i&lt;&lt;" with pos: "&lt;&lt;centroids.at&lt;Point2d&gt;(i)</div><div class="line">                                         &lt;&lt;" with area "&lt;&lt;stats.at&lt;int&gt;(i, CC_STAT_AREA)&lt;&lt;endl;</div><div class="line">        Mat mask = labels==i;</div><div class="line">        output.setTo(randomColor(rng), mask);</div><div class="line"></div><div class="line">        // 使用区域绘制文本</div><div class="line">        stringstream ss;</div><div class="line">        ss&lt;&lt;"area: "&lt;&lt;stats.at&lt;int&gt;(i, CC_STAT_AREA);</div><div class="line"></div><div class="line">        putText(output, ss.str(), centroids.at&lt;Point2d&gt;(i), FONT_HERSHEY_SIMPLEX, 0.4, Scalar(255,255,255));</div><div class="line">    &#125;</div><div class="line">    imshow("Result", output);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//  边缘检测算法</div><div class="line">void FindContoursBasic(Mat img)&#123;</div><div class="line">    vector&lt;vector&lt;Point&gt;&gt; contours;</div><div class="line">    findContours(img, contours, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);</div><div class="line">    Mat output = Mat::zeros(img.rows, img.cols, CV_8UC3);</div><div class="line">    // 检查检测到的对象的数目</div><div class="line">    if(contours.size() == 0)&#123;</div><div class="line">        cout&lt;&lt;"No objects detected"&lt;&lt;endl;</div><div class="line">        return;</div><div class="line">    &#125; else&#123;</div><div class="line">        cout&lt;&lt;"Number of objects detected: "&lt;&lt;contours.size()&lt;&lt;endl;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    RNG rng(0xFFFFFFFF);</div><div class="line">    for(int i=0;i&lt;contours.size();i++)&#123;</div><div class="line">        drawContours(output, contours, i, randomColor(rng));</div><div class="line">    &#125;</div><div class="line">    imshow("Contours", output);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">    Mat img = imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/industry.pgm", IMREAD_GRAYSCALE);</div><div class="line">    imshow("Original Image", img);</div><div class="line"></div><div class="line">    Mat pattern = imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/light.pgm",0);</div><div class="line">    imshow("Back", pattern);</div><div class="line">//    Mat pattern = calculateLightPattern(img);</div><div class="line">    Mat img_no_light = removeLight(img, pattern, 1);</div><div class="line">    imshow("removelight--minus", img_no_light);</div><div class="line"></div><div class="line">    Mat img_thr = getBinary(img_no_light,1);</div><div class="line">//    ConnectedComponents(img_thr);</div><div class="line">    ConnectedComponentsStats(img_thr);</div><div class="line"></div><div class="line">    FindContoursBasic(img_thr);</div><div class="line">    waitKey(0);</div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<blockquote>
+<p>Number of objects detected: 4<br>Object 1 with pos: [160.203, 143.822] with area 2315<br>Object 2 with pos: [263.535, 131.804] with area 1820<br>Object 3 with pos: [52.7045, 143.926] with area 1171<br>Object 4 with pos: [68.233, 202.819] with area 1618<br>Number of objects detected: 4</p>
+</blockquote>
+<p><img src="http://blog-1252464519.costj.myqcloud.com/170518/Selection_051801.png" alt=""></p>
+<h4 id="待改进的地方"><a href="#待改进的地方" class="headerlink" title="待改进的地方"></a>待改进的地方</h4><p>在没有背景色图的时候，我们直接通过大尺寸核矩阵模糊化得到的效果很差，得到的objects大于50左右，后面自己加上了形态学的操作，降到了5个，但是还是多了一个。</p>
 
       
     </div>
@@ -452,6 +450,38 @@
     <div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2017/05/18/自动光学检测，目标分割和检测/">自动光学检测，目标分割和检测</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 不秩稚童 的个人博客">不秩稚童</a></p>
+  <p><span>作者邮箱:</span>datahonor@gmail.com</p>
+  <p><span>发布时间:</span>2017年05月18日 - 00:05</p>
+  <p><span>最后更新:</span>2017年05月18日 - 01:05</p>
+  <p><span>原始链接:</span><a href="/2017/05/18/自动光学检测，目标分割和检测/" title="自动光学检测，目标分割和检测">http://datahonor.com/2017/05/18/自动光学检测，目标分割和检测/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/05/18/自动光学检测，目标分割和检测/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+	clipboard.on('success', $(function(){
+	  $(".fa-clipboard").click(function(){
+		swal({   
+		  title: "",   
+		  text: '复制成功',   
+		  html: false,
+		  timer: 500,   
+		  showConfirmButton: false
+	    });
+	  });
+    }));  
+</script>
+
 
       
     </div>
@@ -475,7 +505,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/Cpp/" rel="tag"># Cpp</a>
+          
+            <a href="/tags/OpenCV/" rel="tag"># OpenCV</a>
           
         </div>
       
@@ -488,8 +520,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/02/OpenCV识别条形码——python实现-CPP补充/" rel="next" title="OpenCV识别条形码——python实现[CPP补充]">
-                <i class="fa fa-chevron-left"></i> OpenCV识别条形码——python实现[CPP补充]
+              <a href="/2017/05/15/Morphalogical-Operations/" rel="next" title="OpenCV系列笔记十九：Morphalogical Operations">
+                <i class="fa fa-chevron-left"></i> OpenCV系列笔记十九：Morphalogical Operations
               </a>
             
           </div>
@@ -497,10 +529,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/02/Ubuntu搭建SS/" rel="prev" title="Ubuntu搭建SS">
-                Ubuntu搭建SS <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -675,7 +703,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#conda-search-and-conda-install"><span class="nav-text">conda search and conda install</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#待改进的地方"><span class="nav-text">待改进的地方</span></a></li></ol></div>
             
 
 
@@ -815,9 +843,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'http-datahonor-com';
-      var disqus_identifier = '2017/03/02/Anaconda使用笔记/';
+      var disqus_identifier = '2017/05/18/自动光学检测，目标分割和检测/';
 
-      var disqus_title = "Anaconda使用笔记";
+      var disqus_title = "自动光学检测，目标分割和检测";
 
 
       function run_disqus_script(disqus_script) {
