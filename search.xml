@@ -3,6 +3,32 @@
   
     
     <entry>
+      <title><![CDATA[背景建模]]></title>
+      <url>/2017/05/19/%E8%83%8C%E6%99%AF%E5%BB%BA%E6%A8%A1/</url>
+      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>背景建模在视频监控等动态图像的检测上有很重要的位置.这篇文章将会逐渐学习一系列的背景建模方法.</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><h5 id="简单背景差分"><a href="#简单背景差分" class="headerlink" title="简单背景差分"></a>简单背景差分</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv/cv.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv/cv.hpp&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    Mat back1, back2;</div><div class="line">    back1 = imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/back1.jpg"</span>);</div><div class="line">    back2 = imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/back2.jpg"</span>);</div><div class="line"></div><div class="line">    Mat Original_img = back1.clone();</div><div class="line"></div><div class="line">    cvtColor(back1, back1, COLOR_BGR2GRAY);</div><div class="line">    cvtColor(back2, back2, COLOR_BGR2GRAY);</div><div class="line"></div><div class="line">    resize(back1, back1, Size(), <span class="number">0.1</span>, <span class="number">0.1</span>);</div><div class="line">    resize(back2, back2, Size(), <span class="number">0.1</span>, <span class="number">0.1</span>);</div><div class="line">    imshow(<span class="string">"back1"</span>, back1);</div><div class="line">    imshow(<span class="string">"back2"</span>, back2);</div><div class="line"></div><div class="line">    <span class="comment">// 直接相减</span></div><div class="line">    Mat result = back2 - back1;</div><div class="line">    imshow(<span class="string">"result"</span>, result);</div><div class="line"></div><div class="line">    waitKey(<span class="number">0</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出:<br><img src="http://blog-1252464519.costj.myqcloud.com/170518/Selection_051901.png" alt=""></p>
+<h4 id="Refrence"><a href="#Refrence" class="headerlink" title="Refrence"></a>Refrence</h4><p><em>OpenCV By Example</em></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Cpp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[实时视频中面具覆盖的实现]]></title>
       <url>/2017/05/18/%E5%AE%9E%E6%97%B6%E8%A7%86%E9%A2%91%E4%B8%AD%E9%9D%A2%E5%85%B7%E8%A6%86%E7%9B%96%E7%9A%84%E5%AE%9E%E7%8E%B0/</url>
       <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p><em>OpenCV By Example</em>第七章中的一个例子，识别算法是直接加载的给定的级联文件（书中的代码给提供了一份，OpenCV官方应该也能找的到）。检测到人脸之后就是面具的覆盖，这个过程类似之前的<a href="http://datahonor.com/2017/04/28/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E5%9B%9B%EF%BC%9AROI/">logo添加</a>,就是logo(此处是facemask)和背景(此处是人脸ROI)的对称的操作，之后将两者直接合并即可。</p>
