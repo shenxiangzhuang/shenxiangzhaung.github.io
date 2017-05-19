@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/03/06/The-Speed-of-Numpy/</loc>
+    <lastmod>2017-05-19T01:54:50.446Z</lastmod>
+    <data>
+        <display>
+        <title>The Speed of Numpy</title>
+        <pubTime>2017-03-06T05:49:15.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Numpy</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/05/19/%E8%83%8C%E6%99%AF%E5%BB%BA%E6%A8%A1/</loc>
     <lastmod>2017-05-18T17:01:40.939Z</lastmod>
     <data>
@@ -1022,28 +1044,6 @@
         <pubTime>2017-03-06T11:37:57.000Z</pubTime>
         
         <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/03/06/The-Speed-of-Numpy/</loc>
-    <lastmod>2017-03-06T06:05:09.531Z</lastmod>
-    <data>
-        <display>
-        <title>The Speed of Numpy</title>
-        <pubTime>2017-03-06T05:49:15.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Numpy</tag>
          
          
            
