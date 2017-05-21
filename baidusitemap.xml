@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/05/19/%E8%83%8C%E6%99%AF%E5%BB%BA%E6%A8%A1/</loc>
+    <lastmod>2017-05-21T01:22:13.011Z</lastmod>
+    <data>
+        <display>
+        <title>背景建模</title>
+        <pubTime>2017-05-18T16:54:03.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/03/06/The-Speed-of-Numpy/</loc>
     <lastmod>2017-05-19T01:54:50.446Z</lastmod>
     <data>
@@ -19,28 +41,6 @@
            
              
               <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/05/19/%E8%83%8C%E6%99%AF%E5%BB%BA%E6%A8%A1/</loc>
-    <lastmod>2017-05-18T17:01:40.939Z</lastmod>
-    <data>
-        <display>
-        <title>背景建模</title>
-        <pubTime>2017-05-18T16:54:03.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
           
         </display>
     </data>
