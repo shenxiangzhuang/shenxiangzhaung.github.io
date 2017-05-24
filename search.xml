@@ -3,6 +3,46 @@
   
     
     <entry>
+      <title><![CDATA[OpenCV系列笔记二十：Segmenting images using watersheds]]></title>
+      <url>/2017/05/24/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E4%BA%8C%E5%8D%81%EF%BC%9ASegmenting-images-using/</url>
+      <content type="html"><![CDATA[<h4 id="Over"><a href="#Over" class="headerlink" title="Over"></a>Over</h4><p>关于分水岭算法：</p>
+<blockquote>
+<p>The watershed transformation is a popular image processing algorithm that is used to quickly segment an image into homogenous regions. It relies on the idea that when the image is seen as a topological relief, the homogeneous regions correspond to relatively flat basins delimited by steep edges. </p>
+</blockquote>
+<p>在同质区域的分割里，watersheds是很好用的一个算法，但是其存在over-segment的问题，也就是会错误地分割出很多小的区域。这点我们可以通过在应用算法前手动添加标记来弥补。</p>
+<p>算法的进一步理解：</p>
+<blockquote>
+<p>use the topological map analogy in the description of the watershed algorithm. In order to create watershed segmentation, the idea is to progressively flood the image starting at level 0. As the level of water progressively increases (to levels 1, 2, 3, and so on), catchment basins are formed. The size of these basins also gradually increases and, consequently, the water of two different basins will eventually merge. When this happens, a watershed is created in order to keep the two basins separated. Once the level of water has reached its maximum level, the sets of these created basins and watersheds form the watershed segmentation.</p>
+</blockquote>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><h5 id="watershedSegmentation-h"><a href="#watershedSegmentation-h" class="headerlink" title="watershedSegmentation.h"></a>watershedSegmentation.h</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> CLIONS_WATERSHEDSEGMENTATION_H</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> CLIONS_WATERSHEDSEGMENTATION_H</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span> <span class="comment">//CLIONS_WATERSHEDSEGMENTATION_H</span></span></div><div class="line"></div><div class="line"><span class="keyword">class</span> WatershedSegmenter&#123;</div><div class="line"><span class="keyword">private</span>:</div><div class="line">    cv::Mat markers;</div><div class="line"></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setMarkers</span><span class="params">(<span class="keyword">const</span> cv::Mat&amp; markerImage)</span></span>&#123;</div><div class="line"></div><div class="line">        <span class="comment">// Convert to image of ints</span></div><div class="line">        markerImage.convertTo(markers, CV_32S);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    cv::<span class="function">Mat <span class="title">process</span><span class="params">(<span class="keyword">const</span> cv::Mat &amp; image)</span></span>&#123;</div><div class="line"></div><div class="line">        <span class="comment">// Apply watershed</span></div><div class="line">        cv::watershed(image, markers);</div><div class="line">        <span class="keyword">return</span> markers;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// Return result in the form of an image</span></div><div class="line">    cv::<span class="function">Mat <span class="title">getSegmentation</span><span class="params">()</span></span>&#123;</div><div class="line">        cv::Mat tmp;</div><div class="line">        <span class="comment">// all segment with label higher than 255</span></div><div class="line">        <span class="comment">// will be assigned value 255</span></div><div class="line">        markers.convertTo(tmp, CV_8U);</div><div class="line">        <span class="keyword">return</span> tmp;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// Return watershed in the form of an image</span></div><div class="line">    cv::<span class="function">Mat <span class="title">getWatersheds</span><span class="params">()</span></span>&#123;</div><div class="line">        cv::Mat tmp;</div><div class="line">        <span class="comment">// -1*255+255 = 0  --&gt; 分水岭算法将边界标记为-1，如此转化为0，黑色，其余全白色</span></div><div class="line">        markers.convertTo(tmp, CV_8U, <span class="number">255</span>, <span class="number">255</span>);</div><div class="line">        <span class="keyword">return</span> tmp;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div></pre></td></tr></table></figure>
+<h5 id="main-cpp"><a href="#main-cpp" class="headerlink" title="main.cpp"></a>main.cpp</h5><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#include &lt;cv.h&gt;</div><div class="line">#include &lt;highgui.h&gt;</div><div class="line">#include &lt;opencv2/imgcodecs.hpp&gt;</div><div class="line">#include &lt;opencv/cv.hpp&gt;</div><div class="line">#include "watershedSegmentation.h"</div><div class="line"></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">    cv::Mat image = cv::imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/cattle.png");</div><div class="line">    cv::Mat binary = cv::imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/binary.bmp",0);</div><div class="line">    cv::imshow("raw image", image);</div><div class="line"></div><div class="line">    cv::imshow("raw binary", binary);</div><div class="line">    // Eliminate noise and smaller objects</div><div class="line">    cv::Mat fg;</div><div class="line">    cv::erode(binary, fg, cv::Mat(), cv::Point(-1,-1), 4);</div><div class="line">    cv::imshow("fg", fg);</div><div class="line"></div><div class="line">//    threshold_type=CV_THRESH_BINARY:</div><div class="line">//    dst(x,y) = max_value, if src(x,y)&gt;threshold ; 0, otherwise.</div><div class="line"></div><div class="line">//    threshold_type=CV_THRESH_BINARY_INV:</div><div class="line">//    dst(x,y) = 0, if src(x,y)&gt;threshold; dst(x,y) = max_value,otherwise.</div><div class="line"></div><div class="line">    cv::Mat bg;</div><div class="line">    cv::dilate(binary, bg, cv::Mat(), cv::Point(-1,-1) ,5);</div><div class="line">    // 使得原来为黑色[0]的，变为灰色[草地]， 原来为白色[255]的，变为黑色[牛群]</div><div class="line">    cv::threshold(bg, bg, 1, 128, cv::THRESH_BINARY_INV);</div><div class="line">    cv::imshow("bg", bg);</div><div class="line"></div><div class="line">    // Create markers image</div><div class="line">    cv::Mat markers(binary.size(), CV_8U, cv::Scalar(0));</div><div class="line">    markers = fg+bg;</div><div class="line">    cv::imshow("markers", markers);</div><div class="line"></div><div class="line">    //Create watershed segmentation object</div><div class="line">    WatershedSegmenter segmenter;</div><div class="line"></div><div class="line">    // Set markers and process</div><div class="line">    segmenter.setMarkers(markers);</div><div class="line">    segmenter.process(image);</div><div class="line"></div><div class="line">    // Display segmentation result</div><div class="line">    cv::imshow("Segmentation", segmenter.getSegmentation());</div><div class="line"></div><div class="line">    // Display watersheds</div><div class="line">    cv::imshow("Watershed", segmenter.getWatersheds());</div><div class="line"></div><div class="line">    cv::waitKey();</div><div class="line">    return 0;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="http://blog-1252464519.costj.myqcloud.com/1705/Selection_052402.png" alt=""></p>
+<h5 id="main-cpp-1"><a href="#main-cpp-1" class="headerlink" title="main.cpp"></a>main.cpp</h5><p>我们可以手工添加标记来防止watersheds固有的over-segment问题，是为Marker-controlled watershed。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#include &lt;cv.h&gt;</div><div class="line">#include &lt;highgui.h&gt;</div><div class="line">#include &lt;opencv2/imgcodecs.hpp&gt;</div><div class="line">#include &lt;opencv/cv.hpp&gt;</div><div class="line">#include "watershedSegmentation.h"</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">    cv::Mat image = cv::imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/tower.jpg");</div><div class="line"></div><div class="line">    // Identify background pixels</div><div class="line">    cv::Mat imageMask(image.size(), CV_8U, cv::Scalar(0));</div><div class="line">    cv::rectangle(imageMask, cv::Point(5,5), cv::Point(image.cols-5, image.rows-5), cv::Scalar(255,255,255),3);</div><div class="line">    // Identify foreground pixels(int the middle of the image)</div><div class="line">    cv::rectangle(imageMask, cv::Point(image.cols/2-10, image.rows/2-10), cv::Point(image.cols/2+10, image.rows/2+10), cv::Scalar(1),10);</div><div class="line"></div><div class="line">    // Set markers and process</div><div class="line">    WatershedSegmenter segmenter;</div><div class="line">    segmenter.setMarkers(imageMask);</div><div class="line">    segmenter.process(image);</div><div class="line"></div><div class="line">    // Display the image with markers</div><div class="line">    cv::rectangle(image, cv::Point(5,5), cv::Point(image.cols-1, image.rows-5), cv::Scalar(255,255,255), 3);</div><div class="line">    cv::rectangle(image, cv::Point(image.cols/2-10,image.rows/2-10),cv::Point(image.cols/2+10,image.rows/2+10),cv::Scalar(1,1,1),10);</div><div class="line">    cv::imshow("Image with marker", image);</div><div class="line"></div><div class="line">    // Display watersheds</div><div class="line">    cv::imshow("Watershed", segmenter.getWatersheds());</div><div class="line"></div><div class="line">    cv::waitKey();</div><div class="line">    return 0;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="http://blog-1252464519.costj.myqcloud.com/1705/Selection_052403.png" alt=""></p>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><p><a href="http://cmm.ensmp.fr/~beucher/wtshed.html#mark" target="_blank" rel="external">http://cmm.ensmp.fr/~beucher/wtshed.html#mark</a><br><a href="http://docs.opencv.org/3.1.0/d3/db4/tutorial_py_watershed.html" target="_blank" rel="external">http://docs.opencv.org/3.1.0/d3/db4/tutorial_py_watershed.html</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Cpp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[背景建模]]></title>
       <url>/2017/05/19/%E8%83%8C%E6%99%AF%E5%BB%BA%E6%A8%A1/</url>
       <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>背景建模在视频监控等动态图像的检测上有很重要的位置.这篇文章将会逐渐学习一系列的背景建模方法.</p>
@@ -2006,9 +2046,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Data Analysis </tag>
             
@@ -2042,9 +2082,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Data Analysis </tag>
             
@@ -2093,9 +2133,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Data Analysis </tag>
             
@@ -2455,9 +2495,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Data Analysis </tag>
             
@@ -2497,9 +2537,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Data Analysis </tag>
             
@@ -2885,9 +2925,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Clustering </tag>
             
@@ -2934,9 +2974,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Python </tag>
             
             <tag> Clustering </tag>
             
