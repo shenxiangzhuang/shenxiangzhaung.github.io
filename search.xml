@@ -3,9 +3,40 @@
   
     
     <entry>
+      <title><![CDATA[OpenCV系列笔记二十一：MSER]]></title>
+      <url>/2017/05/25/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E4%BA%8C%E5%8D%81%E4%B8%80%EF%BC%9AMSER/</url>
+      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>Maximally Stable External Regions (MSER) 和分水岭算法类似，也是通过一种类似“浸水”的过程来找到图像中一些有意义的区域。但是和分水岭算法又有些不同：</p>
+<blockquote>
+<p>but this time, we will be interested in the basins that remain relatively stable for a period of time during the immersion process. It will be observed that these regions correspond to some distinctive parts of the scene objects pictured in the image.</p>
+</blockquote>
+<p>也就是说，这里关注的不仅仅是界限，更多地考虑随着浸水过程的进行，特定区域是否有明显的变化（比如当前区域的水面面积的方差是否小于给定的阀值），如果在一段浸水时间内，某些区域的面积未有太大的变化，那么这就是我们要找的MSER。</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><p>这里做图的时候要注意两点。第一，检测到的MSER是具有层级结构的，我们在绘图的时候要按照从大到小（面积）的顺序，且每次做图进行检查当前区域是否已经画过了。第二，这里会返回包含MSER的矩形，不过一般来说数目较多，全部做出来会使得结果显得比较凌乱，所以一般添加一些过滤条件来指定输出某些物体，比如通过指定矩形的长宽比来来输出包含窗户的矩形框。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#include &lt;cv.h&gt;</div><div class="line">#include &lt;opencv2/imgcodecs.hpp&gt;</div><div class="line">#include &lt;opencv/cv.hpp&gt;</div><div class="line">#include &lt;iostream&gt;</div><div class="line">using namespace std;</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">    // Read the image</div><div class="line">    cv::Mat image = cv::imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/building.jpg", 0);</div><div class="line">    if(!image.data)</div><div class="line">        return 0;</div><div class="line"></div><div class="line">    // Display the image</div><div class="line">    cv::namedWindow("Image");</div><div class="line">    cv::imshow("Image", image);</div><div class="line"></div><div class="line">    // basic MSER detector</div><div class="line">    cv::Ptr&lt;cv::MSER&gt;ptrMSER = cv::MSER::create(5,  // delta value</div><div class="line">                                                  200,  // min acceptable area</div><div class="line">                                                     2000); // max acceptable area</div><div class="line"></div><div class="line">    // vector of point sets</div><div class="line">    std::vector&lt;std::vector&lt;cv::Point&gt;&gt;points;</div><div class="line">    // vector of rectangles</div><div class="line">    std::vector&lt;cv::Rect&gt;rects;</div><div class="line">    // detect MSER features</div><div class="line">    ptrMSER-&gt;detectRegions(image, points, rects);</div><div class="line"></div><div class="line">    std::cout&lt;&lt;points.size()&lt;&lt;" MSERs detected"&lt;&lt;std::endl;</div><div class="line"></div><div class="line">    // create white image</div><div class="line">    cv::Mat output(image.size(), CV_8UC3);</div><div class="line">    output = cv::Scalar(255,255,255);</div><div class="line"></div><div class="line">    // OpenCV random number  generator</div><div class="line">    cv::RNG rng;</div><div class="line"></div><div class="line">    // Display the MSERs in color areas</div><div class="line">    // for each detected feature</div><div class="line">    // reverse order to display the larger MSER first</div><div class="line">    for(std::vector&lt;std::vector&lt;cv::Point&gt;&gt;::reverse_iterator it = points.rbegin();</div><div class="line">            it!=points.rend(); ++it)&#123;</div><div class="line">        // generate a random color</div><div class="line">        cv::Vec3b c(rng.uniform(0,254), rng.uniform(0,254), rng.uniform(0,254));</div><div class="line"></div><div class="line">        std::cout &lt;&lt; "MSER size= "&lt;&lt;it-&gt;size()&lt;&lt;std::endl;</div><div class="line">        // for each point in MSER set</div><div class="line">        for(std::vector&lt;cv::Point&gt;::iterator itPts = it-&gt;begin();</div><div class="line">                itPts!=it-&gt;end(); ++itPts)&#123;</div><div class="line">            // do not overwrite MSER pixels</div><div class="line">            if(output.at&lt;cv::Vec3b&gt;(*itPts)[0] = 255)&#123;</div><div class="line">                output.at&lt;cv::Vec3b&gt;(*itPts) = c;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    cv::namedWindow("MSER point sets");</div><div class="line">    cv::imshow("MSER point sets", output);</div><div class="line">    cv::imwrite("mser.bmp", output);</div><div class="line"></div><div class="line">    // Reload the input image</div><div class="line">    image = cv::imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/building.jpg", 0);</div><div class="line">    if (!image.data)</div><div class="line">        return 0;</div><div class="line"></div><div class="line">    // Extract and display the elliptic MSERs</div><div class="line">    for (std::vector&lt;std::vector&lt;cv::Point&gt; &gt;::iterator it = points.begin();</div><div class="line">         it != points.end(); ++it) &#123;</div><div class="line"></div><div class="line">        // for each point in MSER set</div><div class="line">        for (std::vector&lt;cv::Point&gt;::iterator itPts = it-&gt;begin();</div><div class="line">             itPts != it-&gt;end(); ++itPts) &#123;</div><div class="line"></div><div class="line">            // Extract bouding rectangles</div><div class="line">            cv::RotatedRect rr = cv::minAreaRect(*it);</div><div class="line">            // check ellipse elongation</div><div class="line">            if (rr.size.height / rr.size.height &gt; 0.6 || rr.size.height / rr.size.height &lt; 1.6)</div><div class="line">                cv::ellipse(image, rr, cv::Scalar(255), 2);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // Display the image</div><div class="line">    cv::namedWindow("MSER ellipses");</div><div class="line">    cv::imshow("MSER ellipses", image);</div><div class="line"></div><div class="line"></div><div class="line">    cv::waitKey();</div><div class="line">    return 0;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="http://blog-1252464519.costj.myqcloud.com/1705/Selection_052404.png" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Cpp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[OpenCV系列笔记二十：Segmenting images using watersheds]]></title>
       <url>/2017/05/24/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E4%BA%8C%E5%8D%81%EF%BC%9ASegmenting-images-using/</url>
-      <content type="html"><![CDATA[<h4 id="Over"><a href="#Over" class="headerlink" title="Over"></a>Over</h4><p>关于分水岭算法：</p>
+      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>关于分水岭算法：</p>
 <blockquote>
 <p>The watershed transformation is a popular image processing algorithm that is used to quickly segment an image into homogenous regions. It relies on the idea that when the image is seen as a topological relief, the homogeneous regions correspond to relatively flat basins delimited by steep edges. </p>
 </blockquote>
@@ -2046,9 +2077,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Data Analysis </tag>
             
@@ -2082,9 +2113,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Data Analysis </tag>
             
@@ -2133,9 +2164,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Data Analysis </tag>
             
@@ -2495,9 +2526,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Data Analysis </tag>
             
@@ -2537,9 +2568,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Data Analysis </tag>
             
@@ -2925,9 +2956,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -2974,9 +3005,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         
         <tags>
             
-            <tag> Algorithm </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             

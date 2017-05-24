@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Cpp,OpenCV," />
 
 
 
@@ -89,19 +89,24 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="OverviewMaximally Stable External Regions (MSER) 和分水岭算法类似，也是通过一种类似“浸水”的过程来找到图像中一些有意义的区域。但是和分水岭算法又有些不同：
+
+but this time, we will be interested in the basins that remain relatively stable for a period of">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://datahonor.com/2017/03/30/hello-world/index.html">
+<meta property="og:title" content="OpenCV系列笔记二十一：MSER">
+<meta property="og:url" content="http://datahonor.com/2017/05/25/OpenCV系列笔记二十一：MSER/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2017-02-20T10:08:29.044Z">
+<meta property="og:description" content="OverviewMaximally Stable External Regions (MSER) 和分水岭算法类似，也是通过一种类似“浸水”的过程来找到图像中一些有意义的区域。但是和分水岭算法又有些不同：
+
+but this time, we will be interested in the basins that remain relatively stable for a period of">
+<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/1705/Selection_052404.png">
+<meta property="og:updated_time" content="2017-05-24T16:28:38.740Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="OpenCV系列笔记二十一：MSER">
+<meta name="twitter:description" content="OverviewMaximally Stable External Regions (MSER) 和分水岭算法类似，也是通过一种类似“浸水”的过程来找到图像中一些有意义的区域。但是和分水岭算法又有些不同：
+
+but this time, we will be interested in the basins that remain relatively stable for a period of">
+<meta name="twitter:image" content="http://blog-1252464519.costj.myqcloud.com/1705/Selection_052404.png">
 
 
 
@@ -129,13 +134,13 @@ Quick">
 
 
 
-  <link rel="canonical" href="http://datahonor.com/2017/03/30/hello-world/"/>
+  <link rel="canonical" href="http://datahonor.com/2017/05/25/OpenCV系列笔记二十一：MSER/"/>
 
 
 
 
 
-  <title> Hello World | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> OpenCV系列笔记二十一：MSER | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -315,7 +320,7 @@ Quick">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/03/30/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/05/25/OpenCV系列笔记二十一：MSER/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="不秩稚童">
@@ -339,7 +344,7 @@ Quick">
             
             
               
-                Hello World
+                OpenCV系列笔记二十一：MSER
               
             
           </h1>
@@ -354,8 +359,8 @@ Quick">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-30T19:27:30+08:00">
-                2017-03-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-25T00:06:22+08:00">
+                2017-05-25
               </time>
             
 
@@ -365,6 +370,28 @@ Quick">
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Cpp/" itemprop="url" rel="index">
+                    <span itemprop="name">Cpp</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -373,8 +400,8 @@ Quick">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/30/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/30/hello-world/" itemprop="commentCount"></span>
+                <a href="/2017/05/25/OpenCV系列笔记二十一：MSER/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/25/OpenCV系列笔记二十一：MSER/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -405,15 +432,15 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>Maximally Stable External Regions (MSER) 和分水岭算法类似，也是通过一种类似“浸水”的过程来找到图像中一些有意义的区域。但是和分水岭算法又有些不同：</p>
+<blockquote>
+<p>but this time, we will be interested in the basins that remain relatively stable for a period of time during the immersion process. It will be observed that these regions correspond to some distinctive parts of the scene objects pictured in the image.</p>
+</blockquote>
+<p>也就是说，这里关注的不仅仅是界限，更多地考虑随着浸水过程的进行，特定区域是否有明显的变化（比如当前区域的水面面积的方差是否小于给定的阀值），如果在一段浸水时间内，某些区域的面积未有太大的变化，那么这就是我们要找的MSER。</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><p>这里做图的时候要注意两点。第一，检测到的MSER是具有层级结构的，我们在绘图的时候要按照从大到小（面积）的顺序，且每次做图进行检查当前区域是否已经画过了。第二，这里会返回包含MSER的矩形，不过一般来说数目较多，全部做出来会使得结果显得比较凌乱，所以一般添加一些过滤条件来指定输出某些物体，比如通过指定矩形的长宽比来来输出包含窗户的矩形框。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#include &lt;cv.h&gt;</div><div class="line">#include &lt;opencv2/imgcodecs.hpp&gt;</div><div class="line">#include &lt;opencv/cv.hpp&gt;</div><div class="line">#include &lt;iostream&gt;</div><div class="line">using namespace std;</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">    // Read the image</div><div class="line">    cv::Mat image = cv::imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/building.jpg", 0);</div><div class="line">    if(!image.data)</div><div class="line">        return 0;</div><div class="line"></div><div class="line">    // Display the image</div><div class="line">    cv::namedWindow("Image");</div><div class="line">    cv::imshow("Image", image);</div><div class="line"></div><div class="line">    // basic MSER detector</div><div class="line">    cv::Ptr&lt;cv::MSER&gt;ptrMSER = cv::MSER::create(5,  // delta value</div><div class="line">                                                  200,  // min acceptable area</div><div class="line">                                                     2000); // max acceptable area</div><div class="line"></div><div class="line">    // vector of point sets</div><div class="line">    std::vector&lt;std::vector&lt;cv::Point&gt;&gt;points;</div><div class="line">    // vector of rectangles</div><div class="line">    std::vector&lt;cv::Rect&gt;rects;</div><div class="line">    // detect MSER features</div><div class="line">    ptrMSER-&gt;detectRegions(image, points, rects);</div><div class="line"></div><div class="line">    std::cout&lt;&lt;points.size()&lt;&lt;" MSERs detected"&lt;&lt;std::endl;</div><div class="line"></div><div class="line">    // create white image</div><div class="line">    cv::Mat output(image.size(), CV_8UC3);</div><div class="line">    output = cv::Scalar(255,255,255);</div><div class="line"></div><div class="line">    // OpenCV random number  generator</div><div class="line">    cv::RNG rng;</div><div class="line"></div><div class="line">    // Display the MSERs in color areas</div><div class="line">    // for each detected feature</div><div class="line">    // reverse order to display the larger MSER first</div><div class="line">    for(std::vector&lt;std::vector&lt;cv::Point&gt;&gt;::reverse_iterator it = points.rbegin();</div><div class="line">            it!=points.rend(); ++it)&#123;</div><div class="line">        // generate a random color</div><div class="line">        cv::Vec3b c(rng.uniform(0,254), rng.uniform(0,254), rng.uniform(0,254));</div><div class="line"></div><div class="line">        std::cout &lt;&lt; "MSER size= "&lt;&lt;it-&gt;size()&lt;&lt;std::endl;</div><div class="line">        // for each point in MSER set</div><div class="line">        for(std::vector&lt;cv::Point&gt;::iterator itPts = it-&gt;begin();</div><div class="line">                itPts!=it-&gt;end(); ++itPts)&#123;</div><div class="line">            // do not overwrite MSER pixels</div><div class="line">            if(output.at&lt;cv::Vec3b&gt;(*itPts)[0] = 255)&#123;</div><div class="line">                output.at&lt;cv::Vec3b&gt;(*itPts) = c;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    cv::namedWindow("MSER point sets");</div><div class="line">    cv::imshow("MSER point sets", output);</div><div class="line">    cv::imwrite("mser.bmp", output);</div><div class="line"></div><div class="line">    // Reload the input image</div><div class="line">    image = cv::imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/building.jpg", 0);</div><div class="line">    if (!image.data)</div><div class="line">        return 0;</div><div class="line"></div><div class="line">    // Extract and display the elliptic MSERs</div><div class="line">    for (std::vector&lt;std::vector&lt;cv::Point&gt; &gt;::iterator it = points.begin();</div><div class="line">         it != points.end(); ++it) &#123;</div><div class="line"></div><div class="line">        // for each point in MSER set</div><div class="line">        for (std::vector&lt;cv::Point&gt;::iterator itPts = it-&gt;begin();</div><div class="line">             itPts != it-&gt;end(); ++itPts) &#123;</div><div class="line"></div><div class="line">            // Extract bouding rectangles</div><div class="line">            cv::RotatedRect rr = cv::minAreaRect(*it);</div><div class="line">            // check ellipse elongation</div><div class="line">            if (rr.size.height / rr.size.height &gt; 0.6 || rr.size.height / rr.size.height &lt; 1.6)</div><div class="line">                cv::ellipse(image, rr, cv::Scalar(255), 2);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // Display the image</div><div class="line">    cv::namedWindow("MSER ellipses");</div><div class="line">    cv::imshow("MSER ellipses", image);</div><div class="line"></div><div class="line"></div><div class="line">    cv::waitKey();</div><div class="line">    return 0;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="http://blog-1252464519.costj.myqcloud.com/1705/Selection_052404.png" alt=""></p>
 
       
     </div>
@@ -421,6 +448,38 @@ Quick">
     <div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2017/05/25/OpenCV系列笔记二十一：MSER/">OpenCV系列笔记二十一：MSER</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 不秩稚童 的个人博客">不秩稚童</a></p>
+  <p><span>作者邮箱:</span>datahonor@gmail.com</p>
+  <p><span>发布时间:</span>2017年05月25日 - 00:05</p>
+  <p><span>最后更新:</span>2017年05月25日 - 00:05</p>
+  <p><span>原始链接:</span><a href="/2017/05/25/OpenCV系列笔记二十一：MSER/" title="OpenCV系列笔记二十一：MSER">http://datahonor.com/2017/05/25/OpenCV系列笔记二十一：MSER/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/05/25/OpenCV系列笔记二十一：MSER/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+	clipboard.on('success', $(function(){
+	  $(".fa-clipboard").click(function(){
+		swal({   
+		  title: "",   
+		  text: '复制成功',   
+		  html: false,
+		  timer: 500,   
+		  showConfirmButton: false
+	    });
+	  });
+    }));  
+</script>
+
 
       
     </div>
@@ -442,6 +501,14 @@ Quick">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Cpp/" rel="tag"># Cpp</a>
+          
+            <a href="/tags/OpenCV/" rel="tag"># OpenCV</a>
+          
+        </div>
+      
 
       
         
@@ -451,8 +518,8 @@ Quick">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/25/typedef-define/" rel="next" title="typedef & #define">
-                <i class="fa fa-chevron-left"></i> typedef & #define
+              <a href="/2017/05/24/OpenCV系列笔记二十：Segmenting-images-using/" rel="next" title="OpenCV系列笔记二十：Segmenting images using watersheds">
+                <i class="fa fa-chevron-left"></i> OpenCV系列笔记二十：Segmenting images using watersheds
               </a>
             
           </div>
@@ -460,10 +527,6 @@ Quick">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/30/我，Arch和Ubuntu的故事/" rel="prev" title="我，Arch和Ubuntu的故事">
-                我，Arch和Ubuntu的故事 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -638,7 +701,7 @@ Quick">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a></li></ol></div>
             
 
 
@@ -778,9 +841,9 @@ Quick">
 
     <script type="text/javascript">
       var disqus_shortname = 'http-datahonor-com';
-      var disqus_identifier = '2017/03/30/hello-world/';
+      var disqus_identifier = '2017/05/25/OpenCV系列笔记二十一：MSER/';
 
-      var disqus_title = "Hello World";
+      var disqus_title = "OpenCV系列笔记二十一：MSER";
 
 
       function run_disqus_script(disqus_script) {
