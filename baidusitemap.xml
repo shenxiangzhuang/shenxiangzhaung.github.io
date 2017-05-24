@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/05/15/Morphalogical-Operations/</loc>
+    <lastmod>2017-05-24T07:34:39.586Z</lastmod>
+    <data>
+        <display>
+        <title>OpenCV系列笔记十九：Morphalogical Operations</title>
+        <pubTime>2017-05-15T14:59:20.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/05/19/%E8%83%8C%E6%99%AF%E5%BB%BA%E6%A8%A1/</loc>
     <lastmod>2017-05-21T01:22:13.011Z</lastmod>
     <data>
@@ -120,28 +142,6 @@
         <display>
         <title>OpenCV系列笔记二：Mouse trackbar</title>
         <pubTime>2017-04-26T16:06:56.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/05/15/Morphalogical-Operations/</loc>
-    <lastmod>2017-05-15T15:13:52.765Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记十九：Morphalogical Operations</title>
-        <pubTime>2017-05-15T14:59:20.000Z</pubTime>
         
         <tag>Cpp</tag>
          
