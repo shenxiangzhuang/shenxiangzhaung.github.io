@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/05/27/Extracting-Lines-Contours-and-Components/</loc>
+    <lastmod>2017-05-28T03:42:31.861Z</lastmod>
+    <data>
+        <display>
+        <title>OpenCV系列笔记二十三：Extracting Lines, Contours, and Components</title>
+        <pubTime>2017-05-27T01:01:01.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/05/28/Hough%E5%8F%98%E6%8D%A2/</loc>
+    <lastmod>2017-05-28T03:38:38.296Z</lastmod>
+    <data>
+        <display>
+        <title>Hough变换</title>
+        <pubTime>2017-05-28T03:13:36.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/05/10/Stacks/</loc>
     <lastmod>2017-05-26T03:30:23.925Z</lastmod>
     <data>
