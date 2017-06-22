@@ -3258,6 +3258,25 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
 <h6 id="文末增加版权信息"><a href="#文末增加版权信息" class="headerlink" title="文末增加版权信息"></a>文末增加版权信息</h6><p>参考<a href="http://www.vitah.net/posts/20f300cc/" target="_blank" rel="external">这里</a></p>
 <h6 id="页脚居中"><a href="#页脚居中" class="headerlink" title="页脚居中"></a>页脚居中</h6><p>参考<a href="http://www.wuxubj.cn/2016/07/footer-beautify-of-nexT/" target="_blank" rel="external">这里</a></p>
 <h6 id="动画特效"><a href="#动画特效" class="headerlink" title="动画特效"></a>动画特效</h6><p>关闭了canvas_nest， 留下了小心心 :-)</p>
+<h6 id="添加About菜单即相应页面"><a href="#添加About菜单即相应页面" class="headerlink" title="添加About菜单即相应页面"></a>添加About菜单即相应页面</h6><p>参考<a href="http://www.jianshu.com/p/6c1196f12302" target="_blank" rel="external">这里</a></p>
+<p>next主题设置如下，将about的注释去掉即可：</p>
+<pre><code># ---------------------------------------------------------------
+# Menu Settings
+# ---------------------------------------------------------------
+
+# When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -&gt; archives)
+menu:
+  home: /
+  categories: /categories
+  archives: /archives
+  tags: /tags
+  about: /about
+  #sitemap: /sitemap.xml
+  #commonweal: /404.html
+</code></pre><p>之后<code>hexo new page about</code>，生成<code>source/about/index.md</code>，编辑相应内容即可。</p>
+<h6 id="添加Jupyter-Notebook支持"><a href="#添加Jupyter-Notebook支持" class="headerlink" title="添加Jupyter Notebook支持"></a>添加Jupyter Notebook支持</h6><p>参考<a href="http://www.jianshu.com/p/6c1196f12302" target="_blank" rel="external">这里</a></p>
+<p>在<a href="http://nbviewer.jupyter.org/" target="_blank" rel="external">nbviewer</a>，输入你的github用户名，找到项目文件，之后复制上面的url。</p>
+<p>在md文件直接添加，<iframe src="your_URL" width="700" height="400"></iframe><br>将your_URL换为上面已经复制的即可。</p>
 ]]></content>
       
         <categories>
