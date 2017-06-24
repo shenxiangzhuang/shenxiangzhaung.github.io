@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title><![CDATA[这一年，我二十]]></title>
+      <url>/2017/06/24/%E8%BF%99%E4%B8%80%E5%B9%B4%EF%BC%8C%E6%88%91%E4%BA%8C%E5%8D%81/</url>
+      <content type="html"><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这一年，在今天，我刚好二十岁。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二十岁是每个人的黄金时代，是野蛮生长的年纪，是为之后披荆斩棘准备本钱的年纪。加油！</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 随笔 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hough变换]]></title>
       <url>/2017/05/28/Hough%E5%8F%98%E6%8D%A2/</url>
       <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>关于hough变换，确实被它的奇妙思想震撼到。</p>
@@ -3275,9 +3296,7 @@ menu:
   #commonweal: /404.html
 </code></pre><p>之后<code>hexo new page about</code>，生成<code>source/about/index.md</code>，编辑相应内容即可。</p>
 <h6 id="添加Jupyter-Notebook支持"><a href="#添加Jupyter-Notebook支持" class="headerlink" title="添加Jupyter Notebook支持"></a>添加Jupyter Notebook支持</h6><p>参考<a href="http://www.jianshu.com/p/6c1196f12302" target="_blank" rel="external">这里</a></p>
-<p>在<a href="http://nbviewer.jupyter.org/" target="_blank" rel="external">nbviewer</a>，输入你的github用户名，找到项目文件，之后复制上面的url。</p>
-<p>在md文件直接添加<br><code>&lt;iframe src=&quot;your_URL&quot; width=&quot;700&quot; height=&quot;400&quot;&gt;&lt;/iframe&gt;</code></p>
-<p>将your_URL换为上面已经复制的即可。</p>
+<p>在<a href="http://nbviewer.jupyter.org/" target="_blank" rel="external">nbviewer</a>，输入你的github用户名，找到项目文件，之后复制上面的url。<br>在md文件直接添加<br><code>&lt;iframe src=&quot;your_URL&quot; width=&quot;700&quot; height=&quot;400&quot;&gt;&lt;/iframe&gt;</code><br>将your_URL换为上面已经复制的即可。</p>
 ]]></content>
       
         <categories>
