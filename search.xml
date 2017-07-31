@@ -3,6 +3,63 @@
   
     
     <entry>
+      <title><![CDATA[SS使用--全局代理]]></title>
+      <url>/2017/08/01/SS%E4%BD%BF%E7%94%A8-%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/</url>
+      <content type="html"><![CDATA[<p>SS全局代理的设置。测试情况：</p>
+<p>设置PAC文件：</p>
+<blockquote>
+<p>参考<a href="http://www.pandagao.com/2016/05/13/ubuntu-use-shadowsocks-and-pac/" target="_blank" rel="external">这里</a>，开始运行不成功，因为PIP安装的GenPAC不支持Py3,即使update也不行orz…后来到Github发现正好新添加了Py3的支持，又clone并install重新安装GenPAC才可以(类似的版本问题值得注意！)，成功生成了PAC文件。然后在在系统设置，网络，代理里面选择自动，并指定了PAC的地址。之后启动Shadowsocks并连接。这时候Chrome可以在不使用插件的时候翻出去，但是FireFox还是不行，最后发现把原来的PAN插件禁用才可以。</p>
+</blockquote>
+<p>设置代理地址：</p>
+<blockquote>
+<p>在系统设置，网络，代理里面选择人工设置，在Socks Host一栏填入127.0.0.1:1080即可。之后启动Shadowsocks并连接。这时候Chrome可以在不使用插件的时候翻出去，但是FireFox不行,即使禁用了PAN也是不行。</p>
+</blockquote>
+<p>总之，通过第一种方法我们可以实现浏览器的完全的代理模式，但是终端还是不行。于是就用polipo来搞了。参考<a href="http://droidyue.com/blog/2016/04/04/set-shadowsocks-proxy-for-terminal/index.html" target="_blank" rel="external">这里</a>设置成功。</p>
+<p>运行结果(盖住了部分ip…)：</p>
+<pre><code>shensir@shen:~$ curl ip.gs
+Current IP / 当前 IP: 150.255.29.xxx
+ISP / 运营商:  ChinaUnicom
+City / 城市: Haikou Hainan
+Country / 国家: China
+Please join Telegram group https://t.me/sbfans if you have any issues. / 如有问题，请加入 Telegram 群 https://t.me/sbfans 
+
+  /\_/\
+=( °w° )=
+  )   (  //
+ (__ __)//
+
+shensir@shen:~$ hp curl ip.gs
+Current IP / 当前 IP: 45.77.19.xxx
+ISP / 运营商:  choopa.com
+City / 城市: Tokyo Tokyo
+Country / 国家: Japan
+Please join Telegram group https://t.me/sbfans if you have any issues. / 如有问题，请加入 Telegram 群 https://t.me/sbfans 
+
+  /\_/\
+=( °w° )=
+  )   (  //
+ (__ __)//
+</code></pre><p>貌似是可以了，可是我加了hp<code>再ping www.google.com</code>还是不行orz…<br>此外，代码翻墙也是有待解决…先挖个坑，有空再来填吧.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Linux </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Coursera-ML(ex1)--Linear Regression]]></title>
       <url>/2017/07/25/Coursera-ML-ex1-Linear-Regression/</url>
       <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>Coursera上AndrawNg的ML课程，昨天写完了线性回归的编程作业，因为公式都已经推导出来了，所以编程实现相对比较简单。这里整理下，补充了一些代码，增强了一些可视化的效果。相关的帮助文档在课程中都能找得到，本次练习资料：<a href="https://www.coursera.org/learn/machine-learning/programming/8f3qT/linear-regression" target="_blank" rel="external">传送门</a>。</p>
@@ -91,7 +148,8 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
  $293081.464335
 </code></pre><p>迭代图：</p>
 <p><img src="http://datahonor-1252464519.costj.myqcloud.com/201707/Figure%201_072504.png" alt=""></p>
-<p>这是单变量即多变量的线性回归，主要用了梯度下降最小化cost function来进行参数的选择，也用到了Normal Equations其可以代替梯度下降法进行参数选择。下一章就是logistic regression了，有空再写。</p>
+<p>这是单变量即多变量的线性回归，主要用了梯度下降最小化cost function来进行参数的选择，也用到了Normal Equations其可以代替梯度下降法进行参数选择。关于两者的优劣与选用问题，可参考<a href="http://www.cnblogs.com/elaron/archive/2013/05/20/3088894.html" target="_blank" rel="external">这里</a>也是根据视频总结的。此外视频中并没有对Normal Equation做太多的解释，可以参考<a href="https://zhuanlan.zhihu.com/p/22757336" target="_blank" rel="external">这里</a>。</p>
+<p>下一章就是logistic regression了，有空再写。</p>
 ]]></content>
       
         <categories>
