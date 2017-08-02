@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://datahonor.com/about/index.html</loc>
+    
+    <lastmod>2017-08-02T10:07:14.223Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://datahonor.com/2017/05/06/Octave-IN-Ubuntu/</loc>
     
     <lastmod>2017-07-31T17:24:49.755Z</lastmod>
@@ -54,13 +61,6 @@
     <loc>http://datahonor.com/2017/02/25/About-Hexo/</loc>
     
     <lastmod>2017-06-22T09:10:55.859Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/about/index.html</loc>
-    
-    <lastmod>2017-06-22T09:04:38.005Z</lastmod>
     
   </url>
   
