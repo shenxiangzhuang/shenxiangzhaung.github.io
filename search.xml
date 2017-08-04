@@ -3,6 +3,34 @@
   
     
     <entry>
+      <title><![CDATA[BST in Cpp]]></title>
+      <url>/2017/08/05/BST-in-Cpp/</url>
+      <content type="html"><![CDATA[<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>时间比较段，看数学来不及，就继续找来Youtube视频学习数据结构了。视频真的不错，讲解很透彻，用C/Cpp实现的，<a href="https://www.youtube.com/watch?v=hWokyBoo0aI&amp;index=29&amp;list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P" target="_blank" rel="external">传送门</a>。今天看的是BST（Binary Search Tree）,即二叉排序树。</p>
+<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="comment">// BST Node</span></div><div class="line"><span class="keyword">struct</span> BstNode &#123;</div><div class="line">    <span class="keyword">int</span> data;</div><div class="line">    BstNode *left;</div><div class="line">    BstNode *right;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function">BstNode *<span class="title">GetNewNode</span><span class="params">(<span class="keyword">int</span> data)</span> </span>&#123;</div><div class="line">    BstNode *newNode = <span class="keyword">new</span> BstNode();</div><div class="line">    newNode-&gt;data = data;</div><div class="line">    newNode-&gt;left = newNode-&gt;right = <span class="literal">NULL</span>;</div><div class="line">    <span class="keyword">return</span> newNode;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function">BstNode *<span class="title">Insert</span><span class="params">(BstNode *root, <span class="keyword">int</span> data)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (root == <span class="literal">NULL</span>) &#123;</div><div class="line">        root = GetNewNode(data);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (data &lt;= root-&gt;data) &#123;</div><div class="line">        root-&gt;left = Insert(root-&gt;left, data);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        root-&gt;right = Insert(root-&gt;right, data);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> root;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Search</span><span class="params">(BstNode *root, <span class="keyword">int</span> data)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (root-&gt;data == data) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (data &lt;= root-&gt;data) Search(root-&gt;left, data);</div><div class="line">    <span class="keyword">else</span> <span class="keyword">return</span> Search(root-&gt;right, data);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    BstNode *root = <span class="literal">NULL</span>;</div><div class="line">    root = Insert(root, <span class="number">15</span>);</div><div class="line">    root = Insert(root, <span class="number">10</span>);</div><div class="line">    root = Insert(root, <span class="number">20</span>);</div><div class="line">    root = Insert(root, <span class="number">25</span>);</div><div class="line">    root = Insert(root, <span class="number">8</span>);</div><div class="line">    root = Insert(root, <span class="number">12</span>);</div><div class="line">    <span class="keyword">int</span> number;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Enter a number to search: "</span>;</div><div class="line">    <span class="built_in">cin</span> &gt;&gt; number;</div><div class="line">    <span class="keyword">if</span> (Search(root, number) == <span class="literal">true</span>) <span class="built_in">cout</span> &lt;&lt; <span class="string">"Found\n"</span>;</div><div class="line">    <span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; <span class="string">"Not Found\n"</span>;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>运行输出：</p>
+<pre><code>Enter a number to search: 12
+Found
+</code></pre><p>其余的嘛，继续学习之后再回来补充~</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Cpp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> DataStructure </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[SS使用全局代理]]></title>
       <url>/2017/08/01/SS%E4%BD%BF%E7%94%A8-%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/</url>
       <content type="html"><![CDATA[<p>SS全局代理的设置。测试情况：</p>
@@ -2557,13 +2585,13 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
             <tag> Clustering </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> 统计学习方法 </tag>
             
@@ -2593,13 +2621,13 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
             <tag> Clustering </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> 统计学习方法 </tag>
             
@@ -2644,13 +2672,13 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
             <tag> Clustering </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> 统计学习方法 </tag>
             
@@ -3006,13 +3034,13 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
             <tag> Clustering </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> 统计学习方法 </tag>
             
@@ -3048,13 +3076,13 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
             <tag> Clustering </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> 统计学习方法 </tag>
             
@@ -3436,9 +3464,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Clustering </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> 统计学习方法 </tag>
             
@@ -3485,9 +3513,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Clustering </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> 统计学习方法 </tag>
             
