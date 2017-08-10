@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title><![CDATA[关于教育网邮箱]]></title>
+      <url>/2017/08/10/%E5%85%B3%E4%BA%8E%E6%95%99%E8%82%B2%E7%BD%91%E9%82%AE%E7%AE%B1/</url>
+      <content type="html"><![CDATA[<p>不久前申请了一个校园邮箱，后来用它申请了PyCharm Professional, Clion在Ubuntu使用。今天又发现Lingo也可以申请，就试了试，也是可以的。嗯。。而且申请的版本是Extended的（所有参数个数不限，没有license的那个demo版一般就30个变量），买的话要近5000$。。。不过前面两个申请后的license都是秒回的，这个我是等了一个下午才收到回复，不知道为啥还…</p>
+<h4 id="申请校园邮箱"><a href="#申请校园邮箱" class="headerlink" title="申请校园邮箱"></a>申请校园邮箱</h4><p>先登录到到<a href="http://hd2.hainu.edu.cn/homeN/" target="_blank" rel="external">海南大学校内门户</a>（这个在海南大学官网主页下面也有登录的链接）。</p>
+<blockquote>
+<p>ps：校内门户的密码一般都改过的，默认应该是身份证号码</p>
+</blockquote>
+<p>之后进入右侧的邮件系统，按照提示申请即可。</p>
+<h4 id="Lingo17-license申请"><a href="#Lingo17-license申请" class="headerlink" title="Lingo17 license申请"></a>Lingo17 license申请</h4><p>先到Lingo官网<a href="http://www.lindo.com/index.php?option=com_content&amp;view=article&amp;id=120&amp;Itemid=45" target="_blank" rel="external">这里</a>下载对应的版本并安装。之后按照下面的提示进行申请。</p>
+<blockquote>
+<p>As installation completes, the LINGO License Key license dialog box will display (alternatively, you can select File|License from the menu). Select the Demo button and then select the Create User ID File button. This will create a file named userinfo.txt in your main LINGO folder. Send a message to sales@lindo.com requesting an educational research license and attach the userifo.txt file to the message. The message should be sent from your educational email address. Once we receive the file we will generate and email you an educational research license key.</p>
+</blockquote>
+<p>登录到自己的校园邮箱，加上附件userifo.txt发送到sales@lindo.com即可。</p>
+<blockquote>
+<p>这里我是发送了两次，第一次仅仅是加上了附件，没有所说的message…然后接着又发了一份随便写了一句话算作message，然后加上附件发送就成了，后来申请成功回复的也是后面这一封。（不写任何东西可能会是因为被当作垃圾邮件给拒了，不过也不一定orz）。</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> Tips </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Tips </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[BST in Cpp]]></title>
       <url>/2017/08/05/BST-in-Cpp/</url>
       <content type="html"><![CDATA[<h5 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h5><p>时间比较段，看数学来不及，就继续找来Youtube视频学习数据结构了。视频真的不错，讲解很透彻，用C/Cpp实现的，<a href="https://www.youtube.com/watch?v=hWokyBoo0aI&amp;index=29&amp;list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P" target="_blank" rel="external">传送门</a>。今天看的是BST（Binary Search Tree）,即二叉排序树。</p>
@@ -2587,11 +2621,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Data Analysis </tag>
             
+            <tag> Algorithm </tag>
+            
             <tag> ML </tag>
             
             <tag> Clustering </tag>
-            
-            <tag> Algorithm </tag>
             
             <tag> 统计学习方法 </tag>
             
@@ -2623,11 +2657,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Data Analysis </tag>
             
+            <tag> Algorithm </tag>
+            
             <tag> ML </tag>
             
             <tag> Clustering </tag>
-            
-            <tag> Algorithm </tag>
             
             <tag> 统计学习方法 </tag>
             
@@ -2674,11 +2708,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Data Analysis </tag>
             
+            <tag> Algorithm </tag>
+            
             <tag> ML </tag>
             
             <tag> Clustering </tag>
-            
-            <tag> Algorithm </tag>
             
             <tag> 统计学习方法 </tag>
             
@@ -3036,11 +3070,11 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Data Analysis </tag>
             
+            <tag> Algorithm </tag>
+            
             <tag> ML </tag>
             
             <tag> Clustering </tag>
-            
-            <tag> Algorithm </tag>
             
             <tag> 统计学习方法 </tag>
             
@@ -3078,11 +3112,11 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Data Analysis </tag>
             
+            <tag> Algorithm </tag>
+            
             <tag> ML </tag>
             
             <tag> Clustering </tag>
-            
-            <tag> Algorithm </tag>
             
             <tag> 统计学习方法 </tag>
             
@@ -3464,9 +3498,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Clustering </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
             
@@ -3513,9 +3547,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Clustering </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
             
