@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/04/25/Singly-Linked-Lists/</loc>
+    <lastmod>2017-08-13T08:38:53.664Z</lastmod>
+    <data>
+        <display>
+        <title>Singly Linked Lists</title>
+        <pubTime>2017-04-24T16:06:17.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>DataStructure</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/08/10/%E5%85%B3%E4%BA%8E%E6%95%99%E8%82%B2%E7%BD%91%E9%82%AE%E7%AE%B1/</loc>
     <lastmod>2017-08-10T15:13:01.941Z</lastmod>
     <data>
@@ -1035,28 +1057,6 @@
         <display>
         <title>Doubly Linked Lists</title>
         <pubTime>2017-04-25T05:53:46.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>DataStructure</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/04/25/Singly-Linked-Lists/</loc>
-    <lastmod>2017-04-25T02:49:47.537Z</lastmod>
-    <data>
-        <display>
-        <title>Singly Linked Lists</title>
-        <pubTime>2017-04-24T16:06:17.000Z</pubTime>
         
         <tag>Cpp</tag>
          

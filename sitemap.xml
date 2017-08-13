@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://datahonor.com/2017/04/25/Singly-Linked-Lists/</loc>
+    
+    <lastmod>2017-08-13T08:38:53.664Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://datahonor.com/2017/08/10/%E5%85%B3%E4%BA%8E%E6%95%99%E8%82%B2%E7%BD%91%E9%82%AE%E7%AE%B1/</loc>
     
     <lastmod>2017-08-10T15:13:01.941Z</lastmod>
@@ -341,13 +348,6 @@
     <loc>http://datahonor.com/2017/04/25/Doubly-Linked-Lists/</loc>
     
     <lastmod>2017-04-25T06:06:15.314Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/2017/04/25/Singly-Linked-Lists/</loc>
-    
-    <lastmod>2017-04-25T02:49:47.537Z</lastmod>
     
   </url>
   
