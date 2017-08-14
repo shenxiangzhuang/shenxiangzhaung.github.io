@@ -102,6 +102,9 @@ Please join Telegram group https://t.me/sbfans if you have any issues. / 如有�
   )   (  //
  (__ __)//
 </code></pre><p>貌似是可以了，可是我加了hp<code>再ping www.google.com</code>还是不行orz…<br>此外，代码翻墙也是有待解决…先挖个坑，有空再来填吧.</p>
+<p>====================================================</p>
+<p>2017/8/14 解决部分终端问题</p>
+<p>今天在用conda装虚拟环境的时候，不管用不用前面的hp似乎都没什么卵用…就试了试proxychains。安装和设置都十分简单，参考<a href="https://github.com/naseeihity/LearnReact/issues/7" target="_blank" rel="external">这里</a>。这样设置后虽说还是ping不通Google,但是在使用conda装东西的时候速度可以起飞…嗯，目前是够用了，先这样。</p>
 ]]></content>
       
         <categories>
