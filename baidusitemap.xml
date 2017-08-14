@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/07/25/Coursera-ML-ex1-Linear-Regression/</loc>
+    <lastmod>2017-08-14T10:43:54.584Z</lastmod>
+    <data>
+        <display>
+        <title>Coursera-ML</title>
+        <pubTime>2017-07-25T03:47:28.000Z</pubTime>
+        
+        <tag>Octave</tag>
+         
+        <tag>ML</tag>
+         
+         
+           
+             
+              <breadCrumb title="Octave" url="http://datahonor.com/categories/Octave/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/08/01/SS%E4%BD%BF%E7%94%A8-%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/</loc>
     <lastmod>2017-08-14T10:39:08.571Z</lastmod>
     <data>
@@ -108,28 +130,6 @@
            
              
               <breadCrumb title="Linux" url="http://datahonor.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/07/25/Coursera-ML-ex1-Linear-Regression/</loc>
-    <lastmod>2017-07-28T04:11:06.075Z</lastmod>
-    <data>
-        <display>
-        <title>Coursera-ML(ex1)--Linear Regression</title>
-        <pubTime>2017-07-25T03:47:28.000Z</pubTime>
-        
-        <tag>Octave</tag>
-         
-        <tag>ML</tag>
-         
-         
-           
-             
-              <breadCrumb title="Octave" url="http://datahonor.com/categories/Octave/"/>
           
         </display>
     </data>
