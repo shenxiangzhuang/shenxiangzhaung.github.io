@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[添加OpenCV3对Python3的支持]]></title>
+      <title><![CDATA[添加OpenCV3对Python3的支持&QT中使用OpenCV]]></title>
       <url>/2017/08/15/%E6%B7%BB%E5%8A%A0OpenCV3%E5%AF%B9Python3%E7%9A%84%E6%94%AF%E6%8C%81/</url>
       <content type="html"><![CDATA[<p>一直用的Python3,但是呢之前编译OpenCV只是按照默认添加了对Python2的支持，于是有进行重新编译，多次挂掉后总算成功了，这里做下记录。</p>
 <h5 id="关于编译时的可选参数"><a href="#关于编译时的可选参数" class="headerlink" title="关于编译时的可选参数"></a>关于编译时的可选参数</h5><p>编译环境：</p>
@@ -34,6 +34,11 @@
 <p>基本上没找到相关资料，但是有个<a href="https://stackoverflow.com/questions/8917977/installing-lapack-for-numpy" target="_blank" rel="external">类似的</a>, 试了试竟然成功了：</p>
 <blockquote>
 <p>sudo apt-get remove libopenblas-base</p>
+</blockquote>
+<h5 id="在QT中使用OpenCV"><a href="#在QT中使用OpenCV" class="headerlink" title="在QT中使用OpenCV"></a>在QT中使用OpenCV</h5><p>看到很多书上的教程是基于QT来讲的，这里也接着在QT设置了OpenCV的支持。主要参考<a href="https://www.youtube.com/watch?v=qA46fvP3O5A" target="_blank" rel="external">这里</a>[及其风骚的操作…]。其实关键是在QT添加OpenCV库的链接，只需要在配置文件<code>xxx.pro</code>中最后添加两行即可：</p>
+<blockquote>
+<p>INCLUDEPATH += “/usr/local/include/“<br>LIBS += <code>pkg-config --libs opencv</code></p>
+<p>ps: 看到视频里面用QT做应用竟然如此方便…嗯，又要入坑QT吗。。。</p>
 </blockquote>
 <h5 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h5><p>折腾那么久，终于解决了….其实添加3的支持也是因为今天看到了<a href="https://pythonprogramming.net/" target="_blank" rel="external">这个</a>, 绝对的大佬…想着有空跟进这里的项目来学习。嗯，就这样。</p>
 ]]></content>
