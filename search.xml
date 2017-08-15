@@ -3,6 +3,59 @@
   
     
     <entry>
+      <title><![CDATA[添加OpenCV3对Python3的支持]]></title>
+      <url>/2017/08/15/%E6%B7%BB%E5%8A%A0OpenCV3%E5%AF%B9Python3%E7%9A%84%E6%94%AF%E6%8C%81/</url>
+      <content type="html"><![CDATA[<p>一直用的Python3,但是呢之前编译OpenCV只是按照默认添加了对Python2的支持，于是有进行重新编译，多次挂掉后总算成功了，这里做下记录。</p>
+<h5 id="关于编译时的可选参数"><a href="#关于编译时的可选参数" class="headerlink" title="关于编译时的可选参数"></a>关于编译时的可选参数</h5><p>编译环境：</p>
+<blockquote>
+<p>Ubuntu16.04LTS 64-Bit 英文版</p>
+</blockquote>
+<p>编译还是根据<a href="http://docs.opencv.org/3.1.0/d7/d9f/tutorial_linux_install.html" target="_blank" rel="external">官网教程</a>来的，但是教程只是给了最基本的编译示例，其他的可选参数并未做太多说明。我们用的是cmake-gui进行选择，影响编译的几个选项就是下面这些：</p>
+<blockquote>
+<p><strong>CUDA</strong>: 本次编译只是选了<code>WITH_CUDA</code>， 但是选择其他相关的文件进行编译有时会出错。由于我这小本本不支持CUDA的，所以下次不选就是了。</p>
+<p><strong>dnn</strong>: 只要包含dnn就出错orz…本次编译全部取消勾选dnn相关文件才通过了.可能是新版本支持不好？</p>
+<p><strong>TBB</strong>：这个也是十分蛋疼啊。。。加上也是出错</p>
+<p><strong>EIGEN</strong>: 可以添加，未出错</p>
+<p><strong>OPENCL</strong>： 可以添加，未出错</p>
+<p><strong>OPENGL</strong>: 未添加</p>
+</blockquote>
+<p>关于Python（使用的anaconda）路径的设置：</p>
+<p>参考<a href="https://stackoverflow.com/questions/36201282/install-opencv-for-python3" target="_blank" rel="external">这里</a></p>
+<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201707/Screenshot%20from%202017-08-15%2017-31-16.png" alt=""></p>
+<h5 id="关于最后的软链接"><a href="#关于最后的软链接" class="headerlink" title="关于最后的软链接"></a>关于最后的软链接</h5><p>参考<a href="http://www.pyimagesearch.com/2015/07/20/install-opencv-3-0-and-python-3-4-on-ubuntu/" target="_blank" rel="external">这里</a></p>
+<p>切换到<code>/home/shensir/anaconda3/lib/python3.6/site-packages</code><br>执行：</p>
+<blockquote>
+<p>sudo ln -s ‘/home/shensir/anaconda3/lib/python3.6/site-packages/cv2.cpython-36m-x86_64-linux-gnu.so’  cv2.so</p>
+</blockquote>
+<h5 id="Python下的报错"><a href="#Python下的报错" class="headerlink" title="Python下的报错"></a>Python下的报错</h5><p>嗯，上面准备的很妥当了，接下来就是…新的报错了orz…</p>
+<blockquote>
+<p>ImportError: /usr/lib/liblapack.so.3: undefined symbol: gotoblas</p>
+</blockquote>
+<p>基本上没找到相关资料，但是有个<a href="https://stackoverflow.com/questions/8917977/installing-lapack-for-numpy" target="_blank" rel="external">类似的</a>, 试了试竟然成功了：</p>
+<blockquote>
+<p>sudo apt-get remove libopenblas-base</p>
+</blockquote>
+<h5 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h5><p>折腾那么久，终于解决了….其实添加3的支持也是因为今天看到了<a href="https://pythonprogramming.net/" target="_blank" rel="external">这个</a>, 绝对的大佬…想着有空跟进这里的项目来学习。嗯，就这样。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> OpenCV </tag>
+            
+            <tag> Python </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[关于教育网邮箱]]></title>
       <url>/2017/08/10/%E5%85%B3%E4%BA%8E%E6%95%99%E8%82%B2%E7%BD%91%E9%82%AE%E7%AE%B1/</url>
       <content type="html"><![CDATA[<p>不久前申请了一个校园邮箱，后来用它申请了PyCharm Professional, Clion在Ubuntu使用。今天又发现Lingo也可以申请，就试了试，也是可以的。嗯。。而且申请的版本是Extended的（所有参数个数不限，没有license的那个demo版一般就30个变量），买的话要近5000$。。。不过前面两个申请后的license都是秒回的，这个我是等了一个下午才收到回复，不知道为啥还…</p>
@@ -2634,9 +2687,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
@@ -2670,9 +2723,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
@@ -2721,9 +2774,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
@@ -3083,9 +3136,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
@@ -3125,9 +3178,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             

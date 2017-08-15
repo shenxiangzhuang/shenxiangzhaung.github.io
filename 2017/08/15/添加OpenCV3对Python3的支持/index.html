@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="OpenCV,Python," />
 
 
 
@@ -89,15 +89,33 @@
 
 
 
-<meta name="description" content="十年饮冰，难凉热血。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DATA HONOR">
-<meta property="og:url" content="http://datahonor.com/categories/linux/index.html">
+<meta name="description" content="一直用的Python3,但是呢之前编译OpenCV只是按照默认添加了对Python2的支持，于是有进行重新编译，多次挂掉后总算成功了，这里做下记录。
+关于编译时的可选参数编译环境：
+
+Ubuntu16.04LTS 64-Bit 英文版
+
+编译还是根据官网教程来的，但是教程只是给了最基本的编译示例，其他的可选参数并未做太多说明。我们用的是cmake-gui进行选择，影响编译的几个选项就是下面这些：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="添加OpenCV3对Python3的支持">
+<meta property="og:url" content="http://datahonor.com/2017/08/15/添加OpenCV3对Python3的支持/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="十年饮冰，难凉热血。">
+<meta property="og:description" content="一直用的Python3,但是呢之前编译OpenCV只是按照默认添加了对Python2的支持，于是有进行重新编译，多次挂掉后总算成功了，这里做下记录。
+关于编译时的可选参数编译环境：
+
+Ubuntu16.04LTS 64-Bit 英文版
+
+编译还是根据官网教程来的，但是教程只是给了最基本的编译示例，其他的可选参数并未做太多说明。我们用的是cmake-gui进行选择，影响编译的几个选项就是下面这些：">
+<meta property="og:image" content="http://datahonor-1252464519.costj.myqcloud.com/201707/Screenshot%20from%202017-08-15%2017-31-16.png">
+<meta property="og:updated_time" content="2017-08-15T09:49:01.604Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DATA HONOR">
-<meta name="twitter:description" content="十年饮冰，难凉热血。">
+<meta name="twitter:title" content="添加OpenCV3对Python3的支持">
+<meta name="twitter:description" content="一直用的Python3,但是呢之前编译OpenCV只是按照默认添加了对Python2的支持，于是有进行重新编译，多次挂掉后总算成功了，这里做下记录。
+关于编译时的可选参数编译环境：
+
+Ubuntu16.04LTS 64-Bit 英文版
+
+编译还是根据官网教程来的，但是教程只是给了最基本的编译示例，其他的可选参数并未做太多说明。我们用的是cmake-gui进行选择，影响编译的几个选项就是下面这些：">
+<meta name="twitter:image" content="http://datahonor-1252464519.costj.myqcloud.com/201707/Screenshot%20from%202017-08-15%2017-31-16.png">
 
 
 
@@ -125,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="http://datahonor.com/categories/linux/"/>
+  <link rel="canonical" href="http://datahonor.com/2017/08/15/添加OpenCV3对Python3的支持/"/>
 
 
 
 
 
-  <title> 分类: linux | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> 添加OpenCV3对Python3的支持 | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -175,7 +193,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right  ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -311,47 +329,267 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        linux
-        <small>分类</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/06/Octave-IN-Ubuntu/" itemprop="url">
-              
-                <span itemprop="name">Octave in Ubuntu</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-06T23:10:53+08:00"
-              content="2017-05-06" >
-          05-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/08/15/添加OpenCV3对Python3的支持/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="不秩稚童">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="DATA HONOR">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                添加OpenCV3对Python3的支持
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T17:18:58+08:00">
+                2017-08-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/15/添加OpenCV3对Python3的支持/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/08/15/添加OpenCV3对Python3的支持/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>一直用的Python3,但是呢之前编译OpenCV只是按照默认添加了对Python2的支持，于是有进行重新编译，多次挂掉后总算成功了，这里做下记录。</p>
+<h5 id="关于编译时的可选参数"><a href="#关于编译时的可选参数" class="headerlink" title="关于编译时的可选参数"></a>关于编译时的可选参数</h5><p>编译环境：</p>
+<blockquote>
+<p>Ubuntu16.04LTS 64-Bit 英文版</p>
+</blockquote>
+<p>编译还是根据<a href="http://docs.opencv.org/3.1.0/d7/d9f/tutorial_linux_install.html" target="_blank" rel="external">官网教程</a>来的，但是教程只是给了最基本的编译示例，其他的可选参数并未做太多说明。我们用的是cmake-gui进行选择，影响编译的几个选项就是下面这些：</p>
+<blockquote>
+<p><strong>CUDA</strong>: 本次编译只是选了<code>WITH_CUDA</code>， 但是选择其他相关的文件进行编译有时会出错。由于我这小本本不支持CUDA的，所以下次不选就是了。</p>
+<p><strong>dnn</strong>: 只要包含dnn就出错orz…本次编译全部取消勾选dnn相关文件才通过了.可能是新版本支持不好？</p>
+<p><strong>TBB</strong>：这个也是十分蛋疼啊。。。加上也是出错</p>
+<p><strong>EIGEN</strong>: 可以添加，未出错</p>
+<p><strong>OPENCL</strong>： 可以添加，未出错</p>
+<p><strong>OPENGL</strong>: 未添加</p>
+</blockquote>
+<p>关于Python（使用的anaconda）路径的设置：</p>
+<p>参考<a href="https://stackoverflow.com/questions/36201282/install-opencv-for-python3" target="_blank" rel="external">这里</a></p>
+<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201707/Screenshot%20from%202017-08-15%2017-31-16.png" alt=""></p>
+<h5 id="关于最后的软链接"><a href="#关于最后的软链接" class="headerlink" title="关于最后的软链接"></a>关于最后的软链接</h5><p>参考<a href="http://www.pyimagesearch.com/2015/07/20/install-opencv-3-0-and-python-3-4-on-ubuntu/" target="_blank" rel="external">这里</a></p>
+<p>切换到<code>/home/shensir/anaconda3/lib/python3.6/site-packages</code><br>执行：</p>
+<blockquote>
+<p>sudo ln -s ‘/home/shensir/anaconda3/lib/python3.6/site-packages/cv2.cpython-36m-x86_64-linux-gnu.so’  cv2.so</p>
+</blockquote>
+<h5 id="Python下的报错"><a href="#Python下的报错" class="headerlink" title="Python下的报错"></a>Python下的报错</h5><p>嗯，上面准备的很妥当了，接下来就是…新的报错了orz…</p>
+<blockquote>
+<p>ImportError: /usr/lib/liblapack.so.3: undefined symbol: gotoblas</p>
+</blockquote>
+<p>基本上没找到相关资料，但是有个<a href="https://stackoverflow.com/questions/8917977/installing-lapack-for-numpy" target="_blank" rel="external">类似的</a>, 试了试竟然成功了：</p>
+<blockquote>
+<p>sudo apt-get remove libopenblas-base</p>
+</blockquote>
+<h5 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h5><p>折腾那么久，终于解决了….其实添加3的支持也是因为今天看到了<a href="https://pythonprogramming.net/" target="_blank" rel="external">这个</a>, 绝对的大佬…想着有空跟进这里的项目来学习。嗯，就这样。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2017/08/15/添加OpenCV3对Python3的支持/">添加OpenCV3对Python3的支持</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 不秩稚童 的个人博客">不秩稚童</a></p>
+  <p><span>作者邮箱:</span>datahonor@gmail.com</p>
+  <p><span>发布时间:</span>2017年08月15日 - 17:08</p>
+  <p><span>最后更新:</span>2017年08月15日 - 17:08</p>
+  <p><span>原始链接:</span><a href="/2017/08/15/添加OpenCV3对Python3的支持/" title="添加OpenCV3对Python3的支持">http://datahonor.com/2017/08/15/添加OpenCV3对Python3的支持/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/08/15/添加OpenCV3对Python3的支持/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+	clipboard.on('success', $(function(){
+	  $(".fa-clipboard").click(function(){
+		swal({   
+		  title: "",   
+		  text: '复制成功',   
+		  html: false,
+		  timer: 500,   
+		  showConfirmButton: false
+	    });
+	  });
+    }));  
+</script>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/OpenCV/" rel="tag"># OpenCV</a>
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/10/关于教育网邮箱/" rel="next" title="关于教育网邮箱">
+                <i class="fa fa-chevron-left"></i> 关于教育网邮箱
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
           
           </div>
@@ -359,6 +597,18 @@
 
 
           
+  <div class="comments" id="comments">
+
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
 
 
@@ -385,8 +635,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
@@ -401,7 +660,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">89</span>
+                <span class="site-state-item-count">92</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -419,7 +678,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -473,6 +732,23 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#关于编译时的可选参数"><span class="nav-text">关于编译时的可选参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关于最后的软链接"><span class="nav-text">关于最后的软链接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Python下的报错"><span class="nav-text">Python下的报错</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#后记"><span class="nav-text">后记</span></a></li></ol></div>
+            
+
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -586,6 +862,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
@@ -602,9 +882,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'http-datahonor-com';
-      var disqus_identifier = 'categories/linux/index.html';
+      var disqus_identifier = '2017/08/15/添加OpenCV3对Python3的支持/';
 
-      var disqus_title = "";
+      var disqus_title = "添加OpenCV3对Python3的支持";
 
 
       function run_disqus_script(disqus_script) {
@@ -617,6 +897,13 @@
 
       run_disqus_script('count.js');
 
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
       
 
     </script>
