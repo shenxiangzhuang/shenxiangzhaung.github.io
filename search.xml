@@ -3,6 +3,48 @@
   
     
     <entry>
+      <title><![CDATA[百年回首--关于心型曲线的几种画法]]></title>
+      <url>/2017/08/16/%E7%99%BE%E5%B9%B4%E5%9B%9E%E9%A6%96-%E5%85%B3%E4%BA%8E%E5%BF%83%E5%9E%8B%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%87%A0%E7%A7%8D%E7%94%BB%E6%B3%95/</url>
+      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>突然想起来心型曲线，刚吃完饭闲着。。。来画一下。</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><h5 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"></div><div class="line">a = <span class="number">5.21</span></div><div class="line">theta = np.linspace(<span class="number">0</span>, <span class="number">2</span>*np.pi, <span class="number">100</span>)</div><div class="line">r = a*(<span class="number">1</span> - np.sin(theta))</div><div class="line">plt.polar(theta, r)</div><div class="line">plt.show()</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201707/figure_1.png" alt=""></p>
+<h5 id="Octave-Matlab"><a href="#Octave-Matlab" class="headerlink" title="Octave/Matlab"></a>Octave/Matlab</h5><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">theta = <span class="built_in">linspace</span>(<span class="number">0</span>, <span class="number">2</span>*<span class="built_in">pi</span>, <span class="number">100</span>);</div><div class="line">r = <span class="number">5.21</span>*(<span class="number">1</span>-<span class="built_in">sin</span>(theta));</div><div class="line">polar(theta, r)</div><div class="line">polar(theta, r)</div><div class="line">title(<span class="string">'5.21-L'</span>)</div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201707/octave.png" alt=""></p>
+<h5 id="R"><a href="#R" class="headerlink" title="R"></a>R</h5><p>emmm…由于R好像没有现成的画极座标的东西，所以手动转了下。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">a &lt;- <span class="number">5.21</span></div><div class="line">theta &lt;- seq(<span class="number">0</span>, <span class="number">2</span>*pi, len=<span class="number">100</span>)</div><div class="line">r &lt;- a*(<span class="number">1</span> - sin(theta))</div><div class="line"></div><div class="line">x &lt;- cos(theta)*r</div><div class="line">y &lt;- sin(theta)*r</div><div class="line">plot(x, y, <span class="string">'l'</span>, col=<span class="string">'red'</span>)</div><div class="line">title(<span class="string">'5.21-L'</span>)</div><div class="line"></div></pre></td></tr></table></figure>
+<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201707/Rplot.png" alt=""></p>
+<h5 id="Cpp"><a href="#Cpp" class="headerlink" title="Cpp"></a>Cpp</h5><p>Cpp画图实在是比较伤…用了OpenCV的接口才勉强能看…</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/core.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/highgui.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/imgproc.hpp&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">PlotCurve</span><span class="params">(<span class="keyword">double</span> a=<span class="number">5.21</span>)</span></span>&#123;</div><div class="line">    cv::Mat image = cv::Mat(<span class="number">300</span>, <span class="number">300</span>, CV_8U, cv::Scalar(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>));</div><div class="line">    <span class="keyword">double</span> theta0 = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(theta0 &lt;= <span class="number">2</span>*M_PI)&#123;</div><div class="line">        <span class="keyword">double</span> r0 = a*(<span class="number">1</span>-<span class="built_in">sin</span>(theta0));</div><div class="line">        cv::Point p = cv::Point(<span class="built_in">cos</span>(theta0)*r0*<span class="number">10</span>+<span class="number">150</span>, <span class="number">300</span>-(<span class="built_in">sin</span>(theta0)*r0*<span class="number">10</span>+<span class="number">200</span>));</div><div class="line">        cv::circle(image, p, <span class="number">1</span>, cv::Scalar(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>),<span class="number">-1</span>);</div><div class="line">        theta0 += <span class="number">2</span>*M_1_PI/<span class="number">100</span>;</div><div class="line">    &#125;</div><div class="line">    cv::imshow(<span class="string">"5.21-L"</span>, image);</div><div class="line">    cv::waitKey(<span class="number">0</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    PlotCurve();</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201707/Cpp.png" alt=""></p>
+<p>嗯，就这些吧，Haskell还是不碰的好:-)…其他的语言也不会了orz…</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Octave </tag>
+            
+            <tag> Matlab </tag>
+            
+            <tag> R </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[添加OpenCV3对Python3的支持&QT中使用OpenCV]]></title>
       <url>/2017/08/15/%E6%B7%BB%E5%8A%A0OpenCV3%E5%AF%B9Python3%E7%9A%84%E6%94%AF%E6%8C%81/</url>
       <content type="html"><![CDATA[<p>一直用的Python3,但是呢之前编译OpenCV只是按照默认添加了对Python2的支持，于是有进行重新编译，多次挂掉后总算成功了，这里做下记录。</p>
@@ -2692,9 +2734,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
@@ -2728,9 +2770,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
@@ -2779,9 +2821,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
@@ -3141,9 +3183,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
@@ -3183,9 +3225,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
