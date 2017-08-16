@@ -3,9 +3,9 @@
   
     
     <entry>
-      <title><![CDATA[百年回首--关于心型曲线的几种画法]]></title>
+      <title><![CDATA[百年回首--关于心形曲线的几种画法]]></title>
       <url>/2017/08/16/%E7%99%BE%E5%B9%B4%E5%9B%9E%E9%A6%96-%E5%85%B3%E4%BA%8E%E5%BF%83%E5%9E%8B%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%87%A0%E7%A7%8D%E7%94%BB%E6%B3%95/</url>
-      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>突然想起来心型曲线，刚吃完饭闲着。。。来画一下。</p>
+      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>今天和同学聊到了心形曲线。。刚吃完饭闲着。。。来画一下。</p>
 <h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><h5 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"></div><div class="line">a = <span class="number">5.21</span></div><div class="line">theta = np.linspace(<span class="number">0</span>, <span class="number">2</span>*np.pi, <span class="number">100</span>)</div><div class="line">r = a*(<span class="number">1</span> - np.sin(theta))</div><div class="line">plt.polar(theta, r)</div><div class="line">plt.show()</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
 <p>输出：</p>
 <p><img src="http://datahonor-1252464519.costj.myqcloud.com/201707/figure_1.png" alt=""></p>
