@@ -3,6 +3,37 @@
   
     
     <entry>
+      <title><![CDATA[Pedestrain Detection]]></title>
+      <url>/2017/08/17/Pedestrain-Detection/</url>
+      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>使用OpenCV自带的API进行行人检测。</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><p>参考<a href="https://github.com/shenxiangzhuang/opencv-samples" target="_blank" rel="external">这里</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/core.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/imgproc.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"opencv2/imgcodecs.hpp"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/highgui.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/ml.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/opencv.hpp&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> INPUT_VIDEO_FILE <span class="meta-string">"/home/shensir/Documents/MyPrograming/Cpp/MyCV/data/terrace1-c0.avi"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> WINDOW_NAME <span class="meta-string">"WINDOW"</span></span></div><div class="line"></div><div class="line"><span class="comment">// Reference: https://github.com/Itseez/opencv/blob/master/samples/cpp/train_HOG.cpp</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">draw_locations</span><span class="params">(Mat &amp;img, <span class="keyword">const</span> <span class="built_in">vector</span>&lt;Rect&gt; &amp;locations, <span class="keyword">const</span> Scalar &amp;color)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!locations.empty()) &#123;</div><div class="line">        <span class="built_in">vector</span>&lt;Rect&gt;::const_iterator loc = locations.begin();</div><div class="line">        <span class="built_in">vector</span>&lt;Rect&gt;::const_iterator end = locations.end();</div><div class="line">        <span class="keyword">for</span> (; loc != end; ++loc) &#123;</div><div class="line">            rectangle(img, *loc, color, <span class="number">2</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> **argv)</span> </span>&#123;</div><div class="line">    Mat mSrc;</div><div class="line">    <span class="built_in">vector</span>&lt;Rect&gt; vDetected;</div><div class="line">    HOGDescriptor hog;</div><div class="line"></div><div class="line">    <span class="keyword">static</span> <span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt; detector = HOGDescriptor::getDefaultPeopleDetector();</div><div class="line">    hog.setSVMDetector(detector);</div><div class="line"></div><div class="line">    <span class="function">VideoCapture <span class="title">cap</span><span class="params">(INPUT_VIDEO_FILE)</span></span>;</div><div class="line"></div><div class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</div><div class="line"></div><div class="line">        cap &gt;&gt; mSrc;</div><div class="line">        hog.detectMultiScale(mSrc, vDetected, <span class="number">0</span>, Size(<span class="number">8</span>, <span class="number">8</span>), Size(<span class="number">32</span>, <span class="number">32</span>), <span class="number">1.05</span>, <span class="number">2</span>);</div><div class="line">        draw_locations(mSrc, vDetected, Scalar(<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>));</div><div class="line"></div><div class="line">        imshow(WINDOW_NAME, mSrc);</div><div class="line">        <span class="comment">// 加上ESC退出</span></div><div class="line">        <span class="keyword">char</span> c = waitKey(<span class="number">10</span>);</div><div class="line">        <span class="keyword">if</span> (c == <span class="number">27</span>)</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出效果：</p>
+<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201708/WINDOW_081702.png" alt=""></p>
+<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201708/WINDOW_081703.png" alt=""></p>
+<p>总体感觉还是不错的。视频下载<a href="http://cvlab.epfl.ch/data/pom" target="_blank" rel="external">地址</a>.</p>
+<h4 id="。。。"><a href="#。。。" class="headerlink" title="。。。"></a>。。。</h4><p>话说当初学OpenCV的初衷就是检测行人来着，想着检测食堂和学校主干道的行人，并进行计数，最好能搞出来实时人流量的图（天真orz…）…现在学了一年了，几乎没什么进展，而且发现所要做的或许是属于人群检测，而非简单的行人检测…</p>
+<p>总的来说学的都是基本的图像处理操作和原理，用到的机器学习算法也就是K-means, KNN, SVM这些，至于深度学习，神经网络这些还没有去研究，一是想着先打好基础，二来。。。我这I5的小本子也撑不住..</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Cpp </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[百年回首--关于心形曲线的几种画法]]></title>
       <url>/2017/08/16/%E7%99%BE%E5%B9%B4%E5%9B%9E%E9%A6%96-%E5%85%B3%E4%BA%8E%E5%BF%83%E5%9E%8B%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%87%A0%E7%A7%8D%E7%94%BB%E6%B3%95/</url>
       <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>今天和同学聊到了心形曲线。。刚吃完饭闲着。。。来画一下。</p>
@@ -30,9 +61,9 @@
         
         <tags>
             
-            <tag> Cpp </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Cpp </tag>
             
             <tag> Octave </tag>
             
@@ -94,9 +125,9 @@
         
         <tags>
             
-            <tag> OpenCV </tag>
-            
             <tag> Python </tag>
+            
+            <tag> OpenCV </tag>
             
         </tags>
         
@@ -2734,9 +2765,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
@@ -2770,9 +2801,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
@@ -2821,9 +2852,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
@@ -3183,9 +3214,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
@@ -3225,9 +3256,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
