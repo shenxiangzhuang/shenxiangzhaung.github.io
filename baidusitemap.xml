@@ -4,11 +4,33 @@
 
     
   <url>
-    <loc>http://datahonor.com/2017/08/17/Pedestrain-Detection/</loc>
-    <lastmod>2017-08-17T02:00:59.758Z</lastmod>
+    <loc>http://datahonor.com/2017/08/17/HOG-SVM-Pedestrian-Detection/</loc>
+    <lastmod>2017-08-17T07:49:40.915Z</lastmod>
     <data>
         <display>
-        <title>Pedestrain Detection</title>
+        <title>HOG+SVM&Pedestrian Detection</title>
+        <pubTime>2017-08-17T07:24:18.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/08/17/Pedestrain-Detection/</loc>
+    <lastmod>2017-08-17T07:25:33.620Z</lastmod>
+    <data>
+        <display>
+        <title>Pedestrian Detection</title>
         <pubTime>2017-08-17T01:47:39.000Z</pubTime>
         
         <tag>Cpp</tag>
@@ -1461,9 +1483,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
@@ -1533,9 +1555,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
@@ -1563,9 +1585,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
@@ -1615,9 +1637,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
@@ -1695,9 +1717,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          

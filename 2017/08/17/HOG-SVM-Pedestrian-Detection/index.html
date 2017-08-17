@@ -1,0 +1,1094 @@
+<!doctype html>
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Cpp,OpenCV," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Overview用了大概几个月的时间看完了OpenCV 3 Computer Vision Application Programming Cookbook - Third Edition， 也对前7章的基本操作部分在小站上进行了相应的总结。这里是最后一章实战的DEMO部分的代码，算作对本书学习的一个结尾吧。前面也看了几本相关的书，不过都和这本书差远了，无论理论和算法的讲解还是代码的水平都堪称一流">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HOG+SVM&Pedestrian Detection">
+<meta property="og:url" content="http://datahonor.com/2017/08/17/HOG-SVM-Pedestrian-Detection/index.html">
+<meta property="og:site_name" content="DATA HONOR">
+<meta property="og:description" content="Overview用了大概几个月的时间看完了OpenCV 3 Computer Vision Application Programming Cookbook - Third Edition， 也对前7章的基本操作部分在小站上进行了相应的总结。这里是最后一章实战的DEMO部分的代码，算作对本书学习的一个结尾吧。前面也看了几本相关的书，不过都和这本书差远了，无论理论和算法的讲解还是代码的水平都堪称一流">
+<meta property="og:image" content="http://datahonor-1252464519.costj.myqcloud.com/201708/Original%20image_081704.png">
+<meta property="og:image" content="http://datahonor-1252464519.costj.myqcloud.com/201708/HOG%20image_081705.png">
+<meta property="og:image" content="http://datahonor-1252464519.costj.myqcloud.com/201708/Positive%20samples_081707.png">
+<meta property="og:image" content="http://datahonor-1252464519.costj.myqcloud.com/201708/Negative%20Samples_081706.png">
+<meta property="og:image" content="http://datahonor-1252464519.costj.myqcloud.com/201708/People%20detection_081708.png">
+<meta property="og:updated_time" content="2017-08-17T07:49:40.915Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HOG+SVM&Pedestrian Detection">
+<meta name="twitter:description" content="Overview用了大概几个月的时间看完了OpenCV 3 Computer Vision Application Programming Cookbook - Third Edition， 也对前7章的基本操作部分在小站上进行了相应的总结。这里是最后一章实战的DEMO部分的代码，算作对本书学习的一个结尾吧。前面也看了几本相关的书，不过都和这本书差远了，无论理论和算法的讲解还是代码的水平都堪称一流">
+<meta name="twitter:image" content="http://datahonor-1252464519.costj.myqcloud.com/201708/Original%20image_081704.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '不秩稚童'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://datahonor.com/2017/08/17/HOG-SVM-Pedestrian-Detection/"/>
+
+
+
+
+
+  <title> HOG+SVM&Pedestrian Detection | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-92663335-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cbfd16620150a28ce4061f717038b4de";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">DATA HONOR</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Never say never.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/08/17/HOG-SVM-Pedestrian-Detection/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="不秩稚童">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="DATA HONOR">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HOG+SVM&Pedestrian Detection
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-17T15:24:18+08:00">
+                2017-08-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Cpp/" itemprop="url" rel="index">
+                    <span itemprop="name">Cpp</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/17/HOG-SVM-Pedestrian-Detection/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/08/17/HOG-SVM-Pedestrian-Detection/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>用了大概几个月的时间看完了<em>OpenCV 3 Computer Vision Application Programming Cookbook - Third Edition</em>， 也对前7章的基本操作部分在小站上进行了相应的总结。这里是最后一章实战的DEMO部分的代码，算作对本书学习的一个结尾吧。前面也看了几本相关的书，不过都和这本书差远了，无论理论和算法的讲解还是代码的水平都堪称一流，真心推荐~</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><h5 id="关于HOG的可视化"><a href="#关于HOG的可视化" class="headerlink" title="关于HOG的可视化"></a>关于HOG的可视化</h5><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;opencv2/core.hpp&gt;</div><div class="line">#include &lt;opencv2/imgproc.hpp&gt;</div><div class="line">#include "opencv2/imgcodecs.hpp"</div><div class="line">#include &lt;opencv2/highgui.hpp&gt;</div><div class="line">#include &lt;opencv2/ml.hpp&gt;</div><div class="line">#include &lt;opencv2/opencv.hpp&gt;</div><div class="line"></div><div class="line">using namespace cv;</div><div class="line">using namespace std;</div><div class="line"></div><div class="line">// draw one HOG over one cell</div><div class="line">void drawHOG(std::vector&lt;float&gt;::const_iterator hog, // iterator to the HOG</div><div class="line">        int numberOfBins,  // number of bins inHOG</div><div class="line">        cv::Mat &amp; image,  // image of the cell</div><div class="line">        float scale = 1.0)</div><div class="line">&#123;</div><div class="line">    const float PI = 3.1415927;</div><div class="line">    float binStep = PI/numberOfBins;</div><div class="line">    float maxLength = image.rows;</div><div class="line">    float cx = image.cols/2;</div><div class="line">    float cy = image.rows/2;</div><div class="line"></div><div class="line">    // for each bin</div><div class="line">    for(int bin=0; bin&lt;numberOfBins; bin++)&#123;</div><div class="line">        // bin orientation</div><div class="line">        float angle = bin*binStep;</div><div class="line">        float dirX = cos(angle);</div><div class="line">        float dirY = sin(angle);</div><div class="line">        // length of line proportion to bin size</div><div class="line">        // 这里感觉是为了可视化的时候区分不同的bin,不是很明白...</div><div class="line">        float length = 0.5*maxLength**(hog+bin);</div><div class="line"></div><div class="line">        // drawing the line</div><div class="line">        float x1 = cx - dirX * length * scale;</div><div class="line">        float y1 = cy - dirY * length * scale;</div><div class="line">        float x2 = cx + dirX * length * scale;</div><div class="line">        float y2 = cy + dirY * length * scale;</div><div class="line">        cv::line(image, cv::Point(x1, y1), cv::Point(x2, y2),</div><div class="line">        CV_RGB(255, 255, 255), 1.5);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// Draw HOG over an image</div><div class="line">void drawHOGDescriptors(const cv::Mat &amp;image, // the input image</div><div class="line">    cv::Mat &amp;hogImage, // the resulting hog image</div><div class="line">        cv::Size cellSize,  // size of each cell</div><div class="line">        int nBins</div><div class="line">    )&#123;</div><div class="line">    // block size is image size</div><div class="line">    // image.cols = 391</div><div class="line">    // (image.cols/cellSize.width)*cellSize.width = 384</div><div class="line">    // 下面这里先除后乘，是为了保证在不能恰好被cell均分的情况</div><div class="line">    cv::HOGDescriptor hog(cv::Size((image.cols/cellSize.width)*cellSize.width, (image.rows/cellSize.height)*cellSize.height),</div><div class="line">                          cv::Size((image.cols/cellSize.width)*cellSize.width, (image.rows/cellSize.height)*cellSize.height),</div><div class="line">                          cellSize, cellSize, nBins);</div><div class="line"></div><div class="line">    // compute HOG</div><div class="line">    std::vector&lt;float&gt;descriptors;</div><div class="line">    hog.compute(image, descriptors);</div><div class="line"></div><div class="line">    float scale = 2.0 / *std::max_element(descriptors.begin(), descriptors.end());</div><div class="line">    hogImage.create(image.rows, image.cols, CV_8U);</div><div class="line">    cv::Mat temp;</div><div class="line">    std::vector&lt;float&gt;::const_iterator itDesc = descriptors.begin();</div><div class="line">    for(int i=0; i&lt;image.rows/cellSize.height; i++)&#123;</div><div class="line">        for(int j=0; j &lt; image.cols/cellSize.width; j++)&#123;</div><div class="line">            // draw each cell</div><div class="line">            temp = hogImage(cv::Rect(j*cellSize.width, i*cellSize.height, cellSize.width, cellSize.height));</div><div class="line">            drawHOG(itDesc, nBins, temp, scale);</div><div class="line">            itDesc += nBins;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int main() &#123;</div><div class="line">    cv::Mat image = imread("/home/shensir/Documents/MyPrograming/Cpp/MyCV/data/girl.png", 0);</div><div class="line">    cv::imshow("Original image", image);</div><div class="line"></div><div class="line">    cv::HOGDescriptor hog(cv::Size((image.cols / 16) * 16, (image.rows / 16) * 16), // size of the window</div><div class="line">                          cv::Size(16, 16),  // block size</div><div class="line">                          cv::Size(16, 16),  // block stride</div><div class="line">                          cv::Size(4, 4),  // cell size</div><div class="line">                          9); // num of bins</div><div class="line"></div><div class="line">    std::vector&lt;float&gt; descriptor;</div><div class="line"></div><div class="line">    // Draw  a representation of HOG cells</div><div class="line">    cv::Mat hogImage = image.clone();</div><div class="line">    drawHOGDescriptors(image, hogImage, cv::Size(16, 16), 9);</div><div class="line">    cv::imshow("HOG image", hogImage);</div><div class="line"></div><div class="line">    waitKey(0);</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201708/Original%20image_081704.png" alt=""><br><img src="http://datahonor-1252464519.costj.myqcloud.com/201708/HOG%20image_081705.png" alt=""></p>
+<h5 id="HOG-SVM检测警示牌"><a href="#HOG-SVM检测警示牌" class="headerlink" title="HOG+SVM检测警示牌"></a>HOG+SVM检测警示牌</h5><p>这里是自己完成训练到预测全部过程的，之前看到<a href="http://blog.csdn.net/masibuaa/article/details/16105073" target="_blank" rel="external">这个</a>，但是是OpenCV2.4的，尝试改成3的没成功，很多函数的用法已经变了，不过对比看还是下面这种逻辑更为清晰一些。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;opencv2/core.hpp&gt;</div><div class="line">#include &lt;opencv2/imgproc.hpp&gt;</div><div class="line">#include "opencv2/imgcodecs.hpp"</div><div class="line">#include &lt;opencv2/highgui.hpp&gt;</div><div class="line">#include &lt;opencv2/ml.hpp&gt;</div><div class="line">#include &lt;opencv2/opencv.hpp&gt;</div><div class="line"></div><div class="line">using namespace cv;</div><div class="line">using namespace std;</div><div class="line"></div><div class="line">int main() &#123;</div><div class="line"></div><div class="line">    // generate the filename</div><div class="line">    std::vector&lt;std::string&gt; imgs;</div><div class="line">    std::string prefix = "/home/shensir/Documents/MyPrograming/Cpp/b"</div><div class="line">            "ooks/CV/1-ing/OpenCV3ComputerVisionApplicationProgrammingCookbook"</div><div class="line">            "ThirdEdition_Code/images/stopSamples/stop";</div><div class="line">    std::string ext = ".png";</div><div class="line">    // loading 8 positive samples</div><div class="line">    std::vector&lt;cv::Mat&gt; positives;</div><div class="line">    for (int i = 0; i &lt; 8; i++) &#123;</div><div class="line">        std::string name(prefix);</div><div class="line">        std::ostringstream ss;</div><div class="line">        ss &lt;&lt; std::setfill('0') &lt;&lt; std::setw(2) &lt;&lt; i;</div><div class="line">        name += ss.str();</div><div class="line">        name += ext;</div><div class="line">        positives.push_back(imread(name, cv::IMREAD_GRAYSCALE));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // the first 8 positive samples</div><div class="line">    cv::Mat posSamples(2 * positives[0].rows, 4 * positives[0].cols, CV_8U);</div><div class="line">    for (int i = 0; i &lt; 2; i++) &#123;</div><div class="line">        for (int j = 0; j &lt; 4; j++) &#123;</div><div class="line">            positives[i * 4 + j].copyTo(posSamples(cv::Rect(j * positives[i * 4 + j].cols,</div><div class="line">                                                            i * positives[i * 4 + j].rows,</div><div class="line">                                                            positives[i * 4 + j].cols,</div><div class="line">                                                            positives[i * 4 + j].rows)));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    cv::imshow("Positive samples", posSamples);</div><div class="line"></div><div class="line">    // laoding 8 negative samples</div><div class="line">    std::string nprefix = "/home/shensir/Documents/MyPrograming/Cpp/books/CV/1-ing"</div><div class="line">            "/OpenCV3ComputerVisionApplicationProgrammingCookbookThirdEdition_Code"</div><div class="line">            "/images/stopSamples/neg";</div><div class="line">    std::vector&lt;cv::Mat&gt; negatives;</div><div class="line">    for (long i = 0; i &lt; 8; i++) &#123;</div><div class="line">        std::string name(nprefix);</div><div class="line">        std::ostringstream ss;</div><div class="line">        ss &lt;&lt; std::setfill('0') &lt;&lt; std::setw(2) &lt;&lt; i;</div><div class="line">        name += ss.str();</div><div class="line">        name += ext;</div><div class="line">        negatives.push_back(cv::imread(name, cv::IMREAD_GRAYSCALE));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // the first 8 negative  samples</div><div class="line">    cv::Mat negSamples(2 * negatives[0].rows, 4 * negatives[0].cols, CV_8U);</div><div class="line">    for (int i = 0; i &lt; 2; i++) &#123;</div><div class="line">        for (int j = 0; j &lt; 4; j++) &#123;</div><div class="line">            negatives[i * 4 + j].copyTo(</div><div class="line">                    negSamples(cv::Rect(j * negatives[4 * i + j].cols,</div><div class="line">                                        i * negatives[4 * i + j].rows, negatives[4 * i + j].cols,</div><div class="line">                                        negatives[4 * i + j].rows)));</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    cv::imshow("Negative Samples", negSamples);</div><div class="line"></div><div class="line">    // The HOG descriptor for stop sign detection</div><div class="line">    cv::HOGDescriptor hogDesc(positives[0].size(), // size of the window</div><div class="line">                              cv::Size(8, 8),  // block size</div><div class="line">                              cv::Size(4, 4),  // block stride</div><div class="line">                              cv::Size(4, 4),  // cell size</div><div class="line">                              9  // number of bins</div><div class="line">    );</div><div class="line"></div><div class="line">    // compute first descriptor</div><div class="line">    std::vector&lt;float&gt; desc;</div><div class="line">    hogDesc.compute(positives[0], desc);</div><div class="line">    std::cout &lt;&lt; "Positive sample size: " &lt;&lt; positives[0].rows &lt;&lt; "x" &lt;&lt; positives[0].cols &lt;&lt; endl;</div><div class="line">    std::cout &lt;&lt; "HOG descriptor size: " &lt;&lt; desc.size() &lt;&lt; std::endl;</div><div class="line"></div><div class="line">    // the matrix of sample descriptors</div><div class="line">    int featureSize = desc.size();</div><div class="line">    int numberOfSamples = positives.size() + negatives.size();</div><div class="line">    // create the matrix that will contain the sample HOG</div><div class="line">    cv::Mat samples(numberOfSamples, featureSize, CV_32FC1);</div><div class="line"></div><div class="line">    // fill first row with first descriptor</div><div class="line">    for (int i = 0; i &lt; featureSize; i++)</div><div class="line">        samples.ptr&lt;float&gt;(0)[i] = desc[i];</div><div class="line"></div><div class="line">    // compute descriptor of the positive samples</div><div class="line">    for (int j = 1; j &lt; positives.size(); j++) &#123;</div><div class="line">        hogDesc.compute(positives[j], desc);</div><div class="line">        // fill the next row with current descriptor</div><div class="line">        for (int i = 0; i &lt; featureSize; i++) &#123;</div><div class="line">            samples.ptr&lt;float&gt;(j)[i] = desc[i];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // compute descriptor of the negative samples</div><div class="line">    for (int j = 0; j &lt; negatives.size(); j++) &#123;</div><div class="line">        hogDesc.compute(negatives[j], desc);</div><div class="line">        // fill the next row with current descriptor</div><div class="line">        for (int i = 0; i &lt; featureSize; i++) &#123;</div><div class="line">            samples.ptr&lt;float&gt;(j + positives.size())[i] = desc[i];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // create the labels</div><div class="line">    cv::Mat labels(numberOfSamples, 1, CV_32SC1);</div><div class="line">    // labels of positive samples</div><div class="line">    labels.rowRange(0, positives.size()) = 1.0;</div><div class="line">    // labels of negative sampels</div><div class="line">    labels.rowRange(positives.size(), numberOfSamples) = -1.0;</div><div class="line"></div><div class="line">    // create SVM classifier</div><div class="line">    cv::Ptr&lt;cv::ml::SVM&gt; svm = cv::ml::SVM::create();</div><div class="line">    svm-&gt;setType(cv::ml::SVM::C_SVC);</div><div class="line">    svm-&gt;setKernel(cv::ml::SVM::LINEAR);</div><div class="line"></div><div class="line">    // prepare the training data</div><div class="line">    cv::Ptr&lt;cv::ml::TrainData&gt; trainingData =</div><div class="line">            cv::ml::TrainData::create(samples, cv::ml::SampleTypes::ROW_SAMPLE, labels);</div><div class="line">    // SVM training</div><div class="line">    svm-&gt;train(trainingData);</div><div class="line">    // 将训练好的SVM模型保存为XML文件</div><div class="line">    svm-&gt;save("STOP_LOGO.xml");</div><div class="line"></div><div class="line">    // 测试</div><div class="line">    cv::Mat queries(4, featureSize, CV_32FC1);</div><div class="line"></div><div class="line">    // fill the rows with query descriptor</div><div class="line">    hogDesc.compute(cv::imread("/home/shensir/Documents/MyPrograming/Cpp/bo"</div><div class="line">                                       "oks/CV/1-ing/OpenCV3ComputerVisionApplication"</div><div class="line">                                       "ProgrammingCookbookThirdEdition_Code/images/stopSamples/stop08.png", 0), desc);</div><div class="line">    for (int i = 0; i &lt; featureSize; i++)</div><div class="line">        queries.ptr&lt;float&gt;(0)[i] = desc[i];</div><div class="line"></div><div class="line"></div><div class="line">    hogDesc.compute(cv::imread("/home/shensir/Documents/MyPrograming/Cpp/boo"</div><div class="line">                                       "ks/CV/1-ing/OpenCV3ComputerVisionApplicationProgramm"</div><div class="line">                                       "ingCookbookThirdEdition_Code/images/stopSamples/stop09.png", 0), desc);</div><div class="line">    for (int i = 0; i &lt; featureSize; i++)</div><div class="line">        queries.ptr&lt;float&gt;(1)[i] = desc[i];</div><div class="line"></div><div class="line">    hogDesc.compute(cv::imread("/home/shensir/Documents/MyPrograming/"</div><div class="line">                                       "Cpp/books/CV/1-ing/OpenCV3ComputerVisionApplicationPro"</div><div class="line">                                       "grammingCookbookThirdEdition_Code/images/stopSamples/neg08.png", 0), desc);</div><div class="line">    for (int i = 0; i &lt; featureSize; i++)</div><div class="line">        queries.ptr&lt;float&gt;(2)[i] = desc[i];</div><div class="line"></div><div class="line">    hogDesc.compute(cv::imread("/home/shensir/Documents/MyPrograming/Cpp/books/"</div><div class="line">                                       "CV/1-ing/OpenCV3ComputerVisionApplicationP"</div><div class="line">                                       "rogrammingCookbookThirdEdition_Code/images/stopSamples/neg09.png", 0), desc);</div><div class="line">    for (int i = 0; i &lt; featureSize; i++)</div><div class="line">        queries.ptr&lt;float&gt;(3)[i] = desc[i];</div><div class="line"></div><div class="line">    cv::Mat predictions;</div><div class="line">    svm-&gt;predict(queries, predictions);</div><div class="line">    for(int i=0; i&lt;4; i++)&#123;</div><div class="line">        cout &lt;&lt; "query: " &lt;&lt; i &lt;&lt; ": " &lt;&lt;</div><div class="line">                                       ((predictions.at&lt;float&gt;(i,0) &lt; 0.0) ?</div><div class="line">                                       "Negative" : "Positive") &lt;&lt; endl;</div><div class="line">    &#125;</div><div class="line">    waitKey(0);</div><div class="line">    return 0;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<pre><code>Positive sample size: 64x64
+HOG descriptor size: 8100
+query: 0: Positive
+query: 1: Positive
+query: 2: Negative
+query: 3: Negative
+</code></pre><p><img src="http://datahonor-1252464519.costj.myqcloud.com/201708/Positive%20samples_081707.png" alt=""></p>
+<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201708/Negative%20Samples_081706.png" alt=""></p>
+<h5 id="Pedestrian-Detection简化版"><a href="#Pedestrian-Detection简化版" class="headerlink" title="Pedestrian Detection简化版"></a>Pedestrian Detection简化版</h5><p>同样是用的OpenCV自带的行人检测器，这里只是一个针对照片的简化版本，<a href="http://datahonor.com/2017/08/17/Pedestrain-Detection/">这里</a>是完整版。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"opencv2/highgui.hpp"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"opencv2/imgproc.hpp"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"grayhistogram.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"matplotlibcpp.h"</span></span></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="comment">// People detection</span></div><div class="line">    cv::Mat myImage = imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/MyCV/data/person.jpg"</span>, <span class="number">0</span>);</div><div class="line">    <span class="comment">// create the detector</span></div><div class="line">    <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;cv::Rect&gt; peoples;</div><div class="line">    cv::HOGDescriptor peopleHog;</div><div class="line">    peopleHog.setSVMDetector(cv::HOGDescriptor::getDefaultPeopleDetector());</div><div class="line">    <span class="comment">// detect people on an image</span></div><div class="line">    peopleHog.detectMultiScale(myImage,</div><div class="line">                               peoples, <span class="number">0</span>, cv::Size(<span class="number">4</span>, <span class="number">4</span>), cv::Size(<span class="number">32</span>, <span class="number">32</span>), <span class="number">1.1</span>, <span class="number">2</span>);</div><div class="line">    <span class="comment">// draw detections on image</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; peoples.size(); i++)</div><div class="line">        cv::rectangle(myImage, peoples[i], cv::Scalar(<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">2</span>);</div><div class="line"></div><div class="line">    cv::imshow(<span class="string">"People detection"</span>, myImage);</div><div class="line">    cv::waitKey(<span class="number">0</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>输出：</p>
+<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201708/People%20detection_081708.png" alt=""></p>
+<h4 id="…"><a href="#…" class="headerlink" title="…"></a>…</h4><p>马上大三了，课比较多，估计没时间再捣鼓这些纯粹为了兴趣的东西了orz…嗯，不过毕竟看了快一年，也算是有点基础了解吧，之后还有机会玩这个也会轻松一些了。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2017/08/17/HOG-SVM-Pedestrian-Detection/">HOG+SVM&Pedestrian Detection</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 不秩稚童 的个人博客">不秩稚童</a></p>
+  <p><span>作者邮箱:</span>datahonor@gmail.com</p>
+  <p><span>发布时间:</span>2017年08月17日 - 15:08</p>
+  <p><span>最后更新:</span>2017年08月17日 - 15:08</p>
+  <p><span>原始链接:</span><a href="/2017/08/17/HOG-SVM-Pedestrian-Detection/" title="HOG+SVM&Pedestrian Detection">http://datahonor.com/2017/08/17/HOG-SVM-Pedestrian-Detection/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/08/17/HOG-SVM-Pedestrian-Detection/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+	clipboard.on('success', $(function(){
+	  $(".fa-clipboard").click(function(){
+		swal({   
+		  title: "",   
+		  text: '复制成功',   
+		  html: false,
+		  timer: 500,   
+		  showConfirmButton: false
+	    });
+	  });
+    }));  
+</script>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Cpp/" rel="tag"># Cpp</a>
+          
+            <a href="/tags/OpenCV/" rel="tag"># OpenCV</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/17/Pedestrain-Detection/" rel="next" title="Pedestrian Detection">
+                <i class="fa fa-chevron-left"></i> Pedestrian Detection
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+
+
+
+
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
+               alt="不秩稚童" />
+          <p class="site-author-name" itemprop="name">不秩稚童</p>
+           
+              <p class="site-description motion-element" itemprop="description">十年饮冰，难凉热血。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">95</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/shenxiangzhuang" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/shen-xiang-zhuang" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.cnblogs.com/buzhizhitong" target="_blank" title="博客园">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  博客园
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#关于HOG的可视化"><span class="nav-text">关于HOG的可视化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#HOG-SVM检测警示牌"><span class="nav-text">HOG+SVM检测警示牌</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Pedestrian-Detection简化版"><span class="nav-text">Pedestrian Detection简化版</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#…"><span class="nav-text">…</span></a></li></ol></div>
+            
+
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">不秩稚童</span>
+</div>
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i>本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i>本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'http-datahonor-com';
+      var disqus_identifier = '2017/08/17/HOG-SVM-Pedestrian-Detection/';
+
+      var disqus_title = "HOG+SVM&Pedestrian Detection";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+  
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+</body>
+</html>
