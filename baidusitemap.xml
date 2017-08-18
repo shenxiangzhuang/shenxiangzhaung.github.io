@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/08/05/BST-in-Cpp/</loc>
+    <lastmod>2017-08-18T09:47:48.481Z</lastmod>
+    <data>
+        <display>
+        <title>BST in Cpp</title>
+        <pubTime>2017-08-04T16:40:24.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>DataStructure</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/08/17/HOG-SVM-Pedestrian-Detection/</loc>
     <lastmod>2017-08-17T07:49:40.915Z</lastmod>
     <data>
@@ -177,28 +199,6 @@
            
              
               <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/08/05/BST-in-Cpp/</loc>
-    <lastmod>2017-08-04T16:49:09.390Z</lastmod>
-    <data>
-        <display>
-        <title>BST in Cpp</title>
-        <pubTime>2017-08-04T16:40:24.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>DataStructure</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
           
         </display>
     </data>
