@@ -55,6 +55,10 @@
         <title>BST&BT in Cpp</title>
         <pubTime>2017-08-04T16:40:24.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>DataStructure</tag>
+         
          
            
              
@@ -73,6 +77,10 @@
         <title>HOG+SVM&Pedestrian Detection</title>
         <pubTime>2017-08-17T07:24:18.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -91,6 +99,10 @@
         <title>Pedestrian Detection</title>
         <pubTime>2017-08-17T01:47:39.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -109,6 +121,16 @@
         <title>百年回首--关于心形曲线的几种画法</title>
         <pubTime>2017-08-16T05:15:20.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>Python</tag>
+         
+        <tag>Octave</tag>
+         
+        <tag>Matlab</tag>
+         
+        <tag>R</tag>
+         
          
            
              
@@ -127,6 +149,10 @@
         <title>添加OpenCV3对Python3的支持&QT中使用OpenCV</title>
         <pubTime>2017-08-15T09:18:58.000Z</pubTime>
         
+        <tag>OpenCV</tag>
+         
+        <tag>Python</tag>
+         
          
            
              
@@ -145,6 +171,10 @@
         <title>Coursera-ML</title>
         <pubTime>2017-07-25T03:47:28.000Z</pubTime>
         
+        <tag>Octave</tag>
+         
+        <tag>ML</tag>
+         
          
            
              
@@ -163,6 +193,10 @@
         <title>SS使用全局代理</title>
         <pubTime>2017-07-31T16:07:32.000Z</pubTime>
         
+        <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
+         
          
            
              
@@ -181,6 +215,10 @@
         <title>Singly Linked Lists</title>
         <pubTime>2017-04-24T16:06:17.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>DataStructure</tag>
+         
          
            
              
@@ -199,6 +237,8 @@
         <title>关于教育网邮箱</title>
         <pubTime>2017-08-10T14:50:47.000Z</pubTime>
         
+        <tag>Tips</tag>
+         
          
            
              
@@ -218,6 +258,12 @@
         <title>Octave in Ubuntu</title>
         <pubTime>2017-05-06T15:10:53.000Z</pubTime>
         
+        <tag>Octave</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
+         
          
            
              
@@ -236,6 +282,10 @@
         <title>OpenCV获取安卓手机摄像头的视频流</title>
         <pubTime>2017-07-22T09:53:58.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -254,6 +304,10 @@
         <title>OpenCV系列笔记二十四：Detecting corners in an image</title>
         <pubTime>2017-07-20T03:43:58.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -272,6 +326,8 @@
         <title>我这个人呢</title>
         <pubTime>2017-07-08T16:27:17.000Z</pubTime>
         
+        <tag>随笔</tag>
+         
          
            
              
@@ -290,6 +346,8 @@
         <title>这一年，我二十</title>
         <pubTime>2017-06-24T08:25:34.000Z</pubTime>
         
+        <tag>随笔</tag>
+         
          
            
              
@@ -308,6 +366,10 @@
         <title>About Hexo</title>
         <pubTime>2017-02-25T03:30:19.000Z</pubTime>
         
+        <tag>Hexo</tag>
+         
+        <tag>js</tag>
+         
          
            
              
@@ -326,6 +388,8 @@
         <title>OpenCV系列笔记二十三：Extracting Lines, Contours, and Components</title>
         <pubTime>2017-05-27T01:01:01.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
          
            
              
@@ -344,6 +408,10 @@
         <title>Hough变换</title>
         <pubTime>2017-05-28T03:13:36.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -362,6 +430,10 @@
         <title>Stacks</title>
         <pubTime>2017-05-10T14:40:17.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>DataStructure</tag>
+         
          
            
              
@@ -380,6 +452,10 @@
         <title>OpenCV系列笔记二十二：滤波</title>
         <pubTime>2017-05-25T07:33:11.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -398,6 +474,10 @@
         <title>OpenCV系列笔记二十一：MSER</title>
         <pubTime>2017-05-24T16:06:22.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -416,6 +496,10 @@
         <title>OpenCV系列笔记二十：Segmenting images using watersheds</title>
         <pubTime>2017-05-24T15:19:35.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -434,6 +518,10 @@
         <title>OpenCV系列笔记十九：Morphalogical Operations</title>
         <pubTime>2017-05-15T14:59:20.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -452,6 +540,10 @@
         <title>背景建模</title>
         <pubTime>2017-05-18T16:54:03.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -470,6 +562,10 @@
         <title>The Speed of Numpy</title>
         <pubTime>2017-03-06T05:49:15.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Numpy</tag>
+         
          
            
              
@@ -488,6 +584,10 @@
         <title>实时视频中面具覆盖的实现</title>
         <pubTime>2017-05-18T15:44:17.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -506,6 +606,10 @@
         <title>学习目标分类</title>
         <pubTime>2017-05-18T09:58:12.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -524,6 +628,10 @@
         <title>自动光学检测，目标分割和检测</title>
         <pubTime>2017-05-17T16:49:33.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -542,6 +650,10 @@
         <title>OpenCV系列笔记二：Mouse trackbar</title>
         <pubTime>2017-04-26T16:06:56.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -560,6 +672,10 @@
         <title>OpenCV计算结果保存--YAML/XML</title>
         <pubTime>2017-05-15T14:42:16.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -578,6 +694,10 @@
         <title>OpenCV系列笔记十八：Visual tracking using histograms</title>
         <pubTime>2017-05-15T08:56:09.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -596,6 +716,10 @@
         <title>OpenCV系列笔记十七：Adaptive thresholding</title>
         <pubTime>2017-05-15T00:15:28.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -614,6 +738,10 @@
         <title>Queue</title>
         <pubTime>2017-05-10T16:23:24.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>DataStructure</tag>
+         
          
            
              
@@ -632,6 +760,8 @@
         <title>About if __name__=='__main__' in Python</title>
         <pubTime>2017-05-08T10:02:48.000Z</pubTime>
         
+        <tag>Python</tag>
+         
          
            
              
@@ -650,6 +780,10 @@
         <title>OpenCV系列笔记十三：Computing an image histogram</title>
         <pubTime>2017-05-02T08:34:26.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -668,6 +802,10 @@
         <title>OpenCV系列笔记十六：Using the mean shift algorithm to find an object</title>
         <pubTime>2017-05-04T07:40:36.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -686,6 +824,10 @@
         <title>OpenCV系列笔记十五：Backprojecting a histogram to detect specific image content</title>
         <pubTime>2017-05-04T07:06:11.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -704,6 +846,10 @@
         <title>OpenCV系列笔记十四：Look-up tables</title>
         <pubTime>2017-05-04T06:25:07.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -722,6 +868,10 @@
         <title>OpenCV系列笔记十二：Using colors for detection - skin tone detection</title>
         <pubTime>2017-05-02T04:02:23.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -740,6 +890,10 @@
         <title>OpenCV系列笔记十一：Segmenting an image with the GrabCut algorithm</title>
         <pubTime>2017-05-02T01:40:33.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -758,6 +912,10 @@
         <title>OpenCV系列笔记十：Converting color reprentations</title>
         <pubTime>2017-05-02T03:07:38.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -776,6 +934,10 @@
         <title>OpenCV系列笔记九：Comparing colors using the Strategy design pattern</title>
         <pubTime>2017-04-28T05:20:46.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -794,6 +956,10 @@
         <title>OpenCV系列笔记八：Remapping</title>
         <pubTime>2017-04-28T03:29:15.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -812,6 +978,10 @@
         <title>OpenCV系列笔记七：Neighbor access</title>
         <pubTime>2017-04-28T01:48:42.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -830,6 +1000,10 @@
         <title>OpenCV系列笔记六：图片颜色空间缩减与遍历</title>
         <pubTime>2017-04-09T01:43:10.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -848,6 +1022,10 @@
         <title>OpenCV系列笔记五：Accessing pixel values</title>
         <pubTime>2017-04-28T00:24:51.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -866,6 +1044,10 @@
         <title>OpenCV系列笔记四：ROI</title>
         <pubTime>2017-04-27T16:00:24.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -884,6 +1066,10 @@
         <title>OpenCV系列笔记三：Draw on image</title>
         <pubTime>2017-04-27T15:19:52.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -902,6 +1088,10 @@
         <title>OpenCV系列笔记一：Read, Show and Write</title>
         <pubTime>2017-04-26T14:50:36.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -920,6 +1110,10 @@
         <title>Learning Opencv3学习笔记--制作简易视频播放器</title>
         <pubTime>2017-04-03T15:47:43.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -938,6 +1132,8 @@
         <title>public, protected and private</title>
         <pubTime>2017-04-25T08:35:58.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
          
            
              
@@ -956,6 +1152,10 @@
         <title>Ubuntu搭建SS</title>
         <pubTime>2017-03-02T08:57:56.000Z</pubTime>
         
+        <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
+         
          
            
              
@@ -974,6 +1174,10 @@
         <title>Doubly Linked Lists</title>
         <pubTime>2017-04-25T05:53:46.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>DataStructure</tag>
+         
          
            
              
@@ -992,6 +1196,8 @@
         <title>Const in Cpp</title>
         <pubTime>2017-04-09T15:49:36.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
          
            
              
@@ -1010,6 +1216,10 @@
         <title>Learning Opencv3学习笔记</title>
         <pubTime>2017-04-05T16:44:23.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -1028,6 +1238,10 @@
         <title>Python抓取微信文章</title>
         <pubTime>2017-04-03T17:03:24.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Data Analysis</tag>
+         
          
            
              
@@ -1046,6 +1260,10 @@
         <title>我，Arch和Ubuntu的故事</title>
         <pubTime>2017-03-30T14:52:24.000Z</pubTime>
         
+        <tag>Ubuntu</tag>
+         
+        <tag>Arch</tag>
+         
          
            
              
@@ -1064,6 +1282,8 @@
         <title>typedef & #define</title>
         <pubTime>2017-03-25T07:18:25.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
          
            
              
@@ -1082,6 +1302,10 @@
         <title>算法竞赛入门经典[紫书]习题笔记(第三章)</title>
         <pubTime>2017-03-15T17:14:35.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>Algorithm</tag>
+         
          
            
              
@@ -1100,6 +1324,10 @@
         <title>利用Python,Lingo, Octave解线性规划问题(LP)</title>
         <pubTime>2017-03-22T14:50:39.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>OR</tag>
+         
          
            
              
@@ -1118,6 +1346,12 @@
         <title>Kaggle——American Pubs[Python] </title>
         <pubTime>2017-03-19T03:15:45.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Kaggle</tag>
+         
+        <tag>Data Analysis</tag>
+         
          
            
              
@@ -1136,6 +1370,10 @@
         <title>算法竞赛入门经典[紫书]习题笔记(第二章)</title>
         <pubTime>2017-03-13T04:18:22.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>Algorithm</tag>
+         
          
            
              
@@ -1154,6 +1392,12 @@
         <title>Ubuntu16.04LTS下安装Hadoop2.7.3</title>
         <pubTime>2017-03-08T15:44:44.000Z</pubTime>
         
+        <tag>Hadoop</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>分布式</tag>
+         
          
            
              
@@ -1172,6 +1416,10 @@
         <title>Numpy日常积累</title>
         <pubTime>2017-03-06T11:42:27.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Numpy</tag>
+         
          
            
              
@@ -1190,6 +1438,8 @@
         <title>Python日常积累</title>
         <pubTime>2017-03-06T11:37:57.000Z</pubTime>
         
+        <tag>Python</tag>
+         
          
            
              
@@ -1208,6 +1458,8 @@
         <title>cin and cin.getline</title>
         <pubTime>2017-03-06T01:16:12.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
          
            
              
@@ -1227,6 +1479,12 @@
         <title>Classifying News Headlines with scikit-learn</title>
         <pubTime>2017-03-05T01:14:46.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Kaggle</tag>
+         
+        <tag>Data Analysis</tag>
+         
          
            
              
@@ -1245,6 +1503,18 @@
         <title>朴素贝叶斯算法的简单实现</title>
         <pubTime>2017-03-03T04:38:48.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Algorithm</tag>
+         
+        <tag>Data Analysis</tag>
+         
+        <tag>ML</tag>
+         
+        <tag>Clustering</tag>
+         
+        <tag>统计学习方法</tag>
+         
          
            
              
@@ -1263,6 +1533,8 @@
         <title>最大似然估计与经验风险最小化</title>
         <pubTime>2017-03-03T05:39:39.000Z</pubTime>
         
+        <tag>统计学习方法</tag>
+         
          
            
              
@@ -1281,6 +1553,10 @@
         <title>豆瓣影评爬取</title>
         <pubTime>2017-03-02T09:22:21.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Spider</tag>
+         
          
            
              
@@ -1299,6 +1575,18 @@
         <title>原始感知机模型</title>
         <pubTime>2017-03-03T05:09:30.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Algorithm</tag>
+         
+        <tag>Data Analysis</tag>
+         
+        <tag>ML</tag>
+         
+        <tag>Clustering</tag>
+         
+        <tag>统计学习方法</tag>
+         
          
            
              
@@ -1317,6 +1605,18 @@
         <title>感知机学习算法的对偶形式</title>
         <pubTime>2017-03-03T05:19:21.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Algorithm</tag>
+         
+        <tag>Data Analysis</tag>
+         
+        <tag>ML</tag>
+         
+        <tag>Clustering</tag>
+         
+        <tag>统计学习方法</tag>
+         
          
            
              
@@ -1335,6 +1635,10 @@
         <title>Python分析QQ群聊天记录</title>
         <pubTime>2017-03-01T17:20:35.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>正则</tag>
+         
          
            
              
@@ -1353,6 +1657,18 @@
         <title>统计学习方法——简单实现KNN[Python]</title>
         <pubTime>2017-03-02T07:55:59.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Algorithm</tag>
+         
+        <tag>Data Analysis</tag>
+         
+        <tag>ML</tag>
+         
+        <tag>Clustering</tag>
+         
+        <tag>统计学习方法</tag>
+         
          
            
              
@@ -1371,6 +1687,14 @@
         <title>K-means clustering</title>
         <pubTime>2017-02-27T14:12:47.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Algorithm</tag>
+         
+        <tag>Clustering</tag>
+         
+        <tag>统计学习方法</tag>
+         
          
            
              
@@ -1389,6 +1713,12 @@
         <title>梯度下降法[Gradient Descent]</title>
         <pubTime>2017-03-02T09:31:38.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>ML</tag>
+         
+        <tag>统计学习方法</tag>
+         
          
            
              
@@ -1407,6 +1737,18 @@
         <title>决策树的简单实现</title>
         <pubTime>2017-03-02T07:48:54.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Algorithm</tag>
+         
+        <tag>Data Analysis</tag>
+         
+        <tag>ML</tag>
+         
+        <tag>Clustering</tag>
+         
+        <tag>统计学习方法</tag>
+         
          
            
              
@@ -1425,6 +1767,8 @@
         <title>Anaconda使用笔记</title>
         <pubTime>2017-03-02T08:53:45.000Z</pubTime>
         
+        <tag>Python</tag>
+         
          
            
              
@@ -1443,6 +1787,8 @@
         <title>OpenCV识别条形码——python实现</title>
         <pubTime>2017-03-02T08:33:55.000Z</pubTime>
         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -1461,6 +1807,8 @@
         <title>OpenCV识别条形码——python实现[CPP补充]</title>
         <pubTime>2017-03-02T08:42:49.000Z</pubTime>
         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -1479,6 +1827,10 @@
         <title>百度新闻爬虫——多进程抓取</title>
         <pubTime>2017-03-02T08:22:51.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Spider</tag>
+         
          
            
              
@@ -1497,6 +1849,10 @@
         <title>百度新闻爬虫——普通抓取</title>
         <pubTime>2017-03-02T08:12:53.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Spider</tag>
+         
          
            
              
@@ -1515,6 +1871,12 @@
         <title>Kaggle——A Journey through Titanic[Python]</title>
         <pubTime>2017-03-02T07:29:03.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Kaggle</tag>
+         
+        <tag>Data Analysis</tag>
+         
          
            
              
@@ -1533,6 +1895,8 @@
         <title>进程池与线程池</title>
         <pubTime>2017-03-02T05:54:49.000Z</pubTime>
         
+        <tag>Python</tag>
+         
          
            
              
@@ -1551,6 +1915,10 @@
         <title>QQ空间数据分析报告</title>
         <pubTime>2017-03-02T04:42:05.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Data Analysis</tag>
+         
          
            
              
@@ -1569,6 +1937,12 @@
         <title>Selenium爬取QQ空间说说信息</title>
         <pubTime>2017-03-02T05:44:50.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Spider</tag>
+         
+        <tag>Selenium</tag>
+         
          
            
              
@@ -1587,6 +1961,12 @@
         <title>Kaggle——GUNS-DEATHS[Python]</title>
         <pubTime>2017-03-02T05:23:07.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Kaggle</tag>
+         
+        <tag>Data Analysis</tag>
+         
          
            
              
@@ -1605,6 +1985,8 @@
         <title>Cpp Virtual members的使用</title>
         <pubTime>2017-03-02T04:26:43.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
          
            
              
@@ -1623,6 +2005,14 @@
         <title>Python实现支持向量机(SVM)</title>
         <pubTime>2017-03-01T16:10:13.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Algorithm</tag>
+         
+        <tag>Clustering</tag>
+         
+        <tag>统计学习方法</tag>
+         
          
            
              
@@ -1642,6 +2032,10 @@
         <title>Print time!</title>
         <pubTime>2017-02-26T02:44:00.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>Practice</tag>
+         
          
            
              
@@ -1660,6 +2054,10 @@
         <title>Bubble Sort</title>
         <pubTime>2017-02-25T08:49:54.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>Algorithm</tag>
+         
          
            
              
@@ -1678,6 +2076,10 @@
         <title>Kaggle: Human Resources Analytics</title>
         <pubTime>2017-02-25T01:57:04.000Z</pubTime>
         
+        <tag>Python</tag>
+         
+        <tag>Kaggle</tag>
+         
          
            
              
@@ -1696,6 +2098,10 @@
         <title>OpenCV [Pyramid and Canny]</title>
         <pubTime>2017-02-23T00:27:25.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              
@@ -1714,6 +2120,10 @@
         <title>OpenCV Wait!</title>
         <pubTime>2017-02-22T12:43:53.000Z</pubTime>
         
+        <tag>Cpp</tag>
+         
+        <tag>OpenCV</tag>
+         
          
            
              

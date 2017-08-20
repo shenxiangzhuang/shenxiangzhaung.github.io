@@ -80,6 +80,14 @@ query: 3: Negative
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -102,6 +110,14 @@ query: 3: Negative
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -130,6 +146,20 @@ query: 3: Negative
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Octave </tag>
+            
+            <tag> Matlab </tag>
+            
+            <tag> R </tag>
+            
+        </tags>
         
     </entry>
     
@@ -181,6 +211,14 @@ query: 3: Negative
         </categories>
         
         
+        <tags>
+            
+            <tag> OpenCV </tag>
+            
+            <tag> Python </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -208,6 +246,12 @@ query: 3: Negative
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Tips </tag>
+            
+        </tags>
         
     </entry>
     
@@ -244,6 +288,14 @@ Check is a BST or not way3: 1
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> DataStructure </tag>
+            
+        </tags>
         
     </entry>
     
@@ -296,6 +348,14 @@ Please join Telegram group https://t.me/sbfans if you have any issues. / 如有�
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
         
     </entry>
     
@@ -402,6 +462,14 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
         </categories>
         
         
+        <tags>
+            
+            <tag> Octave </tag>
+            
+            <tag> ML </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -439,6 +507,14 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -467,6 +543,14 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -497,6 +581,12 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
         </categories>
         
         
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -511,6 +601,12 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -549,6 +645,14 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -596,6 +700,12 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+        </tags>
         
     </entry>
     
@@ -649,6 +759,14 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -671,6 +789,14 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -703,6 +829,14 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -751,6 +885,14 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -768,6 +910,14 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -813,6 +963,14 @@ Features to predict: [1620, 1]
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -835,6 +993,14 @@ Features to predict: [1620, 1]
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -883,6 +1049,14 @@ Features to predict: [1620, 1]
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -924,6 +1098,14 @@ Result: !!opencv-matrix
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -945,6 +1127,14 @@ Result: !!opencv-matrix
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -975,6 +1165,14 @@ Result: !!opencv-matrix
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1001,6 +1199,14 @@ Result: !!opencv-matrix
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> DataStructure </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1047,6 +1253,14 @@ Result: !!opencv-matrix
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> DataStructure </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1104,6 +1318,12 @@ Result: !!opencv-matrix
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1184,6 +1404,16 @@ error: called from
         </categories>
         
         
+        <tags>
+            
+            <tag> Octave </tag>
+            
+            <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1229,6 +1459,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1253,6 +1491,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1275,6 +1521,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1336,6 +1590,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1356,6 +1618,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1386,6 +1656,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1424,6 +1702,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1449,6 +1735,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1473,6 +1767,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1504,6 +1806,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1524,6 +1834,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1547,6 +1865,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1564,6 +1890,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1586,6 +1920,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1633,6 +1975,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1670,6 +2020,12 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1692,6 +2048,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> DataStructure </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1738,6 +2102,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> DataStructure </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1768,6 +2140,12 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1809,6 +2187,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -1825,6 +2211,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1850,6 +2244,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Data Analysis </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1878,6 +2280,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1920,6 +2330,14 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+            <tag> Arch </tag>
+            
+        </tags>
         
     </entry>
     
@@ -1968,6 +2386,12 @@ CV_EXPORTS_W int meanShift( InputArray probImage, CV_IN_OUT Rect&amp; window, Te
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2042,6 +2466,14 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         </categories>
         
         
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> OR </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2060,6 +2492,16 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Kaggle </tag>
+            
+            <tag> Data Analysis </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2093,6 +2535,14 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> Algorithm </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2109,6 +2559,14 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> Algorithm </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2136,6 +2594,16 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Hadoop </tag>
+            
+            <tag> 大数据 </tag>
+            
+            <tag> 分布式 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2180,6 +2648,14 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         </categories>
         
         
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Numpy </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2194,6 +2670,12 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2219,6 +2701,14 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Numpy </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2254,6 +2744,12 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2275,6 +2771,16 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Kaggle </tag>
+            
+            <tag> Data Analysis </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2332,6 +2838,12 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         </categories>
         
         
+        <tags>
+            
+            <tag> 统计学习方法 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2353,6 +2865,22 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         </categories>
         
         
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
+            
+            <tag> Clustering </tag>
+            
+            <tag> 统计学习方法 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2372,6 +2900,22 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
+            
+            <tag> Clustering </tag>
+            
+            <tag> 统计学习方法 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2408,6 +2952,22 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         </categories>
         
         
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
+            
+            <tag> Clustering </tag>
+            
+            <tag> 统计学习方法 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2441,6 +3001,16 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         </categories>
         
         
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> ML </tag>
+            
+            <tag> 统计学习方法 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2460,6 +3030,14 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Spider </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2544,6 +3122,14 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         </categories>
         
         
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2562,6 +3148,12 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2588,6 +3180,12 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         </categories>
         
         
+        <tags>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2612,6 +3210,12 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2642,6 +3246,14 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         </categories>
         
         
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Spider </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2670,6 +3282,14 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Spider </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2703,6 +3323,22 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         </categories>
         
         
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
+            
+            <tag> Clustering </tag>
+            
+            <tag> 统计学习方法 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2728,6 +3364,22 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
+            
+            <tag> Clustering </tag>
+            
+            <tag> 统计学习方法 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2795,6 +3447,16 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         </categories>
         
         
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Kaggle </tag>
+            
+            <tag> Data Analysis </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2837,6 +3499,12 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         </categories>
         
         
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -2854,6 +3522,16 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Spider </tag>
+            
+            <tag> Selenium </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2900,6 +3578,16 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Kaggle </tag>
+            
+            <tag> Data Analysis </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2968,6 +3656,14 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         </categories>
         
         
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Data Analysis </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -3001,6 +3697,12 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -3023,6 +3725,14 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         </categories>
         
         
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> 正则 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -3042,6 +3752,18 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
+            
+            <tag> Clustering </tag>
+            
+            <tag> 统计学习方法 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -3080,6 +3802,18 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         </categories>
         
         
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Algorithm </tag>
+            
+            <tag> Clustering </tag>
+            
+            <tag> 统计学习方法 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -3101,6 +3835,14 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
         </categories>
         
         
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> Practice </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -3121,6 +3863,14 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> Algorithm </tag>
+            
+        </tags>
         
     </entry>
     
@@ -3161,6 +3911,14 @@ menu:
         </categories>
         
         
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> js </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -3192,6 +3950,14 @@ menu:
         </categories>
         
         
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Kaggle </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -3208,6 +3974,14 @@ menu:
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
@@ -3226,6 +4000,14 @@ menu:
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Cpp </tag>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
         
     </entry>
     
