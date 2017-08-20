@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/03/02/Ubuntu%E5%91%BD%E4%BB%A4%E7%A7%AF%E7%B4%AF/</loc>
+    <lastmod>2017-08-20T13:04:03.537Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu使用</title>
+        <pubTime>2017-03-02T09:03:54.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://datahonor.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/08/20/Orange3%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2017-08-20T12:00:57.482Z</lastmod>
     <data>
@@ -920,24 +942,6 @@
            
              
               <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/03/02/Ubuntu%E5%91%BD%E4%BB%A4%E7%A7%AF%E7%B4%AF/</loc>
-    <lastmod>2017-04-25T06:12:01.609Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu使用</title>
-        <pubTime>2017-03-02T09:03:54.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="Linux" url="http://datahonor.com/categories/Linux/"/>
           
         </display>
     </data>

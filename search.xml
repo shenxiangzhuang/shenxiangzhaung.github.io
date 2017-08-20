@@ -2497,6 +2497,15 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
 <p>sudo mkfontscale<br>sudo mkfontdir<br>sudo fc-cache -fv</p>
 </blockquote>
 <h5 id="为浏览器安装安装flash插件"><a href="#为浏览器安装安装flash插件" class="headerlink" title="为浏览器安装安装flash插件"></a>为浏览器安装安装flash插件</h5><p>之前手动装过一次，最近提示过期，换了种方法安装，参考<a href="http://www.linuxidc.com/Linux/2016-05/131098.htm" target="_blank" rel="external">这里</a></p>
+<h5 id="标题栏实时显示上下行网速、CPU及内存使用率"><a href="#标题栏实时显示上下行网速、CPU及内存使用率" class="headerlink" title="标题栏实时显示上下行网速、CPU及内存使用率"></a>标题栏实时显示上下行网速、CPU及内存使用率</h5><blockquote>
+<p>sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor<br> sudo apt-get update<br> sudo apt-get install indicator-sysmonitor</p>
+</blockquote>
+<p>安装完成后，启动：</p>
+<blockquote>
+<p>indicator-sysmonitor</p>
+</blockquote>
+<p>在General设置开机启动，并在Advance设置要显示的参数即可。</p>
+<p>参考<a href="http://blog.csdn.net/tecn14/article/details/24489031" target="_blank" rel="external">这里</a></p>
 ]]></content>
       
         <categories>
@@ -2505,6 +2514,14 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
         
     </entry>
     
