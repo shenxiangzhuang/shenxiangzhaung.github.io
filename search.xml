@@ -3,6 +3,39 @@
   
     
     <entry>
+      <title><![CDATA[Ubuntu跳坑记录——环境变量，不存在的]]></title>
+      <url>/2017/08/22/Ubuntu%E8%B7%B3%E5%9D%91%E8%AE%B0%E5%BD%95%E2%80%94%E2%80%94%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%8C%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84/</url>
+      <content type="html"><![CDATA[<p>嗯，本来是一个平静的夜晚，开始搬砖，打开终端，嗯。。说.bashrc文件有问题，但是没什么影响。但是看着难受啊，开始改，开始Google, 发现一条看似平淡的命令[不要试orz…]：</p>
+<blockquote>
+<p>cp /etc/skel/.bashrc ~/</p>
+</blockquote>
+<p>运行，可以了，不出错了！开始干活，运行Ipython，挂了，conda挂了，hexo挂了…<br>之后一阵乱搜，发现基本无解了。因为是覆盖的，不是删除的，根本无从找回原文件。但是这里也认识到一个问题，后来发现同样的问题，有的答案给出的就有先备份文件的命令，但是我第一次遇见的并没有让备份…继续乱搜，运行，发现sudo, ls,基本全部挂了…</p>
+<p>嗯，还是学到一点，上面的命令可以恢复默认配置的,所以恢复之后sudo, ls也就能使用了。突然想到，之前Ubuntu无限Login也是环境变量写错了格式，而且后来的情况也是一样的(就是sudo, ls也乱套了)。</p>
+<p>到Linux群问了问，基本上没有好的办法。于是开始手动添加环境变量(编辑文件/home/shensir/.bashrc，最后追加)。</p>
+<blockquote>
+<p>conda  path：加入export PATH=”/home/shensir/anaconda3/bin:$PATH”，参考<a href="https://askubuntu.com/questions/817938/changing-bashrc-file-for-anaconda" target="_blank" rel="external">这里</a></p>
+<p>node, npm: 没有找到原来的路径，直接重新装的（目前未出现冲突问题），参考<a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions" target="_blank" rel="external">这里</a>。其实也就两条命令，非常方便，一次运行成功。<br>   <code>curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -</code><br>    <code>sudo apt-get install -y nodejs</code></p>
+<p>hexo：在原hexo文件夹的根目录下直接运行安装命令 <code>sudo npm install hexo-cli -g</code>， 和之前提到的迁移是一样的，只安装，不要初始化。</p>
+</blockquote>
+<p>配置到此，基本上是恢复了一些常用的功能。不知道之后还会不会暴露出新的问题。先更到这里，我先重启看看…无限login就悲剧了。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Linux </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Orange3使用]]></title>
       <url>/2017/08/20/Orange3%E4%BD%BF%E7%94%A8/</url>
       <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>之前了解到Anaconda的Navigator，感觉挺酷的一个东西…并未去研究，今天恰好又看到，就玩了玩Orange, 感觉还挺好用的一个工具，操作比较简单，可视化效果也不错。不过跟着<a href="https://www.youtube.com/watch?v=Iu8g2Twjn9U&amp;list=PLmNPvQr9Tf-ZSDLwOzxpvY-HrE0yv-8Fy&amp;index=14" target="_blank" rel="external">官方教程</a>测试的时候数据集用的都比较小，可能数据集比较大的时候会有些慢。这里记录下使用的时候遇到的几个问题。</p>
@@ -149,9 +182,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Cpp </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Cpp </tag>
             
             <tag> Octave </tag>
             
@@ -213,9 +246,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> OpenCV </tag>
-            
             <tag> Python </tag>
+            
+            <tag> OpenCV </tag>
             
         </tags>
         
