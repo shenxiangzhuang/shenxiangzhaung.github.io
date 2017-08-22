@@ -18,6 +18,8 @@
 <p>hexo：在原hexo文件夹的根目录下直接运行安装命令 <code>sudo npm install hexo-cli -g</code>， 和之前提到的迁移是一样的，只安装，不要初始化。</p>
 </blockquote>
 <p>配置到此，基本上是恢复了一些常用的功能。不知道之后还会不会暴露出新的问题。先更到这里，我先重启看看…无限login就悲剧了。</p>
+<p>回更，一切安好…</p>
+<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201708/Screenshot%20from%202017-08-22%2023-58-36.png" alt=""></p>
 ]]></content>
       
         <categories>
