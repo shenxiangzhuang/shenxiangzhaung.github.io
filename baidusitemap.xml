@@ -4,6 +4,70 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/08/28/By-reference-By-pointer/</loc>
+    <lastmod>2017-08-28T13:39:15.052Z</lastmod>
+    <data>
+        <display>
+        <title>By reference | By pointer</title>
+        <pubTime>2017-08-28T13:32:35.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/03/16/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8-%E7%B4%AB%E4%B9%A6-%E4%B9%A0%E9%A2%98%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%89%E7%AB%A0/</loc>
+    <lastmod>2017-08-23T08:00:42.325Z</lastmod>
+    <data>
+        <display>
+        <title>算法竞赛入门经典[紫书]习题笔记(第三章)</title>
+        <pubTime>2017-03-15T17:14:35.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>Algorithm</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/02/25/Bubble-Sort/</loc>
+    <lastmod>2017-08-23T08:00:10.646Z</lastmod>
+    <data>
+        <display>
+        <title>Bubble Sort</title>
+        <pubTime>2017-02-25T08:49:54.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+        <tag>Algorithm</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/08/22/Ubuntu%E8%B7%B3%E5%9D%91%E8%AE%B0%E5%BD%95%E2%80%94%E2%80%94%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%8C%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84/</loc>
     <lastmod>2017-08-22T16:00:20.218Z</lastmod>
     <data>
@@ -141,9 +205,9 @@
         <title>百年回首--关于心形曲线的几种画法</title>
         <pubTime>2017-08-16T05:15:20.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Cpp</tag>
+         
+        <tag>Python</tag>
          
         <tag>Octave</tag>
          
@@ -169,9 +233,9 @@
         <title>添加OpenCV3对Python3的支持&QT中使用OpenCV</title>
         <pubTime>2017-08-15T09:18:58.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>OpenCV</tag>
+         
+        <tag>Python</tag>
          
          
            
@@ -1315,28 +1379,6 @@
 
     
   <url>
-    <loc>http://datahonor.com/2017/03/16/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8-%E7%B4%AB%E4%B9%A6-%E4%B9%A0%E9%A2%98%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%89%E7%AB%A0/</loc>
-    <lastmod>2017-03-23T13:02:58.587Z</lastmod>
-    <data>
-        <display>
-        <title>算法竞赛入门经典[紫书]习题笔记(第三章)</title>
-        <pubTime>2017-03-15T17:14:35.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://datahonor.com/2017/03/22/%E5%88%A9%E7%94%A8Python%E8%A7%A3%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98-LP/</loc>
     <lastmod>2017-03-22T17:14:39.161Z</lastmod>
     <data>
@@ -2055,28 +2097,6 @@
         <tag>Cpp</tag>
          
         <tag>Practice</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/02/25/Bubble-Sort/</loc>
-    <lastmod>2017-02-25T09:30:04.826Z</lastmod>
-    <data>
-        <display>
-        <title>Bubble Sort</title>
-        <pubTime>2017-02-25T08:49:54.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>Algorithm</tag>
          
          
            
