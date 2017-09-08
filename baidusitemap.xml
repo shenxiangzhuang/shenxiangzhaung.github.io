@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/09/08/Three-Doors-Three-Prisoners/</loc>
+    <lastmod>2017-09-08T04:27:12.149Z</lastmod>
+    <data>
+        <display>
+        <title>Three Doors & Three Prisoners</title>
+        <pubTime>2017-09-08T04:12:34.000Z</pubTime>
+        
+        <tag>Statistics</tag>
+         
+         
+           
+             
+              <breadCrumb title="Statistics" url="http://datahonor.com/categories/Statistics/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/08/28/By-reference-By-pointer/</loc>
     <lastmod>2017-08-28T13:39:15.052Z</lastmod>
     <data>
@@ -205,9 +225,9 @@
         <title>百年回首--关于心形曲线的几种画法</title>
         <pubTime>2017-08-16T05:15:20.000Z</pubTime>
         
-        <tag>Cpp</tag>
-         
         <tag>Python</tag>
+         
+        <tag>Cpp</tag>
          
         <tag>Octave</tag>
          
@@ -233,9 +253,9 @@
         <title>添加OpenCV3对Python3的支持&QT中使用OpenCV</title>
         <pubTime>2017-08-15T09:18:58.000Z</pubTime>
         
-        <tag>OpenCV</tag>
-         
         <tag>Python</tag>
+         
+        <tag>OpenCV</tag>
          
          
            
