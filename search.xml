@@ -440,6 +440,22 @@ Please join Telegram group https://t.me/sbfans if you have any issues. / 如有�
 <p>====================================================</p>
 <p>2017/8/14 解决部分终端问题</p>
 <p>今天在用conda装虚拟环境的时候，不管用不用前面的hp似乎都没什么卵用…就试了试proxychains。安装和设置都十分简单，参考<a href="https://github.com/naseeihity/LearnReact/issues/7" target="_blank" rel="external">这里</a>。这样设置后虽说还是ping不通Google,但是在使用conda装东西的时候速度可以起飞…嗯，目前是够用了，先这样。</p>
+<p>====================================================<br>2017/9/10 解决Python代码翻墙问题</p>
+<p>之前尝试了很多办法，都没办法在Python利用SS翻墙。现在是找到了两种解决方案。第一种就是在运行Python脚本的时候加上前面设置的proxychains。但是总感觉不太方便（Pycharm里面不好用…）于是就有了第二种方法（感谢一位群友相助），是利用requests设置代理IP的方法，其实也很简单：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> requests</div><div class="line"></div><div class="line">proxy = &#123;</div><div class="line">    <span class="string">"http"</span>: <span class="string">"http://localhost:1080"</span>,</div><div class="line">    <span class="string">"https"</span>: <span class="string">"https://localhost:1080"</span></div><div class="line">&#125;</div><div class="line">data = requests.get(<span class="string">"https://www.google.com.hk"</span>, proxies=proxy)</div><div class="line"></div><div class="line">print(data.status_code)</div><div class="line">print(data.text)</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>这里有两个关键的地方：</p>
+<ul>
+<li>[ ] SS设置</li>
+</ul>
+<blockquote>
+<p>Local Server Type 改成Http(s)。。。之前就是用SOCKS，一直不成。。</p>
+</blockquote>
+<ul>
+<li>[ ] Http | SOCKS5</li>
+</ul>
+<blockquote>
+<p>proxy里面， “http”: “<a href="http://localhost:1080" target="_blank" rel="external">http://localhost:1080</a>“ , 后面也对应改成http</p>
+</blockquote>
 ]]></content>
       
         <categories>
