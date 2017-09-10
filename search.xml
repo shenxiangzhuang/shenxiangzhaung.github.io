@@ -400,7 +400,7 @@ Check is a BST or not way3: 1
     </entry>
     
     <entry>
-      <title><![CDATA[SS使用全局代理]]></title>
+      <title><![CDATA[SS使用-全局代理]]></title>
       <url>/2017/08/01/SS%E4%BD%BF%E7%94%A8-%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/</url>
       <content type="html"><![CDATA[<p>SS全局代理的设置。测试情况：</p>
 <p>设置PAC文件：</p>
