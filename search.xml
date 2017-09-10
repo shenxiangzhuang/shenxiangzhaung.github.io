@@ -249,9 +249,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Cpp </tag>
+            
+            <tag> Python </tag>
             
             <tag> Octave </tag>
             
@@ -313,9 +313,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> OpenCV </tag>
+            
+            <tag> Python </tag>
             
         </tags>
         
@@ -2987,13 +2987,13 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
+            
+            <tag> Data Analysis </tag>
             
         </tags>
         
@@ -3023,13 +3023,13 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
+            
+            <tag> Data Analysis </tag>
             
         </tags>
         
@@ -3074,13 +3074,13 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
+            
+            <tag> Data Analysis </tag>
             
         </tags>
         
@@ -3445,13 +3445,13 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
+            
+            <tag> Data Analysis </tag>
             
         </tags>
         
@@ -3487,13 +3487,13 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
+            
+            <tag> Data Analysis </tag>
             
         </tags>
         
