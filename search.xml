@@ -3,6 +3,28 @@
   
     
     <entry>
+      <title><![CDATA[SAS学习记录]]></title>
+      <url>/2017/09/20/SAS%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+      <content type="html"><![CDATA[<p>这学期开了时间序列的课， 用的SAS（当然是盗版orz…）， 打算系统地学一下。在这里记录一下学习的过程。</p>
+<h5 id="2017-9-20"><a href="#2017-9-20" class="headerlink" title="2017/9/20"></a>2017/9/20</h5><p>其实这学期也开了专门的统计软件课，不过讲的是SPSS那货，大一时候学了下，实在是无聊得很。。。所以也就更没有必要为它做记录了。今天看了下SAS的语法还是比较强大的。主要参考了SAS官方放在<a href="https://www.youtube.com/watch?v=Uj1Pi7BfiL4&amp;index=11&amp;list=PLVBcK_IpFVi_nlx6za9Yht0eyb46hLLrP" target="_blank" rel="external">YouTube的视频</a>. 另外，发现一本很好的书，干净整洁，<em>The Little SAS Book</em>,接下来主要就是撸这本书了。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> SAS </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> SAS </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Three Doors & Three Prisoners]]></title>
       <url>/2017/09/08/Three-Doors-Three-Prisoners/</url>
       <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>在看<em>Statistical Inference</em>的时候，看到Three Prisoners的问题时，没看太懂，因为问题的描述略简单。。。于是为wiki查了下，又把之前看到的Three Doors放在一起。</p>
@@ -2987,13 +3009,13 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
+            <tag> Data Analysis </tag>
+            
             <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
-            
-            <tag> Data Analysis </tag>
             
         </tags>
         
@@ -3023,13 +3045,13 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
+            <tag> Data Analysis </tag>
+            
             <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
-            
-            <tag> Data Analysis </tag>
             
         </tags>
         
@@ -3074,13 +3096,13 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
+            <tag> Data Analysis </tag>
+            
             <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
-            
-            <tag> Data Analysis </tag>
             
         </tags>
         
@@ -3445,13 +3467,13 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Algorithm </tag>
             
+            <tag> Data Analysis </tag>
+            
             <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
-            
-            <tag> Data Analysis </tag>
             
         </tags>
         
@@ -3487,13 +3509,13 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Algorithm </tag>
             
+            <tag> Data Analysis </tag>
+            
             <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
-            
-            <tag> Data Analysis </tag>
             
         </tags>
         
