@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/10/06/EDA-with-R/</loc>
+    <lastmod>2017-10-06T04:32:32.507Z</lastmod>
+    <data>
+        <display>
+        <title>EDA with R</title>
+        <pubTime>2017-10-06T04:22:40.000Z</pubTime>
+        
+        <tag>R</tag>
+         
+        <tag>EDA</tag>
+         
+         
+           
+             
+              <breadCrumb title="R" url="http://datahonor.com/categories/R/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/08/16/%E7%99%BE%E5%B9%B4%E5%9B%9E%E9%A6%96-%E5%85%B3%E4%BA%8E%E5%BF%83%E5%9E%8B%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%87%A0%E7%A7%8D%E7%94%BB%E6%B3%95/</loc>
     <lastmod>2017-09-23T09:51:31.422Z</lastmod>
     <data>
@@ -11,15 +33,15 @@
         <title>百年回首--关于心形曲线的几种画法</title>
         <pubTime>2017-08-16T05:15:20.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Cpp</tag>
+         
+        <tag>Python</tag>
          
         <tag>Octave</tag>
          
-        <tag>Matlab</tag>
-         
         <tag>R</tag>
+         
+        <tag>Matlab</tag>
          
          
            
@@ -295,9 +317,9 @@
         <title>添加OpenCV3对Python3的支持&QT中使用OpenCV</title>
         <pubTime>2017-08-15T09:18:58.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>OpenCV</tag>
+         
+        <tag>Python</tag>
          
          
            

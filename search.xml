@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title><![CDATA[EDA with R]]></title>
+      <url>/2017/10/06/EDA-with-R/</url>
+      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>这学期开了EDA的课程，这里主要依照<em>Exploratory Data Analysis with R</em>这本书来进行EDA编程方面的学习。<em>R in Action</em>作为参考。</p>
+<p>大一的时候学R看的是<em>The R Book</em>，但是看到概率论知识那里就放下了，后来也跑去学Python了orz…这里也当做重新来学R吧。</p>
+<h4 id="dplyr使用"><a href="#dplyr使用" class="headerlink" title="dplyr使用"></a>dplyr使用</h4><p>参考<em>Exploratory Data Analysis with R</em>， 笔记发布在<a href="http://rpubs.com/shenxiangzhuang/mdplyr" target="_blank" rel="external">rpubs</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> R </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> R </tag>
+            
+            <tag> EDA </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[SAS学习记录]]></title>
       <url>/2017/09/20/SAS%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
       <content type="html"><![CDATA[<p>这学期开了时间序列的课， 用的SAS（当然是盗版orz…）， 打算系统地学一下。在这里记录一下学习的过程。</p>
@@ -276,15 +301,15 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Cpp </tag>
+            
+            <tag> Python </tag>
             
             <tag> Octave </tag>
             
-            <tag> Matlab </tag>
-            
             <tag> R </tag>
+            
+            <tag> Matlab </tag>
             
         </tags>
         
@@ -340,9 +365,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> OpenCV </tag>
+            
+            <tag> Python </tag>
             
         </tags>
         
