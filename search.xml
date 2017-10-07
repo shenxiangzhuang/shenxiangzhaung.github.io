@@ -3,11 +3,15 @@
   
     
     <entry>
-      <title><![CDATA[EDA with R]]></title>
+      <title><![CDATA[Exploratory Data Analysis with R读书笔记]]></title>
       <url>/2017/10/06/EDA-with-R/</url>
-      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>这学期开了EDA的课程，这里主要依照<em>Exploratory Data Analysis with R</em>这本书来进行EDA编程方面的学习。<em>R in Action</em>作为参考。</p>
-<p>大一的时候学R看的是<em>The R Book</em>，但是看到概率论知识那里就放下了，后来也跑去学Python了orz…这里也当做重新来学R吧。</p>
-<h4 id="dplyr使用"><a href="#dplyr使用" class="headerlink" title="dplyr使用"></a>dplyr使用</h4><p>参考<em>Exploratory Data Analysis with R</em>， 笔记发布在<a href="http://rpubs.com/shenxiangzhuang/mdplyr" target="_blank" rel="external">rpubs</a></p>
+      <content type="html"><![CDATA[<p>这学期开了EDA的课程，课本没用结合程序来进行，所以这里主要依照<em>Exploratory Data Analysis with R</em>这本书来进行EDA编程方面的学习。国庆这两天多花了点时间看完了，这里简单写下笔记。（这书的pdf可以在<a href="https://bookdown.org/rdpeng/exdata/" target="_blank" rel="external">这里</a>看）</p>
+<blockquote>
+<p>ps:大一的时候学R看的是<em>The R Book</em>，但是看到概率论知识那里就放下了，后来也跑去学Python了orz…这里也当做重新来学R吧。</p>
+</blockquote>
+<p>书上首先介绍了dplyr的使用方法，十分好用（感觉和pandas好像…）。为了加深记忆，用Rmarkdown写了个笔记，发布在<a href="http://rpubs.com/shenxiangzhuang/mdplyr" target="_blank" rel="external">rpubs</a>。再到后面主要介绍了EDA的过程和可视化的方法，对ggplot2的介绍间接明了，十分实用。最后还给出了具体的案例分析，结合的很好！</p>
+<p>总之，这本书还是比较好的，可以学习EDA的方法，同时还可以作为一个简洁的handbook来备查。</p>
+<p>接下来，R的学习就已<em>R in Action</em>为主了，同时，非参数课本上的R程序也打算一直跟下去。</p>
 ]]></content>
       
         <categories>
