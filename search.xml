@@ -3,6 +3,106 @@
   
     
     <entry>
+      <title><![CDATA[Data Structure in R]]></title>
+      <url>/2017/10/10/Data-Structure-in-R/</url>
+      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>R中的一些数据结构，以及mode, class, typeof的区分。</p>
+<h4 id="Data-Structure"><a href="#Data-Structure" class="headerlink" title="Data Structure"></a>Data Structure</h4><p><img src="http://datahonor-1252464519.costj.myqcloud.com/201710/Screenshot%20from%202017-10-10%2012-29-04.png" alt=""></p>
+<blockquote>
+<p>R has a wide variety of objects for holding data, including scalars, vectors, matrices, arrays, data frames, and lists. They differ in terms of the type of data they can hold, how they’re created, their structural complexity, and the notation used to identify and access individual elements.</p>
+</blockquote>
+<p>有一点值得注意，那就是vector, matrix和array都必须是<code>single mode</code>，也就是只能储存同种类型的数据。而data.frame却更加包容：<code>different columns can contain dif-
+ferent modes</code>。</p>
+<p>特别地，R中有两个比较特别的数据类型：factor和list。对于factor:<code>Categorical (nominal) and ordered categorical (ordinal) variables in R are called factors.</code>对于list：<code>Lists are the most complex of the R data types. Basically, a list is an ordered collection of objects (components). A list allows you to gather a variety of (possibly unrelated) objects under one name.</code>两者都算是R特有的数据类型了，而且在之后的学习中也会发现其为我们的分析提供了极大的便利。</p>
+<h4 id="class-mode-and-typeof"><a href="#class-mode-and-typeof" class="headerlink" title="class, mode and typeof"></a>class, mode and typeof</h4><h6 id="class"><a href="#class" class="headerlink" title="class"></a>class</h6><p><code>class</code>返回对象的抽象类型（如data.frame）， 可以用来指示一些<code>generic function</code>怎样去处理这个对象。</p>
+<blockquote>
+<p><code>class</code> represents its abstract type, which tells generic functions like print how to handle it)</p>
+</blockquote>
+<h6 id="mode"><a href="#mode" class="headerlink" title="mode"></a>mode</h6><p>简单讲，<code>mode</code>是返回对象在内存中是以何种方式储存的。</p>
+<blockquote>
+<p><code>mode</code>  represents how an object is stored in memory (numeric, character, list and function).</p>
+<p>Function mode gives information about the mode of an object in the sense of Becker, Chambers &amp; Wilks (1988), and is more compatible with other implementations of the S language</p>
+</blockquote>
+<h6 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h6><p>返回对象的数据类型。</p>
+<blockquote>
+<p>The R specific function typeof returns the type of an R object.</p>
+</blockquote>
+<h6 id="mode-vs-typeof"><a href="#mode-vs-typeof" class="headerlink" title="mode vs typeof"></a>mode vs typeof</h6><blockquote>
+<p>mode and storage.mode are the old-style types (where storage.mode is more accurate), and typeof is the newer, even more accurate version.</p>
+</blockquote>
+<p>解释的很清楚了，<code>mode</code>是比较旧的用法，用来查看存储的方式，而且它不如<code>storage.mode</code>精确，但是它和S语言有更好的兼容性。而<code>typeof</code>是新的用法，可以更加精确地查看对象的存储方式。所以…现在一般用typeof看下类型就行了。</p>
+<h6 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h6><p><a href="https://stackoverflow.com/questions/8855589/a-comprehensive-survey-of-the-types-of-things-in-r-mode-and-class-and-type" target="_blank" rel="external">stackoverflow1</a></p>
+<p><a href="https://stackoverflow.com/questions/6258004/types-and-classes-of-variables" target="_blank" rel="external">stackoverflow2</a></p>
+<p><a href="https://stats.stackexchange.com/questions/3212/mode-class-and-type-of-r-objects" target="_blank" rel="external">stackexchange</a></p>
+<p><a href="http://stat.ethz.ch/R-manual/R-devel/doc/manual/R-lang.html#Basic-types" target="_blank" rel="external">R Language Definition</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> R </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> R </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Get help in R]]></title>
+      <url>/2017/10/10/Get-help-in-R/</url>
+      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>之前一段时间开始看<em>R in Action</em>， 感觉写的特别好，尤其是一开始对R的帮助文档的使用和基本数据类型的概括，这里做下记录以备忘。首先是多种获取帮助的方式。</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><h5 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h5><p>书中介绍的第一个TIP就是关于demo的：</p>
+<blockquote>
+<p>To get a sense of what R can do graphically, enter demo()at the command prompt. A sample of the graphs produced is included in figure 1.5. Other demonstrations include demo(Hershey), demo(persp), and demo(image). To see a complete list of demonstrations, enter demo() without parameters.</p>
+</blockquote>
+<p>demo直接给出简洁的代码示例来解释如何使用相关的功能，可以说是十分有帮助的。这里拓展一下：</p>
+<ul>
+<li>[ ] demo()</li>
+</ul>
+<blockquote>
+<p>直接<code>demo()</code>的话，会返回<code>Demos in package ‘base’:</code>, 也就是base库包含的一些demo。</p>
+</blockquote>
+<ul>
+<li>[ ] demo(package = .packages(all.available = TRUE))</li>
+</ul>
+<blockquote>
+<p>通过这条命令，我们可以列出已经安装的包中，所有可用的demo</p>
+</blockquote>
+<ul>
+<li>[ ] demo(“zoo-overplot”, package = “zoo”)</li>
+</ul>
+<blockquote>
+<p><code>a character vector giving the packages to look into for demos, or NULL. By default, all packages in the search path are used.</code> 这里，我们可以通过指定package的值来搜索指定包下的demo。如果不指定，则在所有已导入的包中搜索。</p>
+</blockquote>
+<h5 id="help-functions"><a href="#help-functions" class="headerlink" title="help functions"></a>help functions</h5><p><img src="http://datahonor-1252464519.costj.myqcloud.com/201710/Screenshot%20from%202017-10-10%2012-00-03.png" alt=""></p>
+<blockquote>
+<p>The vignettes returned by the vignette() function are practical introductory articles provided in PDF format. Not all packages have vignettes</p>
+</blockquote>
+<p>这里的vignettes值得去注意，因为这些包的官方提供的文档，是我们学习包的使用最有效的方法。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> R </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> R </tag>
+            
+            <tag> Tips </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Exploratory Data Analysis with R读书笔记]]></title>
       <url>/2017/10/06/EDA-with-R/</url>
       <content type="html"><![CDATA[<p>这学期开了EDA的课程，课本没用结合程序来进行，所以这里主要依照<em>Exploratory Data Analysis with R</em>这本书来进行EDA编程方面的学习。国庆这两天多花了点时间看完了，这里简单写下笔记。（这书的pdf可以在<a href="https://bookdown.org/rdpeng/exdata/" target="_blank" rel="external">这里</a>看）</p>
@@ -309,9 +409,9 @@ query: 3: Negative
             
             <tag> Python </tag>
             
-            <tag> Octave </tag>
-            
             <tag> R </tag>
+            
+            <tag> Octave </tag>
             
             <tag> Matlab </tag>
             
@@ -3024,15 +3124,15 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
+            
+            <tag> Data Analysis </tag>
             
         </tags>
         
@@ -3060,15 +3160,15 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
+            
+            <tag> Data Analysis </tag>
             
         </tags>
         
@@ -3111,15 +3211,15 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
+            
+            <tag> Data Analysis </tag>
             
         </tags>
         
@@ -3482,15 +3582,15 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
+            
+            <tag> Data Analysis </tag>
             
         </tags>
         
@@ -3524,15 +3624,15 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
+            
+            <tag> Data Analysis </tag>
             
         </tags>
         

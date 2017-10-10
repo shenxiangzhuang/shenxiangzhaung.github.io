@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/10/10/Data-Structure-in-R/</loc>
+    <lastmod>2017-10-10T05:54:53.820Z</lastmod>
+    <data>
+        <display>
+        <title>Data Structure in R</title>
+        <pubTime>2017-10-10T04:06:26.000Z</pubTime>
+        
+        <tag>R</tag>
+         
+         
+           
+             
+              <breadCrumb title="R" url="http://datahonor.com/categories/R/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/10/10/Get-help-in-R/</loc>
+    <lastmod>2017-10-10T04:04:58.206Z</lastmod>
+    <data>
+        <display>
+        <title>Get help in R</title>
+        <pubTime>2017-10-10T03:38:30.000Z</pubTime>
+        
+        <tag>R</tag>
+         
+        <tag>Tips</tag>
+         
+         
+           
+             
+              <breadCrumb title="R" url="http://datahonor.com/categories/R/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/10/06/EDA-with-R/</loc>
     <lastmod>2017-10-07T10:37:59.654Z</lastmod>
     <data>
@@ -37,9 +79,9 @@
          
         <tag>Python</tag>
          
-        <tag>Octave</tag>
-         
         <tag>R</tag>
+         
+        <tag>Octave</tag>
          
         <tag>Matlab</tag>
          
@@ -1629,15 +1671,15 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
-        <tag>Data Analysis</tag>
-         
         <tag>ML</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
         <tag>统计学习方法</tag>
+         
+        <tag>Data Analysis</tag>
          
          
            
@@ -1701,15 +1743,15 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
-        <tag>Data Analysis</tag>
-         
         <tag>ML</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
         <tag>统计学习方法</tag>
+         
+        <tag>Data Analysis</tag>
          
          
            
@@ -1731,15 +1773,15 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
-        <tag>Data Analysis</tag>
-         
         <tag>ML</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
         <tag>统计学习方法</tag>
+         
+        <tag>Data Analysis</tag>
          
          
            
@@ -1783,15 +1825,15 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
-        <tag>Data Analysis</tag>
-         
         <tag>ML</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
         <tag>统计学习方法</tag>
+         
+        <tag>Data Analysis</tag>
          
          
            
@@ -1863,15 +1905,15 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
-        <tag>Data Analysis</tag>
-         
         <tag>ML</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
         <tag>统计学习方法</tag>
+         
+        <tag>Data Analysis</tag>
          
          
            
