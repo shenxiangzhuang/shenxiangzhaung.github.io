@@ -3,6 +3,42 @@
   
     
     <entry>
+      <title><![CDATA[Eviews 安装]]></title>
+      <url>/2017/10/14/Eviews-%E5%AE%89%E8%A3%85/</url>
+      <content type="html"><![CDATA[<h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><p>关于Eviews9（windows）的安装。</p>
+<p><strong>安装文件链接</strong>：</p>
+<blockquote>
+<p>链接: <a href="https://pan.baidu.com/s/1eSEjcx8" target="_blank" rel="external">https://pan.baidu.com/s/1eSEjcx8</a> 密码: 248h</p>
+</blockquote>
+<p>里面有32Bit和64Bit的安装文件。</p>
+<p><strong><br>安装过程</strong></p>
+<p>可以参考crack文件夹下的README文件。就是，前面的安装一直默认即可。<br>等到出现Serial Number的时候，上面输入<code>Demo</code>即可（可能不是必须的，不过最后还是写上这个），下面的是程序自动检测到的你的计算机用户名，不用管。如下：</p>
+<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201710/IMG_20171014_150731.jpg" alt=""></p>
+<p>之后再一路默认即可，无非就是选择下安装的路径这些。直到出现下面这个，询问是否检查更新，禁止即可。</p>
+<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201710/IMG_20171014_150807.jpg" alt=""></p>
+<p>最后再一路默认到最后即可。完成安装后，桌面会出现Eviews的快捷方式。注意这时候直接运行是不可以的，因为还没有激活。只需要找到从百度云下载的文件中，crack文件夹下的Patch文件，运行，点击左侧patch,等待补丁打好退出即可， 如图。</p>
+<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201710/IMG_20171014_151206.jpg" alt=""></p>
+<p>这时候再运行桌面的快捷方式就可以了。</p>
+<h4 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h4><p>对于Mac的安装，可以到Eviews官网下载Students Version, 目前版本应该是9.5的。只需要填一些信息就可以了。测试的时候用的学校的教育网邮箱是可以的。也可以用自己的其他邮箱试下，不行再去校内门户的邮件系统申请一个教育网邮箱进行申请。</p>
+<p>嗯…还是支持正版好些orz…</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Tips </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Tips </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Data Structure in R]]></title>
       <url>/2017/10/10/Data-Structure-in-R/</url>
       <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>R中的一些数据结构，以及mode, class, typeof的区分。</p>
@@ -94,9 +130,9 @@ ferent modes</code>。</p>
         
         <tags>
             
-            <tag> R </tag>
-            
             <tag> Tips </tag>
+            
+            <tag> R </tag>
             
         </tags>
         
@@ -409,9 +445,9 @@ query: 3: Negative
             
             <tag> Python </tag>
             
-            <tag> R </tag>
-            
             <tag> Octave </tag>
+            
+            <tag> R </tag>
             
             <tag> Matlab </tag>
             
@@ -3124,15 +3160,15 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> ML </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
-            
-            <tag> Data Analysis </tag>
             
         </tags>
         
@@ -3160,15 +3196,15 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> ML </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
-            
-            <tag> Data Analysis </tag>
             
         </tags>
         
@@ -3211,15 +3247,15 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> ML </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
-            
-            <tag> Data Analysis </tag>
             
         </tags>
         
@@ -3582,15 +3618,15 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> ML </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
-            
-            <tag> Data Analysis </tag>
             
         </tags>
         
@@ -3624,15 +3660,15 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> ML </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
-            
-            <tag> Data Analysis </tag>
             
         </tags>
         
