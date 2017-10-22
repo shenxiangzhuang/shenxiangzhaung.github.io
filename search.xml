@@ -3,6 +3,28 @@
   
     
     <entry>
+      <title><![CDATA[Linear Regression In R]]></title>
+      <url>/2017/10/22/Linear-Regression-In-R/</url>
+      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>开了统计预测与决策的课，老师上课用的Eviews，用了下感觉一般，所以找R来实现看看。所以就先从回归开始了…</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><p>首先是随便Google了一个简单几页的<a href="http://www.montefiore.ulg.ac.be/~kvansteen/GBIO0009-1/ac20092010/Class8/Using%20R%20for%20linear%20regression.pdf" target="_blank" rel="external">教程</a>走了一般流程,发现挺靠谱的…接着用两天撸完了<em>R in Action</em>的第八章，也就是回归部分。写的很好，用RMD做了笔记，放在<a href="http://rpubs.com/shenxiangzhuang/regression" target="_blank" rel="external">这里</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> R </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> R </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Eviews 安装]]></title>
       <url>/2017/10/14/Eviews-%E5%AE%89%E8%A3%85/</url>
       <content type="html"><![CDATA[<h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><p>关于Eviews9（windows）的安装。</p>
@@ -138,9 +160,9 @@ ferent modes</code>。</p>
         
         <tags>
             
-            <tag> Tips </tag>
-            
             <tag> R </tag>
+            
+            <tag> Tips </tag>
             
         </tags>
         
@@ -3170,9 +3192,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3206,9 +3228,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3257,9 +3279,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3628,9 +3650,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3670,9 +3692,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             

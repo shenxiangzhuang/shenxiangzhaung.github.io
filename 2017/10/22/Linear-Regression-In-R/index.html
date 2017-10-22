@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Cpp,Algorithm," />
+  <meta name="keywords" content="R," />
 
 
 
@@ -89,31 +89,19 @@
 
 
 
-<meta name="description" content="Theory关于，冒泡排序的原理及其实现。关于原理：
-
-有序序列中每一对相邻元素都是顺序的；反之，所有相邻元素均顺序的序列也必然整体有序。
-
-Code12345678910111213141516171819202122232425262728293031323334353637383940414243#include &amp;lt;iostream&amp;gt;// 原理： 有序序列中每一对相邻元素都是顺序">
+<meta name="description" content="Overview开了统计预测与决策的课，老师上课用的Eviews，用了下感觉一般，所以找R来实现看看。所以就先从回归开始了…
+Code首先是随便Google了一个简单几页的教程走了一般流程,发现挺靠谱的…接着用两天撸完了R in Action的第八章，也就是回归部分。写的很好，用RMD做了笔记，放在这里">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Bubble Sort">
-<meta property="og:url" content="http://datahonor.com/2017/02/25/Bubble-Sort/index.html">
+<meta property="og:title" content="Linear Regression In R">
+<meta property="og:url" content="http://datahonor.com/2017/10/22/Linear-Regression-In-R/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="Theory关于，冒泡排序的原理及其实现。关于原理：
-
-有序序列中每一对相邻元素都是顺序的；反之，所有相邻元素均顺序的序列也必然整体有序。
-
-Code12345678910111213141516171819202122232425262728293031323334353637383940414243#include &amp;lt;iostream&amp;gt;// 原理： 有序序列中每一对相邻元素都是顺序">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-02-25%2016-53-55.png">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-02-25%2017-27-54.png">
-<meta property="og:updated_time" content="2017-08-23T08:00:10.646Z">
+<meta property="og:description" content="Overview开了统计预测与决策的课，老师上课用的Eviews，用了下感觉一般，所以找R来实现看看。所以就先从回归开始了…
+Code首先是随便Google了一个简单几页的教程走了一般流程,发现挺靠谱的…接着用两天撸完了R in Action的第八章，也就是回归部分。写的很好，用RMD做了笔记，放在这里">
+<meta property="og:updated_time" content="2017-10-22T08:47:53.145Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bubble Sort">
-<meta name="twitter:description" content="Theory关于，冒泡排序的原理及其实现。关于原理：
-
-有序序列中每一对相邻元素都是顺序的；反之，所有相邻元素均顺序的序列也必然整体有序。
-
-Code12345678910111213141516171819202122232425262728293031323334353637383940414243#include &amp;lt;iostream&amp;gt;// 原理： 有序序列中每一对相邻元素都是顺序">
-<meta name="twitter:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-02-25%2016-53-55.png">
+<meta name="twitter:title" content="Linear Regression In R">
+<meta name="twitter:description" content="Overview开了统计预测与决策的课，老师上课用的Eviews，用了下感觉一般，所以找R来实现看看。所以就先从回归开始了…
+Code首先是随便Google了一个简单几页的教程走了一般流程,发现挺靠谱的…接着用两天撸完了R in Action的第八章，也就是回归部分。写的很好，用RMD做了笔记，放在这里">
 
 
 
@@ -141,13 +129,13 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
 
 
 
-  <link rel="canonical" href="http://datahonor.com/2017/02/25/Bubble-Sort/"/>
+  <link rel="canonical" href="http://datahonor.com/2017/10/22/Linear-Regression-In-R/"/>
 
 
 
 
 
-  <title> Bubble Sort | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> Linear Regression In R | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -337,7 +325,7 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/02/25/Bubble-Sort/">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/10/22/Linear-Regression-In-R/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="不秩稚童">
@@ -361,7 +349,7 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
             
             
               
-                Bubble Sort
+                Linear Regression In R
               
             
           </h1>
@@ -376,8 +364,8 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-25T16:49:54+08:00">
-                2017-02-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-22T16:40:12+08:00">
+                2017-10-22
               </time>
             
 
@@ -399,8 +387,8 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Cpp/" itemprop="url" rel="index">
-                    <span itemprop="name">Cpp</span>
+                  <a href="/categories/R/" itemprop="url" rel="index">
+                    <span itemprop="name">R</span>
                   </a>
                 </span>
 
@@ -417,8 +405,8 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/25/Bubble-Sort/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/02/25/Bubble-Sort/" itemprop="commentCount"></span>
+                <a href="/2017/10/22/Linear-Regression-In-R/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/10/22/Linear-Regression-In-R/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -449,13 +437,8 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
       
 
       
-        <h5 id="Theory"><a href="#Theory" class="headerlink" title="Theory"></a>Theory</h5><p>关于，冒泡排序的原理及其实现。<br>关于原理：<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-02-25%2016-53-55.png" alt=""></p>
-<blockquote>
-<p>有序序列中每一对相邻元素都是顺序的；反之，所有相邻元素均顺序的序列<br>也必然整体有序。</p>
-</blockquote>
-<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"></div><div class="line"><span class="comment">// 原理： 有序序列中每一对相邻元素都是顺序的；反之，所有相邻元素均顺序的序列</span></div><div class="line"><span class="comment">// 也必然整体有序。</span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubblesort1A</span><span class="params">( <span class="keyword">int</span> A[], <span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="keyword">bool</span> sorted = <span class="literal">false</span>;  <span class="comment">// 整体排序标志，首先假定尚未进行排序</span></div><div class="line">    <span class="keyword">while</span>(!sorted)&#123;  <span class="comment">//在尚未确认已经全局排序之前，逐趟进行扫描交换</span></div><div class="line">        sorted = <span class="literal">true</span>;  <span class="comment">// 假定已经排序</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i =<span class="number">1</span>; i &lt; n; i++ )&#123;</div><div class="line">            <span class="keyword">if</span> (A[i - <span class="number">1</span>] &gt; A[i])&#123; <span class="comment">// 一旦A[i-1]与A[i]逆序，则</span></div><div class="line">                swap( A[i<span class="number">-1</span>], A[i]); <span class="comment">// 交换之</span></div><div class="line">                sorted = <span class="literal">false</span>;<span class="comment">// 因整体排序不能保证，需要清除排序标志</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    	n--;  <span class="comment">// 至此末位元素必然就位， 故可以缩短排序序列的有效长度。</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;<span class="comment">// 借助布尔值标志位sorted, 可以及时提前退出，而不至于总是忙里地做n-1次扫描</span></div><div class="line"></div><div class="line"><span class="comment">// 构造打印数组的函数</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">printvector</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i &lt; n; i++)&#123;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; a[i]&lt;&lt; <span class="string">" "</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"\n"</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> n=<span class="number">10</span>;</div><div class="line">    <span class="keyword">int</span> a[n];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)</div><div class="line">        <span class="built_in">cin</span>&gt;&gt;a[i];</div><div class="line">    printvector(a, n);</div><div class="line">    bubblesort1A(a, n);</div><div class="line">    printvector(a, n);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
-<h5 id="关于时间复杂度"><a href="#关于时间复杂度" class="headerlink" title="关于时间复杂度"></a>关于时间复杂度</h5><p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-02-25%2017-27-54.png" alt=""></p>
-<p>参考：TsinghuaX: 30240184.1x Data Structures and Algorithm Design Part I 数据结构与算法设计(上) </p>
+        <h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>开了统计预测与决策的课，老师上课用的Eviews，用了下感觉一般，所以找R来实现看看。所以就先从回归开始了…</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><p>首先是随便Google了一个简单几页的<a href="http://www.montefiore.ulg.ac.be/~kvansteen/GBIO0009-1/ac20092010/Class8/Using%20R%20for%20linear%20regression.pdf" target="_blank" rel="external">教程</a>走了一般流程,发现挺靠谱的…接着用两天撸完了<em>R in Action</em>的第八章，也就是回归部分。写的很好，用RMD做了笔记，放在<a href="http://rpubs.com/shenxiangzhuang/regression" target="_blank" rel="external">这里</a></p>
 
       
     </div>
@@ -463,6 +446,38 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
     <div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2017/10/22/Linear-Regression-In-R/">Linear Regression In R</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 不秩稚童 的个人博客">不秩稚童</a></p>
+  <p><span>作者邮箱:</span>datahonor@gmail.com</p>
+  <p><span>发布时间:</span>2017年10月22日 - 16:10</p>
+  <p><span>最后更新:</span>2017年10月22日 - 16:10</p>
+  <p><span>原始链接:</span><a href="/2017/10/22/Linear-Regression-In-R/" title="Linear Regression In R">http://datahonor.com/2017/10/22/Linear-Regression-In-R/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/10/22/Linear-Regression-In-R/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+	clipboard.on('success', $(function(){
+	  $(".fa-clipboard").click(function(){
+		swal({   
+		  title: "",   
+		  text: '复制成功',   
+		  html: false,
+		  timer: 500,   
+		  showConfirmButton: false
+	    });
+	  });
+    }));  
+</script>
+
 
       
     </div>
@@ -486,9 +501,7 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
       
         <div class="post-tags">
           
-            <a href="/tags/Cpp/" rel="tag"># Cpp</a>
-          
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/R/" rel="tag"># R</a>
           
         </div>
       
@@ -501,8 +514,8 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/25/About-Hexo/" rel="next" title="About Hexo">
-                <i class="fa fa-chevron-left"></i> About Hexo
+              <a href="/2017/10/14/Eviews-安装/" rel="next" title="Eviews 安装">
+                <i class="fa fa-chevron-left"></i> Eviews 安装
               </a>
             
           </div>
@@ -510,10 +523,6 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/26/Print-time/" rel="prev" title="Print time!">
-                Print time! <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -688,7 +697,7 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Theory"><span class="nav-text">Theory</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关于时间复杂度"><span class="nav-text">关于时间复杂度</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a></li></ol></div>
             
 
 
@@ -828,9 +837,9 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
 
     <script type="text/javascript">
       var disqus_shortname = 'http-datahonor-com';
-      var disqus_identifier = '2017/02/25/Bubble-Sort/';
+      var disqus_identifier = '2017/10/22/Linear-Regression-In-R/';
 
-      var disqus_title = "Bubble Sort";
+      var disqus_title = "Linear Regression In R";
 
 
       function run_disqus_script(disqus_script) {
