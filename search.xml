@@ -3,6 +3,41 @@
   
     
     <entry>
+      <title><![CDATA[Hello Docker!]]></title>
+      <url>/2017/10/24/Hello-Docker/</url>
+      <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>一直不清楚Docker怎么玩，只知道很强…打算学习下怎么用。</p>
+<p>关于版本：</p>
+<blockquote>
+<p>Docker CE is the simple classical OSS Docker Engine.</p>
+<p>Docker EE is Docker CE with certification on some systems and support by Docker Inc.</p>
+<p>Docker CS (Commercially Supported) is kind of the old bundle version of Docker EE for versions &lt;= 1.13.</p>
+</blockquote>
+<p>这里装的是CE.</p>
+<h3 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h3><p>基本上按照官网教程来的。</p>
+<h4 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h4><p>先是<a href="https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/" target="_blank" rel="external">Get Docker CE for Ubuntu</a>, 选用的是<code>Install using the repository</code>。一切正常。</p>
+<blockquote>
+<p>之后尝试<code>docker run -it ubuntu bash</code>，然后就进去了一个环境，但是怎么也无法退出…参考<a href="https://forums.docker.com/t/container-stops-upon-exit-from-the-terminal/1267/2" target="_blank" rel="external">这里</a>,使用<code>CTRL+p CTRL+q</code>退出到了原来的环境。</p>
+</blockquote>
+<h4 id="Post-installation-steps-for-Linux"><a href="#Post-installation-steps-for-Linux" class="headerlink" title="Post-installation steps for Linux"></a>Post-installation steps for Linux</h4><p>参考<a href="https://docs.docker.com/engine/installation/linux/linux-postinstall/#manage-docker-as-a-non-root-user" target="_blank" rel="external">这里</a>,只是设置了非root的权限，其他的暂时没去管。</p>
+<h4 id="Build-and-run-your-first-app"><a href="#Build-and-run-your-first-app" class="headerlink" title="Build and run your first app"></a>Build and run your first app</h4><p>参考<a href="https://docs.docker.com/get-started/" target="_blank" rel="external">这里</a>进行下一步的操作。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Docker </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Docker </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[R In Jupyter]]></title>
       <url>/2017/10/24/R-In-Jupyter/</url>
       <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>最近写R，包括作笔记都是习惯在RStudio用RMD写，之后发布到rpubs，然后到博客这里做个简单介绍，附上链接…感觉略麻烦，想着之前发现可以在hexo直接显示Jupyter Notebook，用Python做过测试，感觉还不错。所以想着用Jupyter Notebook来写R。</p>
@@ -505,9 +540,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Cpp </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Cpp </tag>
             
             <tag> Octave </tag>
             
@@ -569,9 +604,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> OpenCV </tag>
-            
             <tag> Python </tag>
+            
+            <tag> OpenCV </tag>
             
         </tags>
         
@@ -3224,11 +3259,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
-            <tag> Algorithm </tag>
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3260,11 +3295,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
-            <tag> Algorithm </tag>
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3311,11 +3346,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
-            <tag> Algorithm </tag>
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3682,11 +3717,11 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
-            <tag> Algorithm </tag>
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3724,11 +3759,11 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
-            <tag> Algorithm </tag>
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             

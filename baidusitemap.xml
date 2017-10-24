@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/10/24/Hello-Docker/</loc>
+    <lastmod>2017-10-24T03:33:31.833Z</lastmod>
+    <data>
+        <display>
+        <title>Hello Docker!</title>
+        <pubTime>2017-10-24T03:18:49.000Z</pubTime>
+        
+        <tag>Docker</tag>
+         
+         
+           
+             
+              <breadCrumb title="Docker" url="http://datahonor.com/categories/Docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/10/24/R-In-Jupyter/</loc>
     <lastmod>2017-10-24T03:16:16.968Z</lastmod>
     <data>
@@ -137,9 +157,9 @@
         <title>百年回首--关于心形曲线的几种画法</title>
         <pubTime>2017-08-16T05:15:20.000Z</pubTime>
         
-        <tag>Cpp</tag>
-         
         <tag>Python</tag>
+         
+        <tag>Cpp</tag>
          
         <tag>Octave</tag>
          
@@ -421,9 +441,9 @@
         <title>添加OpenCV3对Python3的支持&QT中使用OpenCV</title>
         <pubTime>2017-08-15T09:18:58.000Z</pubTime>
         
-        <tag>OpenCV</tag>
-         
         <tag>Python</tag>
+         
+        <tag>OpenCV</tag>
          
          
            
@@ -1733,11 +1753,11 @@
         
         <tag>Python</tag>
          
-        <tag>Data Analysis</tag>
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
-        <tag>Algorithm</tag>
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
@@ -1805,11 +1825,11 @@
         
         <tag>Python</tag>
          
-        <tag>Data Analysis</tag>
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
-        <tag>Algorithm</tag>
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
@@ -1835,11 +1855,11 @@
         
         <tag>Python</tag>
          
-        <tag>Data Analysis</tag>
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
-        <tag>Algorithm</tag>
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
@@ -1887,11 +1907,11 @@
         
         <tag>Python</tag>
          
-        <tag>Data Analysis</tag>
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
-        <tag>Algorithm</tag>
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
@@ -1967,11 +1987,11 @@
         
         <tag>Python</tag>
          
-        <tag>Data Analysis</tag>
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
-        <tag>Algorithm</tag>
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
