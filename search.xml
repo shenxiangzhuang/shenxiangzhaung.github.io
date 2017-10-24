@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title><![CDATA[R In Jupyter]]></title>
+      <url>/2017/10/24/R-In-Jupyter/</url>
+      <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>最近写R，包括作笔记都是习惯在RStudio用RMD写，之后发布到rpubs，然后到博客这里做个简单介绍，附上链接…感觉略麻烦，想着之前发现可以在hexo直接显示Jupyter Notebook，用Python做过测试，感觉还不错。所以想着用Jupyter Notebook来写R。</p>
+<blockquote>
+<p>ps:现在才知道Jupyter–&gt;Julia+Python+R</p>
+</blockquote>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><h4 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h4><p>直接参考<a href="https://github.com/IRkernel/IRkernel" target="_blank" rel="external">Github地址</a>进行安装，在R中运行：</p>
+<blockquote>
+<p>install.packages(‘devtools’)<br>devtools::install_github(‘IRkernel/IRkernel’)<br># or devtools::install_local(‘IRkernel-master.tar.gz’)<br>IRkernel::installspec()  # to register the kernel in the current R installation</p>
+</blockquote>
+<p>之后运行Jupyter Notebook, 在new按钮下就有了创建R脚本的选项。</p>
+<h4 id="添加新的库"><a href="#添加新的库" class="headerlink" title="添加新的库"></a>添加新的库</h4><p>通过上面的方式，运行R完全可以，也自带了一些经常用到的库。但是我们可能要添加新的库，这时候也可以通过命令行安装。</p>
+<p>在Notebook上查看所有安装的包，然后找到对应的路径。再到终端，以<code>root</code>运行R<code>sudo R</code>（需要权限）,之后运行<code>install.packages(&quot;lib name&quot;, lib=&quot;lib path&quot;)</code>（lib name替换为包名称, lib path替换为之前查看到的路径）即可。</p>
+<h3 id="Supplement"><a href="#Supplement" class="headerlink" title="Supplement"></a>Supplement</h3><p>看到Github上也提供了用Docker来配置的方法。话说一直不清楚Docker怎么玩的…这次打算研究下。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> R </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> R </tag>
+            
+            <tag> Jupyter </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Linear Regression In R]]></title>
       <url>/2017/10/22/Linear-Regression-In-R/</url>
       <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>开了统计预测与决策的课，老师上课用的Eviews，用了下感觉一般，所以找R来实现看看。所以就先从回归开始了…</p>
@@ -3190,11 +3224,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
-            <tag> Data Analysis </tag>
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -3226,11 +3260,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
-            <tag> Data Analysis </tag>
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -3277,11 +3311,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
-            <tag> Data Analysis </tag>
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -3648,11 +3682,11 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
-            <tag> Data Analysis </tag>
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
@@ -3690,11 +3724,11 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
-            <tag> Data Analysis </tag>
+            <tag> Algorithm </tag>
             
             <tag> Clustering </tag>
             
