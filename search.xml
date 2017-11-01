@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title><![CDATA[Rank, Stem-Leaf in R]]></title>
+      <url>/2017/11/01/Rank-Stem-Leaf-in-R/</url>
+      <content type="html"><![CDATA[<iframe src="http://nbviewer.jupyter.org/github/shenxiangzhuang/EDA-Course-WIth-R/blob/master/Chap1_rank_stem.ipynb" width="700" height="700"></iframe>
+]]></content>
+      
+        <categories>
+            
+            <category> R </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> R </tag>
+            
+            <tag> EDA </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello Docker!]]></title>
       <url>/2017/10/24/Hello-Docker/</url>
       <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>一直不清楚Docker怎么玩，只知道很强…打算学习下怎么用。</p>
@@ -540,9 +563,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Cpp </tag>
+            
+            <tag> Python </tag>
             
             <tag> Octave </tag>
             
@@ -604,9 +627,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> OpenCV </tag>
+            
+            <tag> Python </tag>
             
         </tags>
         
@@ -3261,9 +3284,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> ML </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
@@ -3297,9 +3320,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> ML </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
@@ -3348,9 +3371,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> ML </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
@@ -3719,9 +3742,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Algorithm </tag>
             
-            <tag> ML </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
@@ -3761,9 +3784,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Algorithm </tag>
             
-            <tag> ML </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
