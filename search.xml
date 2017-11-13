@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title><![CDATA[Haskell in Ubuntu]]></title>
+      <url>/2017/11/12/Haskell-in-Ubuntu/</url>
+      <content type="html"><![CDATA[<p>在Ubuntu下配置集成Haskell集成开发环境。首先是按照官网教程，一条命令直接安装了haskell plateform、之后尝试配置一个和leksah关联的IDE，一直出错，所以就换成Atom来配置了。直接apm安装一些插件后，必须添加一个运行脚本的插件才可以直接在Atom编译并运行haskell。测试发现，Atom没有办法交互式地输入数据到程序，所以暂时安装了一个可以调用终端的插件代替。配置过后，发现Atom还挺好看~</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Heskell </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Keskell </tag>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Nonparametric Statistics in R]]></title>
       <url>/2017/11/02/Nonparametric-Statistics-in-R/</url>
       <content type="html"><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>关于非参数统计，感觉还是比较实用的。这里记录下在R中的对应实现。本来打算自己把全部的方法总结下，但是看到了<a href="https://rpubs.com/xuefliang/153258" target="_blank" rel="external">这个</a>，有前辈已经总结的比较好了。所以这里只是在此基础上进行一些更加详细的补充。</p>
@@ -276,9 +299,9 @@ ferent modes</code>。</p>
         
         <tags>
             
-            <tag> R </tag>
-            
             <tag> Tips </tag>
+            
+            <tag> R </tag>
             
         </tags>
         
@@ -805,9 +828,9 @@ Please join Telegram group https://t.me/sbfans if you have any issues. / 如有�
         
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
@@ -1862,9 +1885,9 @@ error: called from
             
             <tag> Octave </tag>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
@@ -3532,9 +3555,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
@@ -3561,9 +3584,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         

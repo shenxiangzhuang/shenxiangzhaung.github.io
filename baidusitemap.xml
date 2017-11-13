@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/11/12/Haskell-in-Ubuntu/</loc>
+    <lastmod>2017-11-13T12:52:03.607Z</lastmod>
+    <data>
+        <display>
+        <title>Haskell in Ubuntu</title>
+        <pubTime>2017-11-12T09:25:02.000Z</pubTime>
+        
+        <tag>Keskell</tag>
+         
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Heskell" url="http://datahonor.com/categories/Heskell/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/11/02/Nonparametric-Statistics-in-R/</loc>
     <lastmod>2017-11-02T14:37:27.461Z</lastmod>
     <data>
@@ -157,9 +179,9 @@
         <title>Get help in R</title>
         <pubTime>2017-10-10T03:38:30.000Z</pubTime>
         
-        <tag>R</tag>
-         
         <tag>Tips</tag>
+         
+        <tag>R</tag>
          
          
            
@@ -249,9 +271,9 @@
         <title>SS使用-全局代理</title>
         <pubTime>2017-07-31T16:07:32.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
          
          
            
@@ -375,9 +397,9 @@
         <title>Ubuntu命令积累</title>
         <pubTime>2017-03-02T09:03:54.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
          
          
            
@@ -574,9 +596,9 @@
         
         <tag>Octave</tag>
          
-        <tag>Linux</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
          
          
            
@@ -1466,9 +1488,9 @@
         <title>Ubuntu搭建SS</title>
         <pubTime>2017-03-02T08:57:56.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
          
          
            
