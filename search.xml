@@ -5,7 +5,21 @@
     <entry>
       <title><![CDATA[Haskell in Ubuntu]]></title>
       <url>/2017/11/12/Haskell-in-Ubuntu/</url>
-      <content type="html"><![CDATA[<p>在Ubuntu下配置集成Haskell集成开发环境。首先是按照官网教程，一条命令直接安装了haskell plateform、之后尝试配置一个和leksah关联的IDE，一直出错，所以就换成Atom来配置了。直接apm安装一些插件后，必须添加一个运行脚本的插件才可以直接在Atom编译并运行haskell。测试发现，Atom没有办法交互式地输入数据到程序，所以暂时安装了一个可以调用终端的插件代替。配置过后，发现Atom还挺好看~</p>
+      <content type="html"><![CDATA[<h3 id="基础集成开发环境搭建"><a href="#基础集成开发环境搭建" class="headerlink" title="基础集成开发环境搭建"></a>基础集成开发环境搭建</h3><p>在Ubuntu下配置集成Haskell集成开发环境。首先是按照官网教程，一条命令直接安装了haskell plateform、之后尝试配置一个和leksah关联的IDE，一直出错，所以就换成Atom来配置了。直接apm安装一些插件后，必须添加一个运行脚本的插件才可以直接在Atom编译并运行haskell。测试发现，Atom没有办法交互式地输入数据到程序，所以暂时安装了一个可以调用终端的插件代替。配置过后，发现Atom还挺好看~</p>
+<h3 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a>其他配置</h3><h4 id="将GHCi的终端提示符永久替换为λ"><a href="#将GHCi的终端提示符永久替换为λ" class="headerlink" title="将GHCi的终端提示符永久替换为λ"></a>将GHCi的终端提示符永久替换为λ</h4><p>直接新建<code>~/.ghci</code>文件，并写入：</p>
+<blockquote>
+<p>:set prompt “\ESC[1;34m%s\n\ESC[0;34mλ&gt; \ESC[m”</p>
+</blockquote>
+<p>这样进入GHCi（不会成功显示λ）将会有如下提示：</p>
+<blockquote>
+<p>GHCi, version 7.10.3: <a href="http://www.haskell.org/ghc/" target="_blank" rel="external">http://www.haskell.org/ghc/</a>  :? for help<br><em>*</em> WARNING: /home/shensir/.ghci is writable by someone else, IGNORING!<br>Suggested fix: execute ‘chmod go-w /home/shensir/.ghci’</p>
+</blockquote>
+<p>按照提示执行下面的命令即可修复：</p>
+<blockquote>
+<p>chmod go-w /home/shensir/.ghci</p>
+</blockquote>
+<p>这样每次回车都会产生两行，第一行是所在module,第二行是一个λ。好看且方便~</p>
+<p>参考<a href="https://coderwall.com/p/13h9bw/colored-ghci-prompt-with-and-modules-on-separate-lines" target="_blank" rel="external">这里</a></p>
 ]]></content>
       
         <categories>
