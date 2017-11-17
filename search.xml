@@ -324,13 +324,14 @@ ferent modes</code>。</p>
     <entry>
       <title><![CDATA[Exploratory Data Analysis with R读书笔记]]></title>
       <url>/2017/10/06/EDA-with-R/</url>
-      <content type="html"><![CDATA[<p>这学期开了EDA的课程，课本没用结合程序来进行，所以这里主要依照<em>Exploratory Data Analysis with R</em>这本书来进行EDA编程方面的学习。国庆这两天多花了点时间看完了，这里简单写下笔记。（这书的pdf可以在<a href="https://bookdown.org/rdpeng/exdata/" target="_blank" rel="external">这里</a>看）</p>
+      <content type="html"><![CDATA[<h3 id="启程"><a href="#启程" class="headerlink" title="启程"></a>启程</h3><p>这学期开了EDA的课程，课本没用结合程序来进行，所以这里主要依照<em>Exploratory Data Analysis with R</em>这本书来进行EDA编程方面的学习。国庆这两天多花了点时间看完了，这里简单写下笔记。（这书的pdf可以在<a href="https://bookdown.org/rdpeng/exdata/" target="_blank" rel="external">这里</a>看）</p>
 <blockquote>
 <p>ps:大一的时候学R看的是<em>The R Book</em>，但是看到概率论知识那里就放下了，后来也跑去学Python了orz…这里也当做重新来学R吧。</p>
 </blockquote>
 <p>书上首先介绍了dplyr的使用方法，十分好用（感觉和pandas好像…）。为了加深记忆，用Rmarkdown写了个笔记，发布在<a href="http://rpubs.com/shenxiangzhuang/mdplyr" target="_blank" rel="external">rpubs</a>。再到后面主要介绍了EDA的过程和可视化的方法，对ggplot2的介绍间接明了，十分实用。最后还给出了具体的案例分析，结合的很好！</p>
-<p>总之，这本书还是比较好的，可以学习EDA的方法，同时还可以作为一个简洁的handbook来备查。</p>
-<p>接下来，R的学习就已<em>R in Action</em>为主了，同时，非参数课本上的R程序也打算一直跟下去。</p>
+<p>总之，这本书还是比较好的，可以学习EDA的方法，同时还可以作为一个简洁的handbook来备查。<br>接下来，R的学习就已<em>R in Action</em>为主了，同时，非参数课本上的R程序也打算一直跟下去。</p>
+<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>强迫症发作。。。因为一直在用R跟进<a href="https://github.com/shenxiangzhuang/StatisticalMethods-Course-WIth-R" target="_blank" rel="external">统计预测与决策</a>，<a href="https://github.com/shenxiangzhuang/NonparameterStat-Course-WIth-R" target="_blank" rel="external">非参数统计</a>的课程，所以对现在的EDA课程也想着用R挨着来实现一下，虽说要写代码的地方不多…承接着上面的EDA WITH R那本书，发现<a href="http://mgimond.github.io/ES218/" target="_blank" rel="external">这里</a> 有更为详细的讲解。所以就参考这个，对教材<em>Understanding Robust And Exploratory Data Analysis</em>进行跟进。</p>
+<p>项目地址：[Github]（<a href="https://github.com/shenxiangzhuang/EDA-Course-WIth-R）" target="_blank" rel="external">https://github.com/shenxiangzhuang/EDA-Course-WIth-R）</a></p>
 ]]></content>
       
         <categories>
@@ -3580,13 +3581,15 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
     <entry>
       <title><![CDATA[Ubuntu搭建SS]]></title>
       <url>/2017/03/02/Ubuntu%E6%90%AD%E5%BB%BASS/</url>
-      <content type="html"><![CDATA[<p>S1:注册<a href="https://app.arukas.io/" target="_blank" rel="external">arukas</a>帐号</p>
+      <content type="html"><![CDATA[<h3 id="旧版"><a href="#旧版" class="headerlink" title="旧版"></a>旧版</h3><p>S1:注册<a href="https://app.arukas.io/" target="_blank" rel="external">arukas</a>帐号</p>
 <p>S2:创建SS账户，参考<a href="http://www.iqcni.com/other/12.html" target="_blank" rel="external">这里</a>。</p>
 <p>S3：Ubuntu搭建SS客户端的GUI， 参考<a href="http://www.jianshu.com/p/4f6ea97427e9" target="_blank" rel="external">这里</a>。</p>
 <blockquote>
 <p>sudo add-apt-repository ppa:hzwhuang/ss-qt5<br>sudo apt-get update<br>sudo apt-get install shadowsocks-qt5</p>
 </blockquote>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Ubuntu/1.png" alt=""></p>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>用上面的教程搭建的代理好早前就开始变卡了…后来就没再用了，不知道现在如何…</p>
+<h4 id="Pan-–-gt-foxyproxy"><a href="#Pan-–-gt-foxyproxy" class="headerlink" title="Pan –&gt; foxyproxy"></a>Pan –&gt; foxyproxy</h4><p>之前一直都是shadowsock5配合火狐的pan插件用，不过更新到新版的火狐后，pan已经不能用了，经推荐换了foxyproxy来用。配置过程比较简单，记得将IP和端口都设置成本地就行了（IP：127.0.0.1， 端口：1080）。而且，发现foxyproxy的pattern比较好用，把百度和本地地址放到Black List，访问百度会变得比较快，禁用本地地址更是方便…之前不论用hexo还是jupyter notebook都是手动把pan关了的orz…..现在是方便许多~</p>
 ]]></content>
       
         <categories>

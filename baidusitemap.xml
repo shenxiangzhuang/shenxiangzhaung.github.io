@@ -4,6 +4,50 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/03/02/Ubuntu%E6%90%AD%E5%BB%BASS/</loc>
+    <lastmod>2017-11-17T04:44:07.585Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu搭建SS</title>
+        <pubTime>2017-03-02T08:57:56.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://datahonor.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/10/06/EDA-with-R/</loc>
+    <lastmod>2017-11-16T16:41:35.039Z</lastmod>
+    <data>
+        <display>
+        <title>Exploratory Data Analysis with R读书笔记</title>
+        <pubTime>2017-10-06T04:22:40.000Z</pubTime>
+        
+        <tag>R</tag>
+         
+        <tag>EDA</tag>
+         
+         
+           
+             
+              <breadCrumb title="R" url="http://datahonor.com/categories/R/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/11/12/Haskell-in-Ubuntu/</loc>
     <lastmod>2017-11-14T08:33:40.545Z</lastmod>
     <data>
@@ -182,28 +226,6 @@
         <tag>Tips</tag>
          
         <tag>R</tag>
-         
-         
-           
-             
-              <breadCrumb title="R" url="http://datahonor.com/categories/R/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/10/06/EDA-with-R/</loc>
-    <lastmod>2017-10-07T10:37:59.654Z</lastmod>
-    <data>
-        <display>
-        <title>Exploratory Data Analysis with R读书笔记</title>
-        <pubTime>2017-10-06T04:22:40.000Z</pubTime>
-        
-        <tag>R</tag>
-         
-        <tag>EDA</tag>
          
          
            
@@ -1474,28 +1496,6 @@
            
              
               <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/03/02/Ubuntu%E6%90%AD%E5%BB%BASS/</loc>
-    <lastmod>2017-04-25T06:11:55.357Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu搭建SS</title>
-        <pubTime>2017-03-02T08:57:56.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://datahonor.com/categories/Linux/"/>
           
         </display>
     </data>
