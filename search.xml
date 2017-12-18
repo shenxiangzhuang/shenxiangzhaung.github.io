@@ -3,6 +3,42 @@
   
     
     <entry>
+      <title><![CDATA[Cmake使用]]></title>
+      <url>/2017/12/18/Cmake%E4%BD%BF%E7%94%A8/</url>
+      <content type="html"><![CDATA[<p>一直使用的Clion写C&amp;Cpp，编译都是用cmake文件来，这里记录下使用过程中遇到的问题及解决方法。</p>
+<h4 id="链接math-h库"><a href="#链接math-h库" class="headerlink" title="链接math.h库"></a>链接math.h库</h4><p>若是<code>.c</code>源文件包含了<code>math</code>库，那么我们在命令行用<code>gcc</code>编译的时候可以使用<code>-lm</code>来实现，如下：</p>
+<blockquote>
+<p>gcc fib.c -lm -o fibo</p>
+</blockquote>
+<p>参考<a href="https://stackoverflow.com/questions/8671366/undefined-reference-to-pow-and-floor" target="_blank" rel="external">stackoverflow</a></p>
+<blockquote>
+<p>ps:在Linux下cc与gcc是等价的，cc原是Unix下的c compiler,gcc是其在Linux下的替代。参考<a href="http://www.cnblogs.com/zhouyinhui/archive/2010/02/01/1661078.html" target="_blank" rel="external">这里</a></p>
+</blockquote>
+<p>而在Clion中就需要修改<code>CMakeLists.txt</code>文件,最后加上：</p>
+<blockquote>
+<p>target_link_libraries(NAME m)</p>
+</blockquote>
+<p>参考<a href="https://intellij-support.jetbrains.com/hc/en-us/community/posts/206607085-CLion-Enabling-math-h-for-C-projects" target="_blank" rel="external">intellij-support</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> C </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> C </tag>
+            
+            <tag> Cmake </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Haskell in Ubuntu]]></title>
       <url>/2017/11/12/Haskell-in-Ubuntu/</url>
       <content type="html"><![CDATA[<h3 id="基础集成开发环境搭建"><a href="#基础集成开发环境搭建" class="headerlink" title="基础集成开发环境搭建"></a>基础集成开发环境搭建</h3><p>在Ubuntu下配置集成Haskell集成开发环境。首先是按照官网教程，一条命令直接安装了haskell plateform、之后尝试配置一个和leksah关联的IDE，一直出错，所以就换成Atom来配置了。直接apm安装一些插件后，必须添加一个运行脚本的插件才可以直接在Atom编译并运行haskell。测试发现，Atom没有办法交互式地输入数据到程序，所以暂时安装了一个可以调用终端的插件代替。配置过后，发现Atom还挺好看~</p>
@@ -313,9 +349,9 @@ ferent modes</code>。</p>
         
         <tags>
             
-            <tag> Tips </tag>
-            
             <tag> R </tag>
+            
+            <tag> Tips </tag>
             
         </tags>
         

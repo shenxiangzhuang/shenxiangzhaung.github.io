@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://datahonor.com/2017/12/18/Cmake%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2017-12-18T03:08:27.912Z</lastmod>
+    <data>
+        <display>
+        <title>Cmake使用</title>
+        <pubTime>2017-12-18T02:58:48.000Z</pubTime>
+        
+        <tag>C</tag>
+         
+        <tag>Cmake</tag>
+         
+         
+           
+             
+              <breadCrumb title="C" url="http://datahonor.com/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/03/02/Ubuntu%E6%90%AD%E5%BB%BASS/</loc>
     <lastmod>2017-11-17T04:44:07.585Z</lastmod>
     <data>
@@ -223,9 +245,9 @@
         <title>Get help in R</title>
         <pubTime>2017-10-10T03:38:30.000Z</pubTime>
         
-        <tag>Tips</tag>
-         
         <tag>R</tag>
+         
+        <tag>Tips</tag>
          
          
            
