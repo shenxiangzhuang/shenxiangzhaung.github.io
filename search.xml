@@ -7,7 +7,8 @@
       <url>/2017/12/30/%E5%B0%8F%E5%B0%8F%E7%99%BD%E6%90%AC%E7%A0%96%E8%AE%B0%E2%80%94%E2%80%942017/</url>
       <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>  小小白是在群里用的昵称，嗯，与肤色无关。2017年依旧很快，这里记录下今年搬砖的情况。</p>
 <h4 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h4><p>  <strong>数分</strong>。16年下半年（大二上）开始学的，一学期看了大概六章，基本看不懂，课后题也做不出…台大的公开课配合着看也是力不从心。后17年上半年（大二下）在万门上看公开课，依然跟不上，遂止。目前打算大四下用华东师范大学那本系统学了。</p>
-<p>  <strong>微积分</strong>。看的是 <em>Calculus With Analytic Geometry</em>,暑假提前来学校大概一个月，除了曲面积分那里看得比较快，其他内容是撸完了的，习题未作，打算重读的时候做下。<br>  <strong>线性代数</strong>。看了点<em>Practical Linear Algebra</em>，当闲书看的，目前不打算去深入学。</p>
+<p>  <strong>微积分</strong>。看的是 <em>Calculus With Analytic Geometry</em>,暑假提前来学校大概一个月，除了曲面积分那里看得比较快，其他内容是撸完了的，习题未作，打算重读的时候做下。</p>
+<p>  <strong>线性代数</strong>。看了点<em>Practical Linear Algebra</em>，当闲书看的，目前不打算去深入学。</p>
 <p>  <strong>数理统计</strong>。开非参的课，开始有点懵，查数理统计资料。看的厦大程细玉的《数理统计》，写的很好。目前还剩两章多一点没看完，考完试打算先撸完这本。同时看了<em>Statistical Inference</em>的前三章，一开始是没有做题的，后发现往后看不懂…于是开始刷课后题，大概一个小时搞清楚一道题，尚可。受益匪浅，打算18年看完。</p>
 <p>  <strong>概率论</strong>。<em>Statistical Inference</em>前几章也是概率论的内容，基本上是很充分了。不过偶然拿到了清华教概率论的教材和Reference Books。所以又买了本<em>Elementary Probability Theory</em>来看，只看了第一章，难度尚可，打算寒假撸完。</p>
 <h4 id="编程"><a href="#编程" class="headerlink" title="编程"></a>编程</h4><p>  <strong>Cpp</strong>。上半年还是玩的CV，看了不少书，感觉<em>OpenCV 3 Computer Vision Application Programming Cookbook - Third Edition</em>算是很好的入门书，也在博客上整理了这本书的笔记。另外<em>OpenCv By Example</em>也还可以，以例子为主导，挺好玩的。最后，总算达到预想的检测行人的目标，虽然用的是已经被业界摒弃的Hog+SVM…由于多种原因，大三课多，老爷机跑不动NN，DL理论未学等，暂时放下CV。买了本<em>Discovering Modern C++</em>,感觉难度还行，不过目前Cpp玩的不熟悉（CV用到的Cpp的东西比较少…)，打算慢慢看这本。</p>
