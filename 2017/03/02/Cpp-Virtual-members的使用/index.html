@@ -102,7 +102,7 @@
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/index.png">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/x.png">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/virtual.png">
-<meta property="og:updated_time" content="2017-03-02T04:36:46.647Z">
+<meta property="og:updated_time" content="2018-01-17T04:29:21.385Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cpp Virtual members的使用">
 <meta name="twitter:description" content="C++类的学习–&amp;gt;Virtual member的使用
@@ -455,6 +455,9 @@
 <p>变动只有这两行:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cout &lt;&lt; (*ppoly1).area() &lt;&lt; endl;</div><div class="line">cout &lt;&lt; ppoly2-&gt;area() &lt;&lt; endl;</div><div class="line"></div></pre></td></tr></table></figure></p>
 <p>报错如下：<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/index.png" alt=""></p>
 <p>报错写的很清楚了，两个指针ppoly1, ppoly2指向的基类是CPolygon, 而CPolygon类 has no member named ‘area’. 所以我们想，既然两个derived classes 都用到area, 如果能在基类里面定义就好了。但是可惜的是，两个darived class的area是不同的。</p>
+<blockquote>
+<p>实际上，这就是我们常说的<em>Diamond Problem</em>。<a href="https://www.geeksforgeeks.org/multiple-inheritance-in-c/" target="_blank" rel="external">这篇文章</a>解释的比较详细。</p>
+</blockquote>
 <p>这时，就是Virtual member 上场的时候了。<br>先看下Virtual member的说明：<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/x.png" alt=""></p>
 <p>接下来看个上面改写的例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">#include &lt;iostream&gt;</div><div class="line">using namespace std;</div><div class="line"></div><div class="line">class CPolygon&#123;</div><div class="line">protected:                // protected与private的区别就在于能否被其derived classes使用</div><div class="line">    int width, height;</div><div class="line">public:</div><div class="line">    void set_values (int a, int b)&#123;</div><div class="line">        width=a; height=b;</div><div class="line">    &#125;</div><div class="line">    virtual int area()</div><div class="line">    &#123; return (0);&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">class CRectangle: public CPolygon&#123;</div><div class="line">public:</div><div class="line">    int area()&#123;</div><div class="line">        return (width * height);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">class CTriangle: public CPolygon&#123;</div><div class="line">public:</div><div class="line">    int area()&#123;</div><div class="line">        return (width * height / 2);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">    CRectangle rect;</div><div class="line">    CTriangle trgl;</div><div class="line">    CPolygon poly;</div><div class="line">    CPolygon * ppoly1 = &amp;rect;</div><div class="line">    CPolygon * ppoly2 = &amp;trgl;</div><div class="line">    CPolygon * ppoly3 = &amp;poly;</div><div class="line">    ppoly1-&gt;set_values(4, 5);</div><div class="line">    ppoly2-&gt;set_values(4, 5);</div><div class="line">    ppoly3-&gt;set_values(4, 5);</div><div class="line"></div><div class="line">    cout &lt;&lt; ppoly1-&gt;area() &lt;&lt; endl;</div><div class="line">    cout &lt;&lt; ppoly2-&gt;area() &lt;&lt; endl;</div><div class="line">    cout &lt;&lt; ppoly3-&gt;area() &lt;&lt; endl;</div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
 <p>输出：</p>
@@ -602,7 +605,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">113</span>
+                <span class="site-state-item-count">114</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

@@ -4,6 +4,68 @@
 
     
   <url>
+    <loc>http://datahonor.com/2018/01/17/list-comprehension-in-Haskell/</loc>
+    <lastmod>2018-01-17T10:07:16.846Z</lastmod>
+    <data>
+        <display>
+        <title>list comprehension in Haskell</title>
+        <pubTime>2018-01-17T09:55:00.000Z</pubTime>
+        
+        <tag>Haskell</tag>
+         
+         
+           
+             
+              <breadCrumb title="Haskell" url="http://datahonor.com/categories/Haskell/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/11/12/Haskell-in-Ubuntu/</loc>
+    <lastmod>2018-01-17T09:55:54.909Z</lastmod>
+    <data>
+        <display>
+        <title>Haskell in Ubuntu</title>
+        <pubTime>2017-11-12T09:25:02.000Z</pubTime>
+        
+        <tag>Haskell</tag>
+         
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Haskell" url="http://datahonor.com/categories/Haskell/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2017/03/02/Cpp-Virtual-members%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2018-01-17T04:29:21.385Z</lastmod>
+    <data>
+        <display>
+        <title>Cpp Virtual members的使用</title>
+        <pubTime>2017-03-02T04:26:43.000Z</pubTime>
+        
+        <tag>Cpp</tag>
+         
+         
+           
+             
+              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2018/01/08/Matrix-in-C/</loc>
     <lastmod>2018-01-09T01:47:37.271Z</lastmod>
     <data>
@@ -125,28 +187,6 @@
            
              
               <breadCrumb title="R" url="http://datahonor.com/categories/R/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/11/12/Haskell-in-Ubuntu/</loc>
-    <lastmod>2017-11-14T08:33:40.545Z</lastmod>
-    <data>
-        <display>
-        <title>Haskell in Ubuntu</title>
-        <pubTime>2017-11-12T09:25:02.000Z</pubTime>
-        
-        <tag>Keskell</tag>
-         
-        <tag>Ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="Heskell" url="http://datahonor.com/categories/Heskell/"/>
           
         </display>
     </data>
@@ -333,9 +373,9 @@
          
         <tag>Python</tag>
          
-        <tag>Octave</tag>
-         
         <tag>R</tag>
+         
+        <tag>Octave</tag>
          
         <tag>Matlab</tag>
          
@@ -2369,26 +2409,6 @@
            
              
               <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2017/03/02/Cpp-Virtual-members%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2017-03-02T04:36:46.647Z</lastmod>
-    <data>
-        <display>
-        <title>Cpp Virtual members的使用</title>
-        <pubTime>2017-03-02T04:26:43.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
           
         </display>
     </data>
