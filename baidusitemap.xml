@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://datahonor.com/2018/01/24/Dangling-pointer-and-Lifetime/</loc>
+    <lastmod>2018-01-24T10:03:49.455Z</lastmod>
+    <data>
+        <display>
+        <title>Dangling pointer and Lifetime</title>
+        <pubTime>2018-01-24T09:38:11.000Z</pubTime>
+        
+        <tag>C</tag>
+         
+         
+           
+             
+              <breadCrumb title="C" url="http://datahonor.com/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2018/01/17/list-comprehension-in-Haskell/</loc>
     <lastmod>2018-01-17T10:10:35.173Z</lastmod>
     <data>
@@ -373,9 +393,9 @@
          
         <tag>Python</tag>
          
-        <tag>R</tag>
-         
         <tag>Octave</tag>
+         
+        <tag>R</tag>
          
         <tag>Matlab</tag>
          

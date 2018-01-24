@@ -3,6 +3,42 @@
   
     
     <entry>
+      <title><![CDATA[Dangling pointer and Lifetime]]></title>
+      <url>/2018/01/24/Dangling-pointer-and-Lifetime/</url>
+      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>在CW刷C的题，一道7ku的题目写了快100行…（虽然完成率只有1%）,然后还出错了…折腾下改好了。回头发现原来是写了Dangling pointer.</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><p>将原问题抽象成下面的代码：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">char</span>* <span class="title">readData</span><span class="params">(<span class="keyword">char</span> s[<span class="number">10</span>])</span></span>&#123;</div><div class="line">	fgets(s, <span class="number">10</span>, <span class="built_in">stdin</span>);</div><div class="line">	<span class="keyword">return</span> s;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">char</span>* <span class="title">foo</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">char</span> s[<span class="number">10</span>];</div><div class="line">	<span class="keyword">return</span> readData(s);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">char</span> *pch = foo();</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%s"</span>, pch);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>这里的main函数中的pch就是dangling pointer了，因为在foo函数执行完之后，s的内存就被释放掉了，此时pch指向的内存中保存的数据是undefined的。所以（可能由于内存未刷新的原因），多次执行这个程序，有时也会正常打印，但是大部分时候是不行的。</p>
+<p>这就涉及到了变量的lifetime的问题（参考<a href="https://blog.feabhas.com/2010/09/scope-and-lifetime-of-variables-in-c/" target="_blank" rel="external">这里</a>），如上，s是属于最常见的automatic objects,所以其内存会随着函数执行的结束而释放。解决办法有两种，就是使用其他两种变量(static&amp;dynamic)来替换这里作为automatic的s。</p>
+<h5 id="static"><a href="#static" class="headerlink" title="static"></a>static</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">char</span>* <span class="title">readData</span><span class="params">(<span class="keyword">char</span> s[<span class="number">10</span>])</span></span>&#123;</div><div class="line">	fgets(s, <span class="number">10</span>, <span class="built_in">stdin</span>);</div><div class="line">	<span class="keyword">return</span> s;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">char</span>* <span class="title">foo</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">static</span> <span class="keyword">char</span> s[<span class="number">10</span>];</div><div class="line">	<span class="keyword">return</span> readData(s);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">char</span> *pch = foo();</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%s"</span>, pch);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>只需要将原来foo函数中的<code>char s[10]</code>改为<code>static char s[10]</code>即可。这种方法虽然简单，但是有个缺点，就是这里分配的内存应为确定的，这里是10。所以不太方便。</p>
+<h5 id="dynamic"><a href="#dynamic" class="headerlink" title="dynamic"></a>dynamic</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">char</span>* <span class="title">readData</span><span class="params">(<span class="keyword">char</span> s[<span class="number">10</span>])</span></span>&#123;</div><div class="line">	fgets(s, <span class="number">10</span>, <span class="built_in">stdin</span>);</div><div class="line">	<span class="keyword">return</span> s;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">char</span>* <span class="title">foo</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">char</span> *s;</div><div class="line">	s = <span class="built_in">malloc</span>(<span class="number">10</span>);</div><div class="line">	<span class="keyword">return</span> readData(s);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">char</span> *pch = foo();</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%s"</span>, pch);</div><div class="line">	<span class="built_in">free</span>(pch);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>这里改动也是不多的，只是用了<code>malloc</code>和<code>free</code>来动态地分配和释放内存。</p>
+<p>其实，严格来说，dynamic也是属于automatic的，只不过有些不同：</p>
+<blockquote>
+<p>Strictly speaking (according to the C standard) dynamically allocated objects are also called automatics. However, it is important to differentiate between this type of object and automatics for two reasons:</p>
+<p>The memory is allocated from a different memory area (the heap not the stack)</p>
+<p>The lifetime is under the control of the programmer rather than the C run-time system.</p>
+</blockquote>
+<p>第二条是我们想要利用的属性，也就是可控的lifetime.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> C </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> C </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[list comprehension in Haskell]]></title>
       <url>/2018/01/17/list-comprehension-in-Haskell/</url>
       <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>以建立简易的图书馆数据库为例，学习Haskell的list comprehension以及其他的关于QuickCheck，pattern match的一些内容。</p>
@@ -857,9 +893,9 @@ query: 3: Negative
             
             <tag> Python </tag>
             
-            <tag> R </tag>
-            
             <tag> Octave </tag>
+            
+            <tag> R </tag>
             
             <tag> Matlab </tag>
             
