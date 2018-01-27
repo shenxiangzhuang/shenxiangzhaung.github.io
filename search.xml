@@ -3823,6 +3823,25 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
 </blockquote>
 <p>在General设置开机启动，并在Advance设置要显示的参数即可。</p>
 <p>参考<a href="http://blog.csdn.net/tecn14/article/details/24489031" target="_blank" rel="external">这里</a></p>
+<h5 id="挽救-boot-清除image"><a href="#挽救-boot-清除image" class="headerlink" title="挽救/boot,清除image"></a>挽救<code>/boot</code>,清除image</h5><p>Linux的内核是不断更新的，但是Ubuntu（debian也是）是不会自动清理之前的内核的，所以boot的空间就会慢慢堆满。</p>
+<p>可以使用<code>df -h</code>来看下空间的使用情况。</p>
+<p>查看已经安装的内核：</p>
+<p><code>sudo dpkg --get-selections |grep linux-image</code></p>
+<p>查看自己正在使用的内核：</p>
+<p><code>uname -a</code></p>
+<p>可以将比较早的删除，留下最近的几个，删除命令如下：</p>
+<blockquote>
+<p>sudo apt-get remove linux-image-4.4.0-57-generic<br>sudo apt-get remove linux-image-4.4.0-59-generic<br>sudo apt-get remove linux-image-extra-4.4.0-57-generic<br>sudo apt-get remove linux-image-extra-4.4.0-59-generic</p>
+<p>这里执行可能出现错误<code>E: Sub-process /usr/bin/dpkg returned an error code (1)</code>，可参考<a href="http://blog.csdn.net/qiaoji6073/article/details/76140146" target="_blank" rel="external">这里</a>解决。</p>
+</blockquote>
+<p>有时候运行完上面的命令，再次查看已经安装的内核，会由原来的<code>install</code>变为<code>deinstall</code>,这时候可以将上面的<code>remove</code>换为<code>purge</code>清理下，如：</p>
+<blockquote>
+<p>sudo apt-get purge linux-image-4.4.0-57-generic</p>
+</blockquote>
+<p>参考：</p>
+<p><a href="http://www.jb51.net/article/106976.htm" target="_blank" rel="external">解决Ubuntu 16.04下提示boot分区空间不足的办法</a></p>
+<p><a href="http://blog.csdn.net/wxyangid/article/details/53097208" target="_blank" rel="external">ubuntu16.04 LTS解决/boot空间不足 </a></p>
+<p><a href="http://blog.csdn.net/qq_27818541/article/details/72675954" target="_blank" rel="external">/boot空间不足的解决办法 </a></p>
 ]]></content>
       
         <categories>
