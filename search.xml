@@ -3,6 +3,63 @@
   
     
     <entry>
+      <title><![CDATA[Atom使用]]></title>
+      <url>/2018/01/28/Atom%E4%BD%BF%E7%94%A8/</url>
+      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>关于Atom使用的一些记录。</p>
+<h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><p><code>Ctrl+，</code>打开setting.</p>
+<p><code>Ctrl+Shift+B</code>，使用Script插件运行程序</p>
+<h4 id="字体大小调整"><a href="#字体大小调整" class="headerlink" title="字体大小调整"></a>字体大小调整</h4><p>一般Editor的字体的调整，直接去Setting-&gt;Editor改就行了。至于插件的字体调整，如果插件本身无法设置，可以去stylesheet设置。可以Edit-&gt;Stylesheet或者Setting-&gt;Theme-&gt;stylesheet。</p>
+<p>比如设置Script运行程序后的输出字体大小为16px，只需要在文件最后加上：</p>
+<blockquote>
+<p>.script-view .line {<br>  font-size: 16px;<br>}</p>
+</blockquote>
+<p>参考<a href="https://discuss.atom.io/t/change-font-size-in-console-when-using-script-package/19656/3" target="_blank" rel="external">这里</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Tips </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Tips </tag>
+            
+            <tag> Atom </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Julia in Ubuntu]]></title>
+      <url>/2018/01/28/Julia-in-Ubuntu/</url>
+      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>补上Jupyter三大将最后一个——Julia，目前每台有时间学了，先把环境搭建好。首先很简单的步骤安装好Julia，之后设置Jupyter上的kernel。最后是一些Atom里面的配置。</p>
+<h4 id="Julia-installation"><a href="#Julia-installation" class="headerlink" title="Julia installation"></a>Julia installation</h4><p>Julia的安装及其简单，只需要到<a href="https://julialang.org/downloads/platform.html" target="_blank" rel="external">官网</a>下载安装文件，之后一个软链接就可以了。之后在终端直接输入<code>julia</code>即可进入交互式界面！</p>
+<h4 id="Julia-kernel"><a href="#Julia-kernel" class="headerlink" title="Julia kernel"></a>Julia kernel</h4><p>同样的，让Jupyter notebook支持Julia也是及其简单。在交互式界面直接输入<code>Pkg.add(&quot;IJulia&quot;)</code>同样是一行的事。之后在终端输入<code>jupyter notebook</code>，浏览器上就可以看到新添加的Julia的kernel了。</p>
+<h4 id="Julia-in-Atom"><a href="#Julia-in-Atom" class="headerlink" title="Julia in Atom"></a>Julia in Atom</h4><p>发现Atom一个叫<a href="https://atom.io/packages/hydrogen#plugins-for-hydrogen" target="_blank" rel="external">hydrogen</a>的插件，很好地支持Jupyter的一套kernel，正在测试中。其提供了集成各种kernel的<a href="https://nteract.gitbooks.io/hydrogen/docs/Installation.html" target="_blank" rel="external">文档</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Julia </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Julia </tag>
+            
+            <tag> Jupyter </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Dangling pointer and Lifetime]]></title>
       <url>/2018/01/24/Dangling-pointer-and-Lifetime/</url>
       <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>在CW刷C的题，一道7ku的题目写了快100行…（虽然完成率只有1%）,然后还出错了…折腾下改好了。回头发现原来是写了Dangling pointer.</p>
@@ -295,9 +352,9 @@ trans m1:
         
         <tags>
             
-            <tag> Haskell </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Haskell </tag>
             
         </tags>
         
@@ -577,9 +634,9 @@ ferent modes</code>。</p>
         
         <tags>
             
-            <tag> R </tag>
-            
             <tag> Tips </tag>
+            
+            <tag> R </tag>
             
         </tags>
         
@@ -889,9 +946,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Cpp </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Cpp </tag>
             
             <tag> Octave </tag>
             
@@ -953,9 +1010,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> OpenCV </tag>
-            
             <tag> Python </tag>
+            
+            <tag> OpenCV </tag>
             
         </tags>
         
@@ -1107,9 +1164,9 @@ Please join Telegram group https://t.me/sbfans if you have any issues. / 如有�
         
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -2164,9 +2221,9 @@ error: called from
             
             <tag> Octave </tag>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -3608,9 +3665,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
@@ -3644,9 +3701,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
@@ -3695,9 +3752,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
@@ -3853,9 +3910,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -3884,9 +3941,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -4087,9 +4144,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
@@ -4129,9 +4186,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             

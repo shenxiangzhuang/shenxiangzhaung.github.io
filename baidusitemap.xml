@@ -4,6 +4,50 @@
 
     
   <url>
+    <loc>http://datahonor.com/2018/01/28/Atom%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2018-01-28T11:41:59.396Z</lastmod>
+    <data>
+        <display>
+        <title>Atom使用</title>
+        <pubTime>2018-01-28T10:41:27.000Z</pubTime>
+        
+        <tag>Tips</tag>
+         
+        <tag>Atom</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2018/01/28/Julia-in-Ubuntu/</loc>
+    <lastmod>2018-01-28T10:40:08.793Z</lastmod>
+    <data>
+        <display>
+        <title>Julia in Ubuntu</title>
+        <pubTime>2018-01-28T10:27:24.000Z</pubTime>
+        
+        <tag>Julia</tag>
+         
+        <tag>Jupyter</tag>
+         
+         
+           
+             
+              <breadCrumb title="Julia" url="http://datahonor.com/categories/Julia/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/03/02/Ubuntu%E5%91%BD%E4%BB%A4%E7%A7%AF%E7%B4%AF/</loc>
     <lastmod>2018-01-27T03:14:08.029Z</lastmod>
     <data>
@@ -11,9 +55,9 @@
         <title>Ubuntu命令积累</title>
         <pubTime>2017-03-02T09:03:54.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -73,9 +117,9 @@
         <title>Haskell in Ubuntu</title>
         <pubTime>2017-11-12T09:25:02.000Z</pubTime>
         
-        <tag>Haskell</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>Haskell</tag>
          
          
            
@@ -199,9 +243,9 @@
         <title>Ubuntu搭建SS</title>
         <pubTime>2017-03-02T08:57:56.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -389,9 +433,9 @@
         <title>Get help in R</title>
         <pubTime>2017-10-10T03:38:30.000Z</pubTime>
         
-        <tag>R</tag>
-         
         <tag>Tips</tag>
+         
+        <tag>R</tag>
          
          
            
@@ -411,9 +455,9 @@
         <title>百年回首--关于心形曲线的几种画法</title>
         <pubTime>2017-08-16T05:15:20.000Z</pubTime>
         
-        <tag>Cpp</tag>
-         
         <tag>Python</tag>
+         
+        <tag>Cpp</tag>
          
         <tag>Octave</tag>
          
@@ -459,9 +503,9 @@
         <title>SS使用-全局代理</title>
         <pubTime>2017-07-31T16:07:32.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -673,9 +717,9 @@
         <title>添加OpenCV3对Python3的支持&QT中使用OpenCV</title>
         <pubTime>2017-08-15T09:18:58.000Z</pubTime>
         
-        <tag>OpenCV</tag>
-         
         <tag>Python</tag>
+         
+        <tag>OpenCV</tag>
          
          
            
@@ -762,9 +806,9 @@
         
         <tag>Octave</tag>
          
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -1963,9 +2007,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
@@ -2035,9 +2079,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
@@ -2065,9 +2109,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
@@ -2117,9 +2161,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
@@ -2197,9 +2241,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
