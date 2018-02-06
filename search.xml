@@ -699,6 +699,7 @@ ferent modes</code>。</p>
       <url>/2017/09/20/SAS%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
       <content type="html"><![CDATA[<p>这学期开了时间序列的课， 用的SAS（当然是盗版orz…）， 打算系统地学一下。在这里记录一下学习的过程。</p>
 <h5 id="2017-9-20"><a href="#2017-9-20" class="headerlink" title="2017/9/20"></a>2017/9/20</h5><p>其实这学期也开了专门的统计软件课，不过讲的是SPSS那货，大一时候学了下，实在是无聊得很。。。所以也就更没有必要为它做记录了。今天看了下SAS的语法还是比较强大的。主要参考了SAS官方放在<a href="https://www.youtube.com/watch?v=Uj1Pi7BfiL4&amp;index=11&amp;list=PLVBcK_IpFVi_nlx6za9Yht0eyb46hLLrP" target="_blank" rel="external">YouTube的视频</a>. 另外，发现一本很好的书，干净整洁，<em>The Little SAS Book</em>,接下来主要就是撸这本书了。</p>
+<h5 id="2018-2-6"><a href="#2018-2-6" class="headerlink" title="2018/2/6"></a>2018/2/6</h5><p>嗯…当真受不了SAS的语法，上面的书撸了几十页就看不下去了。不过就目前看，用SAS做时间序列的东西还是挺方便的。先不管了，用到了再去学吧:-)</p>
 ]]></content>
       
         <categories>
@@ -972,9 +973,9 @@ query: 3: Negative
             
             <tag> Python </tag>
             
-            <tag> Octave </tag>
-            
             <tag> R </tag>
+            
+            <tag> Octave </tag>
             
             <tag> Matlab </tag>
             
@@ -3687,11 +3688,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
+            <tag> Data Analysis </tag>
+            
             <tag> Algorithm </tag>
             
             <tag> ML </tag>
-            
-            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3723,11 +3724,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
+            <tag> Data Analysis </tag>
+            
             <tag> Algorithm </tag>
             
             <tag> ML </tag>
-            
-            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3774,11 +3775,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
+            <tag> Data Analysis </tag>
+            
             <tag> Algorithm </tag>
             
             <tag> ML </tag>
-            
-            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -4166,11 +4167,11 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
+            <tag> Data Analysis </tag>
+            
             <tag> Algorithm </tag>
             
             <tag> ML </tag>
-            
-            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -4208,11 +4209,11 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
+            <tag> Data Analysis </tag>
+            
             <tag> Algorithm </tag>
             
             <tag> ML </tag>
-            
-            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
