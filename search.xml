@@ -3,6 +3,28 @@
   
     
     <entry>
+      <title><![CDATA[Git命令积累]]></title>
+      <url>/2018/02/06/Git%E5%91%BD%E4%BB%A4%E7%A7%AF%E7%B4%AF/</url>
+      <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>记录一些常用的Git命令。</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><h5 id="Adding-an-existing-project-to-GitHub"><a href="#Adding-an-existing-project-to-GitHub" class="headerlink" title="Adding an existing project to GitHub"></a>Adding an existing project to GitHub</h5><p>将本地文件同步到Github，参考<a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/" target="_blank" rel="external">这里</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Git </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Atom使用]]></title>
       <url>/2018/01/28/Atom%E4%BD%BF%E7%94%A8/</url>
       <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>关于Atom使用的一些记录。</p>
@@ -352,9 +374,9 @@ trans m1:
         
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Haskell </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -946,9 +968,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Cpp </tag>
+            
+            <tag> Python </tag>
             
             <tag> Octave </tag>
             
@@ -1010,9 +1032,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> OpenCV </tag>
+            
+            <tag> Python </tag>
             
         </tags>
         
@@ -1164,9 +1186,9 @@ Please join Telegram group https://t.me/sbfans if you have any issues. / 如有�
         
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
@@ -2221,9 +2243,9 @@ error: called from
             
             <tag> Octave </tag>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
@@ -3665,11 +3687,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
             
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3701,11 +3723,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
             
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3752,11 +3774,11 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
             
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3910,9 +3932,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
@@ -3941,9 +3963,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
@@ -4144,11 +4166,11 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
             
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -4186,11 +4208,11 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
             
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
