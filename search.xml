@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title><![CDATA[Haskell&The Caesar Cipher]]></title>
+      <url>/2018/02/07/Haskell-The-Caesar-Cipher/</url>
+      <content type="html"><![CDATA[<h4 id="Overvier"><a href="#Overvier" class="headerlink" title="Overvier"></a>Overvier</h4><p>例子来自<em>Programming in Haskell</em>(很好的一本书，简要明了)， 主要是将list comprehension。仅仅短短几十行代码…充分体现了FP的concise…</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">module</span> FirstScript <span class="keyword">where</span></div><div class="line">  <span class="keyword">import</span> Test.QuickCheck</div><div class="line">  <span class="keyword">import</span> Test.HUnit</div><div class="line">  <span class="keyword">import</span> Data.Char</div><div class="line"></div><div class="line">  let2int :: <span class="type">Char</span> -&gt; <span class="type">Int</span></div><div class="line">  let2int c  = ord c - ord 'a'</div><div class="line">  int2let :: <span class="type">Int</span> -&gt; <span class="type">Char</span></div><div class="line">  int2let n = chr(ord 'a' + n)</div><div class="line"></div><div class="line">  shift :: <span class="type">Int</span> -&gt; <span class="type">Char</span> -&gt; <span class="type">Char</span></div><div class="line">  shift n c | isLower c = int2let((let2int c + n) `mod` <span class="number">26</span>)</div><div class="line">			| otherwise = c</div><div class="line"></div><div class="line">  encode :: <span class="type">Int</span> -&gt; <span class="type">String</span> -&gt; <span class="type">String</span></div><div class="line">  encode n xs = [shift n x | x &lt;- xs]</div><div class="line"></div><div class="line">  percent :: <span class="type">Integer</span> -&gt; <span class="type">Integer</span> -&gt; <span class="type">Float</span></div><div class="line">  percent n m = (fromInteger n / fromInteger m)*<span class="number">100</span></div><div class="line"></div><div class="line">  count :: <span class="type">Char</span> -&gt; <span class="type">String</span> -&gt; <span class="type">Integer</span></div><div class="line">  count c string = sum[ <span class="number">1</span> | x &lt;- string, c == x ]</div><div class="line"></div><div class="line">  lowers :: <span class="type">String</span> -&gt; <span class="type">Integer</span></div><div class="line">  lowers xs = sum[ <span class="number">1</span> | x &lt;- xs, isLower x ]</div><div class="line"></div><div class="line">  freqs :: <span class="type">String</span> -&gt; [<span class="type">Float</span>]</div><div class="line">  freqs xs = [percent (count x xs) n | x &lt;- ['a'..'z']]</div><div class="line">		  <span class="keyword">where</span> n = lowers xs</div><div class="line">  table :: [<span class="type">Float</span> ]</div><div class="line">  table = [<span class="number">8.2</span>, <span class="number">1.5</span>, <span class="number">2.8</span>, <span class="number">4.3</span>, <span class="number">12.7</span>, <span class="number">2.2</span>, <span class="number">2.0</span>, <span class="number">6.1</span>, <span class="number">7.0</span>, <span class="number">0.2</span>, <span class="number">0.8</span>, <span class="number">4.0</span>, <span class="number">2.4</span>,</div><div class="line">		<span class="number">6.7</span>, <span class="number">7.5</span>, <span class="number">1.9</span>, <span class="number">0.1</span>, <span class="number">6.0</span>, <span class="number">6.3</span>, <span class="number">9.1</span>, <span class="number">2.8</span>, <span class="number">1.0</span>, <span class="number">2.4</span>, <span class="number">0.2</span>, <span class="number">2.0</span>, <span class="number">0.1</span>]</div><div class="line"></div><div class="line">  chisqr :: [<span class="type">Float</span>] -&gt; [<span class="type">Float</span>] -&gt; <span class="type">Float</span></div><div class="line">  chisqr os es = sum[ (o-e)^<span class="number">2</span> | (o, e) &lt;- zip os es]</div><div class="line"></div><div class="line">  rotate :: <span class="type">Int</span> -&gt; [a] -&gt; [a]</div><div class="line">  rotate n xs = drop n xs ++ take n xs</div><div class="line"></div><div class="line">  positions :: <span class="type">Eq</span> a =&gt; a -&gt; [a] -&gt; [<span class="type">Int</span>]</div><div class="line">  positions x xs = [ i | (x', i) &lt;- zip xs [<span class="number">0.</span>.n<span class="number">-1</span>], x' == x] <span class="keyword">where</span></div><div class="line">			n = length xs</div><div class="line"></div><div class="line">  crack :: <span class="type">String</span> -&gt; <span class="type">String</span></div><div class="line">  crack xs = encode (-factor) xs <span class="keyword">where</span></div><div class="line">			factor = head (positions (minimum chitab) chitab)</div><div class="line">			chitab = [chisqr (rotate n table') table | n &lt;- [<span class="number">0.</span><span class="number">.25</span>]]</div><div class="line">			table' = freqs xs</div><div class="line"></div><div class="line"><span class="comment">-- test data</span></div><div class="line"><span class="comment">-- crack (encode 3 "Haskell is fun and I love it!")</span></div><div class="line"><span class="comment">-- crack (encode 3 "Haskell is fun!")</span></div><div class="line"><span class="comment">-- crack (encode 3 "haskell is fun!")</span></div><div class="line"></div></pre></td></tr></table></figure>
+<blockquote>
+<p>ps:一开始看到用卡方值还一阵惊讶，我可能不是一个合格的玩统计的人…其实从前面开始讲词频的时候就该想到和分布有关，然后由于一般性，首先应该想到正态分布，进而就是”集成正态分布“的卡方分布了。</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> Haskell </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Haskell </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Git命令积累]]></title>
       <url>/2018/02/06/Git%E5%91%BD%E4%BB%A4%E7%A7%AF%E7%B4%AF/</url>
       <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>记录一些常用的Git命令。</p>
@@ -973,9 +998,9 @@ query: 3: Negative
             
             <tag> Python </tag>
             
-            <tag> R </tag>
-            
             <tag> Octave </tag>
+            
+            <tag> R </tag>
             
             <tag> Matlab </tag>
             
@@ -3688,9 +3713,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
@@ -3724,9 +3749,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
@@ -3775,9 +3800,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
@@ -4167,9 +4192,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
@@ -4209,9 +4234,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
