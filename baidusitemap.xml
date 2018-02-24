@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://datahonor.com/2018/02/24/CW-Regualr-expression/</loc>
+    <lastmod>2018-02-24T09:10:22.657Z</lastmod>
+    <data>
+        <display>
+        <title>CW&Regular expression</title>
+        <pubTime>2018-02-24T08:42:24.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>CodeWas</tag>
+         
+        <tag>Regular expression</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2018/02/07/Haskell-The-Caesar-Cipher/</loc>
     <lastmod>2018-02-07T13:13:35.635Z</lastmod>
     <data>
@@ -115,9 +139,9 @@
         <title>Ubuntu命令积累</title>
         <pubTime>2017-03-02T09:03:54.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -303,9 +327,9 @@
         <title>Ubuntu搭建SS</title>
         <pubTime>2017-03-02T08:57:56.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -515,13 +539,13 @@
         <title>百年回首--关于心形曲线的几种画法</title>
         <pubTime>2017-08-16T05:15:20.000Z</pubTime>
         
-        <tag>Cpp</tag>
-         
         <tag>Python</tag>
          
-        <tag>Octave</tag>
+        <tag>Cpp</tag>
          
         <tag>R</tag>
+         
+        <tag>Octave</tag>
          
         <tag>Matlab</tag>
          
@@ -543,9 +567,9 @@
         <title>SS使用-全局代理</title>
         <pubTime>2017-07-31T16:07:32.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -757,9 +781,9 @@
         <title>添加OpenCV3对Python3的支持&QT中使用OpenCV</title>
         <pubTime>2017-08-15T09:18:58.000Z</pubTime>
         
-        <tag>OpenCV</tag>
-         
         <tag>Python</tag>
+         
+        <tag>OpenCV</tag>
          
          
            
@@ -844,11 +868,11 @@
         <title>Octave in Ubuntu</title>
         <pubTime>2017-05-06T15:10:53.000Z</pubTime>
         
+        <tag>Linux</tag>
+         
         <tag>Octave</tag>
          
         <tag>Ubuntu</tag>
-         
-        <tag>Linux</tag>
          
          
            
@@ -2047,15 +2071,15 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
          
-        <tag>ML</tag>
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
         <tag>统计学习方法</tag>
+         
+        <tag>ML</tag>
          
          
            
@@ -2119,15 +2143,15 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
          
-        <tag>ML</tag>
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
         <tag>统计学习方法</tag>
+         
+        <tag>ML</tag>
          
          
            
@@ -2149,15 +2173,15 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
          
-        <tag>ML</tag>
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
         <tag>统计学习方法</tag>
+         
+        <tag>ML</tag>
          
          
            
@@ -2201,15 +2225,15 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
          
-        <tag>ML</tag>
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
         <tag>统计学习方法</tag>
+         
+        <tag>ML</tag>
          
          
            
@@ -2257,9 +2281,9 @@
         
         <tag>Python</tag>
          
-        <tag>ML</tag>
-         
         <tag>统计学习方法</tag>
+         
+        <tag>ML</tag>
          
          
            
@@ -2281,15 +2305,15 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
          
-        <tag>ML</tag>
+        <tag>Algorithm</tag>
          
         <tag>Clustering</tag>
          
         <tag>统计学习方法</tag>
+         
+        <tag>ML</tag>
          
          
            
