@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://datahonor.com/about/index.html</loc>
+    
+    <lastmod>2018-02-26T04:03:33.441Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://datahonor.com/2018/02/24/CW-Regualr-expression/</loc>
     
     <lastmod>2018-02-24T09:10:22.657Z</lastmod>
@@ -278,13 +285,6 @@
     <loc>http://datahonor.com/2017/08/10/%E5%85%B3%E4%BA%8E%E6%95%99%E8%82%B2%E7%BD%91%E9%82%AE%E7%AE%B1/</loc>
     
     <lastmod>2017-08-10T15:13:01.941Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/about/index.html</loc>
-    
-    <lastmod>2017-08-02T10:07:14.223Z</lastmod>
     
   </url>
   
