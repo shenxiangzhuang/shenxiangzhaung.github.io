@@ -3,6 +3,43 @@
   
     
     <entry>
+      <title><![CDATA[寒假小记]]></title>
+      <url>/2018/03/03/%E5%AF%92%E5%81%87%E5%B0%8F%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p>四十天的寒假马上就要过去了，原计划是要读四本书：《堂吉诃德》，<em>Data Structure Using C</em>, <em>Linear Algebra Done Right</em>和<em>Programming In Haskell</em>。</p>
+<p><em>Data Structure Using C</em></p>
+<blockquote>
+<p>各种数据结构都讲的比较详细，后面的搜索和排序算法也写的挺好的。不过书上的代码有时候会有Bug…前面几章的习题基本过了一遍，后面没太有时间了，就把书上的代码都跑了一遍。笔记用Zim做的，放在<a href="https://github.com/shenxiangzhuang/DataStructureUsingC" target="_blank" rel="external">Github</a></p>
+</blockquote>
+<p><em>Linear Algebra Done Right</em></p>
+<blockquote>
+<p>一直听说这书比较好，所以拿来看下，大约花了二十多天才看完。书从Vector Space（而不是从行列式…）开始构建整个Linear Algebra的框架，全新的视角，收益良多。大部分证明可以看懂，不过自己写还是不太行…</p>
+</blockquote>
+<p><em>Programming In Haskell</em></p>
+<blockquote>
+<p>这本放到最后看的，没有时间了，所以返校前只看到了Chap8。本来想赶着看完，不过感觉看得太急没什么好处…就暂时搁置了。之后估计也没太多时间学Haskell了，差不多要等考研之后了。</p>
+</blockquote>
+<p>《堂吉诃德》</p>
+<blockquote>
+<p>虽然是讽刺骑士的小说，但是书上有很多值得深思的故事（尤其是那些和主人公无太大关系，很明显插入的故事）。另外，在这本书找到了很多答案——生活的答案。骑士！骑士！</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 随笔 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[CW&Regular expression]]></title>
       <url>/2018/02/24/CW-Regualr-expression/</url>
       <content type="html"><![CDATA[<h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>前几天终于撸完了那么C的数据结构…所以来刷下CodeWars，感觉一个3kyu的题目挺有意思，<a href="https://www.codewars.com/kata/calculator/train/python" target="_blank" rel="external">传送门</a>。就是评估一个四则运算的表达式，给出结果。</p>
@@ -1023,13 +1060,13 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Cpp </tag>
             
-            <tag> R </tag>
+            <tag> Python </tag>
             
             <tag> Octave </tag>
+            
+            <tag> R </tag>
             
             <tag> Matlab </tag>
             
@@ -1087,9 +1124,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> OpenCV </tag>
+            
+            <tag> Python </tag>
             
         </tags>
         
@@ -2296,9 +2333,9 @@ error: called from
         
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Octave </tag>
+            
+            <tag> Linux </tag>
             
             <tag> Ubuntu </tag>
             
@@ -3742,15 +3779,15 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
+            <tag> Algorithm </tag>
+            
             <tag> Data Analysis </tag>
             
-            <tag> Algorithm </tag>
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
-            
-            <tag> ML </tag>
             
         </tags>
         
@@ -3778,15 +3815,15 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
+            <tag> Algorithm </tag>
+            
             <tag> Data Analysis </tag>
             
-            <tag> Algorithm </tag>
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
-            
-            <tag> ML </tag>
             
         </tags>
         
@@ -3829,15 +3866,15 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
+            <tag> Algorithm </tag>
+            
             <tag> Data Analysis </tag>
             
-            <tag> Algorithm </tag>
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
-            
-            <tag> ML </tag>
             
         </tags>
         
@@ -3878,9 +3915,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> 统计学习方法 </tag>
-            
             <tag> ML </tag>
+            
+            <tag> 统计学习方法 </tag>
             
         </tags>
         
@@ -4221,15 +4258,15 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
+            <tag> Algorithm </tag>
+            
             <tag> Data Analysis </tag>
             
-            <tag> Algorithm </tag>
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
-            
-            <tag> ML </tag>
             
         </tags>
         
@@ -4263,15 +4300,15 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
+            <tag> Algorithm </tag>
+            
             <tag> Data Analysis </tag>
             
-            <tag> Algorithm </tag>
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
             <tag> 统计学习方法 </tag>
-            
-            <tag> ML </tag>
             
         </tags>
         
