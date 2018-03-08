@@ -3,6 +3,42 @@
   
     
     <entry>
+      <title><![CDATA[Vim Tips]]></title>
+      <url>/2018/03/08/Vim-Tips/</url>
+      <content type="html"><![CDATA[<h3 id="Install-amp-Update"><a href="#Install-amp-Update" class="headerlink" title="Install&amp;Update"></a>Install&amp;Update</h3><p><a href="https://github.com/vim/vim" target="_blank" rel="external">Install</a><br><a href="https://www.linuxidc.com/Linux/2016-11/136816.htm" target="_blank" rel="external">Update</a></p>
+<h3 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h3><p><a href="https://github.com/VundleVim/Vundle.vim#about" target="_blank" rel="external">Vundle(plugin manager)</a></p>
+<p><a href="https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64" target="_blank" rel="external">YouCompleteMe</a></p>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><h4 id="Keep-your-cursor-centered-vertically-on-the-screen"><a href="#Keep-your-cursor-centered-vertically-on-the-screen" class="headerlink" title="Keep your cursor centered vertically on the screen"></a><a href="http://vim.wikia.com/wiki/Keep_your_cursor_centered_vertically_on_the_screen" target="_blank" rel="external">Keep your cursor centered vertically on the screen</a></h4><blockquote>
+<p>zz</p>
+</blockquote>
+<h4 id="comment-uncomment-lines-in-Vim"><a href="#comment-uncomment-lines-in-Vim" class="headerlink" title="comment/uncomment lines in Vim"></a><a href="https://stackoverflow.com/questions/1676632/whats-a-quick-way-to-comment-uncomment-lines-in-vim" target="_blank" rel="external">comment/uncomment lines in Vim</a></h4><p>感觉第二个答案好些，如下<br><strong>Comment</strong></p>
+<blockquote>
+<p>(在要注释的第一行前面)Ctrl+V（进入VISUAL BLOCK模式）<br>方向键一直下拉到最后一行<br>Shift+i(进入INSERT模式)，然后输入#（Python的注释）<br>Esc</p>
+</blockquote>
+<p><strong>Uncomment</strong></p>
+<blockquote>
+<p>Put your cursor on the first # character, press CtrlV (or CtrlQ for gVim), and go down until the last commented line and press x, that will delete all the # characters vertically.</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> Tips </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Tips </tag>
+            
+            <tag> Vim </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[寒假小记]]></title>
       <url>/2018/03/03/%E5%AF%92%E5%81%87%E5%B0%8F%E8%AE%B0/</url>
       <content type="html"><![CDATA[<p>四十天的寒假马上就要过去了，原计划是要读四本书：《堂吉诃德》，<em>Data Structure Using C</em>, <em>Linear Algebra Done Right</em>和<em>Programming In Haskell</em>。</p>
@@ -1060,13 +1096,13 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Cpp </tag>
-            
             <tag> Python </tag>
             
-            <tag> Octave </tag>
+            <tag> Cpp </tag>
             
             <tag> R </tag>
+            
+            <tag> Octave </tag>
             
             <tag> Matlab </tag>
             
@@ -1124,9 +1160,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> OpenCV </tag>
-            
             <tag> Python </tag>
+            
+            <tag> OpenCV </tag>
             
         </tags>
         
@@ -1278,9 +1314,9 @@ Please join Telegram group https://t.me/sbfans if you have any issues. / 如有�
         
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
@@ -2335,9 +2371,9 @@ error: called from
             
             <tag> Octave </tag>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
@@ -4024,9 +4060,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
@@ -4055,9 +4091,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
