@@ -3,6 +3,32 @@
   
     
     <entry>
+      <title><![CDATA[IPython Tips]]></title>
+      <url>/2018/03/08/IPython-Tips/</url>
+      <content type="html"><![CDATA[<h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><p>一直是Anaconda一起用的，直接就安装好了。当然不用Conda,也可以用Pip装上IPython,这里记录下常用的命令以备忘。</p>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><h4 id="“cmd”"><a href="#“cmd”" class="headerlink" title="“cmd”"></a>“cmd”</h4><p>在IPython中，一些常见的Linux命令都是可以用的，如ls, cd这些。</p>
+<h4 id="load-xxx-py"><a href="#load-xxx-py" class="headerlink" title="%load xxx.py"></a>%load xxx.py</h4><p>载入文件中的变量，函数，类等。</p>
+<h4 id="edit-xxx-py"><a href="#edit-xxx-py" class="headerlink" title="edit xxx.py"></a>edit xxx.py</h4><p>指定用于编辑的工具后（我这里用的Vim），可以直接编辑文件。之后保存退出，代码会自动执行。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Tips </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Tips </tag>
+            
+            <tag> IPython </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Vim Tips]]></title>
       <url>/2018/03/08/Vim-Tips/</url>
       <content type="html"><![CDATA[<h3 id="Install-amp-Update"><a href="#Install-amp-Update" class="headerlink" title="Install&amp;Update"></a>Install&amp;Update</h3><p><a href="https://github.com/vim/vim" target="_blank" rel="external">Install</a><br><a href="https://www.linuxidc.com/Linux/2016-11/136816.htm" target="_blank" rel="external">Update</a></p>
@@ -1100,9 +1126,9 @@ query: 3: Negative
             
             <tag> Cpp </tag>
             
-            <tag> R </tag>
-            
             <tag> Octave </tag>
+            
+            <tag> R </tag>
             
             <tag> Matlab </tag>
             
