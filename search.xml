@@ -10,6 +10,7 @@
 <h4 id="load-xxx-py"><a href="#load-xxx-py" class="headerlink" title="%load xxx.py"></a>%load xxx.py</h4><p>载入文件中的变量，函数，类等。</p>
 <h4 id="edit-xxx-py"><a href="#edit-xxx-py" class="headerlink" title="edit xxx.py"></a>edit xxx.py</h4><p>指定用于编辑的工具后（我这里用的Vim），可以直接编辑文件。之后保存退出，代码会自动执行。</p>
 <h4 id="whos-del-reset"><a href="#whos-del-reset" class="headerlink" title="whos del %reset"></a>whos <a href="http://sofasofa.io/forum_main_post.php?postid=1000225" target="_blank" rel="external">del %reset</a></h4><p>whos，查看当前环境下的所有全局变量。<br>del x, 删除变量x<br>%reset [-f], 删去所有变量</p>
+<h4 id="function-name-amp-function-name"><a href="#function-name-amp-function-name" class="headerlink" title="function_name? &amp; function_name??"></a><a href="https://stackoverflow.com/questions/1562759/can-python-print-a-function-definition" target="_blank" rel="external">function_name? &amp; function_name??</a></h4><p>Use function_name? to get help, and function_name?? will print out the source.</p>
 ]]></content>
       
         <categories>
@@ -47,7 +48,7 @@
 <p>Put your cursor on the first # character, press CtrlV (or CtrlQ for gVim), and go down until the last commented line and press x, that will delete all the # characters vertically.</p>
 </blockquote>
 <h4 id="Delete-all"><a href="#Delete-all" class="headerlink" title="Delete all"></a><a href="https://codeyarns.com/2011/04/18/how-to-delete-all-lines-of-file-in-vim/" target="_blank" rel="external">Delete all</a></h4><blockquote>
-<p>dG</p>
+<p>dG[光标放在第一行]</p>
 </blockquote>
 <h4 id="Cut-amp-Copy-multi-lines"><a href="#Cut-amp-Copy-multi-lines" class="headerlink" title="Cut&amp;Copy multi lines"></a><a href="https://stackoverflow.com/questions/8980410/cut-and-paste-multiple-lines-in-vim" target="_blank" rel="external">Cut&amp;Copy multi lines</a></h4><blockquote>
 <p>V<br>Select all the lines<br>d(or y to copy)<br>p(on somewhere to insert)</p>
