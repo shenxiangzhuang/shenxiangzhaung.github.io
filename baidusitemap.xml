@@ -4,6 +4,36 @@
 
     
   <url>
+    <loc>http://datahonor.com/2018/03/21/Jupyter-Lab-Multi-Kernels/</loc>
+    <lastmod>2018-03-21T03:25:18.154Z</lastmod>
+    <data>
+        <display>
+        <title>Jupyter Lab&Multi-Kernels</title>
+        <pubTime>2018-03-21T03:09:22.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Tips</tag>
+         
+        <tag>Octave</tag>
+         
+        <tag>R</tag>
+         
+        <tag>Haskell</tag>
+         
+        <tag>Julia</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2018/03/08/Vim-Tips/</loc>
     <lastmod>2018-03-10T16:01:24.491Z</lastmod>
     <data>
@@ -204,9 +234,9 @@
         <title>Ubuntu命令积累</title>
         <pubTime>2017-03-02T09:03:54.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -392,9 +422,9 @@
         <title>Ubuntu搭建SS</title>
         <pubTime>2017-03-02T08:57:56.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -604,9 +634,9 @@
         <title>百年回首--关于心形曲线的几种画法</title>
         <pubTime>2017-08-16T05:15:20.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Cpp</tag>
+         
+        <tag>Python</tag>
          
         <tag>Octave</tag>
          
@@ -632,9 +662,9 @@
         <title>SS使用-全局代理</title>
         <pubTime>2017-07-31T16:07:32.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -846,9 +876,9 @@
         <title>添加OpenCV3对Python3的支持&QT中使用OpenCV</title>
         <pubTime>2017-08-15T09:18:58.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>OpenCV</tag>
+         
+        <tag>Python</tag>
          
          
            
@@ -934,9 +964,9 @@
         
         <tag>Octave</tag>
          
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            

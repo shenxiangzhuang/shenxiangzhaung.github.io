@@ -3,6 +3,44 @@
   
     
     <entry>
+      <title><![CDATA[Jupyter Lab&Multi-Kernels]]></title>
+      <url>/2018/03/21/Jupyter-Lab-Multi-Kernels/</url>
+      <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>前些时候看到Jupyter Lab，用了下，感觉特别好用。不仅包括原来的Jupyter Notebook，而且还有各种环境的Console。一开始只是安装了Jupyter最专注的三个Kernel:Julia, Python和R。最近想撸下Haskell做数据分析的东西，所以就把Haskell的Kernel装上了,顺便把Octave一块装上了。</p>
+<h3 id="Haskell-Kernel"><a href="#Haskell-Kernel" class="headerlink" title="Haskell Kernel"></a>Haskell Kernel</h3><p>直接看到官方的<a href="https://github.com/gibiansky/IHaskell" target="_blank" rel="external">Doc</a>,一开始执行<code>curl -sSL https://get.haskellstack.org/ | sh</code>的时候会提示用stack更新，但是我这里失败了，用了错误提示的另一种方法。后面安装基本没什么问题，虽然有一些Warning，但是没有影响。</p>
+<p>之后<a href="http://nbviewer.jupyter.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb" target="_blank" rel="external">测试</a>了下,很好用。帮助和提示依旧那么友好，另外还可以直接连到hoogle.</p>
+<p>另外，它的<a href="https://github.com/gibiansky/IHaskell/wiki" target="_blank" rel="external">wiki</a>提供了很多很Nice的Demo，以后有时间挑几个跑下。</p>
+<h3 id="Octave-Kernel"><a href="#Octave-Kernel" class="headerlink" title="Octave Kernel"></a>Octave Kernel</h3><p>也是按照<a href="https://github.com/calysto/octave_kernel" target="_blank" rel="external">Doc</a>来的，由于之前装过Octave了，所以直接<code>pip install octave_kernel</code>就可以了。往后用计算器就比较方便了:P</p>
+<p>最后，<code>jupyter lab</code>启动：</p>
+<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201803/Screenshot%20from%202018-03-21%2011-22-42.png" alt=""></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels" target="_blank" rel="external">Jupyter kernels</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Tips </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Tips </tag>
+            
+            <tag> Octave </tag>
+            
+            <tag> R </tag>
+            
+            <tag> Haskell </tag>
+            
+            <tag> Julia </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[IPython Tips]]></title>
       <url>/2018/03/08/IPython-Tips/</url>
       <content type="html"><![CDATA[<h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><p>一直是Anaconda一起用的，直接就安装好了。当然不用Conda,也可以用Pip装上IPython,这里记录下常用的命令以备忘。</p>
@@ -1130,9 +1168,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Cpp </tag>
+            
+            <tag> Python </tag>
             
             <tag> Octave </tag>
             
@@ -1194,9 +1232,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> OpenCV </tag>
+            
+            <tag> Python </tag>
             
         </tags>
         
@@ -1348,9 +1386,9 @@ Please join Telegram group https://t.me/sbfans if you have any issues. / 如有�
         
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -2405,9 +2443,9 @@ error: called from
             
             <tag> Octave </tag>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -4094,9 +4132,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -4125,9 +4163,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
