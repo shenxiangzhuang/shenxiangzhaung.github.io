@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://datahonor.com/2018/03/22/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</loc>
+    <lastmod>2018-03-26T05:22:48.777Z</lastmod>
+    <data>
+        <display>
+        <title>Python与数据分析</title>
+        <pubTime>2018-03-22T14:39:32.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2018/03/21/Jupyter-Lab-Multi-Kernels/</loc>
     <lastmod>2018-03-21T03:25:18.154Z</lastmod>
     <data>
@@ -634,9 +654,9 @@
         <title>百年回首--关于心形曲线的几种画法</title>
         <pubTime>2017-08-16T05:15:20.000Z</pubTime>
         
-        <tag>Cpp</tag>
-         
         <tag>Python</tag>
+         
+        <tag>Cpp</tag>
          
         <tag>Octave</tag>
          
@@ -876,9 +896,9 @@
         <title>添加OpenCV3对Python3的支持&QT中使用OpenCV</title>
         <pubTime>2017-08-15T09:18:58.000Z</pubTime>
         
-        <tag>OpenCV</tag>
-         
         <tag>Python</tag>
+         
+        <tag>OpenCV</tag>
          
          
            
