@@ -3635,9 +3635,16 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
     </entry>
     
     <entry>
-      <title><![CDATA[Ubuntu16.04LTS下安装Hadoop2.7.3]]></title>
+      <title><![CDATA[Ubuntu16.04LTS下安装Hadoop&Spark]]></title>
       <url>/2017/03/08/Ubuntu16-04LTS%E4%B8%8B%E5%AE%89%E8%A3%85Hadoop2-7-3/</url>
-      <content type="html"><![CDATA[<p>撸码间隙，突然看到Hadoop，久闻其名，但是还没研究过，于是动手装了下。<br>主要就是参考<a href="https://www.digitalocean.com/community/tutorials/how-to-install-hadoop-in-stand-alone-mode-on-ubuntu-16-04" target="_blank" rel="external">digitalocean</a>的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在<em>Step 3 — Configuring Hadoop’s Java Home</em>这里，按照教程上的方法找到JAVA的路径再设置，两种方法均可以运行Hadoop，但是在后面运行MapReduce时却总是报错：</p>
+      <content type="html"><![CDATA[<h3 id="安装Hadoop3-amp-Spark"><a href="#安装Hadoop3-amp-Spark" class="headerlink" title="安装Hadoop3&amp;Spark"></a>安装Hadoop3&amp;Spark</h3><p>参考这里（写的很好）：<br><a href="http://www.exegetic.biz/blog/2017/07/installing-hadoop-ubuntu/" target="_blank" rel="external">Hadoop</a><br><a href="http://www.exegetic.biz/blog/2017/07/installing-spark-ubuntu/" target="_blank" rel="external">Spark</a></p>
+<blockquote>
+<p>注意下载hadoop的时候不要下错了..在<a href="http://apache.mesi.com.ar/hadoop/common/hadoop-3.0.1/" target="_blank" rel="external">这里</a>,下载后面的。</p>
+</blockquote>
+<h3 id="安装Hadoop2-7-3"><a href="#安装Hadoop2-7-3" class="headerlink" title="安装Hadoop2.7.3"></a>安装Hadoop2.7.3</h3><blockquote>
+<p>写的比较早，可能已经不可行，仅供参考。</p>
+</blockquote>
+<p>主要就是参考<a href="https://www.digitalocean.com/community/tutorials/how-to-install-hadoop-in-stand-alone-mode-on-ubuntu-16-04" target="_blank" rel="external">digitalocean</a>的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在<em>Step 3 — Configuring Hadoop’s Java Home</em>这里，按照教程上的方法找到JAVA的路径再设置，两种方法均可以运行Hadoop，但是在后面运行MapReduce时却总是报错：</p>
 <blockquote>
 <p>/usr/local/hadoop/bin/hadoop: line 166: /usr/bin/java: No such file or directory</p>
 </blockquote>

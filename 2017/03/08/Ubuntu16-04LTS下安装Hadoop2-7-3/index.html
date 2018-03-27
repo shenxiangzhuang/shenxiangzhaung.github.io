@@ -89,22 +89,37 @@
 
 
 
-<meta name="description" content="撸码间隙，突然看到Hadoop，久闻其名，但是还没研究过，于是动手装了下。主要就是参考digitalocean的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在Step 3 — Configuring Hadoop’s Java Home这里，按照教程上的方法找到JAVA的路径再设置，两种方法均可以运行Hadoop，但是在后面运行MapReduce时却总是报错：
+<meta name="description" content="安装Hadoop3&amp;amp;Spark参考这里（写的很好）：HadoopSpark
 
-/usr/local/h">
+注意下载hadoop的时候不要下错了..在这里,下载后面的。
+
+安装Hadoop2.7.3
+写的比较早，可能已经不可行，仅供参考。
+
+主要就是参考digitalocean的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在Step 3 — Configuring Hadoop’s Java Home这里，按">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu16.04LTS下安装Hadoop2.7.3">
+<meta property="og:title" content="Ubuntu16.04LTS下安装Hadoop&Spark">
 <meta property="og:url" content="http://datahonor.com/2017/03/08/Ubuntu16-04LTS下安装Hadoop2-7-3/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="撸码间隙，突然看到Hadoop，久闻其名，但是还没研究过，于是动手装了下。主要就是参考digitalocean的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在Step 3 — Configuring Hadoop’s Java Home这里，按照教程上的方法找到JAVA的路径再设置，两种方法均可以运行Hadoop，但是在后面运行MapReduce时却总是报错：
+<meta property="og:description" content="安装Hadoop3&amp;amp;Spark参考这里（写的很好）：HadoopSpark
 
-/usr/local/h">
-<meta property="og:updated_time" content="2017-03-08T15:55:15.937Z">
+注意下载hadoop的时候不要下错了..在这里,下载后面的。
+
+安装Hadoop2.7.3
+写的比较早，可能已经不可行，仅供参考。
+
+主要就是参考digitalocean的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在Step 3 — Configuring Hadoop’s Java Home这里，按">
+<meta property="og:updated_time" content="2018-03-27T15:28:35.536Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu16.04LTS下安装Hadoop2.7.3">
-<meta name="twitter:description" content="撸码间隙，突然看到Hadoop，久闻其名，但是还没研究过，于是动手装了下。主要就是参考digitalocean的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在Step 3 — Configuring Hadoop’s Java Home这里，按照教程上的方法找到JAVA的路径再设置，两种方法均可以运行Hadoop，但是在后面运行MapReduce时却总是报错：
+<meta name="twitter:title" content="Ubuntu16.04LTS下安装Hadoop&Spark">
+<meta name="twitter:description" content="安装Hadoop3&amp;amp;Spark参考这里（写的很好）：HadoopSpark
 
-/usr/local/h">
+注意下载hadoop的时候不要下错了..在这里,下载后面的。
+
+安装Hadoop2.7.3
+写的比较早，可能已经不可行，仅供参考。
+
+主要就是参考digitalocean的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在Step 3 — Configuring Hadoop’s Java Home这里，按">
 
 
 
@@ -138,7 +153,7 @@
 
 
 
-  <title> Ubuntu16.04LTS下安装Hadoop2.7.3 | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> Ubuntu16.04LTS下安装Hadoop&Spark | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -352,7 +367,7 @@
             
             
               
-                Ubuntu16.04LTS下安装Hadoop2.7.3
+                Ubuntu16.04LTS下安装Hadoop&Spark
               
             
           </h1>
@@ -440,7 +455,14 @@
       
 
       
-        <p>撸码间隙，突然看到Hadoop，久闻其名，但是还没研究过，于是动手装了下。<br>主要就是参考<a href="https://www.digitalocean.com/community/tutorials/how-to-install-hadoop-in-stand-alone-mode-on-ubuntu-16-04" target="_blank" rel="external">digitalocean</a>的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在<em>Step 3 — Configuring Hadoop’s Java Home</em>这里，按照教程上的方法找到JAVA的路径再设置，两种方法均可以运行Hadoop，但是在后面运行MapReduce时却总是报错：</p>
+        <h3 id="安装Hadoop3-amp-Spark"><a href="#安装Hadoop3-amp-Spark" class="headerlink" title="安装Hadoop3&amp;Spark"></a>安装Hadoop3&amp;Spark</h3><p>参考这里（写的很好）：<br><a href="http://www.exegetic.biz/blog/2017/07/installing-hadoop-ubuntu/" target="_blank" rel="external">Hadoop</a><br><a href="http://www.exegetic.biz/blog/2017/07/installing-spark-ubuntu/" target="_blank" rel="external">Spark</a></p>
+<blockquote>
+<p>注意下载hadoop的时候不要下错了..在<a href="http://apache.mesi.com.ar/hadoop/common/hadoop-3.0.1/" target="_blank" rel="external">这里</a>,下载后面的。</p>
+</blockquote>
+<h3 id="安装Hadoop2-7-3"><a href="#安装Hadoop2-7-3" class="headerlink" title="安装Hadoop2.7.3"></a>安装Hadoop2.7.3</h3><blockquote>
+<p>写的比较早，可能已经不可行，仅供参考。</p>
+</blockquote>
+<p>主要就是参考<a href="https://www.digitalocean.com/community/tutorials/how-to-install-hadoop-in-stand-alone-mode-on-ubuntu-16-04" target="_blank" rel="external">digitalocean</a>的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在<em>Step 3 — Configuring Hadoop’s Java Home</em>这里，按照教程上的方法找到JAVA的路径再设置，两种方法均可以运行Hadoop，但是在后面运行MapReduce时却总是报错：</p>
 <blockquote>
 <p>/usr/local/hadoop/bin/hadoop: line 166: /usr/bin/java: No such file or directory</p>
 </blockquote>
@@ -580,8 +602,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
@@ -668,6 +699,23 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hadoop3-amp-Spark"><span class="nav-text">安装Hadoop3&Spark</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hadoop2-7-3"><span class="nav-text">安装Hadoop2.7.3</span></a></li></ol></div>
+            
+
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -803,7 +851,7 @@
       var disqus_shortname = 'http-datahonor-com';
       var disqus_identifier = '2017/03/08/Ubuntu16-04LTS下安装Hadoop2-7-3/';
 
-      var disqus_title = "Ubuntu16.04LTS下安装Hadoop2.7.3";
+      var disqus_title = "Ubuntu16.04LTS下安装Hadoop&Spark";
 
 
       function run_disqus_script(disqus_script) {
