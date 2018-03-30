@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://datahonor.com/2018/03/30/%E5%85%B3%E4%BA%8EPython%E5%9F%BA%E7%A1%80%E7%9A%84%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2018-03-30T05:57:29.590Z</lastmod>
+    <data>
+        <display>
+        <title>关于Python基础的学习</title>
+        <pubTime>2018-03-30T05:17:05.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2017/03/08/Ubuntu16-04LTS%E4%B8%8B%E5%AE%89%E8%A3%85Hadoop2-7-3/</loc>
     <lastmod>2018-03-27T15:28:35.536Z</lastmod>
     <data>
@@ -57,9 +77,9 @@
         
         <tag>Python</tag>
          
-        <tag>Octave</tag>
-         
         <tag>Tips</tag>
+         
+        <tag>Octave</tag>
          
         <tag>R</tag>
          
@@ -278,9 +298,9 @@
         <title>Ubuntu命令积累</title>
         <pubTime>2017-03-02T09:03:54.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -466,9 +486,9 @@
         <title>Ubuntu搭建SS</title>
         <pubTime>2017-03-02T08:57:56.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -706,9 +726,9 @@
         <title>SS使用-全局代理</title>
         <pubTime>2017-07-31T16:07:32.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -1008,9 +1028,9 @@
         
         <tag>Octave</tag>
          
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            

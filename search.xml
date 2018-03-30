@@ -3,6 +3,56 @@
   
     
     <entry>
+      <title><![CDATA[关于Python基础的学习]]></title>
+      <url>/2018/03/30/%E5%85%B3%E4%BA%8EPython%E5%9F%BA%E7%A1%80%E7%9A%84%E5%AD%A6%E4%B9%A0/</url>
+      <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>由于写的<a href="http://datahonor.com/2018/03/22/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">书</a>是要求有Python编程基础的，最近不少同学问我学习Python基础的问题，这里说下我个人对学习基础语法的建议，主要是针对没有任何编程基础的同学。</p>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><h4 id="系统-amp-集成开发环境"><a href="#系统-amp-集成开发环境" class="headerlink" title="系统&amp;集成开发环境"></a>系统&amp;集成开发环境</h4><p>虽然编程使用Linux要方便些，但是大家平常还都是用Windows多些，所以开始继续使用Windows就行，不必纠结。</p>
+<p>关于开发环境，用<a href="https://www.anaconda.com/download/#linux" target="_blank" rel="external">Anaconda3</a>+<a href="https://www.jetbrains.com/zh/pycharm/specials/pycharm/pycharm.html?utm_source=baidu&amp;utm_medium=cpc&amp;utm_campaign=cn-bai-br-pycharm-ex-pc&amp;utm_content=pycharm-pure&amp;utm_term=pycharm&amp;gclid=CPjtiMOpk9oCFYHdvAodTj8ARA&amp;gclsrc=ds&amp;dclid=COjElMSpk9oCFYISvQod8UgPuA" target="_blank" rel="external">Pycharm（社区版）</a>就足够了，关于安装的步骤也比较简单，书中也有详细介绍。另外，如果大家有习惯用RStudio和MATLAB那种记录中间变量的风格，可以尝试用下Spyder，在安装Anaconda的时候会默认安装Spyder的，直接就可以用。</p>
+<blockquote>
+<p>在熟练使用这些工具之后，其实可以再使用一些更加方便的工具。比如Pycharm专业版的Science模式，和Spyder，RStudio都是很相似的。还有Anaconda带有的Jupyter Notebook，以及更强大的Jupyter Lab等，都是很方便的工具。这些初学的时候可以先不用太在意，之后用到再研究就可以。</p>
+</blockquote>
+<h4 id="网课-amp-网上教程"><a href="#网课-amp-网上教程" class="headerlink" title="网课&amp;网上教程"></a>网课&amp;网上教程</h4><p>没人指导的话，自己看书可能也有不少看不懂的地方，可以选择先看一些网课和简单精炼的教程，跟着写写代码来学习。</p>
+<p>网课：<br>其实这些网课都是差不多，可以选一个自己喜欢的看。</p>
+<p><a href="https://www.coursera.org/courses?languages=en&amp;query=python&amp;userQuery=python" target="_blank" rel="external">coursera</a></p>
+<p><a href="https://www.icourse163.org/course/BIT-268001" target="_blank" rel="external">中国大学MOOC</a></p>
+<p>教程：<br><a href="http://res.crossincode.com/" target="_blank" rel="external">Crossin的编程教室</a>，很基础的教程，基本的知识点也都有了。</p>
+<p><a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" target="_blank" rel="external">廖雪峰 Python3</a>，公认的好教程，不过可能对零基础的同学来说有些吃力，可以后面再看。</p>
+<h4 id="参考书"><a href="#参考书" class="headerlink" title="参考书"></a>参考书</h4><p>再有就是参考书了，语法比较推荐以下几本：</p>
+<p><a href="http://www.ituring.com.cn/book/1863" target="_blank" rel="external">编程小白的第一本 Python 入门书 </a> （适合零基础）</p>
+<p>Learning Python(By Fabrizio Romano) （基础全面）</p>
+<p>Python Cookbook(By David Beazley and Brian K. Jones ) (较为深入)</p>
+<p>Fluent Python(By Luciano Ramalho) (较为深入)</p>
+<h4 id="数据分析-amp-机器学习"><a href="#数据分析-amp-机器学习" class="headerlink" title="数据分析&amp;机器学习"></a>数据分析&amp;机器学习</h4><p>关于机器学习理论：</p>
+<p>书籍：《统计学习方法》（李航）<br>课程：<a href="https://www.coursera.org/learn/machine-learning" target="_blank" rel="external">Machine Learning</a></p>
+<p>关于Python的比较推荐的就是本书的一些参考书：</p>
+<p>[1] Richard Lawson.Web Scraping with Python[M]UK: Packt Publishing,2015。</p>
+<p>[2] Ryan Mitchell.Web Scraping with Python[M]America: O’Reilly Media,<br>2015。</p>
+<p>[3] Megan Squire.Clean Data[M]UK: Packt Publishing,2015。</p>
+<p>[4] Wes McKinney.Python for Data Analysis[M]America: O’Reilly Media, 2013。</p>
+<p>[5] Alberto Boschetti,Luca Massaronm.Python Data Science Essential[M].UK:Packt Publishing,2015。</p>
+<p>[6] Ivan Idris. Python Data Analysis[M].UK: Packt Publishing,2014。</p>
+<p>[7] Ivan Idris. Python Data Analysis Cookbook[M].UK: Packt Publishing,2016。</p>
+<p>[8] Samir Madhavan.Mastering Python for Data Science[M].UK: Packt<br>Publishing,2015。</p>
+<p>[9] Wes McKinney, Python for Data Analysis[M].CA: O’Reilly Media,2013</p>
+<p>[10] Packt Publishing]Toby Segaran.Programming Collective Intelligence[M]America: Reilly Media,2007。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Python与数据分析]]></title>
       <url>/2018/03/22/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
       <content type="html"><![CDATA[<p><img src="http://datahonor-1252464519.costj.myqcloud.com/201803/post1.png" alt="爬虫"></p>
@@ -72,9 +122,9 @@
             
             <tag> Python </tag>
             
-            <tag> Octave </tag>
-            
             <tag> Tips </tag>
+            
+            <tag> Octave </tag>
             
             <tag> R </tag>
             
@@ -1432,9 +1482,9 @@ Please join Telegram group https://t.me/sbfans if you have any issues. / 如有�
         
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -2489,9 +2539,9 @@ error: called from
             
             <tag> Octave </tag>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -4185,9 +4235,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -4216,9 +4266,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
