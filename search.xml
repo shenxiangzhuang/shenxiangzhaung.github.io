@@ -3,6 +3,32 @@
   
     
     <entry>
+      <title><![CDATA[特殊的均匀分布U(0, 1)]]></title>
+      <url>/2018/04/08/%E7%89%B9%E6%AE%8A%E7%9A%84%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83U-0-1/</url>
+      <content type="html"><![CDATA[<iframe src="http://nbviewer.jupyter.org/github/shenxiangzhuang/Probability/blob/master/MyRandom.ipynb" width="700" height="900"></iframe>
+
+
+<p>参考：<br><a href="https://zh.wikipedia.org/wiki/%E8%AF%AF%E5%B7%AE%E5%87%BD%E6%95%B0" target="_blank" rel="external">erf</a><br><a href="https://en.wikipedia.org/wiki/Normal_distribution" target="_blank" rel="external">Normal distribution</a><br><a href="https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.special.erfinv.html#scipy.special.erfinv" target="_blank" rel="external">scipy.special.erfinv</a><br><a href="http://www.codecogs.com/latex/eqneditor.php" target="_blank" rel="external">latex</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Probability </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[罪在蒙昧]]></title>
       <url>/2018/04/01/%E7%BD%AA%E5%9C%A8%E8%92%99%E6%98%A7/</url>
       <content type="html"><![CDATA[<p>尼采说：凡一切文字，我只爱以血写成的。当然，这篇文字与这句话没有太大关系，但还是希望本文能表达的东西能像鲜血一样醒目。</p>
@@ -158,9 +184,9 @@
             
             <tag> R </tag>
             
-            <tag> Haskell </tag>
-            
             <tag> Julia </tag>
+            
+            <tag> Haskell </tag>
             
         </tags>
         
@@ -1294,9 +1320,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Cpp </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Cpp </tag>
             
             <tag> Octave </tag>
             
@@ -1358,9 +1384,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> OpenCV </tag>
-            
             <tag> Python </tag>
+            
+            <tag> OpenCV </tag>
             
         </tags>
         
