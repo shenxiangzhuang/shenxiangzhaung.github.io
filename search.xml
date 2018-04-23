@@ -3,6 +3,18 @@
   
     
     <entry>
+      <title><![CDATA[JetBrains Toolbox]]></title>
+      <url>/2018/04/23/JetBrains-Toolbox/</url>
+      <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>JetBrains工具使用记录。</p>
+<h4 id="JetBrains-Toolbox"><a href="#JetBrains-Toolbox" class="headerlink" title="JetBrains Toolbox"></a><a href="https://www.jetbrains.com/toolbox/" target="_blank" rel="external">JetBrains Toolbox</a></h4><p>今天才发现的工具，可以同时管理PyCharm,Clion这些JetBrains的东西，安装和更新都十分方便。</p>
+<h4 id="Desktop-Entry"><a href="#Desktop-Entry" class="headerlink" title="Desktop Entry"></a>Desktop Entry</h4><p>有时启动栏会只出现问号，下面的方法可以方便地添加图标<br>Tools -&gt; Create Destktop Entry…</p>
+<p>参考<a href="https://askubuntu.com/questions/391439/how-can-i-set-up-pycharm-to-launch-from-the-launcher" target="_blank" rel="external">这里</a></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[特殊的均匀分布U(0, 1)]]></title>
       <url>/2018/04/08/%E7%89%B9%E6%AE%8A%E7%9A%84%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83U-0-1/</url>
       <content type="html"><![CDATA[<iframe src="http://nbviewer.jupyter.org/github/shenxiangzhuang/Probability/blob/master/MyRandom.ipynb" width="700" height="900"></iframe>
@@ -178,15 +190,15 @@
             
             <tag> Python </tag>
             
-            <tag> Tips </tag>
-            
             <tag> Octave </tag>
             
             <tag> R </tag>
             
-            <tag> Julia </tag>
+            <tag> Tips </tag>
             
             <tag> Haskell </tag>
+            
+            <tag> Julia </tag>
             
         </tags>
         
@@ -1007,9 +1019,9 @@ ferent modes</code>。</p>
         
         <tags>
             
-            <tag> Tips </tag>
-            
             <tag> R </tag>
+            
+            <tag> Tips </tag>
             
         </tags>
         
@@ -1320,9 +1332,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Cpp </tag>
+            
+            <tag> Python </tag>
             
             <tag> Octave </tag>
             
@@ -1384,9 +1396,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> OpenCV </tag>
+            
+            <tag> Python </tag>
             
         </tags>
         
