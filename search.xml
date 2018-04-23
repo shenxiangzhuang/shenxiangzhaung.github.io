@@ -11,6 +11,18 @@
 <p>参考<a href="https://askubuntu.com/questions/391439/how-can-i-set-up-pycharm-to-launch-from-the-launcher" target="_blank" rel="external">这里</a></p>
 ]]></content>
       
+        <categories>
+            
+            <category> Tips </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Tips </tag>
+            
+        </tags>
         
     </entry>
     
@@ -190,11 +202,11 @@
             
             <tag> Python </tag>
             
+            <tag> Tips </tag>
+            
             <tag> Octave </tag>
             
             <tag> R </tag>
-            
-            <tag> Tips </tag>
             
             <tag> Haskell </tag>
             
@@ -1019,9 +1031,9 @@ ferent modes</code>。</p>
         
         <tags>
             
-            <tag> R </tag>
-            
             <tag> Tips </tag>
+            
+            <tag> R </tag>
             
         </tags>
         
@@ -1332,9 +1344,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Cpp </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Cpp </tag>
             
             <tag> Octave </tag>
             
@@ -1396,9 +1408,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> OpenCV </tag>
-            
             <tag> Python </tag>
+            
+            <tag> OpenCV </tag>
             
         </tags>
         
@@ -1550,9 +1562,9 @@ Please join Telegram group https://t.me/sbfans if you have any issues. / 如有�
         
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -2607,9 +2619,9 @@ error: called from
             
             <tag> Octave </tag>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -4060,9 +4072,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -4096,9 +4108,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -4147,9 +4159,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -4303,9 +4315,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -4334,9 +4346,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -4539,9 +4551,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -4581,9 +4593,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             

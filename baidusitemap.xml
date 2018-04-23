@@ -5,14 +5,19 @@
     
   <url>
     <loc>http://datahonor.com/2018/04/23/JetBrains-Toolbox/</loc>
-    <lastmod>2018-04-23T06:17:32.199Z</lastmod>
+    <lastmod>2018-04-23T15:43:13.481Z</lastmod>
     <data>
         <display>
         <title>JetBrains Toolbox</title>
         <pubTime>2018-04-23T06:07:38.000Z</pubTime>
         
+        <tag>Tips</tag>
+         
          
            
+             
+              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
+          
         </display>
     </data>
     </url>
@@ -134,11 +139,11 @@
         
         <tag>Python</tag>
          
+        <tag>Tips</tag>
+         
         <tag>Octave</tag>
          
         <tag>R</tag>
-         
-        <tag>Tips</tag>
          
         <tag>Haskell</tag>
          
@@ -355,9 +360,9 @@
         <title>Ubuntu命令积累</title>
         <pubTime>2017-03-02T09:03:54.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -543,9 +548,9 @@
         <title>Ubuntu搭建SS</title>
         <pubTime>2017-03-02T08:57:56.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -733,9 +738,9 @@
         <title>Get help in R</title>
         <pubTime>2017-10-10T03:38:30.000Z</pubTime>
         
-        <tag>R</tag>
-         
         <tag>Tips</tag>
+         
+        <tag>R</tag>
          
          
            
@@ -755,9 +760,9 @@
         <title>百年回首--关于心形曲线的几种画法</title>
         <pubTime>2017-08-16T05:15:20.000Z</pubTime>
         
-        <tag>Cpp</tag>
-         
         <tag>Python</tag>
+         
+        <tag>Cpp</tag>
          
         <tag>Octave</tag>
          
@@ -783,9 +788,9 @@
         <title>SS使用-全局代理</title>
         <pubTime>2017-07-31T16:07:32.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -997,9 +1002,9 @@
         <title>添加OpenCV3对Python3的支持&QT中使用OpenCV</title>
         <pubTime>2017-08-15T09:18:58.000Z</pubTime>
         
-        <tag>OpenCV</tag>
-         
         <tag>Python</tag>
+         
+        <tag>OpenCV</tag>
          
          
            
@@ -1085,9 +1090,9 @@
         
         <tag>Octave</tag>
          
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -2264,9 +2269,9 @@
          
         <tag>Algorithm</tag>
          
-        <tag>Data Analysis</tag>
-         
         <tag>ML</tag>
+         
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
@@ -2336,9 +2341,9 @@
          
         <tag>Algorithm</tag>
          
-        <tag>Data Analysis</tag>
-         
         <tag>ML</tag>
+         
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
@@ -2366,9 +2371,9 @@
          
         <tag>Algorithm</tag>
          
-        <tag>Data Analysis</tag>
-         
         <tag>ML</tag>
+         
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
@@ -2418,9 +2423,9 @@
          
         <tag>Algorithm</tag>
          
-        <tag>Data Analysis</tag>
-         
         <tag>ML</tag>
+         
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
@@ -2498,9 +2503,9 @@
          
         <tag>Algorithm</tag>
          
-        <tag>Data Analysis</tag>
-         
         <tag>ML</tag>
+         
+        <tag>Data Analysis</tag>
          
         <tag>Clustering</tag>
          
