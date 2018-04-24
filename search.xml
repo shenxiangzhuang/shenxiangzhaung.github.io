@@ -3,6 +3,33 @@
   
     
     <entry>
+      <title><![CDATA[校内交流分享会[Python与数据科学]]]></title>
+      <url>/2018/04/24/%E6%9C%89%E5%85%B3%E6%A0%A1%E5%86%85%E4%BA%A4%E6%B5%81%E5%88%86%E4%BA%AB%E4%BC%9A/</url>
+      <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>一次校内的交流会，探讨关于Python与其数据分析的应用等。</p>
+<h3 id="Files"><a href="#Files" class="headerlink" title="Files"></a>Files</h3><p>以下是本次分享所用的展示文件：</p>
+<blockquote>
+<p>链接: <a href="https://pan.baidu.com/s/12sJmYiTk_SK8BaVbZwKtyw" target="_blank" rel="external">https://pan.baidu.com/s/12sJmYiTk_SK8BaVbZwKtyw</a> 密码: cscd</p>
+</blockquote>
+<p>ps:文件是.exe格式的，可能需要关闭360等杀毒软件后运行，不然可能会误报成病毒。</p>
+<p>另外，有其他资源之后也会放在这里。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[JetBrains Toolbox]]></title>
       <url>/2018/04/23/JetBrains-Toolbox/</url>
       <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>JetBrains工具使用记录。</p>
@@ -1562,9 +1589,9 @@ Please join Telegram group https://t.me/sbfans if you have any issues. / 如有�
         
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
@@ -2619,9 +2646,9 @@ error: called from
             
             <tag> Octave </tag>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
@@ -4072,9 +4099,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> ML </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
@@ -4108,9 +4135,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> ML </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
@@ -4159,9 +4186,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> ML </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
@@ -4315,9 +4342,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
@@ -4346,9 +4373,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
         
@@ -4551,9 +4578,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Algorithm </tag>
             
-            <tag> ML </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
@@ -4593,9 +4620,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Algorithm </tag>
             
-            <tag> ML </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
