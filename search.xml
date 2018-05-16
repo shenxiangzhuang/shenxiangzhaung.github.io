@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title><![CDATA[Vectorization in R: Why?]]></title>
+      <url>/2018/05/16/Vectorization-in-R-Why/</url>
+      <content type="html"><![CDATA[<p>在看<em>The Art of R Programming</em>, 看到这里：</p>
+<blockquote>
+<p>One of the most effective ways to achieve speed in R code is to use oper-<br>ations that are vectorized, meaning that a function applied to a vector is actu-<br>ally applied individually to each element.</p>
+</blockquote>
+<p>对所谓向量化（vectorized）比较好奇，所以看了这篇<a href="http://www.noamross.net/blog/2014/4/16/vectorization-in-r--why.html" target="_blank" rel="external">Vectorization in R: Why?</a>,写的很好。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> R </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> R </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[经济周期与股票价格实证研究]]></title>
       <url>/2018/05/08/%E7%BB%8F%E6%B5%8E%E5%91%A8%E6%9C%9F%E4%B8%8E%E8%82%A1%E7%A5%A8%E4%BB%B7%E6%A0%BC%E5%AE%9E%E8%AF%81%E7%A0%94%E7%A9%B6/</url>
       <content type="html"><![CDATA[<p>金融统计分析作业…下面是流程图[这篇文章就是为了展示流程图orz…个ithub的README不支持..]<br>代码和数据放在<a href="https://github.com/shenxiangzhuang/Stock" target="_blank" rel="external">Github</a></p>
@@ -1406,9 +1431,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Cpp </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Cpp </tag>
             
             <tag> Octave </tag>
             
@@ -1470,9 +1495,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> OpenCV </tag>
-            
             <tag> Python </tag>
+            
+            <tag> OpenCV </tag>
             
         </tags>
         
@@ -4134,9 +4159,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> ML </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
@@ -4170,9 +4195,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> ML </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
@@ -4221,9 +4246,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Algorithm </tag>
             
-            <tag> ML </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
@@ -4613,9 +4638,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Algorithm </tag>
             
-            <tag> ML </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
@@ -4655,9 +4680,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Algorithm </tag>
             
-            <tag> ML </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> ML </tag>
             
             <tag> Clustering </tag>
             
