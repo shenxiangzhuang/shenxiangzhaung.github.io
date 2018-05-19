@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://datahonor.com/2018/05/19/Jupyter-nbextensions/</loc>
+    <lastmod>2018-05-19T10:12:42.559Z</lastmod>
+    <data>
+        <display>
+        <title>Jupyter nbextensions</title>
+        <pubTime>2018-05-19T10:07:59.000Z</pubTime>
+        
+        <tag>Tips</tag>
+         
+        <tag>R</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2018/05/16/Vectorization-in-R-Why/</loc>
     <lastmod>2018-05-16T02:43:38.234Z</lastmod>
     <data>
@@ -203,9 +225,9 @@
          
         <tag>Tips</tag>
          
-        <tag>Octave</tag>
-         
         <tag>R</tag>
+         
+        <tag>Octave</tag>
          
         <tag>Haskell</tag>
          
@@ -826,9 +848,9 @@
          
         <tag>Cpp</tag>
          
-        <tag>Octave</tag>
-         
         <tag>R</tag>
+         
+        <tag>Octave</tag>
          
         <tag>Matlab</tag>
          

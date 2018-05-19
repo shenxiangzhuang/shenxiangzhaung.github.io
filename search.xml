@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title><![CDATA[Jupyter nbextensions]]></title>
+      <url>/2018/05/19/Jupyter-nbextensions/</url>
+      <content type="html"><![CDATA[<p>打算把<em>The Art of R programming</em>的东西整理到Jupyter notebook, 发现这里插入目录不太好搞，就找到了<a href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions" target="_blank" rel="external">jupyter_contrib_nbextensions</a>,安装比较简单，而且功能真的很强大，不仅可以很好地支持目录，其他还包括一些很使用的拓展功能，比如打印执行时间，高亮标记文字等。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Tips </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Tips </tag>
+            
+            <tag> R </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Vectorization in R: Why?]]></title>
       <url>/2018/05/16/Vectorization-in-R-Why/</url>
       <content type="html"><![CDATA[<p>在看<em>The Art of R Programming</em>, 看到这里：</p>
@@ -291,9 +314,9 @@
             
             <tag> Tips </tag>
             
-            <tag> Octave </tag>
-            
             <tag> R </tag>
+            
+            <tag> Octave </tag>
             
             <tag> Haskell </tag>
             
@@ -1435,9 +1458,9 @@ query: 3: Negative
             
             <tag> Cpp </tag>
             
-            <tag> Octave </tag>
-            
             <tag> R </tag>
+            
+            <tag> Octave </tag>
             
             <tag> Matlab </tag>
             
