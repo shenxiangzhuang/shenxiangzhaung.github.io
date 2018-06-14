@@ -3,9 +3,10 @@
   
     
     <entry>
-      <title><![CDATA[Jupyter nbextensions]]></title>
+      <title><![CDATA[Oh, Jupyter!]]></title>
       <url>/2018/05/19/Jupyter-nbextensions/</url>
-      <content type="html"><![CDATA[<p>打算把<em>The Art of R programming</em>的东西整理到Jupyter notebook, 发现这里插入目录不太好搞，就找到了<a href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions" target="_blank" rel="external">jupyter_contrib_nbextensions</a>,安装比较简单，而且功能真的很强大，不仅可以很好地支持目录，其他还包括一些很使用的拓展功能，比如打印执行时间，高亮标记文字等。</p>
+      <content type="html"><![CDATA[<h3 id="Jupyter-nbextensions"><a href="#Jupyter-nbextensions" class="headerlink" title="Jupyter nbextensions"></a>Jupyter nbextensions</h3><p>打算把<em>The Art of R programming</em>的东西整理到Jupyter notebook, 发现这里插入目录不太好搞，就找到了<a href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions" target="_blank" rel="external">jupyter_contrib_nbextensions</a>,安装比较简单，而且功能真的很强大，不仅可以很好地支持目录，其他还包括一些很使用的拓展功能，比如打印执行时间，高亮标记文字等。</p>
+<h3 id="Jupyter-themes"><a href="#Jupyter-themes" class="headerlink" title="Jupyter themes"></a>Jupyter themes</h3><p>为Jupyter添加样式主题，结合上面的拓展用起来就很顺手了。配置参考这里<a href="https://github.com/dunovank/jupyter-themes" target="_blank" rel="external">Jupyter themes</a>.</p>
 ]]></content>
       
         <categories>
@@ -295,6 +296,7 @@
 <h3 id="Haskell-Kernel"><a href="#Haskell-Kernel" class="headerlink" title="Haskell Kernel"></a>Haskell Kernel</h3><p>直接看到官方的<a href="https://github.com/gibiansky/IHaskell" target="_blank" rel="external">Doc</a>,一开始执行<code>curl -sSL https://get.haskellstack.org/ | sh</code>的时候会提示用stack更新，但是我这里失败了，用了错误提示的另一种方法。后面安装基本没什么问题，虽然有一些Warning，但是没有影响。</p>
 <p>之后<a href="http://nbviewer.jupyter.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb" target="_blank" rel="external">测试</a>了下,很好用。帮助和提示依旧那么友好，另外还可以直接连到hoogle.</p>
 <p>另外，它的<a href="https://github.com/gibiansky/IHaskell/wiki" target="_blank" rel="external">wiki</a>提供了很多很Nice的Demo，以后有时间挑几个跑下。</p>
+<p>＝＝＝＝更新＝＝＝＝<br>最近使用IHaskell的时候，Kernel会直接死掉。后来看到在项目Github地址上README特别说明了这一点，就是GHC版本的问题。用<code>stack</code>单独新建项目就可以了。</p>
 <h3 id="Octave-Kernel"><a href="#Octave-Kernel" class="headerlink" title="Octave Kernel"></a>Octave Kernel</h3><p>也是按照<a href="https://github.com/calysto/octave_kernel" target="_blank" rel="external">Doc</a>来的，由于之前装过Octave了，所以直接<code>pip install octave_kernel</code>就可以了。往后用计算器就比较方便了:P</p>
 <p>最后，<code>jupyter lab</code>启动：</p>
 <p><img src="http://datahonor-1252464519.costj.myqcloud.com/201803/Screenshot%20from%202018-03-21%2011-22-42.png" alt=""></p>

@@ -4,11 +4,41 @@
 
     
   <url>
-    <loc>http://datahonor.com/2018/05/19/Jupyter-nbextensions/</loc>
-    <lastmod>2018-05-19T10:12:42.559Z</lastmod>
+    <loc>http://datahonor.com/2018/03/21/Jupyter-Lab-Multi-Kernels/</loc>
+    <lastmod>2018-06-14T15:07:25.194Z</lastmod>
     <data>
         <display>
-        <title>Jupyter nbextensions</title>
+        <title>Jupyter Lab&Multi-Kernels</title>
+        <pubTime>2018-03-21T03:09:22.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Tips</tag>
+         
+        <tag>R</tag>
+         
+        <tag>Octave</tag>
+         
+        <tag>Haskell</tag>
+         
+        <tag>Julia</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2018/05/19/Jupyter-nbextensions/</loc>
+    <lastmod>2018-06-14T15:03:58.354Z</lastmod>
+    <data>
+        <display>
+        <title>Oh, Jupyter!</title>
         <pubTime>2018-05-19T10:07:59.000Z</pubTime>
         
         <tag>Tips</tag>
@@ -207,36 +237,6 @@
            
              
               <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2018/03/21/Jupyter-Lab-Multi-Kernels/</loc>
-    <lastmod>2018-03-21T03:25:18.154Z</lastmod>
-    <data>
-        <display>
-        <title>Jupyter Lab&Multi-Kernels</title>
-        <pubTime>2018-03-21T03:09:22.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Tips</tag>
-         
-        <tag>R</tag>
-         
-        <tag>Octave</tag>
-         
-        <tag>Haskell</tag>
-         
-        <tag>Julia</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
           
         </display>
     </data>
