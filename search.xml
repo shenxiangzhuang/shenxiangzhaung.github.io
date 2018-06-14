@@ -297,6 +297,7 @@
 <p>之后<a href="http://nbviewer.jupyter.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb" target="_blank" rel="external">测试</a>了下,很好用。帮助和提示依旧那么友好，另外还可以直接连到hoogle.</p>
 <p>另外，它的<a href="https://github.com/gibiansky/IHaskell/wiki" target="_blank" rel="external">wiki</a>提供了很多很Nice的Demo，以后有时间挑几个跑下。</p>
 <p>＝＝＝＝更新＝＝＝＝<br>最近使用IHaskell的时候，Kernel会直接死掉。后来看到在项目Github地址上README特别说明了这一点，就是GHC版本的问题。用<code>stack</code>单独新建项目就可以了。</p>
+<p>另外，参考<a href="https://zhuanlan.zhihu.com/p/25005809" target="_blank" rel="external">这里</a>设置了Stackage 镜像。</p>
 <h3 id="Octave-Kernel"><a href="#Octave-Kernel" class="headerlink" title="Octave Kernel"></a>Octave Kernel</h3><p>也是按照<a href="https://github.com/calysto/octave_kernel" target="_blank" rel="external">Doc</a>来的，由于之前装过Octave了，所以直接<code>pip install octave_kernel</code>就可以了。往后用计算器就比较方便了:P</p>
 <p>最后，<code>jupyter lab</code>启动：</p>
 <p><img src="http://datahonor-1252464519.costj.myqcloud.com/201803/Screenshot%20from%202018-03-21%2011-22-42.png" alt=""></p>
@@ -316,9 +317,9 @@
             
             <tag> Tips </tag>
             
-            <tag> R </tag>
-            
             <tag> Octave </tag>
+            
+            <tag> R </tag>
             
             <tag> Haskell </tag>
             
@@ -1460,9 +1461,9 @@ query: 3: Negative
             
             <tag> Cpp </tag>
             
-            <tag> R </tag>
-            
             <tag> Octave </tag>
+            
+            <tag> R </tag>
             
             <tag> Matlab </tag>
             
