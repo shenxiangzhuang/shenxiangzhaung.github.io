@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>http://datahonor.com/2018/06/21/Screen-recorder-peek/</loc>
+    <lastmod>2018-06-21T15:17:40.974Z</lastmod>
+    <data>
+        <display>
+        <title>Screen recorder: peek</title>
+        <pubTime>2018-06-21T15:06:02.000Z</pubTime>
+        
+        <tag>Tips</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://datahonor.com/2018/05/19/Jupyter-nbextensions/</loc>
+    <lastmod>2018-06-14T15:32:24.694Z</lastmod>
+    <data>
+        <display>
+        <title>Oh, Jupyter!</title>
+        <pubTime>2018-05-19T10:07:59.000Z</pubTime>
+        
+        <tag>Tips</tag>
+         
+        <tag>R</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2018/03/21/Jupyter-Lab-Multi-Kernels/</loc>
     <lastmod>2018-06-14T15:08:52.011Z</lastmod>
     <data>
@@ -22,28 +64,6 @@
         <tag>Haskell</tag>
          
         <tag>Julia</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://datahonor.com/2018/05/19/Jupyter-nbextensions/</loc>
-    <lastmod>2018-06-14T15:03:58.354Z</lastmod>
-    <data>
-        <display>
-        <title>Oh, Jupyter!</title>
-        <pubTime>2018-05-19T10:07:59.000Z</pubTime>
-        
-        <tag>Tips</tag>
-         
-        <tag>R</tag>
          
          
            
@@ -444,9 +464,9 @@
         <title>Ubuntu命令积累</title>
         <pubTime>2017-03-02T09:03:54.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -632,9 +652,9 @@
         <title>Ubuntu搭建SS</title>
         <pubTime>2017-03-02T08:57:56.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -844,9 +864,9 @@
         <title>百年回首--关于心形曲线的几种画法</title>
         <pubTime>2017-08-16T05:15:20.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Cpp</tag>
+         
+        <tag>Python</tag>
          
         <tag>Octave</tag>
          
@@ -872,9 +892,9 @@
         <title>SS使用-全局代理</title>
         <pubTime>2017-07-31T16:07:32.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -1086,9 +1106,9 @@
         <title>添加OpenCV3对Python3的支持&QT中使用OpenCV</title>
         <pubTime>2017-08-15T09:18:58.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>OpenCV</tag>
+         
+        <tag>Python</tag>
          
          
            
@@ -1174,9 +1194,9 @@
         
         <tag>Octave</tag>
          
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            

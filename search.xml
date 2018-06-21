@@ -3,10 +3,33 @@
   
     
     <entry>
+      <title><![CDATA[Screen recorder: peek]]></title>
+      <url>/2018/06/21/Screen-recorder-peek/</url>
+      <content type="html"><![CDATA[<h3 id="Peek"><a href="#Peek" class="headerlink" title="Peek"></a>Peek</h3><p>了解到一款比较好用的录屏应用：<a href="https://github.com/phw/peek" target="_blank" rel="external">peek</a>.安装比较简单。不过命令行第一执行有报错，可能是网络的问题，用了<code>proxychains</code>就可以了。</p>
+<h3 id="gifski"><a href="#gifski" class="headerlink" title="gifski"></a>gifski</h3><p>在peek的FAQ里面提到了为了改善图像质量的建议，就是<a href="https://github.com/ImageOptim/gifski" target="_blank" rel="external">gifski</a>。安装这个前需要装下<a href="https://www.rust-lang.org/en-US/install.html" target="_blank" rel="external">Rust</a>,之后参考<a href="https://doc.rust-lang.org/book/second-edition/ch01-01-installation.html" target="_blank" rel="external">这里</a>把环境变量加一下就可以了。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Tips </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Tips </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Oh, Jupyter!]]></title>
       <url>/2018/05/19/Jupyter-nbextensions/</url>
       <content type="html"><![CDATA[<h3 id="Jupyter-nbextensions"><a href="#Jupyter-nbextensions" class="headerlink" title="Jupyter nbextensions"></a>Jupyter nbextensions</h3><p>打算把<em>The Art of R programming</em>的东西整理到Jupyter notebook, 发现这里插入目录不太好搞，就找到了<a href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions" target="_blank" rel="external">jupyter_contrib_nbextensions</a>,安装比较简单，而且功能真的很强大，不仅可以很好地支持目录，其他还包括一些很使用的拓展功能，比如打印执行时间，高亮标记文字等。</p>
 <h3 id="Jupyter-themes"><a href="#Jupyter-themes" class="headerlink" title="Jupyter themes"></a>Jupyter themes</h3><p>为Jupyter添加样式主题，结合上面的拓展用起来就很顺手了。配置参考这里<a href="https://github.com/dunovank/jupyter-themes" target="_blank" rel="external">Jupyter themes</a>.</p>
+<p>另外，直接运行<code>jt -t grade3</code>设置主题是会把上面的工具栏给隐藏，而且调不出来。发现<a href="https://github.com/dunovank/jupyter-themes/issues/85" target="_blank" rel="external">issue</a>已经被提出并解决了，只需要<code>jt -t grade3 -T</code>即可。</p>
 ]]></content>
       
         <categories>
@@ -1457,9 +1480,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Cpp </tag>
+            
+            <tag> Python </tag>
             
             <tag> Octave </tag>
             
@@ -1521,9 +1544,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> OpenCV </tag>
+            
+            <tag> Python </tag>
             
         </tags>
         
@@ -1675,9 +1698,9 @@ Please join Telegram group https://t.me/sbfans if you have any issues. / 如有�
         
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -2732,9 +2755,9 @@ error: called from
             
             <tag> Octave </tag>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -4428,9 +4451,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
@@ -4459,9 +4482,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
         
         <tags>
             
-            <tag> Ubuntu </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
