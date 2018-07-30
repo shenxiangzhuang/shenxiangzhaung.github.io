@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://datahonor.com/2018/07/30/Errata-of-PythonDA/</loc>
+    <lastmod>2018-07-30T05:16:25.285Z</lastmod>
+    <data>
+        <display>
+        <title>Errata of PythonDA</title>
+        <pubTime>2018-07-30T05:01:20.000Z</pubTime>
+        
+        <tag>Book</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2018/07/07/%E5%A5%87%E6%80%AA%E7%9A%84%E6%A2%A6/</loc>
     <lastmod>2018-07-07T14:39:05.648Z</lastmod>
     <data>
@@ -884,9 +904,9 @@
         <title>百年回首--关于心形曲线的几种画法</title>
         <pubTime>2017-08-16T05:15:20.000Z</pubTime>
         
-        <tag>Cpp</tag>
-         
         <tag>Python</tag>
+         
+        <tag>Cpp</tag>
          
         <tag>R</tag>
          
@@ -1126,9 +1146,9 @@
         <title>添加OpenCV3对Python3的支持&QT中使用OpenCV</title>
         <pubTime>2017-08-15T09:18:58.000Z</pubTime>
         
-        <tag>OpenCV</tag>
-         
         <tag>Python</tag>
+         
+        <tag>OpenCV</tag>
          
          
            

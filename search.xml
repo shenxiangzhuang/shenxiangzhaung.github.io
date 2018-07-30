@@ -3,6 +3,65 @@
   
     
     <entry>
+      <title><![CDATA[Errata of PythonDA]]></title>
+      <url>/2018/07/30/Errata-of-PythonDA/</url>
+      <content type="html"><![CDATA[<p>《Python数据分析入门————从数据获取到可视化》勘误页</p>
+<p>感谢各位读者提交的勘误，本页将持续更新。</p>
+<h3 id="已更正"><a href="#已更正" class="headerlink" title="已更正"></a>已更正</h3><table>
+<thead>
+<tr>
+<th>页码</th>
+<th>错误</th>
+<th>改正</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>201</td>
+<td>上方第一个阴影框（训练集数据）“种类”列最后两行将“bumpy”全改为“orange”</td>
+<td>第一版第一次印刷存在的错误，第二次印刷时更正</td>
+</tr>
+<tr>
+<td>202</td>
+<td>第三行，“是橙子还是水果”改为“是橙子还是苹果”</td>
+<td>第一版第一次印刷存在的错误，第二次印刷时更正</td>
+</tr>
+</tbody>
+</table>
+<h3 id="待处理"><a href="#待处理" class="headerlink" title="待处理"></a>待处理</h3><table>
+<thead>
+<tr>
+<th>页码</th>
+<th>错误</th>
+<th>改正</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>245</td>
+<td>代码框，最上面应加上<code>import random as rnd</code></td>
+<td>截至第三次印刷，尚未更正</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      
+        <categories>
+            
+            <category> Tips </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Book </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[奇怪的梦]]></title>
       <url>/2018/07/07/%E5%A5%87%E6%80%AA%E7%9A%84%E6%A2%A6/</url>
       <content type="html"><![CDATA[<div style="align: center"> <img src="http://blog-1252464519.costj.myqcloud.com/180707/mmexport1530890137221.jpg"><br></div>
@@ -1503,9 +1562,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Cpp </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Cpp </tag>
             
             <tag> R </tag>
             
@@ -1567,9 +1626,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> OpenCV </tag>
-            
             <tag> Python </tag>
+            
+            <tag> OpenCV </tag>
             
         </tags>
         
