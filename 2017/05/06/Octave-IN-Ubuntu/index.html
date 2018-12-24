@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Octave,Linux,Ubuntu," />
+  <meta name="keywords" content="Octave,Ubuntu,Linux," />
 
 
 
@@ -510,11 +510,11 @@ error: called from
     python_cmd at line 164 column 9
     sym at line 340 column 9
 </code></pre><p>貌似说python没有装sympy，检查了下，已经装了。注意到可能是Python路径设置的问题，就查了查官方给的symbolic的<a href="https://octave.sourceforge.io/symbolic/NEWS.html" target="_blank" rel="external">文档</a>.</p>
-<pre><code>* The environment variable `PYTHON` controls which Python executable is
-  used.  The command
-       `sympref python C:\bin\python`
-  has been deprecated; instead please use:
-       `setenv PYTHON C:\bin\python`
+<pre><code>  * The environment variable `PYTHON` controls which Python executable is
+    used.  The command
+         `sympref python C:\bin\python`
+    has been deprecated; instead please use:
+         `setenv PYTHON C:\bin\python`
 </code></pre><p>于是[这里用的anaconda]：</p>
 <blockquote>
 <p>setenv PYTHON /home/shensir/anaconda3/bin/python</p>
@@ -584,9 +584,9 @@ error: called from
           
             <a href="/tags/Octave/" rel="tag"># Octave</a>
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
-          
             <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
           
         </div>
       
@@ -704,7 +704,7 @@ error: called from
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">136</span>
+                <span class="site-state-item-count">137</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -722,7 +722,7 @@ error: called from
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">49</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

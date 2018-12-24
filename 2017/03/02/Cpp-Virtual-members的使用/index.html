@@ -89,14 +89,14 @@
 
 
 
-<meta name="description" content="C++类的学习–&amp;gt;Virtual member的使用
+<meta name="description" content="C++类的学习—&amp;gt;Virtual member的使用
 先看一个例子：
 1234567891011121314151617181920212223242526272829303132333435363738394041#include &amp;lt;iostream&amp;gt;using namespace std;class CPolygon&amp;#123;protected:    int width,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cpp Virtual members的使用">
 <meta property="og:url" content="http://datahonor.com/2017/03/02/Cpp-Virtual-members的使用/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="C++类的学习–&amp;gt;Virtual member的使用
+<meta property="og:description" content="C++类的学习—&amp;gt;Virtual member的使用
 先看一个例子：
 1234567891011121314151617181920212223242526272829303132333435363738394041#include &amp;lt;iostream&amp;gt;using namespace std;class CPolygon&amp;#123;protected:    int width,">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/index.png">
@@ -105,7 +105,7 @@
 <meta property="og:updated_time" content="2018-01-17T04:29:21.385Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cpp Virtual members的使用">
-<meta name="twitter:description" content="C++类的学习–&amp;gt;Virtual member的使用
+<meta name="twitter:description" content="C++类的学习—&amp;gt;Virtual member的使用
 先看一个例子：
 1234567891011121314151617181920212223242526272829303132333435363738394041#include &amp;lt;iostream&amp;gt;using namespace std;class CPolygon&amp;#123;protected:    int width,">
 <meta name="twitter:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/index.png">
@@ -444,7 +444,7 @@
       
 
       
-        <p>C++类的学习–&gt;Virtual member的使用</p>
+        <p>C++类的学习—&gt;Virtual member的使用</p>
 <p>先看一个例子：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">class</span> CPolygon&#123;</div><div class="line"><span class="keyword">protected</span>:</div><div class="line">    <span class="keyword">int</span> width, heigth;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">set_values</span> <span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></div><div class="line">    &#123;width=a; heigth=b;&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">class</span> CRectangle: <span class="keyword">public</span> CPolygon&#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">area</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> (width * heigth);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">class</span> CTriangle: <span class="keyword">public</span> CPolygon&#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">area</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> (width * heigth / <span class="number">2</span>);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    CRectangle rect;</div><div class="line">    CTriangle trgl;</div><div class="line">    CPolygon * ppoly1 = &amp;rect;</div><div class="line">    CPolygon * ppoly2 = &amp;trgl;</div><div class="line">    ppoly1 -&gt; set_values(<span class="number">4</span>, <span class="number">5</span>);</div><div class="line">    ppoly2 -&gt; set_values(<span class="number">4</span>, <span class="number">5</span>);</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; rect.area() &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; trgl.area() &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
 <p>输出：</p>
@@ -605,7 +605,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">136</span>
+                <span class="site-state-item-count">137</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -623,7 +623,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">49</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

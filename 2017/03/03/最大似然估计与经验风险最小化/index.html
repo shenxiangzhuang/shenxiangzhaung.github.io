@@ -459,8 +459,8 @@
 <p>简记为： 方法 = 模型+策略+算法</p>
 <p>1.2.预备知识——损失函数</p>
 <p>在模型的假设空间，我们要确定一定的准则来确定模型的好坏，即我们需要确定一定的策略[三要素之一]去衡量，所以我们引入了损失函数[loss function]或代价函数[cost function].</p>
-<p>损失函数有很多种，例如0-1损失函数， 平方损失函数等，这里我们要用的是对数损失函数。<br>$$L(Y, P(Y | X)) = - \log P(Y | X)$$</p>
-<p>1.3.预备知识——风险函数</p>
+<p>损失函数有很多种，例如0-1损失函数， 平方损失函数等，这里我们要用的是对数损失函数。</p>
+<script type="math/tex; mode=display">L(Y, P(Y | X)) = - \log P(Y | X)</script><p>1.3.预备知识——风险函数</p>
 <p>选定损失函数后，其值越小，模型就越好。模型的输入与输出(X, Y)是随机变量，遵循联合分布P（X, Y）， 所以损失函数的期望为:</p>
 <span>$$R_{exp} = E_p[L(Y, f(X))] = \int_{X \times Y} L(y, f(x))P(x, y)dxdy $$</span><!-- Has MathJax -->
 <p>这就是风险函数[risk function] 或 期望损失[expected loss], 其代表理论上模型f(X)关于联合分布P(X, Y)的平均意义下的损失.</p>
@@ -469,30 +469,24 @@
 <p>我们想到用样本估计整体， 为此我们引入经验风险[empirical risk]或经验损失[empirical loss] ：</p>
 <span>$$ R_{emp}(f) = \frac{1}{N}\sum_{i=1}^{N}L(y_i, f(x_i)) $$</span><!-- Has MathJax -->
 <p>其中，定义训练集为：</p>
-<p>$$T = {(x_1, y_1), (x_2, y_2), \cdots , (x_N, y_N)}$$</p>
-<p>根据大数定律，在样本量N趋向于无穷时， $R<em>{emp}(f)$趋于$R</em>{exp}(f)$. 当然实际上标注好的样本一般达不到要求，所以效果不太好，这时我们可以引入关于模型复杂度的罚项来纠正，这里暂时不展开讨论。</p>
+<script type="math/tex; mode=display">T = \{(x_1, y_1), (x_2, y_2), \cdots , (x_N, y_N)\}</script><p>根据大数定律，在样本量N趋向于无穷时， $R_{emp}(f)$趋于$R_{exp}(f)$. 当然实际上标注好的样本一般达不到要求，所以效果不太好，这时我们可以引入关于模型复杂度的罚项来纠正，这里暂时不展开讨论。</p>
 <p>1.5.预备知识——极大似然估计</p>
 <ol>
 <li>证明：</li>
 </ol>
-<p>设$$x_1, x_2, \cdots , x_n$$为独立同分布[idd]的样本，$$\theta$$为模型参数，$$f$$为我们使用的模型。</p>
+<p>设<script type="math/tex">x_1, x_2, \cdots , x_n</script>为独立同分布[idd]的样本，<script type="math/tex">\theta</script>为模型参数，<script type="math/tex">f</script>为我们使用的模型。</p>
 <p>由idd:</p>
-<p>$$f(x_1, x_2, \cdots, x_n) = f(x_1|\theta)\times f(x_2|\theta)\times \cdots \times f(x_n|\theta)$$</p>
-<p>而实际上我们已知$$x_1, x_2, \cdots , x_n$$, 未知的是，$$\theta$$， 故似然定义为:</p>
+<script type="math/tex; mode=display">f(x_1, x_2, \cdots, x_n) = f(x_1|\theta)\times f(x_2|\theta)\times \cdots \times f(x_n|\theta)</script><p>而实际上我们已知<script type="math/tex">x_1, x_2, \cdots , x_n</script>, 未知的是，<script type="math/tex">\theta</script>， 故似然定义为:</p>
 <span>$$L(\theta|x_1, x_2, \cdots , x_n) = f(x_1, x_2, \cdots , x_n|\theta) = \coprod_{i=1}^{n}f(x_i|\theta)$$</span><!-- Has MathJax -->
-<p>此为样本发生可能性的大小，而极大似然估计的核心即为，以使得当前样本发生概率最大时的参数$$\hat{\theta}$$作为真实参数$$\theta$$的一个估计值。所以此时我们要求的是$$L(\theta|x_1, x_2, \cdots , x_n)$$取得最大值时$$\theta$$的值，即为$$\hat{\theta}$$。即问题转化为求$$L(\theta|x_1, x_2, \cdots , x_n)$$的极值问题。自然想到导数，而由于连乘的存在，可利用对数函数单调递增的性质，两边取对数再求导，可以简化计算。</p>
+<p>此为样本发生可能性的大小，而极大似然估计的核心即为，以使得当前样本发生概率最大时的参数<script type="math/tex">\hat{\theta}</script>作为真实参数<script type="math/tex">\theta</script>的一个估计值。所以此时我们要求的是<script type="math/tex">L(\theta|x_1, x_2, \cdots , x_n)</script>取得最大值时<script type="math/tex">\theta</script>的值，即为<script type="math/tex">\hat{\theta}</script>。即问题转化为求<script type="math/tex">L(\theta|x_1, x_2, \cdots , x_n)</script>的极值问题。自然想到导数，而由于连乘的存在，可利用对数函数单调递增的性质，两边取对数再求导，可以简化计算。</p>
 <span>$$\ln{L(\theta|x_1, x_2, \cdots, x_n)} = \sum_{i=1}^{n}\ln{f(x_i|\theta)}$$</span><!-- Has MathJax -->
-<p>上式即为对数似然，而一般而言的最大似然中的似然指的是对数平均似然$$\hat{l}$$，即为：</p>
-<p>$$\hat{l} = \frac{1}{n}\ln{L}$$</p>
-<p>整理得：</p>
-<p>$$\hat{\theta} = \mathop{\arg\max}_{\theta\epsilon R^n}\hat{l}(\theta|x_1, x_2, \cdots, x_n)$$</p>
-<p>看到，极大似然估计即为:</p>
-<p>$$max\frac{1}{n}\sum_{i=1}^{n}\ln{f(x_i|\theta)}$$</p>
-<p>即：</p>
-<p>$$min\frac{1}{n}\sum_{i=1}^{n}-\ln{f(x_i|\theta)}$$</p>
-<p>而经验风险最小化公式为：</p>
+<p>上式即为对数似然，而一般而言的最大似然中的似然指的是对数平均似然<script type="math/tex">\hat{l}</script>，即为：</p>
+<script type="math/tex; mode=display">\hat{l} = \frac{1}{n}\ln{L}</script><p>整理得：</p>
+<script type="math/tex; mode=display">\hat{\theta} = \mathop{\arg\max}_{\theta\epsilon R^n}\hat{l}(\theta|x_1, x_2, \cdots, x_n)</script><p>看到，极大似然估计即为:</p>
+<script type="math/tex; mode=display">max\frac{1}{n}\sum_{i=1}^{n}\ln{f(x_i|\theta)}</script><p>即：</p>
+<script type="math/tex; mode=display">min\frac{1}{n}\sum_{i=1}^{n}-\ln{f(x_i|\theta)}</script><p>而经验风险最小化公式为：</p>
 <span>$$\mathop{\arg\min}_{f\epsilon F}\frac{1}{N}\sum_{i=1}^{N}L(y_i, f(x_i))$$</span><!-- Has MathJax -->
-<p>所以，在模型为条件概率分布模型，损失函数是对数损失函数$$L(Y, P(Y | X)) = - \log P(Y | X)$$时，经验风险最小化就等价于极大似然估计</p>
+<p>所以，在模型为条件概率分布模型，损失函数是对数损失函数<script type="math/tex">L(Y, P(Y | X)) = - \log P(Y | X)</script>时，经验风险最小化就等价于极大似然估计</p>
 <p>证毕。</p>
 
       
@@ -633,7 +627,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">136</span>
+                <span class="site-state-item-count">137</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -651,7 +645,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">49</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

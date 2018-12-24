@@ -1,0 +1,1162 @@
+<!doctype html>
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Probability,Statistics,Books," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="[TOC]
+写在前面因为自己在学习什么知识的时候总喜欢找别人推荐一些书，因为一本好书真的是一个好的开始。这里简单写下这两三年看过的概率论和数理统计的书，也有后面计划看的，一般都是比较经典的教材。
+已看《概率论基础》，复旦大学，李贤平，第三版
+
+
+
+
+这是我们大二上学期时候的教材，也就是说学完高数线代看这本一般是没问题的。而且感觉这本书能把比较复杂的东西讲的比较简单，很适合入门学习。当时只是做了一部">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Probability and Mathematical Statistics[Books]">
+<meta property="og:url" content="http://datahonor.com/2018/12/24/Probability-and-Mathematical-Statistics-Books/index.html">
+<meta property="og:site_name" content="DATA HONOR">
+<meta property="og:description" content="[TOC]
+写在前面因为自己在学习什么知识的时候总喜欢找别人推荐一些书，因为一本好书真的是一个好的开始。这里简单写下这两三年看过的概率论和数理统计的书，也有后面计划看的，一般都是比较经典的教材。
+已看《概率论基础》，复旦大学，李贤平，第三版
+
+
+
+
+这是我们大二上学期时候的教材，也就是说学完高数线代看这本一般是没问题的。而且感觉这本书能把比较复杂的东西讲的比较简单，很适合入门学习。当时只是做了一部">
+<meta property="og:image" content="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/%E6%9D%8E%E8%B4%A4%E5%B9%B3.jpg">
+<meta property="og:image" content="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/%E6%B5%99%E5%A4%A7.jpg">
+<meta property="og:image" content="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/%E9%83%91%E6%98%8E.jpg">
+<meta property="og:image" content="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/%E7%A8%8B%E7%BB%86%E7%8E%89.jpg">
+<meta property="og:image" content="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/%E8%8C%86%E8%AF%97%E6%9D%BE.jpg">
+<meta property="og:image" content="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/%E9%92%9F%E5%88%9D%E7%AD%89.jpg">
+<meta property="og:image" content="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/Hogg.jpg">
+<meta property="og:image" content="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/casella.jpg">
+<meta property="og:image" content="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/%E4%B8%AD%E5%A4%A7%E9%82%93.jpg">
+<meta property="og:image" content="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/Roussas.jpg">
+<meta property="og:updated_time" content="2018-12-24T07:51:56.496Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Probability and Mathematical Statistics[Books]">
+<meta name="twitter:description" content="[TOC]
+写在前面因为自己在学习什么知识的时候总喜欢找别人推荐一些书，因为一本好书真的是一个好的开始。这里简单写下这两三年看过的概率论和数理统计的书，也有后面计划看的，一般都是比较经典的教材。
+已看《概率论基础》，复旦大学，李贤平，第三版
+
+
+
+
+这是我们大二上学期时候的教材，也就是说学完高数线代看这本一般是没问题的。而且感觉这本书能把比较复杂的东西讲的比较简单，很适合入门学习。当时只是做了一部">
+<meta name="twitter:image" content="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/%E6%9D%8E%E8%B4%A4%E5%B9%B3.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '不秩稚童'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://datahonor.com/2018/12/24/Probability-and-Mathematical-Statistics-Books/"/>
+
+
+
+
+
+  <title> Probability and Mathematical Statistics[Books] | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-92663335-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cbfd16620150a28ce4061f717038b4de";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">DATA HONOR</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Never say never.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2018/12/24/Probability-and-Mathematical-Statistics-Books/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="不秩稚童">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="DATA HONOR">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Probability and Mathematical Statistics[Books]
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-24T10:32:29+08:00">
+                2018-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Statistics/" itemprop="url" rel="index">
+                    <span itemprop="name">Statistics</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/24/Probability-and-Mathematical-Statistics-Books/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/12/24/Probability-and-Mathematical-Statistics-Books/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>[TOC]</p>
+<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>因为自己在学习什么知识的时候总喜欢找别人推荐一些书，因为一本好书真的是一个好的开始。这里简单写下这两三年看过的概率论和数理统计的书，也有后面计划看的，一般都是比较经典的教材。</p>
+<h3 id="已看"><a href="#已看" class="headerlink" title="已看"></a>已看</h3><h4 id="《概率论基础》，复旦大学，李贤平，第三版"><a href="#《概率论基础》，复旦大学，李贤平，第三版" class="headerlink" title="《概率论基础》，复旦大学，李贤平，第三版"></a>《概率论基础》，复旦大学，李贤平，第三版</h4><center>
+<img src="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/%E6%9D%8E%E8%B4%A4%E5%B9%B3.jpg" width="300" height="300"></center>
+
+
+
+<p>这是我们大二上学期时候的教材，也就是说学完高数线代看这本一般是没问题的。而且感觉这本书能把比较复杂的东西讲的比较简单，很适合入门学习。当时只是做了一部分习题，感觉还可以，值得做一下。刚才在搜的时候看到已经有对应的习题解答的书一起卖了，可以一起看。因为一定量的习题对学习新的东西有很大帮助。</p>
+<h4 id="《概率论与数理统计》，浙大四版"><a href="#《概率论与数理统计》，浙大四版" class="headerlink" title="《概率论与数理统计》，浙大四版"></a>《概率论与数理统计》，浙大四版</h4><center>
+<img src="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/%E6%B5%99%E5%A4%A7.jpg" width="300" height="300"></center>
+
+
+<p>这本是在备考概率论（那时只看了概率部分）的时候看的，内容比较少，也比较简单。配合着习题解析，做了大部分的习题，感觉一般吧，题目没什么新意。后面学数理统计的时候翻着看了下，内容一般。总之这本就是挺基础的，可以随便看看…</p>
+<h4 id="《数理统计讲义》，复旦大学，郑明"><a href="#《数理统计讲义》，复旦大学，郑明" class="headerlink" title="《数理统计讲义》，复旦大学，郑明"></a>《数理统计讲义》，复旦大学，郑明</h4><center>
+<img src="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/%E9%83%91%E6%98%8E.jpg" width="300" height="300"></center>
+
+
+<p>大二下数理统计的教材，其实本来老师选的另一本，后来教务好像搞错了，就成了这本…这书比较适合数学基础好些的看，因为我们学的是微积分B，所以当时看这本会及其不适应。书里面的推到几乎是看不懂的，习题几乎没做。上课和练习一般都是跟着老师的PPT走。</p>
+<p>不过呢，到了大四开始的时候（那时候已经看了下面将要介绍的一堆书）再看这本已经无压力了，然后突然发现这书真的很赞！很简洁，而且例子也比较有启发性（这些例子和下面的Hogg和casella有些是重复的）。对UMVUE的讲解也是比较深入的，感觉这个很难得。因为这本书的习题没有答案，所以习题后面只是随便看看。不过，就题目本身而言，质量还是很好的。</p>
+<h4 id="《数理统计》，厦门大学，程细玉"><a href="#《数理统计》，厦门大学，程细玉" class="headerlink" title="《数理统计》，厦门大学，程细玉"></a>《数理统计》，厦门大学，程细玉</h4><center>
+<img src="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/%E7%A8%8B%E7%BB%86%E7%8E%89.jpg" width="300" height="300"></center>
+
+
+<p>这个好像是大二下（或者大三…）看的，图书馆看到封面很漂亮就拿来看了Orz…不过这本书写的真的很不错的，对基本原理讲解的比较透彻，很有启发性，把里面的例子推导一遍帮助很大。没事翻一翻，大概两三个月看完了，习题没有做，不知道具体如何。</p>
+<h4 id="《概率论与数理统计教程》，茆诗松，第二版"><a href="#《概率论与数理统计教程》，茆诗松，第二版" class="headerlink" title="《概率论与数理统计教程》，茆诗松，第二版"></a>《概率论与数理统计教程》，茆诗松，第二版</h4><center>
+<img src="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/%E8%8C%86%E8%AF%97%E6%9D%BE.jpg" width="300" height="300"></center>
+
+
+<p>大三下开始看的（好像是，模糊了..），一位同学推荐的，因为当时学随机过程发现概率论有些忘记了，所以就拿来看了。书确实是很好的，从基础开始讲，条理很清晰，内容（概率论部分）相对李贤平也更丰富一些。数理统计部分在当时看来几乎是讲的最好的了，很细致，很全面。概率论部分的习题（有配套的习题解答书）是全部做了的，而且做了笔记。后面数理统计的习题做了大部分，感觉提升了很多。另外，在习题解答的书上有额外的附加习题，难度在书上中上难度差不多，也是不错的。总之，这书很值得一看，习题最后也全做。</p>
+<h4 id="Elementary-Probability-Theory，Kai-Lai-Chung"><a href="#Elementary-Probability-Theory，Kai-Lai-Chung" class="headerlink" title="Elementary Probability Theory，Kai Lai Chung"></a><em>Elementary Probability Theory，Kai Lai Chung</em></h4><center>
+<img src="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/%E9%92%9F%E5%88%9D%E7%AD%89.jpg" width="300" height="300"></center>
+
+
+<p>大三时候偶然看到的，就买来看了下，当时感觉比较这书讲的比较好玩…具体内容都和之前看的书没有太大差别，角度上有些不同，可能还没有看透吧，后面再读一下。毕竟概率学界学术教父的书…</p>
+<blockquote>
+<p>PS：记得很清楚这书有一个很有趣的例子——如何计算明天太阳升起的概率，亮瞎眼233</p>
+</blockquote>
+<h4 id="Introduction-to-Mathematical-Statistics-Hogg"><a href="#Introduction-to-Mathematical-Statistics-Hogg" class="headerlink" title="Introduction to Mathematical Statistics, Hogg"></a><em>Introduction to Mathematical Statistics, Hogg</em></h4><center>
+<img src="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/Hogg.jpg" width="300" height="300"></center>
+
+
+
+<p>大四看的这本，感觉错过了五百万…因为我觉着这本书是我看过的数理统计的书里面（本科阶段）写的最好的了，越早看越好。Hogg这本书把sufficient statistics和complete statistics讲的简直出神入化，给人很大的震撼！后面对一些问题的分析也是之前没有见过的思路，比如对C-R下界的推导，完全是不同于别的任何书，而且过程很简洁。还有后面对LRT的介绍，也很有启发性，真的学到很多。大概一两个星期就看完了，因为时间比较紧张就没有做习题，不过大致看了下，习题的质量应该也是很好的，而且有答案。总之，很推荐看这本。</p>
+<h4 id="Statistical-Inference-Casella"><a href="#Statistical-Inference-Casella" class="headerlink" title="Statistical Inference, Casella"></a><em>Statistical Inference, Casella</em></h4><center><img src="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/casella.jpg" width="300" height="300"></center>
+
+
+
+
+<p>和Casella的恩怨情仇是一个很长的故事，从大二到现在…怎么说呢，这本书无论在广度上还是在深度上都是令人折服的。从概率论出发，一直到后面的点估计，假设检验，区间估计这些，几乎每一章都能刷新认知（真正看已经大四了，还是学到很多）。可以看得出里面每一个例题，甚至每一道课后都是精心布置的，真正帮助理解相关的概念。有些学校是把这本当作研究生教材的，不过本科看也完全可以（有些严格的数学推导可以略过）。这本书的格局是很大的，作者在前言说了，之所以写书的一个原因就是对现在的书不满意…举个例子，Casella对区间估计的定义如下：</p>
+<blockquote>
+<p><strong>Definition9.1.1</strong><br>An <em>intervel estimate</em> of a real-valued parameter $\theta$ is any pair of functions, $L(x_{1}, \cdots, x_{n})$ and $U(x_{1}, \cdots, x_{n})$, of a sample that satisfy $L(\mathbf{x}) \le U(\mathbf{x})$ for all $\mathbf{x} \in \mathbf{\chi}$. If $\mathbf{\chi} = \mathbf{x}$ is observed, the inference $L(\mathbf{x}) \le \theta \le U(\mathbf{x})$ is made. The random intervel $[L(\mathbf{X},U(\mathbf{X}]$ is called an <em>intervel estimate</em>.</p>
+</blockquote>
+<p>如果你拿这个定义去和国内的一些书（比如上面那些）去比较就会发现，其他书都是直接给出<strong>置信区间</strong>的概念，而不是<strong>区间估计</strong>的概念，也即这些书很容易一开始就“诱使”读者一想到区间估计，接着就想到置信水平为$1-\alpha$的置信区间，或者看到根据正态分布和T分布导出的置信区间形式进一步局限自己的思维。这里Casella很不同的一点就是他把估计过程和对估计的评价过程分离——我们几乎可以任意估计，比如对但参数总体，我不管样本如何，就总是把置信区间取成全体实数也是可以的（因为这就是一个区间估计），只不过它的意义不大罢了。也即分离开“是什么”和“怎么样”的问题，这是不容混淆的。</p>
+<p>这本书的课后题目有些就是根据稍微早些的论文改编，难度不是特别大，而且大多有详细的答案。有些题目没有解析解会给出数值解，也有的需要模拟的题目会给出R的代码！总之这本书有太多惊艳的地方，可以读很多遍。</p>
+<h3 id="待看"><a href="#待看" class="headerlink" title="待看"></a>待看</h3><h4 id="概率论及数理统计，-中山大学，邓集贤"><a href="#概率论及数理统计，-中山大学，邓集贤" class="headerlink" title="概率论及数理统计， 中山大学，邓集贤"></a><em>概率论及数理统计， 中山大学，邓集贤</em></h4><center><img src="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/%E4%B8%AD%E5%A4%A7%E9%82%93.jpg" width="300" height="300"></center>
+
+<p>简单看了下，感觉这书写的也还行，主要后面有随机过程的介绍，后面看下再更。</p>
+<h4 id="An-Introduction-to-Probability-and-Statistical-Inference-Second-Edition，George-G-Roussas"><a href="#An-Introduction-to-Probability-and-Statistical-Inference-Second-Edition，George-G-Roussas" class="headerlink" title="An Introduction to Probability and Statistical Inference Second Edition，George G. Roussas"></a>An Introduction to Probability and Statistical Inference Second Edition，George G. Roussas</h4><center><img src="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/Roussas.jpg" width="300" height="300"></center>
+
+<p>没记错的话这应该是清华的本科教材，之前看过几十页，目测不逊色于Casella。最关键的是这书比较新（虽然新旧并不太要紧…），15年出的，Casella比较早了。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2018/12/24/Probability-and-Mathematical-Statistics-Books/">Probability and Mathematical Statistics[Books]</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 不秩稚童 的个人博客">不秩稚童</a></p>
+  <p><span>作者邮箱:</span>datahonor@gmail.com</p>
+  <p><span>发布时间:</span>2018年12月24日 - 10:12</p>
+  <p><span>最后更新:</span>2018年12月24日 - 15:12</p>
+  <p><span>原始链接:</span><a href="/2018/12/24/Probability-and-Mathematical-Statistics-Books/" title="Probability and Mathematical Statistics[Books]">http://datahonor.com/2018/12/24/Probability-and-Mathematical-Statistics-Books/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2018/12/24/Probability-and-Mathematical-Statistics-Books/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+	clipboard.on('success', $(function(){
+	  $(".fa-clipboard").click(function(){
+		swal({   
+		  title: "",   
+		  text: '复制成功',   
+		  html: false,
+		  timer: 500,   
+		  showConfirmButton: false
+	    });
+	  });
+    }));  
+</script>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Probability/" rel="tag"># Probability</a>
+          
+            <a href="/tags/Statistics/" rel="tag"># Statistics</a>
+          
+            <a href="/tags/Books/" rel="tag"># Books</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/30/Errata-of-PythonDA/" rel="next" title="Errata of PythonDA">
+                <i class="fa fa-chevron-left"></i> Errata of PythonDA
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+
+
+
+
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
+               alt="不秩稚童" />
+          <p class="site-author-name" itemprop="name">不秩稚童</p>
+           
+              <p class="site-description motion-element" itemprop="description">十年饮冰，难凉热血。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">137</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/shenxiangzhuang" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/shen-xiang-zhuang" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.cnblogs.com/buzhizhitong" target="_blank" title="博客园">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  博客园
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在前面"><span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#已看"><span class="nav-text">已看</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#《概率论基础》，复旦大学，李贤平，第三版"><span class="nav-text">《概率论基础》，复旦大学，李贤平，第三版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#《概率论与数理统计》，浙大四版"><span class="nav-text">《概率论与数理统计》，浙大四版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#《数理统计讲义》，复旦大学，郑明"><span class="nav-text">《数理统计讲义》，复旦大学，郑明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#《数理统计》，厦门大学，程细玉"><span class="nav-text">《数理统计》，厦门大学，程细玉</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#《概率论与数理统计教程》，茆诗松，第二版"><span class="nav-text">《概率论与数理统计教程》，茆诗松，第二版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Elementary-Probability-Theory，Kai-Lai-Chung"><span class="nav-text">Elementary Probability Theory，Kai Lai Chung</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Introduction-to-Mathematical-Statistics-Hogg"><span class="nav-text">Introduction to Mathematical Statistics, Hogg</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Statistical-Inference-Casella"><span class="nav-text">Statistical Inference, Casella</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#待看"><span class="nav-text">待看</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#概率论及数理统计，-中山大学，邓集贤"><span class="nav-text">概率论及数理统计， 中山大学，邓集贤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#An-Introduction-to-Probability-and-Statistical-Inference-Second-Edition，George-G-Roussas"><span class="nav-text">An Introduction to Probability and Statistical Inference Second Edition，George G. Roussas</span></a></li></ol></li></ol></div>
+            
+
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">不秩稚童</span>
+</div>
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i>本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i>本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'http-datahonor-com';
+      var disqus_identifier = '2018/12/24/Probability-and-Mathematical-Statistics-Books/';
+
+      var disqus_title = "Probability and Mathematical Statistics[Books]";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+  
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+</body>
+</html>
