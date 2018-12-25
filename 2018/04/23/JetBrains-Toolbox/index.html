@@ -91,23 +91,26 @@
 
 <meta name="description" content="OverviewJetBrains工具使用记录。
 JetBrains Toolbox今天才发现的工具，可以同时管理PyCharm,Clion这些JetBrains的东西，安装和更新都十分方便。
-Desktop Entry有时启动栏会只出现问号，下面的方法可以方便地添加图标Tools -&amp;gt; Create Destktop Entry…
-参考这里">
+Desktop Entry安装后启动栏的Icon不能正常显示会只出现问号。
+下面的方法可以方便地添加图标Tools -&amp;gt; Create Destktop Entry…参考1
+…………………………………">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JetBrains Toolbox">
 <meta property="og:url" content="http://datahonor.com/2018/04/23/JetBrains-Toolbox/index.html">
 <meta property="og:site_name" content="DATA HONOR">
 <meta property="og:description" content="OverviewJetBrains工具使用记录。
 JetBrains Toolbox今天才发现的工具，可以同时管理PyCharm,Clion这些JetBrains的东西，安装和更新都十分方便。
-Desktop Entry有时启动栏会只出现问号，下面的方法可以方便地添加图标Tools -&amp;gt; Create Destktop Entry…
-参考这里">
-<meta property="og:updated_time" content="2018-04-23T15:43:13.481Z">
+Desktop Entry安装后启动栏的Icon不能正常显示会只出现问号。
+下面的方法可以方便地添加图标Tools -&amp;gt; Create Destktop Entry…参考1
+…………………………………">
+<meta property="og:updated_time" content="2018-12-25T04:10:39.397Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JetBrains Toolbox">
 <meta name="twitter:description" content="OverviewJetBrains工具使用记录。
 JetBrains Toolbox今天才发现的工具，可以同时管理PyCharm,Clion这些JetBrains的东西，安装和更新都十分方便。
-Desktop Entry有时启动栏会只出现问号，下面的方法可以方便地添加图标Tools -&amp;gt; Create Destktop Entry…
-参考这里">
+Desktop Entry安装后启动栏的Icon不能正常显示会只出现问号。
+下面的方法可以方便地添加图标Tools -&amp;gt; Create Destktop Entry…参考1
+…………………………………">
 
 
 
@@ -445,8 +448,14 @@ Desktop Entry有时启动栏会只出现问号，下面的方法可以方便地�
       
         <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>JetBrains工具使用记录。</p>
 <h4 id="JetBrains-Toolbox"><a href="#JetBrains-Toolbox" class="headerlink" title="JetBrains Toolbox"></a><a href="https://www.jetbrains.com/toolbox/" target="_blank" rel="external">JetBrains Toolbox</a></h4><p>今天才发现的工具，可以同时管理PyCharm,Clion这些JetBrains的东西，安装和更新都十分方便。</p>
-<h4 id="Desktop-Entry"><a href="#Desktop-Entry" class="headerlink" title="Desktop Entry"></a>Desktop Entry</h4><p>有时启动栏会只出现问号，下面的方法可以方便地添加图标<br>Tools -&gt; Create Destktop Entry…</p>
-<p>参考<a href="https://askubuntu.com/questions/391439/how-can-i-set-up-pycharm-to-launch-from-the-launcher" target="_blank" rel="external">这里</a></p>
+<h4 id="Desktop-Entry"><a href="#Desktop-Entry" class="headerlink" title="Desktop Entry"></a>Desktop Entry</h4><p>安装后启动栏的Icon不能正常显示会只出现问号。</p>
+<p>下面的方法可以方便地添加图标<br>Tools -&gt; Create Destktop Entry…<br><a href="https://askubuntu.com/questions/391439/how-can-i-set-up-pycharm-to-launch-from-the-launcher" target="_blank" rel="external">参考1</a></p>
+<p>…………………………………………………<br>2018/12/25更新………………………<br>…………………………………………………</p>
+<p>上面的方法在更新toolbox之后好像还是会出问题，参考<a href="https://youtrack.jetbrains.com/issue/IDEA-149703" target="_blank" rel="external">这里</a>，看到:</p>
+<blockquote>
+<p>Derek Costroff: I had this issue and resolved it by removing the icon file extension from the desktop file. i.e “.svg” or “.png” whatever your case may be.</p>
+</blockquote>
+<p>于是，<code>mv &#39;/usr/share/applications/jetbrains-pycharm.desktop&#39; /home/shensir/Downloads/</code>其他<code>CLion</code>也一样操作就可以。这里并没有delete掉，暂时放起来，不知道后面会不会用到。</p>
 
       
     </div>
@@ -465,7 +474,7 @@ Desktop Entry有时启动栏会只出现问号，下面的方法可以方便地�
   <p><span>文章作者:</span><a href="/" title="访问 不秩稚童 的个人博客">不秩稚童</a></p>
   <p><span>作者邮箱:</span>datahonor@gmail.com</p>
   <p><span>发布时间:</span>2018年04月23日 - 14:04</p>
-  <p><span>最后更新:</span>2018年04月23日 - 23:04</p>
+  <p><span>最后更新:</span>2018年12月25日 - 12:12</p>
   <p><span>原始链接:</span><a href="/2018/04/23/JetBrains-Toolbox/" title="JetBrains Toolbox">http://datahonor.com/2018/04/23/JetBrains-Toolbox/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2018/04/23/JetBrains-Toolbox/"  aria-label="复制成功！"></i></span>
   </p>

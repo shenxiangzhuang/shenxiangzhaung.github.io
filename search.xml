@@ -312,8 +312,14 @@
       <url>/2018/04/23/JetBrains-Toolbox/</url>
       <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>JetBrains工具使用记录。</p>
 <h4 id="JetBrains-Toolbox"><a href="#JetBrains-Toolbox" class="headerlink" title="JetBrains Toolbox"></a><a href="https://www.jetbrains.com/toolbox/" target="_blank" rel="external">JetBrains Toolbox</a></h4><p>今天才发现的工具，可以同时管理PyCharm,Clion这些JetBrains的东西，安装和更新都十分方便。</p>
-<h4 id="Desktop-Entry"><a href="#Desktop-Entry" class="headerlink" title="Desktop Entry"></a>Desktop Entry</h4><p>有时启动栏会只出现问号，下面的方法可以方便地添加图标<br>Tools -&gt; Create Destktop Entry…</p>
-<p>参考<a href="https://askubuntu.com/questions/391439/how-can-i-set-up-pycharm-to-launch-from-the-launcher" target="_blank" rel="external">这里</a></p>
+<h4 id="Desktop-Entry"><a href="#Desktop-Entry" class="headerlink" title="Desktop Entry"></a>Desktop Entry</h4><p>安装后启动栏的Icon不能正常显示会只出现问号。</p>
+<p>下面的方法可以方便地添加图标<br>Tools -&gt; Create Destktop Entry…<br><a href="https://askubuntu.com/questions/391439/how-can-i-set-up-pycharm-to-launch-from-the-launcher" target="_blank" rel="external">参考1</a></p>
+<p>…………………………………………………<br>2018/12/25更新………………………<br>…………………………………………………</p>
+<p>上面的方法在更新toolbox之后好像还是会出问题，参考<a href="https://youtrack.jetbrains.com/issue/IDEA-149703" target="_blank" rel="external">这里</a>，看到:</p>
+<blockquote>
+<p>Derek Costroff: I had this issue and resolved it by removing the icon file extension from the desktop file. i.e “.svg” or “.png” whatever your case may be.</p>
+</blockquote>
+<p>于是，<code>mv &#39;/usr/share/applications/jetbrains-pycharm.desktop&#39; /home/shensir/Downloads/</code>其他<code>CLion</code>也一样操作就可以。这里并没有delete掉，暂时放起来，不知道后面会不会用到。</p>
 ]]></content>
       
         <categories>
