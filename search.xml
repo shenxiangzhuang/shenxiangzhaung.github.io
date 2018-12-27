@@ -576,6 +576,8 @@
 <h4 id="edit-xxx-py"><a href="#edit-xxx-py" class="headerlink" title="edit xxx.py"></a>edit xxx.py</h4><p>指定用于编辑的工具后（我这里用的Vim），可以直接编辑文件。之后保存退出，代码会自动执行。</p>
 <h4 id="whos-del-reset"><a href="#whos-del-reset" class="headerlink" title="whos del %reset"></a>whos <a href="http://sofasofa.io/forum_main_post.php?postid=1000225" target="_blank" rel="external">del %reset</a></h4><p>whos，查看当前环境下的所有全局变量。<br>del x, 删除变量x<br>%reset [-f], 删去所有变量</p>
 <h4 id="function-name-amp-function-name"><a href="#function-name-amp-function-name" class="headerlink" title="function_name? &amp; function_name??"></a><a href="https://stackoverflow.com/questions/1562759/can-python-print-a-function-definition" target="_blank" rel="external">function_name? &amp; function_name??</a></h4><p>Use function_name? to get help, and function_name?? will print out the source.</p>
+<h4 id="IPython-in-virtual-environment"><a href="#IPython-in-virtual-environment" class="headerlink" title="IPython in virtual environment"></a>IPython in virtual environment</h4><p>在用conda创建新的env后会发现无法使用对应版本的IPython,于是可以先在这个环境新安装一个IPython。，然后运行<code>hash -r</code>。如果不运行后面的命令会发现打开的IPython还是之前默认的版本。后者的作用就是<code>forget all remembered locations</code>，所以就可以了。</p>
+<p><a href="https://howchoo.com/g/mgvizdexzje/how-to-make-ipython-work-in-a-virtualenv-virtual-environment" target="_blank" rel="external">参考1</a>, <a href="https://askubuntu.com/questions/952137/what-does-hash-r-command-do" target="_blank" rel="external">参考2</a></p>
 ]]></content>
       
         <categories>
