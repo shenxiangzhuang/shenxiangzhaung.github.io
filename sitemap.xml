@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://datahonor.com/2018/03/21/Jupyter-Lab-Multi-Kernels/</loc>
+    
+    <lastmod>2019-01-01T09:31:13.162Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://datahonor.com/2017/10/24/R-In-Jupyter/</loc>
+    
+    <lastmod>2019-01-01T09:30:14.290Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://datahonor.com/2018/03/08/IPython-Tips/</loc>
     
     <lastmod>2018-12-27T15:34:59.634Z</lastmod>
@@ -61,13 +75,6 @@
     <loc>http://datahonor.com/2018/05/19/Jupyter-nbextensions/</loc>
     
     <lastmod>2018-06-14T15:32:24.694Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/2018/03/21/Jupyter-Lab-Multi-Kernels/</loc>
-    
-    <lastmod>2018-06-14T15:08:52.011Z</lastmod>
     
   </url>
   
@@ -285,13 +292,6 @@
     <loc>http://datahonor.com/2017/10/24/Hello-Docker/</loc>
     
     <lastmod>2017-10-24T03:33:31.833Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/2017/10/24/R-In-Jupyter/</loc>
-    
-    <lastmod>2017-10-24T03:16:16.968Z</lastmod>
     
   </url>
   

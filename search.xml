@@ -531,6 +531,7 @@
       <title><![CDATA[Jupyter Lab&Multi-Kernels]]></title>
       <url>/2018/03/21/Jupyter-Lab-Multi-Kernels/</url>
       <content type="html"><![CDATA[<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>前些时候看到Jupyter Lab，用了下，感觉特别好用。不仅包括原来的Jupyter Notebook，而且还有各种环境的Console。一开始只是安装了Jupyter最专注的三个Kernel:Julia, Python和R。最近想撸下Haskell做数据分析的东西，所以就把Haskell的Kernel装上了,顺便把Octave一块装上了。</p>
+<h3 id="R-Kernel"><a href="#R-Kernel" class="headerlink" title="R Kernel"></a>R Kernel</h3><p>参考<a href="http://datahonor.com/2017/10/24/R-In-Jupyter/">R-In-Jupyter</a></p>
 <h3 id="Haskell-Kernel"><a href="#Haskell-Kernel" class="headerlink" title="Haskell Kernel"></a>Haskell Kernel</h3><p>直接看到官方的<a href="https://github.com/gibiansky/IHaskell" target="_blank" rel="external">Doc</a>,一开始执行<code>curl -sSL https://get.haskellstack.org/ | sh</code>的时候会提示用stack更新，但是我这里失败了，用了错误提示的另一种方法。后面安装基本没什么问题，虽然有一些Warning，但是没有影响。</p>
 <p>之后<a href="http://nbviewer.jupyter.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb" target="_blank" rel="external">测试</a>了下,很好用。帮助和提示依旧那么友好，另外还可以直接连到hoogle.</p>
 <p>另外，它的<a href="https://github.com/gibiansky/IHaskell/wiki" target="_blank" rel="external">wiki</a>提供了很多很Nice的Demo，以后有时间挑几个跑下。</p>
@@ -1207,6 +1208,14 @@ trans m1:
 <h4 id="添加新的库"><a href="#添加新的库" class="headerlink" title="添加新的库"></a>添加新的库</h4><p>通过上面的方式，运行R完全可以，也自带了一些经常用到的库。但是我们可能要添加新的库，这时候也可以通过命令行安装。</p>
 <p>在Notebook上查看所有安装的包，然后找到对应的路径。再到终端，以<code>root</code>运行R<code>sudo R</code>（需要权限）,之后运行<code>install.packages(&quot;lib name&quot;, lib=&quot;lib path&quot;)</code>（lib name替换为包名称, lib path替换为之前查看到的路径）即可。</p>
 <h3 id="Supplement"><a href="#Supplement" class="headerlink" title="Supplement"></a>Supplement</h3><p>看到Github上也提供了用Docker来配置的方法。话说一直不清楚Docker怎么玩的…这次打算研究下。</p>
+<h4 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h4><ol>
+<li>参照<a href="https://irkernel.github.io/installation/" target="_blank" rel="external">irkernel安装指南</a>“出错”</li>
+</ol>
+<p>在<strong>Rstudio</strong>执行第一条命令是可以的，但是第二条的时候会报错：</p>
+<blockquote>
+<p>jupyter-client has to be installed but “jupyter kernelspec —version” exited with code 127</p>
+</blockquote>
+<p>原因是不能在Rstudio执行，需要在终端直接启动R，然后执行如下命令即可，参考<a href="https://stackoverflow.com/questions/44056164/jupyter-client-has-to-be-installed-but-jupyter-kernelspec-version-exited-wit" target="_blank" rel="external">stackoverflow</a>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">install.packages(&apos;devtools&apos;)</div><div class="line"></div><div class="line">devtools::install_github(&apos;IRkernel/IRkernel&apos;)</div><div class="line"></div><div class="line">IRkernel::installspec()</div></pre></td></tr></table></figure></p>
 ]]></content>
       
         <categories>
@@ -1697,9 +1706,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Cpp </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Cpp </tag>
             
             <tag> Octave </tag>
             
@@ -1761,9 +1770,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> OpenCV </tag>
-            
             <tag> Python </tag>
+            
+            <tag> OpenCV </tag>
             
         </tags>
         
@@ -4417,9 +4426,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
@@ -4453,9 +4462,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
@@ -4504,9 +4513,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
@@ -4896,9 +4905,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
@@ -4938,9 +4947,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> Algorithm </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> ML </tag>
             
