@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://datahonor.com/2019/01/03/gcc-g/</loc>
+    <lastmod>2019-01-03T07:10:25.176Z</lastmod>
+    <data>
+        <display>
+        <title>gcc&g++</title>
+        <pubTime>2019-01-03T07:06:20.000Z</pubTime>
+        
+        <tag>Tips</tag>
+         
+        <tag>gcc</tag>
+         
+        <tag>g++</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://datahonor.com/2018/03/21/Jupyter-Lab-Multi-Kernels/</loc>
     <lastmod>2019-01-01T09:31:13.162Z</lastmod>
     <data>
@@ -970,9 +994,9 @@
         <title>百年回首--关于心形曲线的几种画法</title>
         <pubTime>2017-08-16T05:15:20.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>Cpp</tag>
+         
+        <tag>Python</tag>
          
         <tag>Octave</tag>
          
@@ -1212,9 +1236,9 @@
         <title>添加OpenCV3对Python3的支持&QT中使用OpenCV</title>
         <pubTime>2017-08-15T09:18:58.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>OpenCV</tag>
+         
+        <tag>Python</tag>
          
          
            
@@ -2455,9 +2479,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
@@ -2527,9 +2551,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
@@ -2557,9 +2581,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
@@ -2609,9 +2633,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          
@@ -2689,9 +2713,9 @@
         
         <tag>Python</tag>
          
-        <tag>Algorithm</tag>
-         
         <tag>Data Analysis</tag>
+         
+        <tag>Algorithm</tag>
          
         <tag>ML</tag>
          

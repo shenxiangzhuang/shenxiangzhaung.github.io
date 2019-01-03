@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title><![CDATA[gcc&g++]]></title>
+      <url>/2019/01/03/gcc-g/</url>
+      <content type="html"><![CDATA[<p>关于gcc的更新，参考<a href="https://gist.github.com/jlblancoc/99521194aba975286c80f93e47966dc5" target="_blank" rel="external">这里</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Tips </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Tips </tag>
+            
+            <tag> gcc </tag>
+            
+            <tag> g++ </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[S&S悖论]]></title>
       <url>/2018/12/27/S-S%E6%82%96%E8%AE%BA/</url>
       <content type="html"><![CDATA[<p>向学校反映了几个问题，主要和图书馆书记反映的。大概是图书馆图书查找问题，图书馆座位与扩建的问题，学生早读和图书馆禁止喧哗的冲突。</p>
@@ -1706,9 +1731,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Cpp </tag>
+            
+            <tag> Python </tag>
             
             <tag> Octave </tag>
             
@@ -1770,9 +1795,9 @@ query: 3: Negative
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> OpenCV </tag>
+            
+            <tag> Python </tag>
             
         </tags>
         
@@ -4426,9 +4451,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
@@ -4462,9 +4487,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
@@ -4513,9 +4538,9 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
@@ -4905,9 +4930,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
@@ -4947,9 +4972,9 @@ http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0
             
             <tag> Python </tag>
             
-            <tag> Algorithm </tag>
-            
             <tag> Data Analysis </tag>
+            
+            <tag> Algorithm </tag>
             
             <tag> ML </tag>
             
