@@ -3,6 +3,37 @@
   
     
     <entry>
+      <title><![CDATA[virtualenv error]]></title>
+      <url>/2019/01/16/virtualenv-error/</url>
+      <content type="html"><![CDATA[<p>使用virtualenv创建虚拟环境，遇到错误：</p>
+<blockquote>
+<p>error while loading shared libraries: libpython3.6m.so.1.0: cannot open shared object file: No such file or directory</p>
+</blockquote>
+<p>发现很多人都遇到这个问题，最后参考<a href="https://stackoverflow.com/questions/43333207/python-error-while-loading-shared-libraries-libpython3-4m-so-1-0-cannot-open" target="_blank" rel="external">stackoverflow</a>解决。</p>
+<p>就是添加个环境变量，方法如下：</p>
+<blockquote>
+<p>sudo gedit  ~/.profile<br>export LD_LIBRARY_PATH = $LD_LIBRARY_PATH:/home/shensir/anaconda3/lib<br>source .profile</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Error </tag>
+            
+            <tag> virtualenv </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[R package installiation]]></title>
       <url>/2019/01/03/R-package-installiation/</url>
       <content type="html"><![CDATA[<p>R久没有遇到装库的问题，今天遇到两个比较有趣的。</p>
