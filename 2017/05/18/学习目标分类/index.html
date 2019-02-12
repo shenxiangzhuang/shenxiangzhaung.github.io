@@ -1,25 +1,4 @@
-<!doctype html>
-
-
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-Hans">
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
+<!DOCTYPE html>
 
 
 
@@ -33,47 +12,14 @@
 
 
   
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Cpp,OpenCV," />
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
 
 
 
@@ -82,43 +28,54 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
 
 
 
 
-<meta name="description" content="Overview还是OpenCV By Example， 承接上文的目标分割和检测，这里用SVM进行了分类的学习。由于从PACKT下载的代码是基于QT的，而我。。开始编译OpenCV没有选QT支持，重新编译也一致出错，就暂时没去用QT的按钮那些功能，也就没QT进行编译了。。扯多了，回到正题。代码应该是有一些bug的，折腾了一下午才调试好…
-原理还是比较简单的，处理的流程也较为清晰。对图片主要是进行">
-<meta property="og:type" content="article">
-<meta property="og:title" content="学习目标分类">
-<meta property="og:url" content="http://datahonor.com/2017/05/18/学习目标分类/index.html">
-<meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="Overview还是OpenCV By Example， 承接上文的目标分割和检测，这里用SVM进行了分类的学习。由于从PACKT下载的代码是基于QT的，而我。。开始编译OpenCV没有选QT支持，重新编译也一致出错，就暂时没去用QT的按钮那些功能，也就没QT进行编译了。。扯多了，回到正题。代码应该是有一些bug的，折腾了一下午才调试好…
-原理还是比较简单的，处理的流程也较为清晰。对图片主要是进行">
-<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/170518/Selection_051804.png">
-<meta property="og:updated_time" content="2017-05-18T10:12:06.784Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习目标分类">
-<meta name="twitter:description" content="Overview还是OpenCV By Example， 承接上文的目标分割和检测，这里用SVM进行了分类的学习。由于从PACKT下载的代码是基于QT的，而我。。开始编译OpenCV没有选QT支持，重新编译也一致出错，就暂时没去用QT的按钮那些功能，也就没QT进行编译了。。扯多了，回到正题。代码应该是有一些bug的，折腾了一下午才调试好…
-原理还是比较简单的，处理的流程也较为清晰。对图片主要是进行">
-<meta name="twitter:image" content="http://blog-1252464519.costj.myqcloud.com/170518/Selection_051804.png">
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0">
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
-    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '不秩稚童'
-    },
+    scheme: 'Gemini',
+    version: '7.0.0',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -130,34 +87,50 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://datahonor.com/2017/05/18/学习目标分类/"/>
-
-
-
-
-
-  <title> 学习目标分类 | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
 
 
 
 
-<!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-92663335-1', 'auto');
-  ga('send', 'pageview');
+  <meta name="description" content="Overview还是OpenCV By Example， 承接上文的目标分割和检测，这里用SVM进行了分类的学习。由于从PACKT下载的代码是基于QT的，而我。。开始编译OpenCV没有选QT支持，重新编译也一致出错，就暂时没去用QT的按钮那些功能，也就没QT进行编译了。。扯多了，回到正题。代码应该是有一些bug的，折腾了一下午才调试好… 原理还是比较简单的，处理的流程也较为清晰。对图片主要是进行">
+<meta name="keywords" content="Cpp,OpenCV">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习目标分类">
+<meta property="og:url" content="http://datahonor.com/2017/05/18/学习目标分类/index.html">
+<meta property="og:site_name" content="DATA HONOR">
+<meta property="og:description" content="Overview还是OpenCV By Example， 承接上文的目标分割和检测，这里用SVM进行了分类的学习。由于从PACKT下载的代码是基于QT的，而我。。开始编译OpenCV没有选QT支持，重新编译也一致出错，就暂时没去用QT的按钮那些功能，也就没QT进行编译了。。扯多了，回到正题。代码应该是有一些bug的，折腾了一下午才调试好… 原理还是比较简单的，处理的流程也较为清晰。对图片主要是进行">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/170518/Selection_051804.png">
+<meta property="og:updated_time" content="2017-05-18T10:12:06.784Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习目标分类">
+<meta name="twitter:description" content="Overview还是OpenCV By Example， 承接上文的目标分割和检测，这里用SVM进行了分类的学习。由于从PACKT下载的代码是基于QT的，而我。。开始编译OpenCV没有选QT支持，重新编译也一致出错，就暂时没去用QT的按钮那些功能，也就没QT进行编译了。。扯多了，回到正题。代码应该是有一些bug的，折腾了一下午才调试好… 原理还是比较简单的，处理的流程也较为清晰。对图片主要是进行">
+<meta name="twitter:image" content="http://blog-1252464519.costj.myqcloud.com/170518/Selection_051804.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://datahonor.com/2017/05/18/学习目标分类/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
 </script>
 
+  <title>学习目标分类 | DATA HONOR</title>
+  
 
-  <script type="text/javascript">
+
+
+
+
+
+  <script>
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -173,36 +146,65 @@
 
 
 
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
 
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">DATA HONOR</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
-        <p class="site-subtitle">Never say never.</p>
+        <h1 class="site-subtitle" itemprop="description">Never say never.</h1>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -210,82 +212,117 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
 
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
   
 
   
+
+  
     <div class="site-search">
       
-  <div class="popup local-search-popup">
+  <div class="popup search-popup local-search-popup">
   <div class="local-search-header clearfix">
     <span class="search-icon">
       <i class="fa fa-search"></i>
@@ -294,7 +331,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -308,12 +345,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -326,39 +374,44 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/05/18/学习目标分类/">
+  
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="不秩稚童">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
-  </span>
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/05/18/学习目标分类/">
 
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="DATA HONOR">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不秩稚童">
+      <meta itemprop="description" content="十年饮冰，难凉热血。">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DATA HONOR">
+    </span>
 
     
       <header class="post-header">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                学习目标分类
+          <h2 class="post-title" itemprop="name headline">学习目标分类
+
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -366,18 +419,23 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-18T17:58:12+08:00">
-                2017-05-18
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-05-18 17:58:12 / 修改时间：18:12:06" itemprop="dateCreated datePublished" datetime="2017-05-18T17:58:12+08:00">2017-05-18</time>
             
 
             
+              
 
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -388,11 +446,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Cpp/" itemprop="url" rel="index">
-                    <span itemprop="name">Cpp</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Cpp/" itemprop="url" rel="index"><span itemprop="name">Cpp</span></a></span>
 
                 
                 
@@ -402,13 +456,16 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
                 <a href="/2017/05/18/学习目标分类/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/18/学习目标分类/" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/05/18/学习目标分类/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -416,11 +473,24 @@
 
           
           
+            <span id="/2017/05/18/学习目标分类/" class="leancloud_visitors" data-flag-title="学习目标分类">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
 
           
             <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>本文总阅读量
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -432,7 +502,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -441,7 +513,7 @@
       
         <h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>还是<em>OpenCV By Example</em>， 承接上文的目标分割和检测，这里用SVM进行了分类的学习。由于从PACKT下载的代码是基于QT的，而我。。开始编译OpenCV没有选QT支持，重新编译也一致出错，就暂时没去用QT的按钮那些功能，也就没QT进行编译了。。扯多了，回到正题。代码应该是有一些bug的，折腾了一下午才调试好…</p>
 <p>原理还是比较简单的，处理的流程也较为清晰。对图片主要是进行了中值滤波，去除光纹，和灰度二值化提取轮廓的操作。抽取螺丝环，螺母，螺丝钉的面积和长宽比这两个特征进行训练，测试误差在2%以下，看书上的截图，原作的误差在7%左右…可能和OpenCV的改进有关吧。</p>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div><div class="line">293</div><div class="line">294</div><div class="line">295</div><div class="line">296</div><div class="line">297</div><div class="line">298</div><div class="line">299</div><div class="line">300</div><div class="line">301</div><div class="line">302</div><div class="line">303</div><div class="line">304</div><div class="line">305</div><div class="line">306</div><div class="line">307</div><div class="line">308</div><div class="line">309</div><div class="line">310</div><div class="line">311</div><div class="line">312</div><div class="line">313</div><div class="line">314</div><div class="line">315</div><div class="line">316</div><div class="line">317</div><div class="line">318</div><div class="line">319</div><div class="line">320</div><div class="line">321</div><div class="line">322</div><div class="line">323</div><div class="line">324</div><div class="line">325</div><div class="line">326</div><div class="line">327</div><div class="line">328</div><div class="line">329</div><div class="line">330</div><div class="line">331</div><div class="line">332</div><div class="line">333</div><div class="line">334</div><div class="line">335</div><div class="line">336</div><div class="line">337</div><div class="line">338</div><div class="line">339</div><div class="line">340</div><div class="line">341</div><div class="line">342</div><div class="line">343</div><div class="line">344</div><div class="line">345</div><div class="line">346</div><div class="line">347</div><div class="line">348</div><div class="line">349</div><div class="line">350</div><div class="line">351</div><div class="line">352</div><div class="line">353</div><div class="line">354</div><div class="line">355</div><div class="line">356</div><div class="line">357</div><div class="line">358</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//</div><div class="line">// Created by shensir on 17-5-17.</div><div class="line">//</div><div class="line"></div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include "opencv2/highgui.hpp"</div><div class="line">#include "opencv2/imgproc.hpp"</div><div class="line">#include "opencv2/ml.hpp"</div><div class="line"></div><div class="line">using namespace std;</div><div class="line">using namespace cv;</div><div class="line">using namespace cv::ml;</div><div class="line"></div><div class="line">// 一些全局变量</div><div class="line">Mat light_pattern;</div><div class="line">Ptr&lt;SVM&gt; svm;</div><div class="line">Scalar green(0,255,0), blue (255,0,0), red (0,0,255);</div><div class="line"></div><div class="line">// 光纹去除</div><div class="line">Mat removeLight(Mat img, Mat pattern)</div><div class="line">&#123;</div><div class="line">    Mat aux;</div><div class="line">    // Require change our image to 32 float for division</div><div class="line">    Mat img32, pattern32;</div><div class="line">    img.convertTo(img32, CV_32F);</div><div class="line">    pattern.convertTo(pattern32, CV_32F);</div><div class="line">    // Divide the imabe by the pattern</div><div class="line">    aux= 255*(1-(img32/pattern32));</div><div class="line">    // Convert 8 bits format</div><div class="line">    aux.convertTo(aux, CV_8U);</div><div class="line"></div><div class="line">    return aux;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">// 特征抽取，这里抽取面积及宽高比</div><div class="line">vector&lt;vector&lt;float&gt; &gt; ExtractFeatures(Mat img, vector&lt;int&gt;*left=NULL, vector&lt;int&gt;*top=NULL)</div><div class="line">&#123;</div><div class="line">//    count_num +=1;</div><div class="line">    vector&lt;vector&lt;float&gt;&gt; output;</div><div class="line">    vector&lt;vector&lt;Point&gt;&gt; contours;</div><div class="line">    Mat input = img.clone();</div><div class="line"></div><div class="line">    vector&lt;Vec4i&gt;hierarchy;</div><div class="line">    findContours(input, contours, hierarchy, RETR_CCOMP, CHAIN_APPROX_SIMPLE);</div><div class="line">    // 检查被检测到的物体个数</div><div class="line">    if(contours.size() == 0) return output;</div><div class="line"></div><div class="line">    for(int i=0; i&lt;contours.size(); i++)&#123;</div><div class="line">        Mat mask = Mat::zeros(img.rows, img.cols, CV_8UC1);</div><div class="line">        drawContours(mask, contours, i, Scalar(1), FILLED, LINE_8, hierarchy, 1);</div><div class="line">        Scalar area_s = sum(mask);</div><div class="line">        float area = area_s[0];</div><div class="line"></div><div class="line">        if(area&gt;500)&#123;// 如果area大于面积最小阀值</div><div class="line">            RotatedRect r = minAreaRect(contours[i]);</div><div class="line">            float width = r.size.width;</div><div class="line">            float height = r.size.height;</div><div class="line">            float ar = (width&lt;height)?height/width:width/height;</div><div class="line"></div><div class="line">            // 存储特征数据</div><div class="line">            vector&lt;float&gt; row;</div><div class="line">            row.push_back(area);</div><div class="line">            row.push_back(ar);</div><div class="line">            output.push_back(row);</div><div class="line">            // 用于添加文字时候的定位</div><div class="line">            if(left!=NULL)&#123;</div><div class="line">                left-&gt;push_back(int(r.center.x));</div><div class="line">            &#125;</div><div class="line">            if(top!=NULL)&#123;</div><div class="line">                top-&gt;push_back(int(r.center.y));</div><div class="line">            &#125;</div><div class="line">            // 显示特征抽取的结果</div><div class="line">            imshow("Extract Features", mask*255);</div><div class="line">            waitKey(10);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return output;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">// 图片预处理</div><div class="line">Mat preprocessImage(Mat input)</div><div class="line">&#123;</div><div class="line">    // 灰度化</div><div class="line">    if(input.channels()!=1)</div><div class="line">        cvtColor(input, input, COLOR_BGR2GRAY);</div><div class="line"></div><div class="line">    Mat result;</div><div class="line">    // Remove noise</div><div class="line">    Mat img_noise;</div><div class="line">    medianBlur(input, img_noise, 3);</div><div class="line">    //Apply the light pattern</div><div class="line">    Mat img_no_light;</div><div class="line">    img_noise.copyTo(img_no_light);</div><div class="line">    // 去除光纹</div><div class="line">    img_no_light= removeLight(img_noise, light_pattern);</div><div class="line"></div><div class="line"></div><div class="line">    // Binarize image for segment</div><div class="line">    threshold(img_no_light, result, 30, 255, THRESH_BINARY);</div><div class="line"></div><div class="line">    return result;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">// 从文件批量读取图片，并进行特征抽取</div><div class="line">bool readFolderAndExtractFeatures(string folder, int label, int num_for_test,</div><div class="line">                                    vector&lt;float&gt;&amp;trainingData, vector&lt;int&gt;&amp;responeseData,</div><div class="line">                                    vector&lt;float&gt;&amp;testData, vector&lt;float&gt;&amp;testResponsesData)</div><div class="line">&#123;</div><div class="line">    VideoCapture images(folder);</div><div class="line">    if(images.open(folder) == false)&#123;</div><div class="line">        cout&lt;&lt;"Can not open the folder images"&lt;&lt;endl;</div><div class="line">        return false;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    Mat frame;</div><div class="line">    int img_index=0;</div><div class="line">    while(images.read(frame))&#123;</div><div class="line"></div><div class="line">        // 预处理图像</div><div class="line">        images&gt;&gt;frame;  //  书上参考代码没有这句，貌似bug...</div><div class="line">        if(!frame.empty())&#123;</div><div class="line"></div><div class="line">            // 预处理</div><div class="line">            Mat pre = preprocessImage(frame);</div><div class="line">            // 提取特征</div><div class="line">            vector&lt;vector&lt;float&gt;&gt; features = ExtractFeatures(pre);</div><div class="line">            for(int i=0; i&lt;features.size(); i++)&#123;</div><div class="line">                if(img_index &gt;= num_for_test)&#123;</div><div class="line">                    trainingData.push_back(features[i][0]);</div><div class="line">                    trainingData.push_back(features[i][1]);</div><div class="line">                    responeseData.push_back(label);</div><div class="line"></div><div class="line">                &#125;else&#123;</div><div class="line">                    testData.push_back(features[i][0]);</div><div class="line">                    testData.push_back(features[i][1]);</div><div class="line">                    testResponsesData.push_back(float(label));</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            img_index ++;</div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    return true;</div><div class="line"></div><div class="line">&#125;;</div><div class="line"></div><div class="line"></div><div class="line">// 做图</div><div class="line">void plotTrainData(Mat trainData, Mat labels, float *error=NULL)</div><div class="line">&#123;</div><div class="line">    float area_max, ar_max, area_min, ar_min;</div><div class="line">    area_max= ar_max= 0;</div><div class="line">    area_min= ar_min= 99999999;</div><div class="line">    // Get the min and max of each feature for normalize plot image</div><div class="line">    for(int i=0; i&lt; trainData.rows; i++)&#123;</div><div class="line">        float area= trainData.at&lt;float&gt;(i,0);</div><div class="line">        float ar= trainData.at&lt;float&gt;(i,1);</div><div class="line">        if(area &gt; area_max)</div><div class="line">            area_max= area;</div><div class="line">        if( ar &gt; ar_max )</div><div class="line">            ar_max= ar;</div><div class="line">        if(area &lt; area_min)</div><div class="line">            area_min= area;</div><div class="line">        if(ar &lt; ar_min)</div><div class="line">            ar_min= ar;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // Create Image for plot</div><div class="line">    Mat plot= Mat::zeros(512,512,CV_8UC3);</div><div class="line">    // Plot each of two features in a 2D graph using an image</div><div class="line">    // where x is area and y is aspect ratio</div><div class="line">    for(int i=0; i&lt; trainData.rows; i++)&#123;</div><div class="line">        // Set the X y pos for each data</div><div class="line">        float area= trainData.at&lt;float&gt;(i,0);</div><div class="line">        float ar= trainData.at&lt;float&gt;(i,1);</div><div class="line">        int x= (int)(512.0f*((area-area_min)/(area_max-area_min)));</div><div class="line">        int y= (int)(512.0f*((ar-ar_min)/(ar_max-ar_min)));</div><div class="line"></div><div class="line">        // Get label</div><div class="line">        int label= labels.at&lt;int&gt;(i);</div><div class="line">        // Set color depend of label</div><div class="line">        Scalar color;</div><div class="line">        if(label==0)</div><div class="line">            color= green; // NUT</div><div class="line">        else if(label==1)</div><div class="line">            color= blue; // ring</div><div class="line">        else if(label==2)</div><div class="line">            color= red; // SCREW</div><div class="line"></div><div class="line">        circle( plot,  Point(x, y), 3,  color, -1, 8);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    if(error!=NULL)&#123;</div><div class="line">        stringstream ss;</div><div class="line">        ss &lt;&lt; "Error: " &lt;&lt; *error &lt;&lt; "%";</div><div class="line">        putText(plot, ss.str().c_str(), Point(20,512-40), FONT_HERSHEY_SIMPLEX, 0.75, Scalar(200,200,200), 1, LINE_AA);</div><div class="line">    &#125;</div><div class="line">    imshow("plot", plot);</div><div class="line">//    waitKey(0);</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">// 训练并测试误差</div><div class="line">void trainAndTest() &#123;</div><div class="line">    vector&lt;float&gt; trainingData;</div><div class="line">    vector&lt;int&gt; responsesData;</div><div class="line">    vector&lt;float&gt; testData;</div><div class="line">    vector&lt;float&gt; testResponsesData;</div><div class="line"></div><div class="line">    int num_for_test = 20;</div><div class="line"></div><div class="line"></div><div class="line">    // 获取螺母图像</div><div class="line">    readFolderAndExtractFeatures("/home/shensir/Documents/MyPrograming/Cpp/books/CV/2-ing/9781785280948_Code/"</div><div class="line">                                         "B04283_06_code/data/nut/tuerca_%04d.pgm", 0,</div><div class="line">                                 num_for_test, trainingData, responsesData, testData, testResponsesData);</div><div class="line"></div><div class="line">    // 获取螺丝圈图像</div><div class="line">    readFolderAndExtractFeatures("/home/shensir/Documents/MyPrograming/Cpp/books/CV/2-ing/9781785280948_Code/"</div><div class="line">                                         "B04283_06_code/data/ring/arandela_%04d.pgm", 1,</div><div class="line">                                 num_for_test, trainingData, responsesData, testData, testResponsesData);</div><div class="line"></div><div class="line"></div><div class="line">    // 获取并处理螺丝</div><div class="line">    readFolderAndExtractFeatures("/home/shensir/Documents/MyPrograming/Cpp/books/CV/2-ing/"</div><div class="line">                                         "9781785280948_Code/B04283_06_code/data/screw/tornillo_%04d.pgm", 2,</div><div class="line">                                 num_for_test, trainingData, responsesData, testData, testResponsesData);</div><div class="line"></div><div class="line">    cout&lt;&lt;"Num of train samples: "&lt;&lt;responsesData.size()&lt;&lt;endl;</div><div class="line"></div><div class="line">    cout&lt;&lt;"Num of test samples: "&lt;&lt;testResponsesData.size()&lt;&lt;endl;</div><div class="line"></div><div class="line">    // 合并</div><div class="line">    // Mat(int rows, int cols, int type, void* data, size_t step=AUTO_STEP);</div><div class="line"></div><div class="line">    Mat trainingDataMat(trainingData.size()/2 ,2, CV_32FC1, &amp;trainingData[0]);</div><div class="line">    Mat responses(responsesData.size(), 1, CV_32SC1, &amp;responsesData[0]);</div><div class="line"></div><div class="line">    Mat testDataMat(testData.size()/2, 2, CV_32FC1, &amp;testData[0]);</div><div class="line">    Mat testRespones(testResponsesData.size(), 1, CV_32FC1, &amp;testResponsesData[0]);</div><div class="line"></div><div class="line">    svm = SVM::create();</div><div class="line">    svm-&gt;setType(SVM::C_SVC);</div><div class="line">    svm-&gt;setKernel(SVM::CHI2);</div><div class="line">    svm-&gt;setTermCriteria(TermCriteria(TermCriteria::MAX_ITER, 100, 1e-6));</div><div class="line"></div><div class="line">    svm-&gt;train(trainingDataMat, ROW_SAMPLE, responses);</div><div class="line"></div><div class="line">    if(testResponsesData.size() &gt;0)&#123;</div><div class="line">        cout&lt;&lt;"Evaluation"&lt;&lt;endl;</div><div class="line">        cout&lt;&lt;"============"&lt;&lt;endl;</div><div class="line">        // test the ML model</div><div class="line">        Mat testPredict;</div><div class="line">        svm-&gt;predict(testDataMat, testPredict);</div><div class="line">        cout&lt;&lt;"Prediction Done"&lt;&lt;endl;</div><div class="line">        // error handle</div><div class="line">        Mat errorMat = testPredict != testRespones;</div><div class="line">        float error = 100.0f * countNonZero(errorMat) / testResponsesData.size();</div><div class="line">        cout&lt;&lt;"Error: "&lt;&lt;error&lt;&lt;"%"&lt;&lt;endl;</div><div class="line">        //plot data</div><div class="line">        plotTrainData(trainingDataMat, responses, &amp;error);</div><div class="line"></div><div class="line">    &#125;else&#123;</div><div class="line">        plotTrainData(trainingDataMat, responses);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">int main( int argc, const char** argv )</div><div class="line">&#123;</div><div class="line"></div><div class="line">    // Load image to process</div><div class="line">    Mat img= imread("/home/shensir/Documents/MyPrograming/Cpp/books/CV/2-ing/9781785280948_Code/B04283_06_code/data/test.pgm", IMREAD_GRAYSCALE);</div><div class="line">    if(img.data==NULL)&#123;</div><div class="line">        cout &lt;&lt; "Error loading image "&lt;&lt; endl;</div><div class="line">        return 0;</div><div class="line">    &#125;</div><div class="line">    imshow("img", img);</div><div class="line"></div><div class="line"></div><div class="line">    // Load image to process</div><div class="line">    light_pattern= imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/light.pgm", 0);</div><div class="line">    if(light_pattern.data==NULL)&#123;</div><div class="line">        // Calculate light pattern</div><div class="line">        cout &lt;&lt; "ERROR: Not light patter loaded" &lt;&lt; endl;</div><div class="line">        return 0;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    medianBlur(light_pattern, light_pattern, 3);</div><div class="line"></div><div class="line">    trainAndTest();</div><div class="line"></div><div class="line">    //// Preprocess image</div><div class="line">    Mat pre= preprocessImage(img);</div><div class="line">    ////End preprocess</div><div class="line"></div><div class="line">    // Extract features</div><div class="line">    vector&lt;int&gt; pos_top, pos_left;</div><div class="line">    vector&lt; vector&lt;float&gt; &gt; features= ExtractFeatures(pre, &amp;pos_left, &amp;pos_top);</div><div class="line"></div><div class="line">    cout &lt;&lt; "Num objects extracted features " &lt;&lt; features.size() &lt;&lt; endl;</div><div class="line"></div><div class="line">    Mat img_output= img.clone();</div><div class="line">    cvtColor(img_output, img_output, COLOR_GRAY2BGR);</div><div class="line"></div><div class="line">    for(int i=0; i&lt; features.size(); i++)&#123;</div><div class="line"></div><div class="line">        cout &lt;&lt; "Data Area AR: " &lt;&lt; features[i][0] &lt;&lt; " " &lt;&lt; features[i][1] &lt;&lt; endl;</div><div class="line"></div><div class="line">        Mat trainingDataMat(1, 2, CV_32FC1, &amp;features[i][0]);</div><div class="line">        cout &lt;&lt; "Features to predict: " &lt;&lt; trainingDataMat &lt;&lt; endl;</div><div class="line">        float result= svm-&gt;predict(trainingDataMat);</div><div class="line">        cout &lt;&lt; result &lt;&lt; endl;</div><div class="line"></div><div class="line"></div><div class="line">        stringstream ss;</div><div class="line">        Scalar color;</div><div class="line">        if(result==0)&#123;</div><div class="line">            color= green; // NUT</div><div class="line">            ss &lt;&lt; "NUT";</div><div class="line">        &#125;</div><div class="line">        else if(result==1)&#123;</div><div class="line">            color= blue; // RING</div><div class="line">            ss &lt;&lt; "RING" ;</div><div class="line">        &#125;</div><div class="line">        else if(result==2)&#123;</div><div class="line">            color= red; // SCREW</div><div class="line">            ss &lt;&lt; "SCREW";</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        putText(img_output,</div><div class="line">                ss.str(),</div><div class="line">                Point2d(pos_left[i], pos_top[i]),</div><div class="line">                FONT_HERSHEY_SIMPLEX,</div><div class="line">                0.4,</div><div class="line">                color);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    //vector&lt;int&gt; results= evaluate(features);</div><div class="line"></div><div class="line">    // Show images</div><div class="line">    imshow("Binary image", pre);</div><div class="line">    imshow("Result", img_output);</div><div class="line">    waitKey(0);</div><div class="line">    return 0;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Created by shensir on 17-5-17.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"opencv2/highgui.hpp"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"opencv2/imgproc.hpp"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"opencv2/ml.hpp"</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv::ml;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 一些全局变量</span></span><br><span class="line">Mat light_pattern;</span><br><span class="line">Ptr&lt;SVM&gt; svm;</span><br><span class="line">Scalar green(0,255,0), blue (255,0,0), red (0,0,255);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 光纹去除</span></span><br><span class="line"><span class="function">Mat <span class="title">removeLight</span><span class="params">(Mat img, Mat pattern)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Mat aux;</span><br><span class="line">    <span class="comment">// Require change our image to 32 float for division</span></span><br><span class="line">    Mat img32, pattern32;</span><br><span class="line">    img.convertTo(img32, CV_32F);</span><br><span class="line">    pattern.convertTo(pattern32, CV_32F);</span><br><span class="line">    <span class="comment">// Divide the imabe by the pattern</span></span><br><span class="line">    aux= <span class="number">255</span>*(<span class="number">1</span>-(img32/pattern32));</span><br><span class="line">    <span class="comment">// Convert 8 bits format</span></span><br><span class="line">    aux.convertTo(aux, CV_8U);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> aux;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 特征抽取，这里抽取面积及宽高比</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt; &gt; ExtractFeatures(Mat img, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;*left=<span class="literal">NULL</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;*top=<span class="literal">NULL</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//    count_num +=1;</span></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt;&gt; output;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;Point&gt;&gt; contours;</span><br><span class="line">    Mat input = img.clone();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;Vec4i&gt;hierarchy;</span><br><span class="line">    findContours(input, contours, hierarchy, RETR_CCOMP, CHAIN_APPROX_SIMPLE);</span><br><span class="line">    <span class="comment">// 检查被检测到的物体个数</span></span><br><span class="line">    <span class="keyword">if</span>(contours.size() == <span class="number">0</span>) <span class="keyword">return</span> output;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;contours.size(); i++)&#123;</span><br><span class="line">        Mat mask = Mat::zeros(img.rows, img.cols, CV_8UC1);</span><br><span class="line">        drawContours(mask, contours, i, Scalar(<span class="number">1</span>), FILLED, LINE_8, hierarchy, <span class="number">1</span>);</span><br><span class="line">        Scalar area_s = sum(mask);</span><br><span class="line">        <span class="keyword">float</span> area = area_s[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(area&gt;<span class="number">500</span>)&#123;<span class="comment">// 如果area大于面积最小阀值</span></span><br><span class="line">            RotatedRect r = minAreaRect(contours[i]);</span><br><span class="line">            <span class="keyword">float</span> width = r.size.width;</span><br><span class="line">            <span class="keyword">float</span> height = r.size.height;</span><br><span class="line">            <span class="keyword">float</span> ar = (width&lt;height)?height/width:width/height;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 存储特征数据</span></span><br><span class="line">            <span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt; row;</span><br><span class="line">            row.push_back(area);</span><br><span class="line">            row.push_back(ar);</span><br><span class="line">            output.push_back(row);</span><br><span class="line">            <span class="comment">// 用于添加文字时候的定位</span></span><br><span class="line">            <span class="keyword">if</span>(left!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">                left-&gt;push_back(<span class="keyword">int</span>(r.center.x));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(top!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">                top-&gt;push_back(<span class="keyword">int</span>(r.center.y));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 显示特征抽取的结果</span></span><br><span class="line">            imshow(<span class="string">"Extract Features"</span>, mask*<span class="number">255</span>);</span><br><span class="line">            waitKey(<span class="number">10</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> output;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 图片预处理</span></span><br><span class="line"><span class="function">Mat <span class="title">preprocessImage</span><span class="params">(Mat input)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 灰度化</span></span><br><span class="line">    <span class="keyword">if</span>(input.channels()!=<span class="number">1</span>)</span><br><span class="line">        cvtColor(input, input, COLOR_BGR2GRAY);</span><br><span class="line"></span><br><span class="line">    Mat result;</span><br><span class="line">    <span class="comment">// Remove noise</span></span><br><span class="line">    Mat img_noise;</span><br><span class="line">    medianBlur(input, img_noise, <span class="number">3</span>);</span><br><span class="line">    <span class="comment">//Apply the light pattern</span></span><br><span class="line">    Mat img_no_light;</span><br><span class="line">    img_noise.copyTo(img_no_light);</span><br><span class="line">    <span class="comment">// 去除光纹</span></span><br><span class="line">    img_no_light= removeLight(img_noise, light_pattern);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Binarize image for segment</span></span><br><span class="line">    threshold(img_no_light, result, <span class="number">30</span>, <span class="number">255</span>, THRESH_BINARY);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 从文件批量读取图片，并进行特征抽取</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">readFolderAndExtractFeatures</span><span class="params">(<span class="built_in">string</span> folder, <span class="keyword">int</span> label, <span class="keyword">int</span> num_for_test,</span></span></span><br><span class="line"><span class="function"><span class="params">                                    <span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt;&amp;trainingData, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp;responeseData,</span></span></span><br><span class="line"><span class="function"><span class="params">                                    <span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt;&amp;testData, <span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt;&amp;testResponsesData)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function">VideoCapture <span class="title">images</span><span class="params">(folder)</span></span>;</span><br><span class="line">    <span class="keyword">if</span>(images.open(folder) == <span class="literal">false</span>)&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Can not open the folder images"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Mat frame;</span><br><span class="line">    <span class="keyword">int</span> img_index=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(images.read(frame))&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 预处理图像</span></span><br><span class="line">        images&gt;&gt;frame;  <span class="comment">//  书上参考代码没有这句，貌似bug...</span></span><br><span class="line">        <span class="keyword">if</span>(!frame.empty())&#123;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 预处理</span></span><br><span class="line">            Mat pre = preprocessImage(frame);</span><br><span class="line">            <span class="comment">// 提取特征</span></span><br><span class="line">            <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt;&gt; features = ExtractFeatures(pre);</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;features.size(); i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(img_index &gt;= num_for_test)&#123;</span><br><span class="line">                    trainingData.push_back(features[i][<span class="number">0</span>]);</span><br><span class="line">                    trainingData.push_back(features[i][<span class="number">1</span>]);</span><br><span class="line">                    responeseData.push_back(label);</span><br><span class="line"></span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    testData.push_back(features[i][<span class="number">0</span>]);</span><br><span class="line">                    testData.push_back(features[i][<span class="number">1</span>]);</span><br><span class="line">                    testResponsesData.push_back(<span class="keyword">float</span>(label));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            img_index ++;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 做图</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">plotTrainData</span><span class="params">(Mat trainData, Mat labels, <span class="keyword">float</span> *error=<span class="literal">NULL</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">float</span> area_max, ar_max, area_min, ar_min;</span><br><span class="line">    area_max= ar_max= <span class="number">0</span>;</span><br><span class="line">    area_min= ar_min= <span class="number">99999999</span>;</span><br><span class="line">    <span class="comment">// Get the min and max of each feature for normalize plot image</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt; trainData.rows; i++)&#123;</span><br><span class="line">        <span class="keyword">float</span> area= trainData.at&lt;<span class="keyword">float</span>&gt;(i,<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">float</span> ar= trainData.at&lt;<span class="keyword">float</span>&gt;(i,<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span>(area &gt; area_max)</span><br><span class="line">            area_max= area;</span><br><span class="line">        <span class="keyword">if</span>( ar &gt; ar_max )</span><br><span class="line">            ar_max= ar;</span><br><span class="line">        <span class="keyword">if</span>(area &lt; area_min)</span><br><span class="line">            area_min= area;</span><br><span class="line">        <span class="keyword">if</span>(ar &lt; ar_min)</span><br><span class="line">            ar_min= ar;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Create Image for plot</span></span><br><span class="line">    Mat plot= Mat::zeros(<span class="number">512</span>,<span class="number">512</span>,CV_8UC3);</span><br><span class="line">    <span class="comment">// Plot each of two features in a 2D graph using an image</span></span><br><span class="line">    <span class="comment">// where x is area and y is aspect ratio</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt; trainData.rows; i++)&#123;</span><br><span class="line">        <span class="comment">// Set the X y pos for each data</span></span><br><span class="line">        <span class="keyword">float</span> area= trainData.at&lt;<span class="keyword">float</span>&gt;(i,<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">float</span> ar= trainData.at&lt;<span class="keyword">float</span>&gt;(i,<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">int</span> x= (<span class="keyword">int</span>)(<span class="number">512.0f</span>*((area-area_min)/(area_max-area_min)));</span><br><span class="line">        <span class="keyword">int</span> y= (<span class="keyword">int</span>)(<span class="number">512.0f</span>*((ar-ar_min)/(ar_max-ar_min)));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Get label</span></span><br><span class="line">        <span class="keyword">int</span> label= labels.at&lt;<span class="keyword">int</span>&gt;(i);</span><br><span class="line">        <span class="comment">// Set color depend of label</span></span><br><span class="line">        Scalar color;</span><br><span class="line">        <span class="keyword">if</span>(label==<span class="number">0</span>)</span><br><span class="line">            color= green; <span class="comment">// NUT</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(label==<span class="number">1</span>)</span><br><span class="line">            color= blue; <span class="comment">// ring</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(label==<span class="number">2</span>)</span><br><span class="line">            color= red; <span class="comment">// SCREW</span></span><br><span class="line"></span><br><span class="line">        circle( plot,  Point(x, y), <span class="number">3</span>,  color, <span class="number">-1</span>, <span class="number">8</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(error!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="built_in">stringstream</span> ss;</span><br><span class="line">        ss &lt;&lt; <span class="string">"Error: "</span> &lt;&lt; *error &lt;&lt; <span class="string">"%"</span>;</span><br><span class="line">        putText(plot, ss.str().c_str(), Point(<span class="number">20</span>,<span class="number">512</span><span class="number">-40</span>), FONT_HERSHEY_SIMPLEX, <span class="number">0.75</span>, Scalar(<span class="number">200</span>,<span class="number">200</span>,<span class="number">200</span>), <span class="number">1</span>, LINE_AA);</span><br><span class="line">    &#125;</span><br><span class="line">    imshow(<span class="string">"plot"</span>, plot);</span><br><span class="line"><span class="comment">//    waitKey(0);</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 训练并测试误差</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">trainAndTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt; trainingData;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; responsesData;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt; testData;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt; testResponsesData;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> num_for_test = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取螺母图像</span></span><br><span class="line">    readFolderAndExtractFeatures(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/books/CV/2-ing/9781785280948_Code/"</span></span><br><span class="line">                                         <span class="string">"B04283_06_code/data/nut/tuerca_%04d.pgm"</span>, <span class="number">0</span>,</span><br><span class="line">                                 num_for_test, trainingData, responsesData, testData, testResponsesData);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取螺丝圈图像</span></span><br><span class="line">    readFolderAndExtractFeatures(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/books/CV/2-ing/9781785280948_Code/"</span></span><br><span class="line">                                         <span class="string">"B04283_06_code/data/ring/arandela_%04d.pgm"</span>, <span class="number">1</span>,</span><br><span class="line">                                 num_for_test, trainingData, responsesData, testData, testResponsesData);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取并处理螺丝</span></span><br><span class="line">    readFolderAndExtractFeatures(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/books/CV/2-ing/"</span></span><br><span class="line">                                         <span class="string">"9781785280948_Code/B04283_06_code/data/screw/tornillo_%04d.pgm"</span>, <span class="number">2</span>,</span><br><span class="line">                                 num_for_test, trainingData, responsesData, testData, testResponsesData);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Num of train samples: "</span>&lt;&lt;responsesData.size()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Num of test samples: "</span>&lt;&lt;testResponsesData.size()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 合并</span></span><br><span class="line">    <span class="comment">// Mat(int rows, int cols, int type, void* data, size_t step=AUTO_STEP);</span></span><br><span class="line"></span><br><span class="line">    Mat trainingDataMat(trainingData.size()/2 ,2, CV_32FC1, &amp;trainingData[0]);</span><br><span class="line">    Mat responses(responsesData.size(), 1, CV_32SC1, &amp;responsesData[0]);</span><br><span class="line"></span><br><span class="line">    Mat testDataMat(testData.size()/2, 2, CV_32FC1, &amp;testData[0]);</span><br><span class="line">    Mat testRespones(testResponsesData.size(), 1, CV_32FC1, &amp;testResponsesData[0]);</span><br><span class="line"></span><br><span class="line">    svm = SVM::create();</span><br><span class="line">    svm-&gt;setType(SVM::C_SVC);</span><br><span class="line">    svm-&gt;setKernel(SVM::CHI2);</span><br><span class="line">    svm-&gt;setTermCriteria(TermCriteria(TermCriteria::MAX_ITER, <span class="number">100</span>, <span class="number">1e-6</span>));</span><br><span class="line"></span><br><span class="line">    svm-&gt;train(trainingDataMat, ROW_SAMPLE, responses);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(testResponsesData.size() &gt;<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Evaluation"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"============"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="comment">// test the ML model</span></span><br><span class="line">        Mat testPredict;</span><br><span class="line">        svm-&gt;predict(testDataMat, testPredict);</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Prediction Done"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="comment">// error handle</span></span><br><span class="line">        Mat errorMat = testPredict != testRespones;</span><br><span class="line">        <span class="keyword">float</span> error = <span class="number">100.0f</span> * countNonZero(errorMat) / testResponsesData.size();</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Error: "</span>&lt;&lt;error&lt;&lt;<span class="string">"%"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="comment">//plot data</span></span><br><span class="line">        plotTrainData(trainingDataMat, responses, &amp;error);</span><br><span class="line"></span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        plotTrainData(trainingDataMat, responses);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">( <span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span>** argv )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Load image to process</span></span><br><span class="line">    Mat img= imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/books/CV/2-ing/9781785280948_Code/B04283_06_code/data/test.pgm"</span>, IMREAD_GRAYSCALE);</span><br><span class="line">    <span class="keyword">if</span>(img.data==<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"Error loading image "</span>&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    imshow(<span class="string">"img"</span>, img);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Load image to process</span></span><br><span class="line">    light_pattern= imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/light.pgm"</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span>(light_pattern.data==<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="comment">// Calculate light pattern</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"ERROR: Not light patter loaded"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    medianBlur(light_pattern, light_pattern, <span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">    trainAndTest();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//// Preprocess image</span></span><br><span class="line">    Mat pre= preprocessImage(img);</span><br><span class="line">    <span class="comment">////End preprocess</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Extract features</span></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; pos_top, pos_left;</span><br><span class="line">    <span class="built_in">vector</span>&lt; <span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt; &gt; features= ExtractFeatures(pre, &amp;pos_left, &amp;pos_top);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Num objects extracted features "</span> &lt;&lt; features.size() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    Mat img_output= img.clone();</span><br><span class="line">    cvtColor(img_output, img_output, COLOR_GRAY2BGR);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt; features.size(); i++)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"Data Area AR: "</span> &lt;&lt; features[i][<span class="number">0</span>] &lt;&lt; <span class="string">" "</span> &lt;&lt; features[i][<span class="number">1</span>] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">        <span class="function">Mat <span class="title">trainingDataMat</span><span class="params">(<span class="number">1</span>, <span class="number">2</span>, CV_32FC1, &amp;features[i][<span class="number">0</span>])</span></span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"Features to predict: "</span> &lt;&lt; trainingDataMat &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">float</span> result= svm-&gt;predict(trainingDataMat);</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; result &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="built_in">stringstream</span> ss;</span><br><span class="line">        Scalar color;</span><br><span class="line">        <span class="keyword">if</span>(result==<span class="number">0</span>)&#123;</span><br><span class="line">            color= green; <span class="comment">// NUT</span></span><br><span class="line">            ss &lt;&lt; <span class="string">"NUT"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(result==<span class="number">1</span>)&#123;</span><br><span class="line">            color= blue; <span class="comment">// RING</span></span><br><span class="line">            ss &lt;&lt; <span class="string">"RING"</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(result==<span class="number">2</span>)&#123;</span><br><span class="line">            color= red; <span class="comment">// SCREW</span></span><br><span class="line">            ss &lt;&lt; <span class="string">"SCREW"</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        putText(img_output,</span><br><span class="line">                ss.str(),</span><br><span class="line">                Point2d(pos_left[i], pos_top[i]),</span><br><span class="line">                FONT_HERSHEY_SIMPLEX,</span><br><span class="line">                <span class="number">0.4</span>,</span><br><span class="line">                color);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//vector&lt;int&gt; results= evaluate(features);</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Show images</span></span><br><span class="line">    imshow(<span class="string">"Binary image"</span>, pre);</span><br><span class="line">    imshow(<span class="string">"Result"</span>, img_output);</span><br><span class="line">    waitKey(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>此处的测试结果还是不错的，5个部件全部识别成功了。</p>
 </blockquote>
@@ -473,9 +545,18 @@ Features to predict: [1620, 1]
       
     </div>
 
-    <div>
+    
       
-        
+
+
+    
+
+    
+    
+    
+    <div>
+          
+	    
 <div class="my_post_copyright">
   <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
   
@@ -483,49 +564,67 @@ Features to predict: [1620, 1]
   <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-  <p><span>本文标题:</span><a href="/2017/05/18/学习目标分类/">学习目标分类</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 不秩稚童 的个人博客">不秩稚童</a></p>
-  <p><span>作者邮箱:</span>datahonor@gmail.com</p>
-  <p><span>发布时间:</span>2017年05月18日 - 17:05</p>
-  <p><span>最后更新:</span>2017年05月18日 - 18:05</p>
+
+  <p><span>本文标题:</span>学习目标分类</p>
+  <p><span>文章作者:</span>不秩稚童</p>
+  <p><span>发布时间:</span>2017年05月18日 - 17:58:12</p>
+  <p><span>最后更新:</span>2017年05月18日 - 18:12:06</p>
   <p><span>原始链接:</span><a href="/2017/05/18/学习目标分类/" title="学习目标分类">http://datahonor.com/2017/05/18/学习目标分类/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/05/18/学习目标分类/"  aria-label="复制成功！"></i></span>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/05/18/学习目标分类/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
     var clipboard = new Clipboard('.fa-clipboard');
-	clipboard.on('success', $(function(){
-	  $(".fa-clipboard").click(function(){
-		swal({   
-		  title: "",   
-		  text: '复制成功',   
-		  html: false,
-		  timer: 500,   
-		  showConfirmButton: false
-	    });
-	  });
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
     }));  
 </script>
 
 
-      
+          
     </div>
 
-    <div>
-      
-        
+    
 
+    
       
-    </div>
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>击蒙御寇</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-    <div>
-      
-        
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="不秩稚童 微信支付">
+        <p>微信支付</p>
+      </div>
+    
 
-      
-    </div>
+    
 
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
 
     <footer class="post-footer">
       
@@ -539,7 +638,7 @@ Features to predict: [1620, 1]
       
 
       
-        
+      
       
 
       
@@ -567,44 +666,24 @@ Features to predict: [1620, 1]
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
-
-    <div class="post-spread">
-      
-        
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
-      
-    </div>
   </div>
 
-          
+
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
 
-          
-  <div class="comments" id="comments">
-
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
-
-
-
-
-
-
+  
 
 
 
@@ -621,129 +700,294 @@ Features to predict: [1620, 1]
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
-               alt="不秩稚童" />
-          <p class="site-author-name" itemprop="name">不秩稚童</p>
-           
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="不秩稚童">
+            
+              <p class="site-author-name" itemprop="name">不秩稚童</p>
               <p class="site-description motion-element" itemprop="description">十年饮冰，难凉热血。</p>
+          </div>
+
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">142</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">53</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/shenxiangzhuang" title="GitHub &rarr; https://github.com/shenxiangzhuang" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:datahonor@gmail.com" title="E-Mail &rarr; mailto:datahonor@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+
+          
+            
+          
+          
+
         </div>
-        <nav class="site-state motion-element">
-        
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">142</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">18</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">53</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/shenxiangzhuang" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/shen-xiang-zhuang" target="_blank" title="知乎">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  知乎
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.cnblogs.com/buzhizhitong" target="_blank" title="博客园">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  博客园
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">2.</span> <span class="nav-text">Code</span></a></li></ol></div>
             
-
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
       
-
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -755,33 +999,57 @@ Features to predict: [1620, 1]
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2017 - 
-  <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">不秩稚童</span>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
 </div>
+
+
+
+
+
+
 
 
 
         
-
 <div class="busuanzi-count">
-
-  
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
   
-    <span class="site-uv"><i class="fa fa-user"></i>本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
   
 
   
-    <span class="site-pv"><i class="fa fa-eye"></i>本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
   
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
   
 </div>
+
+
+
+
+
+
 
 
 
@@ -790,19 +1058,17 @@ Features to predict: [1620, 1]
     </footer>
 
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
+
     
+
+    
+
     
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -816,89 +1082,13 @@ Features to predict: [1620, 1]
 
 
 
-  
 
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
 
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-
-  
-
-    <script type="text/javascript">
-      var disqus_shortname = 'http-datahonor-com';
-      var disqus_identifier = '2017/05/18/学习目标分类/';
-
-      var disqus_title = "学习目标分类";
-
-
-      function run_disqus_script(disqus_script) {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
-
-      run_disqus_script('count.js');
-
-      
-        var disqus_config = function () {
-            this.page.url = disqus_url;
-            this.page.identifier = disqus_identifier;
-            this.page.title = disqus_title;
-        };
-        run_disqus_script('embed.js');
-      
-
-    </script>
-  
 
 
 
@@ -910,181 +1100,518 @@ Features to predict: [1620, 1]
 
 
   
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
   
-  <script type="text/javascript">
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'qzF75hQvs6yPkMIO7gd7LwDB-gzGzoHsz',
+    appKey: 'foULNoeGLTL8LE8C2Ysitv5I',
+    placeholder: '毕竟今天太阳那么好 :-)',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true
+  });
+</script>
+
+
+
+
+  
+
+
+  
+
+  <script>
     // Popup Window;
     var isfetched = false;
+    var isXml = true;
     // Search DB path;
     var search_path = "search.xml";
-    if (search_path.length == 0) {
+    if (search_path.length === 0) {
       search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
     }
     var path = "/" + search_path;
     // monitor main search box;
 
-    function proceedsearch() {
-      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
-      $('.popup').toggle();
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
     }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
     // search function;
     var searchFunc = function(path, search_id, content_id) {
       'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
       $.ajax({
         url: path,
-        dataType: "xml",
+        dataType: isXml ? "xml" : "json",
         async: true,
-        success: function( xmlResponse ) {
+        success: function(res) {
           // get the contents from search data
           isfetched = true;
           $('.popup').detach().appendTo('.header-inner');
-          var datas = $( "entry", xmlResponse ).map(function() {
+          var datas = isXml ? $("entry", res).map(function() {
             return {
-              title: $( "title", this ).text(),
+              title: $("title", this).text(),
               content: $("content",this).text(),
-              url: $( "url" , this).text()
+              url: $("url" , this).text()
             };
-          }).get();
-          var $input = document.getElementById(search_id);
-          var $resultContent = document.getElementById(content_id);
-          $input.addEventListener('input', function(){
-            var matchcounts = 0;
-            var str='<ul class=\"search-result-list\">';
-            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-            $resultContent.innerHTML = "";
-            if (this.value.trim().length > 1) {
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
               // perform local searching
               datas.forEach(function(data) {
                 var isMatch = false;
-                var content_index = [];
-                var data_title = data.title.trim().toLowerCase();
-                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
-                var data_url = decodeURIComponent(data.url);
-                var index_title = -1;
-                var index_content = -1;
-                var first_occur = -1;
-                // only match artiles with not empty titles and contents
-                if(data_title != '') {
-                  keywords.forEach(function(keyword, i) {
-                    index_title = data_title.indexOf(keyword);
-                    index_content = data_content.indexOf(keyword);
-                    if( index_title >= 0 || index_content >= 0 ){
-                      isMatch = true;
-                      if (i == 0) {
-                        first_occur = index_content;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
                       }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
                     }
 
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
                   });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
                 }
+
                 // show search results
+
                 if (isMatch) {
-                  matchcounts += 1;
-                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
-                  var content = data.content.trim().replace(/<[^>]+>/g,"");
-                  if (first_occur >= 0) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
                     // cut out 100 characters
-                    var start = first_occur - 20;
-                    var end = first_occur + 80;
+                    var start = position - 20;
+                    var end = position + 80;
                     if(start < 0){
                       start = 0;
                     }
-                    if(start == 0){
-                      end = 50;
+                    if (end < position + word.length) {
+                      end = position + word.length;
                     }
                     if(end > content.length){
                       end = content.length;
                     }
-                    var match_content = content.substring(start, end);
-                    // highlight all keywords
-                    keywords.forEach(function(keyword){
-                      var regS = new RegExp(keyword, "gi");
-                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
-                    });
-
-                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
                   }
-                  str += "</li>";
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
                 }
-              })};
-            str += "</ul>";
-            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
-            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
-            $resultContent.innerHTML = str;
-          });
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
           proceedsearch();
         }
-      });}
+      });
+    }
 
     // handle and trigger popup window;
     $('.popup-trigger').click(function(e) {
       e.stopPropagation();
-      if (isfetched == false) {
+      if (isfetched === false) {
         searchFunc(path, 'local-search-input', 'local-search-result');
       } else {
         proceedsearch();
       };
     });
 
-    $('.popup-btn-close').click(function(e){
-      $('.popup').hide();
-      $(".popoverlay").remove();
-      $('body').css('overflow', '');
-    });
+    $('.popup-btn-close').click(onPopupClose);
     $('.popup').click(function(e){
       e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
     });
   </script>
 
 
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
   
 
 
   
 
   
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
     }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
     }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
 
 
   
 
-
-  
-  <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/love.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":125,"height":125,"position":"left","hOffset":30,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -1098,10 +1625,8 @@ Features to predict: [1620, 1]
   });
 </script>
 
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
-
-</body>
+<!-- hexo-inject:end --></body>
 </html>

@@ -1,25 +1,4 @@
-<!doctype html>
-
-
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-Hans">
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
+<!DOCTYPE html>
 
 
 
@@ -33,47 +12,14 @@
 
 
   
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Cpp,OpenCV," />
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
 
 
 
@@ -82,46 +28,54 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
 
 
 
 
-<meta name="description" content="Overview背景建模在视频监控等动态图像的检测上有很重要的位置.这篇文章将会逐渐学习一系列的背景建模方法.
-Code简单背景差分123456789101112131415161718192021222324252627282930#include &amp;lt;iostream&amp;gt;#include &amp;lt;opencv/cv.h&amp;gt;#include &amp;lt;opencv/cv.hpp&amp;gt;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="背景建模">
-<meta property="og:url" content="http://datahonor.com/2017/05/19/背景建模/index.html">
-<meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="Overview背景建模在视频监控等动态图像的检测上有很重要的位置.这篇文章将会逐渐学习一系列的背景建模方法.
-Code简单背景差分123456789101112131415161718192021222324252627282930#include &amp;lt;iostream&amp;gt;#include &amp;lt;opencv/cv.h&amp;gt;#include &amp;lt;opencv/cv.hpp&amp;gt;">
-<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/170518/Selection_051901.png">
-<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/1705/Selection_052101.png">
-<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/1705/Object%20Movement_052103.png">
-<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/1705/Selection_052102.png">
-<meta property="og:updated_time" content="2017-05-21T01:22:13.011Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="背景建模">
-<meta name="twitter:description" content="Overview背景建模在视频监控等动态图像的检测上有很重要的位置.这篇文章将会逐渐学习一系列的背景建模方法.
-Code简单背景差分123456789101112131415161718192021222324252627282930#include &amp;lt;iostream&amp;gt;#include &amp;lt;opencv/cv.h&amp;gt;#include &amp;lt;opencv/cv.hpp&amp;gt;">
-<meta name="twitter:image" content="http://blog-1252464519.costj.myqcloud.com/170518/Selection_051901.png">
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0">
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
-    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '不秩稚童'
-    },
+    scheme: 'Gemini',
+    version: '7.0.0',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -133,34 +87,53 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
 </script>
 
 
-
-  <link rel="canonical" href="http://datahonor.com/2017/05/19/背景建模/"/>
-
-
-
-
-
-  <title> 背景建模 | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
 
 
 
 
-<!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-92663335-1', 'auto');
-  ga('send', 'pageview');
+  <meta name="description" content="Overview背景建模在视频监控等动态图像的检测上有很重要的位置.这篇文章将会逐渐学习一系列的背景建模方法. Code简单背景差分123456789101112131415161718192021222324252627282930#include &amp;lt;iostream&amp;gt;#include &amp;lt;opencv/cv.h&amp;gt;#include &amp;lt;opencv/cv.hpp&amp;gt;">
+<meta name="keywords" content="Cpp,OpenCV">
+<meta property="og:type" content="article">
+<meta property="og:title" content="背景建模">
+<meta property="og:url" content="http://datahonor.com/2017/05/19/背景建模/index.html">
+<meta property="og:site_name" content="DATA HONOR">
+<meta property="og:description" content="Overview背景建模在视频监控等动态图像的检测上有很重要的位置.这篇文章将会逐渐学习一系列的背景建模方法. Code简单背景差分123456789101112131415161718192021222324252627282930#include &amp;lt;iostream&amp;gt;#include &amp;lt;opencv/cv.h&amp;gt;#include &amp;lt;opencv/cv.hpp&amp;gt;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/170518/Selection_051901.png">
+<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/1705/Selection_052101.png">
+<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/1705/Object%20Movement_052103.png">
+<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/1705/Selection_052102.png">
+<meta property="og:updated_time" content="2017-05-21T01:22:13.011Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="背景建模">
+<meta name="twitter:description" content="Overview背景建模在视频监控等动态图像的检测上有很重要的位置.这篇文章将会逐渐学习一系列的背景建模方法. Code简单背景差分123456789101112131415161718192021222324252627282930#include &amp;lt;iostream&amp;gt;#include &amp;lt;opencv/cv.h&amp;gt;#include &amp;lt;opencv/cv.hpp&amp;gt;">
+<meta name="twitter:image" content="http://blog-1252464519.costj.myqcloud.com/170518/Selection_051901.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://datahonor.com/2017/05/19/背景建模/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
 </script>
 
+  <title>背景建模 | DATA HONOR</title>
+  
 
-  <script type="text/javascript">
+
+
+
+
+
+  <script>
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -176,36 +149,65 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
 
 
 
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
 
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">DATA HONOR</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
-        <p class="site-subtitle">Never say never.</p>
+        <h1 class="site-subtitle" itemprop="description">Never say never.</h1>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -213,82 +215,117 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
 
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
   
 
   
+
+  
     <div class="site-search">
       
-  <div class="popup local-search-popup">
+  <div class="popup search-popup local-search-popup">
   <div class="local-search-header clearfix">
     <span class="search-icon">
       <i class="fa fa-search"></i>
@@ -297,7 +334,7 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -311,12 +348,23 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -329,39 +377,44 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/05/19/背景建模/">
+  
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="不秩稚童">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
-  </span>
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/05/19/背景建模/">
 
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="DATA HONOR">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不秩稚童">
+      <meta itemprop="description" content="十年饮冰，难凉热血。">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DATA HONOR">
+    </span>
 
     
       <header class="post-header">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                背景建模
+          <h2 class="post-title" itemprop="name headline">背景建模
+
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -369,18 +422,35 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-19T00:54:03+08:00">
-                2017-05-19
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-05-19 00:54:03" itemprop="dateCreated datePublished" datetime="2017-05-19T00:54:03+08:00">2017-05-19</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2017-05-21 09:22:13" itemprop="dateModified" datetime="2017-05-21T09:22:13+08:00">2017-05-21</time>
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -391,11 +461,7 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Cpp/" itemprop="url" rel="index">
-                    <span itemprop="name">Cpp</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Cpp/" itemprop="url" rel="index"><span itemprop="name">Cpp</span></a></span>
 
                 
                 
@@ -405,13 +471,16 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
                 <a href="/2017/05/19/背景建模/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/19/背景建模/" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/05/19/背景建模/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -419,11 +488,24 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
 
           
           
+            <span id="/2017/05/19/背景建模/" class="leancloud_visitors" data-flag-title="背景建模">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
 
           
             <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>本文总阅读量
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -435,7 +517,9 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -443,7 +527,7 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
 
       
         <h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>背景建模在视频监控等动态图像的检测上有很重要的位置.这篇文章将会逐渐学习一系列的背景建模方法.</p>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><h5 id="简单背景差分"><a href="#简单背景差分" class="headerlink" title="简单背景差分"></a>简单背景差分</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv/cv.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv/cv.hpp&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    Mat back1, back2;</div><div class="line">    back1 = imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/back1.jpg"</span>);</div><div class="line">    back2 = imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/back2.jpg"</span>);</div><div class="line"></div><div class="line">    Mat Original_img = back1.clone();</div><div class="line"></div><div class="line">    cvtColor(back1, back1, COLOR_BGR2GRAY);</div><div class="line">    cvtColor(back2, back2, COLOR_BGR2GRAY);</div><div class="line"></div><div class="line">    resize(back1, back1, Size(), <span class="number">0.1</span>, <span class="number">0.1</span>);</div><div class="line">    resize(back2, back2, Size(), <span class="number">0.1</span>, <span class="number">0.1</span>);</div><div class="line">    imshow(<span class="string">"back1"</span>, back1);</div><div class="line">    imshow(<span class="string">"back2"</span>, back2);</div><div class="line"></div><div class="line">    <span class="comment">// 直接相减</span></div><div class="line">    Mat result = back2 - back1;</div><div class="line">    imshow(<span class="string">"result"</span>, result);</div><div class="line"></div><div class="line">    waitKey(<span class="number">0</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><h5 id="简单背景差分"><a href="#简单背景差分" class="headerlink" title="简单背景差分"></a>简单背景差分</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv/cv.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv/cv.hpp&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Mat back1, back2;</span><br><span class="line">    back1 = imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/back1.jpg"</span>);</span><br><span class="line">    back2 = imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/back2.jpg"</span>);</span><br><span class="line"></span><br><span class="line">    Mat Original_img = back1.clone();</span><br><span class="line"></span><br><span class="line">    cvtColor(back1, back1, COLOR_BGR2GRAY);</span><br><span class="line">    cvtColor(back2, back2, COLOR_BGR2GRAY);</span><br><span class="line"></span><br><span class="line">    resize(back1, back1, Size(), <span class="number">0.1</span>, <span class="number">0.1</span>);</span><br><span class="line">    resize(back2, back2, Size(), <span class="number">0.1</span>, <span class="number">0.1</span>);</span><br><span class="line">    imshow(<span class="string">"back1"</span>, back1);</span><br><span class="line">    imshow(<span class="string">"back2"</span>, back2);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 直接相减</span></span><br><span class="line">    Mat result = back2 - back1;</span><br><span class="line">    imshow(<span class="string">"result"</span>, result);</span><br><span class="line"></span><br><span class="line">    waitKey(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>输出:<br><img src="http://blog-1252464519.costj.myqcloud.com/170518/Selection_051901.png" alt=""></p>
 <p>可以看到，直接相减再thresh一下，效果还是比较好的。但是在实际上，这种方法要求比较高，它要求背景图像是静止的，任何微小的背景变动都会对检测造成影响：</p>
 <blockquote>
@@ -452,24 +536,24 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
 <h5 id="帧差值法"><a href="#帧差值法" class="headerlink" title="帧差值法"></a>帧差值法</h5><p>帧差值法是利用连续帧之间的差异来获取物体的移动信息。</p>
 <p><img src="http://blog-1252464519.costj.myqcloud.com/1705/Selection_052101.png" alt=""></p>
 <p>像这样, 重叠的部分是不会被检测到，只有边缘部分会被检测到，但是很明显，这要求物体在转化为灰度图时灰度级是近似均匀的，不然…即使重叠也还是会有差值，不能对冲掉。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv/cv.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv/cv.hpp&gt;</span></span></div><div class="line"></div><div class="line"><span class="function">Mat <span class="title">frameDiff</span><span class="params">(Mat prevFrame, Mat curFrame, Mat nextFrame)</span></span>&#123;</div><div class="line">    Mat diffFrames1, diffFrames2, output;</div><div class="line">    <span class="comment">// 计算当前帧和下一帧的绝对差值</span></div><div class="line">    absdiff(nextFrame, curFrame, diffFrames1);</div><div class="line">    <span class="comment">// 计算当前帧和前一帧的绝对差值</span></div><div class="line">    absdiff(curFrame, prevFrame, diffFrames2);</div><div class="line"></div><div class="line">    <span class="comment">// 对以上两个不同的图像进行按位“与”操作</span></div><div class="line">    bitwise_and(diffFrames1, diffFrames2, output);</div><div class="line"></div><div class="line">    <span class="comment">// 为了使得边缘更加明显，进行dilate操作</span></div><div class="line">    dilate(output, output, Mat(), Point(<span class="number">-1</span>,<span class="number">-1</span>), <span class="number">1</span>);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> output;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 从摄像头获取帧</span></div><div class="line"><span class="function">Mat <span class="title">getFrame</span><span class="params">(VideoCapture cap, <span class="keyword">float</span> scalingFactor)</span></span>&#123;</div><div class="line">    <span class="comment">// 浮动比例因子设为0.5</span></div><div class="line">    Mat frame, output;</div><div class="line"></div><div class="line">    <span class="comment">// 捕获当前帧</span></div><div class="line">    cap &gt;&gt; frame;</div><div class="line">    <span class="comment">// 调整大小</span></div><div class="line">    resize(frame, frame, Size(), scalingFactor, scalingFactor, INTER_AREA);</div><div class="line">    <span class="comment">// 转换为灰度</span></div><div class="line">    cvtColor(frame, output, CV_BGR2GRAY);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> output;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    Mat frame, prevFrame, curFrame, nextFrame;</div><div class="line">    <span class="keyword">char</span> ch;</div><div class="line"></div><div class="line">    <span class="comment">// 创建捕获对象t</span></div><div class="line">    <span class="comment">// 0-&gt;输入变量表示数据源来自摄像头</span></div><div class="line">    <span class="function">VideoCapture <span class="title">cap</span><span class="params">(<span class="number">0</span>)</span></span>;</div><div class="line"></div><div class="line">    <span class="comment">// 如果摄像头无法打开，停止执行</span></div><div class="line">    <span class="keyword">if</span>(!cap.isOpened())&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 创建GUI窗口</span></div><div class="line"><span class="comment">//    namedWindow("Frame");</span></div><div class="line"></div><div class="line">    <span class="comment">// 调整摄像头输入帧大小的缩放因子</span></div><div class="line">    <span class="keyword">float</span> scalingFactor = <span class="number">0.75</span>;</div><div class="line"></div><div class="line">    prevFrame = getFrame(cap, scalingFactor);</div><div class="line">    curFrame = getFrame(cap, scalingFactor);</div><div class="line">    nextFrame = getFrame(cap, scalingFactor);</div><div class="line"></div><div class="line">    <span class="comment">// 循环知道用户按下Esc键</span></div><div class="line">    <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</div><div class="line">        <span class="comment">// 显示对象移动</span></div><div class="line">        imshow(<span class="string">"Object Movement"</span>, frameDiff(prevFrame, curFrame, nextFrame));</div><div class="line"></div><div class="line">        <span class="comment">// 更新变量并抓取下一帧</span></div><div class="line">        prevFrame = curFrame;</div><div class="line">        curFrame = nextFrame;</div><div class="line">        nextFrame = getFrame(cap, scalingFactor);</div><div class="line"></div><div class="line">        <span class="comment">// 获取键盘输入，并检测用户是否按下Esc键</span></div><div class="line">        <span class="comment">// 27-&gt;Esc 按钮的ASCII码</span></div><div class="line">        ch = waitKey(<span class="number">30</span>);</div><div class="line">        <span class="keyword">if</span>(ch==<span class="number">27</span>)</div><div class="line">            <span class="keyword">break</span>;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    cap.release();</div><div class="line">    destroyAllWindows();</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv/cv.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv/cv.hpp&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function">Mat <span class="title">frameDiff</span><span class="params">(Mat prevFrame, Mat curFrame, Mat nextFrame)</span></span>&#123;</span><br><span class="line">    Mat diffFrames1, diffFrames2, output;</span><br><span class="line">    <span class="comment">// 计算当前帧和下一帧的绝对差值</span></span><br><span class="line">    absdiff(nextFrame, curFrame, diffFrames1);</span><br><span class="line">    <span class="comment">// 计算当前帧和前一帧的绝对差值</span></span><br><span class="line">    absdiff(curFrame, prevFrame, diffFrames2);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 对以上两个不同的图像进行按位“与”操作</span></span><br><span class="line">    bitwise_and(diffFrames1, diffFrames2, output);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 为了使得边缘更加明显，进行dilate操作</span></span><br><span class="line">    dilate(output, output, Mat(), Point(<span class="number">-1</span>,<span class="number">-1</span>), <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> output;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 从摄像头获取帧</span></span><br><span class="line"><span class="function">Mat <span class="title">getFrame</span><span class="params">(VideoCapture cap, <span class="keyword">float</span> scalingFactor)</span></span>&#123;</span><br><span class="line">    <span class="comment">// 浮动比例因子设为0.5</span></span><br><span class="line">    Mat frame, output;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 捕获当前帧</span></span><br><span class="line">    cap &gt;&gt; frame;</span><br><span class="line">    <span class="comment">// 调整大小</span></span><br><span class="line">    resize(frame, frame, Size(), scalingFactor, scalingFactor, INTER_AREA);</span><br><span class="line">    <span class="comment">// 转换为灰度</span></span><br><span class="line">    cvtColor(frame, output, CV_BGR2GRAY);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> output;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Mat frame, prevFrame, curFrame, nextFrame;</span><br><span class="line">    <span class="keyword">char</span> ch;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建捕获对象t</span></span><br><span class="line">    <span class="comment">// 0-&gt;输入变量表示数据源来自摄像头</span></span><br><span class="line">    <span class="function">VideoCapture <span class="title">cap</span><span class="params">(<span class="number">0</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果摄像头无法打开，停止执行</span></span><br><span class="line">    <span class="keyword">if</span>(!cap.isOpened())&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建GUI窗口</span></span><br><span class="line"><span class="comment">//    namedWindow("Frame");</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 调整摄像头输入帧大小的缩放因子</span></span><br><span class="line">    <span class="keyword">float</span> scalingFactor = <span class="number">0.75</span>;</span><br><span class="line"></span><br><span class="line">    prevFrame = getFrame(cap, scalingFactor);</span><br><span class="line">    curFrame = getFrame(cap, scalingFactor);</span><br><span class="line">    nextFrame = getFrame(cap, scalingFactor);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 循环知道用户按下Esc键</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">        <span class="comment">// 显示对象移动</span></span><br><span class="line">        imshow(<span class="string">"Object Movement"</span>, frameDiff(prevFrame, curFrame, nextFrame));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 更新变量并抓取下一帧</span></span><br><span class="line">        prevFrame = curFrame;</span><br><span class="line">        curFrame = nextFrame;</span><br><span class="line">        nextFrame = getFrame(cap, scalingFactor);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取键盘输入，并检测用户是否按下Esc键</span></span><br><span class="line">        <span class="comment">// 27-&gt;Esc 按钮的ASCII码</span></span><br><span class="line">        ch = waitKey(<span class="number">30</span>);</span><br><span class="line">        <span class="keyword">if</span>(ch==<span class="number">27</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cap.release();</span><br><span class="line">    destroyAllWindows();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>在移动时摄像头情况：</p>
 <p><img src="http://blog-1252464519.costj.myqcloud.com/1705/Object%20Movement_052103.png" alt=""></p>
 <h5 id="混合高斯法"><a href="#混合高斯法" class="headerlink" title="混合高斯法"></a>混合高斯法</h5><p>在<em>OpenCV By Example</em>上的MOG没法使用，查了查<code>cv::bgsegm::BackgroundSubtractorMOG</code>也无法使用…查看文档好像又是<code>cv::cuda::BackgroundSubtractorMOG</code>，仍然没办法使用，可能是编译的时候没有添加支持的问题。于是就看了看官方给的demo，用的MOG2.</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv/cv.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv/cv.hpp&gt;</span></span></div><div class="line"></div><div class="line"><span class="comment">// Global variables</span></div><div class="line">Mat frame; <span class="comment">//current frame</span></div><div class="line">Mat fgMaskMOG2; <span class="comment">//fg mask fg mask generated by MOG2 method</span></div><div class="line">Ptr&lt;BackgroundSubtractor&gt; pMOG2; <span class="comment">//MOG2 Background subtractor</span></div><div class="line"><span class="keyword">char</span> keyboard; <span class="comment">//input from keyboard</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">help</span><span class="params">()</span></span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">processVideo</span><span class="params">(<span class="keyword">char</span>* videoFilename)</span></span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">processImages</span><span class="params">(<span class="keyword">char</span>* firstFrameFilename)</span></span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">help</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">cout</span></div><div class="line">            &lt;&lt; <span class="string">"--------------------------------------------------------------------------"</span> &lt;&lt; <span class="built_in">endl</span></div><div class="line">            &lt;&lt; <span class="string">"This program shows how to use background subtraction methods provided by "</span>  &lt;&lt; <span class="built_in">endl</span></div><div class="line">            &lt;&lt; <span class="string">" OpenCV. You can process both videos (-vid) and images (-img)."</span>             &lt;&lt; <span class="built_in">endl</span></div><div class="line">            &lt;&lt; <span class="built_in">endl</span></div><div class="line">            &lt;&lt; <span class="string">"Usage:"</span>                                                                     &lt;&lt; <span class="built_in">endl</span></div><div class="line">            &lt;&lt; <span class="string">"./bg_sub &#123;-vid &lt;video filename&gt;|-img &lt;image filename&gt;&#125;"</span>                     &lt;&lt; <span class="built_in">endl</span></div><div class="line">            &lt;&lt; <span class="string">"for example: ./bg_sub -vid video.avi"</span>                                       &lt;&lt; <span class="built_in">endl</span></div><div class="line">            &lt;&lt; <span class="string">"or: ./bg_sub -img /data/images/1.png"</span>                                       &lt;&lt; <span class="built_in">endl</span></div><div class="line">            &lt;&lt; <span class="string">"--------------------------------------------------------------------------"</span> &lt;&lt; <span class="built_in">endl</span></div><div class="line">            &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>* argv[])</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">//print help information</span></div><div class="line">    help();</div><div class="line">    <span class="comment">//check for the input parameter correctness</span></div><div class="line">    <span class="keyword">if</span>(argc != <span class="number">3</span>) &#123;</div><div class="line">        <span class="built_in">cerr</span> &lt;&lt;<span class="string">"Incorret input list"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">        <span class="built_in">cerr</span> &lt;&lt;<span class="string">"exiting..."</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">        <span class="keyword">return</span> EXIT_FAILURE;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//create GUI windows</span></div><div class="line">    namedWindow(<span class="string">"Frame"</span>);</div><div class="line">    namedWindow(<span class="string">"FG Mask MOG 2"</span>);</div><div class="line">    <span class="comment">//create Background Subtractor objects</span></div><div class="line">    pMOG2 = createBackgroundSubtractorMOG2(); <span class="comment">//MOG2 approach</span></div><div class="line">    <span class="keyword">if</span>(<span class="built_in">strcmp</span>(argv[<span class="number">1</span>], <span class="string">"-vid"</span>) == <span class="number">0</span>) &#123;</div><div class="line">        <span class="comment">//input data coming from a video</span></div><div class="line">        processVideo(argv[<span class="number">2</span>]);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">strcmp</span>(argv[<span class="number">1</span>], <span class="string">"-img"</span>) == <span class="number">0</span>) &#123;</div><div class="line">        <span class="comment">//input data coming from a sequence of images</span></div><div class="line">        processImages(argv[<span class="number">2</span>]);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> &#123;</div><div class="line">        <span class="comment">//error in reading input parameters</span></div><div class="line">        <span class="built_in">cerr</span> &lt;&lt;<span class="string">"Please, check the input parameters."</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">        <span class="built_in">cerr</span> &lt;&lt;<span class="string">"Exiting..."</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">        <span class="keyword">return</span> EXIT_FAILURE;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//destroy GUI windows</span></div><div class="line">    destroyAllWindows();</div><div class="line">    <span class="keyword">return</span> EXIT_SUCCESS;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">processVideo</span><span class="params">(<span class="keyword">char</span>* videoFilename)</span> </span>&#123;</div><div class="line">    <span class="comment">//create the capture object</span></div><div class="line">    <span class="function">VideoCapture <span class="title">capture</span><span class="params">(videoFilename)</span></span>;</div><div class="line">    <span class="keyword">if</span>(!capture.isOpened())&#123;</div><div class="line">        <span class="comment">//error in opening the video input</span></div><div class="line">        <span class="built_in">cerr</span> &lt;&lt; <span class="string">"Unable to open video file: "</span> &lt;&lt; videoFilename &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">        <span class="built_in">exit</span>(EXIT_FAILURE);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//read input data. ESC or 'q' for quitting</span></div><div class="line">    keyboard = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>( keyboard != <span class="string">'q'</span> &amp;&amp; keyboard != <span class="number">27</span> )&#123;</div><div class="line">        <span class="comment">//read the current frame</span></div><div class="line">        <span class="keyword">if</span>(!capture.read(frame)) &#123;</div><div class="line">            <span class="built_in">cerr</span> &lt;&lt; <span class="string">"Unable to read next frame."</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">            <span class="built_in">cerr</span> &lt;&lt; <span class="string">"Exiting..."</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">            <span class="built_in">exit</span>(EXIT_FAILURE);</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//update the background model</span></div><div class="line">        pMOG2-&gt;apply(frame, fgMaskMOG2);</div><div class="line">        erode(fgMaskMOG2, fgMaskMOG2, Mat(), Point(<span class="number">-1</span>, <span class="number">-1</span>), <span class="number">1</span>);</div><div class="line">        <span class="comment">//get the frame number and write it on the current frame</span></div><div class="line">        <span class="built_in">stringstream</span> ss;</div><div class="line">        rectangle(frame, cv::Point(<span class="number">10</span>, <span class="number">2</span>), cv::Point(<span class="number">100</span>,<span class="number">20</span>),</div><div class="line">                  cv::Scalar(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>), <span class="number">-1</span>);</div><div class="line">        ss &lt;&lt; capture.get(CAP_PROP_POS_FRAMES);</div><div class="line">        <span class="built_in">string</span> frameNumberString = ss.str();</div><div class="line">        putText(frame, frameNumberString.c_str(), cv::Point(<span class="number">15</span>, <span class="number">15</span>),</div><div class="line">                FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span> , cv::Scalar(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>));</div><div class="line">        <span class="comment">//show the current frame and the fg masks</span></div><div class="line">        imshow(<span class="string">"Frame"</span>, frame);</div><div class="line">        imshow(<span class="string">"FG Mask MOG 2"</span>, fgMaskMOG2);</div><div class="line">        <span class="comment">//get the input from the keyboard</span></div><div class="line">        keyboard = (<span class="keyword">char</span>)waitKey( <span class="number">30</span> );</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//delete capture object</span></div><div class="line">    capture.release();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">processImages</span><span class="params">(<span class="keyword">char</span>* fistFrameFilename)</span> </span>&#123;</div><div class="line">    <span class="comment">//read the first file of the sequence</span></div><div class="line">    frame = imread(fistFrameFilename);</div><div class="line">    <span class="keyword">if</span>(frame.empty())&#123;</div><div class="line">        <span class="comment">//error in opening the first image</span></div><div class="line">        <span class="built_in">cerr</span> &lt;&lt; <span class="string">"Unable to open first image frame: "</span> &lt;&lt; fistFrameFilename &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">        <span class="built_in">exit</span>(EXIT_FAILURE);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//current image filename</span></div><div class="line">    <span class="function"><span class="built_in">string</span> <span class="title">fn</span><span class="params">(fistFrameFilename)</span></span>;</div><div class="line">    <span class="comment">//read input data. ESC or 'q' for quitting</span></div><div class="line">    keyboard = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>( keyboard != <span class="string">'q'</span> &amp;&amp; keyboard != <span class="number">27</span> )&#123;</div><div class="line">        <span class="comment">//update the background model</span></div><div class="line">        pMOG2-&gt;apply(frame, fgMaskMOG2);</div><div class="line">        <span class="comment">//get the frame number and write it on the current frame</span></div><div class="line">        <span class="keyword">size_t</span> index = fn.find_last_of(<span class="string">"/"</span>);</div><div class="line">        <span class="keyword">if</span>(index == <span class="built_in">string</span>::npos) &#123;</div><div class="line">            index = fn.find_last_of(<span class="string">"\\"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">size_t</span> index2 = fn.find_last_of(<span class="string">"."</span>);</div><div class="line">        <span class="built_in">string</span> prefix = fn.substr(<span class="number">0</span>,index+<span class="number">1</span>);</div><div class="line">        <span class="built_in">string</span> suffix = fn.substr(index2);</div><div class="line">        <span class="built_in">string</span> frameNumberString = fn.substr(index+<span class="number">1</span>, index2-index<span class="number">-1</span>);</div><div class="line">        <span class="function"><span class="built_in">istringstream</span> <span class="title">iss</span><span class="params">(frameNumberString)</span></span>;</div><div class="line">        <span class="keyword">int</span> frameNumber = <span class="number">0</span>;</div><div class="line">        iss &gt;&gt; frameNumber;</div><div class="line">        rectangle(frame, cv::Point(<span class="number">10</span>, <span class="number">2</span>), cv::Point(<span class="number">100</span>,<span class="number">20</span>),</div><div class="line">                  cv::Scalar(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>), <span class="number">-1</span>);</div><div class="line">        putText(frame, frameNumberString.c_str(), cv::Point(<span class="number">15</span>, <span class="number">15</span>),</div><div class="line">                FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span> , cv::Scalar(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>));</div><div class="line">        <span class="comment">//show the current frame and the fg masks</span></div><div class="line">        imshow(<span class="string">"Frame"</span>, frame);</div><div class="line">        imshow(<span class="string">"FG Mask MOG 2"</span>, fgMaskMOG2);</div><div class="line">        <span class="comment">//get the input from the keyboard</span></div><div class="line">        keyboard = (<span class="keyword">char</span>)waitKey( <span class="number">30</span> );</div><div class="line">        <span class="comment">//search for the next image in the sequence</span></div><div class="line">        <span class="built_in">ostringstream</span> oss;</div><div class="line">        oss &lt;&lt; (frameNumber + <span class="number">1</span>);</div><div class="line">        <span class="built_in">string</span> nextFrameNumberString = oss.str();</div><div class="line">        <span class="built_in">string</span> nextFrameFilename = prefix + nextFrameNumberString + suffix;</div><div class="line">        <span class="comment">//read the next frame</span></div><div class="line">        frame = imread(nextFrameFilename);</div><div class="line">        <span class="keyword">if</span>(frame.empty())&#123;</div><div class="line">            <span class="comment">//error in opening the next image in the sequence</span></div><div class="line">            <span class="built_in">cerr</span> &lt;&lt; <span class="string">"Unable to open image frame: "</span> &lt;&lt; nextFrameFilename &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">            <span class="built_in">exit</span>(EXIT_FAILURE);</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//update the path of the current frame</span></div><div class="line">        fn.assign(nextFrameFilename);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv/cv.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv/cv.hpp&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Global variables</span></span><br><span class="line">Mat frame; <span class="comment">//current frame</span></span><br><span class="line">Mat fgMaskMOG2; <span class="comment">//fg mask fg mask generated by MOG2 method</span></span><br><span class="line">Ptr&lt;BackgroundSubtractor&gt; pMOG2; <span class="comment">//MOG2 Background subtractor</span></span><br><span class="line"><span class="keyword">char</span> keyboard; <span class="comment">//input from keyboard</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">help</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">processVideo</span><span class="params">(<span class="keyword">char</span>* videoFilename)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">processImages</span><span class="params">(<span class="keyword">char</span>* firstFrameFilename)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">help</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span></span><br><span class="line">            &lt;&lt; <span class="string">"--------------------------------------------------------------------------"</span> &lt;&lt; <span class="built_in">endl</span></span><br><span class="line">            &lt;&lt; <span class="string">"This program shows how to use background subtraction methods provided by "</span>  &lt;&lt; <span class="built_in">endl</span></span><br><span class="line">            &lt;&lt; <span class="string">" OpenCV. You can process both videos (-vid) and images (-img)."</span>             &lt;&lt; <span class="built_in">endl</span></span><br><span class="line">            &lt;&lt; <span class="built_in">endl</span></span><br><span class="line">            &lt;&lt; <span class="string">"Usage:"</span>                                                                     &lt;&lt; <span class="built_in">endl</span></span><br><span class="line">            &lt;&lt; <span class="string">"./bg_sub &#123;-vid &lt;video filename&gt;|-img &lt;image filename&gt;&#125;"</span>                     &lt;&lt; <span class="built_in">endl</span></span><br><span class="line">            &lt;&lt; <span class="string">"for example: ./bg_sub -vid video.avi"</span>                                       &lt;&lt; <span class="built_in">endl</span></span><br><span class="line">            &lt;&lt; <span class="string">"or: ./bg_sub -img /data/images/1.png"</span>                                       &lt;&lt; <span class="built_in">endl</span></span><br><span class="line">            &lt;&lt; <span class="string">"--------------------------------------------------------------------------"</span> &lt;&lt; <span class="built_in">endl</span></span><br><span class="line">            &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>* argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//print help information</span></span><br><span class="line">    help();</span><br><span class="line">    <span class="comment">//check for the input parameter correctness</span></span><br><span class="line">    <span class="keyword">if</span>(argc != <span class="number">3</span>) &#123;</span><br><span class="line">        <span class="built_in">cerr</span> &lt;&lt;<span class="string">"Incorret input list"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cerr</span> &lt;&lt;<span class="string">"exiting..."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span> EXIT_FAILURE;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//create GUI windows</span></span><br><span class="line">    namedWindow(<span class="string">"Frame"</span>);</span><br><span class="line">    namedWindow(<span class="string">"FG Mask MOG 2"</span>);</span><br><span class="line">    <span class="comment">//create Background Subtractor objects</span></span><br><span class="line">    pMOG2 = createBackgroundSubtractorMOG2(); <span class="comment">//MOG2 approach</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">strcmp</span>(argv[<span class="number">1</span>], <span class="string">"-vid"</span>) == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">//input data coming from a video</span></span><br><span class="line">        processVideo(argv[<span class="number">2</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">strcmp</span>(argv[<span class="number">1</span>], <span class="string">"-img"</span>) == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">//input data coming from a sequence of images</span></span><br><span class="line">        processImages(argv[<span class="number">2</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//error in reading input parameters</span></span><br><span class="line">        <span class="built_in">cerr</span> &lt;&lt;<span class="string">"Please, check the input parameters."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cerr</span> &lt;&lt;<span class="string">"Exiting..."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span> EXIT_FAILURE;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//destroy GUI windows</span></span><br><span class="line">    destroyAllWindows();</span><br><span class="line">    <span class="keyword">return</span> EXIT_SUCCESS;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">processVideo</span><span class="params">(<span class="keyword">char</span>* videoFilename)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//create the capture object</span></span><br><span class="line">    <span class="function">VideoCapture <span class="title">capture</span><span class="params">(videoFilename)</span></span>;</span><br><span class="line">    <span class="keyword">if</span>(!capture.isOpened())&#123;</span><br><span class="line">        <span class="comment">//error in opening the video input</span></span><br><span class="line">        <span class="built_in">cerr</span> &lt;&lt; <span class="string">"Unable to open video file: "</span> &lt;&lt; videoFilename &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">exit</span>(EXIT_FAILURE);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//read input data. ESC or 'q' for quitting</span></span><br><span class="line">    keyboard = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>( keyboard != <span class="string">'q'</span> &amp;&amp; keyboard != <span class="number">27</span> )&#123;</span><br><span class="line">        <span class="comment">//read the current frame</span></span><br><span class="line">        <span class="keyword">if</span>(!capture.read(frame)) &#123;</span><br><span class="line">            <span class="built_in">cerr</span> &lt;&lt; <span class="string">"Unable to read next frame."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">cerr</span> &lt;&lt; <span class="string">"Exiting..."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">exit</span>(EXIT_FAILURE);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//update the background model</span></span><br><span class="line">        pMOG2-&gt;apply(frame, fgMaskMOG2);</span><br><span class="line">        erode(fgMaskMOG2, fgMaskMOG2, Mat(), Point(<span class="number">-1</span>, <span class="number">-1</span>), <span class="number">1</span>);</span><br><span class="line">        <span class="comment">//get the frame number and write it on the current frame</span></span><br><span class="line">        <span class="built_in">stringstream</span> ss;</span><br><span class="line">        rectangle(frame, cv::Point(<span class="number">10</span>, <span class="number">2</span>), cv::Point(<span class="number">100</span>,<span class="number">20</span>),</span><br><span class="line">                  cv::Scalar(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>), <span class="number">-1</span>);</span><br><span class="line">        ss &lt;&lt; capture.get(CAP_PROP_POS_FRAMES);</span><br><span class="line">        <span class="built_in">string</span> frameNumberString = ss.str();</span><br><span class="line">        putText(frame, frameNumberString.c_str(), cv::Point(<span class="number">15</span>, <span class="number">15</span>),</span><br><span class="line">                FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span> , cv::Scalar(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>));</span><br><span class="line">        <span class="comment">//show the current frame and the fg masks</span></span><br><span class="line">        imshow(<span class="string">"Frame"</span>, frame);</span><br><span class="line">        imshow(<span class="string">"FG Mask MOG 2"</span>, fgMaskMOG2);</span><br><span class="line">        <span class="comment">//get the input from the keyboard</span></span><br><span class="line">        keyboard = (<span class="keyword">char</span>)waitKey( <span class="number">30</span> );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//delete capture object</span></span><br><span class="line">    capture.release();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">processImages</span><span class="params">(<span class="keyword">char</span>* fistFrameFilename)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//read the first file of the sequence</span></span><br><span class="line">    frame = imread(fistFrameFilename);</span><br><span class="line">    <span class="keyword">if</span>(frame.empty())&#123;</span><br><span class="line">        <span class="comment">//error in opening the first image</span></span><br><span class="line">        <span class="built_in">cerr</span> &lt;&lt; <span class="string">"Unable to open first image frame: "</span> &lt;&lt; fistFrameFilename &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">exit</span>(EXIT_FAILURE);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//current image filename</span></span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">fn</span><span class="params">(fistFrameFilename)</span></span>;</span><br><span class="line">    <span class="comment">//read input data. ESC or 'q' for quitting</span></span><br><span class="line">    keyboard = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>( keyboard != <span class="string">'q'</span> &amp;&amp; keyboard != <span class="number">27</span> )&#123;</span><br><span class="line">        <span class="comment">//update the background model</span></span><br><span class="line">        pMOG2-&gt;apply(frame, fgMaskMOG2);</span><br><span class="line">        <span class="comment">//get the frame number and write it on the current frame</span></span><br><span class="line">        <span class="keyword">size_t</span> index = fn.find_last_of(<span class="string">"/"</span>);</span><br><span class="line">        <span class="keyword">if</span>(index == <span class="built_in">string</span>::npos) &#123;</span><br><span class="line">            index = fn.find_last_of(<span class="string">"\\"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">size_t</span> index2 = fn.find_last_of(<span class="string">"."</span>);</span><br><span class="line">        <span class="built_in">string</span> prefix = fn.substr(<span class="number">0</span>,index+<span class="number">1</span>);</span><br><span class="line">        <span class="built_in">string</span> suffix = fn.substr(index2);</span><br><span class="line">        <span class="built_in">string</span> frameNumberString = fn.substr(index+<span class="number">1</span>, index2-index<span class="number">-1</span>);</span><br><span class="line">        <span class="function"><span class="built_in">istringstream</span> <span class="title">iss</span><span class="params">(frameNumberString)</span></span>;</span><br><span class="line">        <span class="keyword">int</span> frameNumber = <span class="number">0</span>;</span><br><span class="line">        iss &gt;&gt; frameNumber;</span><br><span class="line">        rectangle(frame, cv::Point(<span class="number">10</span>, <span class="number">2</span>), cv::Point(<span class="number">100</span>,<span class="number">20</span>),</span><br><span class="line">                  cv::Scalar(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>), <span class="number">-1</span>);</span><br><span class="line">        putText(frame, frameNumberString.c_str(), cv::Point(<span class="number">15</span>, <span class="number">15</span>),</span><br><span class="line">                FONT_HERSHEY_SIMPLEX, <span class="number">0.5</span> , cv::Scalar(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>));</span><br><span class="line">        <span class="comment">//show the current frame and the fg masks</span></span><br><span class="line">        imshow(<span class="string">"Frame"</span>, frame);</span><br><span class="line">        imshow(<span class="string">"FG Mask MOG 2"</span>, fgMaskMOG2);</span><br><span class="line">        <span class="comment">//get the input from the keyboard</span></span><br><span class="line">        keyboard = (<span class="keyword">char</span>)waitKey( <span class="number">30</span> );</span><br><span class="line">        <span class="comment">//search for the next image in the sequence</span></span><br><span class="line">        <span class="built_in">ostringstream</span> oss;</span><br><span class="line">        oss &lt;&lt; (frameNumber + <span class="number">1</span>);</span><br><span class="line">        <span class="built_in">string</span> nextFrameNumberString = oss.str();</span><br><span class="line">        <span class="built_in">string</span> nextFrameFilename = prefix + nextFrameNumberString + suffix;</span><br><span class="line">        <span class="comment">//read the next frame</span></span><br><span class="line">        frame = imread(nextFrameFilename);</span><br><span class="line">        <span class="keyword">if</span>(frame.empty())&#123;</span><br><span class="line">            <span class="comment">//error in opening the next image in the sequence</span></span><br><span class="line">            <span class="built_in">cerr</span> &lt;&lt; <span class="string">"Unable to open image frame: "</span> &lt;&lt; nextFrameFilename &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">exit</span>(EXIT_FAILURE);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//update the path of the current frame</span></span><br><span class="line">        fn.assign(nextFrameFilename);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>终端运行：</p>
 <blockquote>
 <p>cmake .<br>make<br>./Clions -vid /home/shensir/Documents/MyPrograming/Cpp/Clions/data/BGC.avi</p>
 </blockquote>
 <p>输出：<br><img src="http://blog-1252464519.costj.myqcloud.com/1705/Selection_052102.png" alt=""></p>
 <p>上面的demo也可以对一系列的连续的图片进行检测，只需要将所有图片按顺序命名为1.xxx， 2.xxx这样，然后运行的时候只提供第一帧的即1.xxx并使用-img即可。关于其中的字符串的操作，我们还原如下：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sstream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="function"><span class="built_in">string</span> <span class="title">fn</span><span class="params">(<span class="string">"/data/1.jpg"</span>)</span></span>;</div><div class="line">    <span class="keyword">size_t</span> index = fn.find_last_of(<span class="string">"/"</span>);</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Index: "</span>&lt;&lt;index&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">    <span class="built_in">string</span> prefix = fn.substr(<span class="number">0</span>, index+<span class="number">1</span>);</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Prefix: "</span>&lt;&lt;prefix&lt;&lt;<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">    <span class="keyword">size_t</span> index2 = fn.find_last_of(<span class="string">"."</span>);</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Index2: "</span>&lt;&lt;index2&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">    <span class="built_in">string</span> suffix = fn.substr(index2);</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"suffix: "</span>&lt;&lt;suffix&lt;&lt;<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">    <span class="built_in">string</span> frameNumberString = fn.substr(index+<span class="number">1</span>, index2-index<span class="number">-1</span>);</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"frameNUmberString: "</span>&lt;&lt;frameNumberString&lt;&lt;<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="built_in">istringstream</span> <span class="title">iss</span><span class="params">(frameNumberString)</span></span>;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> frameNumber = <span class="number">0</span>;</div><div class="line">    iss &gt;&gt; frameNumber;</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"frameNumber: "</span>&lt;&lt;frameNumber&lt;&lt;<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">    <span class="built_in">ostringstream</span> oss;</div><div class="line">    oss &lt;&lt; (frameNumber + <span class="number">1</span>);</div><div class="line">    <span class="built_in">string</span> nextFrameNumberString = oss.str();</div><div class="line">    <span class="built_in">string</span> nextFrameFilename = prefix + nextFrameNumberString + suffix;</div><div class="line"></div><div class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"nextFrameFilename: "</span>&lt;&lt;nextFrameFilename&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">fn</span><span class="params">(<span class="string">"/data/1.jpg"</span>)</span></span>;</span><br><span class="line">    <span class="keyword">size_t</span> index = fn.find_last_of(<span class="string">"/"</span>);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Index: "</span>&lt;&lt;index&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">string</span> prefix = fn.substr(<span class="number">0</span>, index+<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Prefix: "</span>&lt;&lt;prefix&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">size_t</span> index2 = fn.find_last_of(<span class="string">"."</span>);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Index2: "</span>&lt;&lt;index2&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">string</span> suffix = fn.substr(index2);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"suffix: "</span>&lt;&lt;suffix&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">string</span> frameNumberString = fn.substr(index+<span class="number">1</span>, index2-index<span class="number">-1</span>);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"frameNUmberString: "</span>&lt;&lt;frameNumberString&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="built_in">istringstream</span> <span class="title">iss</span><span class="params">(frameNumberString)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> frameNumber = <span class="number">0</span>;</span><br><span class="line">    iss &gt;&gt; frameNumber;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"frameNumber: "</span>&lt;&lt;frameNumber&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">ostringstream</span> oss;</span><br><span class="line">    oss &lt;&lt; (frameNumber + <span class="number">1</span>);</span><br><span class="line">    <span class="built_in">string</span> nextFrameNumberString = oss.str();</span><br><span class="line">    <span class="built_in">string</span> nextFrameFilename = prefix + nextFrameNumberString + suffix;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"nextFrameFilename: "</span>&lt;&lt;nextFrameFilename&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>输出：</p>
 <blockquote>
 <p>Index: 5<br>Prefix: /data/<br>Index2: 7<br>suffix: .jpg<br>frameNUmberString: 1<br>frameNumber: 1<br>nextFrameFilename: /data/2.jpg</p>
 </blockquote>
 <p>开始的时候对<code>istringstream</code>的用法不太懂，查到下面一个例子，虽不懂原理，但是它的用途还是可以了解到：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span>     <span class="comment">// std::cout</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sstream&gt;</span>      <span class="comment">// std::istringstream</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span>       <span class="comment">// std::string</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="built_in">std</span>::<span class="built_in">string</span> stringvalues = <span class="string">"125 320 512 750 333"</span>;</div><div class="line">  <span class="built_in">std</span>::<span class="function"><span class="built_in">istringstream</span> <span class="title">iss</span> <span class="params">(stringvalues)</span></span>;</div><div class="line"></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> n=<span class="number">0</span>; n&lt;<span class="number">5</span>; n++)</div><div class="line">  &#123;</div><div class="line">    <span class="keyword">int</span> val;</div><div class="line">    iss &gt;&gt; val;</div><div class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; val*<span class="number">2</span> &lt;&lt; <span class="string">'\n'</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span>     <span class="comment">// std::cout</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sstream&gt;</span>      <span class="comment">// std::istringstream</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span>       <span class="comment">// std::string</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span> stringvalues = <span class="string">"125 320 512 750 333"</span>;</span><br><span class="line">  <span class="built_in">std</span>::<span class="function"><span class="built_in">istringstream</span> <span class="title">iss</span> <span class="params">(stringvalues)</span></span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> n=<span class="number">0</span>; n&lt;<span class="number">5</span>; n++)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    iss &gt;&gt; val;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; val*<span class="number">2</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>输出：</p>
 <blockquote>
 <p>250<br>640<br>1024<br>1500<br>666</p>
@@ -479,9 +563,18 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
       
     </div>
 
-    <div>
+    
       
-        
+
+
+    
+
+    
+    
+    
+    <div>
+          
+	    
 <div class="my_post_copyright">
   <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
   
@@ -489,49 +582,67 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
   <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-  <p><span>本文标题:</span><a href="/2017/05/19/背景建模/">背景建模</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 不秩稚童 的个人博客">不秩稚童</a></p>
-  <p><span>作者邮箱:</span>datahonor@gmail.com</p>
-  <p><span>发布时间:</span>2017年05月19日 - 00:05</p>
-  <p><span>最后更新:</span>2017年05月21日 - 09:05</p>
+
+  <p><span>本文标题:</span>背景建模</p>
+  <p><span>文章作者:</span>不秩稚童</p>
+  <p><span>发布时间:</span>2017年05月19日 - 00:54:03</p>
+  <p><span>最后更新:</span>2017年05月21日 - 09:22:13</p>
   <p><span>原始链接:</span><a href="/2017/05/19/背景建模/" title="背景建模">http://datahonor.com/2017/05/19/背景建模/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/05/19/背景建模/"  aria-label="复制成功！"></i></span>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/05/19/背景建模/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
     var clipboard = new Clipboard('.fa-clipboard');
-	clipboard.on('success', $(function(){
-	  $(".fa-clipboard").click(function(){
-		swal({   
-		  title: "",   
-		  text: '复制成功',   
-		  html: false,
-		  timer: 500,   
-		  showConfirmButton: false
-	    });
-	  });
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
     }));  
 </script>
 
 
-      
+          
     </div>
 
-    <div>
-      
-        
+    
 
+    
       
-    </div>
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>击蒙御寇</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-    <div>
-      
-        
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="不秩稚童 微信支付">
+        <p>微信支付</p>
+      </div>
+    
 
-      
-    </div>
+    
 
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
 
     <footer class="post-footer">
       
@@ -545,7 +656,7 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
       
 
       
-        
+      
       
 
       
@@ -573,44 +684,24 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
-
-    <div class="post-spread">
-      
-        
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
-      
-    </div>
   </div>
 
-          
+
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
 
-          
-  <div class="comments" id="comments">
-
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
-
-
-
-
-
-
+  
 
 
 
@@ -627,129 +718,294 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
-               alt="不秩稚童" />
-          <p class="site-author-name" itemprop="name">不秩稚童</p>
-           
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="不秩稚童">
+            
+              <p class="site-author-name" itemprop="name">不秩稚童</p>
               <p class="site-description motion-element" itemprop="description">十年饮冰，难凉热血。</p>
+          </div>
+
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">142</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">53</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/shenxiangzhuang" title="GitHub &rarr; https://github.com/shenxiangzhuang" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:datahonor@gmail.com" title="E-Mail &rarr; mailto:datahonor@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+
+          
+            
+          
+          
+
         </div>
-        <nav class="site-state motion-element">
-        
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">142</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">18</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">53</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/shenxiangzhuang" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/shen-xiang-zhuang" target="_blank" title="知乎">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  知乎
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.cnblogs.com/buzhizhitong" target="_blank" title="博客园">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  博客园
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#简单背景差分"><span class="nav-text">简单背景差分</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#帧差值法"><span class="nav-text">帧差值法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#混合高斯法"><span class="nav-text">混合高斯法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Refrence"><span class="nav-text">Refrence</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">2.</span> <span class="nav-text">Code</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#简单背景差分"><span class="nav-number">2.1.</span> <span class="nav-text">简单背景差分</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#帧差值法"><span class="nav-number">2.2.</span> <span class="nav-text">帧差值法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#混合高斯法"><span class="nav-number">2.3.</span> <span class="nav-text">混合高斯法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Refrence"><span class="nav-number">3.</span> <span class="nav-text">Refrence</span></a></li></ol></div>
             
-
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
       
-
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -761,33 +1017,57 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2017 - 
-  <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">不秩稚童</span>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
 </div>
+
+
+
+
+
+
 
 
 
         
-
 <div class="busuanzi-count">
-
-  
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
   
-    <span class="site-uv"><i class="fa fa-user"></i>本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
   
 
   
-    <span class="site-pv"><i class="fa fa-eye"></i>本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
   
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
   
 </div>
+
+
+
+
+
+
 
 
 
@@ -796,19 +1076,17 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
     </footer>
 
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
+
     
+
+    
+
     
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -822,89 +1100,13 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
 
 
 
-  
 
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
 
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-
-  
-
-    <script type="text/javascript">
-      var disqus_shortname = 'http-datahonor-com';
-      var disqus_identifier = '2017/05/19/背景建模/';
-
-      var disqus_title = "背景建模";
-
-
-      function run_disqus_script(disqus_script) {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
-
-      run_disqus_script('count.js');
-
-      
-        var disqus_config = function () {
-            this.page.url = disqus_url;
-            this.page.identifier = disqus_identifier;
-            this.page.title = disqus_title;
-        };
-        run_disqus_script('embed.js');
-      
-
-    </script>
-  
 
 
 
@@ -916,181 +1118,518 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
 
 
   
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
   
-  <script type="text/javascript">
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'qzF75hQvs6yPkMIO7gd7LwDB-gzGzoHsz',
+    appKey: 'foULNoeGLTL8LE8C2Ysitv5I',
+    placeholder: '毕竟今天太阳那么好 :-)',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true
+  });
+</script>
+
+
+
+
+  
+
+
+  
+
+  <script>
     // Popup Window;
     var isfetched = false;
+    var isXml = true;
     // Search DB path;
     var search_path = "search.xml";
-    if (search_path.length == 0) {
+    if (search_path.length === 0) {
       search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
     }
     var path = "/" + search_path;
     // monitor main search box;
 
-    function proceedsearch() {
-      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
-      $('.popup').toggle();
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
     }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
     // search function;
     var searchFunc = function(path, search_id, content_id) {
       'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
       $.ajax({
         url: path,
-        dataType: "xml",
+        dataType: isXml ? "xml" : "json",
         async: true,
-        success: function( xmlResponse ) {
+        success: function(res) {
           // get the contents from search data
           isfetched = true;
           $('.popup').detach().appendTo('.header-inner');
-          var datas = $( "entry", xmlResponse ).map(function() {
+          var datas = isXml ? $("entry", res).map(function() {
             return {
-              title: $( "title", this ).text(),
+              title: $("title", this).text(),
               content: $("content",this).text(),
-              url: $( "url" , this).text()
+              url: $("url" , this).text()
             };
-          }).get();
-          var $input = document.getElementById(search_id);
-          var $resultContent = document.getElementById(content_id);
-          $input.addEventListener('input', function(){
-            var matchcounts = 0;
-            var str='<ul class=\"search-result-list\">';
-            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-            $resultContent.innerHTML = "";
-            if (this.value.trim().length > 1) {
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
               // perform local searching
               datas.forEach(function(data) {
                 var isMatch = false;
-                var content_index = [];
-                var data_title = data.title.trim().toLowerCase();
-                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
-                var data_url = decodeURIComponent(data.url);
-                var index_title = -1;
-                var index_content = -1;
-                var first_occur = -1;
-                // only match artiles with not empty titles and contents
-                if(data_title != '') {
-                  keywords.forEach(function(keyword, i) {
-                    index_title = data_title.indexOf(keyword);
-                    index_content = data_content.indexOf(keyword);
-                    if( index_title >= 0 || index_content >= 0 ){
-                      isMatch = true;
-                      if (i == 0) {
-                        first_occur = index_content;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
                       }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
                     }
 
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
                   });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
                 }
+
                 // show search results
+
                 if (isMatch) {
-                  matchcounts += 1;
-                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
-                  var content = data.content.trim().replace(/<[^>]+>/g,"");
-                  if (first_occur >= 0) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
                     // cut out 100 characters
-                    var start = first_occur - 20;
-                    var end = first_occur + 80;
+                    var start = position - 20;
+                    var end = position + 80;
                     if(start < 0){
                       start = 0;
                     }
-                    if(start == 0){
-                      end = 50;
+                    if (end < position + word.length) {
+                      end = position + word.length;
                     }
                     if(end > content.length){
                       end = content.length;
                     }
-                    var match_content = content.substring(start, end);
-                    // highlight all keywords
-                    keywords.forEach(function(keyword){
-                      var regS = new RegExp(keyword, "gi");
-                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
-                    });
-
-                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
                   }
-                  str += "</li>";
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
                 }
-              })};
-            str += "</ul>";
-            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
-            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
-            $resultContent.innerHTML = str;
-          });
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
           proceedsearch();
         }
-      });}
+      });
+    }
 
     // handle and trigger popup window;
     $('.popup-trigger').click(function(e) {
       e.stopPropagation();
-      if (isfetched == false) {
+      if (isfetched === false) {
         searchFunc(path, 'local-search-input', 'local-search-result');
       } else {
         proceedsearch();
       };
     });
 
-    $('.popup-btn-close').click(function(e){
-      $('.popup').hide();
-      $(".popoverlay").remove();
-      $('body').css('overflow', '');
-    });
+    $('.popup-btn-close').click(onPopupClose);
     $('.popup').click(function(e){
       e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
     });
   </script>
 
 
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
   
 
 
   
 
   
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
     }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
     }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
 
 
   
 
-
-  
-  <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/love.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":125,"height":125,"position":"left","hOffset":30,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -1104,10 +1643,8 @@ Code简单背景差分123456789101112131415161718192021222324252627282930#includ
   });
 </script>
 
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
-
-</body>
+<!-- hexo-inject:end --></body>
 </html>

@@ -1,3132 +1,430 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
-    
   <url>
     <loc>http://datahonor.com/2017/02/25/About-Hexo/</loc>
-    <lastmod>2019-02-12T15:54:00.061Z</lastmod>
-    <data>
-        <display>
-        <title>About Hexo</title>
-        <pubTime>2017-02-25T03:30:19.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>js</tag>
-         
-         
-           
-             
-              <breadCrumb title="Hexo" url="http://datahonor.com/categories/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-02-12</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/03/%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E7%BB%8F%E9%AA%8C%E9%A3%8E%E9%99%A9%E6%9C%80%E5%B0%8F%E5%8C%96/</loc>
-    <lastmod>2019-02-12T14:53:20.240Z</lastmod>
-    <data>
-        <display>
-        <title>最大似然估计与经验风险最小化</title>
-        <pubTime>2017-03-03T05:39:39.000Z</pubTime>
-        
-        <tag>统计学习方法</tag>
-         
-         
-           
-             
-              <breadCrumb title="统计学习方法" url="http://datahonor.com/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-02-12</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2019/01/19/%E6%89%80%E8%B0%93%E5%81%B6%E7%84%B6/</loc>
-    <lastmod>2019-01-19T13:26:20.054Z</lastmod>
-    <data>
-        <display>
-        <title>所谓偶然</title>
-        <pubTime>2019-01-19T11:43:00.000Z</pubTime>
-        
-        <tag>随笔</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="http://datahonor.com/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-01-19</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2019/01/16/virtualenv-error/</loc>
-    <lastmod>2019-01-16T16:54:29.401Z</lastmod>
-    <data>
-        <display>
-        <title>virtualenv error</title>
-        <pubTime>2019-01-16T15:57:23.000Z</pubTime>
-        
-        <tag>Error</tag>
-         
-        <tag>virtualenv</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-01-16</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/07/30/Errata-of-PythonDA/</loc>
-    <lastmod>2019-01-04T12:20:09.057Z</lastmod>
-    <data>
-        <display>
-        <title>Errata of PythonDA</title>
-        <pubTime>2018-07-30T05:01:20.000Z</pubTime>
-        
-        <tag>Book</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-01-04</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2019/01/03/R-package-installiation/</loc>
-    <lastmod>2019-01-03T07:42:12.170Z</lastmod>
-    <data>
-        <display>
-        <title>R package installiation</title>
-        <pubTime>2019-01-03T07:32:43.000Z</pubTime>
-        
-        <tag>R</tag>
-         
-         
-           
-             
-              <breadCrumb title="R" url="http://datahonor.com/categories/R/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-01-03</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2019/01/03/gcc-g/</loc>
-    <lastmod>2019-01-03T07:10:25.176Z</lastmod>
-    <data>
-        <display>
-        <title>gcc&g++</title>
-        <pubTime>2019-01-03T07:06:20.000Z</pubTime>
-        
-        <tag>Tips</tag>
-         
-        <tag>gcc</tag>
-         
-        <tag>g++</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-01-03</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/03/21/Jupyter-Lab-Multi-Kernels/</loc>
-    <lastmod>2019-01-01T09:31:13.162Z</lastmod>
-    <data>
-        <display>
-        <title>Jupyter Lab&Multi-Kernels</title>
-        <pubTime>2018-03-21T03:09:22.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Tips</tag>
-         
-        <tag>Octave</tag>
-         
-        <tag>R</tag>
-         
-        <tag>Haskell</tag>
-         
-        <tag>Julia</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-01-01</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/10/24/R-In-Jupyter/</loc>
-    <lastmod>2019-01-01T09:30:14.290Z</lastmod>
-    <data>
-        <display>
-        <title>R In Jupyter</title>
-        <pubTime>2017-10-24T02:33:35.000Z</pubTime>
-        
-        <tag>R</tag>
-         
-        <tag>Jupyter</tag>
-         
-         
-           
-             
-              <breadCrumb title="R" url="http://datahonor.com/categories/R/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2019-01-01</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/03/08/IPython-Tips/</loc>
-    <lastmod>2018-12-27T15:34:59.634Z</lastmod>
-    <data>
-        <display>
-        <title>IPython Tips</title>
-        <pubTime>2018-03-08T05:29:01.000Z</pubTime>
-        
-        <tag>Tips</tag>
-         
-        <tag>IPython</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-12-27</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/12/27/S-S%E6%82%96%E8%AE%BA/</loc>
-    <lastmod>2018-12-27T05:24:55.967Z</lastmod>
-    <data>
-        <display>
-        <title>S&S悖论</title>
-        <pubTime>2018-12-27T04:35:35.000Z</pubTime>
-        
-        <tag>随笔</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="http://datahonor.com/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-12-27</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/04/23/JetBrains-Toolbox/</loc>
-    <lastmod>2018-12-25T04:10:39.397Z</lastmod>
-    <data>
-        <display>
-        <title>JetBrains Toolbox</title>
-        <pubTime>2018-04-23T06:07:38.000Z</pubTime>
-        
-        <tag>Tips</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-12-25</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/12/24/Probability-and-Mathematical-Statistics-Books/</loc>
-    <lastmod>2018-12-24T07:51:56.496Z</lastmod>
-    <data>
-        <display>
-        <title>Probability and Mathematical Statistics[Books]</title>
-        <pubTime>2018-12-24T02:32:29.000Z</pubTime>
-        
-        <tag>Probability</tag>
-         
-        <tag>Statistics</tag>
-         
-        <tag>Books</tag>
-         
-         
-           
-             
-              <breadCrumb title="Statistics" url="http://datahonor.com/categories/Statistics/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-12-24</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/07/07/%E5%A5%87%E6%80%AA%E7%9A%84%E6%A2%A6/</loc>
-    <lastmod>2018-07-07T14:39:05.648Z</lastmod>
-    <data>
-        <display>
-        <title>奇怪的梦</title>
-        <pubTime>2018-07-07T13:39:23.000Z</pubTime>
-        
-        <tag>随笔</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="http://datahonor.com/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-07-07</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/06/21/Screen-recorder-peek/</loc>
-    <lastmod>2018-06-21T15:17:40.974Z</lastmod>
-    <data>
-        <display>
-        <title>Screen recorder: peek</title>
-        <pubTime>2018-06-21T15:06:02.000Z</pubTime>
-        
-        <tag>Tips</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-06-21</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/05/19/Jupyter-nbextensions/</loc>
-    <lastmod>2018-06-14T15:32:24.694Z</lastmod>
-    <data>
-        <display>
-        <title>Oh, Jupyter!</title>
-        <pubTime>2018-05-19T10:07:59.000Z</pubTime>
-        
-        <tag>Tips</tag>
-         
-        <tag>R</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-06-14</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/05/16/Vectorization-in-R-Why/</loc>
-    <lastmod>2018-05-16T02:43:38.234Z</lastmod>
-    <data>
-        <display>
-        <title>Vectorization in R: Why?</title>
-        <pubTime>2018-05-16T02:30:00.000Z</pubTime>
-        
-        <tag>R</tag>
-         
-         
-           
-             
-              <breadCrumb title="R" url="http://datahonor.com/categories/R/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-05-16</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/05/08/%E7%BB%8F%E6%B5%8E%E5%91%A8%E6%9C%9F%E4%B8%8E%E8%82%A1%E7%A5%A8%E4%BB%B7%E6%A0%BC%E5%AE%9E%E8%AF%81%E7%A0%94%E7%A9%B6/</loc>
-    <lastmod>2018-05-08T07:52:24.011Z</lastmod>
-    <data>
-        <display>
-        <title>经济周期与股票价格实证研究</title>
-        <pubTime>2018-05-08T07:44:40.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>R</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-05-08</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/04/24/%E6%9C%89%E5%85%B3%E6%A0%A1%E5%86%85%E4%BA%A4%E6%B5%81%E5%88%86%E4%BA%AB%E4%BC%9A/</loc>
-    <lastmod>2018-04-26T10:31:51.874Z</lastmod>
-    <data>
-        <display>
-        <title>校内交流分享会[Python与数据科学]</title>
-        <pubTime>2018-04-24T04:04:51.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-04-26</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/04/08/%E7%89%B9%E6%AE%8A%E7%9A%84%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83U-0-1/</loc>
-    <lastmod>2018-04-08T02:29:59.945Z</lastmod>
-    <data>
-        <display>
-        <title>特殊的均匀分布U(0, 1)</title>
-        <pubTime>2018-04-08T02:18:11.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Probability</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-04-08</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/04/01/%E7%BD%AA%E5%9C%A8%E8%92%99%E6%98%A7/</loc>
-    <lastmod>2018-04-01T06:43:53.654Z</lastmod>
-    <data>
-        <display>
-        <title>罪在蒙昧</title>
-        <pubTime>2018-04-01T05:21:28.000Z</pubTime>
-        
-        <tag>随笔</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="http://datahonor.com/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-04-01</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/03/30/%E5%85%B3%E4%BA%8EPython%E5%9F%BA%E7%A1%80%E7%9A%84%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2018-03-30T05:57:29.590Z</lastmod>
-    <data>
-        <display>
-        <title>关于Python基础的学习</title>
-        <pubTime>2018-03-30T05:17:05.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-30</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/08/Ubuntu16-04LTS%E4%B8%8B%E5%AE%89%E8%A3%85Hadoop2-7-3/</loc>
-    <lastmod>2018-03-27T15:28:35.536Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu16.04LTS下安装Hadoop&Spark</title>
-        <pubTime>2017-03-08T15:44:44.000Z</pubTime>
-        
-        <tag>Hadoop</tag>
-         
-        <tag>大数据</tag>
-         
-        <tag>分布式</tag>
-         
-         
-           
-             
-              <breadCrumb title="Hadoop" url="http://datahonor.com/categories/Hadoop/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-27</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/03/22/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</loc>
-    <lastmod>2018-03-26T05:22:48.777Z</lastmod>
-    <data>
-        <display>
-        <title>Python与数据分析</title>
-        <pubTime>2018-03-22T14:39:32.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-26</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/03/08/Vim-Tips/</loc>
-    <lastmod>2018-03-10T16:01:24.491Z</lastmod>
-    <data>
-        <display>
-        <title>Vim Tips</title>
-        <pubTime>2018-03-08T05:03:39.000Z</pubTime>
-        
-        <tag>Tips</tag>
-         
-        <tag>Vim</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-03-10</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/03/03/%E5%AF%92%E5%81%87%E5%B0%8F%E8%AE%B0/</loc>
-    <lastmod>2018-03-03T09:23:10.488Z</lastmod>
-    <data>
-        <display>
-        <title>寒假小记</title>
-        <pubTime>2018-03-03T09:04:11.000Z</pubTime>
-        
-        <tag>随笔</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="http://datahonor.com/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
+    <lastmod>2018-03-03</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/02/24/CW-Regualr-expression/</loc>
-    <lastmod>2018-02-24T09:10:22.657Z</lastmod>
-    <data>
-        <display>
-        <title>CW&Regular expression</title>
-        <pubTime>2018-02-24T08:42:24.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>CodeWas</tag>
-         
-        <tag>Regular expression</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-02-24</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/02/07/Haskell-The-Caesar-Cipher/</loc>
-    <lastmod>2018-02-07T13:13:35.635Z</lastmod>
-    <data>
-        <display>
-        <title>Haskell&The Caesar Cipher</title>
-        <pubTime>2018-02-07T13:04:24.000Z</pubTime>
-        
-        <tag>Haskell</tag>
-         
-         
-           
-             
-              <breadCrumb title="Haskell" url="http://datahonor.com/categories/Haskell/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-02-07</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/09/20/SAS%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2018-02-06T02:54:20.903Z</lastmod>
-    <data>
-        <display>
-        <title>SAS学习记录</title>
-        <pubTime>2017-09-19T16:03:46.000Z</pubTime>
-        
-        <tag>SAS</tag>
-         
-         
-           
-             
-              <breadCrumb title="SAS" url="http://datahonor.com/categories/SAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-02-06</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/02/06/Git%E5%91%BD%E4%BB%A4%E7%A7%AF%E7%B4%AF/</loc>
-    <lastmod>2018-02-06T02:45:44.245Z</lastmod>
-    <data>
-        <display>
-        <title>Git命令积累</title>
-        <pubTime>2018-02-06T02:43:43.000Z</pubTime>
-        
-        <tag>Git</tag>
-         
-         
-           
-             
-              <breadCrumb title="Git" url="http://datahonor.com/categories/Git/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-02-06</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/01/28/Atom%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2018-01-28T11:41:59.396Z</lastmod>
-    <data>
-        <display>
-        <title>Atom使用</title>
-        <pubTime>2018-01-28T10:41:27.000Z</pubTime>
-        
-        <tag>Tips</tag>
-         
-        <tag>Atom</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-01-28</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/01/28/Julia-in-Ubuntu/</loc>
-    <lastmod>2018-01-28T10:40:08.793Z</lastmod>
-    <data>
-        <display>
-        <title>Julia in Ubuntu</title>
-        <pubTime>2018-01-28T10:27:24.000Z</pubTime>
-        
-        <tag>Julia</tag>
-         
-        <tag>Jupyter</tag>
-         
-         
-           
-             
-              <breadCrumb title="Julia" url="http://datahonor.com/categories/Julia/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-01-28</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/Ubuntu%E5%91%BD%E4%BB%A4%E7%A7%AF%E7%B4%AF/</loc>
-    <lastmod>2018-01-27T03:14:08.029Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu命令积累</title>
-        <pubTime>2017-03-02T09:03:54.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://datahonor.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-01-27</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/01/24/Dangling-pointer-and-Lifetime/</loc>
-    <lastmod>2018-01-24T10:03:49.455Z</lastmod>
-    <data>
-        <display>
-        <title>Dangling pointer and Lifetime</title>
-        <pubTime>2018-01-24T09:38:11.000Z</pubTime>
-        
-        <tag>C</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="http://datahonor.com/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-01-24</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/01/17/list-comprehension-in-Haskell/</loc>
-    <lastmod>2018-01-17T10:10:35.173Z</lastmod>
-    <data>
-        <display>
-        <title>list comprehension in Haskell</title>
-        <pubTime>2018-01-17T09:55:00.000Z</pubTime>
-        
-        <tag>Haskell</tag>
-         
-         
-           
-             
-              <breadCrumb title="Haskell" url="http://datahonor.com/categories/Haskell/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-01-17</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/11/12/Haskell-in-Ubuntu/</loc>
-    <lastmod>2018-01-17T09:55:54.909Z</lastmod>
-    <data>
-        <display>
-        <title>Haskell in Ubuntu</title>
-        <pubTime>2017-11-12T09:25:02.000Z</pubTime>
-        
-        <tag>Haskell</tag>
-         
-        <tag>Ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="Haskell" url="http://datahonor.com/categories/Haskell/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-01-17</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/Cpp-Virtual-members%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2018-01-17T04:29:21.385Z</lastmod>
-    <data>
-        <display>
-        <title>Cpp Virtual members的使用</title>
-        <pubTime>2017-03-02T04:26:43.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-01-17</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/01/08/Matrix-in-C/</loc>
-    <lastmod>2018-01-09T01:47:37.271Z</lastmod>
-    <data>
-        <display>
-        <title>Matrix in C</title>
-        <pubTime>2018-01-08T05:49:27.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>DataStructure</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-01-09</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2018/01/05/%E9%9D%9E%E5%AE%83%EF%BC%8C%E6%98%AF%E4%BD%A0/</loc>
-    <lastmod>2018-01-05T04:21:03.391Z</lastmod>
-    <data>
-        <display>
-        <title>非它，是你</title>
-        <pubTime>2018-01-05T03:04:15.000Z</pubTime>
-        
-        <tag>随笔</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="http://datahonor.com/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-01-05</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/12/30/%E5%B0%8F%E5%B0%8F%E7%99%BD%E6%90%AC%E7%A0%96%E8%AE%B0%E2%80%94%E2%80%942017/</loc>
-    <lastmod>2017-12-30T15:25:08.580Z</lastmod>
-    <data>
-        <display>
-        <title>小小白搬砖记——2017</title>
-        <pubTime>2017-12-30T14:13:17.000Z</pubTime>
-        
-        <tag>随笔</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="http://datahonor.com/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-12-30</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/12/18/Cmake%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2017-12-18T03:08:27.912Z</lastmod>
-    <data>
-        <display>
-        <title>Cmake使用</title>
-        <pubTime>2017-12-18T02:58:48.000Z</pubTime>
-        
-        <tag>C</tag>
-         
-        <tag>Cmake</tag>
-         
-         
-           
-             
-              <breadCrumb title="C" url="http://datahonor.com/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-12-18</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/Ubuntu%E6%90%AD%E5%BB%BASS/</loc>
-    <lastmod>2017-11-17T04:44:07.585Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu搭建SS</title>
-        <pubTime>2017-03-02T08:57:56.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://datahonor.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-11-17</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/10/06/EDA-with-R/</loc>
-    <lastmod>2017-11-16T16:41:35.039Z</lastmod>
-    <data>
-        <display>
-        <title>Exploratory Data Analysis with R读书笔记</title>
-        <pubTime>2017-10-06T04:22:40.000Z</pubTime>
-        
-        <tag>R</tag>
-         
-        <tag>EDA</tag>
-         
-         
-           
-             
-              <breadCrumb title="R" url="http://datahonor.com/categories/R/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-11-16</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/11/02/Nonparametric-Statistics-in-R/</loc>
-    <lastmod>2017-11-02T14:37:27.461Z</lastmod>
-    <data>
-        <display>
-        <title>Nonparametric Statistics in R</title>
-        <pubTime>2017-11-02T14:27:52.000Z</pubTime>
-        
-        <tag>R</tag>
-         
-        <tag>Nonparametric Statistics</tag>
-         
-         
-           
-             
-              <breadCrumb title="R" url="http://datahonor.com/categories/R/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-11-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/11/01/Rank-Stem-Leaf-in-R/</loc>
-    <lastmod>2017-11-01T05:49:25.247Z</lastmod>
-    <data>
-        <display>
-        <title>Rank, Stem-Leaf in R</title>
-        <pubTime>2017-11-01T05:44:31.000Z</pubTime>
-        
-        <tag>R</tag>
-         
-        <tag>EDA</tag>
-         
-         
-           
-             
-              <breadCrumb title="R" url="http://datahonor.com/categories/R/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-11-01</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/10/24/Hello-Docker/</loc>
-    <lastmod>2017-10-24T03:33:31.833Z</lastmod>
-    <data>
-        <display>
-        <title>Hello Docker!</title>
-        <pubTime>2017-10-24T03:18:49.000Z</pubTime>
-        
-        <tag>Docker</tag>
-         
-         
-           
-             
-              <breadCrumb title="Docker" url="http://datahonor.com/categories/Docker/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-10-24</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/10/22/Linear-Regression-In-R/</loc>
-    <lastmod>2017-10-22T08:47:53.145Z</lastmod>
-    <data>
-        <display>
-        <title>Linear Regression In R</title>
-        <pubTime>2017-10-22T08:40:12.000Z</pubTime>
-        
-        <tag>R</tag>
-         
-         
-           
-             
-              <breadCrumb title="R" url="http://datahonor.com/categories/R/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-10-22</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/10/14/Eviews-%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2017-10-17T05:32:09.663Z</lastmod>
-    <data>
-        <display>
-        <title>Eviews 安装</title>
-        <pubTime>2017-10-14T07:40:23.000Z</pubTime>
-        
-        <tag>Tips</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-10-17</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/10/10/Data-Structure-in-R/</loc>
-    <lastmod>2017-10-10T05:54:53.820Z</lastmod>
-    <data>
-        <display>
-        <title>Data Structure in R</title>
-        <pubTime>2017-10-10T04:06:26.000Z</pubTime>
-        
-        <tag>R</tag>
-         
-         
-           
-             
-              <breadCrumb title="R" url="http://datahonor.com/categories/R/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-10-10</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/10/10/Get-help-in-R/</loc>
-    <lastmod>2017-10-10T04:04:58.206Z</lastmod>
-    <data>
-        <display>
-        <title>Get help in R</title>
-        <pubTime>2017-10-10T03:38:30.000Z</pubTime>
-        
-        <tag>Tips</tag>
-         
-        <tag>R</tag>
-         
-         
-           
-             
-              <breadCrumb title="R" url="http://datahonor.com/categories/R/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-10-10</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/08/16/%E7%99%BE%E5%B9%B4%E5%9B%9E%E9%A6%96-%E5%85%B3%E4%BA%8E%E5%BF%83%E5%9E%8B%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%87%A0%E7%A7%8D%E7%94%BB%E6%B3%95/</loc>
-    <lastmod>2017-09-23T09:51:31.422Z</lastmod>
-    <data>
-        <display>
-        <title>百年回首--关于心形曲线的几种画法</title>
-        <pubTime>2017-08-16T05:15:20.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Cpp</tag>
-         
-        <tag>Octave</tag>
-         
-        <tag>R</tag>
-         
-        <tag>Matlab</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-09-23</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/08/01/SS%E4%BD%BF%E7%94%A8-%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/</loc>
-    <lastmod>2017-09-10T07:25:28.123Z</lastmod>
-    <data>
-        <display>
-        <title>SS使用-全局代理</title>
-        <pubTime>2017-07-31T16:07:32.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://datahonor.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-09-10</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/09/08/Three-Doors-Three-Prisoners/</loc>
-    <lastmod>2017-09-08T04:27:12.149Z</lastmod>
-    <data>
-        <display>
-        <title>Three Doors & Three Prisoners</title>
-        <pubTime>2017-09-08T04:12:34.000Z</pubTime>
-        
-        <tag>Statistics</tag>
-         
-         
-           
-             
-              <breadCrumb title="Statistics" url="http://datahonor.com/categories/Statistics/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-09-08</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/08/28/By-reference-By-pointer/</loc>
-    <lastmod>2017-08-28T13:39:15.052Z</lastmod>
-    <data>
-        <display>
-        <title>By reference | By pointer</title>
-        <pubTime>2017-08-28T13:32:35.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-08-28</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/16/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8-%E7%B4%AB%E4%B9%A6-%E4%B9%A0%E9%A2%98%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%89%E7%AB%A0/</loc>
-    <lastmod>2017-08-23T08:00:42.325Z</lastmod>
-    <data>
-        <display>
-        <title>算法竞赛入门经典[紫书]习题笔记(第三章)</title>
-        <pubTime>2017-03-15T17:14:35.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-08-23</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/02/25/Bubble-Sort/</loc>
-    <lastmod>2017-08-23T08:00:10.646Z</lastmod>
-    <data>
-        <display>
-        <title>Bubble Sort</title>
-        <pubTime>2017-02-25T08:49:54.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-08-23</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/08/22/Ubuntu%E8%B7%B3%E5%9D%91%E8%AE%B0%E5%BD%95%E2%80%94%E2%80%94%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%8C%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84/</loc>
-    <lastmod>2017-08-22T16:00:20.218Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu跳坑记录——环境变量，不存在的</title>
-        <pubTime>2017-08-22T15:18:42.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://datahonor.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-08-22</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/08/20/Orange3%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2017-08-20T12:00:57.482Z</lastmod>
-    <data>
-        <display>
-        <title>Orange3使用</title>
-        <pubTime>2017-08-20T11:40:05.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Orange3</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-08-20</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/08/05/BST-in-Cpp/</loc>
-    <lastmod>2017-08-18T16:21:57.025Z</lastmod>
-    <data>
-        <display>
-        <title>BST&BT in Cpp</title>
-        <pubTime>2017-08-04T16:40:24.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>DataStructure</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-08-18</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/08/17/HOG-SVM-Pedestrian-Detection/</loc>
-    <lastmod>2017-08-17T07:49:40.915Z</lastmod>
-    <data>
-        <display>
-        <title>HOG+SVM&Pedestrian Detection</title>
-        <pubTime>2017-08-17T07:24:18.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-08-17</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/08/17/Pedestrain-Detection/</loc>
-    <lastmod>2017-08-17T07:25:33.620Z</lastmod>
-    <data>
-        <display>
-        <title>Pedestrian Detection</title>
-        <pubTime>2017-08-17T01:47:39.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-08-17</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/08/15/%E6%B7%BB%E5%8A%A0OpenCV3%E5%AF%B9Python3%E7%9A%84%E6%94%AF%E6%8C%81/</loc>
-    <lastmod>2017-08-15T15:08:37.602Z</lastmod>
-    <data>
-        <display>
-        <title>添加OpenCV3对Python3的支持&QT中使用OpenCV</title>
-        <pubTime>2017-08-15T09:18:58.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-08-15</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/07/25/Coursera-ML-ex1-Linear-Regression/</loc>
-    <lastmod>2017-08-14T10:43:54.584Z</lastmod>
-    <data>
-        <display>
-        <title>Coursera-ML</title>
-        <pubTime>2017-07-25T03:47:28.000Z</pubTime>
-        
-        <tag>Octave</tag>
-         
-        <tag>ML</tag>
-         
-         
-           
-             
-              <breadCrumb title="Octave" url="http://datahonor.com/categories/Octave/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-08-14</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/04/25/Singly-Linked-Lists/</loc>
-    <lastmod>2017-08-13T08:38:53.664Z</lastmod>
-    <data>
-        <display>
-        <title>Singly Linked Lists</title>
-        <pubTime>2017-04-24T16:06:17.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>DataStructure</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-08-13</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/08/10/%E5%85%B3%E4%BA%8E%E6%95%99%E8%82%B2%E7%BD%91%E9%82%AE%E7%AE%B1/</loc>
-    <lastmod>2017-08-10T15:13:01.941Z</lastmod>
-    <data>
-        <display>
-        <title>关于教育网邮箱</title>
-        <pubTime>2017-08-10T14:50:47.000Z</pubTime>
-        
-        <tag>Tips</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tips" url="http://datahonor.com/categories/Tips/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-08-10</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/06/Octave-IN-Ubuntu/</loc>
-    <lastmod>2017-07-31T17:24:49.755Z</lastmod>
-    <data>
-        <display>
-        <title>Octave in Ubuntu</title>
-        <pubTime>2017-05-06T15:10:53.000Z</pubTime>
-        
-        <tag>Octave</tag>
-         
-        <tag>Ubuntu</tag>
-         
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://datahonor.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-07-31</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/07/22/OpenCV%E8%8E%B7%E5%8F%96%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E6%91%84%E5%83%8F%E5%A4%B4%E7%9A%84%E8%A7%86%E9%A2%91%E6%B5%81/</loc>
-    <lastmod>2017-07-22T15:26:19.673Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV获取安卓手机摄像头的视频流</title>
-        <pubTime>2017-07-22T09:53:58.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-07-22</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/07/20/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E4%BA%8C%E5%8D%81%E5%9B%9B%EF%BC%9ADetecting-corners-in-an-image/</loc>
-    <lastmod>2017-07-20T04:09:55.401Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记二十四：Detecting corners in an image</title>
-        <pubTime>2017-07-20T03:43:58.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-07-20</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/07/09/%E6%88%91%E8%BF%99%E4%B8%AA%E4%BA%BA%E5%91%A2/</loc>
-    <lastmod>2017-07-09T03:44:42.895Z</lastmod>
-    <data>
-        <display>
-        <title>我这个人呢</title>
-        <pubTime>2017-07-08T16:27:17.000Z</pubTime>
-        
-        <tag>随笔</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="http://datahonor.com/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-07-09</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/06/24/%E8%BF%99%E4%B8%80%E5%B9%B4%EF%BC%8C%E6%88%91%E4%BA%8C%E5%8D%81/</loc>
-    <lastmod>2017-06-24T08:43:04.894Z</lastmod>
-    <data>
-        <display>
-        <title>这一年，我二十</title>
-        <pubTime>2017-06-24T08:25:34.000Z</pubTime>
-        
-        <tag>随笔</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="http://datahonor.com/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-06-24</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/27/Extracting-Lines-Contours-and-Components/</loc>
-    <lastmod>2017-05-29T08:10:30.146Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记二十三：Extracting Lines, Contours, and Components</title>
-        <pubTime>2017-05-27T01:01:01.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-29</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/28/Hough%E5%8F%98%E6%8D%A2/</loc>
-    <lastmod>2017-05-28T03:38:38.296Z</lastmod>
-    <data>
-        <display>
-        <title>Hough变换</title>
-        <pubTime>2017-05-28T03:13:36.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-28</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/10/Stacks/</loc>
-    <lastmod>2017-05-26T03:30:23.925Z</lastmod>
-    <data>
-        <display>
-        <title>Stacks</title>
-        <pubTime>2017-05-10T14:40:17.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>DataStructure</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-26</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/25/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E4%BA%8C%E5%8D%81%E4%BA%8C%EF%BC%9A%E6%BB%A4%E6%B3%A2/</loc>
-    <lastmod>2017-05-25T10:04:38.167Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记二十二：滤波</title>
-        <pubTime>2017-05-25T07:33:11.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-25</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/25/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E4%BA%8C%E5%8D%81%E4%B8%80%EF%BC%9AMSER/</loc>
-    <lastmod>2017-05-24T16:28:38.740Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记二十一：MSER</title>
-        <pubTime>2017-05-24T16:06:22.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-24</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/24/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E4%BA%8C%E5%8D%81%EF%BC%9ASegmenting-images-using/</loc>
-    <lastmod>2017-05-24T15:42:53.959Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记二十：Segmenting images using watersheds</title>
-        <pubTime>2017-05-24T15:19:35.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-24</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/15/Morphalogical-Operations/</loc>
-    <lastmod>2017-05-24T07:34:39.586Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记十九：Morphalogical Operations</title>
-        <pubTime>2017-05-15T14:59:20.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-24</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/19/%E8%83%8C%E6%99%AF%E5%BB%BA%E6%A8%A1/</loc>
-    <lastmod>2017-05-21T01:22:13.011Z</lastmod>
-    <data>
-        <display>
-        <title>背景建模</title>
-        <pubTime>2017-05-18T16:54:03.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-21</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/06/The-Speed-of-Numpy/</loc>
-    <lastmod>2017-05-19T01:54:50.446Z</lastmod>
-    <data>
-        <display>
-        <title>The Speed of Numpy</title>
-        <pubTime>2017-03-06T05:49:15.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Numpy</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-19</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/18/%E5%AE%9E%E6%97%B6%E8%A7%86%E9%A2%91%E4%B8%AD%E9%9D%A2%E5%85%B7%E8%A6%86%E7%9B%96%E7%9A%84%E5%AE%9E%E7%8E%B0/</loc>
-    <lastmod>2017-05-18T15:54:06.681Z</lastmod>
-    <data>
-        <display>
-        <title>实时视频中面具覆盖的实现</title>
-        <pubTime>2017-05-18T15:44:17.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-18</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/18/%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87%E5%88%86%E7%B1%BB/</loc>
-    <lastmod>2017-05-18T10:12:06.784Z</lastmod>
-    <data>
-        <display>
-        <title>学习目标分类</title>
-        <pubTime>2017-05-18T09:58:12.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-18</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/18/%E8%87%AA%E5%8A%A8%E5%85%89%E5%AD%A6%E6%A3%80%E6%B5%8B%EF%BC%8C%E7%9B%AE%E6%A0%87%E5%88%86%E5%89%B2%E5%92%8C%E6%A3%80%E6%B5%8B/</loc>
-    <lastmod>2017-05-17T17:02:55.206Z</lastmod>
-    <data>
-        <display>
-        <title>自动光学检测，目标分割和检测</title>
-        <pubTime>2017-05-17T16:49:33.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-17</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/04/27/Mouse-trackbar/</loc>
-    <lastmod>2017-05-16T01:14:21.545Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记二：Mouse trackbar</title>
-        <pubTime>2017-04-26T16:06:56.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-16</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/15/OpenCV%E8%AE%A1%E7%AE%97%E7%BB%93%E6%9E%9C%E4%BF%9D%E5%AD%98-YAML/</loc>
-    <lastmod>2017-05-15T14:51:42.519Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV计算结果保存--YAML/XML</title>
-        <pubTime>2017-05-15T14:42:16.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-15</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/15/Visual-tracking-using-histograms/</loc>
-    <lastmod>2017-05-15T09:15:10.321Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记十八：Visual tracking using histograms</title>
-        <pubTime>2017-05-15T08:56:09.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-15</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/15/Adaptive-thresholding/</loc>
-    <lastmod>2017-05-15T00:42:41.143Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记十七：Adaptive thresholding</title>
-        <pubTime>2017-05-15T00:15:28.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-15</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/11/Queue/</loc>
-    <lastmod>2017-05-11T06:12:03.380Z</lastmod>
-    <data>
-        <display>
-        <title>Queue</title>
-        <pubTime>2017-05-10T16:23:24.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>DataStructure</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-11</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/08/About-if-name-main-in-Python/</loc>
-    <lastmod>2017-05-08T10:41:48.950Z</lastmod>
-    <data>
-        <display>
-        <title>About if __name__=='__main__' in Python</title>
-        <pubTime>2017-05-08T10:02:48.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-08</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/02/Computing-an-image-histogram/</loc>
-    <lastmod>2017-05-06T16:14:23.993Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记十三：Computing an image histogram</title>
-        <pubTime>2017-05-02T08:34:26.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-06</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/04/Using-the-mean-shift-algorithm-to-find-an-object/</loc>
-    <lastmod>2017-05-04T08:12:40.507Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记十六：Using the mean shift algorithm to find an object</title>
-        <pubTime>2017-05-04T07:40:36.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-04</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/04/Backprojecting-a-histogram-to/</loc>
-    <lastmod>2017-05-04T07:24:57.605Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记十五：Backprojecting a histogram to detect specific image content</title>
-        <pubTime>2017-05-04T07:06:11.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-04</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/04/Look-up-tables/</loc>
-    <lastmod>2017-05-04T06:40:13.971Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记十四：Look-up tables</title>
-        <pubTime>2017-05-04T06:25:07.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-04</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/02/Using-colors-for-detection-skin-tone-detection/</loc>
-    <lastmod>2017-05-02T04:16:17.595Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记十二：Using colors for detection - skin tone detection</title>
-        <pubTime>2017-05-02T04:02:23.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/02/Segmenting-an-image-with-the-GrabCut-algorithm/</loc>
-    <lastmod>2017-05-02T03:20:08.634Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记十一：Segmenting an image with the GrabCut algorithm</title>
-        <pubTime>2017-05-02T01:40:33.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/05/02/Converting-color-reprentations/</loc>
-    <lastmod>2017-05-02T03:19:52.955Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记十：Converting color reprentations</title>
-        <pubTime>2017-05-02T03:07:38.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-05-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/04/28/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E4%B9%9D%EF%BC%9AComparing-colors-using-the-Strategy-design-pattern/</loc>
-    <lastmod>2017-04-28T05:30:59.105Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记九：Comparing colors using the Strategy design pattern</title>
-        <pubTime>2017-04-28T05:20:46.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-04-28</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/04/28/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E5%85%AB%EF%BC%9ARemapping/</loc>
-    <lastmod>2017-04-28T03:43:48.480Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记八：Remapping</title>
-        <pubTime>2017-04-28T03:29:15.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-04-28</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/04/28/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E4%B8%83%EF%BC%9ANeighbor-access/</loc>
-    <lastmod>2017-04-28T03:42:27.587Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记七：Neighbor access</title>
-        <pubTime>2017-04-28T01:48:42.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-04-28</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/04/09/OPenCV-%E5%9B%BE%E7%89%87%E9%A2%9C%E8%89%B2%E7%A9%BA%E9%97%B4%E7%BC%A9%E5%87%8F%E4%B8%8E%E9%81%8D%E5%8E%86/</loc>
-    <lastmod>2017-04-28T01:28:34.447Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记六：图片颜色空间缩减与遍历</title>
-        <pubTime>2017-04-09T01:43:10.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-04-28</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/04/28/Accessing-pixel-values/</loc>
-    <lastmod>2017-04-28T00:31:33.961Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记五：Accessing pixel values</title>
-        <pubTime>2017-04-28T00:24:51.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-04-28</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/04/28/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E5%9B%9B%EF%BC%9AROI/</loc>
-    <lastmod>2017-04-27T16:19:32.343Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记四：ROI</title>
-        <pubTime>2017-04-27T16:00:24.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-04-27</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/04/27/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E4%BA%8C%EF%BC%9ADraw-on-image/</loc>
-    <lastmod>2017-04-27T15:31:38.909Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记三：Draw on image</title>
-        <pubTime>2017-04-27T15:19:52.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-04-27</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/04/26/OpenCV%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9ARead-Show-and-Write/</loc>
-    <lastmod>2017-04-26T15:26:11.398Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV系列笔记一：Read, Show and Write</title>
-        <pubTime>2017-04-26T14:50:36.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-04-26</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/04/03/Opencv%E5%88%B6%E4%BD%9C%E7%AE%80%E6%98%93%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</loc>
-    <lastmod>2017-04-26T08:11:18.722Z</lastmod>
-    <data>
-        <display>
-        <title>Learning Opencv3学习笔记--制作简易视频播放器</title>
-        <pubTime>2017-04-03T15:47:43.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-04-26</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/04/25/public-protected-and-private/</loc>
-    <lastmod>2017-04-25T08:46:45.085Z</lastmod>
-    <data>
-        <display>
-        <title>public, protected and private</title>
-        <pubTime>2017-04-25T08:35:58.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-04-25</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/04/25/Doubly-Linked-Lists/</loc>
-    <lastmod>2017-04-25T06:06:15.314Z</lastmod>
-    <data>
-        <display>
-        <title>Doubly Linked Lists</title>
-        <pubTime>2017-04-25T05:53:46.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>DataStructure</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-04-25</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/04/09/Const-in-Cpp/</loc>
-    <lastmod>2017-04-09T16:01:29.943Z</lastmod>
-    <data>
-        <display>
-        <title>Const in Cpp</title>
-        <pubTime>2017-04-09T15:49:36.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-04-09</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/04/06/Learning-Opencv3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2017-04-05T16:55:58.679Z</lastmod>
-    <data>
-        <display>
-        <title>Learning Opencv3学习笔记</title>
-        <pubTime>2017-04-05T16:44:23.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-04-05</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/04/04/Python%E6%8A%93%E5%8F%96%E5%BE%AE%E4%BF%A1%E6%96%87%E7%AB%A0/</loc>
-    <lastmod>2017-04-03T17:42:02.957Z</lastmod>
-    <data>
-        <display>
-        <title>Python抓取微信文章</title>
-        <pubTime>2017-04-03T17:03:24.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Data Analysis</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-04-03</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/30/%E6%88%91%EF%BC%8CArch%E5%92%8CUbuntu%E7%9A%84%E6%95%85%E4%BA%8B/</loc>
-    <lastmod>2017-03-30T15:42:06.367Z</lastmod>
-    <data>
-        <display>
-        <title>我，Arch和Ubuntu的故事</title>
-        <pubTime>2017-03-30T14:52:24.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Arch</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://datahonor.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-30</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/25/typedef-define/</loc>
-    <lastmod>2017-03-25T07:36:31.697Z</lastmod>
-    <data>
-        <display>
-        <title>typedef & #define</title>
-        <pubTime>2017-03-25T07:18:25.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-25</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/22/%E5%88%A9%E7%94%A8Python%E8%A7%A3%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E9%97%AE%E9%A2%98-LP/</loc>
-    <lastmod>2017-03-22T17:14:39.161Z</lastmod>
-    <data>
-        <display>
-        <title>利用Python,Lingo, Octave解线性规划问题(LP)</title>
-        <pubTime>2017-03-22T14:50:39.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>OR</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-22</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/19/Kaggle%E2%80%94%E2%80%94American-Pubs-Python/</loc>
-    <lastmod>2017-03-19T03:24:04.736Z</lastmod>
-    <data>
-        <display>
-        <title>Kaggle——American Pubs[Python] </title>
-        <pubTime>2017-03-19T03:15:45.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Kaggle</tag>
-         
-        <tag>Data Analysis</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-19</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/13/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8-%E7%B4%AB%E4%B9%A6-%E4%B9%A0%E9%A2%98%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2017-03-15T17:21:06.014Z</lastmod>
-    <data>
-        <display>
-        <title>算法竞赛入门经典[紫书]习题笔记(第二章)</title>
-        <pubTime>2017-03-13T04:18:22.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>Algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-15</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/06/Numpy%E6%97%A5%E5%B8%B8%E7%A7%AF%E7%B4%AF/</loc>
-    <lastmod>2017-03-08T13:39:35.335Z</lastmod>
-    <data>
-        <display>
-        <title>Numpy日常积累</title>
-        <pubTime>2017-03-06T11:42:27.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Numpy</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-08</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/06/Python%E6%97%A5%E5%B8%B8%E7%A7%AF%E7%B4%AF/</loc>
-    <lastmod>2017-03-06T11:41:29.589Z</lastmod>
-    <data>
-        <display>
-        <title>Python日常积累</title>
-        <pubTime>2017-03-06T11:37:57.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-06</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/06/cin-and-cin-getline/</loc>
-    <lastmod>2017-03-06T01:30:11.686Z</lastmod>
-    <data>
-        <display>
-        <title>cin and cin.getline</title>
-        <pubTime>2017-03-06T01:16:12.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
+    <lastmod>2017-03-06</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/05/Classifying-News-Headlines-with-scikit-learn/</loc>
-    <lastmod>2017-03-05T01:34:32.733Z</lastmod>
-    <data>
-        <display>
-        <title>Classifying News Headlines with scikit-learn</title>
-        <pubTime>2017-03-05T01:14:46.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Kaggle</tag>
-         
-        <tag>Data Analysis</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-05</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/03/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/</loc>
-    <lastmod>2017-03-05T00:55:52.040Z</lastmod>
-    <data>
-        <display>
-        <title>朴素贝叶斯算法的简单实现</title>
-        <pubTime>2017-03-03T04:38:48.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Algorithm</tag>
-         
-        <tag>Data Analysis</tag>
-         
-        <tag>ML</tag>
-         
-        <tag>Clustering</tag>
-         
-        <tag>统计学习方法</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-05</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/%E8%B1%86%E7%93%A3%E5%BD%B1%E8%AF%84%E7%88%AC%E5%8F%96/</loc>
-    <lastmod>2017-03-03T05:38:49.965Z</lastmod>
-    <data>
-        <display>
-        <title>豆瓣影评爬取</title>
-        <pubTime>2017-03-02T09:22:21.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Spider</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-03</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/03/%E5%8E%9F%E5%A7%8B%E6%84%9F%E7%9F%A5%E6%9C%BA%E6%A8%A1%E5%9E%8B/</loc>
-    <lastmod>2017-03-03T05:25:42.752Z</lastmod>
-    <data>
-        <display>
-        <title>原始感知机模型</title>
-        <pubTime>2017-03-03T05:09:30.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Algorithm</tag>
-         
-        <tag>Data Analysis</tag>
-         
-        <tag>ML</tag>
-         
-        <tag>Clustering</tag>
-         
-        <tag>统计学习方法</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-03</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/03/%E6%84%9F%E7%9F%A5%E6%9C%BA%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E7%9A%84%E5%AF%B9%E5%81%B6%E5%BD%A2%E5%BC%8F/</loc>
-    <lastmod>2017-03-03T05:23:59.644Z</lastmod>
-    <data>
-        <display>
-        <title>感知机学习算法的对偶形式</title>
-        <pubTime>2017-03-03T05:19:21.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Algorithm</tag>
-         
-        <tag>Data Analysis</tag>
-         
-        <tag>ML</tag>
-         
-        <tag>Clustering</tag>
-         
-        <tag>统计学习方法</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-03</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/Python%E5%88%86%E6%9E%90QQ%E7%BE%A4%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2017-03-03T04:54:35.879Z</lastmod>
-    <data>
-        <display>
-        <title>Python分析QQ群聊天记录</title>
-        <pubTime>2017-03-01T17:20:35.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>正则</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-03</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E2%80%94%E2%80%94%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0KNN-Python/</loc>
-    <lastmod>2017-03-03T04:39:57.549Z</lastmod>
-    <data>
-        <display>
-        <title>统计学习方法——简单实现KNN[Python]</title>
-        <pubTime>2017-03-02T07:55:59.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Algorithm</tag>
-         
-        <tag>Data Analysis</tag>
-         
-        <tag>ML</tag>
-         
-        <tag>Clustering</tag>
-         
-        <tag>统计学习方法</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-03</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/02/27/K-means-clustering/</loc>
-    <lastmod>2017-03-02T17:39:54.329Z</lastmod>
-    <data>
-        <display>
-        <title>K-means clustering</title>
-        <pubTime>2017-02-27T14:12:47.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Algorithm</tag>
-         
-        <tag>Clustering</tag>
-         
-        <tag>统计学习方法</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95-Gradient-Descent/</loc>
-    <lastmod>2017-03-02T09:49:32.957Z</lastmod>
-    <data>
-        <display>
-        <title>梯度下降法[Gradient Descent]</title>
-        <pubTime>2017-03-02T09:31:38.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>ML</tag>
-         
-        <tag>统计学习方法</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/%E5%86%B3%E7%AD%96%E6%A0%91%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/</loc>
-    <lastmod>2017-03-02T09:32:48.139Z</lastmod>
-    <data>
-        <display>
-        <title>决策树的简单实现</title>
-        <pubTime>2017-03-02T07:48:54.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Algorithm</tag>
-         
-        <tag>Data Analysis</tag>
-         
-        <tag>ML</tag>
-         
-        <tag>Clustering</tag>
-         
-        <tag>统计学习方法</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/Anaconda%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2017-03-02T08:56:28.759Z</lastmod>
-    <data>
-        <display>
-        <title>Anaconda使用笔记</title>
-        <pubTime>2017-03-02T08:53:45.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0%81%E2%80%94%E2%80%94python%E5%AE%9E%E7%8E%B0/</loc>
-    <lastmod>2017-03-02T08:51:51.251Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV识别条形码——python实现</title>
-        <pubTime>2017-03-02T08:33:55.000Z</pubTime>
-        
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/OpenCV%E8%AF%86%E5%88%AB%E6%9D%A1%E5%BD%A2%E7%A0%81%E2%80%94%E2%80%94python%E5%AE%9E%E7%8E%B0-CPP%E8%A1%A5%E5%85%85/</loc>
-    <lastmod>2017-03-02T08:49:45.558Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV识别条形码——python实现[CPP补充]</title>
-        <pubTime>2017-03-02T08:42:49.000Z</pubTime>
-        
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/%E7%99%BE%E5%BA%A6%E6%96%B0%E9%97%BB%E7%88%AC%E8%99%AB%E2%80%94%E2%80%94%E5%A4%9A%E8%BF%9B%E7%A8%8B%E6%8A%93%E5%8F%96/</loc>
-    <lastmod>2017-03-02T08:28:36.230Z</lastmod>
-    <data>
-        <display>
-        <title>百度新闻爬虫——多进程抓取</title>
-        <pubTime>2017-03-02T08:22:51.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Spider</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/%E7%99%BE%E5%BA%A6%E6%96%B0%E9%97%BB%E7%88%AC%E8%99%AB%E2%80%94%E2%80%94%E6%99%AE%E9%80%9A%E6%8A%93%E5%8F%96/</loc>
-    <lastmod>2017-03-02T08:21:46.760Z</lastmod>
-    <data>
-        <display>
-        <title>百度新闻爬虫——普通抓取</title>
-        <pubTime>2017-03-02T08:12:53.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Spider</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/Kaggle%E2%80%94%E2%80%94A-Journey-through-Titanic-Python/</loc>
-    <lastmod>2017-03-02T07:47:50.222Z</lastmod>
-    <data>
-        <display>
-        <title>Kaggle——A Journey through Titanic[Python]</title>
-        <pubTime>2017-03-02T07:29:03.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Kaggle</tag>
-         
-        <tag>Data Analysis</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/%E8%BF%9B%E7%A8%8B%E6%B1%A0%E4%B8%8E%E7%BA%BF%E7%A8%8B%E6%B1%A0/</loc>
-    <lastmod>2017-03-02T06:06:06.659Z</lastmod>
-    <data>
-        <display>
-        <title>进程池与线程池</title>
-        <pubTime>2017-03-02T05:54:49.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/QQ%E7%A9%BA%E9%97%B4%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A/</loc>
-    <lastmod>2017-03-02T05:53:12.048Z</lastmod>
-    <data>
-        <display>
-        <title>QQ空间数据分析报告</title>
-        <pubTime>2017-03-02T04:42:05.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Data Analysis</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/Selenium%E7%88%AC%E5%8F%96QQ%E7%A9%BA%E9%97%B4%E8%AF%B4%E8%AF%B4%E4%BF%A1%E6%81%AF/</loc>
-    <lastmod>2017-03-02T05:49:56.364Z</lastmod>
-    <data>
-        <display>
-        <title>Selenium爬取QQ空间说说信息</title>
-        <pubTime>2017-03-02T05:44:50.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Spider</tag>
-         
-        <tag>Selenium</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/Kaggle%E2%80%94%E2%80%94GUNS-DEATHS-Python/</loc>
-    <lastmod>2017-03-02T05:41:26.721Z</lastmod>
-    <data>
-        <display>
-        <title>Kaggle——GUNS-DEATHS[Python]</title>
-        <pubTime>2017-03-02T05:23:07.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Kaggle</tag>
-         
-        <tag>Data Analysis</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-03-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/03/02/Python%E5%AE%9E%E7%8E%B0%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA-SVM/</loc>
-    <lastmod>2017-03-02T00:40:43.920Z</lastmod>
-    <data>
-        <display>
-        <title>Python实现支持向量机(SVM)</title>
-        <pubTime>2017-03-01T16:10:13.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Algorithm</tag>
-         
-        <tag>Clustering</tag>
-         
-        <tag>统计学习方法</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
+    <lastmod>2017-03-02</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/02/26/Print-time/</loc>
-    <lastmod>2017-02-26T02:51:48.513Z</lastmod>
-    <data>
-        <display>
-        <title>Print time!</title>
-        <pubTime>2017-02-26T02:44:00.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>Practice</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-02-26</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/02/25/Kaggle-Human-Resources-Analytics/</loc>
-    <lastmod>2017-02-25T02:34:21.388Z</lastmod>
-    <data>
-        <display>
-        <title>Kaggle: Human Resources Analytics</title>
-        <pubTime>2017-02-25T01:57:04.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Kaggle</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://datahonor.com/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-02-25</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/02/23/OpenCV-Pyramid-and-Canny/</loc>
-    <lastmod>2017-02-23T00:43:22.923Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV [Pyramid and Canny]</title>
-        <pubTime>2017-02-23T00:27:25.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2017-02-23</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/02/22/OpenCV-Play-Video/</loc>
-    <lastmod>2017-02-22T15:50:04.767Z</lastmod>
-    <data>
-        <display>
-        <title>OpenCV Wait!</title>
-        <pubTime>2017-02-22T12:43:53.000Z</pubTime>
-        
-        <tag>Cpp</tag>
-         
-        <tag>OpenCV</tag>
-         
-         
-           
-             
-              <breadCrumb title="Cpp" url="http://datahonor.com/categories/Cpp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
+    <lastmod>2017-02-22</lastmod>
+  </url>
 </urlset>

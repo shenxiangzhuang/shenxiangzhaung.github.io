@@ -1,25 +1,4 @@
-<!doctype html>
-
-
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-Hans">
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
+<!DOCTYPE html>
 
 
 
@@ -33,47 +12,14 @@
 
 
   
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Cpp,OpenCV," />
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
 
 
 
@@ -82,48 +28,54 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
 
 
 
 
-<meta name="description" content="Overview在复习CookBook的闲暇，看了看OpenCV By Example, 里面的示例很不错，这里做下记录。此处实现了目标的背景去除，目标的分割和检测，以工厂螺母为例。就是下面的图啦。
-
-Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152">
-<meta property="og:type" content="article">
-<meta property="og:title" content="自动光学检测，目标分割和检测">
-<meta property="og:url" content="http://datahonor.com/2017/05/18/自动光学检测，目标分割和检测/index.html">
-<meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="Overview在复习CookBook的闲暇，看了看OpenCV By Example, 里面的示例很不错，这里做下记录。此处实现了目标的背景去除，目标的分割和检测，以工厂螺母为例。就是下面的图啦。
-
-Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152">
-<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/170518/light.png">
-<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/170518/test.png">
-<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/170518/Selection_051801.png">
-<meta property="og:updated_time" content="2017-05-17T17:02:55.206Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自动光学检测，目标分割和检测">
-<meta name="twitter:description" content="Overview在复习CookBook的闲暇，看了看OpenCV By Example, 里面的示例很不错，这里做下记录。此处实现了目标的背景去除，目标的分割和检测，以工厂螺母为例。就是下面的图啦。
-
-Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152">
-<meta name="twitter:image" content="http://blog-1252464519.costj.myqcloud.com/170518/light.png">
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0">
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
-    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '不秩稚童'
-    },
+    scheme: 'Gemini',
+    version: '7.0.0',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -135,34 +87,52 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
 </script>
 
 
-
-  <link rel="canonical" href="http://datahonor.com/2017/05/18/自动光学检测，目标分割和检测/"/>
-
-
-
-
-
-  <title> 自动光学检测，目标分割和检测 | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
 
 
 
 
-<!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-92663335-1', 'auto');
-  ga('send', 'pageview');
+  <meta name="description" content="Overview在复习CookBook的闲暇，看了看OpenCV By Example, 里面的示例很不错，这里做下记录。此处实现了目标的背景去除，目标的分割和检测，以工厂螺母为例。就是下面的图啦。  Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152">
+<meta name="keywords" content="Cpp,OpenCV">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自动光学检测，目标分割和检测">
+<meta property="og:url" content="http://datahonor.com/2017/05/18/自动光学检测，目标分割和检测/index.html">
+<meta property="og:site_name" content="DATA HONOR">
+<meta property="og:description" content="Overview在复习CookBook的闲暇，看了看OpenCV By Example, 里面的示例很不错，这里做下记录。此处实现了目标的背景去除，目标的分割和检测，以工厂螺母为例。就是下面的图啦。  Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/170518/light.png">
+<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/170518/test.png">
+<meta property="og:image" content="http://blog-1252464519.costj.myqcloud.com/170518/Selection_051801.png">
+<meta property="og:updated_time" content="2017-05-17T17:02:55.206Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自动光学检测，目标分割和检测">
+<meta name="twitter:description" content="Overview在复习CookBook的闲暇，看了看OpenCV By Example, 里面的示例很不错，这里做下记录。此处实现了目标的背景去除，目标的分割和检测，以工厂螺母为例。就是下面的图啦。  Code12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152">
+<meta name="twitter:image" content="http://blog-1252464519.costj.myqcloud.com/170518/light.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://datahonor.com/2017/05/18/自动光学检测，目标分割和检测/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
 </script>
 
+  <title>自动光学检测，目标分割和检测 | DATA HONOR</title>
+  
 
-  <script type="text/javascript">
+
+
+
+
+
+  <script>
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -178,36 +148,65 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
 
 
 
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
 
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">DATA HONOR</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
-        <p class="site-subtitle">Never say never.</p>
+        <h1 class="site-subtitle" itemprop="description">Never say never.</h1>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -215,82 +214,117 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
 
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
   
 
   
+
+  
     <div class="site-search">
       
-  <div class="popup local-search-popup">
+  <div class="popup search-popup local-search-popup">
   <div class="local-search-header clearfix">
     <span class="search-icon">
       <i class="fa fa-search"></i>
@@ -299,7 +333,7 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -313,12 +347,23 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -331,39 +376,44 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/05/18/自动光学检测，目标分割和检测/">
+  
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="不秩稚童">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
-  </span>
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/05/18/自动光学检测，目标分割和检测/">
 
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="DATA HONOR">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不秩稚童">
+      <meta itemprop="description" content="十年饮冰，难凉热血。">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DATA HONOR">
+    </span>
 
     
       <header class="post-header">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                自动光学检测，目标分割和检测
+          <h2 class="post-title" itemprop="name headline">自动光学检测，目标分割和检测
+
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -371,18 +421,23 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-18T00:49:33+08:00">
-                2017-05-18
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-05-18 00:49:33 / 修改时间：01:02:55" itemprop="dateCreated datePublished" datetime="2017-05-18T00:49:33+08:00">2017-05-18</time>
             
 
             
+              
 
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -393,11 +448,7 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Cpp/" itemprop="url" rel="index">
-                    <span itemprop="name">Cpp</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Cpp/" itemprop="url" rel="index"><span itemprop="name">Cpp</span></a></span>
 
                 
                 
@@ -407,13 +458,16 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
                 <a href="/2017/05/18/自动光学检测，目标分割和检测/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/05/18/自动光学检测，目标分割和检测/" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/05/18/自动光学检测，目标分割和检测/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -421,11 +475,24 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
 
           
           
+            <span id="/2017/05/18/自动光学检测，目标分割和检测/" class="leancloud_visitors" data-flag-title="自动光学检测，目标分割和检测">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
 
           
             <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>本文总阅读量
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -437,7 +504,9 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -446,7 +515,7 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
       
         <h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>在复习CookBook的闲暇，看了看<em>OpenCV By Example</em>, 里面的示例很不错，这里做下记录。此处实现了目标的背景去除，目标的分割和检测，以工厂螺母为例。就是下面的图啦。</p>
 <p><img src="http://blog-1252464519.costj.myqcloud.com/170518/light.png" alt=""><br><img src="http://blog-1252464519.costj.myqcloud.com/170518/test.png" alt=""></p>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">//</div><div class="line">// Created by shensir on 17-5-17.</div><div class="line">//</div><div class="line"></div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include "opencv2/highgui.hpp"</div><div class="line">#include "opencv2/imgproc.hpp"</div><div class="line"></div><div class="line">using namespace std;</div><div class="line">using namespace cv;</div><div class="line"></div><div class="line">// 光纹去除</div><div class="line">Mat removeLight(Mat img, Mat pattern, int method)&#123;</div><div class="line">    Mat aux;</div><div class="line">    // 如果方法是归一化</div><div class="line">    if(method==1)&#123;</div><div class="line">        // 相除时需要将图像改为32位浮点型</div><div class="line">        Mat img32, pattern32;</div><div class="line">        img.convertTo(img32, CV_32F);</div><div class="line">        pattern.convertTo(pattern32, CV_32F);</div><div class="line">        // 图像相除模式</div><div class="line">        aux = 255*(1-(img32/pattern32));</div><div class="line">        // 换回8bit</div><div class="line">        aux.convertTo(aux, CV_8U);</div><div class="line">    &#125;</div><div class="line">    else&#123;</div><div class="line">        aux = pattern - img;</div><div class="line">    &#125;</div><div class="line">    return aux;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 估计背景图像，大尺寸核矩阵模糊</div><div class="line">Mat calculateLightPattern(Mat img)&#123;</div><div class="line">    Mat pattern;</div><div class="line">    blur(img, pattern, Size(img.cols/3, img.rows/3));</div><div class="line">    return pattern;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">// 先进行形态学操作[在背景色是核函数模糊得到的时候，很有必要]，再二值化</div><div class="line">Mat getBinary(Mat img_no_light, int method_light)&#123;</div><div class="line">    Mat img_thr;</div><div class="line">    if(method_light!=2)&#123;</div><div class="line">        threshold(img_no_light, img_thr, 30, 255, THRESH_BINARY);</div><div class="line">    &#125; else&#123;</div><div class="line">        threshold(img_no_light, img_thr, 140, 255, THRESH_BINARY_INV);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // 进行形态学操作去除边缘不规则噪点</div><div class="line">    cv::Mat closed;</div><div class="line">    cv::Mat element5(5 ,5, CV_8U, cv::Scalar(1));</div><div class="line">    cv::morphologyEx(img_thr, closed,   // input and output</div><div class="line">                     cv::MORPH_CLOSE,  // operator code</div><div class="line">                     element5);  // structuring element</div><div class="line"></div><div class="line">    // Opening</div><div class="line">    cv::Mat opening;</div><div class="line">    cv::morphologyEx(closed, opening,   // input and output</div><div class="line">                     cv::MORPH_OPEN,  // operator code</div><div class="line">                     element5);  // structuring element</div><div class="line"></div><div class="line"></div><div class="line">    imshow("img_thr_closed-opening", opening);</div><div class="line"></div><div class="line">    return opening;</div><div class="line">&#125;</div><div class="line"></div><div class="line">static Scalar randomColor( RNG&amp; rng )</div><div class="line">&#123;</div><div class="line">    int icolor = (unsigned) rng;</div><div class="line">    return Scalar( icolor&amp;255, (icolor&gt;&gt;8)&amp;255, (icolor&gt;&gt;16)&amp;255 );</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 连通区域算法</div><div class="line">void ConnectedComponents(Mat img)&#123;</div><div class="line">    // 使用连通区域分离符合要求部分图像Mat标签</div><div class="line">    Mat labels;</div><div class="line">    int num_objects = connectedComponents(img, labels);</div><div class="line">    // 检查检测到的目标数目</div><div class="line">    if(num_objects&lt;2)&#123;</div><div class="line">        cout&lt;&lt;"No objects detected"&lt;&lt;endl;</div><div class="line">        return;</div><div class="line">    &#125; else&#123;</div><div class="line">        cout&lt;&lt;"Number of objects detected: "&lt;&lt; num_objects-1&lt;&lt;endl;</div><div class="line">    &#125;</div><div class="line">    // 创建彩色目标的输出图像</div><div class="line">    Mat output=Mat::zeros(img.rows, img.cols, CV_8UC3);</div><div class="line">    RNG rng(0xFFFFFFFF);</div><div class="line">    for(int i=1; i&lt;num_objects; i++)&#123;</div><div class="line">        Mat mask = labels==i;</div><div class="line">        output.setTo(randomColor(rng), mask);</div><div class="line">    &#125;</div><div class="line">    imshow("Result", output);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">// 连通区域算法</div><div class="line">void ConnectedComponentsStats(Mat img)&#123;</div><div class="line">    // 连通区域统计信息</div><div class="line">    Mat labels, stats, centroids;</div><div class="line">    int num_objects = connectedComponentsWithStats(img, labels, stats, centroids);</div><div class="line"></div><div class="line">    // 检测物体数目判别</div><div class="line">    if(num_objects&lt;2)&#123;</div><div class="line">        cout&lt;&lt;"No objects detedcted"&lt;&lt;endl;</div><div class="line">        return;</div><div class="line">    &#125; else&#123;</div><div class="line">        cout&lt;&lt;"Number of objects detected: "&lt;&lt;num_objects-1&lt;&lt;endl;</div><div class="line">    &#125;</div><div class="line">    // 创建彩色对象的输出图像并显示区域</div><div class="line">    Mat output = Mat::zeros(img.rows, img.cols, CV_8UC3);</div><div class="line">    RNG rng(0xFFFFFFFF);</div><div class="line"></div><div class="line">    for(int i=1; i&lt;num_objects; i++)&#123;</div><div class="line">        cout&lt;&lt;"Object "&lt;&lt;i&lt;&lt;" with pos: "&lt;&lt;centroids.at&lt;Point2d&gt;(i)</div><div class="line">                                         &lt;&lt;" with area "&lt;&lt;stats.at&lt;int&gt;(i, CC_STAT_AREA)&lt;&lt;endl;</div><div class="line">        Mat mask = labels==i;</div><div class="line">        output.setTo(randomColor(rng), mask);</div><div class="line"></div><div class="line">        // 使用区域绘制文本</div><div class="line">        stringstream ss;</div><div class="line">        ss&lt;&lt;"area: "&lt;&lt;stats.at&lt;int&gt;(i, CC_STAT_AREA);</div><div class="line"></div><div class="line">        putText(output, ss.str(), centroids.at&lt;Point2d&gt;(i), FONT_HERSHEY_SIMPLEX, 0.4, Scalar(255,255,255));</div><div class="line">    &#125;</div><div class="line">    imshow("Result", output);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">//  边缘检测算法</div><div class="line">void FindContoursBasic(Mat img)&#123;</div><div class="line">    vector&lt;vector&lt;Point&gt;&gt; contours;</div><div class="line">    findContours(img, contours, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);</div><div class="line">    Mat output = Mat::zeros(img.rows, img.cols, CV_8UC3);</div><div class="line">    // 检查检测到的对象的数目</div><div class="line">    if(contours.size() == 0)&#123;</div><div class="line">        cout&lt;&lt;"No objects detected"&lt;&lt;endl;</div><div class="line">        return;</div><div class="line">    &#125; else&#123;</div><div class="line">        cout&lt;&lt;"Number of objects detected: "&lt;&lt;contours.size()&lt;&lt;endl;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    RNG rng(0xFFFFFFFF);</div><div class="line">    for(int i=0;i&lt;contours.size();i++)&#123;</div><div class="line">        drawContours(output, contours, i, randomColor(rng));</div><div class="line">    &#125;</div><div class="line">    imshow("Contours", output);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">    Mat img = imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/industry.pgm", IMREAD_GRAYSCALE);</div><div class="line">    imshow("Original Image", img);</div><div class="line"></div><div class="line">    Mat pattern = imread("/home/shensir/Documents/MyPrograming/Cpp/Clions/data/light.pgm",0);</div><div class="line">    imshow("Back", pattern);</div><div class="line">//    Mat pattern = calculateLightPattern(img);</div><div class="line">    Mat img_no_light = removeLight(img, pattern, 1);</div><div class="line">    imshow("removelight--minus", img_no_light);</div><div class="line"></div><div class="line">    Mat img_thr = getBinary(img_no_light,1);</div><div class="line">//    ConnectedComponents(img_thr);</div><div class="line">    ConnectedComponentsStats(img_thr);</div><div class="line"></div><div class="line">    FindContoursBasic(img_thr);</div><div class="line">    waitKey(0);</div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Created by shensir on 17-5-17.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"opencv2/highgui.hpp"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"opencv2/imgproc.hpp"</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 光纹去除</span></span><br><span class="line"><span class="function">Mat <span class="title">removeLight</span><span class="params">(Mat img, Mat pattern, <span class="keyword">int</span> method)</span></span>&#123;</span><br><span class="line">    Mat aux;</span><br><span class="line">    <span class="comment">// 如果方法是归一化</span></span><br><span class="line">    <span class="keyword">if</span>(method==<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="comment">// 相除时需要将图像改为32位浮点型</span></span><br><span class="line">        Mat img32, pattern32;</span><br><span class="line">        img.convertTo(img32, CV_32F);</span><br><span class="line">        pattern.convertTo(pattern32, CV_32F);</span><br><span class="line">        <span class="comment">// 图像相除模式</span></span><br><span class="line">        aux = <span class="number">255</span>*(<span class="number">1</span>-(img32/pattern32));</span><br><span class="line">        <span class="comment">// 换回8bit</span></span><br><span class="line">        aux.convertTo(aux, CV_8U);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        aux = pattern - img;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> aux;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 估计背景图像，大尺寸核矩阵模糊</span></span><br><span class="line"><span class="function">Mat <span class="title">calculateLightPattern</span><span class="params">(Mat img)</span></span>&#123;</span><br><span class="line">    Mat pattern;</span><br><span class="line">    blur(img, pattern, Size(img.cols/<span class="number">3</span>, img.rows/<span class="number">3</span>));</span><br><span class="line">    <span class="keyword">return</span> pattern;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 先进行形态学操作[在背景色是核函数模糊得到的时候，很有必要]，再二值化</span></span><br><span class="line"><span class="function">Mat <span class="title">getBinary</span><span class="params">(Mat img_no_light, <span class="keyword">int</span> method_light)</span></span>&#123;</span><br><span class="line">    Mat img_thr;</span><br><span class="line">    <span class="keyword">if</span>(method_light!=<span class="number">2</span>)&#123;</span><br><span class="line">        threshold(img_no_light, img_thr, <span class="number">30</span>, <span class="number">255</span>, THRESH_BINARY);</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        threshold(img_no_light, img_thr, <span class="number">140</span>, <span class="number">255</span>, THRESH_BINARY_INV);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 进行形态学操作去除边缘不规则噪点</span></span><br><span class="line">    cv::Mat closed;</span><br><span class="line">    cv::Mat element5(5 ,5, CV_8U, cv::Scalar(1));</span><br><span class="line">    cv::morphologyEx(img_thr, closed,   <span class="comment">// input and output</span></span><br><span class="line">                     cv::MORPH_CLOSE,  <span class="comment">// operator code</span></span><br><span class="line">                     element5);  <span class="comment">// structuring element</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Opening</span></span><br><span class="line">    cv::Mat opening;</span><br><span class="line">    cv::morphologyEx(closed, opening,   <span class="comment">// input and output</span></span><br><span class="line">                     cv::MORPH_OPEN,  <span class="comment">// operator code</span></span><br><span class="line">                     element5);  <span class="comment">// structuring element</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    imshow(<span class="string">"img_thr_closed-opening"</span>, opening);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> opening;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> Scalar <span class="title">randomColor</span><span class="params">( RNG&amp; rng )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> icolor = (<span class="keyword">unsigned</span>) rng;</span><br><span class="line">    <span class="keyword">return</span> Scalar( icolor&amp;<span class="number">255</span>, (icolor&gt;&gt;<span class="number">8</span>)&amp;<span class="number">255</span>, (icolor&gt;&gt;<span class="number">16</span>)&amp;<span class="number">255</span> );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 连通区域算法</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ConnectedComponents</span><span class="params">(Mat img)</span></span>&#123;</span><br><span class="line">    <span class="comment">// 使用连通区域分离符合要求部分图像Mat标签</span></span><br><span class="line">    Mat labels;</span><br><span class="line">    <span class="keyword">int</span> num_objects = connectedComponents(img, labels);</span><br><span class="line">    <span class="comment">// 检查检测到的目标数目</span></span><br><span class="line">    <span class="keyword">if</span>(num_objects&lt;<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"No objects detected"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Number of objects detected: "</span>&lt;&lt; num_objects<span class="number">-1</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 创建彩色目标的输出图像</span></span><br><span class="line">    Mat output=Mat::zeros(img.rows, img.cols, CV_8UC3);</span><br><span class="line">    <span class="function">RNG <span class="title">rng</span><span class="params">(<span class="number">0xFFFFFFFF</span>)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;num_objects; i++)&#123;</span><br><span class="line">        Mat mask = labels==i;</span><br><span class="line">        output.setTo(randomColor(rng), mask);</span><br><span class="line">    &#125;</span><br><span class="line">    imshow(<span class="string">"Result"</span>, output);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 连通区域算法</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ConnectedComponentsStats</span><span class="params">(Mat img)</span></span>&#123;</span><br><span class="line">    <span class="comment">// 连通区域统计信息</span></span><br><span class="line">    Mat labels, stats, centroids;</span><br><span class="line">    <span class="keyword">int</span> num_objects = connectedComponentsWithStats(img, labels, stats, centroids);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 检测物体数目判别</span></span><br><span class="line">    <span class="keyword">if</span>(num_objects&lt;<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"No objects detedcted"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Number of objects detected: "</span>&lt;&lt;num_objects<span class="number">-1</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 创建彩色对象的输出图像并显示区域</span></span><br><span class="line">    Mat output = Mat::zeros(img.rows, img.cols, CV_8UC3);</span><br><span class="line">    <span class="function">RNG <span class="title">rng</span><span class="params">(<span class="number">0xFFFFFFFF</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;num_objects; i++)&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Object "</span>&lt;&lt;i&lt;&lt;<span class="string">" with pos: "</span>&lt;&lt;centroids.at&lt;Point2d&gt;(i)</span><br><span class="line">                                         &lt;&lt;<span class="string">" with area "</span>&lt;&lt;stats.at&lt;<span class="keyword">int</span>&gt;(i, CC_STAT_AREA)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        Mat mask = labels==i;</span><br><span class="line">        output.setTo(randomColor(rng), mask);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 使用区域绘制文本</span></span><br><span class="line">        <span class="built_in">stringstream</span> ss;</span><br><span class="line">        ss&lt;&lt;<span class="string">"area: "</span>&lt;&lt;stats.at&lt;<span class="keyword">int</span>&gt;(i, CC_STAT_AREA);</span><br><span class="line"></span><br><span class="line">        putText(output, ss.str(), centroids.at&lt;Point2d&gt;(i), FONT_HERSHEY_SIMPLEX, <span class="number">0.4</span>, Scalar(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    imshow(<span class="string">"Result"</span>, output);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//  边缘检测算法</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FindContoursBasic</span><span class="params">(Mat img)</span></span>&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;Point&gt;&gt; contours;</span><br><span class="line">    findContours(img, contours, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);</span><br><span class="line">    Mat output = Mat::zeros(img.rows, img.cols, CV_8UC3);</span><br><span class="line">    <span class="comment">// 检查检测到的对象的数目</span></span><br><span class="line">    <span class="keyword">if</span>(contours.size() == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"No objects detected"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Number of objects detected: "</span>&lt;&lt;contours.size()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">RNG <span class="title">rng</span><span class="params">(<span class="number">0xFFFFFFFF</span>)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;contours.size();i++)&#123;</span><br><span class="line">        drawContours(output, contours, i, randomColor(rng));</span><br><span class="line">    &#125;</span><br><span class="line">    imshow(<span class="string">"Contours"</span>, output);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Mat img = imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/industry.pgm"</span>, IMREAD_GRAYSCALE);</span><br><span class="line">    imshow(<span class="string">"Original Image"</span>, img);</span><br><span class="line"></span><br><span class="line">    Mat pattern = imread(<span class="string">"/home/shensir/Documents/MyPrograming/Cpp/Clions/data/light.pgm"</span>,<span class="number">0</span>);</span><br><span class="line">    imshow(<span class="string">"Back"</span>, pattern);</span><br><span class="line"><span class="comment">//    Mat pattern = calculateLightPattern(img);</span></span><br><span class="line">    Mat img_no_light = removeLight(img, pattern, <span class="number">1</span>);</span><br><span class="line">    imshow(<span class="string">"removelight--minus"</span>, img_no_light);</span><br><span class="line"></span><br><span class="line">    Mat img_thr = getBinary(img_no_light,<span class="number">1</span>);</span><br><span class="line"><span class="comment">//    ConnectedComponents(img_thr);</span></span><br><span class="line">    ConnectedComponentsStats(img_thr);</span><br><span class="line"></span><br><span class="line">    FindContoursBasic(img_thr);</span><br><span class="line">    waitKey(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>输出：</p>
 <blockquote>
 <p>Number of objects detected: 4<br>Object 1 with pos: [160.203, 143.822] with area 2315<br>Object 2 with pos: [263.535, 131.804] with area 1820<br>Object 3 with pos: [52.7045, 143.926] with area 1171<br>Object 4 with pos: [68.233, 202.819] with area 1618<br>Number of objects detected: 4</p>
@@ -457,9 +526,18 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
       
     </div>
 
-    <div>
+    
       
-        
+
+
+    
+
+    
+    
+    
+    <div>
+          
+	    
 <div class="my_post_copyright">
   <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
   
@@ -467,49 +545,67 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
   <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-  <p><span>本文标题:</span><a href="/2017/05/18/自动光学检测，目标分割和检测/">自动光学检测，目标分割和检测</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 不秩稚童 的个人博客">不秩稚童</a></p>
-  <p><span>作者邮箱:</span>datahonor@gmail.com</p>
-  <p><span>发布时间:</span>2017年05月18日 - 00:05</p>
-  <p><span>最后更新:</span>2017年05月18日 - 01:05</p>
+
+  <p><span>本文标题:</span>自动光学检测，目标分割和检测</p>
+  <p><span>文章作者:</span>不秩稚童</p>
+  <p><span>发布时间:</span>2017年05月18日 - 00:49:33</p>
+  <p><span>最后更新:</span>2017年05月18日 - 01:02:55</p>
   <p><span>原始链接:</span><a href="/2017/05/18/自动光学检测，目标分割和检测/" title="自动光学检测，目标分割和检测">http://datahonor.com/2017/05/18/自动光学检测，目标分割和检测/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/05/18/自动光学检测，目标分割和检测/"  aria-label="复制成功！"></i></span>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/05/18/自动光学检测，目标分割和检测/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
     var clipboard = new Clipboard('.fa-clipboard');
-	clipboard.on('success', $(function(){
-	  $(".fa-clipboard").click(function(){
-		swal({   
-		  title: "",   
-		  text: '复制成功',   
-		  html: false,
-		  timer: 500,   
-		  showConfirmButton: false
-	    });
-	  });
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
     }));  
 </script>
 
 
-      
+          
     </div>
 
-    <div>
-      
-        
+    
 
+    
       
-    </div>
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>击蒙御寇</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-    <div>
-      
-        
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="不秩稚童 微信支付">
+        <p>微信支付</p>
+      </div>
+    
 
-      
-    </div>
+    
 
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
 
     <footer class="post-footer">
       
@@ -523,7 +619,7 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
       
 
       
-        
+      
       
 
       
@@ -551,44 +647,24 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
-
-    <div class="post-spread">
-      
-        
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
-      
-    </div>
   </div>
 
-          
+
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
 
-          
-  <div class="comments" id="comments">
-
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
-
-
-
-
-
-
+  
 
 
 
@@ -605,129 +681,294 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
-               alt="不秩稚童" />
-          <p class="site-author-name" itemprop="name">不秩稚童</p>
-           
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="不秩稚童">
+            
+              <p class="site-author-name" itemprop="name">不秩稚童</p>
               <p class="site-description motion-element" itemprop="description">十年饮冰，难凉热血。</p>
+          </div>
+
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">142</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">53</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/shenxiangzhuang" title="GitHub &rarr; https://github.com/shenxiangzhuang" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:datahonor@gmail.com" title="E-Mail &rarr; mailto:datahonor@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+
+          
+            
+          
+          
+
         </div>
-        <nav class="site-state motion-element">
-        
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">142</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">18</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">53</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/shenxiangzhuang" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/shen-xiang-zhuang" target="_blank" title="知乎">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  知乎
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.cnblogs.com/buzhizhitong" target="_blank" title="博客园">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  博客园
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#待改进的地方"><span class="nav-text">待改进的地方</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">2.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#待改进的地方"><span class="nav-number">3.</span> <span class="nav-text">待改进的地方</span></a></li></ol></div>
             
-
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
       
-
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -739,33 +980,57 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2017 - 
-  <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">不秩稚童</span>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
 </div>
+
+
+
+
+
+
 
 
 
         
-
 <div class="busuanzi-count">
-
-  
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
   
-    <span class="site-uv"><i class="fa fa-user"></i>本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
   
 
   
-    <span class="site-pv"><i class="fa fa-eye"></i>本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
   
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
   
 </div>
+
+
+
+
+
+
 
 
 
@@ -774,19 +1039,17 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
     </footer>
 
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
+
     
+
+    
+
     
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -800,89 +1063,13 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
 
 
 
-  
 
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
 
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-
-  
-
-    <script type="text/javascript">
-      var disqus_shortname = 'http-datahonor-com';
-      var disqus_identifier = '2017/05/18/自动光学检测，目标分割和检测/';
-
-      var disqus_title = "自动光学检测，目标分割和检测";
-
-
-      function run_disqus_script(disqus_script) {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
-
-      run_disqus_script('count.js');
-
-      
-        var disqus_config = function () {
-            this.page.url = disqus_url;
-            this.page.identifier = disqus_identifier;
-            this.page.title = disqus_title;
-        };
-        run_disqus_script('embed.js');
-      
-
-    </script>
-  
 
 
 
@@ -894,181 +1081,518 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
 
 
   
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
   
-  <script type="text/javascript">
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'qzF75hQvs6yPkMIO7gd7LwDB-gzGzoHsz',
+    appKey: 'foULNoeGLTL8LE8C2Ysitv5I',
+    placeholder: '毕竟今天太阳那么好 :-)',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true
+  });
+</script>
+
+
+
+
+  
+
+
+  
+
+  <script>
     // Popup Window;
     var isfetched = false;
+    var isXml = true;
     // Search DB path;
     var search_path = "search.xml";
-    if (search_path.length == 0) {
+    if (search_path.length === 0) {
       search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
     }
     var path = "/" + search_path;
     // monitor main search box;
 
-    function proceedsearch() {
-      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
-      $('.popup').toggle();
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
     }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
     // search function;
     var searchFunc = function(path, search_id, content_id) {
       'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
       $.ajax({
         url: path,
-        dataType: "xml",
+        dataType: isXml ? "xml" : "json",
         async: true,
-        success: function( xmlResponse ) {
+        success: function(res) {
           // get the contents from search data
           isfetched = true;
           $('.popup').detach().appendTo('.header-inner');
-          var datas = $( "entry", xmlResponse ).map(function() {
+          var datas = isXml ? $("entry", res).map(function() {
             return {
-              title: $( "title", this ).text(),
+              title: $("title", this).text(),
               content: $("content",this).text(),
-              url: $( "url" , this).text()
+              url: $("url" , this).text()
             };
-          }).get();
-          var $input = document.getElementById(search_id);
-          var $resultContent = document.getElementById(content_id);
-          $input.addEventListener('input', function(){
-            var matchcounts = 0;
-            var str='<ul class=\"search-result-list\">';
-            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-            $resultContent.innerHTML = "";
-            if (this.value.trim().length > 1) {
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
               // perform local searching
               datas.forEach(function(data) {
                 var isMatch = false;
-                var content_index = [];
-                var data_title = data.title.trim().toLowerCase();
-                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
-                var data_url = decodeURIComponent(data.url);
-                var index_title = -1;
-                var index_content = -1;
-                var first_occur = -1;
-                // only match artiles with not empty titles and contents
-                if(data_title != '') {
-                  keywords.forEach(function(keyword, i) {
-                    index_title = data_title.indexOf(keyword);
-                    index_content = data_content.indexOf(keyword);
-                    if( index_title >= 0 || index_content >= 0 ){
-                      isMatch = true;
-                      if (i == 0) {
-                        first_occur = index_content;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
                       }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
                     }
 
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
                   });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
                 }
+
                 // show search results
+
                 if (isMatch) {
-                  matchcounts += 1;
-                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
-                  var content = data.content.trim().replace(/<[^>]+>/g,"");
-                  if (first_occur >= 0) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
                     // cut out 100 characters
-                    var start = first_occur - 20;
-                    var end = first_occur + 80;
+                    var start = position - 20;
+                    var end = position + 80;
                     if(start < 0){
                       start = 0;
                     }
-                    if(start == 0){
-                      end = 50;
+                    if (end < position + word.length) {
+                      end = position + word.length;
                     }
                     if(end > content.length){
                       end = content.length;
                     }
-                    var match_content = content.substring(start, end);
-                    // highlight all keywords
-                    keywords.forEach(function(keyword){
-                      var regS = new RegExp(keyword, "gi");
-                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
-                    });
-
-                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
                   }
-                  str += "</li>";
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
                 }
-              })};
-            str += "</ul>";
-            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
-            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
-            $resultContent.innerHTML = str;
-          });
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
           proceedsearch();
         }
-      });}
+      });
+    }
 
     // handle and trigger popup window;
     $('.popup-trigger').click(function(e) {
       e.stopPropagation();
-      if (isfetched == false) {
+      if (isfetched === false) {
         searchFunc(path, 'local-search-input', 'local-search-result');
       } else {
         proceedsearch();
       };
     });
 
-    $('.popup-btn-close').click(function(e){
-      $('.popup').hide();
-      $(".popoverlay").remove();
-      $('body').css('overflow', '');
-    });
+    $('.popup-btn-close').click(onPopupClose);
     $('.popup').click(function(e){
       e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
     });
   </script>
 
 
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
   
 
 
   
 
   
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
     }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
     }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
 
 
   
 
-
-  
-  <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/love.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":125,"height":125,"position":"left","hOffset":30,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -1082,10 +1606,8 @@ Code1234567891011121314151617181920212223242526272829303132333435363738394041424
   });
 </script>
 
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
-
-</body>
+<!-- hexo-inject:end --></body>
 </html>

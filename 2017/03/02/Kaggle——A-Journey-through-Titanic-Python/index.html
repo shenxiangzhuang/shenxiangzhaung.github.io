@@ -1,25 +1,4 @@
-<!doctype html>
-
-
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-Hans">
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
+<!DOCTYPE html>
 
 
 
@@ -33,78 +12,94 @@
 
 
   
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0">
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.0',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Python,Kaggle,Data Analysis," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
-
-
-
-
-
-
-<meta name="description" content="Kaggle案例一——Titanic——Python分析与预测
-
-非原创，目前本站Kaggle案例均来自Kaggle官网发布的kernel，这里摘抄下来学习借鉴。
-
-数据变量描述
-VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)pclass          Passenger Class">
+  <meta name="description" content="Kaggle案例一——Titanic——Python分析与预测  非原创，目前本站Kaggle案例均来自Kaggle官网发布的kernel，这里摘抄下来学习借鉴。  数据变量描述 VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)pclass          Passenger Class">
+<meta name="keywords" content="Python,Kaggle,Data Analysis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kaggle——A Journey through Titanic[Python]">
 <meta property="og:url" content="http://datahonor.com/2017/03/02/Kaggle——A-Journey-through-Titanic-Python/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="Kaggle案例一——Titanic——Python分析与预测
-
-非原创，目前本站Kaggle案例均来自Kaggle官网发布的kernel，这里摘抄下来学习借鉴。
-
-数据变量描述
-VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)pclass          Passenger Class">
+<meta property="og:description" content="Kaggle案例一——Titanic——Python分析与预测  非原创，目前本站Kaggle案例均来自Kaggle官网发布的kernel，这里摘抄下来学习借鉴。  数据变量描述 VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)pclass          Passenger Class">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/1.png">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/2.png">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/3.png">
@@ -129,67 +124,33 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
 <meta property="og:updated_time" content="2017-03-02T07:47:50.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kaggle——A Journey through Titanic[Python]">
-<meta name="twitter:description" content="Kaggle案例一——Titanic——Python分析与预测
-
-非原创，目前本站Kaggle案例均来自Kaggle官网发布的kernel，这里摘抄下来学习借鉴。
-
-数据变量描述
-VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)pclass          Passenger Class">
+<meta name="twitter:description" content="Kaggle案例一——Titanic——Python分析与预测  非原创，目前本站Kaggle案例均来自Kaggle官网发布的kernel，这里摘抄下来学习借鉴。  数据变量描述 VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)pclass          Passenger Class">
 <meta name="twitter:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/1.png">
 
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '不秩稚童'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+
+
+
+  <link rel="canonical" href="http://datahonor.com/2017/03/02/Kaggle——A-Journey-through-Titanic-Python/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
   };
 </script>
 
-
-
-  <link rel="canonical" href="http://datahonor.com/2017/03/02/Kaggle——A-Journey-through-Titanic-Python/"/>
-
-
-
-
-
-  <title> Kaggle——A Journey through Titanic[Python] | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
+  <title>Kaggle——A Journey through Titanic[Python] | DATA HONOR</title>
   
 
 
 
 
-<!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-92663335-1', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
-  <script type="text/javascript">
+  <script>
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -205,36 +166,65 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
 
 
 
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
 
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">DATA HONOR</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
-        <p class="site-subtitle">Never say never.</p>
+        <h1 class="site-subtitle" itemprop="description">Never say never.</h1>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -242,82 +232,117 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
 
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
   
 
   
+
+  
     <div class="site-search">
       
-  <div class="popup local-search-popup">
+  <div class="popup search-popup local-search-popup">
   <div class="local-search-header clearfix">
     <span class="search-icon">
       <i class="fa fa-search"></i>
@@ -326,7 +351,7 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -340,12 +365,23 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -358,39 +394,44 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/03/02/Kaggle——A-Journey-through-Titanic-Python/">
+  
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="不秩稚童">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
-  </span>
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/03/02/Kaggle——A-Journey-through-Titanic-Python/">
 
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="DATA HONOR">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不秩稚童">
+      <meta itemprop="description" content="十年饮冰，难凉热血。">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DATA HONOR">
+    </span>
 
     
       <header class="post-header">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Kaggle——A Journey through Titanic[Python]
+          <h2 class="post-title" itemprop="name headline">Kaggle——A Journey through Titanic[Python]
+
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -398,18 +439,23 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-02T15:29:03+08:00">
-                2017-03-02
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-03-02 15:29:03 / 修改时间：15:47:50" itemprop="dateCreated datePublished" datetime="2017-03-02T15:29:03+08:00">2017-03-02</time>
             
 
             
+              
 
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -420,11 +466,7 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
 
                 
                 
@@ -434,13 +476,16 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
                 <a href="/2017/03/02/Kaggle——A-Journey-through-Titanic-Python/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/02/Kaggle——A-Journey-through-Titanic-Python/" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/03/02/Kaggle——A-Journey-through-Titanic-Python/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -448,11 +493,24 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
 
           
           
+            <span id="/2017/03/02/Kaggle——A-Journey-through-Titanic-Python/" class="leancloud_visitors" data-flag-title="Kaggle——A Journey through Titanic[Python]">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
 
           
             <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>本文总阅读量
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -464,7 +522,9 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -483,71 +543,98 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
 <p>Sibling:  Brother, Sister, Stepbrother, or Stepsister of Passenger Aboard Titanic<br>Spouse:   Husband or Wife of Passenger Aboard Titanic (Mistresses and Fiances Ignored)<br>Parent:   Mother or Father of Passenger Aboard Titanic<br>Child:    Son, Daughter, Stepson, or Stepdaughter of Passenger Aboard Titanic</p>
 <p>Other family relatives excluded from this study include cousins,<br>nephews/nieces, aunts/uncles, and in-laws.  Some children travelled<br>only with a nanny, therefore parch=0 for them.  As well, some<br>travelled with very close friends or neighbors in a village, however,<br>the definitions do not support such relations.</p>
 </blockquote>
-<h5 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Imports</span></div><div class="line"></div><div class="line"><span class="comment"># pandas</span></div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series,DataFrame</div><div class="line"></div><div class="line"><span class="comment"># numpy, matplotlib, seaborn</span></div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</div><div class="line"><span class="comment"># 设置seaborn默认的绘图样式</span></div><div class="line">sns.set_style(<span class="string">'whitegrid'</span>)</div><div class="line"></div><div class="line"><span class="comment"># machine learning</span></div><div class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</div><div class="line"><span class="keyword">from</span> sklearn.svm <span class="keyword">import</span> SVC, LinearSVC</div><div class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</div><div class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KNeighborsClassifier</div><div class="line"><span class="keyword">from</span> sklearn.naive_bayes <span class="keyword">import</span> GaussianNB</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<h5 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Imports</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># pandas</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> pandas <span class="keyword">import</span> Series,DataFrame</span><br><span class="line"></span><br><span class="line"><span class="comment"># numpy, matplotlib, seaborn</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="comment"># 设置seaborn默认的绘图样式</span></span><br><span class="line">sns.set_style(<span class="string">'whitegrid'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># machine learning</span></span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</span><br><span class="line"><span class="keyword">from</span> sklearn.svm <span class="keyword">import</span> SVC, LinearSVC</span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KNeighborsClassifier</span><br><span class="line"><span class="keyword">from</span> sklearn.naive_bayes <span class="keyword">import</span> GaussianNB</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>关于sns.set_style(‘whitegrid’):<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/1.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># get titanic &amp; test csv files as a DataFrame</span></div><div class="line"><span class="comment"># 获取训练和待预测的数据，导入为DF</span></div><div class="line">titanic_df = pd.read_csv(<span class="string">"/home/shen/PycharmProjects/MyPython/Kaggle/Titanic/train.csv"</span>)</div><div class="line">test_df    = pd.read_csv(<span class="string">"/home/shen/PycharmProjects/MyPython/Kaggle/Titanic/test.csv"</span>)</div><div class="line"></div><div class="line"><span class="comment"># preview the data</span></div><div class="line"><span class="comment"># 预览数据</span></div><div class="line">titanic_df.head()</div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># get titanic &amp; test csv files as a DataFrame</span></span><br><span class="line"><span class="comment"># 获取训练和待预测的数据，导入为DF</span></span><br><span class="line">titanic_df = pd.read_csv(<span class="string">"/home/shen/PycharmProjects/MyPython/Kaggle/Titanic/train.csv"</span>)</span><br><span class="line">test_df    = pd.read_csv(<span class="string">"/home/shen/PycharmProjects/MyPython/Kaggle/Titanic/test.csv"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># preview the data</span></span><br><span class="line"><span class="comment"># 预览数据</span></span><br><span class="line">titanic_df.head()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/2.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">titanic_df.info()</div><div class="line">print(<span class="string">"----------------------------"</span>)</div><div class="line">test_df.info()</div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">titanic_df.info()</span><br><span class="line">print(<span class="string">"----------------------------"</span>)</span><br><span class="line">test_df.info()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/3.png" alt=""><br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/4.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># drop unnecessary columns, these columns won't be useful in analysis and prediction</span></div><div class="line"><span class="comment"># 去除一些无用的列，这种  关注数据的核心信息   在之后还能看到</span></div><div class="line"></div><div class="line">titanic_df = titanic_df.drop([<span class="string">'PassengerId'</span>,<span class="string">'Name'</span>,<span class="string">'Ticket'</span>], axis=<span class="number">1</span>)  <span class="comment"># axis=1,代表列</span></div><div class="line">test_df    = test_df.drop([<span class="string">'Name'</span>,<span class="string">'Ticket'</span>], axis=<span class="number">1</span>)</div><div class="line"></div><div class="line"><span class="comment"># Embarked</span></div><div class="line"></div><div class="line"><span class="comment"># only in titanic_df, fill the two missing values with the most occurred value, which is "S".</span></div><div class="line"><span class="comment"># 少量非数值缺失值处理的一种方法--&gt;用出现最多的观测值填充</span></div><div class="line">titanic_df[<span class="string">"Embarked"</span>] = titanic_df[<span class="string">"Embarked"</span>].fillna(<span class="string">"S"</span>)</div><div class="line"></div><div class="line"><span class="comment"># plot</span></div><div class="line">sns.factorplot(<span class="string">'Embarked'</span>,<span class="string">'Survived'</span>, data=titanic_df,size=<span class="number">4</span>,aspect=<span class="number">3</span>)</div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># drop unnecessary columns, these columns won't be useful in analysis and prediction</span></span><br><span class="line"><span class="comment"># 去除一些无用的列，这种  关注数据的核心信息   在之后还能看到</span></span><br><span class="line"></span><br><span class="line">titanic_df = titanic_df.drop([<span class="string">'PassengerId'</span>,<span class="string">'Name'</span>,<span class="string">'Ticket'</span>], axis=<span class="number">1</span>)  <span class="comment"># axis=1,代表列</span></span><br><span class="line">test_df    = test_df.drop([<span class="string">'Name'</span>,<span class="string">'Ticket'</span>], axis=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Embarked</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># only in titanic_df, fill the two missing values with the most occurred value, which is "S".</span></span><br><span class="line"><span class="comment"># 少量非数值缺失值处理的一种方法--&gt;用出现最多的观测值填充</span></span><br><span class="line">titanic_df[<span class="string">"Embarked"</span>] = titanic_df[<span class="string">"Embarked"</span>].fillna(<span class="string">"S"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># plot</span></span><br><span class="line">sns.factorplot(<span class="string">'Embarked'</span>,<span class="string">'Survived'</span>, data=titanic_df,size=<span class="number">4</span>,aspect=<span class="number">3</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/5.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">fig, (axis1,axis2,axis3) = plt.subplots(<span class="number">1</span>,<span class="number">3</span>,figsize=(<span class="number">15</span>,<span class="number">5</span>))</div><div class="line"></div><div class="line"><span class="comment"># sns.factorplot('Embarked',data=titanic_df,kind='count',order=['S','C','Q'],ax=axis1)</span></div><div class="line"><span class="comment"># sns.factorplot('Survived',hue="Embarked",data=titanic_df,kind='count',order=[1,0],ax=axis2)</span></div><div class="line">sns.countplot(x=<span class="string">'Embarked'</span>, data=titanic_df, ax=axis1)</div><div class="line">sns.countplot(x=<span class="string">'Survived'</span>, hue=<span class="string">"Embarked"</span>, data=titanic_df, order=[<span class="number">1</span>,<span class="number">0</span>], ax=axis2)</div><div class="line"></div><div class="line"><span class="comment"># group by embarked, and get the mean for survived passengers for each value in Embarked</span></div><div class="line">embark_perc = titanic_df[[<span class="string">"Embarked"</span>, <span class="string">"Survived"</span>]].groupby([<span class="string">'Embarked'</span>],as_index=<span class="keyword">False</span>).mean()</div><div class="line">sns.barplot(x=<span class="string">'Embarked'</span>, y=<span class="string">'Survived'</span>, data=embark_perc,order=[<span class="string">'S'</span>,<span class="string">'C'</span>,<span class="string">'Q'</span>],ax=axis3)</div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">fig, (axis1,axis2,axis3) = plt.subplots(<span class="number">1</span>,<span class="number">3</span>,figsize=(<span class="number">15</span>,<span class="number">5</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># sns.factorplot('Embarked',data=titanic_df,kind='count',order=['S','C','Q'],ax=axis1)</span></span><br><span class="line"><span class="comment"># sns.factorplot('Survived',hue="Embarked",data=titanic_df,kind='count',order=[1,0],ax=axis2)</span></span><br><span class="line">sns.countplot(x=<span class="string">'Embarked'</span>, data=titanic_df, ax=axis1)</span><br><span class="line">sns.countplot(x=<span class="string">'Survived'</span>, hue=<span class="string">"Embarked"</span>, data=titanic_df, order=[<span class="number">1</span>,<span class="number">0</span>], ax=axis2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># group by embarked, and get the mean for survived passengers for each value in Embarked</span></span><br><span class="line">embark_perc = titanic_df[[<span class="string">"Embarked"</span>, <span class="string">"Survived"</span>]].groupby([<span class="string">'Embarked'</span>],as_index=<span class="keyword">False</span>).mean()</span><br><span class="line">sns.barplot(x=<span class="string">'Embarked'</span>, y=<span class="string">'Survived'</span>, data=embark_perc,order=[<span class="string">'S'</span>,<span class="string">'C'</span>,<span class="string">'Q'</span>],ax=axis3)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/6.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Either to consider Embarked column in predictions,</span></div><div class="line"><span class="comment"># and remove "S" dummy variable, </span></div><div class="line"><span class="comment"># and leave "C" &amp; "Q", since they seem to have a good rate for Survival.</span></div><div class="line"><span class="comment"># 观察到"C", "Q"相比“S”有较高的生存率，所以我们删除S列</span></div><div class="line"></div><div class="line"><span class="comment"># OR, don't create dummy variables for Embarked column, just drop it, </span></div><div class="line"><span class="comment"># because logically, Embarked doesn't seem to be useful in prediction.</span></div><div class="line"><span class="comment"># 或者我们可以直接删除Embarked这一列，它对预测无太大影响</span></div><div class="line"></div><div class="line">embark_dummies_titanic  = pd.get_dummies(titanic_df[<span class="string">'Embarked'</span>])</div><div class="line">embark_dummies_titanic.drop([<span class="string">'S'</span>], axis=<span class="number">1</span>, inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">embark_dummies_test  = pd.get_dummies(test_df[<span class="string">'Embarked'</span>])</div><div class="line">embark_dummies_test.drop([<span class="string">'S'</span>], axis=<span class="number">1</span>, inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">titanic_df = titanic_df.join(embark_dummies_titanic)</div><div class="line">test_df    = test_df.join(embark_dummies_test)</div><div class="line"></div><div class="line">titanic_df.drop([<span class="string">'Embarked'</span>], axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</div><div class="line">test_df.drop([<span class="string">'Embarked'</span>], axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line"><span class="comment"># Fare</span></div><div class="line"></div><div class="line"><span class="comment"># only for test_df, since there is a missing "Fare" values</span></div><div class="line"><span class="comment"># 少量数值型缺失值的处理方法--&gt;中位数填充</span></div><div class="line">test_df[<span class="string">"Fare"</span>].fillna(test_df[<span class="string">"Fare"</span>].median(), inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line"><span class="comment"># convert from float to int</span></div><div class="line"><span class="comment"># 数据类型的转换</span></div><div class="line">titanic_df[<span class="string">'Fare'</span>] = titanic_df[<span class="string">'Fare'</span>].astype(int)</div><div class="line">test_df[<span class="string">'Fare'</span>]    = test_df[<span class="string">'Fare'</span>].astype(int)</div><div class="line"></div><div class="line"><span class="comment"># get fare for survived &amp; didn't survive passengers</span></div><div class="line"><span class="comment"># 数据分类</span></div><div class="line">fare_not_survived = titanic_df[<span class="string">"Fare"</span>][titanic_df[<span class="string">"Survived"</span>] == <span class="number">0</span>]</div><div class="line">fare_survived     = titanic_df[<span class="string">"Fare"</span>][titanic_df[<span class="string">"Survived"</span>] == <span class="number">1</span>]</div><div class="line"></div><div class="line"><span class="comment"># get average and std for fare of survived/not survived passengers</span></div><div class="line"><span class="comment"># 获取典型统计量，更好地描述和观察数据</span></div><div class="line">avgerage_fare = DataFrame([fare_not_survived.mean(), fare_survived.mean()])</div><div class="line">std_fare      = DataFrame([fare_not_survived.std(), fare_survived.std()])</div><div class="line"></div><div class="line"><span class="comment"># plot</span></div><div class="line">titanic_df[<span class="string">'Fare'</span>].plot(kind=<span class="string">'hist'</span>, figsize=(<span class="number">15</span>,<span class="number">3</span>),bins=<span class="number">100</span>, xlim=(<span class="number">0</span>,<span class="number">50</span>))</div><div class="line"></div><div class="line">avgerage_fare.index.names = std_fare.index.names = [<span class="string">"Survived"</span>]</div><div class="line">avgerage_fare.plot(yerr=std_fare,kind=<span class="string">'bar'</span>,legend=<span class="keyword">False</span>)</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Either to consider Embarked column in predictions,</span></span><br><span class="line"><span class="comment"># and remove "S" dummy variable, </span></span><br><span class="line"><span class="comment"># and leave "C" &amp; "Q", since they seem to have a good rate for Survival.</span></span><br><span class="line"><span class="comment"># 观察到"C", "Q"相比“S”有较高的生存率，所以我们删除S列</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># OR, don't create dummy variables for Embarked column, just drop it, </span></span><br><span class="line"><span class="comment"># because logically, Embarked doesn't seem to be useful in prediction.</span></span><br><span class="line"><span class="comment"># 或者我们可以直接删除Embarked这一列，它对预测无太大影响</span></span><br><span class="line"></span><br><span class="line">embark_dummies_titanic  = pd.get_dummies(titanic_df[<span class="string">'Embarked'</span>])</span><br><span class="line">embark_dummies_titanic.drop([<span class="string">'S'</span>], axis=<span class="number">1</span>, inplace=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">embark_dummies_test  = pd.get_dummies(test_df[<span class="string">'Embarked'</span>])</span><br><span class="line">embark_dummies_test.drop([<span class="string">'S'</span>], axis=<span class="number">1</span>, inplace=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">titanic_df = titanic_df.join(embark_dummies_titanic)</span><br><span class="line">test_df    = test_df.join(embark_dummies_test)</span><br><span class="line"></span><br><span class="line">titanic_df.drop([<span class="string">'Embarked'</span>], axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</span><br><span class="line">test_df.drop([<span class="string">'Embarked'</span>], axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Fare</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># only for test_df, since there is a missing "Fare" values</span></span><br><span class="line"><span class="comment"># 少量数值型缺失值的处理方法--&gt;中位数填充</span></span><br><span class="line">test_df[<span class="string">"Fare"</span>].fillna(test_df[<span class="string">"Fare"</span>].median(), inplace=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># convert from float to int</span></span><br><span class="line"><span class="comment"># 数据类型的转换</span></span><br><span class="line">titanic_df[<span class="string">'Fare'</span>] = titanic_df[<span class="string">'Fare'</span>].astype(int)</span><br><span class="line">test_df[<span class="string">'Fare'</span>]    = test_df[<span class="string">'Fare'</span>].astype(int)</span><br><span class="line"></span><br><span class="line"><span class="comment"># get fare for survived &amp; didn't survive passengers</span></span><br><span class="line"><span class="comment"># 数据分类</span></span><br><span class="line">fare_not_survived = titanic_df[<span class="string">"Fare"</span>][titanic_df[<span class="string">"Survived"</span>] == <span class="number">0</span>]</span><br><span class="line">fare_survived     = titanic_df[<span class="string">"Fare"</span>][titanic_df[<span class="string">"Survived"</span>] == <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># get average and std for fare of survived/not survived passengers</span></span><br><span class="line"><span class="comment"># 获取典型统计量，更好地描述和观察数据</span></span><br><span class="line">avgerage_fare = DataFrame([fare_not_survived.mean(), fare_survived.mean()])</span><br><span class="line">std_fare      = DataFrame([fare_not_survived.std(), fare_survived.std()])</span><br><span class="line"></span><br><span class="line"><span class="comment"># plot</span></span><br><span class="line">titanic_df[<span class="string">'Fare'</span>].plot(kind=<span class="string">'hist'</span>, figsize=(<span class="number">15</span>,<span class="number">3</span>),bins=<span class="number">100</span>, xlim=(<span class="number">0</span>,<span class="number">50</span>))</span><br><span class="line"></span><br><span class="line">avgerage_fare.index.names = std_fare.index.names = [<span class="string">"Survived"</span>]</span><br><span class="line">avgerage_fare.plot(yerr=std_fare,kind=<span class="string">'bar'</span>,legend=<span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/7.png" alt=""><br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/8.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># Age </span></div><div class="line"></div><div class="line">fig, (axis1,axis2) = plt.subplots(<span class="number">1</span>,<span class="number">2</span>,figsize=(<span class="number">15</span>,<span class="number">4</span>))</div><div class="line">axis1.set_title(<span class="string">'Original Age values - Titanic'</span>)</div><div class="line">axis2.set_title(<span class="string">'New Age values - Titanic'</span>)</div><div class="line"></div><div class="line"><span class="comment"># axis3.set_title('Original Age values - Test')</span></div><div class="line"><span class="comment"># axis4.set_title('New Age values - Test')</span></div><div class="line"></div><div class="line"><span class="comment"># get average, std, and number of NaN values in titanic_df</span></div><div class="line"><span class="comment"># 训练集中年龄的统计量的获取</span></div><div class="line">average_age_titanic   = titanic_df[<span class="string">"Age"</span>].mean()</div><div class="line">std_age_titanic       = titanic_df[<span class="string">"Age"</span>].std()</div><div class="line">count_nan_age_titanic = titanic_df[<span class="string">"Age"</span>].isnull().sum()</div><div class="line"></div><div class="line"><span class="comment"># get average, std, and number of NaN values in test_df</span></div><div class="line"><span class="comment"># 测试集中年龄的统计量的获取</span></div><div class="line"></div><div class="line">average_age_test   = test_df[<span class="string">"Age"</span>].mean()</div><div class="line">std_age_test       = test_df[<span class="string">"Age"</span>].std()</div><div class="line">count_nan_age_test = test_df[<span class="string">"Age"</span>].isnull().sum()</div><div class="line"></div><div class="line"><span class="comment"># generate random numbers between (mean - std) &amp; (mean + std)</span></div><div class="line"><span class="comment"># 随机获取在均值的一倍标准差内的数据，用于填充大量的数值型缺失值</span></div><div class="line">rand_1 = np.random.randint(average_age_titanic - std_age_titanic, average_age_titanic + std_age_titanic, size = count_nan_age_titanic)</div><div class="line">rand_2 = np.random.randint(average_age_test - std_age_test, average_age_test + std_age_test, size = count_nan_age_test)</div><div class="line"></div><div class="line"><span class="comment"># plot original Age values</span></div><div class="line"><span class="comment"># <span class="doctag">NOTE:</span> drop all null values, and convert to int</span></div><div class="line">titanic_df[<span class="string">'Age'</span>].dropna().astype(int).hist(bins=<span class="number">70</span>, ax=axis1)</div><div class="line"><span class="comment"># test_df['Age'].dropna().astype(int).hist(bins=70, ax=axis1)</span></div><div class="line"></div><div class="line"><span class="comment"># fill NaN values in Age column with random values generated</span></div><div class="line"><span class="comment"># 经典的方法，通过布尔值过滤得到想要的“条件数据”</span></div><div class="line">titanic_df[<span class="string">"Age"</span>][np.isnan(titanic_df[<span class="string">"Age"</span>])] = rand_1</div><div class="line">test_df[<span class="string">"Age"</span>][np.isnan(test_df[<span class="string">"Age"</span>])] = rand_2</div><div class="line"></div><div class="line"><span class="comment"># convert from float to int</span></div><div class="line">titanic_df[<span class="string">'Age'</span>] = titanic_df[<span class="string">'Age'</span>].astype(int)</div><div class="line">test_df[<span class="string">'Age'</span>]    = test_df[<span class="string">'Age'</span>].astype(int)</div><div class="line"></div><div class="line"><span class="comment"># plot new Age Values</span></div><div class="line">titanic_df[<span class="string">'Age'</span>].hist(bins=<span class="number">70</span>, ax=axis2)</div><div class="line"><span class="comment"># test_df['Age'].hist(bins=70, ax=axis4)</span></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Age </span></span><br><span class="line"></span><br><span class="line">fig, (axis1,axis2) = plt.subplots(<span class="number">1</span>,<span class="number">2</span>,figsize=(<span class="number">15</span>,<span class="number">4</span>))</span><br><span class="line">axis1.set_title(<span class="string">'Original Age values - Titanic'</span>)</span><br><span class="line">axis2.set_title(<span class="string">'New Age values - Titanic'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># axis3.set_title('Original Age values - Test')</span></span><br><span class="line"><span class="comment"># axis4.set_title('New Age values - Test')</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># get average, std, and number of NaN values in titanic_df</span></span><br><span class="line"><span class="comment"># 训练集中年龄的统计量的获取</span></span><br><span class="line">average_age_titanic   = titanic_df[<span class="string">"Age"</span>].mean()</span><br><span class="line">std_age_titanic       = titanic_df[<span class="string">"Age"</span>].std()</span><br><span class="line">count_nan_age_titanic = titanic_df[<span class="string">"Age"</span>].isnull().sum()</span><br><span class="line"></span><br><span class="line"><span class="comment"># get average, std, and number of NaN values in test_df</span></span><br><span class="line"><span class="comment"># 测试集中年龄的统计量的获取</span></span><br><span class="line"></span><br><span class="line">average_age_test   = test_df[<span class="string">"Age"</span>].mean()</span><br><span class="line">std_age_test       = test_df[<span class="string">"Age"</span>].std()</span><br><span class="line">count_nan_age_test = test_df[<span class="string">"Age"</span>].isnull().sum()</span><br><span class="line"></span><br><span class="line"><span class="comment"># generate random numbers between (mean - std) &amp; (mean + std)</span></span><br><span class="line"><span class="comment"># 随机获取在均值的一倍标准差内的数据，用于填充大量的数值型缺失值</span></span><br><span class="line">rand_1 = np.random.randint(average_age_titanic - std_age_titanic, average_age_titanic + std_age_titanic, size = count_nan_age_titanic)</span><br><span class="line">rand_2 = np.random.randint(average_age_test - std_age_test, average_age_test + std_age_test, size = count_nan_age_test)</span><br><span class="line"></span><br><span class="line"><span class="comment"># plot original Age values</span></span><br><span class="line"><span class="comment"># <span class="doctag">NOTE:</span> drop all null values, and convert to int</span></span><br><span class="line">titanic_df[<span class="string">'Age'</span>].dropna().astype(int).hist(bins=<span class="number">70</span>, ax=axis1)</span><br><span class="line"><span class="comment"># test_df['Age'].dropna().astype(int).hist(bins=70, ax=axis1)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># fill NaN values in Age column with random values generated</span></span><br><span class="line"><span class="comment"># 经典的方法，通过布尔值过滤得到想要的“条件数据”</span></span><br><span class="line">titanic_df[<span class="string">"Age"</span>][np.isnan(titanic_df[<span class="string">"Age"</span>])] = rand_1</span><br><span class="line">test_df[<span class="string">"Age"</span>][np.isnan(test_df[<span class="string">"Age"</span>])] = rand_2</span><br><span class="line"></span><br><span class="line"><span class="comment"># convert from float to int</span></span><br><span class="line">titanic_df[<span class="string">'Age'</span>] = titanic_df[<span class="string">'Age'</span>].astype(int)</span><br><span class="line">test_df[<span class="string">'Age'</span>]    = test_df[<span class="string">'Age'</span>].astype(int)</span><br><span class="line"></span><br><span class="line"><span class="comment"># plot new Age Values</span></span><br><span class="line">titanic_df[<span class="string">'Age'</span>].hist(bins=<span class="number">70</span>, ax=axis2)</span><br><span class="line"><span class="comment"># test_df['Age'].hist(bins=70, ax=axis4)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/9.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># .... continue with plot Age column</span></div><div class="line"></div><div class="line"><span class="comment"># peaks for survived/not survived passengers by their age</span></div><div class="line">facet = sns.FacetGrid(titanic_df, hue=<span class="string">"Survived"</span>,aspect=<span class="number">4</span>)  <span class="comment"># aspect=4 长宽比4:1</span></div><div class="line">facet.map(sns.kdeplot,<span class="string">'Age'</span>,shade= <span class="keyword">True</span>)</div><div class="line">facet.set(xlim=(<span class="number">0</span>, titanic_df[<span class="string">'Age'</span>].max()))</div><div class="line">facet.add_legend()</div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># .... continue with plot Age column</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># peaks for survived/not survived passengers by their age</span></span><br><span class="line">facet = sns.FacetGrid(titanic_df, hue=<span class="string">"Survived"</span>,aspect=<span class="number">4</span>)  <span class="comment"># aspect=4 长宽比4:1</span></span><br><span class="line">facet.map(sns.kdeplot,<span class="string">'Age'</span>,shade= <span class="keyword">True</span>)</span><br><span class="line">facet.set(xlim=(<span class="number">0</span>, titanic_df[<span class="string">'Age'</span>].max()))</span><br><span class="line">facet.add_legend()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/10.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># average survived passengers by age</span></div><div class="line">fig, axis1 = plt.subplots(<span class="number">1</span>,<span class="number">1</span>,figsize=(<span class="number">18</span>,<span class="number">4</span>))</div><div class="line">average_age = titanic_df[[<span class="string">"Age"</span>, <span class="string">"Survived"</span>]].groupby([<span class="string">'Age'</span>],as_index=<span class="keyword">False</span>).mean()</div><div class="line">sns.barplot(x=<span class="string">'Age'</span>, y=<span class="string">'Survived'</span>, data=average_age)</div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># average survived passengers by age</span></span><br><span class="line">fig, axis1 = plt.subplots(<span class="number">1</span>,<span class="number">1</span>,figsize=(<span class="number">18</span>,<span class="number">4</span>))</span><br><span class="line">average_age = titanic_df[[<span class="string">"Age"</span>, <span class="string">"Survived"</span>]].groupby([<span class="string">'Age'</span>],as_index=<span class="keyword">False</span>).mean()</span><br><span class="line">sns.barplot(x=<span class="string">'Age'</span>, y=<span class="string">'Survived'</span>, data=average_age)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/11.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># Cabin</span></div><div class="line"><span class="comment"># It has a lot of NaN values, so it won't cause a remarkable impact on prediction</span></div><div class="line"><span class="comment"># 这里也是要学习的地方，对于含有大量缺失值，并且对预测无太大影响时，可以直接将其移除</span></div><div class="line">titanic_df.drop(<span class="string">"Cabin"</span>,axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</div><div class="line">test_df.drop(<span class="string">"Cabin"</span>,axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line"><span class="comment"># 学习的地方，化繁为简，找到关注的重点为是否有家人，而不是具体的父母兄弟等</span></div><div class="line">titanic_df[<span class="string">'Family'</span>] =  titanic_df[<span class="string">"Parch"</span>] + titanic_df[<span class="string">"SibSp"</span>]</div><div class="line">titanic_df[<span class="string">'Family'</span>].loc[titanic_df[<span class="string">'Family'</span>] &gt; <span class="number">0</span>] = <span class="number">1</span></div><div class="line">titanic_df[<span class="string">'Family'</span>].loc[titanic_df[<span class="string">'Family'</span>] == <span class="number">0</span>] = <span class="number">0</span></div><div class="line"><span class="comment"># 测试集和训练集作相同处理</span></div><div class="line">test_df[<span class="string">'Family'</span>] =  test_df[<span class="string">"Parch"</span>] + test_df[<span class="string">"SibSp"</span>]</div><div class="line">test_df[<span class="string">'Family'</span>].loc[test_df[<span class="string">'Family'</span>] &gt; <span class="number">0</span>] = <span class="number">1</span></div><div class="line">test_df[<span class="string">'Family'</span>].loc[test_df[<span class="string">'Family'</span>] == <span class="number">0</span>] = <span class="number">0</span></div><div class="line"></div><div class="line"><span class="comment"># drop Parch &amp; SibSp</span></div><div class="line">titanic_df = titanic_df.drop([<span class="string">'SibSp'</span>,<span class="string">'Parch'</span>], axis=<span class="number">1</span>)</div><div class="line">test_df    = test_df.drop([<span class="string">'SibSp'</span>,<span class="string">'Parch'</span>], axis=<span class="number">1</span>)</div><div class="line"></div><div class="line"><span class="comment"># plot</span></div><div class="line">fig, (axis1,axis2) = plt.subplots(<span class="number">1</span>,<span class="number">2</span>,sharex=<span class="keyword">True</span>,figsize=(<span class="number">10</span>,<span class="number">5</span>))</div><div class="line"></div><div class="line"><span class="comment"># sns.factorplot('Family',data=titanic_df,kind='count',ax=axis1)</span></div><div class="line">sns.countplot(x=<span class="string">'Family'</span>, data=titanic_df, order=[<span class="number">1</span>,<span class="number">0</span>], ax=axis1)</div><div class="line"></div><div class="line"><span class="comment"># average of survived for those who had/didn't have any family member</span></div><div class="line">family_perc = titanic_df[[<span class="string">"Family"</span>, <span class="string">"Survived"</span>]].groupby([<span class="string">'Family'</span>],as_index=<span class="keyword">False</span>).mean()</div><div class="line">sns.barplot(x=<span class="string">'Family'</span>, y=<span class="string">'Survived'</span>, data=family_perc, order=[<span class="number">1</span>,<span class="number">0</span>], ax=axis2)</div><div class="line"></div><div class="line">axis1.set_xticklabels([<span class="string">"With Family"</span>,<span class="string">"Alone"</span>], rotation=<span class="number">0</span>)</div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Cabin</span></span><br><span class="line"><span class="comment"># It has a lot of NaN values, so it won't cause a remarkable impact on prediction</span></span><br><span class="line"><span class="comment"># 这里也是要学习的地方，对于含有大量缺失值，并且对预测无太大影响时，可以直接将其移除</span></span><br><span class="line">titanic_df.drop(<span class="string">"Cabin"</span>,axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</span><br><span class="line">test_df.drop(<span class="string">"Cabin"</span>,axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 学习的地方，化繁为简，找到关注的重点为是否有家人，而不是具体的父母兄弟等</span></span><br><span class="line">titanic_df[<span class="string">'Family'</span>] =  titanic_df[<span class="string">"Parch"</span>] + titanic_df[<span class="string">"SibSp"</span>]</span><br><span class="line">titanic_df[<span class="string">'Family'</span>].loc[titanic_df[<span class="string">'Family'</span>] &gt; <span class="number">0</span>] = <span class="number">1</span></span><br><span class="line">titanic_df[<span class="string">'Family'</span>].loc[titanic_df[<span class="string">'Family'</span>] == <span class="number">0</span>] = <span class="number">0</span></span><br><span class="line"><span class="comment"># 测试集和训练集作相同处理</span></span><br><span class="line">test_df[<span class="string">'Family'</span>] =  test_df[<span class="string">"Parch"</span>] + test_df[<span class="string">"SibSp"</span>]</span><br><span class="line">test_df[<span class="string">'Family'</span>].loc[test_df[<span class="string">'Family'</span>] &gt; <span class="number">0</span>] = <span class="number">1</span></span><br><span class="line">test_df[<span class="string">'Family'</span>].loc[test_df[<span class="string">'Family'</span>] == <span class="number">0</span>] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># drop Parch &amp; SibSp</span></span><br><span class="line">titanic_df = titanic_df.drop([<span class="string">'SibSp'</span>,<span class="string">'Parch'</span>], axis=<span class="number">1</span>)</span><br><span class="line">test_df    = test_df.drop([<span class="string">'SibSp'</span>,<span class="string">'Parch'</span>], axis=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># plot</span></span><br><span class="line">fig, (axis1,axis2) = plt.subplots(<span class="number">1</span>,<span class="number">2</span>,sharex=<span class="keyword">True</span>,figsize=(<span class="number">10</span>,<span class="number">5</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># sns.factorplot('Family',data=titanic_df,kind='count',ax=axis1)</span></span><br><span class="line">sns.countplot(x=<span class="string">'Family'</span>, data=titanic_df, order=[<span class="number">1</span>,<span class="number">0</span>], ax=axis1)</span><br><span class="line"></span><br><span class="line"><span class="comment"># average of survived for those who had/didn't have any family member</span></span><br><span class="line">family_perc = titanic_df[[<span class="string">"Family"</span>, <span class="string">"Survived"</span>]].groupby([<span class="string">'Family'</span>],as_index=<span class="keyword">False</span>).mean()</span><br><span class="line">sns.barplot(x=<span class="string">'Family'</span>, y=<span class="string">'Survived'</span>, data=family_perc, order=[<span class="number">1</span>,<span class="number">0</span>], ax=axis2)</span><br><span class="line"></span><br><span class="line">axis1.set_xticklabels([<span class="string">"With Family"</span>,<span class="string">"Alone"</span>], rotation=<span class="number">0</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/12.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># Sex</span></div><div class="line"></div><div class="line"><span class="comment"># As we see, children(age &lt; ~16) on aboard seem to have a high chances for Survival.</span></div><div class="line"><span class="comment"># So, we can classify passengers as males, females, and child</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_person</span><span class="params">(passenger)</span>:</span></div><div class="line">    age,sex = passenger</div><div class="line">    <span class="keyword">return</span> <span class="string">'child'</span> <span class="keyword">if</span> age &lt; <span class="number">16</span> <span class="keyword">else</span> sex</div><div class="line"></div><div class="line">titanic_df[<span class="string">'Person'</span>] = titanic_df[[<span class="string">'Age'</span>,<span class="string">'Sex'</span>]].apply(get_person,axis=<span class="number">1</span>)</div><div class="line">test_df[<span class="string">'Person'</span>]    = test_df[[<span class="string">'Age'</span>,<span class="string">'Sex'</span>]].apply(get_person,axis=<span class="number">1</span>)</div><div class="line"></div><div class="line"><span class="comment"># No need to use Sex column since we created Person column</span></div><div class="line">titanic_df.drop([<span class="string">'Sex'</span>],axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</div><div class="line">test_df.drop([<span class="string">'Sex'</span>],axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line"><span class="comment"># create dummy variables for Person column, &amp; drop Male as it has the lowest average of survived passengers</span></div><div class="line">person_dummies_titanic  = pd.get_dummies(titanic_df[<span class="string">'Person'</span>])</div><div class="line">person_dummies_titanic.columns = [<span class="string">'Child'</span>,<span class="string">'Female'</span>,<span class="string">'Male'</span>]</div><div class="line">person_dummies_titanic.drop([<span class="string">'Male'</span>], axis=<span class="number">1</span>, inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">person_dummies_test  = pd.get_dummies(test_df[<span class="string">'Person'</span>])</div><div class="line">person_dummies_test.columns = [<span class="string">'Child'</span>,<span class="string">'Female'</span>,<span class="string">'Male'</span>]</div><div class="line">person_dummies_test.drop([<span class="string">'Male'</span>], axis=<span class="number">1</span>, inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">titanic_df = titanic_df.join(person_dummies_titanic)</div><div class="line">test_df    = test_df.join(person_dummies_test)</div><div class="line"></div><div class="line">fig, (axis1,axis2) = plt.subplots(<span class="number">1</span>,<span class="number">2</span>,figsize=(<span class="number">10</span>,<span class="number">5</span>))</div><div class="line"></div><div class="line"><span class="comment"># sns.factorplot('Person',data=titanic_df,kind='count',ax=axis1)</span></div><div class="line">sns.countplot(x=<span class="string">'Person'</span>, data=titanic_df, ax=axis1)</div><div class="line"></div><div class="line"><span class="comment"># average of survived for each Person(male, female, or child)</span></div><div class="line">person_perc = titanic_df[[<span class="string">"Person"</span>, <span class="string">"Survived"</span>]].groupby([<span class="string">'Person'</span>],as_index=<span class="keyword">False</span>).mean()</div><div class="line">sns.barplot(x=<span class="string">'Person'</span>, y=<span class="string">'Survived'</span>, data=person_perc, ax=axis2, order=[<span class="string">'male'</span>,<span class="string">'female'</span>,<span class="string">'child'</span>])</div><div class="line"></div><div class="line">titanic_df.drop([<span class="string">'Person'</span>],axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</div><div class="line">test_df.drop([<span class="string">'Person'</span>],axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Sex</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># As we see, children(age &lt; ~16) on aboard seem to have a high chances for Survival.</span></span><br><span class="line"><span class="comment"># So, we can classify passengers as males, females, and child</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_person</span><span class="params">(passenger)</span>:</span></span><br><span class="line">    age,sex = passenger</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'child'</span> <span class="keyword">if</span> age &lt; <span class="number">16</span> <span class="keyword">else</span> sex</span><br><span class="line"></span><br><span class="line">titanic_df[<span class="string">'Person'</span>] = titanic_df[[<span class="string">'Age'</span>,<span class="string">'Sex'</span>]].apply(get_person,axis=<span class="number">1</span>)</span><br><span class="line">test_df[<span class="string">'Person'</span>]    = test_df[[<span class="string">'Age'</span>,<span class="string">'Sex'</span>]].apply(get_person,axis=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># No need to use Sex column since we created Person column</span></span><br><span class="line">titanic_df.drop([<span class="string">'Sex'</span>],axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</span><br><span class="line">test_df.drop([<span class="string">'Sex'</span>],axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># create dummy variables for Person column, &amp; drop Male as it has the lowest average of survived passengers</span></span><br><span class="line">person_dummies_titanic  = pd.get_dummies(titanic_df[<span class="string">'Person'</span>])</span><br><span class="line">person_dummies_titanic.columns = [<span class="string">'Child'</span>,<span class="string">'Female'</span>,<span class="string">'Male'</span>]</span><br><span class="line">person_dummies_titanic.drop([<span class="string">'Male'</span>], axis=<span class="number">1</span>, inplace=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">person_dummies_test  = pd.get_dummies(test_df[<span class="string">'Person'</span>])</span><br><span class="line">person_dummies_test.columns = [<span class="string">'Child'</span>,<span class="string">'Female'</span>,<span class="string">'Male'</span>]</span><br><span class="line">person_dummies_test.drop([<span class="string">'Male'</span>], axis=<span class="number">1</span>, inplace=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">titanic_df = titanic_df.join(person_dummies_titanic)</span><br><span class="line">test_df    = test_df.join(person_dummies_test)</span><br><span class="line"></span><br><span class="line">fig, (axis1,axis2) = plt.subplots(<span class="number">1</span>,<span class="number">2</span>,figsize=(<span class="number">10</span>,<span class="number">5</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># sns.factorplot('Person',data=titanic_df,kind='count',ax=axis1)</span></span><br><span class="line">sns.countplot(x=<span class="string">'Person'</span>, data=titanic_df, ax=axis1)</span><br><span class="line"></span><br><span class="line"><span class="comment"># average of survived for each Person(male, female, or child)</span></span><br><span class="line">person_perc = titanic_df[[<span class="string">"Person"</span>, <span class="string">"Survived"</span>]].groupby([<span class="string">'Person'</span>],as_index=<span class="keyword">False</span>).mean()</span><br><span class="line">sns.barplot(x=<span class="string">'Person'</span>, y=<span class="string">'Survived'</span>, data=person_perc, ax=axis2, order=[<span class="string">'male'</span>,<span class="string">'female'</span>,<span class="string">'child'</span>])</span><br><span class="line"></span><br><span class="line">titanic_df.drop([<span class="string">'Person'</span>],axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</span><br><span class="line">test_df.drop([<span class="string">'Person'</span>],axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/13.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># Pclass</span></div><div class="line"></div><div class="line"><span class="comment"># sns.factorplot('Pclass',data=titanic_df,kind='count',order=[1,2,3])</span></div><div class="line">sns.factorplot(<span class="string">'Pclass'</span>,<span class="string">'Survived'</span>,order=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], data=titanic_df,size=<span class="number">5</span>)</div><div class="line"></div><div class="line"><span class="comment"># create dummy variables for Pclass column, &amp; drop 3rd class as it has the lowest average of survived passengers</span></div><div class="line">pclass_dummies_titanic  = pd.get_dummies(titanic_df[<span class="string">'Pclass'</span>])</div><div class="line">pclass_dummies_titanic.columns = [<span class="string">'Class_1'</span>,<span class="string">'Class_2'</span>,<span class="string">'Class_3'</span>]</div><div class="line">pclass_dummies_titanic.drop([<span class="string">'Class_3'</span>], axis=<span class="number">1</span>, inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">pclass_dummies_test  = pd.get_dummies(test_df[<span class="string">'Pclass'</span>])</div><div class="line">pclass_dummies_test.columns = [<span class="string">'Class_1'</span>,<span class="string">'Class_2'</span>,<span class="string">'Class_3'</span>]</div><div class="line">pclass_dummies_test.drop([<span class="string">'Class_3'</span>], axis=<span class="number">1</span>, inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">titanic_df.drop([<span class="string">'Pclass'</span>],axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</div><div class="line">test_df.drop([<span class="string">'Pclass'</span>],axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">titanic_df = titanic_df.join(pclass_dummies_titanic)</div><div class="line">test_df    = test_df.join(pclass_dummies_test)</div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Pclass</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># sns.factorplot('Pclass',data=titanic_df,kind='count',order=[1,2,3])</span></span><br><span class="line">sns.factorplot(<span class="string">'Pclass'</span>,<span class="string">'Survived'</span>,order=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], data=titanic_df,size=<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># create dummy variables for Pclass column, &amp; drop 3rd class as it has the lowest average of survived passengers</span></span><br><span class="line">pclass_dummies_titanic  = pd.get_dummies(titanic_df[<span class="string">'Pclass'</span>])</span><br><span class="line">pclass_dummies_titanic.columns = [<span class="string">'Class_1'</span>,<span class="string">'Class_2'</span>,<span class="string">'Class_3'</span>]</span><br><span class="line">pclass_dummies_titanic.drop([<span class="string">'Class_3'</span>], axis=<span class="number">1</span>, inplace=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">pclass_dummies_test  = pd.get_dummies(test_df[<span class="string">'Pclass'</span>])</span><br><span class="line">pclass_dummies_test.columns = [<span class="string">'Class_1'</span>,<span class="string">'Class_2'</span>,<span class="string">'Class_3'</span>]</span><br><span class="line">pclass_dummies_test.drop([<span class="string">'Class_3'</span>], axis=<span class="number">1</span>, inplace=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">titanic_df.drop([<span class="string">'Pclass'</span>],axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</span><br><span class="line">test_df.drop([<span class="string">'Pclass'</span>],axis=<span class="number">1</span>,inplace=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">titanic_df = titanic_df.join(pclass_dummies_titanic)</span><br><span class="line">test_df    = test_df.join(pclass_dummies_test)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/14.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 开始预测</span></div><div class="line">   <span class="comment"># define training and testing sets</span></div><div class="line"></div><div class="line">   X_train = titanic_df.drop(<span class="string">"Survived"</span>,axis=<span class="number">1</span>)</div><div class="line">   Y_train = titanic_df[<span class="string">"Survived"</span>]</div><div class="line">   X_test  = test_df.drop(<span class="string">"PassengerId"</span>,axis=<span class="number">1</span>).copy()</div><div class="line"></div></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># Logistic Regression</span></div><div class="line"></div><div class="line">logreg = LogisticRegression()</div><div class="line">logreg.fit(X_train, Y_train)</div><div class="line">Y_pred = logreg.predict(X_test)</div><div class="line"></div><div class="line">logreg.score(X_train, Y_train)</div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开始预测</span></span><br><span class="line">   <span class="comment"># define training and testing sets</span></span><br><span class="line"></span><br><span class="line">   X_train = titanic_df.drop(<span class="string">"Survived"</span>,axis=<span class="number">1</span>)</span><br><span class="line">   Y_train = titanic_df[<span class="string">"Survived"</span>]</span><br><span class="line">   X_test  = test_df.drop(<span class="string">"PassengerId"</span>,axis=<span class="number">1</span>).copy()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Logistic Regression</span></span><br><span class="line"></span><br><span class="line">logreg = LogisticRegression()</span><br><span class="line">logreg.fit(X_train, Y_train)</span><br><span class="line">Y_pred = logreg.predict(X_test)</span><br><span class="line"></span><br><span class="line">logreg.score(X_train, Y_train)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/15.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">svc = SVC()</div><div class="line">svc.fit(X_train, Y_train)</div><div class="line">Y_pred = svc.predict(X_test)</div><div class="line">svc.score(X_train, Y_train)</div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">svc = SVC()</span><br><span class="line">svc.fit(X_train, Y_train)</span><br><span class="line">Y_pred = svc.predict(X_test)</span><br><span class="line">svc.score(X_train, Y_train)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/16.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># Random Forests</span></div><div class="line"></div><div class="line">random_forest = RandomForestClassifier(n_estimators=<span class="number">100</span>)</div><div class="line"></div><div class="line">random_forest.fit(X_train, Y_train)</div><div class="line"></div><div class="line">Y_pred = random_forest.predict(X_test)</div><div class="line"></div><div class="line">random_forest.score(X_train, Y_train)</div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Random Forests</span></span><br><span class="line"></span><br><span class="line">random_forest = RandomForestClassifier(n_estimators=<span class="number">100</span>)</span><br><span class="line"></span><br><span class="line">random_forest.fit(X_train, Y_train)</span><br><span class="line"></span><br><span class="line">Y_pred = random_forest.predict(X_test)</span><br><span class="line"></span><br><span class="line">random_forest.score(X_train, Y_train)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/17.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">knn = KNeighborsClassifier(n_neighbors = <span class="number">3</span>)</div><div class="line"></div><div class="line">knn.fit(X_train, Y_train)</div><div class="line"></div><div class="line">Y_pred = knn.predict(X_test)</div><div class="line"></div><div class="line">knn.score(X_train, Y_train)</div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">knn = KNeighborsClassifier(n_neighbors = <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">knn.fit(X_train, Y_train)</span><br><span class="line"></span><br><span class="line">Y_pred = knn.predict(X_test)</span><br><span class="line"></span><br><span class="line">knn.score(X_train, Y_train)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/18.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># Gaussian Naive Bayes</span></div><div class="line"></div><div class="line">gaussian = GaussianNB()</div><div class="line"></div><div class="line">gaussian.fit(X_train, Y_train)</div><div class="line"></div><div class="line">Y_pred = gaussian.predict(X_test)</div><div class="line"></div><div class="line">gaussian.score(X_train, Y_train)</div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Gaussian Naive Bayes</span></span><br><span class="line"></span><br><span class="line">gaussian = GaussianNB()</span><br><span class="line"></span><br><span class="line">gaussian.fit(X_train, Y_train)</span><br><span class="line"></span><br><span class="line">Y_pred = gaussian.predict(X_test)</span><br><span class="line"></span><br><span class="line">gaussian.score(X_train, Y_train)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/19.png" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># get Correlation Coefficient for each feature using Logistic Regression</span></div><div class="line">coeff_df = DataFrame(titanic_df.columns.delete(<span class="number">0</span>))</div><div class="line">coeff_df.columns = [<span class="string">'Features'</span>]</div><div class="line">coeff_df[<span class="string">"Coefficient Estimate"</span>] = pd.Series(logreg.coef_[<span class="number">0</span>])</div><div class="line"></div><div class="line"><span class="comment"># preview</span></div><div class="line">coeff_df</div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># get Correlation Coefficient for each feature using Logistic Regression</span></span><br><span class="line">coeff_df = DataFrame(titanic_df.columns.delete(<span class="number">0</span>))</span><br><span class="line">coeff_df.columns = [<span class="string">'Features'</span>]</span><br><span class="line">coeff_df[<span class="string">"Coefficient Estimate"</span>] = pd.Series(logreg.coef_[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># preview</span></span><br><span class="line">coeff_df</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/20.png" alt=""></p>
 <h5 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h5><p>关于pd.get_dummies 使用</p>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/kaggle/titanic/0.png" alt=""></p>
-<h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><p><a href="https://www.kaggle.com/omarelgabry/titanic/a-journey-through-titanic" target="_blank" rel="external"><em>A journey through titanic</em></a></p>
+<h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><p><a href="https://www.kaggle.com/omarelgabry/titanic/a-journey-through-titanic" target="_blank" rel="noopener"><em>A journey through titanic</em></a></p>
 
       
     </div>
 
+    
+      
+
+
+    
+
+    
+    
+    
     <div>
-      
-        
+          
+	    
 
-      
+          
     </div>
 
-    <div>
-      
-        
+    
 
+    
       
-    </div>
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>击蒙御寇</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-    <div>
-      
-        
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="不秩稚童 微信支付">
+        <p>微信支付</p>
+      </div>
+    
 
-      
-    </div>
+    
 
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
 
     <footer class="post-footer">
       
@@ -563,7 +650,7 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
       
 
       
-        
+      
       
 
       
@@ -591,44 +678,24 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
-
-    <div class="post-spread">
-      
-        
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
-      
-    </div>
   </div>
 
-          
+
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
 
-          
-  <div class="comments" id="comments">
-
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
-
-
-
-
-
-
+  
 
 
 
@@ -645,129 +712,294 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
-               alt="不秩稚童" />
-          <p class="site-author-name" itemprop="name">不秩稚童</p>
-           
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="不秩稚童">
+            
+              <p class="site-author-name" itemprop="name">不秩稚童</p>
               <p class="site-description motion-element" itemprop="description">十年饮冰，难凉热血。</p>
+          </div>
+
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">142</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">53</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/shenxiangzhuang" title="GitHub &rarr; https://github.com/shenxiangzhuang" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:datahonor@gmail.com" title="E-Mail &rarr; mailto:datahonor@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+
+          
+            
+          
+          
+
         </div>
-        <nav class="site-state motion-element">
-        
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">142</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">18</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">53</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/shenxiangzhuang" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/shen-xiang-zhuang" target="_blank" title="知乎">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  知乎
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.cnblogs.com/buzhizhitong" target="_blank" title="博客园">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  博客园
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#数据变量描述"><span class="nav-text">数据变量描述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数据分析"><span class="nav-text">数据分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#补充说明"><span class="nav-text">补充说明</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#数据变量描述"><span class="nav-number">1.</span> <span class="nav-text">数据变量描述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数据分析"><span class="nav-number">2.</span> <span class="nav-text">数据分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#补充说明"><span class="nav-number">3.</span> <span class="nav-text">补充说明</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
-
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
       
-
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -779,33 +1011,57 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2017 - 
-  <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">不秩稚童</span>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
 </div>
+
+
+
+
+
+
 
 
 
         
-
 <div class="busuanzi-count">
-
-  
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
   
-    <span class="site-uv"><i class="fa fa-user"></i>本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
   
 
   
-    <span class="site-pv"><i class="fa fa-eye"></i>本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
   
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
   
 </div>
+
+
+
+
+
+
 
 
 
@@ -814,19 +1070,17 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
     </footer>
 
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
+
     
+
+    
+
     
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -840,89 +1094,13 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
 
 
 
-  
 
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
 
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-
-  
-
-    <script type="text/javascript">
-      var disqus_shortname = 'http-datahonor-com';
-      var disqus_identifier = '2017/03/02/Kaggle——A-Journey-through-Titanic-Python/';
-
-      var disqus_title = "Kaggle——A Journey through Titanic[Python]";
-
-
-      function run_disqus_script(disqus_script) {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
-
-      run_disqus_script('count.js');
-
-      
-        var disqus_config = function () {
-            this.page.url = disqus_url;
-            this.page.identifier = disqus_identifier;
-            this.page.title = disqus_title;
-        };
-        run_disqus_script('embed.js');
-      
-
-    </script>
-  
 
 
 
@@ -934,181 +1112,518 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
 
 
   
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
   
-  <script type="text/javascript">
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'qzF75hQvs6yPkMIO7gd7LwDB-gzGzoHsz',
+    appKey: 'foULNoeGLTL8LE8C2Ysitv5I',
+    placeholder: '毕竟今天太阳那么好 :-)',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true
+  });
+</script>
+
+
+
+
+  
+
+
+  
+
+  <script>
     // Popup Window;
     var isfetched = false;
+    var isXml = true;
     // Search DB path;
     var search_path = "search.xml";
-    if (search_path.length == 0) {
+    if (search_path.length === 0) {
       search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
     }
     var path = "/" + search_path;
     // monitor main search box;
 
-    function proceedsearch() {
-      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
-      $('.popup').toggle();
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
     }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
     // search function;
     var searchFunc = function(path, search_id, content_id) {
       'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
       $.ajax({
         url: path,
-        dataType: "xml",
+        dataType: isXml ? "xml" : "json",
         async: true,
-        success: function( xmlResponse ) {
+        success: function(res) {
           // get the contents from search data
           isfetched = true;
           $('.popup').detach().appendTo('.header-inner');
-          var datas = $( "entry", xmlResponse ).map(function() {
+          var datas = isXml ? $("entry", res).map(function() {
             return {
-              title: $( "title", this ).text(),
+              title: $("title", this).text(),
               content: $("content",this).text(),
-              url: $( "url" , this).text()
+              url: $("url" , this).text()
             };
-          }).get();
-          var $input = document.getElementById(search_id);
-          var $resultContent = document.getElementById(content_id);
-          $input.addEventListener('input', function(){
-            var matchcounts = 0;
-            var str='<ul class=\"search-result-list\">';
-            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-            $resultContent.innerHTML = "";
-            if (this.value.trim().length > 1) {
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
               // perform local searching
               datas.forEach(function(data) {
                 var isMatch = false;
-                var content_index = [];
-                var data_title = data.title.trim().toLowerCase();
-                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
-                var data_url = decodeURIComponent(data.url);
-                var index_title = -1;
-                var index_content = -1;
-                var first_occur = -1;
-                // only match artiles with not empty titles and contents
-                if(data_title != '') {
-                  keywords.forEach(function(keyword, i) {
-                    index_title = data_title.indexOf(keyword);
-                    index_content = data_content.indexOf(keyword);
-                    if( index_title >= 0 || index_content >= 0 ){
-                      isMatch = true;
-                      if (i == 0) {
-                        first_occur = index_content;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
                       }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
                     }
 
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
                   });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
                 }
+
                 // show search results
+
                 if (isMatch) {
-                  matchcounts += 1;
-                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
-                  var content = data.content.trim().replace(/<[^>]+>/g,"");
-                  if (first_occur >= 0) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
                     // cut out 100 characters
-                    var start = first_occur - 20;
-                    var end = first_occur + 80;
+                    var start = position - 20;
+                    var end = position + 80;
                     if(start < 0){
                       start = 0;
                     }
-                    if(start == 0){
-                      end = 50;
+                    if (end < position + word.length) {
+                      end = position + word.length;
                     }
                     if(end > content.length){
                       end = content.length;
                     }
-                    var match_content = content.substring(start, end);
-                    // highlight all keywords
-                    keywords.forEach(function(keyword){
-                      var regS = new RegExp(keyword, "gi");
-                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
-                    });
-
-                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
                   }
-                  str += "</li>";
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
                 }
-              })};
-            str += "</ul>";
-            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
-            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
-            $resultContent.innerHTML = str;
-          });
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
           proceedsearch();
         }
-      });}
+      });
+    }
 
     // handle and trigger popup window;
     $('.popup-trigger').click(function(e) {
       e.stopPropagation();
-      if (isfetched == false) {
+      if (isfetched === false) {
         searchFunc(path, 'local-search-input', 'local-search-result');
       } else {
         proceedsearch();
       };
     });
 
-    $('.popup-btn-close').click(function(e){
-      $('.popup').hide();
-      $(".popoverlay").remove();
-      $('body').css('overflow', '');
-    });
+    $('.popup-btn-close').click(onPopupClose);
     $('.popup').click(function(e){
       e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
     });
   </script>
 
 
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
   
 
 
   
 
   
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
     }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
     }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
 
 
   
 
-
-  
-  <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/love.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":125,"height":125,"position":"left","hOffset":30,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -1122,10 +1637,8 @@ VARIABLE DESCRIPTIONS:survival        Survival                (0 = No; 1 = Yes)p
   });
 </script>
 
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
-
-</body>
+<!-- hexo-inject:end --></body>
 </html>

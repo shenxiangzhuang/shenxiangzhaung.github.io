@@ -1,25 +1,4 @@
-<!doctype html>
-
-
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-Hans">
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
+<!DOCTYPE html>
 
 
 
@@ -33,47 +12,14 @@
 
 
   
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Octave,ML," />
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
 
 
 
@@ -82,49 +28,54 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
 
 
 
 
-<meta name="description" content="OverviewCoursera上AndrawNg的ML课程，昨天写完了线性回归的编程作业，因为公式都已经推导出来了，所以编程实现相对比较简单。这里整理下，补充了一些代码，增强了一些可视化的效果。相关的帮助文档在课程中都能找得到，本次练习资料：传送门。
-
-这里只是线性回归的代码，本来打算把所有的代码贴到这里的，但是感觉文件太多会比较乱。前几天刚好结束了这门课，直接就把代码丢到了Github上。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Coursera-ML">
-<meta property="og:url" content="http://datahonor.com/2017/07/25/Coursera-ML-ex1-Linear-Regression/index.html">
-<meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="OverviewCoursera上AndrawNg的ML课程，昨天写完了线性回归的编程作业，因为公式都已经推导出来了，所以编程实现相对比较简单。这里整理下，补充了一些代码，增强了一些可视化的效果。相关的帮助文档在课程中都能找得到，本次练习资料：传送门。
-
-这里只是线性回归的代码，本来打算把所有的代码贴到这里的，但是感觉文件太多会比较乱。前几天刚好结束了这门课，直接就把代码丢到了Github上。">
-<meta property="og:image" content="http://datahonor-1252464519.costj.myqcloud.com/201707/Figure%201_072501.png">
-<meta property="og:image" content="http://datahonor-1252464519.costj.myqcloud.com/201707/Figure%202_072502.png">
-<meta property="og:image" content="http://datahonor-1252464519.costj.myqcloud.com/201707/Figure%203_072503.png">
-<meta property="og:image" content="http://datahonor-1252464519.costj.myqcloud.com/201707/Figure%201_072504.png">
-<meta property="og:updated_time" content="2017-08-14T10:43:54.584Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Coursera-ML">
-<meta name="twitter:description" content="OverviewCoursera上AndrawNg的ML课程，昨天写完了线性回归的编程作业，因为公式都已经推导出来了，所以编程实现相对比较简单。这里整理下，补充了一些代码，增强了一些可视化的效果。相关的帮助文档在课程中都能找得到，本次练习资料：传送门。
-
-这里只是线性回归的代码，本来打算把所有的代码贴到这里的，但是感觉文件太多会比较乱。前几天刚好结束了这门课，直接就把代码丢到了Github上。">
-<meta name="twitter:image" content="http://datahonor-1252464519.costj.myqcloud.com/201707/Figure%201_072501.png">
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0">
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
-    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '不秩稚童'
-    },
+    scheme: 'Gemini',
+    version: '7.0.0',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -136,34 +87,53 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://datahonor.com/2017/07/25/Coursera-ML-ex1-Linear-Regression/"/>
-
-
-
-
-
-  <title> Coursera-ML | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
 
 
 
 
-<!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-92663335-1', 'auto');
-  ga('send', 'pageview');
+  <meta name="description" content="OverviewCoursera上AndrawNg的ML课程，昨天写完了线性回归的编程作业，因为公式都已经推导出来了，所以编程实现相对比较简单。这里整理下，补充了一些代码，增强了一些可视化的效果。相关的帮助文档在课程中都能找得到，本次练习资料：传送门。  这里只是线性回归的代码，本来打算把所有的代码贴到这里的，但是感觉文件太多会比较乱。前几天刚好结束了这门课，直接就把代码丢到了Github上。">
+<meta name="keywords" content="Octave,ML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Coursera-ML">
+<meta property="og:url" content="http://datahonor.com/2017/07/25/Coursera-ML-ex1-Linear-Regression/index.html">
+<meta property="og:site_name" content="DATA HONOR">
+<meta property="og:description" content="OverviewCoursera上AndrawNg的ML课程，昨天写完了线性回归的编程作业，因为公式都已经推导出来了，所以编程实现相对比较简单。这里整理下，补充了一些代码，增强了一些可视化的效果。相关的帮助文档在课程中都能找得到，本次练习资料：传送门。  这里只是线性回归的代码，本来打算把所有的代码贴到这里的，但是感觉文件太多会比较乱。前几天刚好结束了这门课，直接就把代码丢到了Github上。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://datahonor-1252464519.costj.myqcloud.com/201707/Figure%201_072501.png">
+<meta property="og:image" content="http://datahonor-1252464519.costj.myqcloud.com/201707/Figure%202_072502.png">
+<meta property="og:image" content="http://datahonor-1252464519.costj.myqcloud.com/201707/Figure%203_072503.png">
+<meta property="og:image" content="http://datahonor-1252464519.costj.myqcloud.com/201707/Figure%201_072504.png">
+<meta property="og:updated_time" content="2017-08-14T10:43:54.584Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Coursera-ML">
+<meta name="twitter:description" content="OverviewCoursera上AndrawNg的ML课程，昨天写完了线性回归的编程作业，因为公式都已经推导出来了，所以编程实现相对比较简单。这里整理下，补充了一些代码，增强了一些可视化的效果。相关的帮助文档在课程中都能找得到，本次练习资料：传送门。  这里只是线性回归的代码，本来打算把所有的代码贴到这里的，但是感觉文件太多会比较乱。前几天刚好结束了这门课，直接就把代码丢到了Github上。">
+<meta name="twitter:image" content="http://datahonor-1252464519.costj.myqcloud.com/201707/Figure%201_072501.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://datahonor.com/2017/07/25/Coursera-ML-ex1-Linear-Regression/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
 </script>
 
+  <title>Coursera-ML | DATA HONOR</title>
+  
 
-  <script type="text/javascript">
+
+
+
+
+
+  <script>
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -179,36 +149,65 @@
 
 
 
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
 
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">DATA HONOR</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
-        <p class="site-subtitle">Never say never.</p>
+        <h1 class="site-subtitle" itemprop="description">Never say never.</h1>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -216,82 +215,117 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
 
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
   
 
   
+
+  
     <div class="site-search">
       
-  <div class="popup local-search-popup">
+  <div class="popup search-popup local-search-popup">
   <div class="local-search-header clearfix">
     <span class="search-icon">
       <i class="fa fa-search"></i>
@@ -300,7 +334,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -314,12 +348,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -332,39 +377,44 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/07/25/Coursera-ML-ex1-Linear-Regression/">
+  
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="不秩稚童">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
-  </span>
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/07/25/Coursera-ML-ex1-Linear-Regression/">
 
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="DATA HONOR">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不秩稚童">
+      <meta itemprop="description" content="十年饮冰，难凉热血。">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DATA HONOR">
+    </span>
 
     
       <header class="post-header">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Coursera-ML
+          <h2 class="post-title" itemprop="name headline">Coursera-ML
+
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -372,18 +422,35 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-25T11:47:28+08:00">
-                2017-07-25
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-07-25 11:47:28" itemprop="dateCreated datePublished" datetime="2017-07-25T11:47:28+08:00">2017-07-25</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2017-08-14 18:43:54" itemprop="dateModified" datetime="2017-08-14T18:43:54+08:00">2017-08-14</time>
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -394,11 +461,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Octave/" itemprop="url" rel="index">
-                    <span itemprop="name">Octave</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Octave/" itemprop="url" rel="index"><span itemprop="name">Octave</span></a></span>
 
                 
                 
@@ -408,13 +471,16 @@
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
                 <a href="/2017/07/25/Coursera-ML-ex1-Linear-Regression/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/07/25/Coursera-ML-ex1-Linear-Regression/" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/07/25/Coursera-ML-ex1-Linear-Regression/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -422,11 +488,24 @@
 
           
           
+            <span id="/2017/07/25/Coursera-ML-ex1-Linear-Regression/" class="leancloud_visitors" data-flag-title="Coursera-ML">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
 
           
             <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>本文总阅读量
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -438,21 +517,23 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>Coursera上AndrawNg的ML课程，昨天写完了线性回归的编程作业，因为公式都已经推导出来了，所以编程实现相对比较简单。这里整理下，补充了一些代码，增强了一些可视化的效果。相关的帮助文档在课程中都能找得到，本次练习资料：<a href="https://www.coursera.org/learn/machine-learning/programming/8f3qT/linear-regression" target="_blank" rel="external">传送门</a>。</p>
+        <h4 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h4><p>Coursera上AndrawNg的ML课程，昨天写完了线性回归的编程作业，因为公式都已经推导出来了，所以编程实现相对比较简单。这里整理下，补充了一些代码，增强了一些可视化的效果。相关的帮助文档在课程中都能找得到，本次练习资料：<a href="https://www.coursera.org/learn/machine-learning/programming/8f3qT/linear-regression" target="_blank" rel="noopener">传送门</a>。</p>
 <blockquote>
-<p>这里只是线性回归的代码，本来打算把所有的代码贴到这里的，但是感觉文件太多会比较乱。前几天刚好结束了这门课，直接就把代码丢到了<a href="https://github.com/shenxiangzhuang/Coursera_ML" target="_blank" rel="external">Github</a>上。</p>
+<p>这里只是线性回归的代码，本来打算把所有的代码贴到这里的，但是感觉文件太多会比较乱。前几天刚好结束了这门课，直接就把代码丢到了<a href="https://github.com/shenxiangzhuang/Coursera_ML" target="_blank" rel="noopener">Github</a>上。</p>
 </blockquote>
-<h4 id="Linear-regression-with-one-variable"><a href="#Linear-regression-with-one-variable" class="headerlink" title="Linear regression with one variable"></a>Linear regression with one variable</h4><h5 id="ex1-m"><a href="#ex1-m" class="headerlink" title="ex1.m"></a>ex1.m</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">%% Machine Learning Online Class - Exercise 1: Linear Regression</div><div class="line"></div><div class="line">%  Instructions</div><div class="line">%  ------------</div><div class="line">%</div><div class="line">%  This file contains code that helps you get started on the</div><div class="line">%  linear exercise. You will need to complete the following functions</div><div class="line">%  in this exericse:</div><div class="line">%</div><div class="line">%     warmUpExercise.m</div><div class="line">%     plotData.m</div><div class="line">%     gradientDescent.m</div><div class="line">%     computeCost.m</div><div class="line">%     gradientDescentMulti.m</div><div class="line">%     computeCostMulti.m</div><div class="line">%     featureNormalize.m</div><div class="line">%     normalEqn.m</div><div class="line">%</div><div class="line">%  For this exercise, you will not need to change any code in this file,</div><div class="line">%  or any other files other than those mentioned above.</div><div class="line">%</div><div class="line">% x refers to the population size in 10,000s</div><div class="line">% y refers to the profit in $10,000s</div><div class="line">%</div><div class="line"></div><div class="line">%% Initialization</div><div class="line">clear ; close all; clc</div><div class="line"></div><div class="line">%% ==================== Part 1: Basic Function ====================</div><div class="line">% Complete warmUpExercise.m</div><div class="line">fprintf(&apos;Running warmUpExercise ... \n&apos;);</div><div class="line">fprintf(&apos;5x5 Identity Matrix: \n&apos;);</div><div class="line">warmUpExercise()</div><div class="line"></div><div class="line">fprintf(&apos;Program paused. Press enter to continue.\n&apos;);</div><div class="line">pause;</div><div class="line"></div><div class="line"></div><div class="line">%% ======================= Part 2: Plotting =======================</div><div class="line">fprintf(&apos;Plotting Data ...\n&apos;)</div><div class="line">data = load(&apos;ex1data1.txt&apos;);</div><div class="line">X = data(:, 1); y = data(:, 2);</div><div class="line">m = length(y); % number of training examples</div><div class="line"></div><div class="line">% Plot Data</div><div class="line">% Note: You have to complete the code in plotData.m</div><div class="line">plotData(X, y);</div><div class="line"></div><div class="line">fprintf(&apos;Program paused. Press enter to continue.\n&apos;);</div><div class="line">pause;</div><div class="line"></div><div class="line">%% =================== Part 3: Cost and Gradient descent ===================</div><div class="line"></div><div class="line">X = [ones(m, 1), data(:,1)]; % Add a column of ones to x</div><div class="line">theta = zeros(2, 1); % initialize fitting parameters</div><div class="line"></div><div class="line">% Some gradient descent settings</div><div class="line">iterations = 1500;</div><div class="line">alpha = 0.01;</div><div class="line"></div><div class="line">fprintf(&apos;\nTesting the cost function ...\n&apos;)</div><div class="line">% compute and display initial cost</div><div class="line">J = computeCost(X, y, theta);</div><div class="line">fprintf(&apos;With theta = [0 ; 0]\nCost computed = %f\n&apos;, J);</div><div class="line">fprintf(&apos;Expected cost value (approx) 32.07\n&apos;);</div><div class="line"></div><div class="line">% further testing of the cost function</div><div class="line">J = computeCost(X, y, [-1 ; 2]);</div><div class="line">fprintf(&apos;\nWith theta = [-1 ; 2]\nCost computed = %f\n&apos;, J);</div><div class="line">fprintf(&apos;Expected cost value (approx) 54.24\n&apos;);</div><div class="line"></div><div class="line">fprintf(&apos;Program paused. Press enter to continue.\n&apos;);</div><div class="line">pause;</div><div class="line"></div><div class="line">fprintf(&apos;\nRunning Gradient Descent ...\n&apos;)</div><div class="line">% run gradient descent</div><div class="line">[theta, J_history, theta_history] = gradientDescent(X, y, theta, alpha, iterations);</div><div class="line"></div><div class="line">% print theta to screen</div><div class="line">fprintf(&apos;Theta found by gradient descent:\n&apos;);</div><div class="line">fprintf(&apos;%f\n&apos;, theta);</div><div class="line">fprintf(&apos;Expected theta values (approx)\n&apos;);</div><div class="line">fprintf(&apos; -3.6303\n  1.1664\n\n&apos;);</div><div class="line"></div><div class="line">% Plot the linear fit</div><div class="line">hold on; % keep previous plot visible</div><div class="line">plot(X(:,2), X*theta, &apos;-&apos;)</div><div class="line">legend(&apos;Training data&apos;, &apos;Linear regression&apos;)</div><div class="line">hold off % don&apos;t overlay any more plots on this figure</div><div class="line"></div><div class="line">% Predict values for population sizes of 35,000 and 70,000</div><div class="line">predict1 = [1, 3.5] *theta;</div><div class="line">fprintf(&apos;For population = 35,000, we predict a profit of %f\n&apos;,...</div><div class="line">    predict1*10000);</div><div class="line">predict2 = [1, 7] * theta;</div><div class="line">fprintf(&apos;For population = 70,000, we predict a profit of %f\n&apos;,...</div><div class="line">    predict2*10000);</div><div class="line"></div><div class="line">fprintf(&apos;Program paused. Press enter to continue.\n&apos;);</div><div class="line">pause;</div><div class="line"></div><div class="line">%% ============= Part 4: Visualizing J(theta_0, theta_1) =============</div><div class="line">fprintf(&apos;Visualizing J(theta_0, theta_1) ...\n&apos;)</div><div class="line"></div><div class="line">% Grid over which we will calculate J</div><div class="line">theta0_vals = linspace(-10, 10, 100);</div><div class="line">theta1_vals = linspace(-1, 4, 100);</div><div class="line"></div><div class="line">% initialize J_vals to a matrix of 0&apos;s</div><div class="line">J_vals = zeros(length(theta0_vals), length(theta1_vals));</div><div class="line"></div><div class="line">% Fill out J_vals</div><div class="line">for i = 1:length(theta0_vals)</div><div class="line">    for j = 1:length(theta1_vals)</div><div class="line">      t = [theta0_vals(i); theta1_vals(j)];</div><div class="line">      J_vals(i,j) = computeCost(X, y, t);</div><div class="line">    end</div><div class="line">end</div><div class="line"></div><div class="line"></div><div class="line">% Because of the way meshgrids work in the surf command, we need to</div><div class="line">% transpose J_vals before calling surf, or else the axes will be flipped</div><div class="line">J_vals = J_vals&apos;;</div><div class="line">% Surface plot</div><div class="line">figure;</div><div class="line">surf(theta0_vals, theta1_vals, J_vals)</div><div class="line">xlabel(&apos;\theta_0&apos;); ylabel(&apos;\theta_1&apos;);</div><div class="line"></div><div class="line">% Contour plot</div><div class="line">figure;</div><div class="line">% Plot J_vals as 15 contours spaced logarithmically between 0.01 and 100</div><div class="line">contour(theta0_vals, theta1_vals, J_vals, logspace(-2, 3, 20))</div><div class="line">xlabel(&apos;\theta_0&apos;); ylabel(&apos;\theta_1&apos;);</div><div class="line">hold on;</div><div class="line">nums_of_theta = size(theta_history, 1);</div><div class="line">plot(theta_history(1:nums_of_theta-1, 1), theta_history(1:nums_of_theta-1, 2), &apos;go&apos;, &apos;MarkerSize&apos;, 5, &apos;LineWidth&apos;, 1);</div><div class="line">plot(theta(1), theta(2), &apos;rx&apos;, &apos;MarkerSize&apos;, 10, &apos;LineWidth&apos;, 2);</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<h5 id="plotData-m"><a href="#plotData-m" class="headerlink" title="plotData.m"></a>plotData.m</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">function plotData(x, y)</div><div class="line">%PLOTDATA Plots the data points x and y into a new figure </div><div class="line">%   PLOTDATA(x,y) plots the data points and gives the figure axes labels of</div><div class="line">%   population and profit.</div><div class="line"></div><div class="line">figure; % open a new figure window</div><div class="line">plot(x, y, &apos;rx&apos;, &apos;MarkerSize&apos;, 10);</div><div class="line">xlabel(&apos;population&apos;); ylabel(&apos;revenue&apos;);</div><div class="line"></div><div class="line">end</div><div class="line"></div></pre></td></tr></table></figure>
-<h5 id="computeCost-m"><a href="#computeCost-m" class="headerlink" title="computeCost.m"></a>computeCost.m</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">function J = computeCost(X, y, theta)</div><div class="line">%COMPUTECOST Compute cost for linear regression</div><div class="line">%   J = COMPUTECOST(X, y, theta) computes the cost of using theta as the</div><div class="line">%   parameter for linear regression to fit the data points in X and y</div><div class="line"></div><div class="line">% Initialize some useful values</div><div class="line">m = length(y); % number of training examples</div><div class="line"></div><div class="line">% You need to return the following variables correctly </div><div class="line">J = 0;</div><div class="line"></div><div class="line">% ====================== YOUR CODE HERE ======================</div><div class="line">% Instructions: Compute the cost of a particular choice of theta</div><div class="line">%               You should set J to the cost.</div><div class="line"></div><div class="line"></div><div class="line">J = sum((X * theta - y).^2)/(2 * m);</div><div class="line"></div><div class="line">end</div><div class="line"></div></pre></td></tr></table></figure>
-<h5 id="gradientDescent-m"><a href="#gradientDescent-m" class="headerlink" title="gradientDescent.m"></a>gradientDescent.m</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">function [theta, J_history, theta_history] = gradientDescent(X, y, theta, alpha, num_iters)</div><div class="line">%GRADIENTDESCENT Performs gradient descent to learn theta</div><div class="line">%   theta = GRADIENTDESCENT(X, y, theta, alpha, num_iters) updates theta by </div><div class="line">%   taking num_iters gradient steps with learning rate alpha</div><div class="line"></div><div class="line">% Initialize some useful values</div><div class="line">m = length(y); % number of training examples</div><div class="line">J_history = zeros(num_iters, 1);</div><div class="line">theta_history = zeros(num_iters, 2);</div><div class="line"></div><div class="line">for iter = 1:num_iters</div><div class="line"></div><div class="line">    % ====================== YOUR CODE HERE ======================</div><div class="line">    % Instructions: Perform a single gradient step on the parameter vector</div><div class="line">    %               theta. </div><div class="line">    %</div><div class="line">    % Hint: While debugging, it can be useful to print out the values</div><div class="line">    %       of the cost function (computeCost) and gradient here.</div><div class="line">    %</div><div class="line">    size(X);  % 97x2</div><div class="line">    size(theta);  % 2x1</div><div class="line">    size(y);  % 97x1</div><div class="line">    change = (alpha/m) * (X&apos; * (X * theta - y));</div><div class="line">    theta = theta - change;</div><div class="line"></div><div class="line">    % ============================================================</div><div class="line"></div><div class="line">    % Save the cost J in every iteration    </div><div class="line">    J_history(iter) = computeCost(X, y, theta);</div><div class="line">    theta_history(iter, :) = theta;</div><div class="line">    end</div><div class="line"></div><div class="line">    end</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<h4 id="Linear-regression-with-one-variable"><a href="#Linear-regression-with-one-variable" class="headerlink" title="Linear regression with one variable"></a>Linear regression with one variable</h4><h5 id="ex1-m"><a href="#ex1-m" class="headerlink" title="ex1.m"></a>ex1.m</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">%% Machine Learning Online Class - Exercise 1: Linear Regression</span><br><span class="line"></span><br><span class="line">%  Instructions</span><br><span class="line">%  ------------</span><br><span class="line">%</span><br><span class="line">%  This file contains code that helps you get started on the</span><br><span class="line">%  linear exercise. You will need to complete the following functions</span><br><span class="line">%  in this exericse:</span><br><span class="line">%</span><br><span class="line">%     warmUpExercise.m</span><br><span class="line">%     plotData.m</span><br><span class="line">%     gradientDescent.m</span><br><span class="line">%     computeCost.m</span><br><span class="line">%     gradientDescentMulti.m</span><br><span class="line">%     computeCostMulti.m</span><br><span class="line">%     featureNormalize.m</span><br><span class="line">%     normalEqn.m</span><br><span class="line">%</span><br><span class="line">%  For this exercise, you will not need to change any code in this file,</span><br><span class="line">%  or any other files other than those mentioned above.</span><br><span class="line">%</span><br><span class="line">% x refers to the population size in 10,000s</span><br><span class="line">% y refers to the profit in $10,000s</span><br><span class="line">%</span><br><span class="line"></span><br><span class="line">%% Initialization</span><br><span class="line">clear ; close all; clc</span><br><span class="line"></span><br><span class="line">%% ==================== Part 1: Basic Function ====================</span><br><span class="line">% Complete warmUpExercise.m</span><br><span class="line">fprintf(&apos;Running warmUpExercise ... \n&apos;);</span><br><span class="line">fprintf(&apos;5x5 Identity Matrix: \n&apos;);</span><br><span class="line">warmUpExercise()</span><br><span class="line"></span><br><span class="line">fprintf(&apos;Program paused. Press enter to continue.\n&apos;);</span><br><span class="line">pause;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">%% ======================= Part 2: Plotting =======================</span><br><span class="line">fprintf(&apos;Plotting Data ...\n&apos;)</span><br><span class="line">data = load(&apos;ex1data1.txt&apos;);</span><br><span class="line">X = data(:, 1); y = data(:, 2);</span><br><span class="line">m = length(y); % number of training examples</span><br><span class="line"></span><br><span class="line">% Plot Data</span><br><span class="line">% Note: You have to complete the code in plotData.m</span><br><span class="line">plotData(X, y);</span><br><span class="line"></span><br><span class="line">fprintf(&apos;Program paused. Press enter to continue.\n&apos;);</span><br><span class="line">pause;</span><br><span class="line"></span><br><span class="line">%% =================== Part 3: Cost and Gradient descent ===================</span><br><span class="line"></span><br><span class="line">X = [ones(m, 1), data(:,1)]; % Add a column of ones to x</span><br><span class="line">theta = zeros(2, 1); % initialize fitting parameters</span><br><span class="line"></span><br><span class="line">% Some gradient descent settings</span><br><span class="line">iterations = 1500;</span><br><span class="line">alpha = 0.01;</span><br><span class="line"></span><br><span class="line">fprintf(&apos;\nTesting the cost function ...\n&apos;)</span><br><span class="line">% compute and display initial cost</span><br><span class="line">J = computeCost(X, y, theta);</span><br><span class="line">fprintf(&apos;With theta = [0 ; 0]\nCost computed = %f\n&apos;, J);</span><br><span class="line">fprintf(&apos;Expected cost value (approx) 32.07\n&apos;);</span><br><span class="line"></span><br><span class="line">% further testing of the cost function</span><br><span class="line">J = computeCost(X, y, [-1 ; 2]);</span><br><span class="line">fprintf(&apos;\nWith theta = [-1 ; 2]\nCost computed = %f\n&apos;, J);</span><br><span class="line">fprintf(&apos;Expected cost value (approx) 54.24\n&apos;);</span><br><span class="line"></span><br><span class="line">fprintf(&apos;Program paused. Press enter to continue.\n&apos;);</span><br><span class="line">pause;</span><br><span class="line"></span><br><span class="line">fprintf(&apos;\nRunning Gradient Descent ...\n&apos;)</span><br><span class="line">% run gradient descent</span><br><span class="line">[theta, J_history, theta_history] = gradientDescent(X, y, theta, alpha, iterations);</span><br><span class="line"></span><br><span class="line">% print theta to screen</span><br><span class="line">fprintf(&apos;Theta found by gradient descent:\n&apos;);</span><br><span class="line">fprintf(&apos;%f\n&apos;, theta);</span><br><span class="line">fprintf(&apos;Expected theta values (approx)\n&apos;);</span><br><span class="line">fprintf(&apos; -3.6303\n  1.1664\n\n&apos;);</span><br><span class="line"></span><br><span class="line">% Plot the linear fit</span><br><span class="line">hold on; % keep previous plot visible</span><br><span class="line">plot(X(:,2), X*theta, &apos;-&apos;)</span><br><span class="line">legend(&apos;Training data&apos;, &apos;Linear regression&apos;)</span><br><span class="line">hold off % don&apos;t overlay any more plots on this figure</span><br><span class="line"></span><br><span class="line">% Predict values for population sizes of 35,000 and 70,000</span><br><span class="line">predict1 = [1, 3.5] *theta;</span><br><span class="line">fprintf(&apos;For population = 35,000, we predict a profit of %f\n&apos;,...</span><br><span class="line">    predict1*10000);</span><br><span class="line">predict2 = [1, 7] * theta;</span><br><span class="line">fprintf(&apos;For population = 70,000, we predict a profit of %f\n&apos;,...</span><br><span class="line">    predict2*10000);</span><br><span class="line"></span><br><span class="line">fprintf(&apos;Program paused. Press enter to continue.\n&apos;);</span><br><span class="line">pause;</span><br><span class="line"></span><br><span class="line">%% ============= Part 4: Visualizing J(theta_0, theta_1) =============</span><br><span class="line">fprintf(&apos;Visualizing J(theta_0, theta_1) ...\n&apos;)</span><br><span class="line"></span><br><span class="line">% Grid over which we will calculate J</span><br><span class="line">theta0_vals = linspace(-10, 10, 100);</span><br><span class="line">theta1_vals = linspace(-1, 4, 100);</span><br><span class="line"></span><br><span class="line">% initialize J_vals to a matrix of 0&apos;s</span><br><span class="line">J_vals = zeros(length(theta0_vals), length(theta1_vals));</span><br><span class="line"></span><br><span class="line">% Fill out J_vals</span><br><span class="line">for i = 1:length(theta0_vals)</span><br><span class="line">    for j = 1:length(theta1_vals)</span><br><span class="line">      t = [theta0_vals(i); theta1_vals(j)];</span><br><span class="line">      J_vals(i,j) = computeCost(X, y, t);</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">% Because of the way meshgrids work in the surf command, we need to</span><br><span class="line">% transpose J_vals before calling surf, or else the axes will be flipped</span><br><span class="line">J_vals = J_vals&apos;;</span><br><span class="line">% Surface plot</span><br><span class="line">figure;</span><br><span class="line">surf(theta0_vals, theta1_vals, J_vals)</span><br><span class="line">xlabel(&apos;\theta_0&apos;); ylabel(&apos;\theta_1&apos;);</span><br><span class="line"></span><br><span class="line">% Contour plot</span><br><span class="line">figure;</span><br><span class="line">% Plot J_vals as 15 contours spaced logarithmically between 0.01 and 100</span><br><span class="line">contour(theta0_vals, theta1_vals, J_vals, logspace(-2, 3, 20))</span><br><span class="line">xlabel(&apos;\theta_0&apos;); ylabel(&apos;\theta_1&apos;);</span><br><span class="line">hold on;</span><br><span class="line">nums_of_theta = size(theta_history, 1);</span><br><span class="line">plot(theta_history(1:nums_of_theta-1, 1), theta_history(1:nums_of_theta-1, 2), &apos;go&apos;, &apos;MarkerSize&apos;, 5, &apos;LineWidth&apos;, 1);</span><br><span class="line">plot(theta(1), theta(2), &apos;rx&apos;, &apos;MarkerSize&apos;, 10, &apos;LineWidth&apos;, 2);</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="plotData-m"><a href="#plotData-m" class="headerlink" title="plotData.m"></a>plotData.m</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">function plotData(x, y)</span><br><span class="line">%PLOTDATA Plots the data points x and y into a new figure </span><br><span class="line">%   PLOTDATA(x,y) plots the data points and gives the figure axes labels of</span><br><span class="line">%   population and profit.</span><br><span class="line"></span><br><span class="line">figure; % open a new figure window</span><br><span class="line">plot(x, y, &apos;rx&apos;, &apos;MarkerSize&apos;, 10);</span><br><span class="line">xlabel(&apos;population&apos;); ylabel(&apos;revenue&apos;);</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="computeCost-m"><a href="#computeCost-m" class="headerlink" title="computeCost.m"></a>computeCost.m</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">function J = computeCost(X, y, theta)</span><br><span class="line">%COMPUTECOST Compute cost for linear regression</span><br><span class="line">%   J = COMPUTECOST(X, y, theta) computes the cost of using theta as the</span><br><span class="line">%   parameter for linear regression to fit the data points in X and y</span><br><span class="line"></span><br><span class="line">% Initialize some useful values</span><br><span class="line">m = length(y); % number of training examples</span><br><span class="line"></span><br><span class="line">% You need to return the following variables correctly </span><br><span class="line">J = 0;</span><br><span class="line"></span><br><span class="line">% ====================== YOUR CODE HERE ======================</span><br><span class="line">% Instructions: Compute the cost of a particular choice of theta</span><br><span class="line">%               You should set J to the cost.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">J = sum((X * theta - y).^2)/(2 * m);</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="gradientDescent-m"><a href="#gradientDescent-m" class="headerlink" title="gradientDescent.m"></a>gradientDescent.m</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">function [theta, J_history, theta_history] = gradientDescent(X, y, theta, alpha, num_iters)</span><br><span class="line">%GRADIENTDESCENT Performs gradient descent to learn theta</span><br><span class="line">%   theta = GRADIENTDESCENT(X, y, theta, alpha, num_iters) updates theta by </span><br><span class="line">%   taking num_iters gradient steps with learning rate alpha</span><br><span class="line"></span><br><span class="line">% Initialize some useful values</span><br><span class="line">m = length(y); % number of training examples</span><br><span class="line">J_history = zeros(num_iters, 1);</span><br><span class="line">theta_history = zeros(num_iters, 2);</span><br><span class="line"></span><br><span class="line">for iter = 1:num_iters</span><br><span class="line"></span><br><span class="line">    % ====================== YOUR CODE HERE ======================</span><br><span class="line">    % Instructions: Perform a single gradient step on the parameter vector</span><br><span class="line">    %               theta. </span><br><span class="line">    %</span><br><span class="line">    % Hint: While debugging, it can be useful to print out the values</span><br><span class="line">    %       of the cost function (computeCost) and gradient here.</span><br><span class="line">    %</span><br><span class="line">    size(X);  % 97x2</span><br><span class="line">    size(theta);  % 2x1</span><br><span class="line">    size(y);  % 97x1</span><br><span class="line">    change = (alpha/m) * (X&apos; * (X * theta - y));</span><br><span class="line">    theta = theta - change;</span><br><span class="line"></span><br><span class="line">    % ============================================================</span><br><span class="line"></span><br><span class="line">    % Save the cost J in every iteration    </span><br><span class="line">    J_history(iter) = computeCost(X, y, theta);</span><br><span class="line">    theta_history(iter, :) = theta;</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>输出：</p>
 <pre><code>Running warmUpExercise ...
 5x5 Identity Matrix:
@@ -495,11 +576,11 @@ Visualizing J(theta_0, theta_1) ...
 </code></pre><p>几张图：</p>
 <p><img src="http://datahonor-1252464519.costj.myqcloud.com/201707/Figure%201_072501.png" alt=""><br><img src="http://datahonor-1252464519.costj.myqcloud.com/201707/Figure%202_072502.png" alt=""><br><img src="http://datahonor-1252464519.costj.myqcloud.com/201707/Figure%203_072503.png" alt=""></p>
 <h4 id="Linear-regression-with-multiple-variables"><a href="#Linear-regression-with-multiple-variables" class="headerlink" title="Linear regression with multiple variables"></a>Linear regression with multiple variables</h4><h5 id="ex1-multi-m"><a href="#ex1-multi-m" class="headerlink" title="ex1_multi.m"></a>ex1_multi.m</h5><p>需要注意的是，我们在根据新的数据预测价格的时候，要记得根据之前归一化mu和sigma对新的数据进行相同的处理。这点在帮助文档中也特别提出了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">%% Machine Learning Online Class</div><div class="line">%  Exercise 1: Linear regression with multiple variables</div><div class="line">%</div><div class="line">%  Instructions</div><div class="line">%  ------------</div><div class="line">% </div><div class="line">%  This file contains code that helps you get started on the</div><div class="line">%  linear regression exercise. </div><div class="line">%</div><div class="line">%  You will need to complete the following functions in this </div><div class="line">%  exericse:</div><div class="line">%</div><div class="line">%     warmUpExercise.m</div><div class="line">%     plotData.m</div><div class="line">%     gradientDescent.m</div><div class="line">%     computeCost.m</div><div class="line">%     gradientDescentMulti.m</div><div class="line">%     computeCostMulti.m</div><div class="line">%     featureNormalize.m</div><div class="line">%     normalEqn.m</div><div class="line">%</div><div class="line">%  For this part of the exercise, you will need to change some</div><div class="line">%  parts of the code below for various experiments (e.g., changing</div><div class="line">%  learning rates).</div><div class="line">%</div><div class="line"></div><div class="line">%% Initialization</div><div class="line"></div><div class="line">%% ================ Part 1: Feature Normalization ================</div><div class="line"></div><div class="line">%% Clear and Close Figures</div><div class="line">clear ; close all; clc</div><div class="line"></div><div class="line">fprintf(&apos;Loading data ...\n&apos;);</div><div class="line"></div><div class="line">%% Load Data</div><div class="line">data = load(&apos;ex1data2.txt&apos;);</div><div class="line">X = data(:, 1:2);</div><div class="line">y = data(:, 3);</div><div class="line">m = length(y);</div><div class="line"></div><div class="line">% Print out some data points</div><div class="line">fprintf(&apos;First 10 examples from the dataset: \n&apos;);</div><div class="line">fprintf(&apos; x = [%.0f %.0f], y = %.0f \n&apos;, [X(1:10,:) y(1:10,:)]&apos;);</div><div class="line"></div><div class="line">fprintf(&apos;Program paused. Press enter to continue.\n&apos;);</div><div class="line">pause;</div><div class="line"></div><div class="line">% Scale features and set them to zero mean</div><div class="line">fprintf(&apos;Normalizing Features ...\n&apos;);</div><div class="line"></div><div class="line">[X mu sigma] = featureNormalize(X);</div><div class="line"></div><div class="line">% Add intercept term to X</div><div class="line">X = [ones(m, 1) X];</div><div class="line"></div><div class="line"></div><div class="line">%% ================ Part 2: Gradient Descent ================</div><div class="line"></div><div class="line">% ====================== YOUR CODE HERE ======================</div><div class="line">% Instructions: We have provided you with the following starter</div><div class="line">%               code that runs gradient descent with a particular</div><div class="line">%               learning rate (alpha). </div><div class="line">%</div><div class="line">%               Your task is to first make sure that your functions - </div><div class="line">%               computeCost and gradientDescent already work with </div><div class="line">%               this starter code and support multiple variables.</div><div class="line">%</div><div class="line">%               After that, try running gradient descent with </div><div class="line">%               different values of alpha and see which one gives</div><div class="line">%               you the best result.</div><div class="line">%</div><div class="line">%               Finally, you should complete the code at the end</div><div class="line">%               to predict the price of a 1650 sq-ft, 3 br house.</div><div class="line">%</div><div class="line">% Hint: By using the &apos;hold on&apos; command, you can plot multiple</div><div class="line">%       graphs on the same figure.</div><div class="line">%</div><div class="line">% Hint: At prediction, make sure you do the same feature normalization.</div><div class="line">%</div><div class="line"></div><div class="line">fprintf(&apos;Running gradient descent ...\n&apos;);</div><div class="line"></div><div class="line">% Choose some alpha value</div><div class="line">alpha = 0.01;</div><div class="line">num_iters = 400;</div><div class="line"></div><div class="line">% Init Theta and Run Gradient Descent </div><div class="line">theta = zeros(3, 1);</div><div class="line">[theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters);</div><div class="line"></div><div class="line">% Plot the convergence graph</div><div class="line">figure;</div><div class="line">plot(1:numel(J_history), J_history, &apos;-b&apos;, &apos;LineWidth&apos;, 2);</div><div class="line">xlabel(&apos;Number of iterations&apos;);</div><div class="line">ylabel(&apos;Cost J&apos;);</div><div class="line"></div><div class="line">% Display gradient descent&apos;s result</div><div class="line">fprintf(&apos;Theta computed from gradient descent: \n&apos;);</div><div class="line">fprintf(&apos; %f \n&apos;, theta);</div><div class="line">fprintf(&apos;\n&apos;);</div><div class="line"></div><div class="line">% Estimate the price of a 1650 sq-ft, 3 br house</div><div class="line">% ====================== YOUR CODE HERE ======================</div><div class="line">% Recall that the first column of X is all-ones. Thus, it does</div><div class="line">% not need to be normalized.</div><div class="line">sq_ft_norm = (1650-mu(1))/sigma(1);</div><div class="line">br_norm = (3-mu(2))/sigma(2);</div><div class="line">price = price = theta(1) + theta(2)*sq_ft_norm + theta(3)*br_norm; % You should change this</div><div class="line"></div><div class="line"></div><div class="line">% ============================================================</div><div class="line"></div><div class="line">fprintf([&apos;Predicted price of a 1650 sq-ft, 3 br house &apos; ...</div><div class="line">         &apos;(using gradient descent):\n $%f\n&apos;], price);</div><div class="line"></div><div class="line">fprintf(&apos;Program paused. Press enter to continue.\n&apos;);</div><div class="line">pause;</div><div class="line"></div><div class="line">%% ================ Part 3: Normal Equations ================</div><div class="line"></div><div class="line">fprintf(&apos;Solving with normal equations...\n&apos;);</div><div class="line"></div><div class="line">% ====================== YOUR CODE HERE ======================</div><div class="line">% Instructions: The following code computes the closed form </div><div class="line">%               solution for linear regression using the normal</div><div class="line">%               equations. You should complete the code in </div><div class="line">%               normalEqn.m</div><div class="line">%</div><div class="line">%               After doing so, you should complete this code </div><div class="line">%               to predict the price of a 1650 sq-ft, 3 br house.</div><div class="line">%</div><div class="line"></div><div class="line">%% Load Data</div><div class="line">data = csvread(&apos;ex1data2.txt&apos;);</div><div class="line">X = data(:, 1:2);</div><div class="line">y = data(:, 3);</div><div class="line">m = length(y);</div><div class="line"></div><div class="line">% Add intercept term to X</div><div class="line">X = [ones(m, 1) X];</div><div class="line"></div><div class="line">% Calculate the parameters from the normal equation</div><div class="line">theta = normalEqn(X, y);</div><div class="line"></div><div class="line">% Display normal equation&apos;s result</div><div class="line">fprintf(&apos;Theta computed from the normal equations: \n&apos;);</div><div class="line">fprintf(&apos; %f \n&apos;, theta);</div><div class="line">fprintf(&apos;\n&apos;);</div><div class="line"></div><div class="line"></div><div class="line">% Estimate the price of a 1650 sq-ft, 3 br house</div><div class="line">% ====================== YOUR CODE HERE ======================</div><div class="line">price = theta(1) + theta(2)*1650 + theta(3)*3; % You should change this</div><div class="line"></div><div class="line"></div><div class="line">% ============================================================</div><div class="line"></div><div class="line">fprintf([&apos;Predicted price of a 1650 sq-ft, 3 br house &apos; ...</div><div class="line">         &apos;(using normal equations):\n $%f\n&apos;], price);</div><div class="line"></div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<h5 id="computeCostMulti-m"><a href="#computeCostMulti-m" class="headerlink" title="computeCostMulti.m"></a>computeCostMulti.m</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">function J = computeCostMulti(X, y, theta)</div><div class="line">%COMPUTECOSTMULTI Compute cost for linear regression with multiple variables</div><div class="line">%   J = COMPUTECOSTMULTI(X, y, theta) computes the cost of using theta as the</div><div class="line">%   parameter for linear regression to fit the data points in X and y</div><div class="line"></div><div class="line">% Initialize some useful values</div><div class="line">m = length(y); % number of training examples</div><div class="line"></div><div class="line">% You need to return the following variables correctly </div><div class="line">J = 0;</div><div class="line"></div><div class="line">% ====================== YOUR CODE HERE ======================</div><div class="line">% Instructions: Compute the cost of a particular choice of theta</div><div class="line">%               You should set J to the cost.</div><div class="line"></div><div class="line">J = (((X*theta - y)&apos;)*(X*theta - y))/(2*m);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">% =========================================================================</div><div class="line"></div><div class="line">end</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<h5 id="featureNormalize-m"><a href="#featureNormalize-m" class="headerlink" title="featureNormalize.m"></a>featureNormalize.m</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">function [X_norm, mu, sigma] = featureNormalize(X)</div><div class="line">%FEATURENORMALIZE Normalizes the features in X </div><div class="line">%   FEATURENORMALIZE(X) returns a normalized version of X where</div><div class="line">%   the mean value of each feature is 0 and the standard deviation</div><div class="line">%   is 1. This is often a good preprocessing step to do when</div><div class="line">%   working with learning algorithms.</div><div class="line"></div><div class="line">% You need to set these values correctly</div><div class="line">X_norm = X;</div><div class="line">mu = zeros(1, size(X, 2));</div><div class="line">sigma = zeros(1, size(X, 2));</div><div class="line"></div><div class="line">% ====================== YOUR CODE HERE ======================</div><div class="line">% Instructions: First, for each feature dimension, compute the mean</div><div class="line">%               of the feature and subtract it from the dataset,</div><div class="line">%               storing the mean value in mu. Next, compute the </div><div class="line">%               standard deviation of each feature and divide</div><div class="line">%               each feature by it&apos;s standard deviation, storing</div><div class="line">%               the standard deviation in sigma. </div><div class="line">%</div><div class="line">%               Note that X is a matrix where each column is a </div><div class="line">%               feature and each row is an example. You need </div><div class="line">%               to perform the normalization separately for </div><div class="line">%               each feature. </div><div class="line">%</div><div class="line">% Hint: You might find the &apos;mean&apos; and &apos;std&apos; functions useful.</div><div class="line">%       </div><div class="line"></div><div class="line"></div><div class="line">cols = size(X, 2);</div><div class="line">for col = 1:cols</div><div class="line">    featurex = X(:, col);</div><div class="line"></div><div class="line">    mux = mean(featurex);</div><div class="line">    mu(col) = mux;</div><div class="line"></div><div class="line">    featurex = featurex - mux;</div><div class="line"></div><div class="line">    sigmax = std(featurex);</div><div class="line">    sigma(col) = sigmax;</div><div class="line"></div><div class="line">    featurex = featurex/sigmax;</div><div class="line"></div><div class="line">    X_norm(:, col) = featurex;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">% ============================================================</div><div class="line"></div><div class="line">end</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">%% Machine Learning Online Class</span><br><span class="line">%  Exercise 1: Linear regression with multiple variables</span><br><span class="line">%</span><br><span class="line">%  Instructions</span><br><span class="line">%  ------------</span><br><span class="line">% </span><br><span class="line">%  This file contains code that helps you get started on the</span><br><span class="line">%  linear regression exercise. </span><br><span class="line">%</span><br><span class="line">%  You will need to complete the following functions in this </span><br><span class="line">%  exericse:</span><br><span class="line">%</span><br><span class="line">%     warmUpExercise.m</span><br><span class="line">%     plotData.m</span><br><span class="line">%     gradientDescent.m</span><br><span class="line">%     computeCost.m</span><br><span class="line">%     gradientDescentMulti.m</span><br><span class="line">%     computeCostMulti.m</span><br><span class="line">%     featureNormalize.m</span><br><span class="line">%     normalEqn.m</span><br><span class="line">%</span><br><span class="line">%  For this part of the exercise, you will need to change some</span><br><span class="line">%  parts of the code below for various experiments (e.g., changing</span><br><span class="line">%  learning rates).</span><br><span class="line">%</span><br><span class="line"></span><br><span class="line">%% Initialization</span><br><span class="line"></span><br><span class="line">%% ================ Part 1: Feature Normalization ================</span><br><span class="line"></span><br><span class="line">%% Clear and Close Figures</span><br><span class="line">clear ; close all; clc</span><br><span class="line"></span><br><span class="line">fprintf(&apos;Loading data ...\n&apos;);</span><br><span class="line"></span><br><span class="line">%% Load Data</span><br><span class="line">data = load(&apos;ex1data2.txt&apos;);</span><br><span class="line">X = data(:, 1:2);</span><br><span class="line">y = data(:, 3);</span><br><span class="line">m = length(y);</span><br><span class="line"></span><br><span class="line">% Print out some data points</span><br><span class="line">fprintf(&apos;First 10 examples from the dataset: \n&apos;);</span><br><span class="line">fprintf(&apos; x = [%.0f %.0f], y = %.0f \n&apos;, [X(1:10,:) y(1:10,:)]&apos;);</span><br><span class="line"></span><br><span class="line">fprintf(&apos;Program paused. Press enter to continue.\n&apos;);</span><br><span class="line">pause;</span><br><span class="line"></span><br><span class="line">% Scale features and set them to zero mean</span><br><span class="line">fprintf(&apos;Normalizing Features ...\n&apos;);</span><br><span class="line"></span><br><span class="line">[X mu sigma] = featureNormalize(X);</span><br><span class="line"></span><br><span class="line">% Add intercept term to X</span><br><span class="line">X = [ones(m, 1) X];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">%% ================ Part 2: Gradient Descent ================</span><br><span class="line"></span><br><span class="line">% ====================== YOUR CODE HERE ======================</span><br><span class="line">% Instructions: We have provided you with the following starter</span><br><span class="line">%               code that runs gradient descent with a particular</span><br><span class="line">%               learning rate (alpha). </span><br><span class="line">%</span><br><span class="line">%               Your task is to first make sure that your functions - </span><br><span class="line">%               computeCost and gradientDescent already work with </span><br><span class="line">%               this starter code and support multiple variables.</span><br><span class="line">%</span><br><span class="line">%               After that, try running gradient descent with </span><br><span class="line">%               different values of alpha and see which one gives</span><br><span class="line">%               you the best result.</span><br><span class="line">%</span><br><span class="line">%               Finally, you should complete the code at the end</span><br><span class="line">%               to predict the price of a 1650 sq-ft, 3 br house.</span><br><span class="line">%</span><br><span class="line">% Hint: By using the &apos;hold on&apos; command, you can plot multiple</span><br><span class="line">%       graphs on the same figure.</span><br><span class="line">%</span><br><span class="line">% Hint: At prediction, make sure you do the same feature normalization.</span><br><span class="line">%</span><br><span class="line"></span><br><span class="line">fprintf(&apos;Running gradient descent ...\n&apos;);</span><br><span class="line"></span><br><span class="line">% Choose some alpha value</span><br><span class="line">alpha = 0.01;</span><br><span class="line">num_iters = 400;</span><br><span class="line"></span><br><span class="line">% Init Theta and Run Gradient Descent </span><br><span class="line">theta = zeros(3, 1);</span><br><span class="line">[theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters);</span><br><span class="line"></span><br><span class="line">% Plot the convergence graph</span><br><span class="line">figure;</span><br><span class="line">plot(1:numel(J_history), J_history, &apos;-b&apos;, &apos;LineWidth&apos;, 2);</span><br><span class="line">xlabel(&apos;Number of iterations&apos;);</span><br><span class="line">ylabel(&apos;Cost J&apos;);</span><br><span class="line"></span><br><span class="line">% Display gradient descent&apos;s result</span><br><span class="line">fprintf(&apos;Theta computed from gradient descent: \n&apos;);</span><br><span class="line">fprintf(&apos; %f \n&apos;, theta);</span><br><span class="line">fprintf(&apos;\n&apos;);</span><br><span class="line"></span><br><span class="line">% Estimate the price of a 1650 sq-ft, 3 br house</span><br><span class="line">% ====================== YOUR CODE HERE ======================</span><br><span class="line">% Recall that the first column of X is all-ones. Thus, it does</span><br><span class="line">% not need to be normalized.</span><br><span class="line">sq_ft_norm = (1650-mu(1))/sigma(1);</span><br><span class="line">br_norm = (3-mu(2))/sigma(2);</span><br><span class="line">price = price = theta(1) + theta(2)*sq_ft_norm + theta(3)*br_norm; % You should change this</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">% ============================================================</span><br><span class="line"></span><br><span class="line">fprintf([&apos;Predicted price of a 1650 sq-ft, 3 br house &apos; ...</span><br><span class="line">         &apos;(using gradient descent):\n $%f\n&apos;], price);</span><br><span class="line"></span><br><span class="line">fprintf(&apos;Program paused. Press enter to continue.\n&apos;);</span><br><span class="line">pause;</span><br><span class="line"></span><br><span class="line">%% ================ Part 3: Normal Equations ================</span><br><span class="line"></span><br><span class="line">fprintf(&apos;Solving with normal equations...\n&apos;);</span><br><span class="line"></span><br><span class="line">% ====================== YOUR CODE HERE ======================</span><br><span class="line">% Instructions: The following code computes the closed form </span><br><span class="line">%               solution for linear regression using the normal</span><br><span class="line">%               equations. You should complete the code in </span><br><span class="line">%               normalEqn.m</span><br><span class="line">%</span><br><span class="line">%               After doing so, you should complete this code </span><br><span class="line">%               to predict the price of a 1650 sq-ft, 3 br house.</span><br><span class="line">%</span><br><span class="line"></span><br><span class="line">%% Load Data</span><br><span class="line">data = csvread(&apos;ex1data2.txt&apos;);</span><br><span class="line">X = data(:, 1:2);</span><br><span class="line">y = data(:, 3);</span><br><span class="line">m = length(y);</span><br><span class="line"></span><br><span class="line">% Add intercept term to X</span><br><span class="line">X = [ones(m, 1) X];</span><br><span class="line"></span><br><span class="line">% Calculate the parameters from the normal equation</span><br><span class="line">theta = normalEqn(X, y);</span><br><span class="line"></span><br><span class="line">% Display normal equation&apos;s result</span><br><span class="line">fprintf(&apos;Theta computed from the normal equations: \n&apos;);</span><br><span class="line">fprintf(&apos; %f \n&apos;, theta);</span><br><span class="line">fprintf(&apos;\n&apos;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">% Estimate the price of a 1650 sq-ft, 3 br house</span><br><span class="line">% ====================== YOUR CODE HERE ======================</span><br><span class="line">price = theta(1) + theta(2)*1650 + theta(3)*3; % You should change this</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">% ============================================================</span><br><span class="line"></span><br><span class="line">fprintf([&apos;Predicted price of a 1650 sq-ft, 3 br house &apos; ...</span><br><span class="line">         &apos;(using normal equations):\n $%f\n&apos;], price);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="computeCostMulti-m"><a href="#computeCostMulti-m" class="headerlink" title="computeCostMulti.m"></a>computeCostMulti.m</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">function J = computeCostMulti(X, y, theta)</span><br><span class="line">%COMPUTECOSTMULTI Compute cost for linear regression with multiple variables</span><br><span class="line">%   J = COMPUTECOSTMULTI(X, y, theta) computes the cost of using theta as the</span><br><span class="line">%   parameter for linear regression to fit the data points in X and y</span><br><span class="line"></span><br><span class="line">% Initialize some useful values</span><br><span class="line">m = length(y); % number of training examples</span><br><span class="line"></span><br><span class="line">% You need to return the following variables correctly </span><br><span class="line">J = 0;</span><br><span class="line"></span><br><span class="line">% ====================== YOUR CODE HERE ======================</span><br><span class="line">% Instructions: Compute the cost of a particular choice of theta</span><br><span class="line">%               You should set J to the cost.</span><br><span class="line"></span><br><span class="line">J = (((X*theta - y)&apos;)*(X*theta - y))/(2*m);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">% =========================================================================</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="featureNormalize-m"><a href="#featureNormalize-m" class="headerlink" title="featureNormalize.m"></a>featureNormalize.m</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">function [X_norm, mu, sigma] = featureNormalize(X)</span><br><span class="line">%FEATURENORMALIZE Normalizes the features in X </span><br><span class="line">%   FEATURENORMALIZE(X) returns a normalized version of X where</span><br><span class="line">%   the mean value of each feature is 0 and the standard deviation</span><br><span class="line">%   is 1. This is often a good preprocessing step to do when</span><br><span class="line">%   working with learning algorithms.</span><br><span class="line"></span><br><span class="line">% You need to set these values correctly</span><br><span class="line">X_norm = X;</span><br><span class="line">mu = zeros(1, size(X, 2));</span><br><span class="line">sigma = zeros(1, size(X, 2));</span><br><span class="line"></span><br><span class="line">% ====================== YOUR CODE HERE ======================</span><br><span class="line">% Instructions: First, for each feature dimension, compute the mean</span><br><span class="line">%               of the feature and subtract it from the dataset,</span><br><span class="line">%               storing the mean value in mu. Next, compute the </span><br><span class="line">%               standard deviation of each feature and divide</span><br><span class="line">%               each feature by it&apos;s standard deviation, storing</span><br><span class="line">%               the standard deviation in sigma. </span><br><span class="line">%</span><br><span class="line">%               Note that X is a matrix where each column is a </span><br><span class="line">%               feature and each row is an example. You need </span><br><span class="line">%               to perform the normalization separately for </span><br><span class="line">%               each feature. </span><br><span class="line">%</span><br><span class="line">% Hint: You might find the &apos;mean&apos; and &apos;std&apos; functions useful.</span><br><span class="line">%       </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cols = size(X, 2);</span><br><span class="line">for col = 1:cols</span><br><span class="line">    featurex = X(:, col);</span><br><span class="line"></span><br><span class="line">    mux = mean(featurex);</span><br><span class="line">    mu(col) = mux;</span><br><span class="line"></span><br><span class="line">    featurex = featurex - mux;</span><br><span class="line"></span><br><span class="line">    sigmax = std(featurex);</span><br><span class="line">    sigma(col) = sigmax;</span><br><span class="line"></span><br><span class="line">    featurex = featurex/sigmax;</span><br><span class="line"></span><br><span class="line">    X_norm(:, col) = featurex;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">% ============================================================</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h5 id="gradientDescentMulti-m"><a href="#gradientDescentMulti-m" class="headerlink" title="gradientDescentMulti.m"></a>gradientDescentMulti.m</h5><p>这里和单变量的是一样的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)</div><div class="line">%GRADIENTDESCENTMULTI Performs gradient descent to learn theta</div><div class="line">%   theta = GRADIENTDESCENTMULTI(x, y, theta, alpha, num_iters) updates theta by</div><div class="line">%   taking num_iters gradient steps with learning rate alpha</div><div class="line"></div><div class="line">% Initialize some useful values</div><div class="line">m = length(y); % number of training examples</div><div class="line">J_history = zeros(num_iters, 1);</div><div class="line"></div><div class="line">for iter = 1:num_iters</div><div class="line"></div><div class="line">    % ====================== YOUR CODE HERE ======================</div><div class="line">    % Instructions: Perform a single gradient step on the parameter vector</div><div class="line">    %               theta. </div><div class="line">    %</div><div class="line">    % Hint: While debugging, it can be useful to print out the values</div><div class="line">    %       of the cost function (computeCostMulti) and gradient here.</div><div class="line">    %</div><div class="line"></div><div class="line">    change = (alpha/m) * (X&apos; * (X * theta - y));</div><div class="line">    theta = theta - change;</div><div class="line">    % ============================================================</div><div class="line"></div><div class="line">    % Save the cost J in every iteration    </div><div class="line">    J_history(iter) = computeCostMulti(X, y, theta);</div><div class="line"></div><div class="line">end</div><div class="line"></div><div class="line">end</div><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)</span><br><span class="line">%GRADIENTDESCENTMULTI Performs gradient descent to learn theta</span><br><span class="line">%   theta = GRADIENTDESCENTMULTI(x, y, theta, alpha, num_iters) updates theta by</span><br><span class="line">%   taking num_iters gradient steps with learning rate alpha</span><br><span class="line"></span><br><span class="line">% Initialize some useful values</span><br><span class="line">m = length(y); % number of training examples</span><br><span class="line">J_history = zeros(num_iters, 1);</span><br><span class="line"></span><br><span class="line">for iter = 1:num_iters</span><br><span class="line"></span><br><span class="line">    % ====================== YOUR CODE HERE ======================</span><br><span class="line">    % Instructions: Perform a single gradient step on the parameter vector</span><br><span class="line">    %               theta. </span><br><span class="line">    %</span><br><span class="line">    % Hint: While debugging, it can be useful to print out the values</span><br><span class="line">    %       of the cost function (computeCostMulti) and gradient here.</span><br><span class="line">    %</span><br><span class="line"></span><br><span class="line">    change = (alpha/m) * (X&apos; * (X * theta - y));</span><br><span class="line">    theta = theta - change;</span><br><span class="line">    % ============================================================</span><br><span class="line"></span><br><span class="line">    % Save the cost J in every iteration    </span><br><span class="line">    J_history(iter) = computeCostMulti(X, y, theta);</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>输出：</p>
 <pre><code>Loading data ...
 First 10 examples from the dataset:
@@ -534,15 +615,24 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
  $293081.464335
 </code></pre><p>迭代图：</p>
 <p><img src="http://datahonor-1252464519.costj.myqcloud.com/201707/Figure%201_072504.png" alt=""></p>
-<p>这是单变量即多变量的线性回归，主要用了梯度下降最小化cost function来进行参数的选择，也用到了Normal Equations其可以代替梯度下降法进行参数选择。关于两者的优劣与选用问题，可参考<a href="http://www.cnblogs.com/elaron/archive/2013/05/20/3088894.html" target="_blank" rel="external">这里</a>也是根据视频总结的。此外视频中并没有对Normal Equation做太多的解释，可以参考<a href="https://zhuanlan.zhihu.com/p/22757336" target="_blank" rel="external">这里</a>。</p>
+<p>这是单变量即多变量的线性回归，主要用了梯度下降最小化cost function来进行参数的选择，也用到了Normal Equations其可以代替梯度下降法进行参数选择。关于两者的优劣与选用问题，可参考<a href="http://www.cnblogs.com/elaron/archive/2013/05/20/3088894.html" target="_blank" rel="noopener">这里</a>也是根据视频总结的。此外视频中并没有对Normal Equation做太多的解释，可以参考<a href="https://zhuanlan.zhihu.com/p/22757336" target="_blank" rel="noopener">这里</a>。</p>
 <p>下一章就是logistic regression了，有空再写。</p>
 
       
     </div>
 
-    <div>
+    
       
-        
+
+
+    
+
+    
+    
+    
+    <div>
+          
+	    
 <div class="my_post_copyright">
   <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
   
@@ -550,49 +640,67 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
   <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-  <p><span>本文标题:</span><a href="/2017/07/25/Coursera-ML-ex1-Linear-Regression/">Coursera-ML</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 不秩稚童 的个人博客">不秩稚童</a></p>
-  <p><span>作者邮箱:</span>datahonor@gmail.com</p>
-  <p><span>发布时间:</span>2017年07月25日 - 11:07</p>
-  <p><span>最后更新:</span>2017年08月14日 - 18:08</p>
+
+  <p><span>本文标题:</span>Coursera-ML</p>
+  <p><span>文章作者:</span>不秩稚童</p>
+  <p><span>发布时间:</span>2017年07月25日 - 11:47:28</p>
+  <p><span>最后更新:</span>2017年08月14日 - 18:43:54</p>
   <p><span>原始链接:</span><a href="/2017/07/25/Coursera-ML-ex1-Linear-Regression/" title="Coursera-ML">http://datahonor.com/2017/07/25/Coursera-ML-ex1-Linear-Regression/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/07/25/Coursera-ML-ex1-Linear-Regression/"  aria-label="复制成功！"></i></span>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/07/25/Coursera-ML-ex1-Linear-Regression/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
 <script> 
     var clipboard = new Clipboard('.fa-clipboard');
-	clipboard.on('success', $(function(){
-	  $(".fa-clipboard").click(function(){
-		swal({   
-		  title: "",   
-		  text: '复制成功',   
-		  html: false,
-		  timer: 500,   
-		  showConfirmButton: false
-	    });
-	  });
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
     }));  
 </script>
 
 
-      
+          
     </div>
 
-    <div>
-      
-        
+    
 
+    
       
-    </div>
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>击蒙御寇</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-    <div>
-      
-        
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="不秩稚童 微信支付">
+        <p>微信支付</p>
+      </div>
+    
 
-      
-    </div>
+    
 
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
 
     <footer class="post-footer">
       
@@ -606,7 +714,7 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
       
 
       
-        
+      
       
 
       
@@ -634,44 +742,24 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
-
-    <div class="post-spread">
-      
-        
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
-      
-    </div>
   </div>
 
-          
+
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
 
-          
-  <div class="comments" id="comments">
-
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
-
-
-
-
-
-
+  
 
 
 
@@ -688,129 +776,294 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
-               alt="不秩稚童" />
-          <p class="site-author-name" itemprop="name">不秩稚童</p>
-           
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="不秩稚童">
+            
+              <p class="site-author-name" itemprop="name">不秩稚童</p>
               <p class="site-description motion-element" itemprop="description">十年饮冰，难凉热血。</p>
+          </div>
+
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">142</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">53</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/shenxiangzhuang" title="GitHub &rarr; https://github.com/shenxiangzhuang" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:datahonor@gmail.com" title="E-Mail &rarr; mailto:datahonor@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+
+          
+            
+          
+          
+
         </div>
-        <nav class="site-state motion-element">
-        
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">142</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">18</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">53</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/shenxiangzhuang" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/shen-xiang-zhuang" target="_blank" title="知乎">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  知乎
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.cnblogs.com/buzhizhitong" target="_blank" title="博客园">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  博客园
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linear-regression-with-one-variable"><span class="nav-text">Linear regression with one variable</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ex1-m"><span class="nav-text">ex1.m</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#plotData-m"><span class="nav-text">plotData.m</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#computeCost-m"><span class="nav-text">computeCost.m</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#gradientDescent-m"><span class="nav-text">gradientDescent.m</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linear-regression-with-multiple-variables"><span class="nav-text">Linear regression with multiple variables</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ex1-multi-m"><span class="nav-text">ex1_multi.m</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#computeCostMulti-m"><span class="nav-text">computeCostMulti.m</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#featureNormalize-m"><span class="nav-text">featureNormalize.m</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#gradientDescentMulti-m"><span class="nav-text">gradientDescentMulti.m</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linear-regression-with-one-variable"><span class="nav-number">2.</span> <span class="nav-text">Linear regression with one variable</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ex1-m"><span class="nav-number">2.1.</span> <span class="nav-text">ex1.m</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#plotData-m"><span class="nav-number">2.2.</span> <span class="nav-text">plotData.m</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#computeCost-m"><span class="nav-number">2.3.</span> <span class="nav-text">computeCost.m</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#gradientDescent-m"><span class="nav-number">2.4.</span> <span class="nav-text">gradientDescent.m</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linear-regression-with-multiple-variables"><span class="nav-number">3.</span> <span class="nav-text">Linear regression with multiple variables</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ex1-multi-m"><span class="nav-number">3.1.</span> <span class="nav-text">ex1_multi.m</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#computeCostMulti-m"><span class="nav-number">3.2.</span> <span class="nav-text">computeCostMulti.m</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#featureNormalize-m"><span class="nav-number">3.3.</span> <span class="nav-text">featureNormalize.m</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#gradientDescentMulti-m"><span class="nav-number">3.4.</span> <span class="nav-text">gradientDescentMulti.m</span></a></li></ol></li></ol></div>
             
-
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
       
-
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -822,33 +1075,57 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2017 - 
-  <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">不秩稚童</span>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
 </div>
+
+
+
+
+
+
 
 
 
         
-
 <div class="busuanzi-count">
-
-  
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
   
-    <span class="site-uv"><i class="fa fa-user"></i>本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
   
 
   
-    <span class="site-pv"><i class="fa fa-eye"></i>本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
   
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
   
 </div>
+
+
+
+
+
+
 
 
 
@@ -857,19 +1134,17 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
     </footer>
 
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
+
     
+
+    
+
     
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -883,89 +1158,13 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
 
 
 
-  
 
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
 
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-
-  
-
-    <script type="text/javascript">
-      var disqus_shortname = 'http-datahonor-com';
-      var disqus_identifier = '2017/07/25/Coursera-ML-ex1-Linear-Regression/';
-
-      var disqus_title = "Coursera-ML";
-
-
-      function run_disqus_script(disqus_script) {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
-
-      run_disqus_script('count.js');
-
-      
-        var disqus_config = function () {
-            this.page.url = disqus_url;
-            this.page.identifier = disqus_identifier;
-            this.page.title = disqus_title;
-        };
-        run_disqus_script('embed.js');
-      
-
-    </script>
-  
 
 
 
@@ -977,181 +1176,518 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
 
 
   
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
   
-  <script type="text/javascript">
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'qzF75hQvs6yPkMIO7gd7LwDB-gzGzoHsz',
+    appKey: 'foULNoeGLTL8LE8C2Ysitv5I',
+    placeholder: '毕竟今天太阳那么好 :-)',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true
+  });
+</script>
+
+
+
+
+  
+
+
+  
+
+  <script>
     // Popup Window;
     var isfetched = false;
+    var isXml = true;
     // Search DB path;
     var search_path = "search.xml";
-    if (search_path.length == 0) {
+    if (search_path.length === 0) {
       search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
     }
     var path = "/" + search_path;
     // monitor main search box;
 
-    function proceedsearch() {
-      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
-      $('.popup').toggle();
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
     }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
     // search function;
     var searchFunc = function(path, search_id, content_id) {
       'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
       $.ajax({
         url: path,
-        dataType: "xml",
+        dataType: isXml ? "xml" : "json",
         async: true,
-        success: function( xmlResponse ) {
+        success: function(res) {
           // get the contents from search data
           isfetched = true;
           $('.popup').detach().appendTo('.header-inner');
-          var datas = $( "entry", xmlResponse ).map(function() {
+          var datas = isXml ? $("entry", res).map(function() {
             return {
-              title: $( "title", this ).text(),
+              title: $("title", this).text(),
               content: $("content",this).text(),
-              url: $( "url" , this).text()
+              url: $("url" , this).text()
             };
-          }).get();
-          var $input = document.getElementById(search_id);
-          var $resultContent = document.getElementById(content_id);
-          $input.addEventListener('input', function(){
-            var matchcounts = 0;
-            var str='<ul class=\"search-result-list\">';
-            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-            $resultContent.innerHTML = "";
-            if (this.value.trim().length > 1) {
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
               // perform local searching
               datas.forEach(function(data) {
                 var isMatch = false;
-                var content_index = [];
-                var data_title = data.title.trim().toLowerCase();
-                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
-                var data_url = decodeURIComponent(data.url);
-                var index_title = -1;
-                var index_content = -1;
-                var first_occur = -1;
-                // only match artiles with not empty titles and contents
-                if(data_title != '') {
-                  keywords.forEach(function(keyword, i) {
-                    index_title = data_title.indexOf(keyword);
-                    index_content = data_content.indexOf(keyword);
-                    if( index_title >= 0 || index_content >= 0 ){
-                      isMatch = true;
-                      if (i == 0) {
-                        first_occur = index_content;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
                       }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
                     }
 
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
                   });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
                 }
+
                 // show search results
+
                 if (isMatch) {
-                  matchcounts += 1;
-                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
-                  var content = data.content.trim().replace(/<[^>]+>/g,"");
-                  if (first_occur >= 0) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
                     // cut out 100 characters
-                    var start = first_occur - 20;
-                    var end = first_occur + 80;
+                    var start = position - 20;
+                    var end = position + 80;
                     if(start < 0){
                       start = 0;
                     }
-                    if(start == 0){
-                      end = 50;
+                    if (end < position + word.length) {
+                      end = position + word.length;
                     }
                     if(end > content.length){
                       end = content.length;
                     }
-                    var match_content = content.substring(start, end);
-                    // highlight all keywords
-                    keywords.forEach(function(keyword){
-                      var regS = new RegExp(keyword, "gi");
-                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
-                    });
-
-                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
                   }
-                  str += "</li>";
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
                 }
-              })};
-            str += "</ul>";
-            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
-            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
-            $resultContent.innerHTML = str;
-          });
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
           proceedsearch();
         }
-      });}
+      });
+    }
 
     // handle and trigger popup window;
     $('.popup-trigger').click(function(e) {
       e.stopPropagation();
-      if (isfetched == false) {
+      if (isfetched === false) {
         searchFunc(path, 'local-search-input', 'local-search-result');
       } else {
         proceedsearch();
       };
     });
 
-    $('.popup-btn-close').click(function(e){
-      $('.popup').hide();
-      $(".popoverlay").remove();
-      $('body').css('overflow', '');
-    });
+    $('.popup-btn-close').click(onPopupClose);
     $('.popup').click(function(e){
       e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
     });
   </script>
 
 
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
   
 
 
   
 
   
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
     }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
     }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
 
 
   
 
-
-  
-  <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/love.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":125,"height":125,"position":"left","hOffset":30,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -1165,10 +1701,8 @@ Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
   });
 </script>
 
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
-
-</body>
+<!-- hexo-inject:end --></body>
 </html>

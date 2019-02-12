@@ -1,25 +1,4 @@
-<!doctype html>
-
-
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-Hans">
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
+<!DOCTYPE html>
 
 
 
@@ -33,47 +12,14 @@
 
 
   
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Python,Algorithm,Clustering,统计学习方法," />
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
 
 
 
@@ -82,47 +28,54 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
 
 
 
 
-<meta name="description" content="之前学SVM做的笔记，这里整理下。
-Theory这里先空下，等之后整理补充上来。
-Code代码大部分来自Github，当中有自己写的一些注释。123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Python实现支持向量机(SVM)">
-<meta property="og:url" content="http://datahonor.com/2017/03/02/Python实现支持向量机-SVM/index.html">
-<meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="之前学SVM做的笔记，这里整理下。
-Theory这里先空下，等之后整理补充上来。
-Code代码大部分来自Github，当中有自己写的一些注释。123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/f2.png">
-<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-03-02%2008-40-03.png">
-<meta property="og:updated_time" content="2017-03-02T00:40:43.920Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python实现支持向量机(SVM)">
-<meta name="twitter:description" content="之前学SVM做的笔记，这里整理下。
-Theory这里先空下，等之后整理补充上来。
-Code代码大部分来自Github，当中有自己写的一些注释。123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869">
-<meta name="twitter:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/f2.png">
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0">
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
-    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '不秩稚童'
-    },
+    scheme: 'Gemini',
+    version: '7.0.0',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -134,34 +87,51 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
 </script>
 
 
-
-  <link rel="canonical" href="http://datahonor.com/2017/03/02/Python实现支持向量机-SVM/"/>
-
-
-
-
-
-  <title> Python实现支持向量机(SVM) | DATA HONOR </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
 
 
 
 
-<!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-92663335-1', 'auto');
-  ga('send', 'pageview');
+  <meta name="description" content="之前学SVM做的笔记，这里整理下。 Theory这里先空下，等之后整理补充上来。 Code代码大部分来自Github，当中有自己写的一些注释。123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869">
+<meta name="keywords" content="Python,Algorithm,Clustering,统计学习方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python实现支持向量机(SVM)">
+<meta property="og:url" content="http://datahonor.com/2017/03/02/Python实现支持向量机-SVM/index.html">
+<meta property="og:site_name" content="DATA HONOR">
+<meta property="og:description" content="之前学SVM做的笔记，这里整理下。 Theory这里先空下，等之后整理补充上来。 Code代码大部分来自Github，当中有自己写的一些注释。123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/f2.png">
+<meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-03-02%2008-40-03.png">
+<meta property="og:updated_time" content="2017-03-02T00:40:43.920Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python实现支持向量机(SVM)">
+<meta name="twitter:description" content="之前学SVM做的笔记，这里整理下。 Theory这里先空下，等之后整理补充上来。 Code代码大部分来自Github，当中有自己写的一些注释。123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869">
+<meta name="twitter:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/f2.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://datahonor.com/2017/03/02/Python实现支持向量机-SVM/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
 </script>
 
+  <title>Python实现支持向量机(SVM) | DATA HONOR</title>
+  
 
-  <script type="text/javascript">
+
+
+
+
+
+  <script>
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -177,36 +147,65 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
 
 
 
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
 
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">DATA HONOR</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
-        <p class="site-subtitle">Never say never.</p>
+        <h1 class="site-subtitle" itemprop="description">Never say never.</h1>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -214,82 +213,117 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
 
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
   
 
   
+
+  
     <div class="site-search">
       
-  <div class="popup local-search-popup">
+  <div class="popup search-popup local-search-popup">
   <div class="local-search-header clearfix">
     <span class="search-icon">
       <i class="fa fa-search"></i>
@@ -298,7 +332,7 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -312,12 +346,23 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -330,39 +375,44 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/03/02/Python实现支持向量机-SVM/">
+  
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="不秩稚童">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400">
-  </span>
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://datahonor.com/2017/03/02/Python实现支持向量机-SVM/">
 
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="DATA HONOR">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="DATA HONOR" src="">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不秩稚童">
+      <meta itemprop="description" content="十年饮冰，难凉热血。">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DATA HONOR">
+    </span>
 
     
       <header class="post-header">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Python实现支持向量机(SVM)
+          <h2 class="post-title" itemprop="name headline">Python实现支持向量机(SVM)
+
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -370,18 +420,23 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-02T00:10:13+08:00">
-                2017-03-02
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-03-02 00:10:13 / 修改时间：08:40:43" itemprop="dateCreated datePublished" datetime="2017-03-02T00:10:13+08:00">2017-03-02</time>
             
 
             
+              
 
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -392,11 +447,7 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
 
                 
                 
@@ -406,13 +457,16 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
 
           
             
+            
+              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
+            
                 <a href="/2017/03/02/Python实现支持向量机-SVM/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/02/Python实现支持向量机-SVM/" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/03/02/Python实现支持向量机-SVM/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -420,11 +474,24 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
 
           
           
+            <span id="/2017/03/02/Python实现支持向量机-SVM/" class="leancloud_visitors" data-flag-title="Python实现支持向量机(SVM)">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
 
           
             <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>本文总阅读量
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -436,7 +503,9 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -445,35 +514,62 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
       
         <p>之前学SVM做的笔记，这里整理下。</p>
 <h5 id="Theory"><a href="#Theory" class="headerlink" title="Theory"></a>Theory</h5><p>这里先空下，等之后整理补充上来。</p>
-<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><p>代码大部分来自<a href="https://gist.github.com/mblondel/586753" target="_blank" rel="external">Github</a>，当中有自己写的一些注释。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> linalg</div><div class="line"><span class="keyword">import</span> cvxopt</div><div class="line"><span class="keyword">import</span> cvxopt.solvers</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">linear_kernel</span><span class="params">(x1, x2)</span>:</span></div><div class="line">    <span class="keyword">return</span> np.dot(x1, x2)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">polynomial_kernel</span><span class="params">(x, y, p=<span class="number">3</span>)</span>:</span></div><div class="line">    <span class="keyword">return</span> (<span class="number">1</span> + np.dot(x, y)) ** p</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">gaussian_kernel</span><span class="params">(x, y, sigma=<span class="number">5.0</span>)</span>:</span></div><div class="line">    <span class="keyword">return</span> np.exp(-linalg.norm(x-y)**<span class="number">2</span> / (<span class="number">2</span> * (sigma ** <span class="number">2</span>)))</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SVM</span><span class="params">(object)</span>:</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, kernel=linear_kernel, C=None)</span>:</span></div><div class="line">        self.kernel = kernel</div><div class="line">        self.C = C</div><div class="line">        <span class="keyword">if</span> self.C <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>: self.C = float(self.C)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fit</span><span class="params">(self, X, y)</span>:</span></div><div class="line">        n_samples, n_features = X.shape</div><div class="line"></div><div class="line">        <span class="comment"># Gram matrix</span></div><div class="line">        K = np.zeros((n_samples, n_samples))</div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n_samples):</div><div class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(n_samples):</div><div class="line">                K[i,j] = self.kernel(X[i], X[j])</div><div class="line"></div><div class="line">        P = cvxopt.matrix(np.outer(y,y) * K)</div><div class="line">        q = cvxopt.matrix(np.ones(n_samples) * <span class="number">-1</span>)</div><div class="line">        A = cvxopt.matrix(y, (<span class="number">1</span>,n_samples))</div><div class="line">        b = cvxopt.matrix(<span class="number">0.0</span>)</div><div class="line"></div><div class="line">        <span class="keyword">if</span> self.C <span class="keyword">is</span> <span class="keyword">None</span>:</div><div class="line">            G = cvxopt.matrix(np.diag(np.ones(n_samples) * <span class="number">-1</span>))</div><div class="line">            h = cvxopt.matrix(np.zeros(n_samples))</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            tmp1 = np.diag(np.ones(n_samples) * <span class="number">-1</span>)</div><div class="line">            tmp2 = np.identity(n_samples)</div><div class="line">            G = cvxopt.matrix(np.vstack((tmp1, tmp2)))</div><div class="line">            tmp1 = np.zeros(n_samples)</div><div class="line">            tmp2 = np.ones(n_samples) * self.C</div><div class="line">            h = cvxopt.matrix(np.hstack((tmp1, tmp2)))</div><div class="line"></div><div class="line">        <span class="comment"># solve QP problem</span></div><div class="line">        solution = cvxopt.solvers.qp(P, q, G, h, A, b)</div><div class="line"></div><div class="line">        <span class="comment"># Lagrange multipliers</span></div><div class="line">        a = np.ravel(solution[<span class="string">'x'</span>])</div><div class="line"></div><div class="line">        <span class="comment"># Support vectors have non zero lagrange multipliers</span></div><div class="line">        <span class="string">'''</span></div><div class="line">        这里a&gt;1e-5就将其视为非零</div><div class="line">        '''</div><div class="line">        sv = a &gt; <span class="number">1e-5</span></div><div class="line">        ind = np.arange(len(a))[sv]</div><div class="line">        self.a = a[sv]</div><div class="line">        self.sv = X[sv]</div><div class="line">        self.sv_y = y[sv]</div><div class="line">        print(<span class="string">"%d support vectors out of %d points"</span> % (len(self.a), n_samples))</div><div class="line"></div><div class="line">        <span class="comment"># Intercept</span></div><div class="line">        <span class="string">'''</span></div><div class="line">        这里相当于对所有的支持向量求得的b取平均值</div><div class="line">        '''</div><div class="line">        self.b = <span class="number">0</span></div><div class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> range(len(self.a)):</div><div class="line">            self.b += self.sv_y[n]</div><div class="line">            self.b -= np.sum(self.a * self.sv_y * K[ind[n],sv])</div><div class="line">        self.b /= len(self.a)</div><div class="line"></div><div class="line">        <span class="comment"># Weight vector</span></div><div class="line">        <span class="keyword">if</span> self.kernel == linear_kernel:</div><div class="line">            self.w = np.zeros(n_features)</div><div class="line">            <span class="keyword">for</span> n <span class="keyword">in</span> range(len(self.a)):</div><div class="line">                <span class="comment"># linear_kernel相当于在原空间，故计算w不用映射到feature space</span></div><div class="line">                self.w += self.a[n] * self.sv_y[n] * self.sv[n]</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            self.w = <span class="keyword">None</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">project</span><span class="params">(self, X)</span>:</span></div><div class="line">        <span class="comment"># w有值，即kernel function 是 linear_kernel，直接计算即可</span></div><div class="line">        <span class="keyword">if</span> self.w <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</div><div class="line">            <span class="keyword">return</span> np.dot(X, self.w) + self.b</div><div class="line">        <span class="comment"># w is None --&gt; 不是linear_kernel,w要重新计算</span></div><div class="line">        <span class="comment"># 这里没有去计算新的w（非线性情况不用计算w）,直接用kernel matrix计算预测结果</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            y_predict = np.zeros(len(X))</div><div class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(X)):</div><div class="line">                s = <span class="number">0</span></div><div class="line">                <span class="keyword">for</span> a, sv_y, sv <span class="keyword">in</span> zip(self.a, self.sv_y, self.sv):</div><div class="line">                    s += a * sv_y * self.kernel(X[i], sv)</div><div class="line">                y_predict[i] = s</div><div class="line">            <span class="keyword">return</span> y_predict + self.b</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">predict</span><span class="params">(self, X)</span>:</span></div><div class="line">        <span class="keyword">return</span> np.sign(self.project(X))</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    <span class="keyword">import</span> pylab <span class="keyword">as</span> pl</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">gen_lin_separable_data</span><span class="params">()</span>:</span></div><div class="line">        <span class="comment"># generate training data in the 2-d case</span></div><div class="line">        mean1 = np.array([<span class="number">0</span>, <span class="number">2</span>])</div><div class="line">        mean2 = np.array([<span class="number">2</span>, <span class="number">0</span>])</div><div class="line">        cov = np.array([[<span class="number">0.8</span>, <span class="number">0.6</span>], [<span class="number">0.6</span>, <span class="number">0.8</span>]])</div><div class="line">        X1 = np.random.multivariate_normal(mean1, cov, <span class="number">100</span>)</div><div class="line">        y1 = np.ones(len(X1))</div><div class="line">        X2 = np.random.multivariate_normal(mean2, cov, <span class="number">100</span>)</div><div class="line">        y2 = np.ones(len(X2)) * <span class="number">-1</span></div><div class="line">        <span class="keyword">return</span> X1, y1, X2, y2</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">gen_non_lin_separable_data</span><span class="params">()</span>:</span></div><div class="line">        mean1 = [<span class="number">-1</span>, <span class="number">2</span>]</div><div class="line">        mean2 = [<span class="number">1</span>, <span class="number">-1</span>]</div><div class="line">        mean3 = [<span class="number">4</span>, <span class="number">-4</span>]</div><div class="line">        mean4 = [<span class="number">-4</span>, <span class="number">4</span>]</div><div class="line">        cov = [[<span class="number">1.0</span>,<span class="number">0.8</span>], [<span class="number">0.8</span>, <span class="number">1.0</span>]]</div><div class="line">        X1 = np.random.multivariate_normal(mean1, cov, <span class="number">50</span>)</div><div class="line">        X1 = np.vstack((X1, np.random.multivariate_normal(mean3, cov, <span class="number">50</span>)))</div><div class="line">        y1 = np.ones(len(X1))</div><div class="line">        X2 = np.random.multivariate_normal(mean2, cov, <span class="number">50</span>)</div><div class="line">        X2 = np.vstack((X2, np.random.multivariate_normal(mean4, cov, <span class="number">50</span>)))</div><div class="line">        y2 = np.ones(len(X2)) * <span class="number">-1</span></div><div class="line">        <span class="keyword">return</span> X1, y1, X2, y2</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">gen_lin_separable_overlap_data</span><span class="params">()</span>:</span></div><div class="line">        <span class="comment"># generate training data in the 2-d case</span></div><div class="line">        mean1 = np.array([<span class="number">0</span>, <span class="number">2</span>])</div><div class="line">        mean2 = np.array([<span class="number">2</span>, <span class="number">0</span>])</div><div class="line">        cov = np.array([[<span class="number">1.5</span>, <span class="number">1.0</span>], [<span class="number">1.0</span>, <span class="number">1.5</span>]])</div><div class="line">        X1 = np.random.multivariate_normal(mean1, cov, <span class="number">100</span>)</div><div class="line">        y1 = np.ones(len(X1))</div><div class="line">        X2 = np.random.multivariate_normal(mean2, cov, <span class="number">100</span>)</div><div class="line">        y2 = np.ones(len(X2)) * <span class="number">-1</span></div><div class="line">        <span class="keyword">return</span> X1, y1, X2, y2</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">split_train</span><span class="params">(X1, y1, X2, y2)</span>:</span></div><div class="line">        X1_train = X1[:<span class="number">90</span>]</div><div class="line">        y1_train = y1[:<span class="number">90</span>]</div><div class="line">        X2_train = X2[:<span class="number">90</span>]</div><div class="line">        y2_train = y2[:<span class="number">90</span>]</div><div class="line">        X_train = np.vstack((X1_train, X2_train))</div><div class="line">        y_train = np.hstack((y1_train, y2_train))</div><div class="line">        <span class="keyword">return</span> X_train, y_train</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">split_test</span><span class="params">(X1, y1, X2, y2)</span>:</span></div><div class="line">        X1_test = X1[<span class="number">90</span>:]</div><div class="line">        y1_test = y1[<span class="number">90</span>:]</div><div class="line">        X2_test = X2[<span class="number">90</span>:]</div><div class="line">        y2_test = y2[<span class="number">90</span>:]</div><div class="line">        X_test = np.vstack((X1_test, X2_test))</div><div class="line">        y_test = np.hstack((y1_test, y2_test))</div><div class="line">        <span class="keyword">return</span> X_test, y_test</div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment"># 仅仅在Linears使用此函数作图，即w存在时</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">plot_margin</span><span class="params">(X1_train, X2_train, clf)</span>:</span></div><div class="line">        <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x, w, b, c=<span class="number">0</span>)</span>:</span></div><div class="line">            <span class="comment"># given x, return y such that [x,y] in on the line</span></div><div class="line">            <span class="comment"># w.x + b = c</span></div><div class="line">            <span class="keyword">return</span> (-w[<span class="number">0</span>] * x - b + c) / w[<span class="number">1</span>]</div><div class="line"></div><div class="line">        pl.plot(X1_train[:,<span class="number">0</span>], X1_train[:,<span class="number">1</span>], <span class="string">"ro"</span>)</div><div class="line">        pl.plot(X2_train[:,<span class="number">0</span>], X2_train[:,<span class="number">1</span>], <span class="string">"bo"</span>)</div><div class="line">        pl.scatter(clf.sv[:,<span class="number">0</span>], clf.sv[:,<span class="number">1</span>], s=<span class="number">100</span>, c=<span class="string">"g"</span>)</div><div class="line"></div><div class="line">        <span class="comment"># w.x + b = 0</span></div><div class="line">        a0 = <span class="number">-4</span>; a1 = f(a0, clf.w, clf.b)</div><div class="line">        b0 = <span class="number">4</span>; b1 = f(b0, clf.w, clf.b)</div><div class="line">        pl.plot([a0,b0], [a1,b1], <span class="string">"k"</span>)</div><div class="line"></div><div class="line">        <span class="comment"># w.x + b = 1</span></div><div class="line">        a0 = <span class="number">-4</span>; a1 = f(a0, clf.w, clf.b, <span class="number">1</span>)</div><div class="line">        b0 = <span class="number">4</span>; b1 = f(b0, clf.w, clf.b, <span class="number">1</span>)</div><div class="line">        pl.plot([a0,b0], [a1,b1], <span class="string">"k--"</span>)</div><div class="line"></div><div class="line">        <span class="comment"># w.x + b = -1</span></div><div class="line">        a0 = <span class="number">-4</span>; a1 = f(a0, clf.w, clf.b, <span class="number">-1</span>)</div><div class="line">        b0 = <span class="number">4</span>; b1 = f(b0, clf.w, clf.b, <span class="number">-1</span>)</div><div class="line">        pl.plot([a0,b0], [a1,b1], <span class="string">"k--"</span>)</div><div class="line"></div><div class="line">        pl.axis(<span class="string">"tight"</span>)</div><div class="line">        pl.show()</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">plot_contour</span><span class="params">(X1_train, X2_train, clf)</span>:</span></div><div class="line">        <span class="comment"># 作training sample数据点的图</span></div><div class="line">        pl.plot(X1_train[:,<span class="number">0</span>], X1_train[:,<span class="number">1</span>], <span class="string">"ro"</span>)</div><div class="line">        pl.plot(X2_train[:,<span class="number">0</span>], X2_train[:,<span class="number">1</span>], <span class="string">"bo"</span>)</div><div class="line">        <span class="comment"># 做support vectors 的图</span></div><div class="line">        pl.scatter(clf.sv[:,<span class="number">0</span>], clf.sv[:,<span class="number">1</span>], s=<span class="number">100</span>, c=<span class="string">"g"</span>)</div><div class="line"></div><div class="line">        X1, X2 = np.meshgrid(np.linspace(<span class="number">-6</span>,<span class="number">6</span>,<span class="number">50</span>), np.linspace(<span class="number">-6</span>,<span class="number">6</span>,<span class="number">50</span>))</div><div class="line">        X = np.array([[x1, x2] <span class="keyword">for</span> x1, x2 <span class="keyword">in</span> zip(np.ravel(X1), np.ravel(X2))])</div><div class="line">        Z = clf.project(X).reshape(X1.shape)</div><div class="line">        <span class="comment"># pl.contour做等值线图</span></div><div class="line">        pl.contour(X1, X2, Z, [<span class="number">0.0</span>], colors=<span class="string">'k'</span>, linewidths=<span class="number">1</span>, origin=<span class="string">'lower'</span>)</div><div class="line">        pl.contour(X1, X2, Z + <span class="number">1</span>, [<span class="number">0.0</span>], colors=<span class="string">'grey'</span>, linewidths=<span class="number">1</span>, origin=<span class="string">'lower'</span>)</div><div class="line">        pl.contour(X1, X2, Z - <span class="number">1</span>, [<span class="number">0.0</span>], colors=<span class="string">'grey'</span>, linewidths=<span class="number">1</span>, origin=<span class="string">'lower'</span>)</div><div class="line"></div><div class="line">        pl.axis(<span class="string">"tight"</span>)</div><div class="line">        pl.show()</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_linear</span><span class="params">()</span>:</span></div><div class="line">        X1, y1, X2, y2 = gen_lin_separable_data()</div><div class="line">        X_train, y_train = split_train(X1, y1, X2, y2)</div><div class="line">        X_test, y_test = split_test(X1, y1, X2, y2)</div><div class="line"></div><div class="line">        clf = SVM()</div><div class="line">        clf.fit(X_train, y_train)</div><div class="line"></div><div class="line">        y_predict = clf.predict(X_test)</div><div class="line">        correct = np.sum(y_predict == y_test)</div><div class="line">        print(<span class="string">"%d out of %d predictions correct"</span> % (correct, len(y_predict)))</div><div class="line"></div><div class="line">        plot_margin(X_train[y_train==<span class="number">1</span>], X_train[y_train==<span class="number">-1</span>], clf)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_non_linear</span><span class="params">()</span>:</span></div><div class="line">        X1, y1, X2, y2 = gen_non_lin_separable_data()</div><div class="line">        X_train, y_train = split_train(X1, y1, X2, y2)</div><div class="line">        X_test, y_test = split_test(X1, y1, X2, y2)</div><div class="line"></div><div class="line">        clf = SVM(gaussian_kernel)</div><div class="line">        clf.fit(X_train, y_train)</div><div class="line"></div><div class="line">        y_predict = clf.predict(X_test)</div><div class="line">        correct = np.sum(y_predict == y_test)</div><div class="line">        print(<span class="string">"%d out of %d predictions correct"</span> % (correct, len(y_predict)))</div><div class="line"></div><div class="line">        plot_contour(X_train[y_train==<span class="number">1</span>], X_train[y_train==<span class="number">-1</span>], clf)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_soft</span><span class="params">()</span>:</span></div><div class="line">        X1, y1, X2, y2 = gen_lin_separable_overlap_data()</div><div class="line">        X_train, y_train = split_train(X1, y1, X2, y2)</div><div class="line">        X_test, y_test = split_test(X1, y1, X2, y2)</div><div class="line"></div><div class="line">        clf = SVM(C=<span class="number">0.1</span>)</div><div class="line">        clf.fit(X_train, y_train)</div><div class="line"></div><div class="line">        y_predict = clf.predict(X_test)</div><div class="line">        correct = np.sum(y_predict == y_test)</div><div class="line">        print(<span class="string">"%d out of %d predictions correct"</span> % (correct, len(y_predict)))</div><div class="line"></div><div class="line">        plot_contour(X_train[y_train==<span class="number">1</span>], X_train[y_train==<span class="number">-1</span>], clf)</div><div class="line"></div><div class="line"></div><div class="line">test_soft()</div></pre></td></tr></table></figure></p>
+<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><p>代码大部分来自<a href="https://gist.github.com/mblondel/586753" target="_blank" rel="noopener">Github</a>，当中有自己写的一些注释。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> linalg</span><br><span class="line"><span class="keyword">import</span> cvxopt</span><br><span class="line"><span class="keyword">import</span> cvxopt.solvers</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">linear_kernel</span><span class="params">(x1, x2)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> np.dot(x1, x2)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">polynomial_kernel</span><span class="params">(x, y, p=<span class="number">3</span>)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> (<span class="number">1</span> + np.dot(x, y)) ** p</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gaussian_kernel</span><span class="params">(x, y, sigma=<span class="number">5.0</span>)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> np.exp(-linalg.norm(x-y)**<span class="number">2</span> / (<span class="number">2</span> * (sigma ** <span class="number">2</span>)))</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SVM</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, kernel=linear_kernel, C=None)</span>:</span></span><br><span class="line">        self.kernel = kernel</span><br><span class="line">        self.C = C</span><br><span class="line">        <span class="keyword">if</span> self.C <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>: self.C = float(self.C)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fit</span><span class="params">(self, X, y)</span>:</span></span><br><span class="line">        n_samples, n_features = X.shape</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Gram matrix</span></span><br><span class="line">        K = np.zeros((n_samples, n_samples))</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(n_samples):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(n_samples):</span><br><span class="line">                K[i,j] = self.kernel(X[i], X[j])</span><br><span class="line"></span><br><span class="line">        P = cvxopt.matrix(np.outer(y,y) * K)</span><br><span class="line">        q = cvxopt.matrix(np.ones(n_samples) * <span class="number">-1</span>)</span><br><span class="line">        A = cvxopt.matrix(y, (<span class="number">1</span>,n_samples))</span><br><span class="line">        b = cvxopt.matrix(<span class="number">0.0</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> self.C <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">            G = cvxopt.matrix(np.diag(np.ones(n_samples) * <span class="number">-1</span>))</span><br><span class="line">            h = cvxopt.matrix(np.zeros(n_samples))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            tmp1 = np.diag(np.ones(n_samples) * <span class="number">-1</span>)</span><br><span class="line">            tmp2 = np.identity(n_samples)</span><br><span class="line">            G = cvxopt.matrix(np.vstack((tmp1, tmp2)))</span><br><span class="line">            tmp1 = np.zeros(n_samples)</span><br><span class="line">            tmp2 = np.ones(n_samples) * self.C</span><br><span class="line">            h = cvxopt.matrix(np.hstack((tmp1, tmp2)))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># solve QP problem</span></span><br><span class="line">        solution = cvxopt.solvers.qp(P, q, G, h, A, b)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Lagrange multipliers</span></span><br><span class="line">        a = np.ravel(solution[<span class="string">'x'</span>])</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Support vectors have non zero lagrange multipliers</span></span><br><span class="line">        <span class="string">'''</span></span><br><span class="line"><span class="string">        这里a&gt;1e-5就将其视为非零</span></span><br><span class="line"><span class="string">        '''</span></span><br><span class="line">        sv = a &gt; <span class="number">1e-5</span></span><br><span class="line">        ind = np.arange(len(a))[sv]</span><br><span class="line">        self.a = a[sv]</span><br><span class="line">        self.sv = X[sv]</span><br><span class="line">        self.sv_y = y[sv]</span><br><span class="line">        print(<span class="string">"%d support vectors out of %d points"</span> % (len(self.a), n_samples))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Intercept</span></span><br><span class="line">        <span class="string">'''</span></span><br><span class="line"><span class="string">        这里相当于对所有的支持向量求得的b取平均值</span></span><br><span class="line"><span class="string">        '''</span></span><br><span class="line">        self.b = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> range(len(self.a)):</span><br><span class="line">            self.b += self.sv_y[n]</span><br><span class="line">            self.b -= np.sum(self.a * self.sv_y * K[ind[n],sv])</span><br><span class="line">        self.b /= len(self.a)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Weight vector</span></span><br><span class="line">        <span class="keyword">if</span> self.kernel == linear_kernel:</span><br><span class="line">            self.w = np.zeros(n_features)</span><br><span class="line">            <span class="keyword">for</span> n <span class="keyword">in</span> range(len(self.a)):</span><br><span class="line">                <span class="comment"># linear_kernel相当于在原空间，故计算w不用映射到feature space</span></span><br><span class="line">                self.w += self.a[n] * self.sv_y[n] * self.sv[n]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.w = <span class="keyword">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">project</span><span class="params">(self, X)</span>:</span></span><br><span class="line">        <span class="comment"># w有值，即kernel function 是 linear_kernel，直接计算即可</span></span><br><span class="line">        <span class="keyword">if</span> self.w <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">return</span> np.dot(X, self.w) + self.b</span><br><span class="line">        <span class="comment"># w is None --&gt; 不是linear_kernel,w要重新计算</span></span><br><span class="line">        <span class="comment"># 这里没有去计算新的w（非线性情况不用计算w）,直接用kernel matrix计算预测结果</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            y_predict = np.zeros(len(X))</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(X)):</span><br><span class="line">                s = <span class="number">0</span></span><br><span class="line">                <span class="keyword">for</span> a, sv_y, sv <span class="keyword">in</span> zip(self.a, self.sv_y, self.sv):</span><br><span class="line">                    s += a * sv_y * self.kernel(X[i], sv)</span><br><span class="line">                y_predict[i] = s</span><br><span class="line">            <span class="keyword">return</span> y_predict + self.b</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">predict</span><span class="params">(self, X)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> np.sign(self.project(X))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="keyword">import</span> pylab <span class="keyword">as</span> pl</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">gen_lin_separable_data</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="comment"># generate training data in the 2-d case</span></span><br><span class="line">        mean1 = np.array([<span class="number">0</span>, <span class="number">2</span>])</span><br><span class="line">        mean2 = np.array([<span class="number">2</span>, <span class="number">0</span>])</span><br><span class="line">        cov = np.array([[<span class="number">0.8</span>, <span class="number">0.6</span>], [<span class="number">0.6</span>, <span class="number">0.8</span>]])</span><br><span class="line">        X1 = np.random.multivariate_normal(mean1, cov, <span class="number">100</span>)</span><br><span class="line">        y1 = np.ones(len(X1))</span><br><span class="line">        X2 = np.random.multivariate_normal(mean2, cov, <span class="number">100</span>)</span><br><span class="line">        y2 = np.ones(len(X2)) * <span class="number">-1</span></span><br><span class="line">        <span class="keyword">return</span> X1, y1, X2, y2</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">gen_non_lin_separable_data</span><span class="params">()</span>:</span></span><br><span class="line">        mean1 = [<span class="number">-1</span>, <span class="number">2</span>]</span><br><span class="line">        mean2 = [<span class="number">1</span>, <span class="number">-1</span>]</span><br><span class="line">        mean3 = [<span class="number">4</span>, <span class="number">-4</span>]</span><br><span class="line">        mean4 = [<span class="number">-4</span>, <span class="number">4</span>]</span><br><span class="line">        cov = [[<span class="number">1.0</span>,<span class="number">0.8</span>], [<span class="number">0.8</span>, <span class="number">1.0</span>]]</span><br><span class="line">        X1 = np.random.multivariate_normal(mean1, cov, <span class="number">50</span>)</span><br><span class="line">        X1 = np.vstack((X1, np.random.multivariate_normal(mean3, cov, <span class="number">50</span>)))</span><br><span class="line">        y1 = np.ones(len(X1))</span><br><span class="line">        X2 = np.random.multivariate_normal(mean2, cov, <span class="number">50</span>)</span><br><span class="line">        X2 = np.vstack((X2, np.random.multivariate_normal(mean4, cov, <span class="number">50</span>)))</span><br><span class="line">        y2 = np.ones(len(X2)) * <span class="number">-1</span></span><br><span class="line">        <span class="keyword">return</span> X1, y1, X2, y2</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">gen_lin_separable_overlap_data</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="comment"># generate training data in the 2-d case</span></span><br><span class="line">        mean1 = np.array([<span class="number">0</span>, <span class="number">2</span>])</span><br><span class="line">        mean2 = np.array([<span class="number">2</span>, <span class="number">0</span>])</span><br><span class="line">        cov = np.array([[<span class="number">1.5</span>, <span class="number">1.0</span>], [<span class="number">1.0</span>, <span class="number">1.5</span>]])</span><br><span class="line">        X1 = np.random.multivariate_normal(mean1, cov, <span class="number">100</span>)</span><br><span class="line">        y1 = np.ones(len(X1))</span><br><span class="line">        X2 = np.random.multivariate_normal(mean2, cov, <span class="number">100</span>)</span><br><span class="line">        y2 = np.ones(len(X2)) * <span class="number">-1</span></span><br><span class="line">        <span class="keyword">return</span> X1, y1, X2, y2</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">split_train</span><span class="params">(X1, y1, X2, y2)</span>:</span></span><br><span class="line">        X1_train = X1[:<span class="number">90</span>]</span><br><span class="line">        y1_train = y1[:<span class="number">90</span>]</span><br><span class="line">        X2_train = X2[:<span class="number">90</span>]</span><br><span class="line">        y2_train = y2[:<span class="number">90</span>]</span><br><span class="line">        X_train = np.vstack((X1_train, X2_train))</span><br><span class="line">        y_train = np.hstack((y1_train, y2_train))</span><br><span class="line">        <span class="keyword">return</span> X_train, y_train</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">split_test</span><span class="params">(X1, y1, X2, y2)</span>:</span></span><br><span class="line">        X1_test = X1[<span class="number">90</span>:]</span><br><span class="line">        y1_test = y1[<span class="number">90</span>:]</span><br><span class="line">        X2_test = X2[<span class="number">90</span>:]</span><br><span class="line">        y2_test = y2[<span class="number">90</span>:]</span><br><span class="line">        X_test = np.vstack((X1_test, X2_test))</span><br><span class="line">        y_test = np.hstack((y1_test, y2_test))</span><br><span class="line">        <span class="keyword">return</span> X_test, y_test</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 仅仅在Linears使用此函数作图，即w存在时</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">plot_margin</span><span class="params">(X1_train, X2_train, clf)</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x, w, b, c=<span class="number">0</span>)</span>:</span></span><br><span class="line">            <span class="comment"># given x, return y such that [x,y] in on the line</span></span><br><span class="line">            <span class="comment"># w.x + b = c</span></span><br><span class="line">            <span class="keyword">return</span> (-w[<span class="number">0</span>] * x - b + c) / w[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">        pl.plot(X1_train[:,<span class="number">0</span>], X1_train[:,<span class="number">1</span>], <span class="string">"ro"</span>)</span><br><span class="line">        pl.plot(X2_train[:,<span class="number">0</span>], X2_train[:,<span class="number">1</span>], <span class="string">"bo"</span>)</span><br><span class="line">        pl.scatter(clf.sv[:,<span class="number">0</span>], clf.sv[:,<span class="number">1</span>], s=<span class="number">100</span>, c=<span class="string">"g"</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># w.x + b = 0</span></span><br><span class="line">        a0 = <span class="number">-4</span>; a1 = f(a0, clf.w, clf.b)</span><br><span class="line">        b0 = <span class="number">4</span>; b1 = f(b0, clf.w, clf.b)</span><br><span class="line">        pl.plot([a0,b0], [a1,b1], <span class="string">"k"</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># w.x + b = 1</span></span><br><span class="line">        a0 = <span class="number">-4</span>; a1 = f(a0, clf.w, clf.b, <span class="number">1</span>)</span><br><span class="line">        b0 = <span class="number">4</span>; b1 = f(b0, clf.w, clf.b, <span class="number">1</span>)</span><br><span class="line">        pl.plot([a0,b0], [a1,b1], <span class="string">"k--"</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># w.x + b = -1</span></span><br><span class="line">        a0 = <span class="number">-4</span>; a1 = f(a0, clf.w, clf.b, <span class="number">-1</span>)</span><br><span class="line">        b0 = <span class="number">4</span>; b1 = f(b0, clf.w, clf.b, <span class="number">-1</span>)</span><br><span class="line">        pl.plot([a0,b0], [a1,b1], <span class="string">"k--"</span>)</span><br><span class="line"></span><br><span class="line">        pl.axis(<span class="string">"tight"</span>)</span><br><span class="line">        pl.show()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">plot_contour</span><span class="params">(X1_train, X2_train, clf)</span>:</span></span><br><span class="line">        <span class="comment"># 作training sample数据点的图</span></span><br><span class="line">        pl.plot(X1_train[:,<span class="number">0</span>], X1_train[:,<span class="number">1</span>], <span class="string">"ro"</span>)</span><br><span class="line">        pl.plot(X2_train[:,<span class="number">0</span>], X2_train[:,<span class="number">1</span>], <span class="string">"bo"</span>)</span><br><span class="line">        <span class="comment"># 做support vectors 的图</span></span><br><span class="line">        pl.scatter(clf.sv[:,<span class="number">0</span>], clf.sv[:,<span class="number">1</span>], s=<span class="number">100</span>, c=<span class="string">"g"</span>)</span><br><span class="line"></span><br><span class="line">        X1, X2 = np.meshgrid(np.linspace(<span class="number">-6</span>,<span class="number">6</span>,<span class="number">50</span>), np.linspace(<span class="number">-6</span>,<span class="number">6</span>,<span class="number">50</span>))</span><br><span class="line">        X = np.array([[x1, x2] <span class="keyword">for</span> x1, x2 <span class="keyword">in</span> zip(np.ravel(X1), np.ravel(X2))])</span><br><span class="line">        Z = clf.project(X).reshape(X1.shape)</span><br><span class="line">        <span class="comment"># pl.contour做等值线图</span></span><br><span class="line">        pl.contour(X1, X2, Z, [<span class="number">0.0</span>], colors=<span class="string">'k'</span>, linewidths=<span class="number">1</span>, origin=<span class="string">'lower'</span>)</span><br><span class="line">        pl.contour(X1, X2, Z + <span class="number">1</span>, [<span class="number">0.0</span>], colors=<span class="string">'grey'</span>, linewidths=<span class="number">1</span>, origin=<span class="string">'lower'</span>)</span><br><span class="line">        pl.contour(X1, X2, Z - <span class="number">1</span>, [<span class="number">0.0</span>], colors=<span class="string">'grey'</span>, linewidths=<span class="number">1</span>, origin=<span class="string">'lower'</span>)</span><br><span class="line"></span><br><span class="line">        pl.axis(<span class="string">"tight"</span>)</span><br><span class="line">        pl.show()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_linear</span><span class="params">()</span>:</span></span><br><span class="line">        X1, y1, X2, y2 = gen_lin_separable_data()</span><br><span class="line">        X_train, y_train = split_train(X1, y1, X2, y2)</span><br><span class="line">        X_test, y_test = split_test(X1, y1, X2, y2)</span><br><span class="line"></span><br><span class="line">        clf = SVM()</span><br><span class="line">        clf.fit(X_train, y_train)</span><br><span class="line"></span><br><span class="line">        y_predict = clf.predict(X_test)</span><br><span class="line">        correct = np.sum(y_predict == y_test)</span><br><span class="line">        print(<span class="string">"%d out of %d predictions correct"</span> % (correct, len(y_predict)))</span><br><span class="line"></span><br><span class="line">        plot_margin(X_train[y_train==<span class="number">1</span>], X_train[y_train==<span class="number">-1</span>], clf)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_non_linear</span><span class="params">()</span>:</span></span><br><span class="line">        X1, y1, X2, y2 = gen_non_lin_separable_data()</span><br><span class="line">        X_train, y_train = split_train(X1, y1, X2, y2)</span><br><span class="line">        X_test, y_test = split_test(X1, y1, X2, y2)</span><br><span class="line"></span><br><span class="line">        clf = SVM(gaussian_kernel)</span><br><span class="line">        clf.fit(X_train, y_train)</span><br><span class="line"></span><br><span class="line">        y_predict = clf.predict(X_test)</span><br><span class="line">        correct = np.sum(y_predict == y_test)</span><br><span class="line">        print(<span class="string">"%d out of %d predictions correct"</span> % (correct, len(y_predict)))</span><br><span class="line"></span><br><span class="line">        plot_contour(X_train[y_train==<span class="number">1</span>], X_train[y_train==<span class="number">-1</span>], clf)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_soft</span><span class="params">()</span>:</span></span><br><span class="line">        X1, y1, X2, y2 = gen_lin_separable_overlap_data()</span><br><span class="line">        X_train, y_train = split_train(X1, y1, X2, y2)</span><br><span class="line">        X_test, y_test = split_test(X1, y1, X2, y2)</span><br><span class="line"></span><br><span class="line">        clf = SVM(C=<span class="number">0.1</span>)</span><br><span class="line">        clf.fit(X_train, y_train)</span><br><span class="line"></span><br><span class="line">        y_predict = clf.predict(X_test)</span><br><span class="line">        correct = np.sum(y_predict == y_test)</span><br><span class="line">        print(<span class="string">"%d out of %d predictions correct"</span> % (correct, len(y_predict)))</span><br><span class="line"></span><br><span class="line">        plot_contour(X_train[y_train==<span class="number">1</span>], X_train[y_train==<span class="number">-1</span>], clf)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">test_soft()</span><br></pre></td></tr></table></figure></p>
 <p>输出：<br><img src="http://dataimage-1252464519.costj.myqcloud.com/images/f2.png" alt=""></p>
 <p><img src="http://dataimage-1252464519.costj.myqcloud.com/images/Screenshot%20from%202017-03-02%2008-40-03.png" alt=""></p>
-<h5 id="Supplement"><a href="#Supplement" class="headerlink" title="Supplement"></a>Supplement</h5><p>关于用cvxopt求解QP问题的使用，可参考<a href="https://uqer.io/community/share/55c9a55df9f06c91f818c675" target="_blank" rel="external">优矿</a></p>
+<h5 id="Supplement"><a href="#Supplement" class="headerlink" title="Supplement"></a>Supplement</h5><p>关于用cvxopt求解QP问题的使用，可参考<a href="https://uqer.io/community/share/55c9a55df9f06c91f818c675" target="_blank" rel="noopener">优矿</a></p>
 
       
     </div>
 
+    
+      
+
+
+    
+
+    
+    
+    
     <div>
-      
-        
+          
+	    
 
-      
+          
     </div>
 
-    <div>
-      
-        
+    
 
+    
       
-    </div>
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>击蒙御寇</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-    <div>
-      
-        
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="不秩稚童 微信支付">
+        <p>微信支付</p>
+      </div>
+    
 
-      
-    </div>
+    
 
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
 
     <footer class="post-footer">
       
@@ -491,7 +587,7 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
       
 
       
-        
+      
       
 
       
@@ -519,44 +615,24 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
-
-    <div class="post-spread">
-      
-        
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
-      
-    </div>
   </div>
 
-          
+
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
 
-          
-  <div class="comments" id="comments">
-
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
-
-
-
-
-
-
+  
 
 
 
@@ -573,129 +649,294 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="https://avatars2.githubusercontent.com/u/17157965?v=3&u=1787d5d04d50967c7825062bfff705ee584ae2b2&s=400"
-               alt="不秩稚童" />
-          <p class="site-author-name" itemprop="name">不秩稚童</p>
-           
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="不秩稚童">
+            
+              <p class="site-author-name" itemprop="name">不秩稚童</p>
               <p class="site-description motion-element" itemprop="description">十年饮冰，难凉热血。</p>
+          </div>
+
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">142</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">53</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/shenxiangzhuang" title="GitHub &rarr; https://github.com/shenxiangzhuang" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:datahonor@gmail.com" title="E-Mail &rarr; mailto:datahonor@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+
+          
+            
+          
+          
+
         </div>
-        <nav class="site-state motion-element">
-        
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">142</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">18</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">53</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/shenxiangzhuang" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/shen-xiang-zhuang" target="_blank" title="知乎">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  知乎
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.cnblogs.com/buzhizhitong" target="_blank" title="博客园">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  博客园
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Theory"><span class="nav-text">Theory</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Code"><span class="nav-text">Code</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Supplement"><span class="nav-text">Supplement</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Theory"><span class="nav-number">1.</span> <span class="nav-text">Theory</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Code"><span class="nav-number">2.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Supplement"><span class="nav-number">3.</span> <span class="nav-text">Supplement</span></a></li></ol></div>
             
-
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
       
-
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -707,33 +948,57 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2017 - 
-  <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">不秩稚童</span>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
 </div>
+
+
+
+
+
+
 
 
 
         
-
 <div class="busuanzi-count">
-
-  
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
   
-    <span class="site-uv"><i class="fa fa-user"></i>本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
   
 
   
-    <span class="site-pv"><i class="fa fa-eye"></i>本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
   
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
   
 </div>
+
+
+
+
+
+
 
 
 
@@ -742,19 +1007,17 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
     </footer>
 
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
+
     
+
+    
+
     
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -768,89 +1031,13 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
 
 
 
-  
 
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
 
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-
-  
-
-    <script type="text/javascript">
-      var disqus_shortname = 'http-datahonor-com';
-      var disqus_identifier = '2017/03/02/Python实现支持向量机-SVM/';
-
-      var disqus_title = "Python实现支持向量机(SVM)";
-
-
-      function run_disqus_script(disqus_script) {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
-
-      run_disqus_script('count.js');
-
-      
-        var disqus_config = function () {
-            this.page.url = disqus_url;
-            this.page.identifier = disqus_identifier;
-            this.page.title = disqus_title;
-        };
-        run_disqus_script('embed.js');
-      
-
-    </script>
-  
 
 
 
@@ -862,181 +1049,518 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
 
 
   
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
   
-  <script type="text/javascript">
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'qzF75hQvs6yPkMIO7gd7LwDB-gzGzoHsz',
+    appKey: 'foULNoeGLTL8LE8C2Ysitv5I',
+    placeholder: '毕竟今天太阳那么好 :-)',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true
+  });
+</script>
+
+
+
+
+  
+
+
+  
+
+  <script>
     // Popup Window;
     var isfetched = false;
+    var isXml = true;
     // Search DB path;
     var search_path = "search.xml";
-    if (search_path.length == 0) {
+    if (search_path.length === 0) {
       search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
     }
     var path = "/" + search_path;
     // monitor main search box;
 
-    function proceedsearch() {
-      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
-      $('.popup').toggle();
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
     }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
     // search function;
     var searchFunc = function(path, search_id, content_id) {
       'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
       $.ajax({
         url: path,
-        dataType: "xml",
+        dataType: isXml ? "xml" : "json",
         async: true,
-        success: function( xmlResponse ) {
+        success: function(res) {
           // get the contents from search data
           isfetched = true;
           $('.popup').detach().appendTo('.header-inner');
-          var datas = $( "entry", xmlResponse ).map(function() {
+          var datas = isXml ? $("entry", res).map(function() {
             return {
-              title: $( "title", this ).text(),
+              title: $("title", this).text(),
               content: $("content",this).text(),
-              url: $( "url" , this).text()
+              url: $("url" , this).text()
             };
-          }).get();
-          var $input = document.getElementById(search_id);
-          var $resultContent = document.getElementById(content_id);
-          $input.addEventListener('input', function(){
-            var matchcounts = 0;
-            var str='<ul class=\"search-result-list\">';
-            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-            $resultContent.innerHTML = "";
-            if (this.value.trim().length > 1) {
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
               // perform local searching
               datas.forEach(function(data) {
                 var isMatch = false;
-                var content_index = [];
-                var data_title = data.title.trim().toLowerCase();
-                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
-                var data_url = decodeURIComponent(data.url);
-                var index_title = -1;
-                var index_content = -1;
-                var first_occur = -1;
-                // only match artiles with not empty titles and contents
-                if(data_title != '') {
-                  keywords.forEach(function(keyword, i) {
-                    index_title = data_title.indexOf(keyword);
-                    index_content = data_content.indexOf(keyword);
-                    if( index_title >= 0 || index_content >= 0 ){
-                      isMatch = true;
-                      if (i == 0) {
-                        first_occur = index_content;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
                       }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
                     }
 
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
                   });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
                 }
+
                 // show search results
+
                 if (isMatch) {
-                  matchcounts += 1;
-                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
-                  var content = data.content.trim().replace(/<[^>]+>/g,"");
-                  if (first_occur >= 0) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
                     // cut out 100 characters
-                    var start = first_occur - 20;
-                    var end = first_occur + 80;
+                    var start = position - 20;
+                    var end = position + 80;
                     if(start < 0){
                       start = 0;
                     }
-                    if(start == 0){
-                      end = 50;
+                    if (end < position + word.length) {
+                      end = position + word.length;
                     }
                     if(end > content.length){
                       end = content.length;
                     }
-                    var match_content = content.substring(start, end);
-                    // highlight all keywords
-                    keywords.forEach(function(keyword){
-                      var regS = new RegExp(keyword, "gi");
-                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
-                    });
-
-                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
                   }
-                  str += "</li>";
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
                 }
-              })};
-            str += "</ul>";
-            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
-            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
-            $resultContent.innerHTML = str;
-          });
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
           proceedsearch();
         }
-      });}
+      });
+    }
 
     // handle and trigger popup window;
     $('.popup-trigger').click(function(e) {
       e.stopPropagation();
-      if (isfetched == false) {
+      if (isfetched === false) {
         searchFunc(path, 'local-search-input', 'local-search-result');
       } else {
         proceedsearch();
       };
     });
 
-    $('.popup-btn-close').click(function(e){
-      $('.popup').hide();
-      $(".popoverlay").remove();
-      $('body').css('overflow', '');
-    });
+    $('.popup-btn-close').click(onPopupClose);
     $('.popup').click(function(e){
       e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
     });
   </script>
 
 
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
   
 
 
   
 
   
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
     }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
     }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
 
 
   
 
-
-  
-  <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/js/src/love.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":125,"height":125,"position":"left","hOffset":30,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -1050,10 +1574,8 @@ Code代码大部分来自Github，当中有自己写的一些注释。1234567891
   });
 </script>
 
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
-
-</body>
+<!-- hexo-inject:end --></body>
 </html>
