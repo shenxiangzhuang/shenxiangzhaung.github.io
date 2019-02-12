@@ -107,7 +107,7 @@
 简记为： 方法 = 模型+策略+算法
 1.2.预备知识——损失函数
 在模型的假设空间，我们要确定一定的准则来确定模型的好坏，即我们需">
-<meta property="og:updated_time" content="2017-03-03T06:00:11.740Z">
+<meta property="og:updated_time" content="2019-02-12T14:53:20.240Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="最大似然估计与经验风险最小化">
 <meta name="twitter:description" content="李航老师《统计学习方法》第一章笔记——经验风险最小化推导极大似然估计
@@ -474,8 +474,8 @@
 <ol>
 <li>证明：</li>
 </ol>
-<p>设<script type="math/tex">x_1, x_2, \cdots , x_n</script>为独立同分布[idd]的样本，<script type="math/tex">\theta</script>为模型参数，<script type="math/tex">f</script>为我们使用的模型。</p>
-<p>由idd:</p>
+<p>设<script type="math/tex">x_1, x_2, \cdots , x_n</script>为独立同分布[i.i.d., independent and identically distributed]的样本，<script type="math/tex">\theta</script>为模型参数，<script type="math/tex">f</script>为我们使用的模型。</p>
+<p>由i.i.d.:</p>
 <script type="math/tex; mode=display">f(x_1, x_2, \cdots, x_n) = f(x_1|\theta)\times f(x_2|\theta)\times \cdots \times f(x_n|\theta)</script><p>而实际上我们已知<script type="math/tex">x_1, x_2, \cdots , x_n</script>, 未知的是，<script type="math/tex">\theta</script>， 故似然定义为:</p>
 <span>$$L(\theta|x_1, x_2, \cdots , x_n) = f(x_1, x_2, \cdots , x_n|\theta) = \coprod_{i=1}^{n}f(x_i|\theta)$$</span><!-- Has MathJax -->
 <p>此为样本发生可能性的大小，而极大似然估计的核心即为，以使得当前样本发生概率最大时的参数<script type="math/tex">\hat{\theta}</script>作为真实参数<script type="math/tex">\theta</script>的一个估计值。所以此时我们要求的是<script type="math/tex">L(\theta|x_1, x_2, \cdots , x_n)</script>取得最大值时<script type="math/tex">\theta</script>的值，即为<script type="math/tex">\hat{\theta}</script>。即问题转化为求<script type="math/tex">L(\theta|x_1, x_2, \cdots , x_n)</script>的极值问题。自然想到导数，而由于连乘的存在，可利用对数函数单调递增的性质，两边取对数再求导，可以简化计算。</p>
@@ -730,8 +730,8 @@
 
 <div class="busuanzi-count">
 
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   
     <span class="site-uv"><i class="fa fa-user"></i>本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
   

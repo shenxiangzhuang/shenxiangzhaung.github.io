@@ -4502,8 +4502,8 @@ x_{1} &amp;  -2x_{2}&amp; +x_{3} &amp; \leq 11\\
 <ol>
 <li>证明：</li>
 </ol>
-<p>设<script type="math/tex">x_1, x_2, \cdots , x_n</script>为独立同分布[idd]的样本，<script type="math/tex">\theta</script>为模型参数，<script type="math/tex">f</script>为我们使用的模型。</p>
-<p>由idd:</p>
+<p>设<script type="math/tex">x_1, x_2, \cdots , x_n</script>为独立同分布[i.i.d., independent and identically distributed]的样本，<script type="math/tex">\theta</script>为模型参数，<script type="math/tex">f</script>为我们使用的模型。</p>
+<p>由i.i.d.:</p>
 <script type="math/tex; mode=display">f(x_1, x_2, \cdots, x_n) = f(x_1|\theta)\times f(x_2|\theta)\times \cdots \times f(x_n|\theta)</script><p>而实际上我们已知<script type="math/tex">x_1, x_2, \cdots , x_n</script>, 未知的是，<script type="math/tex">\theta</script>， 故似然定义为:</p>
 <span>$$L(\theta|x_1, x_2, \cdots , x_n) = f(x_1, x_2, \cdots , x_n|\theta) = \coprod_{i=1}^{n}f(x_i|\theta)$$</span><!-- Has MathJax -->
 <p>此为样本发生可能性的大小，而极大似然估计的核心即为，以使得当前样本发生概率最大时的参数<script type="math/tex">\hat{\theta}</script>作为真实参数<script type="math/tex">\theta</script>的一个估计值。所以此时我们要求的是<script type="math/tex">L(\theta|x_1, x_2, \cdots , x_n)</script>取得最大值时<script type="math/tex">\theta</script>的值，即为<script type="math/tex">\hat{\theta}</script>。即问题转化为求<script type="math/tex">L(\theta|x_1, x_2, \cdots , x_n)</script>的极值问题。自然想到导数，而由于连乘的存在，可利用对数函数单调递增的性质，两边取对数再求导，可以简化计算。</p>
