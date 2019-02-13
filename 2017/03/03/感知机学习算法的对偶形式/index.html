@@ -51,12 +51,16 @@
 <link rel="stylesheet" href="/css/main.css?v=7.0.0">
 
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-16x16-next.png?v=7.0.0">
+
 
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
 
 
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
 
+
+  <link rel="mask-icon" href="/images/favicon-16x16-next.png?v=7.0.0" color="#222">
 
 
 
@@ -93,7 +97,7 @@
 
 
   <meta name="description" content="李航老师《统计学习方法》第二章笔记。关于感知机学习算法对偶形式的简单实现[ Python ]。之前有原始感知机学习算法的实现。 算法原理  算法实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676">
-<meta name="keywords" content="Python,Algorithm,Data Analysis,ML,Clustering,统计学习方法">
+<meta name="keywords" content="Python,Algorithm,ML,Clustering,统计学习方法,Data Analysis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="感知机学习算法的对偶形式">
 <meta property="og:url" content="http://datahonor.com/2017/03/03/感知机学习算法的对偶形式/index.html">
@@ -201,7 +205,7 @@
     </div>
     
       
-        <h1 class="site-subtitle" itemprop="description">Never say never.</h1>
+        <h1 class="site-subtitle" itemprop="description">Pain Is Inevitable; Suffering Is Optional</h1>
       
     
     
@@ -583,13 +587,13 @@
           
             <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
           
-            <a href="/tags/Data-Analysis/" rel="tag"># Data Analysis</a>
-          
             <a href="/tags/ML/" rel="tag"># ML</a>
           
             <a href="/tags/Clustering/" rel="tag"># Clustering</a>
           
             <a href="/tags/统计学习方法/" rel="tag"># 统计学习方法</a>
+          
+            <a href="/tags/Data-Analysis/" rel="tag"># Data Analysis</a>
           
         </div>
       
@@ -956,7 +960,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -1568,7 +1572,14 @@
   
 
 <script type="text/javascript" src="/js/src/love.js"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":125,"height":125,"position":"left","hOffset":30,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<!-- 雪花特效 -->
+<script type="text/javascript">
+  var windowWidth = $(window).width();
+  if (windowWidth > 480) {
+    document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
+  }
+</script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":0.8,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":110,"height":110,"position":"left","hOffset":0,"vOffset":-20,"mobile":{"show":true,"scale":0.05}},"react":{"opacityDefault":0.8,"opacityOnHover":0.2},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
