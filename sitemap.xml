@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://datahonor.com/2018/07/07/%E5%A5%87%E6%80%AA%E7%9A%84%E6%A2%A6/</loc>
+    
+    <lastmod>2019-03-28T00:33:28.231Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://datahonor.com/2019/01/19/%E6%89%80%E8%B0%93%E5%81%B6%E7%84%B6/</loc>
+    
+    <lastmod>2019-03-28T00:33:10.127Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://datahonor.com/2017/11/02/Nonparametric-Statistics-in-R/</loc>
+    
+    <lastmod>2019-03-28T00:30:38.861Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://datahonor.com/2019/02/14/Data-Structure-in-C-Singly-Linked-Lists/</loc>
     
     <lastmod>2019-02-14T08:35:41.751Z</lastmod>
@@ -19,13 +40,6 @@
     <loc>http://datahonor.com/2017/03/03/%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%B8%8E%E7%BB%8F%E9%AA%8C%E9%A3%8E%E9%99%A9%E6%9C%80%E5%B0%8F%E5%8C%96/</loc>
     
     <lastmod>2019-02-12T14:53:20.240Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/2019/01/19/%E6%89%80%E8%B0%93%E5%81%B6%E7%84%B6/</loc>
-    
-    <lastmod>2019-01-19T13:26:20.054Z</lastmod>
     
   </url>
   
@@ -96,13 +110,6 @@
     <loc>http://datahonor.com/2018/12/24/Probability-and-Mathematical-Statistics-Books/</loc>
     
     <lastmod>2018-12-24T07:51:56.496Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/2018/07/07/%E5%A5%87%E6%80%AA%E7%9A%84%E6%A2%A6/</loc>
-    
-    <lastmod>2018-07-07T14:39:05.648Z</lastmod>
     
   </url>
   
@@ -313,13 +320,6 @@
     <loc>http://datahonor.com/2017/10/06/EDA-with-R/</loc>
     
     <lastmod>2017-11-16T16:41:35.039Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/2017/11/02/Nonparametric-Statistics-in-R/</loc>
-    
-    <lastmod>2017-11-02T14:37:27.461Z</lastmod>
     
   </url>
   
