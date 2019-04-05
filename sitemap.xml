@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://datahonor.com/2018/05/19/Jupyter-nbextensions/</loc>
+    
+    <lastmod>2019-04-05T14:46:58.448Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://datahonor.com/2019/01/03/R-package-installiation/</loc>
     
     <lastmod>2019-04-05T04:33:57.184Z</lastmod>
@@ -124,13 +131,6 @@
     <loc>http://datahonor.com/2018/06/21/Screen-recorder-peek/</loc>
     
     <lastmod>2018-06-21T15:17:40.974Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/2018/05/19/Jupyter-nbextensions/</loc>
-    
-    <lastmod>2018-06-14T15:32:24.694Z</lastmod>
     
   </url>
   

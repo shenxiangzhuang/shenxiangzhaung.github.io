@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://datahonor.com/2018/05/19/Jupyter-nbextensions/</loc>
+    <lastmod>2019-04-05</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2019/01/03/R-package-installiation/</loc>
     <lastmod>2019-04-05</lastmod>
   </url>  <url>
@@ -54,9 +57,6 @@
   </url>  <url>
     <loc>http://datahonor.com/2018/06/21/Screen-recorder-peek/</loc>
     <lastmod>2018-06-21</lastmod>
-  </url>  <url>
-    <loc>http://datahonor.com/2018/05/19/Jupyter-nbextensions/</loc>
-    <lastmod>2018-06-14</lastmod>
   </url>  <url>
     <loc>http://datahonor.com/2018/05/16/Vectorization-in-R-Why/</loc>
     <lastmod>2018-05-16</lastmod>
