@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://datahonor.com/2019/01/03/R-package-installiation/</loc>
+    <lastmod>2019-04-05</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2019/03/28/%E8%80%83%E7%A0%94%E6%9D%82%E8%AE%B0/</loc>
     <lastmod>2019-03-28</lastmod>
   </url>  <url>
@@ -27,9 +30,6 @@
   </url>  <url>
     <loc>http://datahonor.com/2018/07/30/Errata-of-PythonDA/</loc>
     <lastmod>2019-01-04</lastmod>
-  </url>  <url>
-    <loc>http://datahonor.com/2019/01/03/R-package-installiation/</loc>
-    <lastmod>2019-01-03</lastmod>
   </url>  <url>
     <loc>http://datahonor.com/2019/01/03/gcc-g/</loc>
     <lastmod>2019-01-03</lastmod>

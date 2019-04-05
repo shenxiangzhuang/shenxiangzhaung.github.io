@@ -101,7 +101,7 @@
 <meta property="og:description" content="R久没有遇到装库的问题，今天遇到两个比较有趣的。 只能在R terminal安装发现有些包在Rstudio装不上（比如今天装的ks就是），在终端打开直接就可以了。后来查到Rstudio Support给的建议第一条也是这个，原因不清，暂不追究。 ld: cannot find -lgfortran报错如下： 参考这里 终端运行：12sudo ln -s /usr/lib/x86_64-linux-">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/201812/Screenshot%20from%202019-01-03%2014-44-00.png">
-<meta property="og:updated_time" content="2019-01-03T07:42:12.170Z">
+<meta property="og:updated_time" content="2019-04-05T04:33:57.184Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="R package installiation">
 <meta name="twitter:description" content="R久没有遇到装库的问题，今天遇到两个比较有趣的。 只能在R terminal安装发现有些包在Rstudio装不上（比如今天装的ks就是），在终端打开直接就可以了。后来查到Rstudio Support给的建议第一条也是这个，原因不清，暂不追究。 ld: cannot find -lgfortran报错如下： 参考这里 终端运行：12sudo ln -s /usr/lib/x86_64-linux-">
@@ -424,12 +424,24 @@
                 
               
 
-              <time title="创建时间：2019-01-03 15:32:43 / 修改时间：15:42:12" itemprop="dateCreated datePublished" datetime="2019-01-03T15:32:43+08:00">2019-01-03</time>
+              <time title="创建时间：2019-01-03 15:32:43" itemprop="dateCreated datePublished" datetime="2019-01-03T15:32:43+08:00">2019-01-03</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-05 12:33:57" itemprop="dateModified" datetime="2019-04-05T12:33:57+08:00">2019-04-05</time>
               
             
           </span>
@@ -506,6 +518,11 @@
 <p>参考<a href="https://stackoverflow.com/questions/6302209/building-r-package-getting-error-ld-cannot-find-lgfortran" target="_blank" rel="noopener">这里</a></p>
 <p>终端运行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /usr/lib/x86_64-linux-gnu/libgfortran.so.3 /usr/lib/libgfortran.so</span><br><span class="line">sudo ln -s /usr/lib/x86_64-linux-gnu/libquadmath.so.0 /usr/lib/libquadmath.so</span><br></pre></td></tr></table></figure></p>
 <p>即可。</p>
+<h3 id="configure-error-Cannot-compile-a-simple-JNI-program"><a href="#configure-error-Cannot-compile-a-simple-JNI-program" class="headerlink" title="configure: error: Cannot compile a simple JNI program"></a>configure: error: Cannot compile a simple JNI program</h3><p>在安装<code>RWeka</code>的时候遇到这个错误，具体是其中安装<code>rJava</code>的时候出现的错误。根据<a href="https://stackoverflow.com/questions/42562160/r-cmd-javareconf-not-finding-jni-h/42567372" target="_blank" rel="noopener">stackoverflow</a>，终端运行，</p>
+<p><code>R CMD javareconf</code></p>
+<p>得到报错，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">Java interpreter : /usr/lib/jvm/default-java/jre/bin/java</span><br><span class="line">Java version     : 1.8.0_191</span><br><span class="line">Java home path   : /usr/lib/jvm/default-java</span><br><span class="line">Java compiler    : not present</span><br><span class="line">Java headers gen.: </span><br><span class="line">Java archive tool: </span><br><span class="line"></span><br><span class="line">trying to compile and link a JNI program </span><br><span class="line">detected JNI cpp flags    : </span><br><span class="line">detected JNI linker flags : -L$(JAVA_HOME)/jre/lib/amd64/server -ljvm</span><br><span class="line">gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c conftest.c -o conftest.o</span><br><span class="line">conftest.c:1:10: fatal error: jni.h: No such file or directory</span><br><span class="line"> #include &lt;jni.h&gt;</span><br><span class="line">		  ^~~~~~~</span><br><span class="line">compilation terminated.</span><br><span class="line">/usr/lib/R/etc/Makeconf:159: recipe for target &apos;conftest.o&apos; failed</span><br><span class="line">make: *** [conftest.o] Error 1</span><br><span class="line">Unable to compile a JNI program</span><br><span class="line">/usr/lib/R/bin/javareconf: 366: cd: can&apos;t cd to /home/shensir/Documents/DataMining/Code/DecisionTree/ID3/id3-python/Decision</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">JAVA_HOME        : /usr/lib/jvm/default-java</span><br><span class="line">Java library path: </span><br><span class="line">JNI cpp flags    : </span><br><span class="line">JNI linker flags : </span><br><span class="line">Updating Java configuration in /usr/lib/R</span><br><span class="line">Done.</span><br></pre></td></tr></table></figure>
+<p>主要还是<code>jni.h</code>的问题。之后又查到<a href="https://superuser.com/questions/1404488/install-r-3-5-2-under-ubuntu-jni-h-no-such-file-or-directory" target="_blank" rel="noopener">这里</a>，运行<code>sudo apt install default-jdk</code>解决问题。</p>
 
       
     </div>
@@ -533,7 +550,7 @@
   <p><span>本文标题:</span>R package installiation</p>
   <p><span>文章作者:</span>不秩稚童</p>
   <p><span>发布时间:</span>2019年01月03日 - 15:32:43</p>
-  <p><span>最后更新:</span>2019年01月03日 - 15:42:12</p>
+  <p><span>最后更新:</span>2019年04月05日 - 12:33:57</p>
   <p><span>原始链接:</span><a href="/2019/01/03/R-package-installiation/" title="R package installiation">http://datahonor.com/2019/01/03/R-package-installiation/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2019/01/03/R-package-installiation/" aria-label="复制成功！"></i></span>
   </p>
@@ -942,7 +959,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#只能在R-terminal安装"><span class="nav-number">1.</span> <span class="nav-text">只能在R terminal安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ld-cannot-find-lgfortran"><span class="nav-number">2.</span> <span class="nav-text">ld: cannot find -lgfortran</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#只能在R-terminal安装"><span class="nav-number">1.</span> <span class="nav-text">只能在R terminal安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ld-cannot-find-lgfortran"><span class="nav-number">2.</span> <span class="nav-text">ld: cannot find -lgfortran</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#configure-error-Cannot-compile-a-simple-JNI-program"><span class="nav-number">3.</span> <span class="nav-text">configure: error: Cannot compile a simple JNI program</span></a></li></ol></div>
             
 
           </div>
