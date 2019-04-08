@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://datahonor.com/2018/03/21/Jupyter-Lab-Multi-Kernels/</loc>
+    
+    <lastmod>2019-04-08T09:22:15.091Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://datahonor.com/2018/05/19/Jupyter-nbextensions/</loc>
     
     <lastmod>2019-04-05T14:46:58.448Z</lastmod>
@@ -82,13 +89,6 @@
     <loc>http://datahonor.com/2019/01/03/gcc-g/</loc>
     
     <lastmod>2019-01-03T07:10:25.176Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/2018/03/21/Jupyter-Lab-Multi-Kernels/</loc>
-    
-    <lastmod>2019-01-01T09:31:13.162Z</lastmod>
     
   </url>
   
