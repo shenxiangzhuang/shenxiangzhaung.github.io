@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="DATA HONOR">
 <meta property="og:description" content="SS全局代理的设置。测试情况： 设置PAC文件：  参考这里，开始运行不成功，因为PIP安装的GenPAC不支持Py3,即使update也不行orz…后来到Github发现正好新添加了Py3的支持，又clone并install重新安装GenPAC才可以(类似的版本问题值得注意！)，成功生成了PAC文件。然后在在系统设置，网络，代理里面选择自动，并指定了PAC的地址。之后启动Shadowsocks并">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-10T07:25:28.123Z">
+<meta property="og:updated_time" content="2019-04-29T07:50:02.713Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SS使用-全局代理">
 <meta name="twitter:description" content="SS全局代理的设置。测试情况： 设置PAC文件：  参考这里，开始运行不成功，因为PIP安装的GenPAC不支持Py3,即使update也不行orz…后来到Github发现正好新添加了Py3的支持，又clone并install重新安装GenPAC才可以(类似的版本问题值得注意！)，成功生成了PAC文件。然后在在系统设置，网络，代理里面选择自动，并指定了PAC的地址。之后启动Shadowsocks并">
@@ -439,7 +439,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2017-09-10 15:25:28" itemprop="dateModified" datetime="2017-09-10T15:25:28+08:00">2017-09-10</time>
+                <time title="修改时间：2019-04-29 15:50:02" itemprop="dateModified" datetime="2019-04-29T15:50:02+08:00">2019-04-29</time>
               
             
           </span>
@@ -548,6 +548,7 @@ Please join Telegram group https://t.me/sbfans if you have any issues. / 如有�
 <p>====================================================</p>
 <p>2017/8/14 解决部分终端问题</p>
 <p>今天在用conda装虚拟环境的时候，不管用不用前面的hp似乎都没什么卵用…就试了试proxychains。安装和设置都十分简单，参考<a href="https://github.com/naseeihity/LearnReact/issues/7" target="_blank" rel="noopener">这里</a>。这样设置后虽说还是ping不通Google,但是在使用conda装东西的时候速度可以起飞…嗯，目前是够用了，先这样。</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<2019 4="" 29="" 更新="" proxychains="" quit="" mode="">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<br>参考<a href="https://www.codeproject.com/Tips/634228/How-to-Use-Proxychains-Forwarding-Ports" target="_blank" rel="noopener">这里</a>.修改其配置文件即可。</2019></p>
 <p>====================================================<br>2017/9/10 解决Python代码翻墙问题</p>
 <p>之前尝试了很多办法，都没办法在Python利用SS翻墙。现在是找到了两种解决方案。第一种就是在运行Python脚本的时候加上前面设置的proxychains。但是总感觉不太方便（Pycharm里面不好用…）于是就有了第二种方法（感谢一位群友相助），是利用requests设置代理IP的方法，其实也很简单：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">proxy = &#123;</span><br><span class="line">    <span class="string">"http"</span>: <span class="string">"http://localhost:1080"</span>,</span><br><span class="line">    <span class="string">"https"</span>: <span class="string">"https://localhost:1080"</span></span><br><span class="line">&#125;</span><br><span class="line">data = requests.get(<span class="string">"https://www.google.com.hk"</span>, proxies=proxy)</span><br><span class="line"></span><br><span class="line">print(data.status_code)</span><br><span class="line">print(data.text)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -591,7 +592,7 @@ Please join Telegram group https://t.me/sbfans if you have any issues. / 如有�
   <p><span>本文标题:</span>SS使用-全局代理</p>
   <p><span>文章作者:</span>不秩稚童</p>
   <p><span>发布时间:</span>2017年08月01日 - 00:07:32</p>
-  <p><span>最后更新:</span>2017年09月10日 - 15:25:28</p>
+  <p><span>最后更新:</span>2019年04月29日 - 15:50:02</p>
   <p><span>原始链接:</span><a href="/2017/08/01/SS使用-全局代理/" title="SS使用-全局代理">http://datahonor.com/2017/08/01/SS使用-全局代理/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/08/01/SS使用-全局代理/" aria-label="复制成功！"></i></span>
   </p>
