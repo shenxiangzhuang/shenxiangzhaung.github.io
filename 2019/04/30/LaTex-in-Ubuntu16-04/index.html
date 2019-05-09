@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="OverviewUbuntu16.04 LTS中LaTex环境配置（这里是2018版）。 Remove Old Version参考tex.stackexchange Tex LiveUbuntu 安装源直接sudo apt-get install texlive-full即可，完整版需要磁盘空间较大。 安装包（现在采用的方法）123wget https://mirrors.tuna.tsinghu">
+  <meta name="description" content="OverviewUbuntu16.04 LTS中LaTex环境配置（这里是2018版）。 Remove Old Version参考tex.stackexchange Tex LiveUbuntu 安装源直接sudo apt-get install texlive-full即可，完整版需要磁盘空间较大。 安装包（现在采用的方法）Tex Live参考stone-zeng 123wget https:/">
 <meta name="keywords" content="LaTex">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LaTex in Ubuntu16.04">
 <meta property="og:url" content="http://datahonor.com/2019/04/30/LaTex-in-Ubuntu16-04/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="OverviewUbuntu16.04 LTS中LaTex环境配置（这里是2018版）。 Remove Old Version参考tex.stackexchange Tex LiveUbuntu 安装源直接sudo apt-get install texlive-full即可，完整版需要磁盘空间较大。 安装包（现在采用的方法）123wget https://mirrors.tuna.tsinghu">
+<meta property="og:description" content="OverviewUbuntu16.04 LTS中LaTex环境配置（这里是2018版）。 Remove Old Version参考tex.stackexchange Tex LiveUbuntu 安装源直接sudo apt-get install texlive-full即可，完整版需要磁盘空间较大。 安装包（现在采用的方法）Tex Live参考stone-zeng 123wget https:/">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-30T10:39:03.462Z">
+<meta property="og:updated_time" content="2019-04-30T12:23:27.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LaTex in Ubuntu16.04">
-<meta name="twitter:description" content="OverviewUbuntu16.04 LTS中LaTex环境配置（这里是2018版）。 Remove Old Version参考tex.stackexchange Tex LiveUbuntu 安装源直接sudo apt-get install texlive-full即可，完整版需要磁盘空间较大。 安装包（现在采用的方法）123wget https://mirrors.tuna.tsinghu">
+<meta name="twitter:description" content="OverviewUbuntu16.04 LTS中LaTex环境配置（这里是2018版）。 Remove Old Version参考tex.stackexchange Tex LiveUbuntu 安装源直接sudo apt-get install texlive-full即可，完整版需要磁盘空间较大。 安装包（现在采用的方法）Tex Live参考stone-zeng 123wget https:/">
 
 
 
@@ -422,7 +422,7 @@
                 
               
 
-              <time title="创建时间：2019-04-30 18:13:24 / 修改时间：18:39:03" itemprop="dateCreated datePublished" datetime="2019-04-30T18:13:24+08:00">2019-04-30</time>
+              <time title="创建时间：2019-04-30 18:13:24 / 修改时间：20:23:27" itemprop="dateCreated datePublished" datetime="2019-04-30T18:13:24+08:00">2019-04-30</time>
             
 
             
@@ -508,9 +508,24 @@
         <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Ubuntu16.04 LTS中LaTex环境配置（这里是2018版）。</p>
 <h3 id="Remove-Old-Version"><a href="#Remove-Old-Version" class="headerlink" title="Remove Old Version"></a>Remove Old Version</h3><p>参考<a href="https://tex.stackexchange.com/questions/95483/how-to-remove-everything-related-to-tex-live-for-fresh-install-on-ubuntu" target="_blank" rel="noopener">tex.stackexchange</a></p>
 <h3 id="Tex-Live"><a href="#Tex-Live" class="headerlink" title="Tex Live"></a>Tex Live</h3><h4 id="Ubuntu-安装源"><a href="#Ubuntu-安装源" class="headerlink" title="Ubuntu 安装源"></a>Ubuntu 安装源</h4><p>直接<code>sudo apt-get install texlive-full</code>即可，完整版需要磁盘空间较大。</p>
-<h4 id="安装包（现在采用的方法）"><a href="#安装包（现在采用的方法）" class="headerlink" title="安装包（现在采用的方法）"></a>安装包（现在采用的方法）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet/install-tl-unx.tar.gz</span><br><span class="line">tar -xzf install-tl-unx.tar.gz</span><br><span class="line">cd install-tl-2018*</span><br></pre></td></tr></table></figure>
+<h4 id="安装包（现在采用的方法）"><a href="#安装包（现在采用的方法）" class="headerlink" title="安装包（现在采用的方法）"></a>安装包（现在采用的方法）</h4><h5 id="Tex-Live-1"><a href="#Tex-Live-1" class="headerlink" title="Tex Live"></a>Tex Live</h5><p>参考<a href="https://stone-zeng.github.io/2018-05-13-install-texlive-ubuntu/" target="_blank" rel="noopener">stone-zeng</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet/install-tl-unx.tar.gz</span><br><span class="line">tar -xzf install-tl-unx.tar.gz</span><br><span class="line">cd install-tl-2018*</span><br></pre></td></tr></table></figure>
 <p>之后直接以GUI模式安装<code>sudo ./install-tl -gui -repository https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet/</code></p>
-<p>参考<a href="https://stone-zeng.github.io/2018-05-13-install-texlive-ubuntu/" target="_blank" rel="noopener">stone-zeng</a></p>
+<h5 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h5><p>打开<code>~/.bashrc</code>，最后添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH</span><br><span class="line">export MANPATH=/usr/local/texlive/2018/texmf-dist/doc/man:$MANPATH</span><br><span class="line">export INFOPATH=/usr/local/texlive/2018/texmf-dist/doc/info:$INFOPATH</span><br></pre></td></tr></table></figure></p>
+<p>还需保证开启 sudo 模式后路径仍然可用。命令行中执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo visudo</span><br></pre></td></tr></table></figure></p>
+<p>找到如下一段代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Defaults        env_reset</span><br><span class="line">Defaults        mail_badpass</span><br><span class="line">Defaults        secure_path=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin&quot;</span><br></pre></td></tr></table></figure></p>
+<p>将第三行更改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Defaults        secure_path=&quot;/usr/local/texlive/2018/bin/x86_64-linux:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin&quot;</span><br></pre></td></tr></table></figure></p>
+<p>也就是加入 TeX Live 的执行路径</p>
+<h5 id="字体设置"><a href="#字体设置" class="headerlink" title="字体设置"></a>字体设置</h5><p>要在整个系统中使用 TeX 字体，还需要将 TeX 自带的配置文件复制到系统目录下。命令行中执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /usr/local/texlive/2018/texmf-var/fonts/conf/texlive-fontconfig.conf /etc/fonts/conf.d/09-texlive.conf</span><br></pre></td></tr></table></figure></p>
+<p>后执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo fc-cache -fv</span><br></pre></td></tr></table></figure>
+<p>刷新字体数据库。</p>
+<h3 id="安装宏包"><a href="#安装宏包" class="headerlink" title="安装宏包"></a>安装宏包</h3><h4 id="tmlgr自动安装"><a href="#tmlgr自动安装" class="headerlink" title="tmlgr自动安装"></a>tmlgr自动安装</h4><p>首先再次配置镜像，参考<a href="https://tex.stackexchange.com/questions/145186/problem-with-updating-tlmgr-bad-hostname" target="_blank" rel="noopener">这里</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tlmgr option repository https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet</span><br></pre></td></tr></table></figure></p>
+<p>之后运行<code>tlmgr install &lt;package name&gt;</code>即可。</p>
+<h4 id="压缩包手动安装"><a href="#压缩包手动安装" class="headerlink" title="压缩包手动安装"></a>压缩包手动安装</h4><p>参考<a href="https://github.com/hokein/Wiki/wiki/ubuntu%E4%B8%8B%E5%AE%8F%E5%8C%85latex%E5%AE%89%E8%A3%85" target="_blank" rel="noopener">这里</a></p>
+<p>Step1. 先找到系统默认宏包的位置，一般是在目录 /usr/share/texmf/tex/latex</p>
+<p>Step2. 把需要安装的宏包放到上面的目录下。</p>
+<p>Step3. 执行下面的命令更新一下即可: ~/$ sudo texhash</p>
 <h3 id="TexMaker"><a href="#TexMaker" class="headerlink" title="TexMaker"></a>TexMaker</h3><p>直接<code>sudo apt-get install texmaker</code>即可。也可以到<a href="http://www.xm1math.net/texmaker/" target="_blank" rel="noopener">官网</a>选择安装更新的版本（已经18.04起步了Orz</p>
 <h3 id="Templates"><a href="#Templates" class="headerlink" title="Templates"></a>Templates</h3><p><a href="https://github.com/ElegantLaTeX" target="_blank" rel="noopener">ElegantLaTeX</a></p>
 <h3 id="Videos"><a href="#Videos" class="headerlink" title="Videos"></a>Videos</h3><p><a href="https://www.bilibili.com/video/av50392724?p=2" target="_blank" rel="noopener">米神LaTex+Emacs</a></p>
@@ -541,7 +556,7 @@
   <p><span>本文标题:</span>LaTex in Ubuntu16.04</p>
   <p><span>文章作者:</span>不秩稚童</p>
   <p><span>发布时间:</span>2019年04月30日 - 18:13:24</p>
-  <p><span>最后更新:</span>2019年04月30日 - 18:39:03</p>
+  <p><span>最后更新:</span>2019年04月30日 - 20:23:27</p>
   <p><span>原始链接:</span><a href="/2019/04/30/LaTex-in-Ubuntu16-04/" title="LaTex in Ubuntu16.04">http://datahonor.com/2019/04/30/LaTex-in-Ubuntu16-04/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2019/04/30/LaTex-in-Ubuntu16-04/" aria-label="复制成功！"></i></span>
   </p>
@@ -966,7 +981,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Remove-Old-Version"><span class="nav-number">2.</span> <span class="nav-text">Remove Old Version</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tex-Live"><span class="nav-number">3.</span> <span class="nav-text">Tex Live</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Ubuntu-安装源"><span class="nav-number">3.1.</span> <span class="nav-text">Ubuntu 安装源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装包（现在采用的方法）"><span class="nav-number">3.2.</span> <span class="nav-text">安装包（现在采用的方法）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TexMaker"><span class="nav-number">4.</span> <span class="nav-text">TexMaker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Templates"><span class="nav-number">5.</span> <span class="nav-text">Templates</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Videos"><span class="nav-number">6.</span> <span class="nav-text">Videos</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Remove-Old-Version"><span class="nav-number">2.</span> <span class="nav-text">Remove Old Version</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tex-Live"><span class="nav-number">3.</span> <span class="nav-text">Tex Live</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Ubuntu-安装源"><span class="nav-number">3.1.</span> <span class="nav-text">Ubuntu 安装源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装包（现在采用的方法）"><span class="nav-number">3.2.</span> <span class="nav-text">安装包（现在采用的方法）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Tex-Live-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">Tex Live</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#设置环境变量"><span class="nav-number">3.2.2.</span> <span class="nav-text">设置环境变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#字体设置"><span class="nav-number">3.2.3.</span> <span class="nav-text">字体设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装宏包"><span class="nav-number">4.</span> <span class="nav-text">安装宏包</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#tmlgr自动安装"><span class="nav-number">4.1.</span> <span class="nav-text">tmlgr自动安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#压缩包手动安装"><span class="nav-number">4.2.</span> <span class="nav-text">压缩包手动安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TexMaker"><span class="nav-number">5.</span> <span class="nav-text">TexMaker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Templates"><span class="nav-number">6.</span> <span class="nav-text">Templates</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Videos"><span class="nav-number">7.</span> <span class="nav-text">Videos</span></a></li></ol></div>
             
 
           </div>
@@ -1611,8 +1626,7 @@
   if (windowWidth > 480) {
     document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
   }
-</script>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":120,"height":120,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.99,"opacityOnHover":0.2},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -1629,5 +1643,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
-<!-- hexo-inject:end --></body>
+<!-- hexo-inject:end -->
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":120,"height":120,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.99,"opacityOnHover":0.2},"log":false});</script></body>
 </html>
