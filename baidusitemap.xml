@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://datahonor.com/2018/07/30/Errata-of-PythonDA/</loc>
+    <lastmod>2019-06-13</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2017/02/25/About-Hexo/</loc>
     <lastmod>2019-06-13</lastmod>
   </url>  <url>
@@ -54,9 +57,6 @@
   </url>  <url>
     <loc>http://datahonor.com/2019/01/16/virtualenv-error/</loc>
     <lastmod>2019-01-16</lastmod>
-  </url>  <url>
-    <loc>http://datahonor.com/2018/07/30/Errata-of-PythonDA/</loc>
-    <lastmod>2019-01-04</lastmod>
   </url>  <url>
     <loc>http://datahonor.com/2019/01/03/gcc-g/</loc>
     <lastmod>2019-01-03</lastmod>
