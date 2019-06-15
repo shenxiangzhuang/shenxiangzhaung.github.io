@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>argparse&amp;unittest&amp;doctest&amp;logging</title>
+      <link href="/2019/06/15/Argparse-unittest-doctest-logging/"/>
+      <url>/2019/06/15/Argparse-unittest-doctest-logging/</url>
+      
+        <content type="html"><![CDATA[<h3 id="argparse"><a href="#argparse" class="headerlink" title="argparse"></a>argparse</h3><p><a href="https://docs.python.org/3/howto/argparse.html?highlight=argparse" target="_blank" rel="noopener">Argparse Tutorial</a>: This tutorial is intended to be a gentle introduction to argparse, the recommended command-line parsing module in the Python standard library.</p><p>A demo:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line">parser = argparse.ArgumentParser()</span><br><span class="line">parser.add_argument(<span class="string">"x"</span>, type=int, help=<span class="string">"the base"</span>)</span><br><span class="line">parser.add_argument(<span class="string">"y"</span>, type=int, help=<span class="string">"the exponent"</span>)</span><br><span class="line">parser.add_argument(<span class="string">"-v"</span>, <span class="string">"--verbosity"</span>, action=<span class="string">"count"</span>, default=<span class="number">0</span>)</span><br><span class="line">args = parser.parse_args()</span><br><span class="line">answer = args.x**args.y</span><br><span class="line"><span class="keyword">if</span> args.verbosity &gt;= <span class="number">2</span>:</span><br><span class="line">    print(<span class="string">"Running '&#123;&#125;'"</span>.format(__file__))</span><br><span class="line"><span class="keyword">if</span> args.verbosity &gt;= <span class="number">1</span>:</span><br><span class="line">    print(<span class="string">"&#123;&#125;^&#123;&#125; == "</span>.format(args.x, args.y), end=<span class="string">""</span>)</span><br><span class="line">print(answer)</span><br></pre></td></tr></table></figure><p>output:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ python3 prog.py <span class="number">4</span> <span class="number">2</span></span><br><span class="line"><span class="number">16</span></span><br><span class="line">$ python3 prog.py <span class="number">4</span> <span class="number">2</span> -v</span><br><span class="line"><span class="number">4</span>^<span class="number">2</span> == <span class="number">16</span></span><br><span class="line">$ python3 prog.py <span class="number">4</span> <span class="number">2</span> -vv</span><br><span class="line">Running <span class="string">'prog.py'</span></span><br><span class="line"><span class="number">4</span>^<span class="number">2</span> == <span class="number">16</span></span><br></pre></td></tr></table></figure><p>补充<code>vars</code>:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>parser = argparse.ArgumentParser()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>parser.add_argument(<span class="string">'--foo'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>args = parser.parse_args([<span class="string">'--foo'</span>, <span class="string">'BAR'</span>])</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vars(args)</span><br><span class="line">&#123;<span class="string">'foo'</span>: <span class="string">'BAR'</span>&#125;</span><br></pre></td></tr></table></figure><h3 id="unittest"><a href="#unittest" class="headerlink" title="unittest"></a>unittest</h3><p><a href="https://docs.python.org/3/library/unittest.html" target="_blank" rel="noopener">unittest</a>——Unit testing framework</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> unittest</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestStringMethods</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_upper</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.assertEqual(<span class="string">'foo'</span>.upper(), <span class="string">'FOO'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_isupper</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.assertTrue(<span class="string">'FOO'</span>.isupper())</span><br><span class="line">        self.assertFalse(<span class="string">'Foo'</span>.isupper())</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_split</span><span class="params">(self)</span>:</span></span><br><span class="line">        s = <span class="string">'hello world'</span></span><br><span class="line">        self.assertEqual(s.split(), [<span class="string">'hello'</span>, <span class="string">'world'</span>])</span><br><span class="line">        <span class="comment"># check that s.split fails when the separator is not a string</span></span><br><span class="line">        <span class="keyword">with</span> self.assertRaises(TypeError):</span><br><span class="line">            s.split(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    unittest.main()</span><br></pre></td></tr></table></figure><blockquote><p>注意一点，这里使用unittest可以在<code>test_xxx</code>函数内部任意位置调用<code>self.assertEqual</code>等命令来进行测试，于此不同的是<code>doctest</code>一般是对整个函数进行测试，也是通过计算结果与预期结果的对比。</p></blockquote><p>补充<code>@unittest.skipIf(*condition*, *reason*)</code>：</p><blockquote><p>Skip the decorated test if <em>condition</em> is true.</p></blockquote><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestSVM</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">    skip_flag = <span class="keyword">False</span></span><br><span class="line"><span class="meta">    @unittest.skipIf(skip_flag, "debug")</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_e71</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br></pre></td></tr></table></figure><h3 id="doctest"><a href="#doctest" class="headerlink" title="doctest"></a>doctest</h3><p><a href="https://docs.python.org/3/library/doctest.html" target="_blank" rel="noopener">doctest</a> — Test interactive Python examples</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">factorial</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="string">"""Return the factorial of n, an exact integer &gt;= 0.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    &gt;&gt;&gt; [factorial(n) for n in range(6)]</span></span><br><span class="line"><span class="string">    [1, 1, 2, 6, 24, 120]</span></span><br><span class="line"><span class="string">    &gt;&gt;&gt; factorial(30)</span></span><br><span class="line"><span class="string">    265252859812191058636308480000000</span></span><br><span class="line"><span class="string">    &gt;&gt;&gt; factorial(-1)</span></span><br><span class="line"><span class="string">    Traceback (most recent call last):</span></span><br><span class="line"><span class="string">        ...</span></span><br><span class="line"><span class="string">    ValueError: n must be &gt;= 0</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Factorials of floats are OK, but the float must be an exact integer:</span></span><br><span class="line"><span class="string">    &gt;&gt;&gt; factorial(30.1)</span></span><br><span class="line"><span class="string">    Traceback (most recent call last):</span></span><br><span class="line"><span class="string">        ...</span></span><br><span class="line"><span class="string">    ValueError: n must be exact integer</span></span><br><span class="line"><span class="string">    &gt;&gt;&gt; factorial(30.0)</span></span><br><span class="line"><span class="string">    265252859812191058636308480000000</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    It must also not be ridiculously large:</span></span><br><span class="line"><span class="string">    &gt;&gt;&gt; factorial(1e100)</span></span><br><span class="line"><span class="string">    Traceback (most recent call last):</span></span><br><span class="line"><span class="string">        ...</span></span><br><span class="line"><span class="string">    OverflowError: n too large</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">import</span> math</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> n &gt;= <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">"n must be &gt;= 0"</span>)</span><br><span class="line">    <span class="keyword">if</span> math.floor(n) != n:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">"n must be exact integer"</span>)</span><br><span class="line">    <span class="keyword">if</span> n+<span class="number">1</span> == n:  <span class="comment"># catch a value like 1e300</span></span><br><span class="line">        <span class="keyword">raise</span> OverflowError(<span class="string">"n too large"</span>)</span><br><span class="line">    result = <span class="number">1</span></span><br><span class="line">    factor = <span class="number">2</span></span><br><span class="line">    <span class="keyword">while</span> factor &lt;= n:</span><br><span class="line">        result *= factor</span><br><span class="line">        factor += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="keyword">import</span> doctest</span><br><span class="line">    doctest.testmod()</span><br></pre></td></tr></table></figure><blockquote><p>注意这里我们不仅可以进行测试，也可以在顶部对函数进行注释。当然，下面的测试也会自动加入文档注释之中。</p></blockquote><p>补充，终端下测试：<code>python -m doctest -v example.py</code></p><h3 id="logging"><a href="#logging" class="headerlink" title="logging"></a>logging</h3><p><a href="https://docs.python.org/3/howto/logging.html#logging-basic-tutorial" target="_blank" rel="noopener">Logging HOWTO——Basic Logging Tutorial</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestSVM</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">    skip_flag = <span class="keyword">False</span></span><br><span class="line"><span class="meta">    @unittest.skipIf(skip_flag, "debug")</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_e71</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#...</span></span><br><span class="line">        logger.info(<span class="string">"\n res is \n %s \n x is \n %s\n"</span> % (str(res), res[<span class="string">"x"</span>]))</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    logging.basicConfig(level=logging.INFO, format=<span class="string">'%(asctime)s - %(name)s - %(levelname)s - %(message)s'</span>)</span><br><span class="line">    logger = logging.getLogger(__name__)</span><br></pre></td></tr></table></figure><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://docs.python.org/3/library/" target="_blank" rel="noopener">Python doc</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>大学</title>
       <link href="/2019/05/20/%E5%A4%A7%E5%AD%A6/"/>
       <url>/2019/05/20/%E5%A4%A7%E5%AD%A6/</url>
       
-        <content type="html"><![CDATA[<center>某日清晨，我的大学</center><p>四年前，我来到小岛，来到海大。</p><p>若把城西小校门看作六点钟方向，出租车司机是把我放在大概六点半方向，并指明校门方向。而我先走到了十一点的位置，没找到校门，问路，折返，又走到两点钟方向，问路，折返，然后找到校门，至此完成我大学的“入场仪式”。</p><p>那时候的我绝没有想到，之后的几年我依旧会这样在真正的目的地旁边绕来绕去…</p><p>我从高考的阴影走出来，满怀信心地开启大学生活。我有很多想做的事，但是逐渐发现大学生活并非我想象中的那般美好。我在想自己真正想要的大学生活是什么样的，没想通，当时认为大概是自由吧。</p><p>后来渐渐了解到真实的社会，真实的一切。我觉着很多事不对，想做些什么，但是发现自己什么都做不到，我开始想是不是自己做错了什么。但我没觉得自己做错什么，所以我一度认为“错的不是我，是这个世界”。</p><p>我觉着这世界太残酷，太喧嚣，太容易让人迷失了…</p><center>某日深夜，我的大学</center><p>自毕业这段日子以来，我就在思考一个问题——在我的大学，我所得到的到底是什么？</p><p>开始我是这样想的，首先是一个刚刚步入校门的我（当然是完成“入场仪式”之后），不妨记为$I_{input}$。这时候的我，经历了高考的失利以及之后的重新面对；拥有对大学的美好憧憬，渴望着那未知的一切；有着清晰的自我意识。之后四年，也就是现在的我，不妨记为$I_{output}$。如今的我，经历了考研的折磨（于我而言，这点毫无疑问，无论如今结果如何）以及之后无尽的疲惫；似乎有些看轻未来的一切（一切，没错）；自我意识自然也是更为清晰。</p><p>那么我的大学约等于$I_{output} - I_{input}$，是否能够称之为成长呢？或许是，毕竟又经历那么多事情，思考了那么多问题，人之所谓阅历总是有所提升的。又或许不是，毕竟我一直认为的就是这样——机械的劳动以及所谓的苦难与奋斗无关，可以确定的一点就是它抹杀了很多东西，无可修复，镜子碎了就是碎了。所以我又很难称之为成长。</p><p>所以我又想到，说清楚某个东西是什么，比如$I_{output} - I_{input}$，其实是很难的事情。那么，先退一步看下其表现出来的属性，根据其属性来判断其本身也是勉强可行的。那么，我的大学是好些还是坏些？值得余生去追思还是就此任其四处流散直至寥寥数语？</p><p>我还是陷入了困难，我没有答案。但总是想总是会有一些可以用文字表达出来的：</p><blockquote><p>虽然前两年还是比较瘦，但是现在已经稍微胖点了；虽然自己觉着变得黑很多了，其实只是比以前黑了一点；眼镜又加了100度；考了研继续读书；做了自己想做的事，读书，编程，游戏，动漫等；做了自己不想做的事，比前者多太多了；在每个当下都去尝试做了很多“当下的我不可能去做的事”，全是悲喜交集；明确了人生的终极目的是改变世界，明确了自己基本不可能改变世界，明确了自己还是要去改变世界，明确了自己想要的世界是“真实的世界”（而非“景观的世界”），明确了在这个世界去找寻真实的人是多么困难的一件事情（概率论上说，或许就是概率为0的事件）。</p></blockquote><p>所以现在对于$I_{output} - I_{input}$，这个约等于我的大学的东西，我的认识是什么呢？大概是这样的：</p><div class="table-container"><table><thead><tr><th>？</th><th>！</th></tr></thead><tbody><tr><td>`</td><td>我曾听闻王国覆灭，终归无闻。</td></tr><tr><td>(</td><td>一直学习，一直寻觅。</td></tr><tr><td>^</td><td>灾难始终慢我一步</td></tr><tr><td>)</td><td>过往成了我今日的梦魇。</td></tr><tr><td>]</td><td>他们的意志根本承受不了我眼中的所见。</td></tr><tr><td>[</td><td>每个人注定都要重复历史，这也是我的来路。</td></tr><tr><td>-</td><td>我犹记得这泪珠滑落的时刻。</td></tr><tr><td>*</td><td>如果我根本懒得在乎，这一切都会变得非常容易。</td></tr><tr><td>+</td><td>我还记得曾经肩头上只扛着一个世界而已</td></tr><tr><td>&amp;</td><td>我希望自己的悲剧能够不再重演！</td></tr><tr><td>#</td><td>眼望四野，心无苟且。</td></tr><tr><td>@</td><td>也许会失败，但我不会放弃。</td></tr><tr><td>/</td><td>哪怕一次也好，我想要的一夜安眠。</td></tr></tbody></table></div><p>&lt;未竟&gt;</p>]]></content>
+        <content type="html"><![CDATA[<center>某日清晨，我的大学</center><p>四年前，我来到小岛，来到海大。</p><p>若把城西小校门看作六点钟方向，出租车司机是把我放在大概六点半方向，并指明校门方向。而我先走到了十一点的位置，没找到校门，问路，折返，又走到两点钟方向，问路，折返，然后找到校门，至此完成我大学的“入场仪式”。</p><p>那时候的我绝没有想到，之后的几年我依旧会这样在真正的目的地旁边绕来绕去…</p><p>我从高考的阴影走出来，满怀信心地开启大学生活。我有很多想做的事，但是逐渐发现大学生活并非我想象中的那般美好。我在想自己真正想要的大学生活是什么样的，没想通，当时认为大概是自由吧。</p><p>后来渐渐了解到真实的社会，真实的一切。我觉着很多事不对，想做些什么，但是发现自己什么都做不到，我开始想是不是自己做错了什么。但我没觉得自己做错什么，所以我一度认为“错的不是我，是这个世界”。</p><p>我觉着这世界太残酷，太喧嚣，太容易让人迷失了…</p><center>某日深夜，我的大学</center><p>自毕业这段日子以来，我就在思考一个问题——在我的大学，我所得到的到底是什么？</p><p>开始我是这样想的，首先是一个刚刚步入校门的我（当然是完成“入场仪式”之后），不妨记为$I_{input}$。这时候的我，经历了高考的失利以及之后的重新面对；拥有对大学的美好憧憬，渴望着那未知的一切；有着清晰的自我意识。之后四年，也就是现在的我，不妨记为$I_{output}$。如今的我，经历了考研的折磨（于我而言，这点毫无疑问，无论如今结果如何）以及之后无尽的疲惫；似乎有些看轻未来的一切（一切，没错）；自我意识自然也是更为清晰。</p><p>那么我的大学约等于$I_{output} - I_{input}$，是否能够称之为成长呢？或许是，毕竟又经历那么多事情，思考了那么多问题，人之所谓阅历总是有所提升的。又或许不是，毕竟我一直认为的就是这样——机械的劳动以及所谓的苦难与奋斗无关，可以确定的一点就是它抹杀了很多东西，无可修复，镜子碎了就是碎了。所以我又很难称之为成长。</p><p>所以我又想到，说清楚某个东西是什么，比如$I_{output} - I_{input}$，其实是很难的事情。那么，先退一步看下其表现出来的属性，根据其属性来判断其本身也是勉强可行的。那么，我的大学是好些还是坏些？值得余生去追思还是就此任其四处流散直至寥寥数语？</p><p>我还是陷入了困难，我没有答案。但总是想总是会有一些可以用文字表达出来的：</p><blockquote><p>虽然前两年还是比较瘦，但是现在已经稍微胖点了；虽然自己觉着变得黑很多了，其实只是比以前黑了一点；眼镜又加了100度；考了研继续读书；做了自己想做的事，读书，编程，游戏，动漫等；做了自己不想做的事，比前者多太多了；在每个当下都去尝试做了很多“当下的我不可能去做的事”，全是悲喜交集；明确了人生的终极目的是改变世界，明确了自己基本不可能改变世界，明确了自己还是要去改变世界，明确了自己想要的世界是“真实的世界”（而非“景观的世界”），明确了在这个世界去找寻真实的人是多么困难的一件事情（概率论上说，或许就是概率为0的事件）。</p></blockquote><p>所以现在对于$I_{output} - I_{input}$，这个约等于我的大学的东西，我的认识是什么呢？大概是这样的：</p><div class="table-container"><table><thead><tr><th>？</th><th>！</th></tr></thead><tbody><tr><td>`</td><td>我曾听闻王国覆灭，终归无闻。</td></tr><tr><td>(</td><td>一直学习，一直寻觅。</td></tr><tr><td>^</td><td>灾难始终慢我一步</td></tr><tr><td>)</td><td>过往成了我今日的梦魇。</td></tr><tr><td>]</td><td>他们的意志根本承受不了我眼中的所见。</td></tr><tr><td>[</td><td>每个人注定都要重复历史，这也是我的来路。</td></tr><tr><td>-</td><td>我犹记得这泪珠滑落的时刻。</td></tr><tr><td>*</td><td>如果我根本懒得在乎，这一切都会变得非常容易。</td></tr><tr><td>+</td><td>我还记得曾经肩头上只扛着一个世界而已</td></tr><tr><td>&amp;</td><td>我希望自己的悲剧能够不再重演！</td></tr><tr><td>#</td><td>眼望四野，心无苟且。</td></tr><tr><td>@</td><td>也许会失败，但我不会放弃。</td></tr><tr><td>/</td><td>哪怕一次也好，我想要的一夜安眠。</td></tr></tbody></table></div><p>&lt;未竟&gt;</p><p><a href="https://github.com/shenxiangzhuang/shenxiangzhuang.github.io.git" target="_blank" rel="noopener">https://github.com/shenxiangzhuang/shenxiangzhuang.github.io.git</a><br><a href="https://github.com/shenxiangzhuang/shenxiangzhaung.github.io.git" target="_blank" rel="noopener">https://github.com/shenxiangzhuang/shenxiangzhaung.github.io.git</a></p>]]></content>
       
       
       <categories>
@@ -1484,9 +1509,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Cpp </tag>
+            
+            <tag> Python </tag>
             
             <tag> Octave </tag>
             
@@ -1517,9 +1542,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> OpenCV </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -3181,9 +3206,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3216,9 +3241,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3251,9 +3276,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3525,9 +3550,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
@@ -3560,9 +3585,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> Data Analysis </tag>
-            
             <tag> ML </tag>
+            
+            <tag> Data Analysis </tag>
             
             <tag> Clustering </tag>
             
