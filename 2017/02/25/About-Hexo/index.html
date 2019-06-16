@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="自动开启编辑器为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.System: Ubuntu16.04 64bitEditor: Haroopad 123456var spawn = require(&apos;child_process&apos;).spawn;// Hexo 3hexo.on(&apos;new&apos;, function(data)&amp;#123;  spawn">
+  <meta name="description" content="自动开启编辑器为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.System: Ubuntu16.04 64bitEditor: Haroopad 在hexo根目录下的scripts文件夹下面新建open.js文件，添加下面的内容： 123456var spawn = require(&apos;child_process&apos;).spawn;// Hexo">
 <meta name="keywords" content="Hexo,js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="About Hexo">
 <meta property="og:url" content="http://datahonor.com/2017/02/25/About-Hexo/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="自动开启编辑器为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.System: Ubuntu16.04 64bitEditor: Haroopad 123456var spawn = require(&apos;child_process&apos;).spawn;// Hexo 3hexo.on(&apos;new&apos;, function(data)&amp;#123;  spawn">
+<meta property="og:description" content="自动开启编辑器为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.System: Ubuntu16.04 64bitEditor: Haroopad 在hexo根目录下的scripts文件夹下面新建open.js文件，添加下面的内容： 123456var spawn = require(&apos;child_process&apos;).spawn;// Hexo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-13T04:37:24.609Z">
+<meta property="og:updated_time" content="2019-06-16T04:02:18.845Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="About Hexo">
-<meta name="twitter:description" content="自动开启编辑器为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.System: Ubuntu16.04 64bitEditor: Haroopad 123456var spawn = require(&apos;child_process&apos;).spawn;// Hexo 3hexo.on(&apos;new&apos;, function(data)&amp;#123;  spawn">
+<meta name="twitter:description" content="自动开启编辑器为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.System: Ubuntu16.04 64bitEditor: Haroopad 在hexo根目录下的scripts文件夹下面新建open.js文件，添加下面的内容： 123456var spawn = require(&apos;child_process&apos;).spawn;// Hexo">
 
 
 
@@ -439,7 +439,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-13 12:37:24" itemprop="dateModified" datetime="2019-06-13T12:37:24+08:00">2019-06-13</time>
+                <time title="修改时间：2019-06-16 12:02:18" itemprop="dateModified" datetime="2019-06-16T12:02:18+08:00">2019-06-16</time>
               
             
           </span>
@@ -511,6 +511,7 @@
 
       
         <h6 id="自动开启编辑器"><a href="#自动开启编辑器" class="headerlink" title="自动开启编辑器"></a>自动开启编辑器</h6><p>为Hexo 3增加新功能： hexo new “title” 后自动使用指定编辑器打开新建的md文件.<br>System: Ubuntu16.04 64bit<br>Editor: Haroopad</p>
+<p>在hexo根目录下的<code>scripts</code>文件夹下面新建<code>open.js</code>文件，添加下面的内容：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> spawn = <span class="built_in">require</span>(<span class="string">'child_process'</span>).spawn;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Hexo 3</span></span><br><span class="line">hexo.on(<span class="string">'new'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  spawn(<span class="string">'haroopad'</span>, [data.path]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h6 id="迁移"><a href="#迁移" class="headerlink" title="迁移"></a>迁移</h6><p>之前的系统崩了，将完整的hexo文件备份，重装系统，将文件拷到电脑，安装nvm,配置node,记得版本不要最新的，官方推荐稳定版本即可。配置git,npm, 再hexo文件重新安装hexo，只进行一次安装命令即可[也就是不用hexo init这些初始化和配置的命令]</p>
 <h6 id="更换评论系统"><a href="#更换评论系统" class="headerlink" title="更换评论系统"></a>更换评论系统</h6><p>多说要崩，换Disqus, 但是要FQ才能加载出来，。对技术爱好者来说FQ是基本技能，所以还是选择了它。</p>
@@ -591,7 +592,7 @@ menu:
   <p><span>本文标题:</span>About Hexo</p>
   <p><span>文章作者:</span>不秩稚童</p>
   <p><span>发布时间:</span>2017年02月25日 - 11:30:19</p>
-  <p><span>最后更新:</span>2019年06月13日 - 12:37:24</p>
+  <p><span>最后更新:</span>2019年06月16日 - 12:02:18</p>
   <p><span>原始链接:</span><a href="/2017/02/25/About-Hexo/" title="About Hexo">http://datahonor.com/2017/02/25/About-Hexo/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/02/25/About-Hexo/" aria-label="复制成功！"></i></span>
   </p>
@@ -761,7 +762,7 @@ menu:
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">149</span>
+                    <span class="site-state-item-count">150</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
