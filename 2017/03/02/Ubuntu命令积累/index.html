@@ -104,7 +104,7 @@
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Ubuntu/3.png">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Ubuntu/4.png">
 <meta property="og:image" content="http://dataimage-1252464519.costj.myqcloud.com/images/Ubuntu/5.png">
-<meta property="og:updated_time" content="2019-06-17T03:11:07.480Z">
+<meta property="og:updated_time" content="2019-06-21T06:58:02.042Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu命令积累">
 <meta name="twitter:description" content="查看CPU及内存123456top或者sudo apt-get install htophtop 查看网络12345# 查看网卡ifconfig# 查看网络状况sudo apt-get install slurmslurm -i wlan0    # wlan0是指定的网卡 登录到远程服务器1ssh -l root 45.77.14.149 指定端口 1ssh -l root -p 45.77.1">
@@ -444,7 +444,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-17 11:11:07" itemprop="dateModified" datetime="2019-06-17T11:11:07+08:00">2019-06-17</time>
+                <time title="修改时间：2019-06-21 14:58:02" itemprop="dateModified" datetime="2019-06-21T14:58:02+08:00">2019-06-21</time>
               
             
           </span>
@@ -595,6 +595,14 @@
 <h5 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h5><p>首先是测试远程主机的端口是否开启：<code>telnet 192.168.1.103 80</code><br>查看本地的端口开启情况： <code>sudo ufw status</code><br>打开80端口： <code>sudo ufw allow 80</code><br>防火墙开启： <code>sudo ufw enable</code><br>防火墙重启： <code>sudo ufw reload</code></p>
 <h5 id="安装rpm文件"><a href="#安装rpm文件" class="headerlink" title="安装rpm文件"></a>安装rpm文件</h5><p>参考<a href="https://linuxize.com/post/install-rpm-packages-on-ubuntu/" target="_blank" rel="noopener">这里</a>, 方法是利用alien将其转化为deb文件:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install alien</span><br><span class="line">#将rpm转换位deb，完成后会生成一个同名的xxxx.deb </span><br><span class="line">sudo alien xxxx.rpm</span><br><span class="line">sudo dpkg -i xxxx.deb</span><br></pre></td></tr></table></figure>
+<h5 id="修改ubuntu自带截图的默认保存路径"><a href="#修改ubuntu自带截图的默认保存路径" class="headerlink" title="修改ubuntu自带截图的默认保存路径"></a>修改ubuntu自带截图的默认保存路径</h5><p>1.安装dconf-editor：<br> <code>sudo apt-get install dconf-tools</code></p>
+<p>2.打开系统自带搜索，搜dconf-editor打开</p>
+<p>3.按照org-&gt;gnome-&gt;gnome-screenshot-&gt;auto-save-directory，修改value为需要的路径。</p>
+<p>参考<a href="https://www.cnblogs.com/zhihaowu/p/8846479.html" target="_blank" rel="noopener">这里</a></p>
+<h5 id="增加用户"><a href="#增加用户" class="headerlink" title="增加用户"></a>增加用户</h5><ol>
+<li>终端执行：<code>adduser username</code></li>
+<li>执行：<code>usermod -aG sudo username</code>（<a href="https://linuxize.com/post/how-to-create-a-sudo-user-on-ubuntu/#3-add-the-new-user-to-the-sudo-group" target="_blank" rel="noopener">Add the new user to the <code>sudo</code> group</a>）</li>
+</ol>
 
       
     </div>
@@ -622,7 +630,7 @@
   <p><span>本文标题:</span>Ubuntu命令积累</p>
   <p><span>文章作者:</span>不秩稚童</p>
   <p><span>发布时间:</span>2017年03月02日 - 17:03:54</p>
-  <p><span>最后更新:</span>2019年06月17日 - 11:11:07</p>
+  <p><span>最后更新:</span>2019年06月21日 - 14:58:02</p>
   <p><span>原始链接:</span><a href="/2017/03/02/Ubuntu命令积累/" title="Ubuntu命令积累">http://datahonor.com/2017/03/02/Ubuntu命令积累/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2017/03/02/Ubuntu命令积累/" aria-label="复制成功！"></i></span>
   </p>
@@ -792,7 +800,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">151</span>
+                    <span class="site-state-item-count">152</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1053,7 +1061,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#查看CPU及内存"><span class="nav-number">1.</span> <span class="nav-text">查看CPU及内存</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看网络"><span class="nav-number">2.</span> <span class="nav-text">查看网络</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#登录到远程服务器"><span class="nav-number">3.</span> <span class="nav-text">登录到远程服务器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#设置环境变量"><span class="nav-number">4.</span> <span class="nav-text">设置环境变量</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#临时设置"><span class="nav-number">4.1.</span> <span class="nav-text">临时设置</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#用户环境变量"><span class="nav-number">4.2.</span> <span class="nav-text">用户环境变量</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#系统-所有用户-环境变量"><span class="nav-number">4.3.</span> <span class="nav-text">系统[所有用户]环境变量</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#bashrc-or-zshrc"><span class="nav-number">5.</span> <span class="nav-text">~/.bashrc or ~/.zshrc</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看-特定程序-线程"><span class="nav-number">6.</span> <span class="nav-text">查看[特定程序]线程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Ubuntu计划任务之crontab"><span class="nav-number">7.</span> <span class="nav-text">Ubuntu计划任务之crontab</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Ubuntu安装中文字体"><span class="nav-number">8.</span> <span class="nav-text">Ubuntu安装中文字体</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#为浏览器安装安装flash插件"><span class="nav-number">9.</span> <span class="nav-text">为浏览器安装安装flash插件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#标题栏实时显示上下行网速、CPU及内存使用率"><span class="nav-number">10.</span> <span class="nav-text">标题栏实时显示上下行网速、CPU及内存使用率</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#挽救-boot-清除image"><span class="nav-number">11.</span> <span class="nav-text">挽救/boot,清除image</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#开机黑屏，光标闪烁"><span class="nav-number">12.</span> <span class="nav-text">开机黑屏，光标闪烁</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#防火墙"><span class="nav-number">13.</span> <span class="nav-text">防火墙</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装rpm文件"><span class="nav-number">14.</span> <span class="nav-text">安装rpm文件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#查看CPU及内存"><span class="nav-number">1.</span> <span class="nav-text">查看CPU及内存</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看网络"><span class="nav-number">2.</span> <span class="nav-text">查看网络</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#登录到远程服务器"><span class="nav-number">3.</span> <span class="nav-text">登录到远程服务器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#设置环境变量"><span class="nav-number">4.</span> <span class="nav-text">设置环境变量</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#临时设置"><span class="nav-number">4.1.</span> <span class="nav-text">临时设置</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#用户环境变量"><span class="nav-number">4.2.</span> <span class="nav-text">用户环境变量</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#系统-所有用户-环境变量"><span class="nav-number">4.3.</span> <span class="nav-text">系统[所有用户]环境变量</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#bashrc-or-zshrc"><span class="nav-number">5.</span> <span class="nav-text">~/.bashrc or ~/.zshrc</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看-特定程序-线程"><span class="nav-number">6.</span> <span class="nav-text">查看[特定程序]线程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Ubuntu计划任务之crontab"><span class="nav-number">7.</span> <span class="nav-text">Ubuntu计划任务之crontab</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Ubuntu安装中文字体"><span class="nav-number">8.</span> <span class="nav-text">Ubuntu安装中文字体</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#为浏览器安装安装flash插件"><span class="nav-number">9.</span> <span class="nav-text">为浏览器安装安装flash插件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#标题栏实时显示上下行网速、CPU及内存使用率"><span class="nav-number">10.</span> <span class="nav-text">标题栏实时显示上下行网速、CPU及内存使用率</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#挽救-boot-清除image"><span class="nav-number">11.</span> <span class="nav-text">挽救/boot,清除image</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#开机黑屏，光标闪烁"><span class="nav-number">12.</span> <span class="nav-text">开机黑屏，光标闪烁</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#防火墙"><span class="nav-number">13.</span> <span class="nav-text">防火墙</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装rpm文件"><span class="nav-number">14.</span> <span class="nav-text">安装rpm文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改ubuntu自带截图的默认保存路径"><span class="nav-number">15.</span> <span class="nav-text">修改ubuntu自带截图的默认保存路径</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#增加用户"><span class="nav-number">16.</span> <span class="nav-text">增加用户</span></a></li></ol></div>
             
 
           </div>
