@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://datahonor.com/2019/06/15/Argparse-unittest-doctest-logging/</loc>
+    
+    <lastmod>2019-06-22T08:20:19.423Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://datahonor.com/2019/06/19/%E5%86%8D%E8%AF%BB%E3%80%8A%E5%AF%BB%E6%89%BE%E6%97%A0%E5%8F%8C%E3%80%8B/</loc>
+    
+    <lastmod>2019-06-21T13:11:35.024Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://datahonor.com/2019/06/21/VsCode%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</loc>
     
     <lastmod>2019-06-21T07:05:23.697Z</lastmod>
@@ -16,13 +30,6 @@
   </url>
   
   <url>
-    <loc>http://datahonor.com/2019/06/19/%E5%86%8D%E8%AF%BB%E3%80%8A%E5%AF%BB%E6%89%BE%E6%97%A0%E5%8F%8C%E3%80%8B/</loc>
-    
-    <lastmod>2019-06-19T11:17:45.398Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://datahonor.com/2019/06/16/Awesome-Tools-in-Github/</loc>
     
     <lastmod>2019-06-16T04:19:51.181Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://datahonor.com/2017/02/25/About-Hexo/</loc>
     
     <lastmod>2019-06-16T04:02:18.845Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/2019/06/15/Argparse-unittest-doctest-logging/</loc>
-    
-    <lastmod>2019-06-15T02:59:36.105Z</lastmod>
     
   </url>
   
