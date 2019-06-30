@@ -101,7 +101,7 @@
 <meta property="og:description" content="Overview前些时候看到Jupyter Lab，用了下，感觉特别好用。不仅包括原来的Jupyter Notebook，而且还有各种环境的Console。一开始只是安装了Jupyter最专注的三个Kernel:Julia, Python和R。最近想撸下Haskell做数据分析的东西，所以就把Haskell的Kernel装上了,顺便把Octave一块装上了。 R Kernel参考R-In-Jupy">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://datahonor-1252464519.costj.myqcloud.com/201803/Screenshot%20from%202018-03-21%2011-22-42.png">
-<meta property="og:updated_time" content="2019-04-08T09:22:15.091Z">
+<meta property="og:updated_time" content="2019-06-30T03:39:12.682Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jupyter Lab&amp;Multi-Kernels">
 <meta name="twitter:description" content="Overview前些时候看到Jupyter Lab，用了下，感觉特别好用。不仅包括原来的Jupyter Notebook，而且还有各种环境的Console。一开始只是安装了Jupyter最专注的三个Kernel:Julia, Python和R。最近想撸下Haskell做数据分析的东西，所以就把Haskell的Kernel装上了,顺便把Octave一块装上了。 R Kernel参考R-In-Jupy">
@@ -441,7 +441,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-08 17:22:15" itemprop="dateModified" datetime="2019-04-08T17:22:15+08:00">2019-04-08</time>
+                <time title="修改时间：2019-06-30 11:39:12" itemprop="dateModified" datetime="2019-06-30T11:39:12+08:00">2019-06-30</time>
               
             
           </span>
@@ -522,6 +522,9 @@
 <h3 id="Octave-Kernel"><a href="#Octave-Kernel" class="headerlink" title="Octave Kernel"></a>Octave Kernel</h3><p>也是按照<a href="https://github.com/calysto/octave_kernel" target="_blank" rel="noopener">Doc</a>来的，由于之前装过Octave了，所以直接<code>pip install octave_kernel</code>就可以了。往后用计算器就比较方便了:P</p>
 <p>最后，<code>jupyter lab</code>启动：</p>
 <p><img src="http://datahonor-1252464519.costj.myqcloud.com/201803/Screenshot%20from%202018-03-21%2011-22-42.png" alt=""></p>
+<h3 id="C-kernel"><a href="#C-kernel" class="headerlink" title="C kernel"></a>C kernel</h3><p>根据<a href="https://github.com/brendan-rius/jupyter-c-kernel" target="_blank" rel="noopener">jupyter-c-kernel</a>安装即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install jupyter-c-kernel</span><br><span class="line">install_c_kernel --user</span><br></pre></td></tr></table></figure>
+<p>第二条命令涉及权限问题，参考<a href="https://github.com/Calysto/matlab_kernel/issues/68" target="_blank" rel="noopener"><strong>matlab_kernel</strong></a>中类似的问题，加上<code>--user</code>参数解决。</p>
 <h1 id="删除多余的Kernel"><a href="#删除多余的Kernel" class="headerlink" title="删除多余的Kernel"></a>删除多余的Kernel</h1><p>参考<a href="https://stackoverflow.com/questions/42635310/remove-kernel-on-jupyter-notebook" target="_blank" rel="noopener">这里</a></p>
 <p>先<code>jupyter kernelspec list</code>查看各个Kernel的安装路径，之后<code>jupyter kernelspec uninstall unwanted-kernel</code>删除不需要的Kernel即可。</p>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels" target="_blank" rel="noopener">Jupyter kernels</a><br><a href="https://jupyter-client.readthedocs.io/en/latest/kernels.html#kernelspecs" target="_blank" rel="noopener">Kernel specs</a></p>
@@ -552,7 +555,7 @@
   <p><span>本文标题:</span>Jupyter Lab&Multi-Kernels</p>
   <p><span>文章作者:</span>不秩稚童</p>
   <p><span>发布时间:</span>2018年03月21日 - 11:09:22</p>
-  <p><span>最后更新:</span>2019年04月08日 - 17:22:15</p>
+  <p><span>最后更新:</span>2019年06月30日 - 11:39:12</p>
   <p><span>原始链接:</span><a href="/2018/03/21/Jupyter-Lab-Multi-Kernels/" title="Jupyter Lab&Multi-Kernels">http://datahonor.com/2018/03/21/Jupyter-Lab-Multi-Kernels/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2018/03/21/Jupyter-Lab-Multi-Kernels/" aria-label="复制成功！"></i></span>
   </p>
@@ -991,7 +994,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#R-Kernel"><span class="nav-number">2.</span> <span class="nav-text">R Kernel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Haskell-Kernel"><span class="nav-number">3.</span> <span class="nav-text">Haskell Kernel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Octave-Kernel"><span class="nav-number">4.</span> <span class="nav-text">Octave Kernel</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#删除多余的Kernel"><span class="nav-number"></span> <span class="nav-text">删除多余的Kernel</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">1.</span> <span class="nav-text">Reference</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#R-Kernel"><span class="nav-number">2.</span> <span class="nav-text">R Kernel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Haskell-Kernel"><span class="nav-number">3.</span> <span class="nav-text">Haskell Kernel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Octave-Kernel"><span class="nav-number">4.</span> <span class="nav-text">Octave Kernel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-kernel"><span class="nav-number">5.</span> <span class="nav-text">C kernel</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#删除多余的Kernel"><span class="nav-number"></span> <span class="nav-text">删除多余的Kernel</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">1.</span> <span class="nav-text">Reference</span></a></li></ol></li></div>
             
 
           </div>
