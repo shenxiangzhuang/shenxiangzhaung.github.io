@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>How to write a Python package?</title>
+      <link href="/2019/07/13/How-to-write-a-Python-package/"/>
+      <url>/2019/07/13/How-to-write-a-Python-package/</url>
+      
+        <content type="html"><![CDATA[<p>这里记录下如何将自己写的Python程序打包成库，并安装, 参考官方文档<a href="https://packaging.python.org/tutorials/packaging-projects/" target="_blank" rel="noopener">Packaging Python Projects</a>。</p><h3 id="安装流程"><a href="#安装流程" class="headerlink" title="安装流程"></a>安装流程</h3><p>首先，我们要有一个文件夹，比如名为<code>mypkg</code>的文件夹。</p><p>之后我们需要将我们主要的源文件，比如<code>myml</code>文件夹（比如里面是一些机器学习的算法实现）， 添加到<code>mypkg</code>中。</p><p>之后我们需要两个辅助文件：<code>setup.py</code>和<code>README.md</code></p><p>其中<code>README.md</code>写上项目简短的说明即可。</p><p><code>setup.py</code>需要按照一定的格式写，比如下面这样：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> setuptools</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"README.md"</span>, <span class="string">"r"</span>) <span class="keyword">as</span> fh:</span><br><span class="line">    long_description = fh.read()</span><br><span class="line"></span><br><span class="line">setuptools.setup(</span><br><span class="line">    name=<span class="string">"example-pkg-your-username"</span>,</span><br><span class="line">    version=<span class="string">"0.0.1"</span>,</span><br><span class="line">    author=<span class="string">"Example Author"</span>,</span><br><span class="line">    author_email=<span class="string">"author@example.com"</span>,</span><br><span class="line">    description=<span class="string">"A small example package"</span>,</span><br><span class="line">    long_description=long_description,</span><br><span class="line">    long_description_content_type=<span class="string">"text/markdown"</span>,</span><br><span class="line">    url=<span class="string">"https://github.com/pypa/sampleproject"</span>,</span><br><span class="line">    packages=setuptools.find_packages(),</span><br><span class="line">    classifiers=[</span><br><span class="line">        <span class="string">"Programming Language :: Python :: 3"</span>,</span><br><span class="line">        <span class="string">"License :: OSI Approved :: MIT License"</span>,</span><br><span class="line">        <span class="string">"Operating System :: OS Independent"</span>,</span><br><span class="line">    ],</span><br><span class="line">)</span><br></pre></td></tr></table></figure><p>之后呢，我们就可以将上面的文件夹打包并发布了，发布之后便可以自行通过pip安装。具体可以参考上面官网的链接。</p><p>但是，我们这里可能会有一个需求，那就是，我们可能要持续开发这个库。这样的话，我们可以用pip提供的<a href="https://pip.pypa.io/en/stable/reference/pip_install/#id44" target="_blank" rel="noopener">“Editable” Installs</a>, 如此可以进入<a href="https://setuptools.readthedocs.io/en/latest/setuptools.html#id25" target="_blank" rel="noopener">“Development Mode”</a>。也即，我们只需要在<code>mypkg</code>运行<code>pip install -e myml</code>就可以直接进入开发模式。这时候我们已经可以在终端（但是记得不要在<code>myml</code>文件下，不然就会无法调用）运行Python, 并直接通过<code>import myml</code>来完成调用。</p><p>这里我们对代码进行更改后，只需要在<code>mypkg</code>文件下用命令行运行<code>python setup.py build</code>就可以将新的改动提交上去。最后在我们将项目开发完时，运行<code>python setup.py develop --uninstall</code>将开发版本卸载掉，之后重新打包发布，在安装正式版本即可。</p><h3 id="init-py文件的写法"><a href="#init-py文件的写法" class="headerlink" title="__init__.py文件的写法"></a><code>__init__.py</code>文件的写法</h3><p>首先明确<code>__init__.py</code>文件存在，则其所在的文件夹被自动视为一个<code>package</code>,在运行<code>import package_name</code>之后，其对应的<code>__init__.py</code>首先被调用。</p><p>按照文档，最顶层的<code>__init__.py</code>可以只写上库名字：<code>name = &quot;example_pkg&quot;</code>。</p><p>其他的一般空下，不写任何东西，只是作为一个标识。</p><p>也有时候会用于多个<code>submodules</code>的一起调用或者限制调用，具体可以参考<em>Python Cookbook3-Chap10</em>.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>VsCode使用记录</title>
       <link href="/2019/06/21/VsCode%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/"/>
       <url>/2019/06/21/VsCode%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</url>
@@ -1584,9 +1609,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Cpp </tag>
+            
+            <tag> Python </tag>
             
             <tag> Octave </tag>
             
@@ -1617,9 +1642,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> OpenCV </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
