@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Mysql8.0 in Ubuntu16.04</title>
+      <link href="/2019/07/28/Mysql8-0-in-Ubuntu16-04/"/>
+      <url>/2019/07/28/Mysql8-0-in-Ubuntu16-04/</url>
+      
+        <content type="html"><![CDATA[<h3 id="5-7版本更新到8-0"><a href="#5-7版本更新到8-0" class="headerlink" title="5.7版本更新到8.0"></a>5.7版本更新到8.0</h3><p>好久每用过MySQL了，最近重新学下，发现已经更新到8.0了…原来的是5.7。不过在<a href="https://stackoverflow.com/questions/49963923/how-do-i-update-mysql-5-7-to-the-new-mysql-8-0" target="_blank" rel="noopener">stackoverflow</a>查到更新是比较简单的。</p><p>更新的过程按照第一个答案说的直接执行就可以，这里不再重复。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+            <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>How to write a Python package?</title>
       <link href="/2019/07/13/How-to-write-a-Python-package/"/>
       <url>/2019/07/13/How-to-write-a-Python-package/</url>
@@ -163,16 +190,16 @@
       
       <categories>
           
-          <category> LaTex </category>
-          
-          <category> Tips </category>
+          <category> Latex </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> LaTex </tag>
+            <tag> Tips </tag>
+            
+            <tag> Latex </tag>
             
         </tags>
       
@@ -1609,9 +1636,9 @@
       
         <tags>
             
-            <tag> Cpp </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Cpp </tag>
             
             <tag> Octave </tag>
             
@@ -1642,9 +1669,9 @@
       
         <tags>
             
-            <tag> OpenCV </tag>
-            
             <tag> Python </tag>
+            
+            <tag> OpenCV </tag>
             
         </tags>
       
