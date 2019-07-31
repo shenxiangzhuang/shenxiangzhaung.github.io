@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://datahonor.com/2019/07/13/How-to-write-a-Python-package/</loc>
+    
+    <lastmod>2019-07-31T09:41:07.914Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://datahonor.com/2019/07/28/Mysql8-0-in-Ubuntu16-04/</loc>
     
     <lastmod>2019-07-28T14:32:13.897Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://datahonor.com/2018/07/30/Errata-of-PythonDA/</loc>
     
     <lastmod>2019-07-17T08:56:32.187Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/2019/07/13/How-to-write-a-Python-package/</loc>
-    
-    <lastmod>2019-07-16T01:36:53.224Z</lastmod>
     
   </url>
   
