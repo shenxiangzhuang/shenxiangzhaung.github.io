@@ -13,18 +13,20 @@
       
       <categories>
           
-          <category> OpenCV </category>
-          
-          <category> Ubuntu </category>
-          
-          <category> Clion </category>
+          <category> Cpp </category>
           
       </categories>
       
       
         <tags>
             
+            <tag> Cpp </tag>
+            
             <tag> OpenCV </tag>
+            
+            <tag> Ubuntu </tag>
+            
+            <tag> Clion </tag>
             
         </tags>
       
