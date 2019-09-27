@@ -92,19 +92,19 @@
 
 
 
-  <meta name="description" content="为什么需要装饰器(Motivation)存在即合理。在开始之前，我们必须先搞清楚我们为什么需要装饰器,亦即我们可以用它来做什么。总的来说用处很多，下面我们举几个例子。 计时器,日志记录比如说我们想要测试一些函数的运行时间。在函数不多的时候，我们可以分别计时测试。 比如对函数func1: 12def func1():    print(&quot;Hello, I am func1.&quot;) 计时代码大概是下面这">
+  <meta name="description" content="为什么需要装饰器(Motivation)存在即合理。在开始之前，我们必须先搞清楚我们为什么需要装饰器,亦即我们可以用它来做什么。总的来说用处很多，下面我们举几个例子。 计时器,日志记录比如说我们想要测试一些函数的运行时间。在函数不多的时候，我们可以分别计时测试。 比如对函数func: 12def func():    print(&quot;Hello, I am func.&quot;) 计时代码大概是下面这样：">
 <meta name="keywords" content="Python,Tips">
 <meta property="og:type" content="article">
 <meta property="og:title" content="梅贾的窃魂卷(1&#x2F;25)——Decorator and Closure">
 <meta property="og:url" content="http://datahonor.com/2019/09/26/梅贾的窃魂卷-1-25-——Decorator-and-Closure/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="为什么需要装饰器(Motivation)存在即合理。在开始之前，我们必须先搞清楚我们为什么需要装饰器,亦即我们可以用它来做什么。总的来说用处很多，下面我们举几个例子。 计时器,日志记录比如说我们想要测试一些函数的运行时间。在函数不多的时候，我们可以分别计时测试。 比如对函数func1: 12def func1():    print(&quot;Hello, I am func1.&quot;) 计时代码大概是下面这">
+<meta property="og:description" content="为什么需要装饰器(Motivation)存在即合理。在开始之前，我们必须先搞清楚我们为什么需要装饰器,亦即我们可以用它来做什么。总的来说用处很多，下面我们举几个例子。 计时器,日志记录比如说我们想要测试一些函数的运行时间。在函数不多的时候，我们可以分别计时测试。 比如对函数func: 12def func():    print(&quot;Hello, I am func.&quot;) 计时代码大概是下面这样：">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/2019/decorator">
-<meta property="og:updated_time" content="2019-09-27T02:36:26.543Z">
+<meta property="og:updated_time" content="2019-09-27T02:57:22.554Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="梅贾的窃魂卷(1&#x2F;25)——Decorator and Closure">
-<meta name="twitter:description" content="为什么需要装饰器(Motivation)存在即合理。在开始之前，我们必须先搞清楚我们为什么需要装饰器,亦即我们可以用它来做什么。总的来说用处很多，下面我们举几个例子。 计时器,日志记录比如说我们想要测试一些函数的运行时间。在函数不多的时候，我们可以分别计时测试。 比如对函数func1: 12def func1():    print(&quot;Hello, I am func1.&quot;) 计时代码大概是下面这">
+<meta name="twitter:description" content="为什么需要装饰器(Motivation)存在即合理。在开始之前，我们必须先搞清楚我们为什么需要装饰器,亦即我们可以用它来做什么。总的来说用处很多，下面我们举几个例子。 计时器,日志记录比如说我们想要测试一些函数的运行时间。在函数不多的时候，我们可以分别计时测试。 比如对函数func: 12def func():    print(&quot;Hello, I am func.&quot;) 计时代码大概是下面这样：">
 <meta name="twitter:image" content="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/2019/decorator">
 
 
@@ -441,7 +441,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-27 10:36:26" itemprop="dateModified" datetime="2019-09-27T10:36:26+08:00">2019-09-27</time>
+                <time title="修改时间：2019-09-27 10:57:22" itemprop="dateModified" datetime="2019-09-27T10:57:22+08:00">2019-09-27</time>
               
             
           </span>
@@ -514,13 +514,13 @@
       
         <h3 id="为什么需要装饰器-Motivation"><a href="#为什么需要装饰器-Motivation" class="headerlink" title="为什么需要装饰器(Motivation)"></a>为什么需要装饰器(Motivation)</h3><p>存在即合理。在开始之前，我们必须先搞清楚我们为什么需要装饰器,亦即我们可以用它来做什么。总的来说用处很多，下面我们举几个例子。</p>
 <h4 id="计时器-日志记录"><a href="#计时器-日志记录" class="headerlink" title="计时器,日志记录"></a>计时器,日志记录</h4><p>比如说我们想要测试一些函数的运行时间。在函数不多的时候，我们可以分别计时测试。</p>
-<p>比如对函数<code>func1</code>:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"Hello, I am func1."</span>)</span><br></pre></td></tr></table></figure>
+<p>比如对函数<code>func</code>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"Hello, I am func."</span>)</span><br></pre></td></tr></table></figure>
 <p>计时代码大概是下面这样：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">()</span>:</span></span><br><span class="line">    start = time.time()</span><br><span class="line">    print(<span class="string">"Hello, I am func1."</span>)</span><br><span class="line">    end = time.time()</span><br><span class="line">    print(<span class="string">'Spend:&#123;&#125;s'</span>.format(end - start))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    func()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">()</span>:</span></span><br><span class="line">    start = time.time()</span><br><span class="line">    print(<span class="string">"Hello, I am func."</span>)</span><br><span class="line">    end = time.time()</span><br><span class="line">    print(<span class="string">'Spend:&#123;&#125;s'</span>.format(end - start))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    func()</span><br></pre></td></tr></table></figure>
 <p>输出:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hello, I am func1.</span><br><span class="line">Spend:2.5510787963867188e-05s</span><br></pre></td></tr></table></figure>
-<p>可以看出我们这里修改了<code>func1</code>的函数定义才完成计时的任务,使得代码可读性十分差,对于复杂点的函数,我们可能会很艰难地才能找到函数原始的定义.有些读者可能觉得,我们也可以不修改函数定义达到计时的目的确实如此,代码大概是下面这样.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hello, I am func.</span><br><span class="line">Spend:2.5510787963867188e-05s</span><br></pre></td></tr></table></figure>
+<p>可以看出我们这里修改了<code>func</code>的函数定义才完成计时的任务,使得代码可读性十分差,对于复杂点的函数,我们可能会很艰难地才能找到函数原始的定义.有些读者可能觉得,我们也可以不修改函数定义达到计时的目的确实如此,代码大概是下面这样.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"Hello, I am a function."</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    start = time.time()</span><br><span class="line">    func()</span><br><span class="line">    end = time.time()</span><br><span class="line">    print(<span class="string">'Spend:&#123;&#125;s'</span>.format(end - start))</span><br></pre></td></tr></table></figure>
 <p>输出：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hello, I am a function.</span><br><span class="line">Spend:2.2411346435546875e-05s</span><br></pre></td></tr></table></figure>
@@ -632,7 +632,7 @@
   <p><span>本文标题:</span>梅贾的窃魂卷(1/25)——Decorator and Closure</p>
   <p><span>文章作者:</span>不秩稚童</p>
   <p><span>发布时间:</span>2019年09月26日 - 16:35:34</p>
-  <p><span>最后更新:</span>2019年09月27日 - 10:36:26</p>
+  <p><span>最后更新:</span>2019年09月27日 - 10:57:22</p>
   <p><span>原始链接:</span><a href="/2019/09/26/梅贾的窃魂卷-1-25-——Decorator-and-Closure/" title="梅贾的窃魂卷(1/25)——Decorator and Closure">http://datahonor.com/2019/09/26/梅贾的窃魂卷-1-25-——Decorator-and-Closure/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2019/09/26/梅贾的窃魂卷-1-25-——Decorator-and-Closure/" aria-label="复制成功！"></i></span>
   </p>
