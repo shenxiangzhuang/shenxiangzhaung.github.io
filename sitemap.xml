@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://datahonor.com/about/index.html</loc>
+    
+    <lastmod>2019-10-06T06:34:00.027Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://datahonor.com/2019/09/26/%E6%A2%85%E8%B4%BE%E7%9A%84%E7%AA%83%E9%AD%82%E5%8D%B7-1-25-%E2%80%94%E2%80%94Decorator-and-Closure/</loc>
     
     <lastmod>2019-09-27T02:57:22.554Z</lastmod>
@@ -313,13 +320,6 @@
     <loc>http://datahonor.com/2018/03/03/%E5%AF%92%E5%81%87%E5%B0%8F%E8%AE%B0/</loc>
     
     <lastmod>2018-03-03T09:23:10.488Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/about/index.html</loc>
-    
-    <lastmod>2018-02-26T04:03:33.441Z</lastmod>
     
   </url>
   
