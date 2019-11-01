@@ -92,19 +92,19 @@
 
 
 
-  <meta name="description" content="为什么需要装饰器(Motivation)存在即合理。在开始之前，我们必须先搞清楚我们为什么需要装饰器,亦即我们可以用它来做什么。总的来说用处很多，下面我们举几个例子。 计时器,日志记录比如说我们想要测试一些函数的运行时间。在函数不多的时候，我们可以分别计时测试。 比如对函数func: 12def func():    print(&quot;Hello, I am func.&quot;) 计时代码大概是下面这样：">
+  <meta name="description" content="为什么需要装饰器(MotivaMotion)存在即合理。在开始之前，我们必须先搞清楚我们为什么需要装饰器,亦即我们可以用它来做什么。总的来说用处很多，下面我们举几个例子。 计时器,日志记录比如说我们想要测试一些函数的运行时间。在函数不多的时候，我们可以分别计时测试。 比如对函数func: 12def func():    print(&quot;Hello, I am func.&quot;) 计时代码大概是下面这样">
 <meta name="keywords" content="Python,Tips">
 <meta property="og:type" content="article">
 <meta property="og:title" content="梅贾的窃魂卷(1&#x2F;25)——Decorator and Closure">
 <meta property="og:url" content="http://datahonor.com/2019/09/26/梅贾的窃魂卷-1-25-——Decorator-and-Closure/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="为什么需要装饰器(Motivation)存在即合理。在开始之前，我们必须先搞清楚我们为什么需要装饰器,亦即我们可以用它来做什么。总的来说用处很多，下面我们举几个例子。 计时器,日志记录比如说我们想要测试一些函数的运行时间。在函数不多的时候，我们可以分别计时测试。 比如对函数func: 12def func():    print(&quot;Hello, I am func.&quot;) 计时代码大概是下面这样：">
+<meta property="og:description" content="为什么需要装饰器(MotivaMotion)存在即合理。在开始之前，我们必须先搞清楚我们为什么需要装饰器,亦即我们可以用它来做什么。总的来说用处很多，下面我们举几个例子。 计时器,日志记录比如说我们想要测试一些函数的运行时间。在函数不多的时候，我们可以分别计时测试。 比如对函数func: 12def func():    print(&quot;Hello, I am func.&quot;) 计时代码大概是下面这样">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/2019/decorator">
-<meta property="og:updated_time" content="2019-09-27T02:57:22.554Z">
+<meta property="og:updated_time" content="2019-11-01T07:27:21.983Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="梅贾的窃魂卷(1&#x2F;25)——Decorator and Closure">
-<meta name="twitter:description" content="为什么需要装饰器(Motivation)存在即合理。在开始之前，我们必须先搞清楚我们为什么需要装饰器,亦即我们可以用它来做什么。总的来说用处很多，下面我们举几个例子。 计时器,日志记录比如说我们想要测试一些函数的运行时间。在函数不多的时候，我们可以分别计时测试。 比如对函数func: 12def func():    print(&quot;Hello, I am func.&quot;) 计时代码大概是下面这样：">
+<meta name="twitter:description" content="为什么需要装饰器(MotivaMotion)存在即合理。在开始之前，我们必须先搞清楚我们为什么需要装饰器,亦即我们可以用它来做什么。总的来说用处很多，下面我们举几个例子。 计时器,日志记录比如说我们想要测试一些函数的运行时间。在函数不多的时候，我们可以分别计时测试。 比如对函数func: 12def func():    print(&quot;Hello, I am func.&quot;) 计时代码大概是下面这样">
 <meta name="twitter:image" content="https://datahonor-1252464519.cos.ap-beijing-1.myqcloud.com/2019/decorator">
 
 
@@ -441,7 +441,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-27 10:57:22" itemprop="dateModified" datetime="2019-09-27T10:57:22+08:00">2019-09-27</time>
+                <time title="修改时间：2019-11-01 15:27:21" itemprop="dateModified" datetime="2019-11-01T15:27:21+08:00">2019-11-01</time>
               
             
           </span>
@@ -512,7 +512,7 @@
       
 
       
-        <h3 id="为什么需要装饰器-Motivation"><a href="#为什么需要装饰器-Motivation" class="headerlink" title="为什么需要装饰器(Motivation)"></a>为什么需要装饰器(Motivation)</h3><p>存在即合理。在开始之前，我们必须先搞清楚我们为什么需要装饰器,亦即我们可以用它来做什么。总的来说用处很多，下面我们举几个例子。</p>
+        <h3 id="为什么需要装饰器-MotivaMotion"><a href="#为什么需要装饰器-MotivaMotion" class="headerlink" title="为什么需要装饰器(MotivaMotion)"></a>为什么需要装饰器(MotivaMotion)</h3><p>存在即合理。在开始之前，我们必须先搞清楚我们为什么需要装饰器,亦即我们可以用它来做什么。总的来说用处很多，下面我们举几个例子。</p>
 <h4 id="计时器-日志记录"><a href="#计时器-日志记录" class="headerlink" title="计时器,日志记录"></a>计时器,日志记录</h4><p>比如说我们想要测试一些函数的运行时间。在函数不多的时候，我们可以分别计时测试。</p>
 <p>比如对函数<code>func</code>:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"Hello, I am func."</span>)</span><br></pre></td></tr></table></figure>
@@ -603,6 +603,7 @@
 <h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>装饰器的“装饰”是在正式调用函数前就进行的(Fluent Python有例子)，也就是一旦对函数进行了装饰，要返回去得到初始的函数是比较麻烦，如果有这种需求可以不用<code>@</code>，在运行需要的时候手动调用装饰器。</p>
 <p><code>decorator stacking</code>虽好，也没有层次限制，但是当堆叠太多的时候还是对程序的运行效率带来压力，毕竟本身是函数的调用。</p>
 <p>另外，Python也是有Class Decorator的哦，后面可能会讲到:-)</p>
+<p>我们一直在讲用装饰器来对函数进行计时,但是如果采用上述方式对递归函数计时会发现程序在每次执行函数时候都会打印一个时间,这显然不是我们想要的.解决方法有两种,第一是继续使用装饰器,但是需要做一些细节的处理,参考<a href="https://stackoverflow.com/questions/29560643/python-counting-executing-time-of-a-recursion-function-with-decorator" target="_blank" rel="noopener">这里</a>, 另一种就是参考后面基于<a href="http://datahonor.com/2019/11/01/%E6%A2%85%E8%B4%BE%E7%9A%84%E7%AA%83%E9%AD%82%E5%8D%B7-2-25-%E2%80%94%E2%80%94Context-Managers-with/">Context Managers</a>的方法.</p>
 <h3 id="Python内部的装饰器"><a href="#Python内部的装饰器" class="headerlink" title="Python内部的装饰器"></a>Python内部的装饰器</h3><p>比较好用且常用的就是用<a href="https://docs.python.org/3/library/functools.html?highlight=lru_cache#functools.lru_cache" target="_blank" rel="noopener"><code>functools.lru_cache</code></a>来进行<code>Memoization</code>。</p>
 <p>常见的求Fibonacci数列时，使用这个装饰器可以在提升运行速度的同时极大地简化程序，快去试一试吧:-)</p>
 
@@ -632,7 +633,7 @@
   <p><span>本文标题:</span>梅贾的窃魂卷(1/25)——Decorator and Closure</p>
   <p><span>文章作者:</span>不秩稚童</p>
   <p><span>发布时间:</span>2019年09月26日 - 16:35:34</p>
-  <p><span>最后更新:</span>2019年09月27日 - 10:57:22</p>
+  <p><span>最后更新:</span>2019年11月01日 - 15:27:21</p>
   <p><span>原始链接:</span><a href="/2019/09/26/梅贾的窃魂卷-1-25-——Decorator-and-Closure/" title="梅贾的窃魂卷(1/25)——Decorator and Closure">http://datahonor.com/2019/09/26/梅贾的窃魂卷-1-25-——Decorator-and-Closure/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2019/09/26/梅贾的窃魂卷-1-25-——Decorator-and-Closure/" aria-label="复制成功！"></i></span>
   </p>
@@ -724,6 +725,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/11/01/梅贾的窃魂卷-2-25-——Context-Managers-with/" rel="prev" title="梅贾的窃魂卷(2/25)——Context Managers(with)">
+                梅贾的窃魂卷(2/25)——Context Managers(with) <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -798,7 +803,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">157</span>
+                    <span class="site-state-item-count">158</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1069,7 +1074,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么需要装饰器-Motivation"><span class="nav-number">1.</span> <span class="nav-text">为什么需要装饰器(Motivation)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#计时器-日志记录"><span class="nav-number">1.1.</span> <span class="nav-text">计时器,日志记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缓存器"><span class="nav-number">1.2.</span> <span class="nav-text">缓存器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#装饰器是什么"><span class="nav-number">2.</span> <span class="nav-text">装饰器是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是闭包"><span class="nav-number">3.</span> <span class="nav-text">什么是闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改闭包中自由变量"><span class="nav-number">4.</span> <span class="nav-text">修改闭包中自由变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么用装饰器"><span class="nav-number">5.</span> <span class="nav-text">怎么用装饰器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#如何写-amp-作用原理"><span class="nav-number">5.1.</span> <span class="nav-text">如何写&amp;作用原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参数传入-被装饰函数func"><span class="nav-number">5.2.</span> <span class="nav-text">参数传入(被装饰函数func)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参数传入-装饰器本身timeIt"><span class="nav-number">5.3.</span> <span class="nav-text">参数传入(装饰器本身timeIt)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多重装饰-decorator-stacking"><span class="nav-number">5.4.</span> <span class="nav-text">多重装饰(decorator stacking)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可用于DEBUG的装饰器"><span class="nav-number">5.5.</span> <span class="nav-text">可用于DEBUG的装饰器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意事项"><span class="nav-number">5.6.</span> <span class="nav-text">注意事项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python内部的装饰器"><span class="nav-number">6.</span> <span class="nav-text">Python内部的装饰器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么需要装饰器-MotivaMotion"><span class="nav-number">1.</span> <span class="nav-text">为什么需要装饰器(MotivaMotion)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#计时器-日志记录"><span class="nav-number">1.1.</span> <span class="nav-text">计时器,日志记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缓存器"><span class="nav-number">1.2.</span> <span class="nav-text">缓存器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#装饰器是什么"><span class="nav-number">2.</span> <span class="nav-text">装饰器是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是闭包"><span class="nav-number">3.</span> <span class="nav-text">什么是闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改闭包中自由变量"><span class="nav-number">4.</span> <span class="nav-text">修改闭包中自由变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么用装饰器"><span class="nav-number">5.</span> <span class="nav-text">怎么用装饰器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#如何写-amp-作用原理"><span class="nav-number">5.1.</span> <span class="nav-text">如何写&amp;作用原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参数传入-被装饰函数func"><span class="nav-number">5.2.</span> <span class="nav-text">参数传入(被装饰函数func)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参数传入-装饰器本身timeIt"><span class="nav-number">5.3.</span> <span class="nav-text">参数传入(装饰器本身timeIt)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多重装饰-decorator-stacking"><span class="nav-number">5.4.</span> <span class="nav-text">多重装饰(decorator stacking)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可用于DEBUG的装饰器"><span class="nav-number">5.5.</span> <span class="nav-text">可用于DEBUG的装饰器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意事项"><span class="nav-number">5.6.</span> <span class="nav-text">注意事项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python内部的装饰器"><span class="nav-number">6.</span> <span class="nav-text">Python内部的装饰器</span></a></li></ol></div>
             
 
           </div>
