@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://datahonor.com/2017/03/08/Ubuntu16-04LTS%E4%B8%8B%E5%AE%89%E8%A3%85Hadoop2-7-3/</loc>
+    <lastmod>2019-12-09</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2019/11/10/%E6%A2%85%E8%B4%BE%E7%9A%84%E7%AA%83%E9%AD%82%E5%8D%B7-3-25-%E2%80%94%E2%80%94Annotations/</loc>
     <lastmod>2019-11-10</lastmod>
   </url>  <url>
@@ -126,9 +129,6 @@
   </url>  <url>
     <loc>http://datahonor.com/2018/03/30/%E5%85%B3%E4%BA%8EPython%E5%9F%BA%E7%A1%80%E7%9A%84%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2018-03-30</lastmod>
-  </url>  <url>
-    <loc>http://datahonor.com/2017/03/08/Ubuntu16-04LTS%E4%B8%8B%E5%AE%89%E8%A3%85Hadoop2-7-3/</loc>
-    <lastmod>2018-03-27</lastmod>
   </url>  <url>
     <loc>http://datahonor.com/2018/03/22/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</loc>
     <lastmod>2018-03-26</lastmod>

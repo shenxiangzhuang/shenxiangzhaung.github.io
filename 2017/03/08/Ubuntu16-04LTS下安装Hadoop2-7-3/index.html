@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="安装Hadoop3&amp;amp;Spark参考这里（写的很好）：HadoopSpark  注意下载hadoop的时候不要下错了..在这里,下载后面的。  安装Hadoop2.7.3 写的比较早，可能已经不可行，仅供参考。  主要就是参考digitalocean的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在Step 3 — Configuring Hadoop’s Java Home这里，按">
+  <meta name="description" content="1. 安装Hadoop2.7.3 写的比较早，可能已经不可行，仅供参考，3.0以上新版的安装在后面。  主要就是参考digitalocean的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在Step 3 — Configuring Hadoop’s Java Home这里，按照教程上的方法找到JAVA的路径再设置，两种方法均可以运行Hadoop，但是在后面运行MapReduce时却总是报错">
 <meta name="keywords" content="Hadoop,大数据,分布式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu16.04LTS下安装Hadoop&amp;Spark">
 <meta property="og:url" content="http://datahonor.com/2017/03/08/Ubuntu16-04LTS下安装Hadoop2-7-3/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="安装Hadoop3&amp;amp;Spark参考这里（写的很好）：HadoopSpark  注意下载hadoop的时候不要下错了..在这里,下载后面的。  安装Hadoop2.7.3 写的比较早，可能已经不可行，仅供参考。  主要就是参考digitalocean的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在Step 3 — Configuring Hadoop’s Java Home这里，按">
+<meta property="og:description" content="1. 安装Hadoop2.7.3 写的比较早，可能已经不可行，仅供参考，3.0以上新版的安装在后面。  主要就是参考digitalocean的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在Step 3 — Configuring Hadoop’s Java Home这里，按照教程上的方法找到JAVA的路径再设置，两种方法均可以运行Hadoop，但是在后面运行MapReduce时却总是报错">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-27T15:28:35.536Z">
+<meta property="og:updated_time" content="2019-12-09T05:42:57.807Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu16.04LTS下安装Hadoop&amp;Spark">
-<meta name="twitter:description" content="安装Hadoop3&amp;amp;Spark参考这里（写的很好）：HadoopSpark  注意下载hadoop的时候不要下错了..在这里,下载后面的。  安装Hadoop2.7.3 写的比较早，可能已经不可行，仅供参考。  主要就是参考digitalocean的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在Step 3 — Configuring Hadoop’s Java Home这里，按">
+<meta name="twitter:description" content="1. 安装Hadoop2.7.3 写的比较早，可能已经不可行，仅供参考，3.0以上新版的安装在后面。  主要就是参考digitalocean的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在Step 3 — Configuring Hadoop’s Java Home这里，按照教程上的方法找到JAVA的路径再设置，两种方法均可以运行Hadoop，但是在后面运行MapReduce时却总是报错">
 
 
 
@@ -439,7 +439,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-03-27 23:28:35" itemprop="dateModified" datetime="2018-03-27T23:28:35+08:00">2018-03-27</time>
+                <time title="修改时间：2019-12-09 13:42:57" itemprop="dateModified" datetime="2019-12-09T13:42:57+08:00">2019-12-09</time>
               
             
           </span>
@@ -510,12 +510,8 @@
       
 
       
-        <h3 id="安装Hadoop3-amp-Spark"><a href="#安装Hadoop3-amp-Spark" class="headerlink" title="安装Hadoop3&amp;Spark"></a>安装Hadoop3&amp;Spark</h3><p>参考这里（写的很好）：<br><a href="http://www.exegetic.biz/blog/2017/07/installing-hadoop-ubuntu/" target="_blank" rel="noopener">Hadoop</a><br><a href="http://www.exegetic.biz/blog/2017/07/installing-spark-ubuntu/" target="_blank" rel="noopener">Spark</a></p>
-<blockquote>
-<p>注意下载hadoop的时候不要下错了..在<a href="http://apache.mesi.com.ar/hadoop/common/hadoop-3.0.1/" target="_blank" rel="noopener">这里</a>,下载后面的。</p>
-</blockquote>
-<h3 id="安装Hadoop2-7-3"><a href="#安装Hadoop2-7-3" class="headerlink" title="安装Hadoop2.7.3"></a>安装Hadoop2.7.3</h3><blockquote>
-<p>写的比较早，可能已经不可行，仅供参考。</p>
+        <h3 id="1-安装Hadoop2-7-3"><a href="#1-安装Hadoop2-7-3" class="headerlink" title="1. 安装Hadoop2.7.3"></a>1. 安装Hadoop2.7.3</h3><blockquote>
+<p>写的比较早，可能已经不可行，仅供参考，3.0以上新版的安装在后面。</p>
 </blockquote>
 <p>主要就是参考<a href="https://www.digitalocean.com/community/tutorials/how-to-install-hadoop-in-stand-alone-mode-on-ubuntu-16-04" target="_blank" rel="noopener">digitalocean</a>的这篇教程，写的十分详细，这里不再赘述。要注意的一点就是在<em>Step 3 — Configuring Hadoop’s Java Home</em>这里，按照教程上的方法找到JAVA的路径再设置，两种方法均可以运行Hadoop，但是在后面运行MapReduce时却总是报错：</p>
 <blockquote>
@@ -530,6 +526,14 @@
 <p>export JAVA_HOME=/usr/jdk-8/jre/</p>
 </blockquote>
 <p>然后就可以了。<br>装好了，之后忙完这阵，就先学个入门: - )</p>
+<h3 id="2-安装Hadoop3-amp-Spark"><a href="#2-安装Hadoop3-amp-Spark" class="headerlink" title="2. 安装Hadoop3&amp;Spark"></a>2. 安装Hadoop3&amp;Spark</h3><p>参考<a href="https://www.digitalocean.com/community/tutorials/how-to-install-hadoop-in-stand-alone-mode-on-ubuntu-16-04" target="_blank" rel="noopener">digitalocean</a>和<a href="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html" target="_blank" rel="noopener">官方文档</a>安装即可。</p>
+<blockquote>
+<p>注意下载hadoop的时候不要下错了..在<a href="https://archive.apache.org/dist/hadoop/common/hadoop-3.0.1/" target="_blank" rel="noopener">这里</a>,下载<code>hadoop-3.0.1.tar.gz</code>文件。</p>
+</blockquote>
+<p>安装和测试过程中遇到的问题及其解决办法。</p>
+<h4 id="2-1-Setup-passphraseless-ssh"><a href="#2-1-Setup-passphraseless-ssh" class="headerlink" title="2.1 Setup passphraseless ssh"></a>2.1 Setup passphraseless ssh</h4><p>官方文档<code>Setup passphraseless ssh</code>步设置无密码登录<code>localhost</code>出错<a href="https://askubuntu.com/questions/762541/ubuntu-16-04-ssh-sign-and-send-pubkey-signing-failed-agent-refused-operation" target="_blank" rel="noopener">ssh: sign_and_send_pubkey: signing failed: agent refused operation</a>，参考对应链接执行<code>ssh-add</code>解决。</p>
+<h4 id="2-2-Execution-sbin-start-dfs-sh"><a href="#2-2-Execution-sbin-start-dfs-sh" class="headerlink" title="2.2 Execution: sbin/start-dfs.sh"></a>2.2 Execution: sbin/start-dfs.sh</h4><p>官方文档执行<code>sbin/start-dfs.sh</code>出错，参考<a href="https://stackoverflow.com/questions/42756555/permission-denied-error-while-running-start-dfs-sh" target="_blank" rel="noopener"><a href="https://stackoverflow.com/questions/42756555/permission-denied-error-while-running-start-dfs-sh" target="_blank" rel="noopener">Permission Denied error while running start-dfs.sh</a></a>,执行<code>export PDSH_RCMD_TYPE=ssh</code>解决。</p>
+<h4 id="2-3-Execution-bin-hdfs-dfs-mkdir-input"><a href="#2-3-Execution-bin-hdfs-dfs-mkdir-input" class="headerlink" title="2.3 Execution: bin/hdfs dfs -mkdir input"></a>2.3 Execution: bin/hdfs dfs -mkdir input</h4><p>官方文档执行<code>bin/hdfs dfs -mkdir input</code>出错。参考<a href="https://stackoverflow.com/questions/40143528/hdfs-dfs-mkdir-no-such-file-or-directory" target="_blank" rel="noopener">hdfs dfs -mkdir, No such file or directory</a>,执行<code>hdfs dfs -mkdir -p xxx</code>解决。</p>
 
       
     </div>
@@ -968,7 +972,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hadoop3-amp-Spark"><span class="nav-number">1.</span> <span class="nav-text">安装Hadoop3&amp;Spark</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hadoop2-7-3"><span class="nav-number">2.</span> <span class="nav-text">安装Hadoop2.7.3</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装Hadoop2-7-3"><span class="nav-number">1.</span> <span class="nav-text">1. 安装Hadoop2.7.3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装Hadoop3-amp-Spark"><span class="nav-number">2.</span> <span class="nav-text">2. 安装Hadoop3&amp;Spark</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-Setup-passphraseless-ssh"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 Setup passphraseless ssh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-Execution-sbin-start-dfs-sh"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 Execution: sbin/start-dfs.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-Execution-bin-hdfs-dfs-mkdir-input"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 Execution: bin/hdfs dfs -mkdir input</span></a></li></ol></li></ol></div>
             
 
           </div>
