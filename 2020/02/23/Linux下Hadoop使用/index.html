@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="概览记录Hadoop安装使用过程遇到的问题与解决方案。 报错：Connection refused运行hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input output &amp;#39;dfs[a-z.]+&amp;#39;报的错。 注意执行操作之前要先启动Hadoop，可以通过start-dfs.sh或">
+  <meta name="description" content="概览记录Hadoop安装使用过程遇到的问题与解决方案。注意安装Hadoop只是安装了HDFS和MapReduce两大组件。其他的想HBase是没有的，需要自己单独安装。 报错：Connection refused运行hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input output &amp;#39">
 <meta name="keywords" content="Hadoop">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux下Hadoop使用">
 <meta property="og:url" content="http://datahonor.com/2020/02/23/Linux下Hadoop使用/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="概览记录Hadoop安装使用过程遇到的问题与解决方案。 报错：Connection refused运行hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input output &amp;#39;dfs[a-z.]+&amp;#39;报的错。 注意执行操作之前要先启动Hadoop，可以通过start-dfs.sh或">
+<meta property="og:description" content="概览记录Hadoop安装使用过程遇到的问题与解决方案。注意安装Hadoop只是安装了HDFS和MapReduce两大组件。其他的想HBase是没有的，需要自己单独安装。 报错：Connection refused运行hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input output &amp;#39">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-23T04:38:58.184Z">
+<meta property="og:updated_time" content="2020-02-23T10:19:39.920Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux下Hadoop使用">
-<meta name="twitter:description" content="概览记录Hadoop安装使用过程遇到的问题与解决方案。 报错：Connection refused运行hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input output &amp;#39;dfs[a-z.]+&amp;#39;报的错。 注意执行操作之前要先启动Hadoop，可以通过start-dfs.sh或">
+<meta name="twitter:description" content="概览记录Hadoop安装使用过程遇到的问题与解决方案。注意安装Hadoop只是安装了HDFS和MapReduce两大组件。其他的想HBase是没有的，需要自己单独安装。 报错：Connection refused运行hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input output &amp;#39">
 
 
 
@@ -422,7 +422,7 @@
                 
               
 
-              <time title="创建时间：2020-02-23 12:01:05 / 修改时间：12:38:58" itemprop="dateCreated datePublished" datetime="2020-02-23T12:01:05+08:00">2020-02-23</time>
+              <time title="创建时间：2020-02-23 12:01:05 / 修改时间：18:19:39" itemprop="dateCreated datePublished" datetime="2020-02-23T12:01:05+08:00">2020-02-23</time>
             
 
             
@@ -498,7 +498,7 @@
       
 
       
-        <h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><p>记录Hadoop安装使用过程遇到的问题与解决方案。</p>
+        <h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><p>记录Hadoop安装使用过程遇到的问题与解决方案。注意安装Hadoop只是安装了HDFS和MapReduce两大组件。其他的想HBase是没有的，需要自己单独安装。</p>
 <h2 id="报错：Connection-refused"><a href="#报错：Connection-refused" class="headerlink" title="报错：Connection refused"></a>报错：Connection refused</h2><p>运行<code>hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input output &#39;dfs[a-z.]+&#39;</code>报的错。</p>
 <p>注意执行操作之前要先启动Hadoop，可以通过<code>start-dfs.sh</code>或者<code>start-all.sh</code><sup><a href="#fn_1" id="reffn_1">1</a></sup>。原因就是Hadoop未启动成功，通过<code>jps</code>看到<code>namenode</code>并未启动。比较奇怪的是安装的时候测试还是可以的，而且是完全按照<a href="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html" target="_blank" rel="noopener">官方文档</a>来的。</p>
 <p>问题就在官方文档…林子雨老师的<a href="http://dblab.xmu.edu.cn/blog/2441-2/" target="_blank" rel="noopener">Hadoop3.1.3安装教程</a>提到了这点：</p>
@@ -541,7 +541,7 @@
   <p><span>本文标题:</span>Linux下Hadoop使用</p>
   <p><span>文章作者:</span>不秩稚童</p>
   <p><span>发布时间:</span>2020年02月23日 - 12:01:05</p>
-  <p><span>最后更新:</span>2020年02月23日 - 12:38:58</p>
+  <p><span>最后更新:</span>2020年02月23日 - 18:19:39</p>
   <p><span>原始链接:</span><a href="/2020/02/23/Linux下Hadoop使用/" title="Linux下Hadoop使用">http://datahonor.com/2020/02/23/Linux下Hadoop使用/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2020/02/23/Linux下Hadoop使用/" aria-label="复制成功！"></i></span>
   </p>
@@ -709,7 +709,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">163</span>
+                    <span class="site-state-item-count">164</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -764,7 +764,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">20</span>
+                      
+                    
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -899,7 +901,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">61</span>
+                      
+                    
+                    <span class="site-state-item-count">62</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
