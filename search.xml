@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Linux下Scala与Spark使用</title>
+      <link href="/2020/02/23/Linux%E4%B8%8BScala%E4%B8%8ESpark%E4%BD%BF%E7%94%A8/"/>
+      <url>/2020/02/23/Linux%E4%B8%8BScala%E4%B8%8ESpark%E4%BD%BF%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><p>原生Spark与Scala的使用。</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>参考林子雨老师教程<a href="https://dblab.xmu.edu.cn/blog/1307-2/" target="_blank" rel="noopener">Spark的安装和使用</a>。</p><h2 id="ERROR-Failed-to-construct-terminal-falling-back-to-unsupported"><a href="#ERROR-Failed-to-construct-terminal-falling-back-to-unsupported" class="headerlink" title="[ERROR] Failed to construct terminal; falling back to unsupported"></a>[ERROR] Failed to construct terminal; falling back to unsupported</h2><p>启动<code>spark-shell</code>的时候出现这行报错，通过<code>~/.zshrc</code>添加<code>export TERM=xterm-color</code>解决，貌似这是<code>sbt</code>的锅…参考<a href="https://github.com/sbt/sbt/issues/3240" target="_blank" rel="noopener">Github</a></p><h2 id="WARN-NativeCodeLoader-Unable-to-load-native-hadoop-library"><a href="#WARN-NativeCodeLoader-Unable-to-load-native-hadoop-library" class="headerlink" title="WARN NativeCodeLoader: Unable to load native-hadoop library"></a>WARN NativeCodeLoader: Unable to load native-hadoop library</h2><p>也是启动<code>spark-shell</code>的时候出现的报错。通过<code>vim ./conf/spark-env.sh</code>编辑，在最后加入<code>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HADOOP_HOME/lib/native</code>即可。参考<a href="https://www.stefaanlippens.net/spark-native-hadoop.html" target="_blank" rel="noopener">“Native-Hadoop” Library Load Issues with Spark</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Spark </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Scala </tag>
+            
+            <tag> Spark </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux下Hadoop使用</title>
       <link href="/2020/02/23/Linux%E4%B8%8BHadoop%E4%BD%BF%E7%94%A8/"/>
       <url>/2020/02/23/Linux%E4%B8%8BHadoop%E4%BD%BF%E7%94%A8/</url>
@@ -45,9 +72,9 @@
       
         <tags>
             
-            <tag> PySpark </tag>
-            
             <tag> Spark </tag>
+            
+            <tag> PySpark </tag>
             
         </tags>
       
@@ -1964,9 +1991,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -2552,9 +2579,9 @@
             
             <tag> Octave </tag>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -3706,9 +3733,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -3733,9 +3760,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
