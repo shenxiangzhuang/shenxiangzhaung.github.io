@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="概览原生Spark与Scala的使用。 安装参考林子雨老师教程Spark的安装和使用。 [ERROR] Failed to construct terminal; falling back to unsupported启动spark-shell的时候出现这行报错，通过~/.zshrc添加export TERM=xterm-color解决，貌似这是sbt的锅…参考Github WARN Native">
+  <meta name="description" content="概览原生Spark与Scala的使用。 安装参考林子雨老师教程Spark的安装和使用。 问题解决SBT换源问题这个真的是众所周知，林老师也是一提，网上的答案也大多是错的！错的很微妙… 错的教程就是类似这样， 正确的是这样, 有什么区别呢，就是相差一个s,也就是说文件~/.sbt/repositories的内容应该是下面这样(注意是https) 1234567[repositories]localo">
 <meta name="keywords" content="Spark,Scala">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux下Scala与Spark使用">
 <meta property="og:url" content="http://datahonor.com/2020/02/23/Linux下Scala与Spark使用/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="概览原生Spark与Scala的使用。 安装参考林子雨老师教程Spark的安装和使用。 [ERROR] Failed to construct terminal; falling back to unsupported启动spark-shell的时候出现这行报错，通过~/.zshrc添加export TERM=xterm-color解决，貌似这是sbt的锅…参考Github WARN Native">
+<meta property="og:description" content="概览原生Spark与Scala的使用。 安装参考林子雨老师教程Spark的安装和使用。 问题解决SBT换源问题这个真的是众所周知，林老师也是一提，网上的答案也大多是错的！错的很微妙… 错的教程就是类似这样， 正确的是这样, 有什么区别呢，就是相差一个s,也就是说文件~/.sbt/repositories的内容应该是下面这样(注意是https) 1234567[repositories]localo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-23T05:59:19.151Z">
+<meta property="og:updated_time" content="2020-03-02T13:38:43.949Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux下Scala与Spark使用">
-<meta name="twitter:description" content="概览原生Spark与Scala的使用。 安装参考林子雨老师教程Spark的安装和使用。 [ERROR] Failed to construct terminal; falling back to unsupported启动spark-shell的时候出现这行报错，通过~/.zshrc添加export TERM=xterm-color解决，貌似这是sbt的锅…参考Github WARN Native">
+<meta name="twitter:description" content="概览原生Spark与Scala的使用。 安装参考林子雨老师教程Spark的安装和使用。 问题解决SBT换源问题这个真的是众所周知，林老师也是一提，网上的答案也大多是错的！错的很微妙… 错的教程就是类似这样， 正确的是这样, 有什么区别呢，就是相差一个s,也就是说文件~/.sbt/repositories的内容应该是下面这样(注意是https) 1234567[repositories]localo">
 
 
 
@@ -422,12 +422,24 @@
                 
               
 
-              <time title="创建时间：2020-02-23 13:40:11 / 修改时间：13:59:19" itemprop="dateCreated datePublished" datetime="2020-02-23T13:40:11+08:00">2020-02-23</time>
+              <time title="创建时间：2020-02-23 13:40:11" itemprop="dateCreated datePublished" datetime="2020-02-23T13:40:11+08:00">2020-02-23</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-03-02 21:38:43" itemprop="dateModified" datetime="2020-03-02T21:38:43+08:00">2020-03-02</time>
               
             
           </span>
@@ -500,8 +512,12 @@
       
         <h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><p>原生Spark与Scala的使用。</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>参考林子雨老师教程<a href="https://dblab.xmu.edu.cn/blog/1307-2/" target="_blank" rel="noopener">Spark的安装和使用</a>。</p>
-<h2 id="ERROR-Failed-to-construct-terminal-falling-back-to-unsupported"><a href="#ERROR-Failed-to-construct-terminal-falling-back-to-unsupported" class="headerlink" title="[ERROR] Failed to construct terminal; falling back to unsupported"></a>[ERROR] Failed to construct terminal; falling back to unsupported</h2><p>启动<code>spark-shell</code>的时候出现这行报错，通过<code>~/.zshrc</code>添加<code>export TERM=xterm-color</code>解决，貌似这是<code>sbt</code>的锅…参考<a href="https://github.com/sbt/sbt/issues/3240" target="_blank" rel="noopener">Github</a></p>
-<h2 id="WARN-NativeCodeLoader-Unable-to-load-native-hadoop-library"><a href="#WARN-NativeCodeLoader-Unable-to-load-native-hadoop-library" class="headerlink" title="WARN NativeCodeLoader: Unable to load native-hadoop library"></a>WARN NativeCodeLoader: Unable to load native-hadoop library</h2><p>也是启动<code>spark-shell</code>的时候出现的报错。通过<code>vim ./conf/spark-env.sh</code>编辑，在最后加入<code>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HADOOP_HOME/lib/native</code>即可。参考<a href="https://www.stefaanlippens.net/spark-native-hadoop.html" target="_blank" rel="noopener">“Native-Hadoop” Library Load Issues with Spark</a></p>
+<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><h3 id="SBT换源问题"><a href="#SBT换源问题" class="headerlink" title="SBT换源问题"></a>SBT换源问题</h3><p>这个真的是众所周知，林老师也是一提，网上的答案也大多是错的！错的很微妙…</p>
+<p>错的教程就是类似<a href="https://www.jianshu.com/p/8d3ded620051" target="_blank" rel="noopener">这样</a>， 正确的是<a href="https://blog.csdn.net/weixin_41115760/article/details/89034839" target="_blank" rel="noopener">这样</a>, 有什么区别呢，就是相差一个<code>s</code>,也就是说文件<code>~/.sbt/repositories</code>的内容应该是下面这样(注意是<code>https</code>)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[repositories]</span><br><span class="line">local</span><br><span class="line">osc: https://maven.aliyun.com/nexus/content/groups/public/</span><br><span class="line">typesafe: https://repo.typesafe.com/typesafe/ivy-releases/, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext], bootOnly</span><br><span class="line">sonatype-oss-releases</span><br><span class="line">maven-central</span><br><span class="line">sonatype-oss-snapshots</span><br></pre></td></tr></table></figure>
+<p>配置成功的标志是发现下面输出的下载地址为<code>https://maven.aliyun.com/nexus/content/groups/public/...</code>开头，当然还有飞起的速度:-)</p>
+<h3 id="Spark-ERROR-Failed-to-construct-terminal-falling-back-to-unsupported"><a href="#Spark-ERROR-Failed-to-construct-terminal-falling-back-to-unsupported" class="headerlink" title="[Spark-ERROR] Failed to construct terminal; falling back to unsupported"></a>[Spark-ERROR] Failed to construct terminal; falling back to unsupported</h3><p>启动<code>spark-shell</code>的时候出现这行报错，通过<code>~/.zshrc</code>添加<code>export TERM=xterm-color</code>解决，貌似这是<code>sbt</code>的锅…参考<a href="https://github.com/sbt/sbt/issues/3240" target="_blank" rel="noopener">Github</a></p>
+<h3 id="Spark-WARN-NativeCodeLoader-Unable-to-load-native-hadoop-library"><a href="#Spark-WARN-NativeCodeLoader-Unable-to-load-native-hadoop-library" class="headerlink" title="[Spark-WARN] NativeCodeLoader: Unable to load native-hadoop library"></a>[Spark-WARN] NativeCodeLoader: Unable to load native-hadoop library</h3><p>也是启动<code>spark-shell</code>的时候出现的报错。通过<code>vim ./conf/spark-env.sh</code>编辑，在最后加入<code>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HADOOP_HOME/lib/native</code>即可。参考<a href="https://www.stefaanlippens.net/spark-native-hadoop.html" target="_blank" rel="noopener">“Native-Hadoop” Library Load Issues with Spark</a></p>
 
       
     </div>
@@ -529,7 +545,7 @@
   <p><span>本文标题:</span>Linux下Scala与Spark使用</p>
   <p><span>文章作者:</span>不秩稚童</p>
   <p><span>发布时间:</span>2020年02月23日 - 13:40:11</p>
-  <p><span>最后更新:</span>2020年02月23日 - 13:59:19</p>
+  <p><span>最后更新:</span>2020年03月02日 - 21:38:43</p>
   <p><span>原始链接:</span><a href="/2020/02/23/Linux下Scala与Spark使用/" title="Linux下Scala与Spark使用">http://datahonor.com/2020/02/23/Linux下Scala与Spark使用/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2020/02/23/Linux下Scala与Spark使用/" aria-label="复制成功！"></i></span>
   </p>
@@ -982,7 +998,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ERROR-Failed-to-construct-terminal-falling-back-to-unsupported"><span class="nav-number">3.</span> <span class="nav-text">[ERROR] Failed to construct terminal; falling back to unsupported</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WARN-NativeCodeLoader-Unable-to-load-native-hadoop-library"><span class="nav-number">4.</span> <span class="nav-text">WARN NativeCodeLoader: Unable to load native-hadoop library</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题解决"><span class="nav-number">3.</span> <span class="nav-text">问题解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SBT换源问题"><span class="nav-number">3.1.</span> <span class="nav-text">SBT换源问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark-ERROR-Failed-to-construct-terminal-falling-back-to-unsupported"><span class="nav-number">3.2.</span> <span class="nav-text">[Spark-ERROR] Failed to construct terminal; falling back to unsupported</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark-WARN-NativeCodeLoader-Unable-to-load-native-hadoop-library"><span class="nav-number">3.3.</span> <span class="nav-text">[Spark-WARN] NativeCodeLoader: Unable to load native-hadoop library</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1627,8 +1643,7 @@
   if (windowWidth > 480) {
     document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
   }
-</script>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":120,"height":120,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.99,"opacityOnHover":0.2},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -1645,5 +1660,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
-<!-- hexo-inject:end --></body>
+<!-- hexo-inject:end -->
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":120,"height":120,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.99,"opacityOnHover":0.2},"log":false});</script></body>
 </html>
