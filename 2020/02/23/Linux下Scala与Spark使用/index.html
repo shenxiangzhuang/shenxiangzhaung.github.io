@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="概览原生Spark与Scala的使用。 安装参考林子雨老师教程Spark的安装和使用。 问题解决SBT换源问题这个真的是众所周知，林老师也是一提，网上的答案也大多是错的！错的很微妙… 错的教程就是类似这样， 正确的是这样, 有什么区别呢，就是相差一个s,也就是说文件~/.sbt/repositories的内容应该是下面这样(注意是https) 1234567[repositories]localo">
+  <meta name="description" content="概览原生Spark与Scala的使用。 安装参考林子雨老师教程Spark的安装和使用。 使用PySpark安装与使用安装: 从Spark复制文件在安装好Spark(目前自己电脑是在/home/shensir/Application/spark/)，并设置好环境变量之后，在终端直接运行pyspark就可以直接运行。此时在终端通过which pyspark也可以打印出上述路径。但是要想在脚本中使用还需">
 <meta name="keywords" content="Spark,Scala">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux下Scala与Spark使用">
 <meta property="og:url" content="http://datahonor.com/2020/02/23/Linux下Scala与Spark使用/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="概览原生Spark与Scala的使用。 安装参考林子雨老师教程Spark的安装和使用。 问题解决SBT换源问题这个真的是众所周知，林老师也是一提，网上的答案也大多是错的！错的很微妙… 错的教程就是类似这样， 正确的是这样, 有什么区别呢，就是相差一个s,也就是说文件~/.sbt/repositories的内容应该是下面这样(注意是https) 1234567[repositories]localo">
+<meta property="og:description" content="概览原生Spark与Scala的使用。 安装参考林子雨老师教程Spark的安装和使用。 使用PySpark安装与使用安装: 从Spark复制文件在安装好Spark(目前自己电脑是在/home/shensir/Application/spark/)，并设置好环境变量之后，在终端直接运行pyspark就可以直接运行。此时在终端通过which pyspark也可以打印出上述路径。但是要想在脚本中使用还需">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-02T13:38:43.949Z">
+<meta property="og:updated_time" content="2020-05-10T16:09:34.870Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux下Scala与Spark使用">
-<meta name="twitter:description" content="概览原生Spark与Scala的使用。 安装参考林子雨老师教程Spark的安装和使用。 问题解决SBT换源问题这个真的是众所周知，林老师也是一提，网上的答案也大多是错的！错的很微妙… 错的教程就是类似这样， 正确的是这样, 有什么区别呢，就是相差一个s,也就是说文件~/.sbt/repositories的内容应该是下面这样(注意是https) 1234567[repositories]localo">
+<meta name="twitter:description" content="概览原生Spark与Scala的使用。 安装参考林子雨老师教程Spark的安装和使用。 使用PySpark安装与使用安装: 从Spark复制文件在安装好Spark(目前自己电脑是在/home/shensir/Application/spark/)，并设置好环境变量之后，在终端直接运行pyspark就可以直接运行。此时在终端通过which pyspark也可以打印出上述路径。但是要想在脚本中使用还需">
 
 
 
@@ -439,7 +439,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-03-02 21:38:43" itemprop="dateModified" datetime="2020-03-02T21:38:43+08:00">2020-03-02</time>
+                <time title="修改时间：2020-05-11 00:09:34" itemprop="dateModified" datetime="2020-05-11T00:09:34+08:00">2020-05-11</time>
               
             
           </span>
@@ -512,10 +512,53 @@
       
         <h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><p>原生Spark与Scala的使用。</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>参考林子雨老师教程<a href="https://dblab.xmu.edu.cn/blog/1307-2/" target="_blank" rel="noopener">Spark的安装和使用</a>。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="PySpark安装与使用"><a href="#PySpark安装与使用" class="headerlink" title="PySpark安装与使用"></a>PySpark安装与使用</h3><h4 id="安装-从Spark复制文件"><a href="#安装-从Spark复制文件" class="headerlink" title="安装: 从Spark复制文件"></a>安装: 从Spark复制文件</h4><p>在安装好Spark(目前自己电脑是在<code>/home/shensir/Application/spark/</code>)，并设置好环境变量之后，在终端直接运行<code>pyspark</code>就可以直接运行。此时在终端通过<code>which pyspark</code>也可以打印出上述路径。但是要想在脚本中使用还需要做额外的配置。</p>
+<p>在安装好Spark之后，将<code>/home/shensir/Application/spark/bin/pyspark</code>文件夹直接复制到Python的库文件目录下即可，比如我想在conda的虚拟环境<code>ML</code>中使用，那么就将上述<code>pyspark</code>文件夹直接复制到<code>/home/shensir/anaconda3/envs/ML/lib/python3.6/site-packages</code>即可在脚本中使用，这是安装原生Spark后使用PySpark的方法之一。可以通过在该虚拟环境打开IPython，并运行<code>import pypsark</code>就行测试。</p>
+<blockquote>
+<p>我开始在测试的时候会报错，说是少py4j库，直接conda install py4j，然后测试就可以了。</p>
+</blockquote>
+<h4 id="安装-直接安装PySpark第三方库"><a href="#安装-直接安装PySpark第三方库" class="headerlink" title="安装: 直接安装PySpark第三方库"></a>安装: 直接安装PySpark第三方库</h4><p>我们也可以直接使用PySpark，即通过第三库的方式直接安装使用. 比如我们可以新创建一个虚拟的conda环境，然后在该环境内部通过pip或者conda进行安装。安装完成后我们进入该虚拟环境，终端输入<code>which pyspark</code>会发现此时的路径是在虚拟环境内部的，比如我这里在虚拟环境<code>myspark</code>中安装，得到的路径就是<code>/home/shensir/anaconda3/envs/myspark/bin/pyspark</code>. 此时我们可以在终端和脚本中任意调用PySpark使用了。</p>
+<h4 id="使用-IPython启动PySpark-Shell"><a href="#使用-IPython启动PySpark-Shell" class="headerlink" title="使用: IPython启动PySpark Shell"></a>使用: IPython启动PySpark Shell</h4><p>在上述安装完成的时候，终端输入<code>pyspark</code>会进入默认的IDLE,而不是IPython, 那么我们如何设置其以IPython启动呢？答案就是在上面的提到的路径。无论使用上述那种方法安装，我们通过<code>which pyspark</code>定位到PySpark的路径，然后直接编辑该文件即可,比如我们得到的路径为<code>/home/shensir/anaconda3/envs/myspark/bin/pyspark</code>，通过<code>vim /home/shensir/anaconda3/envs/myspark/bin/pyspark</code>打开，文件的最后是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export PYSPARK_DRIVER_PYTHON</span><br><span class="line">export PYSPARK_DRIVER_PYTHON_OPTS</span><br><span class="line">exec &quot;$&#123;SPARK_HOME&#125;&quot;/bin/spark-submit pyspark-shell-main --name &quot;PySparkShell&quot; &quot;$@&quot;</span><br></pre></td></tr></table></figure>
+<p>只需要在最后设置<code>PYSPARK_DRIVER_PYTHON</code>为<code>ipython</code>即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PYSPARK_DRIVER_PYTHON=&quot;ipython&quot;</span><br></pre></td></tr></table></figure>
+<p>最后注意一下这里版本上的差异</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># In Spark 2.0, IPYTHON and IPYTHON_OPTS are removed and pyspark fails to launch if either option</span><br><span class="line"># is set in the user&apos;s environment. Instead, users should set PYSPARK_DRIVER_PYTHON=ipython</span><br><span class="line"># to use IPython and set PYSPARK_DRIVER_PYTHON_OPTS to pass options when starting the Python driver</span><br><span class="line"># (e.g. PYSPARK_DRIVER_PYTHON_OPTS=&apos;notebook&apos;).  This supports full customization of the IPython</span><br><span class="line"># and executor Python executables.</span><br></pre></td></tr></table></figure>
+<h4 id="使用-在Jupyter-Notebook使用PySpark"><a href="#使用-在Jupyter-Notebook使用PySpark" class="headerlink" title="使用: 在Jupyter Notebook使用PySpark"></a>使用: 在Jupyter Notebook使用PySpark</h4><p>实际上只需要在Jupyter Notebook中添加该环境的Kernel就可以了，Kernel安装参考<a href="https://ipython.readthedocs.io/en/stable/install/kernel_install.html" target="_blank" rel="noopener">文档</a>. 首先确保<code>ipykernel</code>库已经安装，安装直接通过<code>conda install ipykernel</code>即可。之后进入虚拟环境<code>conda activate myspark</code>， 终端执行<code>python -m ipykernel install --user --name myspark --display-name &quot;Python(pyspark)&quot;</code></p>
+<p>根据文档，上面安装Kernel的格式为<code>python -m ipykernel install --user --name myenv --display-name &quot;Python (myenv)&quot;</code></p>
+<p>这样我们就安装好了一个环境为<code>myspark</code>的Jupyter Notebook Kernel, 终端执行<code>jupyter notebook</code>进入，可以发现新的Kernel, 显示为<code>Python(pyspark)</code></p>
+<h3 id="从本地-amp-HDFS读取文件"><a href="#从本地-amp-HDFS读取文件" class="headerlink" title="从本地&amp;HDFS读取文件"></a>从本地&amp;HDFS读取文件</h3><p>参考<a href="https://stackoverflow.com/questions/27299923/how-to-load-local-file-in-sc-textfile-instead-of-hdfs" target="_blank" rel="noopener">stackoverflow</a></p>
+<h4 id="从HDFS读取"><a href="#从HDFS读取" class="headerlink" title="从HDFS读取"></a>从HDFS读取</h4><p>一般来说，我们执行下面的读取命令都是默认从HDFS读取文件</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data = sc.textFile(path)</span><br></pre></td></tr></table></figure>
+<p>而且要注意的是，目录默认不是HDFS的根目录，而是在<code>/user/用户名</code>,我这里就是在<code>/user/shensir</code>，所以要读取上层或者其他目录下的文件可以使用相对路径，比如<code>&#39;../../data/bike-data&#39;</code>来读取根目录的<code>data</code>文件夹下的<code>bike-data</code>文件.</p>
+<h4 id="从本地读取"><a href="#从本地读取" class="headerlink" title="从本地读取"></a>从本地读取</h4><p>要想在本地读取也很简单，需要用如下方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data = sc.textFile(&quot;file://&quot; + path)</span><br></pre></td></tr></table></figure>
+<p>这里的<code>path</code>为本地文件的绝对路径，暂时还不知道如何使用相对路径。</p>
+<h3 id="使用YARN"><a href="#使用YARN" class="headerlink" title="使用YARN"></a>使用YARN</h3><p>配置Spark On YARN. 首先在配置Hadoop的时候根据<a href="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html#YARN_on_a_Single_Node" target="_blank" rel="noopener">Hadoop: Setting up a Single Node Cluster</a>对YARN进行一定的配置，主要是对<code>/home/shensir/Application/hadoop/etc/hadoop</code>文件夹下的<code>mapred-site.xml</code>和<code>yarn-site.xml</code>进行配置，具体内容参考链接。</p>
+<p>之后将任务提交到YARN会出现错误<code>java.nio.channels.ClosedChannelException</code>,主要原因是在YARN默认配置下我们的内存不够分配。这里需要根据自己机器的配置来合理设定，不过现在暂时可以采取关闭这个虚拟内存检测的方法，就是在<code>yarn-site.xml</code>中加入如下配置(不推荐，暂时设置)：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.pmem-check-enabled<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>false<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.vmem-check-enabled<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>false<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>总之，这样可以先将任务RUN起来。参考<a href="https://blog.csdn.net/caiwenguang1992/article/details/77574182" target="_blank" rel="noopener">这里</a></p>
+<h4 id="Spark-History-Server使用"><a href="#Spark-History-Server使用" class="headerlink" title="Spark History Server使用"></a>Spark History Server使用</h4><p>参考<a href="https://docs.cloudera.com/documentation/enterprise/5-6-x/topics/admin_spark_history_server.html" target="_blank" rel="noopener">cloudera</a>配置。首先创建存放历史文件的文件夹<code>hdfs dfs -mkdir -p logs/history</code></p>
+<blockquote>
+<p>注意这里-p的意思是如果没有parent directory则一并创建。与之相反的是删除时的-rm -r</p>
+</blockquote>
+<p>之后设置权限(这里还另外与用户组的配置等相关，这里可以暂时不管)，直接赋权<code>hdfs dfs -chmod -R 1777 /user/shensir/logs/history</code></p>
+<p>之后修改文件<code>/home/shensir/Application/spark/conf/spark-defaults.conf</code>， 如果没有就从同文件夹下的<code>spark-defaults.conf.template</code>复制过来，添加如下内容:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">spark.eventLog.enabled=true</span><br><span class="line">spark.eventLog.dir= hdfs://localhost:9000/user/shensir/logs/history</span><br><span class="line">spark.history.fs.logDirectory=hdfs://localhost:9000/user/shensir/logs/history</span><br><span class="line">spark.history.ui.port=18080</span><br><span class="line">spark.yarn.historyServer.address=http://localhost:18080</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这里的<code>localhost:9000</code>就是<code>namenode_host:namenode_port</code>.上面两个路径的更多讨论见<a href="https://stackoverflow.com/questions/32001248/whats-the-difference-between-spark-eventlog-dir-and-spark-history-fs-logdirecto" target="_blank" rel="noopener">stackoverflow</a></p>
+</blockquote>
+<p>之后终端运行<code>start-history-server.sh</code>打开history server, 通过jps看到可以看到<code>HistoryServer</code>已经启动.注意此时终端运行<code>jps</code>应该显示以下几个节点的正确运行:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">25202 ResourceManager</span><br><span class="line">19539 Jps</span><br><span class="line">3701 HistoryServer</span><br><span class="line">24936 SecondaryNameNode</span><br><span class="line">25355 NodeManager</span><br><span class="line">24508 NameNode</span><br><span class="line">24686 DataNode</span><br></pre></td></tr></table></figure>
+<p>此时就可以使用<code>spark-shell --master yarn</code>, <code>pyspark --master yarn</code>, <code>spark-submit xxx.py --master yarn</code>开始任务的执行了，打开<code>http://localhost:8088</code>可以看到YARN的WEB UI，对于完成的Application，点击后面的History便可以重建Spark UI，目标地址类似如下形式<code>http://localhost:18080/history/application_1589083440750_0005/jobs/</code></p>
+<p>同时，浏览器访问<code>http://localhost:9870/explorer.html#/user/shensir/logs/history</code>即可以在HDFS文件中看到上面的历史文件.</p>
 <h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><h3 id="SBT换源问题"><a href="#SBT换源问题" class="headerlink" title="SBT换源问题"></a>SBT换源问题</h3><p>这个真的是众所周知，林老师也是一提，网上的答案也大多是错的！错的很微妙…</p>
 <p>错的教程就是类似<a href="https://www.jianshu.com/p/8d3ded620051" target="_blank" rel="noopener">这样</a>， 正确的是<a href="https://blog.csdn.net/weixin_41115760/article/details/89034839" target="_blank" rel="noopener">这样</a>, 有什么区别呢，就是相差一个<code>s</code>,也就是说文件<code>~/.sbt/repositories</code>的内容应该是下面这样(注意是<code>https</code>)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[repositories]</span><br><span class="line">local</span><br><span class="line">osc: https://maven.aliyun.com/nexus/content/groups/public/</span><br><span class="line">typesafe: https://repo.typesafe.com/typesafe/ivy-releases/, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext], bootOnly</span><br><span class="line">sonatype-oss-releases</span><br><span class="line">maven-central</span><br><span class="line">sonatype-oss-snapshots</span><br></pre></td></tr></table></figure>
 <p>配置成功的标志是发现下面输出的下载地址为<code>https://maven.aliyun.com/nexus/content/groups/public/...</code>开头，当然还有飞起的速度:-)</p>
+<blockquote>
+<p>还有个隐藏的问题就是在公司的时候要注意设置公司的代理IP</p>
+</blockquote>
 <h3 id="Spark-ERROR-Failed-to-construct-terminal-falling-back-to-unsupported"><a href="#Spark-ERROR-Failed-to-construct-terminal-falling-back-to-unsupported" class="headerlink" title="[Spark-ERROR] Failed to construct terminal; falling back to unsupported"></a>[Spark-ERROR] Failed to construct terminal; falling back to unsupported</h3><p>启动<code>spark-shell</code>的时候出现这行报错，通过<code>~/.zshrc</code>添加<code>export TERM=xterm-color</code>解决，貌似这是<code>sbt</code>的锅…参考<a href="https://github.com/sbt/sbt/issues/3240" target="_blank" rel="noopener">Github</a></p>
 <h3 id="Spark-WARN-NativeCodeLoader-Unable-to-load-native-hadoop-library"><a href="#Spark-WARN-NativeCodeLoader-Unable-to-load-native-hadoop-library" class="headerlink" title="[Spark-WARN] NativeCodeLoader: Unable to load native-hadoop library"></a>[Spark-WARN] NativeCodeLoader: Unable to load native-hadoop library</h3><p>也是启动<code>spark-shell</code>的时候出现的报错。通过<code>vim ./conf/spark-env.sh</code>编辑，在最后加入<code>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HADOOP_HOME/lib/native</code>即可。参考<a href="https://www.stefaanlippens.net/spark-native-hadoop.html" target="_blank" rel="noopener">“Native-Hadoop” Library Load Issues with Spark</a></p>
 
@@ -545,7 +588,7 @@
   <p><span>本文标题:</span>Linux下Scala与Spark使用</p>
   <p><span>文章作者:</span>不秩稚童</p>
   <p><span>发布时间:</span>2020年02月23日 - 13:40:11</p>
-  <p><span>最后更新:</span>2020年03月02日 - 21:38:43</p>
+  <p><span>最后更新:</span>2020年05月11日 - 00:09:34</p>
   <p><span>原始链接:</span><a href="/2020/02/23/Linux下Scala与Spark使用/" title="Linux下Scala与Spark使用">http://datahonor.com/2020/02/23/Linux下Scala与Spark使用/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2020/02/23/Linux下Scala与Spark使用/" aria-label="复制成功！"></i></span>
   </p>
@@ -998,7 +1041,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题解决"><span class="nav-number">3.</span> <span class="nav-text">问题解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SBT换源问题"><span class="nav-number">3.1.</span> <span class="nav-text">SBT换源问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark-ERROR-Failed-to-construct-terminal-falling-back-to-unsupported"><span class="nav-number">3.2.</span> <span class="nav-text">[Spark-ERROR] Failed to construct terminal; falling back to unsupported</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark-WARN-NativeCodeLoader-Unable-to-load-native-hadoop-library"><span class="nav-number">3.3.</span> <span class="nav-text">[Spark-WARN] NativeCodeLoader: Unable to load native-hadoop library</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">3.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PySpark安装与使用"><span class="nav-number">3.1.</span> <span class="nav-text">PySpark安装与使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-从Spark复制文件"><span class="nav-number">3.1.1.</span> <span class="nav-text">安装: 从Spark复制文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-直接安装PySpark第三方库"><span class="nav-number">3.1.2.</span> <span class="nav-text">安装: 直接安装PySpark第三方库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-IPython启动PySpark-Shell"><span class="nav-number">3.1.3.</span> <span class="nav-text">使用: IPython启动PySpark Shell</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-在Jupyter-Notebook使用PySpark"><span class="nav-number">3.1.4.</span> <span class="nav-text">使用: 在Jupyter Notebook使用PySpark</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从本地-amp-HDFS读取文件"><span class="nav-number">3.2.</span> <span class="nav-text">从本地&amp;HDFS读取文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#从HDFS读取"><span class="nav-number">3.2.1.</span> <span class="nav-text">从HDFS读取</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#从本地读取"><span class="nav-number">3.2.2.</span> <span class="nav-text">从本地读取</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用YARN"><span class="nav-number">3.3.</span> <span class="nav-text">使用YARN</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Spark-History-Server使用"><span class="nav-number">3.3.1.</span> <span class="nav-text">Spark History Server使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题解决"><span class="nav-number">4.</span> <span class="nav-text">问题解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SBT换源问题"><span class="nav-number">4.1.</span> <span class="nav-text">SBT换源问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark-ERROR-Failed-to-construct-terminal-falling-back-to-unsupported"><span class="nav-number">4.2.</span> <span class="nav-text">[Spark-ERROR] Failed to construct terminal; falling back to unsupported</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spark-WARN-NativeCodeLoader-Unable-to-load-native-hadoop-library"><span class="nav-number">4.3.</span> <span class="nav-text">[Spark-WARN] NativeCodeLoader: Unable to load native-hadoop library</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1643,8 +1686,7 @@
   if (windowWidth > 480) {
     document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
   }
-</script>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":120,"height":120,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.99,"opacityOnHover":0.2},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -1661,5 +1703,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
-<!-- hexo-inject:end --></body>
+<!-- hexo-inject:end -->
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":120,"height":120,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.99,"opacityOnHover":0.2},"log":false});</script></body>
 </html>
