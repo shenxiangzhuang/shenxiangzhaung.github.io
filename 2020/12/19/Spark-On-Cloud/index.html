@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="DATA HONOR">
 <meta property="og:description" content="Overview起因是实验需要用到Spark集群，然而目前只有本地Linux搭的一台伪分布式，所以打算用云服务器搭建。好在腾讯和阿里都有相关的服务，所以可以很简单的把集群搭建起来，在测试过之后，感觉腾讯云的服务更好使用。 腾讯云腾讯云的产品是弹性 MapReduce, 开始是选硬件配置，设置私网和子网以及授权的操作，过程计较简单。 此外，Master和各Worker节点的Python均有两个版本的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-12-19T16:04:37.583Z">
+<meta property="og:updated_time" content="2020-12-25T15:08:32.560Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spark On Cloud">
 <meta name="twitter:description" content="Overview起因是实验需要用到Spark集群，然而目前只有本地Linux搭的一台伪分布式，所以打算用云服务器搭建。好在腾讯和阿里都有相关的服务，所以可以很简单的把集群搭建起来，在测试过之后，感觉腾讯云的服务更好使用。 腾讯云腾讯云的产品是弹性 MapReduce, 开始是选硬件配置，设置私网和子网以及授权的操作，过程计较简单。 此外，Master和各Worker节点的Python均有两个版本的">
@@ -439,7 +439,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-12-20 00:04:37" itemprop="dateModified" datetime="2020-12-20T00:04:37+08:00">2020-12-20</time>
+                <time title="修改时间：2020-12-25 23:08:32" itemprop="dateModified" datetime="2020-12-25T23:08:32+08:00">2020-12-25</time>
               
             
           </span>
@@ -531,6 +531,8 @@
 <p>此外，腾讯云弹性MapReduce服务明显更容易使用，弹性公网IP，安全组设置以及利用Knox来访问YARN UI，Spark UI等都十分方便，几乎不需要额外设置就能立即使用，基本上没什么延迟。</p>
 <h1 id="阿里云"><a href="#阿里云" class="headerlink" title="阿里云"></a>阿里云</h1><p>阿里云的产品是<a href="https://emr.console.aliyun.com/?spm=5176.12818093.nav-right.81.6ec716d0AGWwMK#/cn-qingdao" target="_blank" rel="noopener">E-MapReduce</a>, 开始创建集群的操作和腾讯云基本是一致的，只不过弹性公网IP的绑定不是默认的，需要手动创建并绑定。之后的安全组和授权操作也基本一致。</p>
 <p>最后没有用阿里云，原因是文档过于拉胯，页面反应也慢的很(最烦的是隔一会就要重新验证登录状态)。其他的配置也很混乱，尤其是Knox用户的配置，文档写的很模糊，地址怎么也打不开。提工单回复又慢的一匹…最主要的，还比腾讯云贵(摔…)所以就放弃了。</p>
+<h1 id="用服务器自己搭建"><a href="#用服务器自己搭建" class="headerlink" title="用服务器自己搭建"></a>用服务器自己搭建</h1><p>用服务器自己搭建分布式集群。前不久自己用实验室的一台服务器搭建了一个伪分布式集群。整个流程很简单，先安装JAVA, 之后Hadoop, 之后Spark。 最后设置一下PySpark启动用的Python环境，YARN配置下可用于分配的集群资源(内存与逻辑核数)。</p>
+<p>因为服务器是绑定了公网IP的，所以全程就是SSH连起来安装的。但是我本地怎么PING都PING不同，当然对应的4040和8088等端口也没办法访问。好在VSCODE的Remote - SSH插件很好用，可以自动做前向代理。所以在VSCODE登录到机器，然后自动前向代理后，就可以在本电脑直接访问对应4040和8088等端口了！</p>
 
       
     </div>
@@ -558,7 +560,7 @@
   <p><span>本文标题:</span>Spark On Cloud</p>
   <p><span>文章作者:</span>不秩稚童</p>
   <p><span>发布时间:</span>2020年12月19日 - 23:09:39</p>
-  <p><span>最后更新:</span>2020年12月20日 - 00:04:37</p>
+  <p><span>最后更新:</span>2020年12月25日 - 23:08:32</p>
   <p><span>原始链接:</span><a href="/2020/12/19/Spark-On-Cloud/" title="Spark On Cloud">http://datahonor.com/2020/12/19/Spark-On-Cloud/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2020/12/19/Spark-On-Cloud/" aria-label="复制成功！"></i></span>
   </p>
@@ -1007,7 +1009,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#腾讯云"><span class="nav-number">2.</span> <span class="nav-text">腾讯云</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阿里云"><span class="nav-number">3.</span> <span class="nav-text">阿里云</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#腾讯云"><span class="nav-number">2.</span> <span class="nav-text">腾讯云</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阿里云"><span class="nav-number">3.</span> <span class="nav-text">阿里云</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用服务器自己搭建"><span class="nav-number">4.</span> <span class="nav-text">用服务器自己搭建</span></a></li></ol></div>
             
 
           </div>
@@ -1652,8 +1654,7 @@
   if (windowWidth > 480) {
     document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
   }
-</script>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":120,"height":120,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.99,"opacityOnHover":0.2},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -1670,5 +1671,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
-<!-- hexo-inject:end --></body>
+<!-- hexo-inject:end -->
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":120,"height":120,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.99,"opacityOnHover":0.2},"log":false});</script></body>
 </html>

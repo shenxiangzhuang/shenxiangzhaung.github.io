@@ -2,7 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://datahonor.com/2020/12/19/Spark-On-Cloud/</loc>
-    <lastmod>2020-12-19</lastmod>
+    <lastmod>2020-12-25</lastmod>
+  </url>  <url>
+    <loc>http://datahonor.com/2020/02/23/Linux%E4%B8%8BScala%E4%B8%8ESpark%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2020-12-25</lastmod>
+  </url>  <url>
+    <loc>http://datahonor.com/2020/02/23/Linux%E4%B8%8BHadoop%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2020-12-25</lastmod>
   </url>  <url>
     <loc>http://datahonor.com/2020/12/14/SBT%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2020-12-14</lastmod>
@@ -13,9 +19,6 @@
     <loc>http://datahonor.com/2020/09/13/%E4%B9%B1%E4%B8%96%E4%B8%8E%E4%BD%B3%E4%BA%BA/</loc>
     <lastmod>2020-12-14</lastmod>
   </url>  <url>
-    <loc>http://datahonor.com/2020/02/23/Linux%E4%B8%8BScala%E4%B8%8ESpark%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2020-05-10</lastmod>
-  </url>  <url>
     <loc>http://datahonor.com/2020/05/02/ROC-AUC/</loc>
     <lastmod>2020-05-02</lastmod>
   </url>  <url>
@@ -23,9 +26,6 @@
     <lastmod>2020-05-01</lastmod>
   </url>  <url>
     <loc>http://datahonor.com/2020/02/23/Linux%E4%B8%8BHBase%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2020-02-23</lastmod>
-  </url>  <url>
-    <loc>http://datahonor.com/2020/02/23/Linux%E4%B8%8BHadoop%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
     <loc>http://datahonor.com/2020/02/02/PySpark%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</loc>

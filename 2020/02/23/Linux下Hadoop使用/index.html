@@ -92,18 +92,18 @@
 
 
 
-  <meta name="description" content="概览记录Hadoop安装使用过程遇到的问题与解决方案。注意安装Hadoop只是安装了HDFS和MapReduce两大组件。其他的想HBase是没有的，需要自己单独安装。 报错：Connection refused运行hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input output &amp;#39">
+  <meta name="description" content="概览记录Hadoop安装使用过程遇到的问题与解决方案。因为在公司都是使用搭建好的集群,所以一般没有什么配置上的问题.这里主要记录在自己搭建的伪分布式集群中遇到的问题. 报错：Connection refused运行hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input output &amp;#39;">
 <meta name="keywords" content="Hadoop">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux下Hadoop使用">
 <meta property="og:url" content="http://datahonor.com/2020/02/23/Linux下Hadoop使用/index.html">
 <meta property="og:site_name" content="DATA HONOR">
-<meta property="og:description" content="概览记录Hadoop安装使用过程遇到的问题与解决方案。注意安装Hadoop只是安装了HDFS和MapReduce两大组件。其他的想HBase是没有的，需要自己单独安装。 报错：Connection refused运行hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input output &amp;#39">
+<meta property="og:description" content="概览记录Hadoop安装使用过程遇到的问题与解决方案。因为在公司都是使用搭建好的集群,所以一般没有什么配置上的问题.这里主要记录在自己搭建的伪分布式集群中遇到的问题. 报错：Connection refused运行hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input output &amp;#39;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-23T10:19:39.920Z">
+<meta property="og:updated_time" content="2020-12-25T14:54:58.469Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux下Hadoop使用">
-<meta name="twitter:description" content="概览记录Hadoop安装使用过程遇到的问题与解决方案。注意安装Hadoop只是安装了HDFS和MapReduce两大组件。其他的想HBase是没有的，需要自己单独安装。 报错：Connection refused运行hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input output &amp;#39">
+<meta name="twitter:description" content="概览记录Hadoop安装使用过程遇到的问题与解决方案。因为在公司都是使用搭建好的集群,所以一般没有什么配置上的问题.这里主要记录在自己搭建的伪分布式集群中遇到的问题. 报错：Connection refused运行hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input output &amp;#39;">
 
 
 
@@ -422,12 +422,24 @@
                 
               
 
-              <time title="创建时间：2020-02-23 12:01:05 / 修改时间：18:19:39" itemprop="dateCreated datePublished" datetime="2020-02-23T12:01:05+08:00">2020-02-23</time>
+              <time title="创建时间：2020-02-23 12:01:05" itemprop="dateCreated datePublished" datetime="2020-02-23T12:01:05+08:00">2020-02-23</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-12-25 22:54:58" itemprop="dateModified" datetime="2020-12-25T22:54:58+08:00">2020-12-25</time>
               
             
           </span>
@@ -498,7 +510,7 @@
       
 
       
-        <h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><p>记录Hadoop安装使用过程遇到的问题与解决方案。注意安装Hadoop只是安装了HDFS和MapReduce两大组件。其他的想HBase是没有的，需要自己单独安装。</p>
+        <h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><p>记录Hadoop安装使用过程遇到的问题与解决方案。因为在公司都是使用搭建好的集群,所以一般没有什么配置上的问题.这里主要记录在自己搭建的伪分布式集群中遇到的问题.</p>
 <h2 id="报错：Connection-refused"><a href="#报错：Connection-refused" class="headerlink" title="报错：Connection refused"></a>报错：Connection refused</h2><p>运行<code>hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input output &#39;dfs[a-z.]+&#39;</code>报的错。</p>
 <p>注意执行操作之前要先启动Hadoop，可以通过<code>start-dfs.sh</code>或者<code>start-all.sh</code><sup><a href="#fn_1" id="reffn_1">1</a></sup>。原因就是Hadoop未启动成功，通过<code>jps</code>看到<code>namenode</code>并未启动。比较奇怪的是安装的时候测试还是可以的，而且是完全按照<a href="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html" target="_blank" rel="noopener">官方文档</a>来的。</p>
 <p>问题就在官方文档…林子雨老师的<a href="http://dblab.xmu.edu.cn/blog/2441-2/" target="_blank" rel="noopener">Hadoop3.1.3安装教程</a>提到了这点：</p>
@@ -514,6 +526,12 @@
 <blockquote id="fn_1">
 <sup>1</sup>. 注意这里在加入环境变量后调用的, 其位于<code>sbin</code>文件夹下。<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
 </blockquote>
+<h2 id="伪分布式-YARN上显示的内存与核数与本机器不一致"><a href="#伪分布式-YARN上显示的内存与核数与本机器不一致" class="headerlink" title="伪分布式: YARN上显示的内存与核数与本机器不一致"></a>伪分布式: YARN上显示的内存与核数与本机器不一致</h2><p>用的是实验室的服务器,32核100G+,然后部署的伪分布式,起了YARN, 在8088端口看节点配置发现只有8G,核数也不对, 原来是因为这个要自己写配置文件设置的(之前还以为是自动检测Orz)…</p>
+<p>参考<a href="https://stackoverflow.com/questions/31768479/hadoop-not-utilizing-available-memory" target="_blank" rel="noopener">Hadoop not utilizing available memory</a>, 在Hadoop安装目录下找到<code>etc/hadoop/yarn-site.xml</code>, 添加如下内容,指定当前节点可供分配的内存为80G,可用核数为24个(注意内存单位默认是M, 所以这里写81920):</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.resource.memory-mb<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>81920<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.resource.cpu-vcores<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>24<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>此外注意,我们必须重启YARN才可以使得配置生效,所以执行<code>stop-yarn.sh</code>后<code>start-yarn.sh</code>,再到8088端口去看就可以看到可用内存已经设置成功.</p>
+<h2 id="伪分布式-Container-is-running-beyond-memory-limits"><a href="#伪分布式-Container-is-running-beyond-memory-limits" class="headerlink" title="伪分布式: Container is running beyond memory limits"></a>伪分布式: <a href="https://stackoverflow.com/questions/21005643/container-is-running-beyond-memory-limits" target="_blank" rel="noopener">Container is running beyond memory limits</a></h2><p>报错类似<code>Container [pid=28920,containerID=container_1389136889967_0001_01_000121] is running beyond virtual memory limits. Current usage: 1.2 GB of 1 GB physical memory used; 2.2 GB of 2.1 GB virtual memory used. Killing container.</code></p>
+<p>参考标题链接给的解决方案,可以调整<code>yarn.nodemanager.vmem-pmem-ratio</code>或者关闭虚拟内存检查(不推荐).</p>
 
       
     </div>
@@ -541,7 +559,7 @@
   <p><span>本文标题:</span>Linux下Hadoop使用</p>
   <p><span>文章作者:</span>不秩稚童</p>
   <p><span>发布时间:</span>2020年02月23日 - 12:01:05</p>
-  <p><span>最后更新:</span>2020年02月23日 - 18:19:39</p>
+  <p><span>最后更新:</span>2020年12月25日 - 22:54:58</p>
   <p><span>原始链接:</span><a href="/2020/02/23/Linux下Hadoop使用/" title="Linux下Hadoop使用">http://datahonor.com/2020/02/23/Linux下Hadoop使用/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2020/02/23/Linux下Hadoop使用/" aria-label="复制成功！"></i></span>
   </p>
@@ -992,7 +1010,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报错：Connection-refused"><span class="nav-number">2.</span> <span class="nav-text">报错：Connection refused</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报错：Retrying-connect-to-server-0-0-0-0-0-0-0-0-8032"><span class="nav-number">3.</span> <span class="nav-text">报错：Retrying connect to server: 0.0.0.0/0.0.0.0:8032</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报错：Connection-refused"><span class="nav-number">2.</span> <span class="nav-text">报错：Connection refused</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报错：Retrying-connect-to-server-0-0-0-0-0-0-0-0-8032"><span class="nav-number">3.</span> <span class="nav-text">报错：Retrying connect to server: 0.0.0.0/0.0.0.0:8032</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪分布式-YARN上显示的内存与核数与本机器不一致"><span class="nav-number">4.</span> <span class="nav-text">伪分布式: YARN上显示的内存与核数与本机器不一致</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪分布式-Container-is-running-beyond-memory-limits"><span class="nav-number">5.</span> <span class="nav-text">伪分布式: Container is running beyond memory limits</span></a></li></ol></div>
             
 
           </div>
@@ -1637,8 +1655,7 @@
   if (windowWidth > 480) {
     document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
   }
-</script>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":120,"height":120,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.99,"opacityOnHover":0.2},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -1655,5 +1672,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
-<!-- hexo-inject:end --></body>
+<!-- hexo-inject:end -->
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tia.model.json"},"display":{"superSample":2,"width":120,"height":120,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":0.99,"opacityOnHover":0.2},"log":false});</script></body>
 </html>
