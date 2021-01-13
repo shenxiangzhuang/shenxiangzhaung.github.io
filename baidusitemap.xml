@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://datahonor.com/2019/07/13/How-to-write-a-Python-package/</loc>
+    <lastmod>2021-01-13</lastmod>
+  </url>  <url>
     <loc>http://datahonor.com/2020/12/19/Spark-On-Cloud/</loc>
     <lastmod>2020-12-25</lastmod>
   </url>  <url>
@@ -60,9 +63,6 @@
   </url>  <url>
     <loc>http://datahonor.com/2017/03/02/Ubuntu%E5%91%BD%E4%BB%A4%E7%A7%AF%E7%B4%AF/</loc>
     <lastmod>2019-09-05</lastmod>
-  </url>  <url>
-    <loc>http://datahonor.com/2019/07/13/How-to-write-a-Python-package/</loc>
-    <lastmod>2019-07-31</lastmod>
   </url>  <url>
     <loc>http://datahonor.com/2019/07/28/Mysql8-0-in-Ubuntu16-04/</loc>
     <lastmod>2019-07-28</lastmod>

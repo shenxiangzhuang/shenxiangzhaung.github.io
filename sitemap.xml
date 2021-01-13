@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://datahonor.com/2019/07/13/How-to-write-a-Python-package/</loc>
+    
+    <lastmod>2021-01-13T09:25:45.836Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://datahonor.com/2020/12/19/Spark-On-Cloud/</loc>
     
     <lastmod>2020-12-25T15:08:32.560Z</lastmod>
@@ -145,13 +152,6 @@
     <loc>http://datahonor.com/2017/03/02/Ubuntu%E5%91%BD%E4%BB%A4%E7%A7%AF%E7%B4%AF/</loc>
     
     <lastmod>2019-09-05T14:22:58.124Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://datahonor.com/2019/07/13/How-to-write-a-Python-package/</loc>
-    
-    <lastmod>2019-07-31T09:41:07.914Z</lastmod>
     
   </url>
   
