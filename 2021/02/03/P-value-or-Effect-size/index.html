@@ -101,7 +101,7 @@
 <meta property="og:description" content="Overview起因是看到业务显著性与统计显著性这篇文章，发现看完之后除了加深了下统计显著容易让人陷入认知误区的印象之外，更多的是一堆问号。文中提及的Effect size和Probability of Superiority这些概念之前没有了解过，当我想通过具体的例子了解一下时，我发现例子比概念本身更加难以理解…  “以下面的虚拟实验为例。我们想研究做作业对学习效率的影响。这个实验对150个学生">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2021/02/03/EfxYWtzJV3aP1ow.png">
-<meta property="og:updated_time" content="2021-02-03T09:18:42.180Z">
+<meta property="og:updated_time" content="2021-02-05T05:32:58.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="P value or Effect size">
 <meta name="twitter:description" content="Overview起因是看到业务显著性与统计显著性这篇文章，发现看完之后除了加深了下统计显著容易让人陷入认知误区的印象之外，更多的是一堆问号。文中提及的Effect size和Probability of Superiority这些概念之前没有了解过，当我想通过具体的例子了解一下时，我发现例子比概念本身更加难以理解…  “以下面的虚拟实验为例。我们想研究做作业对学习效率的影响。这个实验对150个学生">
@@ -424,12 +424,24 @@
                 
               
 
-              <time title="创建时间：2021-02-03 16:44:15 / 修改时间：17:18:42" itemprop="dateCreated datePublished" datetime="2021-02-03T16:44:15+08:00">2021-02-03</time>
+              <time title="创建时间：2021-02-03 16:44:15" itemprop="dateCreated datePublished" datetime="2021-02-03T16:44:15+08:00">2021-02-03</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2021-02-05 13:32:58" itemprop="dateModified" datetime="2021-02-05T13:32:58+08:00">2021-02-05</time>
               
             
           </span>
@@ -545,8 +557,12 @@ NNT = \frac{1}{\Phi(\delta + \Psi(CER))- CER} = \frac{1}{\Phi(0.3 + \Psi(0.2))- 
 <p><strong>Cohen’s $U_3$</strong>:</p>
 <script type="math/tex; mode=display">
 U_3 = \Phi(\delta) = \Phi(0.3) = 0.6179114 \approx 61.8\%</script><p>在Cohen, J. (1977). <em>Statistical power analysis for the behavioral sciencies</em>. Routledge.中，定义了$U_1, U_2, U_3$，分别用来衡量不重叠性(“measures of nonoverlap”).这里的例子没有涉及，但也是很有用的概念。</p>
-<h1 id="What"><a href="#What" class="headerlink" title="What"></a>What</h1><p>累了累了，先不写了…</p>
-<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><h2 id="CER-amp-EER-amp-NNT"><a href="#CER-amp-EER-amp-NNT" class="headerlink" title="CER&amp;EER&amp;NNT"></a>CER&amp;EER&amp;NNT</h2><p>参考<a href="http://www.bandolier.org.uk/booth/glossary/event.html" target="_blank" rel="noopener">bandolier</a>: </p>
+<h1 id="What"><a href="#What" class="headerlink" title="What"></a>What</h1><p>在写这块的时候发现自己很难把问题讲清楚，所以就拜托Tomorrow学长写了这一部分<a href="https://yuanhang0.github.io/posts/effect-size" target="_blank" rel="noopener">Two-Sample Test and Cohen’s d</a>, 文中给出了上述公式的详细推导.另外舍友也讨论了这个问题，他也从另一个角度定义并计算了上述问题，并检查了以上论述。感谢两位:-)</p>
+<h1 id="And…"><a href="#And…" class="headerlink" title="And…"></a>And…</h1><h2 id="Where-is-the-P-value"><a href="#Where-is-the-P-value" class="headerlink" title="Where is the P value?"></a>Where is the P value?</h2><p>本文题目是<em>P value of Effect size</em>, 然而并未对P value作出更多的论述，主要是因为论文<em>Using Effect Size—or Why the P Value Is Not Enough</em>已经对两者作出了相当充分的讨论，无需赘述。此外关于P value的争论(P value culture)已经存在很久了，但是学校好像几乎没怎么提及…如<em>Ranstam, Jonas. “Why the P-value culture is bad and confidence intervals a better alternative.”</em>。P value本身并没有问题：“我就是个小小的P value, 我能有什么坏心思呢？”错的是我们不能正确地认识它。</p>
+<h2 id="Probability-of-superiority-or-AUC…"><a href="#Probability-of-superiority-or-AUC…" class="headerlink" title="Probability of superiority or AUC…"></a>Probability of superiority or AUC…</h2><p>之前写过一篇<a href="https://datahonor.com/2020/05/02/ROC-AUC/">ROC-AUC</a>详细介绍了ROC和AUC相关的东西：WHEN, WHERE, WHO, WHY, HOW. 主要是点出来AUC与非参数统计中Wilcoxon-Mann-Whitney statistic的关联。而这里的所说的Probability of superiority其实就是AUC，核心就是对“配对比较”的理解，“配对”无非就是做一个笛卡尔积。</p>
+<p>（另外一提，在ROC-AUC这篇文章中介绍的计算AUC的最快的方法，是WXG 的算法岗面试题）</p>
+<h2 id="当我们谈论直观时我们在谈论什么"><a href="#当我们谈论直观时我们在谈论什么" class="headerlink" title="当我们谈论直观时我们在谈论什么"></a>当我们谈论<strong>直观</strong>时我们在谈论什么</h2><p>文章最开始给出的那段话，无非是为了让人了解到所谓进一步做分析的必要性。但是仅仅给出一堆莫名奇妙的数字，而且不给原理，不给出处，不能实验，又何谈应用到业务中去呢。即使在被各种“直观”，“可视化”解释包围的今天，我们也不能忘记那些看似抽象的定义才是根本…</p>
+<h1 id="附录-CER-amp-EER-amp-NNT"><a href="#附录-CER-amp-EER-amp-NNT" class="headerlink" title="附录:CER&amp;EER&amp;NNT"></a>附录:CER&amp;EER&amp;NNT</h1><p>参考<a href="http://www.bandolier.org.uk/booth/glossary/event.html" target="_blank" rel="noopener">bandolier</a>: </p>
 <blockquote>
 <p>Event rate: The proportion of patients in a group in whom the event is observed.   Thus, if out of 100 patients, the event is observed in 27, the event  rate is 0.27 or 27%.  <strong>Control event rate (CER)</strong> and <strong>experimental event  rate (EER)</strong> are used to refer to this in control and experimental groups  of patients respectively. An <a href="http://www.bandolier.org.uk/booth/glossary/outputs.html" target="_blank" rel="noopener">example</a> might help. </p>
 </blockquote>
@@ -608,7 +624,7 @@ U_3 = \Phi(\delta) = \Phi(0.3) = 0.6179114 \approx 61.8\%</script><p>在Cohen, J
   <p><span>本文标题:</span>P value or Effect size</p>
   <p><span>文章作者:</span>不秩稚童</p>
   <p><span>发布时间:</span>2021年02月03日 - 16:44:15</p>
-  <p><span>最后更新:</span>2021年02月03日 - 17:18:42</p>
+  <p><span>最后更新:</span>2021年02月05日 - 13:32:58</p>
   <p><span>原始链接:</span><a href="/2021/02/03/P-value-or-Effect-size/" title="P value or Effect size">http://datahonor.com/2021/02/03/P-value-or-Effect-size/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://datahonor.com/2021/02/03/P-value-or-Effect-size/" aria-label="复制成功！"></i></span>
   </p>
@@ -1063,7 +1079,7 @@ U_3 = \Phi(\delta) = \Phi(0.3) = 0.6179114 \approx 61.8\%</script><p>在Cohen, J
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Definitions"><span class="nav-number">2.</span> <span class="nav-text">Definitions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Effect-size"><span class="nav-number">2.1.</span> <span class="nav-text">Effect size</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cohen’s-d"><span class="nav-number">2.2.</span> <span class="nav-text">Cohen’s d</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#How"><span class="nav-number">3.</span> <span class="nav-text">How</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#What"><span class="nav-number">4.</span> <span class="nav-text">What</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附录"><span class="nav-number">5.</span> <span class="nav-text">附录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CER-amp-EER-amp-NNT"><span class="nav-number">5.1.</span> <span class="nav-text">CER&amp;EER&amp;NNT</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Definitions"><span class="nav-number">2.</span> <span class="nav-text">Definitions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Effect-size"><span class="nav-number">2.1.</span> <span class="nav-text">Effect size</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cohen’s-d"><span class="nav-number">2.2.</span> <span class="nav-text">Cohen’s d</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#How"><span class="nav-number">3.</span> <span class="nav-text">How</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#What"><span class="nav-number">4.</span> <span class="nav-text">What</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#And…"><span class="nav-number">5.</span> <span class="nav-text">And…</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Where-is-the-P-value"><span class="nav-number">5.1.</span> <span class="nav-text">Where is the P value?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Probability-of-superiority-or-AUC…"><span class="nav-number">5.2.</span> <span class="nav-text">Probability of superiority or AUC…</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#当我们谈论直观时我们在谈论什么"><span class="nav-number">5.3.</span> <span class="nav-text">当我们谈论直观时我们在谈论什么</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附录-CER-amp-EER-amp-NNT"><span class="nav-number">6.</span> <span class="nav-text">附录:CER&amp;EER&amp;NNT</span></a></li></ol></div>
             
 
           </div>
